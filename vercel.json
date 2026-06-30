@@ -4,6 +4,7 @@
     { "handle": "filesystem" },
     { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/dashboard", "dest": "/public/dashboard.html" },
+    { "src": "/add-project", "dest": "/public/add-project.html" },
     { "src": "/privacy", "dest": "/public/privacy.html" },
     { "src": "/terms", "dest": "/public/terms.html" },
     { "src": "/(.*)", "dest": "/public/$1" }
