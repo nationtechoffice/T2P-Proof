@@ -6,29 +6,22 @@
     <title>t2pproof.link | Human-Verified Crypto Hub</title>
     <style>
         :root { --bg-dark: #060913; --card-bg: #0d1326; --accent-blue: #3b82f6; --accent-purple: #7c3aed; --text-main: #f3f4f6; --text-muted: #9ca3af; --border-color: #1e293b; --success-green: #10b981; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg-dark); color: var(--text-main); margin: 0; padding: 0; min-height: 100vh; display: flex; flex-direction: column; }
-        header { background: linear-gradient(135deg, #0d1326 0%, #1e1b4b 100%); padding: 30px 20px; text-align: center; border-bottom: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
-        .logo-title { font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin: 0; background: linear-gradient(to right, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { font-family: system-ui, sans-serif; background-color: var(--bg-dark); color: var(--text-main); margin: 0; padding: 0; min-height: 100vh; display: flex; flex-direction: column; }
+        header { background: linear-gradient(135deg, #0d1326 0%, #1e1b4b 100%); padding: 30px 20px; text-align: center; border-bottom: 1px solid var(--border-color); }
+        .logo-title { font-size: 32px; font-weight: 800; margin: 0; background: linear-gradient(to right, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .tagline { color: var(--text-muted); font-size: 16px; margin: 10px 0 0 0; }
         .wrapper { max-width: 1000px; width: 100%; margin: 0 auto; padding: 20px; box-sizing: border-box; flex-grow: 1; }
-        .ad-banner { background: rgba(59, 130, 246, 0.03); border: 2px dashed rgba(59, 130, 246, 0.2); padding: 18px; border-radius: 12px; margin-bottom: 30px; font-weight: 600; color: var(--accent-blue); text-align: center; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; backdrop-filter: blur(4px); }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
-        .stat-card { background: var(--card-bg); border: 1px solid var(--border-color); padding: 20px; border-radius: 12px; text-align: center; }
-        .stat-val { font-size: 24px; font-weight: 700; color: var(--text-main); margin-bottom: 5px; }
-        .stat-lbl { font-size: 12px; color: var(--text-muted); text-transform: uppercase; }
-        .directory-container { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden; }
-        .dir-header { padding: 20px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.01); }
-        .dir-title { font-size: 18px; font-weight: 700; margin: 0; color: var(--text-main); }
+        .ad-banner { background: rgba(59, 130, 246, 0.03); border: 2px dashed rgba(59, 130, 246, 0.2); padding: 18px; border-radius: 12px; margin-bottom: 30px; font-weight: 600; color: var(--accent-blue); text-align: center; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .directory-container { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; }
+        .dir-header { padding: 20px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
+        .dir-title { font-size: 18px; font-weight: 700; margin: 0; }
         .table-responsive { overflow-x: auto; }
         table { width: 100%; border-collapse: collapse; text-align: left; }
-        th { padding: 16px 20px; background: rgba(0,0,0,0.2); font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px; }
+        th { padding: 16px 20px; background: rgba(0,0,0,0.2); font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); }
         td { padding: 20px; border-bottom: 1px solid var(--border-color); font-size: 15px; }
         tr:last-child td { border-bottom: none; }
-        .badge-verified { background: rgba(16, 185, 129, 0.1); color: var(--success-green); padding: 4px 10px; border-radius: 99px; font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; }
-        .btn-action { background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%); color: white; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 700; cursor: pointer; text-decoration: none; font-size: 13px; display: inline-block; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25); transition: transform 0.2s, opacity 0.2s; }
-        .btn-action:hover { transform: translateY(-1px); opacity: 0.95; }
-        footer { padding: 20px; text-align: center; font-size: 13px; color: var(--text-muted); border-top: 1px solid var(--border-color); margin-top: 40px; }
-        footer a { color: var(--accent-blue); text-decoration: none; margin: 0 10px; }
+        .badge-verified { background: rgba(16, 185, 129, 0.1); color: var(--success-green); padding: 4px 10px; border-radius: 99px; font-size: 12px; font-weight: 600; }
+        .btn-action { background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%); color: white; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 700; cursor: pointer; text-decoration: none; font-size: 13px; display: inline-block; }
     </style>
 </head>
 <body>
@@ -39,21 +32,12 @@
     </header>
 
     <div class="wrapper">
-        <!-- Sponsored Banner Ad Layer Block -->
         <div class="ad-banner">🎯 Sponsored Ad Slot: Staking Native Pi Removes Ad Banner Footprints</div>
 
-        <!-- Ecosystem Status Metrics Grid -->
-        <div class="stats-grid">
-            <div class="stat-card"><div class="stat-val">2,481</div><div class="stat-lbl">Humans Screened</div></div>
-            <div class="stat-card"><div class="stat-val" style="color:var(--success-green);">14</div><div class="stat-lbl">Verified Projects</div></div>
-            <div class="stat-card"><div class="stat-val" style="color:#ef4444;">182</div><div class="stat-lbl">Bots Deflected</div></div>
-        </div>
-
-        <!-- Dynamic Crypto Launch Directory Module -->
         <div class="directory-container">
             <div class="dir-header">
                 <h2 class="dir-title">Ecosystem Launch Registry</h2>
-                <span style="font-size:12px; color:var(--text-muted);">Real-Time Node Feed</span>
+                <span style="font-size:12px; color:var(--text-muted);">Live Database Feed</span>
             </div>
             <div class="table-responsive">
                 <table>
@@ -65,29 +49,50 @@
                             <th>Action Hub</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <strong style="font-size:16px;">Alpha DeFi Protocol</strong><br>
-                                <span style="font-size:12px; color:var(--text-muted);">Cross-chain liquid automated pools</span>
-                            </td>
-                            <td><span class="badge-verified">✓ Developer Pi KYC Passed</span></td>
-                            <td><span style="color:var(--text-muted); font-size:14px; font-weight:600;">Pi Blockchain</span></td>
-                            <td><a href="/dashboard" class="btn-action">View Deep Analytics</a></td>
-                        </tr>
+                    <tbody id="directory-rows">
+                        <!-- Database content automatically loaded here -->
+                        <tr><td colspan="4" style="text-align:center; color:var(--text-muted);">Connecting to database matrix...</td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 
-    <footer>
-        <p>© 2026 t2pproof.link. Securely compiled via Vercel Edge Networks.</p>
-        <p>
-            <a href="/privacy">Privacy Protocol</a> | 
-            <a href="/terms">Terms of Usage</a>
-        </p>
-    </footer>
+    <script>
+        // Fetch projects from your custom Vercel Serverless database endpoint
+        async function fetchLiveDirectory() {
+            try {
+                const response = await fetch('/api/get-projects');
+                const result = await response.json();
+                
+                if (result.success && result.data.length > 0) {
+                    const rowContainer = document.getElementById('directory-rows');
+                    rowContainer.innerHTML = ''; // Clear out the loading notice
+                    
+                    // Loop through database items and inject them dynamically into the UI
+                    result.data.forEach(project => {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td>
+                                <strong style="font-size:16px;">${project.project_name}</strong><br>
+                                <span style="font-size:12px; color:var(--text-muted);">${project.description || 'No description listed'}</span>
+                            </td>
+                            <td><span class="badge-verified">✓ Developer @${project.developer_username} Verified</span></td>
+                            <td><span style="color:var(--text-muted); font-size:14px; font-weight:600;">Pi Blockchain</span></td>
+                            <td><a href="/dashboard" class="btn-action">View Deep Analytics</a></td>
+                        `;
+                        rowContainer.appendChild(tr);
+                    });
+                }
+            } catch (err) {
+                console.error("Failed to load directory items:", err);
+            }
+        }
 
+        // Run fetch on browser startup
+        window.addEventListener('DOMContentLoaded', fetchLiveDirectory);
+    </script>
 </body>
+</html>
+
 </html>
