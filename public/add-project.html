@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Project | t2pproof.link</title>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #060913; color: #f3f4f6; padding: 40px; text-align: center; }
+        .form-box { background: #0d1326; border: 1px solid #1e293b; padding: 30px; border-radius: 12px; max-width: 500px; margin: auto; text-align: left; }
+        input, textarea { width: 100%; padding: 12px; margin: 10px 0 20px 0; background: #060913; border: 1px solid #1e293b; color: white; border-radius: 6px; box-sizing: border-box; }
+        .btn-submit { background: #10b981; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%; font-size: 16px; }
+        .hidden-form { display: none; }
+    </style>
+    <script src="https://minepi.com"></script>
+</head>
+<body>
+
+    <h1>Submit Your Verified Project</h1>
+    <p style="color:#9ca3af; margin-bottom: 30px;">Prove you are a human via Pi KYC to unlock the directory submission portal.</p>
+
+    <div class="form-box">
+        <!-- Verification Step Gate -->
+        <div id="auth-gate-step" style="text-align: center; padding: 20px 0;">
+            <button class="btn-submit" style="background:#4f46e5;" id="auth-dev-btn">⚡ Secure Sign-In With Pi</button>
+        </div>
+
+        <!-- Hidden Project Details Form -->
+        <form id="submission-form-fields" class="hidden-form">
+            <input type="hidden" id="dev-username-holder">
+            
+            <label>Project Name</label>
+            <input type="text" id="proj-name" placeholder="e.g., Alpha Token" required>
+
+            <label>Short Utility Description</label>
+            <textarea id="proj-desc" rows="3" placeholder="Explain what your crypto app does..." required></textarea>
+
+            <label>Ecosystem Smart Contract Address (Optional)</label>
+            <input type="text" id="proj-contract" placeholder="0x...">
+
+            <button type="submit" class="btn-submit">🚀 Submit to Public Directory</button>
+        </form>
+    </div>
+
+    <script>
+        Pi.init({ version: "2.0", sandbox: true });
+
+        let userAccessToken = '';
+
+        // Handle Developer Authentication Step
+        document.getElementById('auth-dev-btn').addEventListener('click', async () => {
+            try {
+                const authResult = await Pi.authenticate(['username', 'roles'], (inc) => {});
+                
+                const verifyCall = await fetch('/api/pi-auth', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ authResult })
+                });
+
+                const data = await verifyCall.json();
+                if (data.success) {
+                    alert(`Human Verified! Welcome @${data.username}`);
+                    document.getElementById('dev-username-holder').value = data.username;
+                    document.getElementById('auth-gate-step').style.display = 'none';
+                    document.getElementById('submission-form-fields').classList.remove('hidden-form');
+                } else {
+                    alert("Submission Blocked: Account lacks active Pi KYC.");
+                }
+            } catch (err) {
+                alert(`Authentication Loop Failed: ${err.message}`);
+            }
+        });
+
+        // Handle Project Submission Layer
+        document.getElementById('submission-form-fields').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const payload = {
+                project_name: document.getElementById('proj-name').value,
+                description: document.getElementById('proj-desc').value,
+                smart_contract_address: document.getElementById('proj-contract').value,
+                developer_username: document.getElementById('dev-username-holder').value
+            };
+
+            try {
+                // We will build this api/add-project.js route in our next task block
+                const response = await fetch('/api/add-project', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    alert("Success! Your human-verified project is live on t2pproof.link.");
+                    window.location.href = "/";
+                } else {
+                    alert("Error submitting details.");
+                }
+            } catch (err) {
+                alert("Database transmission failed.");
+            }
+        });
+    </script>
+</body>
+</html>
