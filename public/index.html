@@ -186,6 +186,10 @@
             color: var(--accent-blue); 
             text-decoration: none; 
             margin: 0 10px; 
+            font-weight: 600;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -232,6 +236,7 @@
     <footer>
         <p>© 2026 t2pproof.link. Securely compiled via Vercel Edge Networks.</p>
         <p>
+            <!-- These links now point cleanly to your active multi-page paths -->
             <a href="/privacy">Privacy Protocol</a> | 
             <a href="/terms">Terms of Usage</a>
         </p>
@@ -268,9 +273,5 @@
             }
         }
 
-        window.addEventListener('DOMContentLoaded', fetchLiveDirectory);
-    </script>
-</body>
-</html>
 
 </html>
