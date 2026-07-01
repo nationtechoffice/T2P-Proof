@@ -25,7 +25,8 @@
     "clsx": "latest",
     "tailwind-merge": "latest",
     "class-variance-authority": "latest",
-    "tailwindcss-animate": "latest"
+    "tailwindcss-animate": "latest",
+    "tw-animate-css": "latest"
   },
   "devDependencies": {
     "@types/node": "latest",
