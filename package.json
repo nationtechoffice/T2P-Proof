@@ -19,6 +19,19 @@
     "three": "latest",
     "tailwindcss": "latest",
     "@tailwindcss/postcss": "latest",
-    "next-themes": "latest"
+    "next-themes": "latest",
+    "d3": "latest",
+    "topojson-client": "latest",
+    "clsx": "latest",
+    "tailwind-merge": "latest",
+    "class-variance-authority": "latest",
+    "tailwindcss-animate": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/d3": "latest",
+    "typescript": "latest"
   }
 }
