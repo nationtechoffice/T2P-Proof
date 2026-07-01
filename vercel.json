@@ -1,4 +1,6 @@
 {
   "version": 2,
+  "buildCommand": "next build public",
+  "outputDirectory": "public/.next",
   "cleanUrls": true
 }
