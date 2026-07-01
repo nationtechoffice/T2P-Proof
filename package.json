@@ -34,6 +34,7 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@types/d3": "latest",
+    "@types/topojson-client": "latest",
     "typescript": "latest"
   }
 }
