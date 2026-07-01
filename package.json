@@ -27,7 +27,8 @@
     "class-variance-authority": "latest",
     "tailwindcss-animate": "latest",
     "tw-animate-css": "latest",
-    "@vercel/analytics": "latest"
+    "@vercel/analytics": "latest",
+    "@radix-ui/react-accordion": "latest"
   },
   "devDependencies": {
     "@types/node": "latest",
@@ -37,4 +38,6 @@
     "@types/topojson-client": "latest",
     "typescript": "latest"
   }
+}
+
 }
