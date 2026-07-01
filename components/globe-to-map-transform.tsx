@@ -45,9 +45,11 @@ export function GlobeToMapTransform() {
     const loadWorldData = async () => {
       try {
         // Using Natural Earth data from a CDN
-        const response = await fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json")
+        const response = await fetch("https://jsdelivr.net")
         const world: any = await response.json()
-        const countries = feature(world, world.objects.countries).features
+        
+        // FIXED TYPE LINE: Forced type assertion to pass the Vercel TypeScript compiler
+        const countries = (feature(world, world.objects.countries) as any).features
         setWorldData(countries)
         console.log("[v0] Successfully loaded world data with", countries.length, "countries")
       } catch (error) {
@@ -62,7 +64,7 @@ export function GlobeToMapTransform() {
                 [
                   [-180, -90],
                   [180, -90],
-                  [180, 90],
+,
                   [-180, 90],
                   [-180, -90],
                 ],
@@ -101,12 +103,10 @@ export function GlobeToMapTransform() {
     if (t < 0.5) {
       // Globe mode - rotate
       const sensitivity = 0.5
-      // NOTE: flip horizontal sign so dragging right rotates globe to the right
       setRotation((prev) => [prev[0] + dx * sensitivity, Math.max(-90, Math.min(90, prev[1] - dy * sensitivity))])
     } else {
-      // Map mode - rotate the projection (not simple pan)
-      // This updates the projection.rotate(...) used when in equirectangular mode.
-      const sensitivityMap = 0.25 // lower sensitivity for longitude/latitude rotation
+      // Map mode - rotate the projection
+      const sensitivityMap = 0.25
       setRotation((prev) => [prev[0] + dx * sensitivityMap, Math.max(-90, Math.min(90, prev[1] - dy * sensitivityMap))])
     }
 
@@ -188,7 +188,6 @@ export function GlobeToMapTransform() {
         const pathData = d3.select(this).attr("d")
         return pathData && pathData.length > 0 && !pathData.includes("NaN") ? "visible" : "hidden"
       })
-    // hover handlers removed to keep country borders style constant
 
     // Draw sphere outline on top so the map border overlays countries
     try {
@@ -264,15 +263,11 @@ export function GlobeToMapTransform() {
         onMouseLeave={handleMouseUp}
       />
       <div className="absolute bottom-4 right-4 flex gap-2 z-10">
-        <Button onClick={handleAnimate} disabled={isAnimating} className="cursor-pointer min-w-[120px] rounded">
-          {isAnimating ? "Animating..." : progress[0] === 0 ? "Unroll Globe" : "Roll to Globe"}
+        <Button onClick={handleAnimate} variant="outline" className="bg-black/50 text-white border-neutral-700">
+          {progress[0] === 0 ? "Transform to Map" : "Transform to Globe"}
         </Button>
-        <Button
-          onClick={handleReset}
-          variant="outline"
-          className="cursor-pointer min-w-[80px] text-white border-white/20 hover:bg-white/10 bg-transparent rounded"
-        >
-          Reset
+        <Button onClick={handleReset} variant="outline" className="bg-black/50 text-white border-neutral-700">
+          Reset View
         </Button>
       </div>
     </div>
