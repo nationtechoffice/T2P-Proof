@@ -28,7 +28,8 @@
     "tailwindcss-animate": "latest",
     "tw-animate-css": "latest",
     "@vercel/analytics": "latest",
-    "@radix-ui/react-accordion": "latest"
+    "@radix-ui/react-accordion": "latest",
+    "@radix-ui/react-alert-dialog": "latest"
   },
   "devDependencies": {
     "@types/node": "latest",
@@ -39,3 +40,4 @@
     "typescript": "latest"
   }
 }
+
