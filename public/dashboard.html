@@ -3,60 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Alpha | Advanced Insights</title>
+    <title>Project Analytics | t2pproof.link</title>
     <style>
-        body { font-family: system-ui, sans-serif; background: #0b0f19; color: #f3f4f6; padding: 40px; }
-        .dashboard-grid { background: #111827; border: 1px solid #1f2937; padding: 30px; border-radius: 12px; max-width: 700px; margin: auto; }
-        .gate-box { background: rgba(79, 70, 229, 0.1); border: 1px solid #4f46e5; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; }
-        .data-label { color: #9ca3af; font-size: 14px; }
-        .data-value { font-size: 18px; font-weight: bold; margin-bottom: 15px; }
-        .locked { filter: blur(5px); opacity: 0.3; pointer-events: none; }
-        .btn-verify { background: #10b981; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+        :root { 
+            --bg-dark: #060913; 
+            --card-bg: #0d1326; 
+            --accent-blue: #3b82f6; 
+            --accent-purple: #7c3aed; 
+            --text-main: #f3f4f6; 
+            --text-muted: #9ca3af; 
+            --border-color: #1e293b; 
+            --success-green: #10b981; 
+        }
+        body { 
+            font-family: system-ui, -apple-system, sans-serif; 
+            background-color: var(--bg-dark); 
+            color: var(--text-main); 
+            margin: 0; 
+            padding: 40px 20px; 
+        }
+        .dashboard-grid { 
+            background: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+            padding: 30px; 
+            border-radius: 16px; 
+            max-width: 700px; 
+            margin: 0 auto; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .gate-box { 
+            background: rgba(124, 58, 237, 0.05); 
+            border: 1px dashed var(--accent-purple); 
+            padding: 25px; 
+            border-radius: 12px; 
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+        .data-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .data-item:last-child {
+            border-bottom: none;
+        }
+        .data-label { 
+            color: var(--text-muted); 
+            font-size: 13px; 
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+        .data-value { 
+            font-size: 18px; 
+            font-weight: 600; 
+        }
+        .locked { 
+            filter: blur(6px); 
+            opacity: 0.2; 
+            pointer-events: none; 
+            transition: filter 0.5s ease, opacity 0.5s ease;
+        }
+        .btn-verify { 
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%); 
+            color: white; 
+            border: none; 
+            padding: 12px 24px; 
+            border-radius: 8px; 
+            font-weight: 700; 
+            cursor: pointer; 
+            font-size: 15px;
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+        }
+        .btn-back {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
     </style>
     <script src="https://minepi.com"></script>
 </head>
 <body>
+
+    <div style="max-width: 700px; margin: 0 auto;">
+        <a href="/" class="btn-back">← Back to Directory</a>
+    </div>
+
     <div class="dashboard-grid">
-        <h2>Alpha Protocol Analysis Hub</h2>
+        <h2 style="margin-top: 0; color: #58a6ff;">Project Alpha Analysis Hub</h2>
+        <p style="color: var(--text-muted); margin-bottom: 30px;">Real-time trading analytics, coin distribution audits, and rug-risk reporting parameters.</p>
+        
         <div class="gate-box" id="auth-gate">
-            <p style="margin-top: 0;">⚠️ <strong>Advanced Trading Metrics Locked</strong></p>
-            <p style="font-size: 14px; color: #9ca3af;">Verify your identity to unlock Liquidity Logs and Developer Sell Alert configurations.</p>
+            <p style="margin-top: 0; font-weight: 700; font-size: 16px;">⚠️ Premium Analytics Locked</p>
+            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">You must check your human KYC footprint via the official Pi SDK to view liquidity metrics.</p>
             <button class="btn-verify" id="verify-now-btn">⚡ Verify Identity via Pi</button>
         </div>
-        <div>
-            <div class="data-label">Verified Smart Contract:</div>
-            <div class="data-value">0x71C...392A</div>
+
+        <div class="data-item">
+            <div class="data-label">Verified Smart Contract Address</div>
+            <div class="data-value" style="font-family: monospace; color: var(--accent-blue);">0x71C229A884392A...392A</div>
         </div>
+
         <div id="premium-metrics" class="locked">
-            <div class="data-label">Liquidity Health Score:</div>
-            <div class="data-value" style="color: #10b981;">98% (Locked for 12 Months)</div>
-            <div class="data-label">Dev Wallet Sell Activity:</div>
-            <div class="data-value" style="color: #ef4444;">Warning: High Token Concentration Detected</div>
+            <div class="data-item">
+                <div class="data-label">Liquidity Health Pool Score</div>
+                <div class="data-value" style="color: var(--success-green);">98.4% Secure (Locked via Smart Ledger for 12 Months)</div>
+            </div>
+
+            <div class="data-item">
+                <div class="data-label">Developer Wallet Transaction Risk</div>
+                <div class="data-value" style="color: #f59e0b;">Moderate Concentration (No unexpected sales detected)</div>
+            </div>
+
+            <div class="data-item">
+                <div class="data-label">Insider Supply Holdings</div>
+                <div class="data-value">Less than 3.2% of Circulating Supply</div>
+            </div>
         </div>
     </div>
+
     <script>
         Pi.init({ version: "2.0", sandbox: true });
+
         document.getElementById('verify-now-btn').addEventListener('click', async () => {
             try {
                 const scopes = ['username', 'roles'];
                 const authResult = await Pi.authenticate(scopes, (incomplete) => {});
+
                 const checkCall = await fetch('/api/pi-auth', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ authResult })
                 });
+
                 const resData = await checkCall.json();
                 if (resData.success) {
-                    alert("Verification Completed! Unlocking metrics.");
+                    alert("Identity Confirmed! Premium trading data layer unlocked.");
                     document.getElementById('auth-gate').style.display = 'none';
                     document.getElementById('premium-metrics').classList.remove('locked');
                 } else {
-                    alert("Verification Rejected.");
+                    alert("Access Denied: Account lacks active network KYC status flags.");
                 }
             } catch (err) {
-                alert(`Error: ${err.message}`);
+                alert(`Handshake Interrupted: ${err.message}`);
             }
         });
     </script>
 </body>
+</html>
+
 </html>
