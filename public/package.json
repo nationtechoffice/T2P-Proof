@@ -1,11 +1,14 @@
 {
-  "name": "t2pproof-public-app",
+  "name": "t2pproof-platform",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "next dev public",
+    "build": "next build public",
+    "start": "next start public"
   },
   "dependencies": {
     "next": "latest",
