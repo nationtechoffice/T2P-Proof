@@ -18,6 +18,7 @@
     "canvas-confetti": "latest",
     "three": "latest",
     "tailwindcss": "latest",
-    "@tailwindcss/postcss": "latest"
+    "@tailwindcss/postcss": "latest",
+    "next-themes": "latest"
   }
 }
