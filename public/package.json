@@ -16,6 +16,8 @@
     "react-dom": "latest",
     "lucide-react": "latest",
     "canvas-confetti": "latest",
-    "three": "latest"
+    "three": "latest",
+    "tailwindcss": "latest",
+    "@tailwindcss/postcss": "latest"
   }
 }
