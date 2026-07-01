@@ -66,7 +66,7 @@ export function T2PGateway() {
       try {
         const res = await fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json")
         const world: any = await res.json()
-        const countries = feature(world, world.objects.countries).features
+        const countries = (feature(world, world.objects.countries) as any).features
         setWorldData(countries as GeoFeature[])
       } catch (e) {
         console.log("[v0] Error loading world data:", e)
