@@ -1,32 +1,18 @@
-import type { Metadata } from 'next'
-import { Inter, JetBrains_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import type { Metadata } from "next"
+import Script from "next/script"
+import { Inter, JetBrains_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import "./globals.css"
 
-const _inter = Inter({ subsets: ["latin"] });
-const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
 export const metadata: Metadata = {
-  title: 'T2P Proof · Un-bottable Human Identity Gateways',
+  title: "t2pproof.link · Proof of Humanity for Web3",
   description:
-    'Global identification for a verified Web3. T2P Proof secures crypto launches with un-bottable, one-human-one-identity gateways.',
-  generator: 'v0.app',
+    "Verified token directory for Pioneers and Pi CAPTCHA bypass API for developers. Stop bots, authenticate real humans.",
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
 }
 
@@ -36,10 +22,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-[#060913]">
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} bg-[#050508]`}>
       <body className="font-sans antialiased">
+        <Script src="https://sdk.minepi.com/pi-sdk.js" strategy="beforeInteractive" />
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
   )

@@ -4,6 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --t2p-orange: #f97316;
+  --t2p-bg: #050508;
+  --t2p-surface: #0c0c10;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
