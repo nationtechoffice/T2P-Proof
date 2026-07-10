@@ -119,8 +119,7 @@ export function PiAuthButton({
 
       {status === "error" && !nativePi && (
         <p className="text-xs text-slate-500">
-          OAuth callback: <code className="text-orange-400/80">{getPiOAuthRedirectUri()}</code> — must
-          be registered in Pi Developer Portal.
+          OAuth callback: <code className="text-orange-400/80">{getPiOAuthRedirectUri()}</code>
         </p>
       )}
     </div>

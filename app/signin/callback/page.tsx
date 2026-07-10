@@ -1,31 +1,41 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { ShieldCheck, Loader2, CheckCircle2, XCircle } from "lucide-react"
 import {
-  PI_OAUTH_RETURN_KEY,
-  PI_OAUTH_STATE_KEY,
+  decodeOAuthState,
+  DEFAULT_RETURN_URL,
+  getPiOAuthRedirectUri,
 } from "@/lib/pi-oauth"
 
 type CallbackStatus = "processing" | "success" | "error"
 
 export default function PiSignInCallbackPage() {
-  const router = useRouter()
   const [status, setStatus] = useState<CallbackStatus>("processing")
   const [message, setMessage] = useState("Completing Pi Sign-in…")
 
   useEffect(() => {
     async function handleCallback() {
       try {
-        const params = new URLSearchParams(window.location.hash.slice(1))
-        const expectedState = sessionStorage.getItem(PI_OAUTH_STATE_KEY)
-        sessionStorage.removeItem(PI_OAUTH_STATE_KEY)
+        const hash = window.location.hash.slice(1)
+        if (!hash) {
+          throw new Error("No sign-in response received from Pi.")
+        }
 
-        const returnedState = params.get("state")
-        if (!expectedState || returnedState !== expectedState) {
-          throw new Error("Sign-in state mismatch. Please try again.")
+        const params = new URLSearchParams(hash)
+        const stateParam = params.get("state")
+
+        if (!stateParam) {
+          throw new Error("Missing OAuth state. Please try signing in again.")
+        }
+
+        let returnTo = DEFAULT_RETURN_URL
+        try {
+          const decoded = decodeOAuthState(stateParam)
+          returnTo = decoded.returnTo
+        } catch {
+          throw new Error("Invalid sign-in state. Please try again.")
         }
 
         const error = params.get("error")
@@ -57,16 +67,13 @@ export default function PiSignInCallbackPage() {
 
         const username = data.user?.username
         setStatus("success")
-        setMessage(username ? `Welcome, @${username}!` : "Successfully signed in with Pi.")
-
-        const returnPath = sessionStorage.getItem(PI_OAUTH_RETURN_KEY) || "/"
-        sessionStorage.removeItem(PI_OAUTH_RETURN_KEY)
+        setMessage(username ? `Welcome, @${username}! Redirecting…` : "Signed in! Redirecting…")
 
         history.replaceState(null, "", window.location.pathname)
 
         setTimeout(() => {
-          router.replace(returnPath)
-        }, 1200)
+          window.location.assign(returnTo)
+        }, 1000)
       } catch (err) {
         setStatus("error")
         setMessage(err instanceof Error ? err.message : "Pi Sign-in failed.")
@@ -75,7 +82,7 @@ export default function PiSignInCallbackPage() {
     }
 
     handleCallback()
-  }, [router])
+  }, [])
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-[#050508] px-4 text-slate-200">
@@ -94,9 +101,13 @@ export default function PiSignInCallbackPage() {
 
         <p className="mt-2 text-sm text-slate-400">{message}</p>
 
+        <p className="mt-3 text-xs text-slate-600">
+          Callback: {getPiOAuthRedirectUri()}
+        </p>
+
         {status === "error" && (
           <Link
-            href="/"
+            href={DEFAULT_RETURN_URL}
             className="mt-6 inline-flex items-center gap-2 rounded-lg bg-orange-500 px-4 py-2 text-sm font-semibold text-black hover:bg-orange-400"
           >
             <ShieldCheck className="h-4 w-4" />
