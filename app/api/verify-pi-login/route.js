@@ -1,4 +1,6 @@
-const PI_ME_ENDPOINT = "https://api.minepi.com/v2/me"
+import { getPiApiBase } from "@/lib/pi-config"
+
+const PI_ME_ENDPOINT = `${getPiApiBase()}/me`
 
 export async function POST(request) {
   let body

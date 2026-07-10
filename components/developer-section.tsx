@@ -153,8 +153,8 @@ export function DeveloperSection() {
             </pre>
 
             <p className="mt-3 text-xs text-slate-500">
-              Replace <code className="text-orange-400/80">YOUR_API_KEY</code> with your key from
-              the{" "}
+              Set <code className="text-orange-400/80">PI_API_KEY</code> in your server environment
+              (see the{" "}
               <a href="/developer" className="text-orange-400 hover:underline">
                 developer dashboard
               </a>

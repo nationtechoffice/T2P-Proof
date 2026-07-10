@@ -40,7 +40,8 @@ export function PiAuthButton({
       }
 
       try {
-        window.Pi.init({ version: "2.0", sandbox: true })
+        const isProduction = process.env.NODE_ENV === "production"
+        window.Pi.init({ version: "2.0", sandbox: !isProduction })
         setSdkReady(true)
       } catch (err) {
         console.error("[PiAuthButton] SDK init failed:", err)

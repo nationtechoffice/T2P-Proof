@@ -6,34 +6,35 @@ export default async function handler(req, res) {
     if (req.method === 'OPTIONS') return res.status(200).end();
     if (req.method !== 'POST') return res.status(405).json({ error: 'Method disallowed' });
 
-    const { authResult } = req.body;
-    if (!authResult || !authResult.accessToken) {
-        return res.status(400).json({ error: 'Missing token parameters' });
+    const { accessToken } = req.body;
+    if (!accessToken || typeof accessToken !== 'string') {
+        return res.status(400).json({ error: 'Missing or invalid accessToken' });
     }
 
     try {
-        // Query the official Pi API using your hidden server environment key
-        const piNetworkCall = await fetch('https://minepi.com', {
+        const piResponse = await fetch('https://api.minepi.com/v2/me', {
             method: 'GET',
-            headers: { 'Authorization': `Bearer ${process.env.PI_API_KEY}` }
+            headers: {
+                'Authorization': `Bearer ${accessToken}`,
+                'Accept': 'application/json',
+            },
         });
 
-        if (!piNetworkCall.ok) {
-            return res.status(401).json({ error: 'Invalid Pi identity tokens' });
-        }
-
-        const profileData = await piNetworkCall.json();
-
-        // Check for native ecosystem human KYC verification tags
-        if (profileData.roles && profileData.roles.includes('kyc_verified')) {
-            return res.status(200).json({
-                success: true,
-                username: profileData.username
+        if (!piResponse.ok) {
+            const details = await piResponse.text().catch(() => '');
+            return res.status(401).json({
+                success: false,
+                error: 'Pi token verification failed',
+                status: piResponse.status,
+                details: details || undefined,
             });
         }
-        return res.status(403).json({ success: false, error: 'Account not KYC verified' });
+
+        const user = await piResponse.json();
+        return res.status(200).json({ success: true, user });
 
     } catch (apiError) {
-        return res.status(500).json({ error: 'Validation pipeline error', details: apiError.message });
+        const message = apiError instanceof Error ? apiError.message : 'Unknown error';
+        return res.status(500).json({ error: 'Validation pipeline error', details: message });
     }
 }
