@@ -19,11 +19,14 @@ Apply to Production, Preview, and Development, then redeploy.
 
 ### Pi Sign-in redirect URI
 
-Register this callback URL in the Pi Developer Portal → Pi Sign-in → Redirect URIs:
+Register **both** in Pi Developer Portal → Pi Sign-in → Redirect URIs:
 
 ```
+https://www.t2pproof.link/signin/callback
 https://t2pproof.link/signin/callback
 ```
+
+The app uses `window.location.origin` so the redirect always matches the domain you're on.
 
 ### Local development
 

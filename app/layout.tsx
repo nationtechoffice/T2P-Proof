@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
+  metadataBase: new URL("https://www.t2pproof.link"),
 }
 
 export default function RootLayout({
@@ -23,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} bg-[#050508]`}>
+      <head>
+        <script src="https://sdk.minepi.com/pi-sdk.js" async />
+      </head>
       <body className="font-sans antialiased">
         <PiScriptLoader />
         {children}

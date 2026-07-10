@@ -6,26 +6,20 @@ export function getPiOAuthClientId(): string {
   return process.env.NEXT_PUBLIC_PI_OAUTH_CLIENT_ID || PI_OAUTH_CLIENT_ID_DEFAULT
 }
 
-export function getPiOAuthRedirectUri(origin?: string): string {
+/**
+ * Must EXACTLY match a URI registered in Pi Developer Portal → Pi Sign-in → Redirect URIs.
+ * Uses current browser origin so www vs non-www always matches.
+ */
+export function getPiOAuthRedirectUri(): string {
   const configured = process.env.NEXT_PUBLIC_PI_OAUTH_REDIRECT_URI
   if (configured) return configured
 
   if (typeof window !== "undefined") {
-    const host = window.location.hostname
-    if (host === "t2pproof.link" || host === "www.t2pproof.link") {
-      return "https://t2pproof.link/signin/callback"
-    }
+    return `${window.location.origin}/signin/callback`
   }
 
-  if (origin) {
-    const host = new URL(origin).hostname
-    if (host === "t2pproof.link" || host === "www.t2pproof.link") {
-      return "https://t2pproof.link/signin/callback"
-    }
-    return `${origin}/signin/callback`
-  }
-
-  return "https://t2pproof.link/signin/callback"
+  // SSR fallback — site canonical host is www.t2pproof.link
+  return "https://www.t2pproof.link/signin/callback"
 }
 
 export function isPiOAuthConfigured(): boolean {

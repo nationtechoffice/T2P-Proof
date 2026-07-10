@@ -2,32 +2,36 @@
 
 import Script from "next/script"
 import { useEffect, useState } from "react"
+import { markNativePiEnv } from "@/lib/pi-sdk"
 
 /**
- * Load Pi SDK script only when window.Pi is not already injected (e.g. Pi Browser).
+ * Detect native Pi Browser injection, then load SDK script only if needed.
  */
 export function PiScriptLoader() {
   const [needsScript, setNeedsScript] = useState(false)
 
   useEffect(() => {
     if (window.Pi) {
+      markNativePiEnv()
       window.dispatchEvent(new Event("pi-sdk-ready"))
       return
     }
-    // Pi Browser injects window.Pi shortly after load — poll briefly before loading script
+
     let attempts = 0
     const poll = setInterval(() => {
       attempts++
       if (window.Pi) {
-        clearInterval(poll)
+        markNativePiEnv()
         window.dispatchEvent(new Event("pi-sdk-ready"))
+        clearInterval(poll)
         return
       }
-      if (attempts >= 15) {
+      if (attempts >= 20) {
         clearInterval(poll)
         setNeedsScript(true)
       }
-    }, 200)
+    }, 100)
+
     return () => clearInterval(poll)
   }, [])
 
@@ -38,12 +42,8 @@ export function PiScriptLoader() {
       id="pi-sdk"
       src="https://sdk.minepi.com/pi-sdk.js"
       strategy="afterInteractive"
-      onLoad={() => {
-        window.dispatchEvent(new Event("pi-sdk-ready"))
-      }}
-      onError={() => {
-        window.dispatchEvent(new CustomEvent("pi-sdk-error"))
-      }}
+      onLoad={() => window.dispatchEvent(new Event("pi-sdk-ready"))}
+      onError={() => window.dispatchEvent(new CustomEvent("pi-sdk-error"))}
     />
   )
 }

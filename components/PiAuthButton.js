@@ -1,7 +1,8 @@
 "use client"
 
 import { useCallback, useState } from "react"
-import { piSignIn } from "@/lib/pi-sdk"
+import { piSignIn, isNativePiEnv } from "@/lib/pi-sdk"
+import { getPiOAuthRedirectUri } from "@/lib/pi-oauth"
 
 /**
  * @typedef {"idle" | "loading" | "success" | "error"} PiAuthStatus
@@ -88,6 +89,7 @@ export function PiAuthButton({
 
   const isLoading = status === "loading"
   const isSuccess = status === "success"
+  const nativePi = typeof window !== "undefined" && isNativePiEnv()
 
   return (
     <div className="flex flex-col gap-2">
@@ -100,12 +102,25 @@ export function PiAuthButton({
         {isLoading && (
           <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
         )}
-        {isSuccess ? "Signed in ✓" : isLoading ? "Signing in…" : children}
+        {isSuccess
+          ? "Signed in ✓"
+          : isLoading
+            ? nativePi
+              ? "Approve in Pi…"
+              : "Opening Pi Sign-in…"
+            : children}
       </button>
 
       {status === "error" && errorMessage && (
         <p className="text-xs text-red-400" role="alert">
           {errorMessage}
+        </p>
+      )}
+
+      {status === "error" && !nativePi && (
+        <p className="text-xs text-slate-500">
+          OAuth callback: <code className="text-orange-400/80">{getPiOAuthRedirectUri()}</code> — must
+          be registered in Pi Developer Portal.
         </p>
       )}
     </div>
