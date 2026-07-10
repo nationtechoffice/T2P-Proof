@@ -8,6 +8,14 @@ export function getPiApiKey(): string {
   return key
 }
 
+export function getPiApiKeyOrEmpty(): string {
+  return process.env.PI_API_KEY ?? ""
+}
+
+export function isPiApiKeyConfigured(): boolean {
+  return Boolean(process.env.PI_API_KEY)
+}
+
 export function getPiApiBase(): string {
   return PI_API_BASE
 }

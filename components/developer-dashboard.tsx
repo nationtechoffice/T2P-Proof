@@ -61,14 +61,21 @@ function maskApiKey(key: string): string {
   return `${key.slice(0, 8)}${"•".repeat(Math.min(key.length - 16, 32))}${key.slice(-8)}`
 }
 
-export function DeveloperDashboard({ piApiKey }: { piApiKey: string }) {
+export function DeveloperDashboard({
+  piApiKey,
+  apiKeyConfigured,
+}: {
+  piApiKey: string
+  apiKeyConfigured: boolean
+}) {
   const [showApiKey, setShowApiKey] = useState(false)
   const [selectedTier, setSelectedTier] = useState("startup")
   const [copied, setCopied] = useState(false)
 
-  const maskedKey = maskApiKey(piApiKey)
+  const maskedKey = piApiKey ? maskApiKey(piApiKey) : ""
 
   const copyKey = async () => {
+    if (!piApiKey) return
     try {
       await navigator.clipboard.writeText(piApiKey)
       setCopied(true)
@@ -168,9 +175,19 @@ export function DeveloperDashboard({ piApiKey }: { piApiKey: string }) {
           <div className="mt-4 flex items-center gap-3 rounded-lg border border-slate-800 bg-[#050508] px-4 py-3">
             <Key className="h-4 w-4 shrink-0 text-orange-400" />
             <code className="flex-1 overflow-x-auto break-all font-mono text-sm text-slate-300">
-              {showApiKey ? piApiKey : maskedKey}
+              {apiKeyConfigured
+                ? showApiKey
+                  ? piApiKey
+                  : maskedKey
+                : "PI_API_KEY not set — add it in Vercel Environment Variables"}
             </code>
           </div>
+          {!apiKeyConfigured && (
+            <p className="mt-3 text-xs text-amber-400">
+              Set <code className="text-orange-300">PI_API_KEY</code> in your Vercel project settings
+              under Environment Variables, then redeploy.
+            </p>
+          )}
         </div>
 
         <div className="mt-10">

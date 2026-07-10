@@ -1,33 +1,34 @@
-# globe-to-map-transform
+# t2pproof.link
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+Proof of Humanity platform for Web3 — verified token directory + Pi CAPTCHA bypass API.
 
-## Built with v0
+## Deploy (single branch: `main`)
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+Production deploys from **`main`** on Vercel. All changes should be merged to `main` — preview branches show different URLs and can look like a separate site.
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_vEPRJAx1H01FmQxHA7NkRK4VkzFh)
+### Required environment variable
 
-## Getting Started
+In Vercel → Project → Settings → Environment Variables:
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+PI_API_KEY=your_pi_developer_api_key
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Apply to Production, Preview, and Development, then redeploy.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Local development
 
-## Learn More
+```bash
+cp .env.example .env.local
+# Add your PI_API_KEY to .env.local
+npm install
+npm run dev
+```
 
-To learn more, take a look at the following resources:
+Open [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+## Routes
+
+- `/` — Landing page (token directory + developer API)
+- `/developer` — Developer dashboard
+- `/api/verify-pi-login` — Pi auth verification endpoint

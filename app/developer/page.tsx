@@ -1,8 +1,13 @@
 import { DeveloperDashboard } from "@/components/developer-dashboard"
-import { getPiApiKey } from "@/lib/pi-config"
+import { getPiApiKeyOrEmpty, isPiApiKeyConfigured } from "@/lib/pi-config"
+
+export const dynamic = "force-dynamic"
 
 export default function DeveloperPage() {
-  const piApiKey = getPiApiKey()
-
-  return <DeveloperDashboard piApiKey={piApiKey} />
+  return (
+    <DeveloperDashboard
+      piApiKey={getPiApiKeyOrEmpty()}
+      apiKeyConfigured={isPiApiKeyConfigured()}
+    />
+  )
 }
