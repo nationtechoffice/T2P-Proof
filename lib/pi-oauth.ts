@@ -2,15 +2,14 @@
 export const PI_OAUTH_CLIENT_ID_DEFAULT =
   "drzPoB3NasD7MndiCIsF1Ej4EkSZOQfJNSpzeMT1dTw"
 
-/** Production app domain */
 export const PI_APP_DOMAIN = "t2pproof.link"
 
 /**
- * Canonical OAuth callback — must EXACTLY match Pi Developer Portal redirect URI.
- * Site canonical host is www.t2pproof.link.
+ * Pi portal accepts apex domain only (no www).
+ * Must EXACTLY match Pi Developer Portal → Redirect URIs.
  */
 export const PI_OAUTH_REDIRECT_URI_DEFAULT =
-  "https://www.t2pproof.link/signin/callback"
+  "https://t2pproof.link/signin/callback"
 
 export function getPiOAuthClientId(): string {
   return process.env.NEXT_PUBLIC_PI_OAUTH_CLIENT_ID || PI_OAUTH_CLIENT_ID_DEFAULT

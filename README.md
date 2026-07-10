@@ -12,7 +12,9 @@ Your Pi app must use **t2pproof.link** — not t2pproof.me or vercel.app.
 |-------|-------|
 | **App URL** | `https://t2pproof.link` |
 | **Domain verification** | `https://t2pproof.link/validation-key.txt` |
-| **Pi Sign-in → Redirect URI** | `https://www.t2pproof.link/signin/callback` |
+| **Pi Sign-in → Redirect URI** | `https://t2pproof.link/signin/callback` |
+
+Use **no www** — Pi portal rejects `www.t2pproof.link` for this app.
 
 If your portal still shows `t2pproof.me`, change the App URL to `https://t2pproof.link` first, then save the redirect URI above.
 
@@ -21,7 +23,7 @@ If your portal still shows `t2pproof.me`, change the App URL to `https://t2pproo
 ```
 PI_API_KEY=your_pi_developer_api_key
 NEXT_PUBLIC_PI_OAUTH_CLIENT_ID=drzPoB3NasD7MndiCIsF1Ej4EkSZOQfJNSpzeMT1dTw
-NEXT_PUBLIC_PI_OAUTH_REDIRECT_URI=https://www.t2pproof.link/signin/callback
+NEXT_PUBLIC_PI_OAUTH_REDIRECT_URI=https://t2pproof.link/signin/callback
 ```
 
 Redeploy after saving.

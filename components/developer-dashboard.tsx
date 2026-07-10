@@ -211,7 +211,7 @@ export function DeveloperDashboard({
           <h2 className="text-sm font-semibold text-amber-300">Pi domain: t2pproof.link</h2>
           <p className="mt-2 text-xs leading-relaxed text-slate-400">
             Pi Developer Portal must use <code className="text-orange-400">t2pproof.link</code> as
-            the app domain (not t2pproof.me). Verify domain, then register this redirect URI:
+            the app domain. Register this redirect URI (no www):
           </p>
           <code className="mt-3 block rounded-lg border border-slate-800 bg-[#050508] px-3 py-2 text-xs text-emerald-400">
             {piOAuthRedirectUri}

@@ -1,12 +1,4 @@
 {
   "version": 2,
-  "cleanUrls": true,
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "t2pproof.link" }],
-      "destination": "https://www.t2pproof.link/:path*",
-      "permanent": true
-    }
-  ]
+  "cleanUrls": true
 }
