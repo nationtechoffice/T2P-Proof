@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { BadgeCheck, ExternalLink, Gift } from "lucide-react"
 import { PiAuthButton } from "@/components/PiAuthButton"
 import {
@@ -9,15 +9,18 @@ import {
   PI_ECOSYSTEM_TOKENS,
   type VettedToken,
 } from "@/lib/mock-tokens"
+import { usePiPendingIntent, usePiSession } from "@/hooks/use-pi-session"
 
 function TokenGrid({
   tokens,
   unlockedTokenId,
   onUnlock,
+  isSignedIn,
 }: {
   tokens: VettedToken[]
   unlockedTokenId: string | null
   onUnlock: (id: string) => void
+  isSignedIn: boolean
 }) {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -77,9 +80,17 @@ function TokenGrid({
                   variant="outline"
                   size="sm"
                   className="w-full"
+                  intent="unlock"
+                  tokenId={token.id}
                   onSuccess={() => onUnlock(token.id)}
                 >
-                  {token.airdropEligible ? "Claim Airdrop / View Details" : "View Details"}
+                  {isSignedIn
+                    ? token.airdropEligible
+                      ? "Claim Airdrop / View Details"
+                      : "View Details"
+                    : token.airdropEligible
+                      ? "Claim Airdrop / View Details"
+                      : "View Details"}
                 </PiAuthButton>
               )}
             </div>
@@ -92,6 +103,14 @@ function TokenGrid({
 
 export function TokenDirectory() {
   const [unlockedTokenId, setUnlockedTokenId] = useState<string | null>(null)
+  const { isSignedIn } = usePiSession()
+  const pendingIntent = usePiPendingIntent()
+
+  useEffect(() => {
+    if (pendingIntent?.intent === "unlock" && pendingIntent.tokenId) {
+      setUnlockedTokenId(pendingIntent.tokenId)
+    }
+  }, [pendingIntent])
 
   return (
     <section id="directory" className="scroll-mt-20">
@@ -123,6 +142,7 @@ export function TokenDirectory() {
             tokens={MAJOR_CRYPTO_TOKENS}
             unlockedTokenId={unlockedTokenId}
             onUnlock={setUnlockedTokenId}
+            isSignedIn={isSignedIn}
           />
         </div>
 
@@ -134,6 +154,7 @@ export function TokenDirectory() {
             tokens={PI_ECOSYSTEM_TOKENS}
             unlockedTokenId={unlockedTokenId}
             onUnlock={setUnlockedTokenId}
+            isSignedIn={isSignedIn}
           />
         </div>
       </div>

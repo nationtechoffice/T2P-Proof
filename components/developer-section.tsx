@@ -1,9 +1,10 @@
 "use client"
 
-import { useState, useCallback } from "react"
+import { useState, useCallback, useEffect } from "react"
 import { Bot, CheckCircle2, Copy, Check, Shield, Zap } from "lucide-react"
 import { PiAuthButton } from "@/components/PiAuthButton"
 import { EMBED_SNIPPET } from "@/lib/embed-snippet"
+import { usePiPendingIntent, usePiSession } from "@/hooks/use-pi-session"
 
 type DemoState = "idle" | "verifying" | "verified"
 
@@ -11,11 +12,22 @@ export function DeveloperSection() {
   const [demoState, setDemoState] = useState<DemoState>("idle")
   const [verifiedUser, setVerifiedUser] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
+  const { isSignedIn, user } = usePiSession()
+  const pendingIntent = usePiPendingIntent()
 
   const handleDemoSuccess = useCallback((data: { user?: { username?: string } }) => {
     setDemoState("verified")
     setVerifiedUser(data.user?.username || "pioneer")
   }, [])
+
+  useEffect(() => {
+    if (!isSignedIn) return
+
+    if (pendingIntent?.intent === "demo") {
+      setDemoState("verified")
+      setVerifiedUser(user?.username || "pioneer")
+    }
+  }, [isSignedIn, pendingIntent, user?.username])
 
   const handleDemoClick = () => {
     if (demoState === "verified") {
@@ -23,6 +35,13 @@ export function DeveloperSection() {
       setVerifiedUser(null)
       return
     }
+
+    if (isSignedIn) {
+      setDemoState("verified")
+      setVerifiedUser(user?.username || "pioneer")
+      return
+    }
+
     setDemoState("verifying")
   }
 
@@ -91,6 +110,7 @@ export function DeveloperSection() {
               ) : demoState === "verifying" ? (
                 <div className="mt-4">
                   <PiAuthButton
+                    intent="demo"
                     onSuccess={handleDemoSuccess}
                     onError={() => setDemoState("idle")}
                     className="w-full sm:w-auto"

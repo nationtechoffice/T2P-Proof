@@ -8,6 +8,7 @@ import {
   DEFAULT_RETURN_URL,
   getPiOAuthRedirectUri,
 } from "@/lib/pi-oauth"
+import { savePiSession, setPendingIntent } from "@/lib/pi-session"
 
 type CallbackStatus = "processing" | "success" | "error"
 
@@ -38,8 +39,9 @@ export default function PiSignInCallbackPage() {
         }
 
         let returnTo = DEFAULT_RETURN_URL
+        let decoded
         try {
-          const decoded = decodeOAuthState(stateParam)
+          decoded = decodeOAuthState(stateParam)
           returnTo = decoded.returnTo
         } catch {
           throw new Error("Invalid sign-in state. Please try again.")
@@ -70,6 +72,19 @@ export default function PiSignInCallbackPage() {
         const data = await response.json()
         if (!response.ok) {
           throw new Error(data.error || data.details || "Server verification failed.")
+        }
+
+        if (!data.user) {
+          throw new Error("Verified sign-in but no user profile was returned.")
+        }
+
+        savePiSession(data.user)
+
+        if (decoded.intent) {
+          setPendingIntent({
+            intent: decoded.intent,
+            ...(decoded.tokenId ? { tokenId: decoded.tokenId } : {}),
+          })
         }
 
         const username = data.user?.username
