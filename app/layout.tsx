@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import { Inter, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { PiScriptLoader } from "@/components/pi-script-loader"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} bg-[#050508]`}>
       <body className="font-sans antialiased">
-        <Script src="https://sdk.minepi.com/pi-sdk.js" strategy="beforeInteractive" />
+        <PiScriptLoader />
         {children}
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>

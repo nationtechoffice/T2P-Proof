@@ -1,10 +1,7 @@
 "use client"
 
-import { useCallback, useEffect, useState } from "react"
-import { ensurePiInitialized, isPiBrowser, piSignIn } from "@/lib/pi-sdk"
-import { isPiOAuthConfigured } from "@/lib/pi-oauth"
-
-const AUTH_SCOPES = ["username", "payments", "wallet_address"]
+import { useCallback, useState } from "react"
+import { piSignIn } from "@/lib/pi-sdk"
 
 /**
  * @typedef {"idle" | "loading" | "success" | "error"} PiAuthStatus
@@ -30,34 +27,6 @@ export function PiAuthButton({
 }) {
   const [status, setStatus] = useState(/** @type {PiAuthStatus} */ ("idle"))
   const [errorMessage, setErrorMessage] = useState("")
-  const [sdkReady, setSdkReady] = useState(false)
-  const [sdkInitializing, setSdkInitializing] = useState(true)
-
-  const oauthEnabled = isPiOAuthConfigured()
-  const inPiBrowser = typeof window !== "undefined" && isPiBrowser()
-
-  useEffect(() => {
-    let cancelled = false
-
-    ensurePiInitialized()
-      .then(() => {
-        if (!cancelled) {
-          setSdkReady(true)
-          setSdkInitializing(false)
-        }
-      })
-      .catch((err) => {
-        if (!cancelled) {
-          setSdkReady(false)
-          setSdkInitializing(false)
-          console.error("[PiAuthButton] SDK init failed:", err)
-        }
-      })
-
-    return () => {
-      cancelled = true
-    }
-  }, [])
 
   const verifyAccessToken = useCallback(
     async (accessToken) => {
@@ -84,9 +53,7 @@ export function PiAuthButton({
     setErrorMessage("")
 
     try {
-      const result = await piSignIn({
-        useOAuth: oauthEnabled && !inPiBrowser,
-      })
+      const result = await piSignIn()
 
       if (result.method === "oauth_redirect") {
         return
@@ -103,7 +70,7 @@ export function PiAuthButton({
       setStatus("error")
       onError?.(msg)
     }
-  }, [oauthEnabled, inPiBrowser, verifyAccessToken, onError])
+  }, [verifyAccessToken, onError])
 
   const sizeClasses = {
     sm: "px-3 py-1.5 text-xs",
@@ -121,41 +88,20 @@ export function PiAuthButton({
 
   const isLoading = status === "loading"
   const isSuccess = status === "success"
-  const isDisabled = isLoading || isSuccess || sdkInitializing || !sdkReady
 
   return (
     <div className="flex flex-col gap-2">
       <button
         type="button"
         onClick={handlePiLogin}
-        disabled={isDisabled}
+        disabled={isLoading || isSuccess}
         className={`inline-flex items-center justify-center gap-2 rounded-lg transition-all ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
       >
         {isLoading && (
           <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
         )}
-        {isSuccess
-          ? "Signed in ✓"
-          : isLoading
-            ? inPiBrowser
-              ? "Authenticating…"
-              : "Redirecting to Pi…"
-            : sdkInitializing
-              ? "Initializing Pi…"
-              : children}
+        {isSuccess ? "Signed in ✓" : isLoading ? "Signing in…" : children}
       </button>
-
-      {sdkInitializing && status === "idle" && (
-        <p className="text-xs text-slate-500">Connecting to Pi Network SDK…</p>
-      )}
-
-      {!sdkInitializing && !sdkReady && status === "idle" && (
-        <p className="text-xs text-slate-500">
-          {oauthEnabled
-            ? "Pi Sign-in available in any browser."
-            : "Open in Pi Browser for live authentication."}
-        </p>
-      )}
 
       {status === "error" && errorMessage && (
         <p className="text-xs text-red-400" role="alert">

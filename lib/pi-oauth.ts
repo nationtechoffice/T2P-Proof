@@ -9,7 +9,22 @@ export function getPiOAuthClientId(): string {
 export function getPiOAuthRedirectUri(origin?: string): string {
   const configured = process.env.NEXT_PUBLIC_PI_OAUTH_REDIRECT_URI
   if (configured) return configured
-  if (origin) return `${origin}/signin/callback`
+
+  if (typeof window !== "undefined") {
+    const host = window.location.hostname
+    if (host === "t2pproof.link" || host === "www.t2pproof.link") {
+      return "https://t2pproof.link/signin/callback"
+    }
+  }
+
+  if (origin) {
+    const host = new URL(origin).hostname
+    if (host === "t2pproof.link" || host === "www.t2pproof.link") {
+      return "https://t2pproof.link/signin/callback"
+    }
+    return `${origin}/signin/callback`
+  }
+
   return "https://t2pproof.link/signin/callback"
 }
 
