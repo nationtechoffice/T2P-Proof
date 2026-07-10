@@ -14,7 +14,7 @@ export const EMBED_SNIPPET = `<!-- t2pproof.link Pi Sign-in -->
       sessionStorage.setItem("pi_oauth_state", state);
       Pi.signIn({
         clientId: PI_CLIENT_ID,
-        redirectUri: "https://t2p-proof.vercel.app/signin/callback",
+        redirectUri: "https://t2pproof.me/signin/callback",
         scopes: ["username", "wallet_address"],
         state,
       });

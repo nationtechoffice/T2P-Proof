@@ -66,11 +66,13 @@ export function DeveloperDashboard({
   apiKeyConfigured,
   piOAuthClientId,
   piOAuthRedirectUri,
+  piAppDomain,
 }: {
   piApiKey: string
   apiKeyConfigured: boolean
   piOAuthClientId: string
   piOAuthRedirectUri: string
+  piAppDomain: string
 }) {
   const [showApiKey, setShowApiKey] = useState(false)
   const [selectedTier, setSelectedTier] = useState("startup")
@@ -203,6 +205,19 @@ export function DeveloperDashboard({
               under Environment Variables, then redeploy.
             </p>
           )}
+        </div>
+
+        <div className="mt-6 rounded-xl border border-amber-500/30 bg-amber-500/5 p-6">
+          <h2 className="text-sm font-semibold text-amber-300">Pi domain requirement</h2>
+          <p className="mt-2 text-xs leading-relaxed text-slate-400">
+            Your Pi app is registered on{" "}
+            <code className="text-orange-400">{piAppDomain}</code>. Redirect URIs on vercel.app or
+            t2pproof.link are rejected. Add <code className="text-orange-400">{piAppDomain}</code>{" "}
+            as a custom domain in Vercel, then register:
+          </p>
+          <code className="mt-3 block rounded-lg border border-slate-800 bg-[#050508] px-3 py-2 text-xs text-emerald-400">
+            {piOAuthRedirectUri}
+          </code>
         </div>
 
         <div className="mt-6 rounded-xl border border-slate-800 bg-[#0c0c10] p-6">
