@@ -1,6 +1,7 @@
 "use client"
 
 import { useCallback, useEffect, useState } from "react"
+import { ensurePiInitialized } from "@/lib/pi-sdk"
 
 const SCOPES = ["username", "payments", "wallet_address"]
 
@@ -29,62 +30,38 @@ export function PiAuthButton({
   const [status, setStatus] = useState(/** @type {PiAuthStatus} */ ("idle"))
   const [errorMessage, setErrorMessage] = useState("")
   const [sdkReady, setSdkReady] = useState(false)
+  const [sdkInitializing, setSdkInitializing] = useState(true)
 
   useEffect(() => {
-    if (typeof window === "undefined") return
+    let cancelled = false
 
-    const initPi = () => {
-      if (!window.Pi) {
-        setSdkReady(false)
-        return
-      }
-
-      try {
-        const isProduction = process.env.NODE_ENV === "production"
-        window.Pi.init({ version: "2.0", sandbox: !isProduction })
-        setSdkReady(true)
-      } catch (err) {
-        console.error("[PiAuthButton] SDK init failed:", err)
-        setSdkReady(false)
-      }
-    }
-
-    if (window.Pi) {
-      initPi()
-      return
-    }
-
-    const interval = setInterval(() => {
-      if (window.Pi) {
-        initPi()
-        clearInterval(interval)
-      }
-    }, 200)
-
-    const timeout = setTimeout(() => {
-      clearInterval(interval)
-    }, 10000)
+    ensurePiInitialized()
+      .then(() => {
+        if (!cancelled) {
+          setSdkReady(true)
+          setSdkInitializing(false)
+        }
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          setSdkReady(false)
+          setSdkInitializing(false)
+          console.error("[PiAuthButton] SDK init failed:", err)
+        }
+      })
 
     return () => {
-      clearInterval(interval)
-      clearTimeout(timeout)
+      cancelled = true
     }
   }, [])
 
   const handlePiLogin = useCallback(async () => {
-    if (!window.Pi) {
-      const msg = "Pi SDK not loaded. Open in Pi Browser or ensure the SDK script is present."
-      setErrorMessage(msg)
-      setStatus("error")
-      onError?.(msg)
-      return
-    }
-
     setStatus("loading")
     setErrorMessage("")
 
     try {
-      const auth = await window.Pi.authenticate(SCOPES, () => {})
+      const pi = await ensurePiInitialized()
+      const auth = await pi.authenticate(SCOPES, () => {})
 
       if (!auth?.accessToken) {
         throw new Error("Authentication completed without an access token.")
@@ -128,25 +105,34 @@ export function PiAuthButton({
 
   const isLoading = status === "loading"
   const isSuccess = status === "success"
+  const isDisabled = isLoading || isSuccess || sdkInitializing || !sdkReady
 
   return (
     <div className="flex flex-col gap-2">
       <button
         type="button"
         onClick={handlePiLogin}
-        disabled={isLoading || isSuccess}
+        disabled={isDisabled}
         className={`inline-flex items-center justify-center gap-2 rounded-lg transition-all ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
       >
         {isLoading && (
           <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
         )}
-        {isSuccess ? "Verified ✓" : isLoading ? "Authenticating…" : children}
+        {isSuccess
+          ? "Verified ✓"
+          : isLoading
+            ? "Authenticating…"
+            : sdkInitializing
+              ? "Initializing Pi…"
+              : children}
       </button>
 
-      {!sdkReady && status === "idle" && (
-        <p className="text-xs text-slate-500">
-          Pi SDK loading… Use Pi Browser for live auth.
-        </p>
+      {sdkInitializing && status === "idle" && (
+        <p className="text-xs text-slate-500">Connecting to Pi Network SDK…</p>
+      )}
+
+      {!sdkInitializing && !sdkReady && status === "idle" && (
+        <p className="text-xs text-slate-500">Open in Pi Browser for live authentication.</p>
       )}
 
       {status === "error" && errorMessage && (
