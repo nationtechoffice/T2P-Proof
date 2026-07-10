@@ -2,15 +2,15 @@
 export const PI_OAUTH_CLIENT_ID_DEFAULT =
   "drzPoB3NasD7MndiCIsF1Ej4EkSZOQfJNSpzeMT1dTw"
 
+/** Production app domain */
+export const PI_APP_DOMAIN = "t2pproof.link"
+
 /**
- * Pi Developer Portal app domain is t2pproof.me (Testnet).
- * Redirect URIs MUST use this host — vercel.app and t2pproof.link are rejected.
+ * Canonical OAuth callback — must EXACTLY match Pi Developer Portal redirect URI.
+ * Site canonical host is www.t2pproof.link.
  */
 export const PI_OAUTH_REDIRECT_URI_DEFAULT =
-  "https://t2pproof.me/signin/callback"
-
-/** Pi app domain registered in Developer Portal */
-export const PI_APP_DOMAIN = "t2pproof.me"
+  "https://www.t2pproof.link/signin/callback"
 
 export function getPiOAuthClientId(): string {
   return process.env.NEXT_PUBLIC_PI_OAUTH_CLIENT_ID || PI_OAUTH_CLIENT_ID_DEFAULT
@@ -33,7 +33,6 @@ export interface PiOAuthStatePayload {
   returnTo: string
 }
 
-/** Encode return URL into OAuth state (works across domains — sessionStorage does not). */
 export function encodeOAuthState(returnTo: string): string {
   const payload: PiOAuthStatePayload = {
     nonce: crypto.randomUUID(),
@@ -50,5 +49,4 @@ export function decodeOAuthState(state: string): PiOAuthStatePayload {
   return payload
 }
 
-/** Where users browse the site (redirected here after OAuth on t2pproof.me) */
 export const DEFAULT_RETURN_URL = "https://www.t2pproof.link/"

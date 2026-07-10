@@ -208,12 +208,10 @@ export function DeveloperDashboard({
         </div>
 
         <div className="mt-6 rounded-xl border border-amber-500/30 bg-amber-500/5 p-6">
-          <h2 className="text-sm font-semibold text-amber-300">Pi domain requirement</h2>
+          <h2 className="text-sm font-semibold text-amber-300">Pi domain: t2pproof.link</h2>
           <p className="mt-2 text-xs leading-relaxed text-slate-400">
-            Your Pi app is registered on{" "}
-            <code className="text-orange-400">{piAppDomain}</code>. Redirect URIs on vercel.app or
-            t2pproof.link are rejected. Add <code className="text-orange-400">{piAppDomain}</code>{" "}
-            as a custom domain in Vercel, then register:
+            Pi Developer Portal must use <code className="text-orange-400">t2pproof.link</code> as
+            the app domain (not t2pproof.me). Verify domain, then register this redirect URI:
           </p>
           <code className="mt-3 block rounded-lg border border-slate-800 bg-[#050508] px-3 py-2 text-xs text-emerald-400">
             {piOAuthRedirectUri}
