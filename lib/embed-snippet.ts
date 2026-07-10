@@ -1,24 +1,25 @@
-export const EMBED_SNIPPET = `<!-- t2pproof.link Pi CAPTCHA Bypass -->
+export const EMBED_SNIPPET = `<!-- t2pproof.link Pi Sign-in -->
 <script src="https://sdk.minepi.com/pi-sdk.js"></script>
-<script src="https://t2pproof.link/embed.js"></script>
-<button
-  id="t2pproof-verify"
-  data-on-success="onHumanVerified"
->
-  Verify with Pi
-</button>
+
+<button id="t2pproof-verify">Sign in with Pi</button>
 
 <script>
-  // Always await init() before authenticate() or createPayment()
+  const PI_CLIENT_ID = "YOUR_PI_OAUTH_CLIENT_ID";
+
   (async () => {
     await Pi.init({ version: "2.0", sandbox: false });
-  })();
 
-  function onHumanVerified(result) {
-    console.log('Human verified:', result.user.username);
-    // Grant access to protected content
-  }
+    document.getElementById("t2pproof-verify").addEventListener("click", () => {
+      const state = crypto.randomUUID();
+      sessionStorage.setItem("pi_oauth_state", state);
+      Pi.signIn({
+        clientId: PI_CLIENT_ID,
+        redirectUri: "https://t2pproof.link/signin/callback",
+        scopes: ["username", "wallet_address"],
+        state,
+      });
+    });
+  })();
 </script>
 
-<!-- Set PI_API_KEY server-side only (Vercel env / .env.local) -->
-<!-- Authorization: Key <your_pi_developer_api_key> -->`
+<!-- Server-side: set PI_API_KEY env var for /api/verify-pi-login -->`

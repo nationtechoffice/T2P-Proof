@@ -6,15 +6,24 @@ Proof of Humanity platform for Web3 — verified token directory + Pi CAPTCHA by
 
 Production deploys from **`main`** on Vercel. All changes should be merged to `main` — preview branches show different URLs and can look like a separate site.
 
-### Required environment variable
+### Required environment variables
 
 In Vercel → Project → Settings → Environment Variables:
 
 ```
 PI_API_KEY=your_pi_developer_api_key
+NEXT_PUBLIC_PI_OAUTH_CLIENT_ID=your_pi_oauth_client_id
 ```
 
 Apply to Production, Preview, and Development, then redeploy.
+
+### Pi Sign-in redirect URI
+
+Register this callback URL in the Pi Developer Portal → Pi Sign-in → Redirect URIs:
+
+```
+https://t2pproof.link/signin/callback
+```
 
 ### Local development
 
@@ -31,4 +40,4 @@ Open [http://localhost:3000](http://localhost:3000).
 
 - `/` — Landing page (token directory + developer API)
 - `/developer` — Developer dashboard
-- `/api/verify-pi-login` — Pi auth verification endpoint
+- `/signin/callback` — Pi OAuth Sign-in callback handler

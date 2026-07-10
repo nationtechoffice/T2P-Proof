@@ -1,9 +1,10 @@
 "use client"
 
 import { useCallback, useEffect, useState } from "react"
-import { ensurePiInitialized } from "@/lib/pi-sdk"
+import { ensurePiInitialized, isPiBrowser, piSignIn } from "@/lib/pi-sdk"
+import { isPiOAuthConfigured } from "@/lib/pi-oauth"
 
-const SCOPES = ["username", "payments", "wallet_address"]
+const AUTH_SCOPES = ["username", "payments", "wallet_address"]
 
 /**
  * @typedef {"idle" | "loading" | "success" | "error"} PiAuthStatus
@@ -20,7 +21,7 @@ const SCOPES = ["username", "payments", "wallet_address"]
  * }} props
  */
 export function PiAuthButton({
-  children = "Verify with Pi",
+  children = "Sign in with Pi",
   className = "",
   onSuccess,
   onError,
@@ -31,6 +32,9 @@ export function PiAuthButton({
   const [errorMessage, setErrorMessage] = useState("")
   const [sdkReady, setSdkReady] = useState(false)
   const [sdkInitializing, setSdkInitializing] = useState(true)
+
+  const oauthEnabled = isPiOAuthConfigured()
+  const inPiBrowser = typeof window !== "undefined" && isPiBrowser()
 
   useEffect(() => {
     let cancelled = false
@@ -55,22 +59,12 @@ export function PiAuthButton({
     }
   }, [])
 
-  const handlePiLogin = useCallback(async () => {
-    setStatus("loading")
-    setErrorMessage("")
-
-    try {
-      const pi = await ensurePiInitialized()
-      const auth = await pi.authenticate(SCOPES, () => {})
-
-      if (!auth?.accessToken) {
-        throw new Error("Authentication completed without an access token.")
-      }
-
+  const verifyAccessToken = useCallback(
+    async (accessToken) => {
       const response = await fetch("/api/verify-pi-login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ accessToken: auth.accessToken }),
+        body: JSON.stringify({ accessToken }),
       })
 
       const data = await response.json()
@@ -81,13 +75,35 @@ export function PiAuthButton({
 
       setStatus("success")
       onSuccess?.(data)
+    },
+    [onSuccess]
+  )
+
+  const handlePiLogin = useCallback(async () => {
+    setStatus("loading")
+    setErrorMessage("")
+
+    try {
+      const result = await piSignIn({
+        useOAuth: oauthEnabled && !inPiBrowser,
+      })
+
+      if (result.method === "oauth_redirect") {
+        return
+      }
+
+      if (!result.auth?.accessToken) {
+        throw new Error("Authentication completed without an access token.")
+      }
+
+      await verifyAccessToken(result.auth.accessToken)
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Pi authentication failed."
       setErrorMessage(msg)
       setStatus("error")
       onError?.(msg)
     }
-  }, [onSuccess, onError])
+  }, [oauthEnabled, inPiBrowser, verifyAccessToken, onError])
 
   const sizeClasses = {
     sm: "px-3 py-1.5 text-xs",
@@ -119,9 +135,11 @@ export function PiAuthButton({
           <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
         )}
         {isSuccess
-          ? "Verified ✓"
+          ? "Signed in ✓"
           : isLoading
-            ? "Authenticating…"
+            ? inPiBrowser
+              ? "Authenticating…"
+              : "Redirecting to Pi…"
             : sdkInitializing
               ? "Initializing Pi…"
               : children}
@@ -132,7 +150,11 @@ export function PiAuthButton({
       )}
 
       {!sdkInitializing && !sdkReady && status === "idle" && (
-        <p className="text-xs text-slate-500">Open in Pi Browser for live authentication.</p>
+        <p className="text-xs text-slate-500">
+          {oauthEnabled
+            ? "Pi Sign-in available in any browser."
+            : "Open in Pi Browser for live authentication."}
+        </p>
       )}
 
       {status === "error" && errorMessage && (
