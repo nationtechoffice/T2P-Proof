@@ -1,46 +1,41 @@
 # t2pproof.link
 
-Proof of Humanity platform for Web3 — verified token directory + Pi CAPTCHA bypass API.
+## CRITICAL: Fix Vercel domain redirect (required for sign-in)
 
-## Pi Developer Portal setup (domain: `t2pproof.link`)
+Pi OAuth sends tokens to `https://t2pproof.link/signin/callback`.
 
-Your Pi app must use **t2pproof.link** — not t2pproof.me or vercel.app.
+If Vercel redirects `t2pproof.link` → `www.t2pproof.link`, the token is **lost** and sign-in always fails.
 
-### 1. Update Pi Developer Portal
+### In Vercel → Project → Settings → Domains
+
+1. Find **t2pproof.link**
+2. **Remove** or **disable** "Redirect to www.t2pproof.link"
+3. Both domains should point to the project, but apex must NOT redirect to www
+
+The site now redirects **www → apex** (correct direction for Pi).
+
+## Pi Developer Portal
 
 | Field | Value |
 |-------|-------|
-| **App URL** | `https://t2pproof.link` |
-| **Domain verification** | `https://t2pproof.link/validation-key.txt` |
-| **Pi Sign-in → Redirect URI** | `https://t2pproof.link/signin/callback` |
+| App URL | `https://t2pproof.link` |
+| Redirect URI | `https://t2pproof.link/signin/callback` |
+| Domain verify | `https://t2pproof.link/validation-key.txt` |
 
-Use **no www** — Pi portal rejects `www.t2pproof.link` for this app.
+App is **Testnet** — code uses `sandbox: true`.
 
-If your portal still shows `t2pproof.me`, change the App URL to `https://t2pproof.link` first, then save the redirect URI above.
-
-### 2. Vercel environment variables
+## Vercel env vars
 
 ```
 PI_API_KEY=your_pi_developer_api_key
-NEXT_PUBLIC_PI_OAUTH_CLIENT_ID=drzPoB3NasD7MndiCIsF1Ej4EkSZOQfJNSpzeMT1dTw
-NEXT_PUBLIC_PI_OAUTH_REDIRECT_URI=https://t2pproof.link/signin/callback
 ```
 
-Redeploy after saving.
+OAuth client ID and redirect are hardcoded in the app.
 
-### 3. Local development
+## Test sign-in
 
-```bash
-cp .env.example .env.local
-# NEXT_PUBLIC_PI_OAUTH_REDIRECT_URI=http://localhost:3000/signin/callback
-npm install && npm run dev
-```
+1. Open `https://t2pproof.link` (no www)
+2. Tap **Sign in with Pi**
+3. After Pi auth you should land on `t2pproof.link/signin/callback` then return to the site
 
-Pi allows `http://localhost:3000/signin/callback` without domain verification.
-
-## Routes
-
-- `/` — Landing page
-- `/developer` — Developer dashboard
-- `/signin/callback` — Pi OAuth callback
-- `/api/verify-pi-login` — Token verification
+If callback shows "No sign-in response from Pi" — the Vercel domain redirect is still enabled.

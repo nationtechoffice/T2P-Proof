@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
-  metadataBase: new URL("https://www.t2pproof.link"),
+  metadataBase: new URL("https://t2pproof.link"),
 }
 
 export default function RootLayout({

@@ -41,11 +41,12 @@ export function encodeOAuthState(returnTo: string): string {
 }
 
 export function decodeOAuthState(state: string): PiOAuthStatePayload {
-  const payload = JSON.parse(atob(state)) as PiOAuthStatePayload
+  const normalized = decodeURIComponent(state)
+  const payload = JSON.parse(atob(normalized)) as PiOAuthStatePayload
   if (!payload?.nonce || !payload?.returnTo) {
     throw new Error("Invalid OAuth state payload.")
   }
   return payload
 }
 
-export const DEFAULT_RETURN_URL = "https://www.t2pproof.link/"
+export const DEFAULT_RETURN_URL = "https://t2pproof.link/"

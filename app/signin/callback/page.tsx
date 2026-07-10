@@ -19,8 +19,15 @@ export default function PiSignInCallbackPage() {
     async function handleCallback() {
       try {
         const hash = window.location.hash.slice(1)
+
         if (!hash) {
-          throw new Error("No sign-in response received from Pi.")
+          const host = window.location.hostname
+          if (host.startsWith("www.")) {
+            throw new Error(
+              "OAuth token missing — www redirect stripped it. In Vercel → Domains, disable 'redirect t2pproof.link to www'."
+            )
+          }
+          throw new Error("No sign-in response from Pi. Try again.")
         }
 
         const params = new URLSearchParams(hash)
@@ -62,7 +69,7 @@ export default function PiSignInCallbackPage() {
 
         const data = await response.json()
         if (!response.ok) {
-          throw new Error(data.error || "Server verification failed.")
+          throw new Error(data.error || data.details || "Server verification failed.")
         }
 
         const username = data.user?.username
@@ -73,7 +80,7 @@ export default function PiSignInCallbackPage() {
 
         setTimeout(() => {
           window.location.assign(returnTo)
-        }, 1000)
+        }, 800)
       } catch (err) {
         setStatus("error")
         setMessage(err instanceof Error ? err.message : "Pi Sign-in failed.")
@@ -99,10 +106,10 @@ export default function PiSignInCallbackPage() {
           {status === "error" && "Sign-in failed"}
         </h1>
 
-        <p className="mt-2 text-sm text-slate-400">{message}</p>
+        <p className="mt-2 text-sm leading-relaxed text-slate-400">{message}</p>
 
-        <p className="mt-3 text-xs text-slate-600">
-          Callback: {getPiOAuthRedirectUri()}
+        <p className="mt-3 break-all text-xs text-slate-600">
+          Expected callback: {getPiOAuthRedirectUri()}
         </p>
 
         {status === "error" && (
@@ -111,7 +118,7 @@ export default function PiSignInCallbackPage() {
             className="mt-6 inline-flex items-center gap-2 rounded-lg bg-orange-500 px-4 py-2 text-sm font-semibold text-black hover:bg-orange-400"
           >
             <ShieldCheck className="h-4 w-4" />
-            Back to t2pproof.link
+            Try again
           </Link>
         )}
       </div>

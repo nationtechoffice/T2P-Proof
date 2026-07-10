@@ -5,7 +5,8 @@ import { useEffect, useState } from "react"
 import { markNativePiEnv } from "@/lib/pi-sdk"
 
 /**
- * Detect native Pi Browser injection, then load SDK script only if needed.
+ * Only mark native Pi when window.Pi exists BEFORE our SDK script loads (Pi Browser).
+ * Never mark native when the web SDK script creates window.Pi.
  */
 export function PiScriptLoader() {
   const [needsScript, setNeedsScript] = useState(false)
@@ -26,7 +27,7 @@ export function PiScriptLoader() {
         clearInterval(poll)
         return
       }
-      if (attempts >= 20) {
+      if (attempts >= 15) {
         clearInterval(poll)
         setNeedsScript(true)
       }
@@ -42,7 +43,9 @@ export function PiScriptLoader() {
       id="pi-sdk"
       src="https://sdk.minepi.com/pi-sdk.js"
       strategy="afterInteractive"
-      onLoad={() => window.dispatchEvent(new Event("pi-sdk-ready"))}
+      onLoad={() => {
+        window.dispatchEvent(new Event("pi-sdk-ready"))
+      }}
       onError={() => window.dispatchEvent(new CustomEvent("pi-sdk-error"))}
     />
   )
