@@ -9,6 +9,7 @@ import {
   getPiOAuthRedirectUri,
 } from "@/lib/pi-oauth"
 import { savePiSession, setPendingIntent } from "@/lib/pi-session"
+import { verifyAccessTokenWithBackend } from "@/lib/pi-auth"
 
 type CallbackStatus = "processing" | "success" | "error"
 
@@ -63,22 +64,7 @@ export default function PiSignInCallbackPage() {
           throw new Error("No access token received from Pi Sign-in.")
         }
 
-        const response = await fetch("/api/verify-pi-login", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ accessToken }),
-        })
-
-        const data = await response.json()
-        if (!response.ok) {
-          throw new Error(data.error || data.details || "Server verification failed.")
-        }
-
-        if (!data.user) {
-          throw new Error("Verified sign-in but no user profile was returned.")
-        }
-
-        savePiSession(data.user)
+        const data = await verifyAccessTokenWithBackend(accessToken)
 
         if (decoded.intent) {
           setPendingIntent({

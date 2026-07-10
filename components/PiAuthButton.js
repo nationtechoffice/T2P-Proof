@@ -1,9 +1,10 @@
 "use client"
 
 import { useCallback, useEffect, useState } from "react"
-import { piSignIn, isNativePiEnv } from "@/lib/pi-sdk"
+import { isNativePiEnv } from "@/lib/pi-sdk"
+import { authenticateWithPi } from "@/lib/pi-auth"
 import { getPiOAuthRedirectUri } from "@/lib/pi-oauth"
-import { getPiSession, savePiSession } from "@/lib/pi-session"
+import { getPiSession } from "@/lib/pi-session"
 
 /**
  * @typedef {"idle" | "loading" | "success" | "error"} PiAuthStatus
@@ -47,32 +48,6 @@ export function PiAuthButton({
     }
   }, [])
 
-  const verifyAccessToken = useCallback(
-    async (accessToken) => {
-      const response = await fetch("/api/verify-pi-login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ accessToken }),
-      })
-
-      const data = await response.json()
-
-      if (!response.ok) {
-        throw new Error(data.error || data.message || "Server verification failed.")
-      }
-
-      if (!data.user) {
-        throw new Error("Verification succeeded but no user profile was returned.")
-      }
-
-      savePiSession(data.user)
-      setSignedInUser(data.user)
-      setStatus("success")
-      onSuccess?.(data)
-    },
-    [onSuccess]
-  )
-
   const completeWithExistingSession = useCallback(() => {
     const session = getPiSession()
     if (!session?.user) return false
@@ -93,25 +68,23 @@ export function PiAuthButton({
 
     try {
       /** @type {{ intent?: "signin" | "demo" | "unlock"; tokenId?: string }} */
-      const oauthOptions = { intent, ...(tokenId ? { tokenId } : {}) }
-      const result = await piSignIn(oauthOptions)
+      const options = { intent, ...(tokenId ? { tokenId } : {}) }
+      const result = await authenticateWithPi(options)
 
-      if (result.method === "oauth_redirect") {
+      if (result.redirecting) {
         return
       }
 
-      if (!result.auth?.accessToken) {
-        throw new Error("Authentication completed without an access token.")
-      }
-
-      await verifyAccessToken(result.auth.accessToken)
+      setSignedInUser(result.user)
+      setStatus("success")
+      onSuccess?.({ user: result.user })
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Pi authentication failed."
       setErrorMessage(msg)
       setStatus("error")
       onError?.(msg)
     }
-  }, [completeWithExistingSession, verifyAccessToken, onError, intent, tokenId])
+  }, [completeWithExistingSession, onError, intent, tokenId, onSuccess])
 
   const sizeClasses = {
     sm: "px-3 py-1.5 text-xs",

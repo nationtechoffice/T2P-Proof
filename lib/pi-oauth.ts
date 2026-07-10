@@ -25,7 +25,7 @@ export function isPiOAuthConfigured(): boolean {
   return Boolean(getPiOAuthClientId())
 }
 
-export const PI_OAUTH_SCOPES = ["username", "wallet_address"] as const
+export const PI_OAUTH_SCOPES = ["username"] as const
 
 import type { PiAuthIntent } from "./pi-session"
 
