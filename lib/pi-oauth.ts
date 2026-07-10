@@ -1,5 +1,9 @@
+/** Pi Sign-in OAuth Client ID — public, safe to embed client-side (Pi Developer Portal) */
+export const PI_OAUTH_CLIENT_ID_DEFAULT =
+  "drzPoB3NasD7MndiCIsF1Ej4EkSZOQfJNSpzeMT1dTw"
+
 export function getPiOAuthClientId(): string {
-  return process.env.NEXT_PUBLIC_PI_OAUTH_CLIENT_ID ?? ""
+  return process.env.NEXT_PUBLIC_PI_OAUTH_CLIENT_ID || PI_OAUTH_CLIENT_ID_DEFAULT
 }
 
 export function getPiOAuthRedirectUri(origin?: string): string {

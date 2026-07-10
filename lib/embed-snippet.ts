@@ -4,7 +4,7 @@ export const EMBED_SNIPPET = `<!-- t2pproof.link Pi Sign-in -->
 <button id="t2pproof-verify">Sign in with Pi</button>
 
 <script>
-  const PI_CLIENT_ID = "YOUR_PI_OAUTH_CLIENT_ID";
+  const PI_CLIENT_ID = "drzPoB3NasD7MndiCIsF1Ej4EkSZOQfJNSpzeMT1dTw";
 
   (async () => {
     await Pi.init({ version: "2.0", sandbox: false });

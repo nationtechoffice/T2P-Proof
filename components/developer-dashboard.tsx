@@ -64,13 +64,18 @@ function maskApiKey(key: string): string {
 export function DeveloperDashboard({
   piApiKey,
   apiKeyConfigured,
+  piOAuthClientId,
+  piOAuthRedirectUri,
 }: {
   piApiKey: string
   apiKeyConfigured: boolean
+  piOAuthClientId: string
+  piOAuthRedirectUri: string
 }) {
   const [showApiKey, setShowApiKey] = useState(false)
   const [selectedTier, setSelectedTier] = useState("startup")
   const [copied, setCopied] = useState(false)
+  const [copiedOAuth, setCopiedOAuth] = useState(false)
 
   const maskedKey = piApiKey ? maskApiKey(piApiKey) : ""
 
@@ -82,6 +87,16 @@ export function DeveloperDashboard({
       setTimeout(() => setCopied(false), 2000)
     } catch {
       setCopied(false)
+    }
+  }
+
+  const copyOAuthId = async () => {
+    try {
+      await navigator.clipboard.writeText(piOAuthClientId)
+      setCopiedOAuth(true)
+      setTimeout(() => setCopiedOAuth(false), 2000)
+    } catch {
+      setCopiedOAuth(false)
     }
   }
 
@@ -188,6 +203,32 @@ export function DeveloperDashboard({
               under Environment Variables, then redeploy.
             </p>
           )}
+        </div>
+
+        <div className="mt-6 rounded-xl border border-slate-800 bg-[#0c0c10] p-6">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h2 className="text-sm font-semibold text-white">Pi Sign-in OAuth Client ID</h2>
+              <p className="mt-1 text-xs text-slate-500">
+                Public client ID for Sign in with Pi. Callback:{" "}
+                <code className="text-orange-400/80">{piOAuthRedirectUri}</code>
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={copyOAuthId}
+              className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-3 py-2 text-xs font-medium text-slate-400 transition-colors hover:border-orange-500/50 hover:text-orange-400"
+            >
+              <Copy className="h-3.5 w-3.5" />
+              {copiedOAuth ? "Copied" : "Copy"}
+            </button>
+          </div>
+          <div className="mt-4 flex items-center gap-3 rounded-lg border border-slate-800 bg-[#050508] px-4 py-3">
+            <ShieldCheck className="h-4 w-4 shrink-0 text-orange-400" />
+            <code className="flex-1 overflow-x-auto break-all font-mono text-sm text-slate-300">
+              {piOAuthClientId}
+            </code>
+          </div>
         </div>
 
         <div className="mt-10">
