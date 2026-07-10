@@ -1,8 +1,10 @@
 "use client"
 
-import { useCallback, useState } from "react"
-import { piSignIn, isNativePiEnv } from "@/lib/pi-sdk"
+import { useCallback, useEffect, useState } from "react"
+import { isNativePiEnv } from "@/lib/pi-sdk"
+import { authenticateWithPi } from "@/lib/pi-auth"
 import { getPiOAuthRedirectUri } from "@/lib/pi-oauth"
+import { getPiSession } from "@/lib/pi-session"
 
 /**
  * @typedef {"idle" | "loading" | "success" | "error"} PiAuthStatus
@@ -16,6 +18,9 @@ import { getPiOAuthRedirectUri } from "@/lib/pi-oauth"
  *   onError?: (error: string) => void
  *   variant?: "primary" | "outline" | "ghost"
  *   size?: "sm" | "md" | "lg"
+ *   intent?: import("@/lib/pi-session").PiAuthIntent
+ *   tokenId?: string
+ *   showSignedInUser?: boolean
  * }} props
  */
 export function PiAuthButton({
@@ -25,53 +30,61 @@ export function PiAuthButton({
   onError,
   variant = "primary",
   size = "md",
+  intent = "signin",
+  tokenId,
+  showSignedInUser = false,
 }) {
   const [status, setStatus] = useState(/** @type {PiAuthStatus} */ ("idle"))
   const [errorMessage, setErrorMessage] = useState("")
-
-  const verifyAccessToken = useCallback(
-    async (accessToken) => {
-      const response = await fetch("/api/verify-pi-login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ accessToken }),
-      })
-
-      const data = await response.json()
-
-      if (!response.ok) {
-        throw new Error(data.error || data.message || "Server verification failed.")
-      }
-
-      setStatus("success")
-      onSuccess?.(data)
-    },
-    [onSuccess]
+  const [signedInUser, setSignedInUser] = useState(
+    /** @type {{ username?: string } | null} */ (null)
   )
 
+  useEffect(() => {
+    const session = getPiSession()
+    if (session?.user) {
+      setSignedInUser(session.user)
+      setStatus("success")
+    }
+  }, [])
+
+  const completeWithExistingSession = useCallback(() => {
+    const session = getPiSession()
+    if (!session?.user) return false
+
+    setSignedInUser(session.user)
+    setStatus("success")
+    onSuccess?.({ user: session.user })
+    return true
+  }, [onSuccess])
+
   const handlePiLogin = useCallback(async () => {
+    if (completeWithExistingSession()) {
+      return
+    }
+
     setStatus("loading")
     setErrorMessage("")
 
     try {
-      const result = await piSignIn()
+      /** @type {{ intent?: "signin" | "demo" | "unlock"; tokenId?: string }} */
+      const options = { intent, ...(tokenId ? { tokenId } : {}) }
+      const result = await authenticateWithPi(options)
 
-      if (result.method === "oauth_redirect") {
+      if (result.redirecting) {
         return
       }
 
-      if (!result.auth?.accessToken) {
-        throw new Error("Authentication completed without an access token.")
-      }
-
-      await verifyAccessToken(result.auth.accessToken)
+      setSignedInUser(result.user)
+      setStatus("success")
+      onSuccess?.({ user: result.user })
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Pi authentication failed."
       setErrorMessage(msg)
       setStatus("error")
       onError?.(msg)
     }
-  }, [verifyAccessToken, onError])
+  }, [completeWithExistingSession, onError, intent, tokenId, onSuccess])
 
   const sizeClasses = {
     sm: "px-3 py-1.5 text-xs",
@@ -90,20 +103,24 @@ export function PiAuthButton({
   const isLoading = status === "loading"
   const isSuccess = status === "success"
   const nativePi = typeof window !== "undefined" && isNativePiEnv()
+  const successLabel =
+    showSignedInUser && signedInUser?.username
+      ? `@${signedInUser.username}`
+      : "Signed in ✓"
 
   return (
     <div className="flex flex-col gap-2">
       <button
         type="button"
         onClick={handlePiLogin}
-        disabled={isLoading || isSuccess}
+        disabled={isLoading || (isSuccess && !showSignedInUser)}
         className={`inline-flex items-center justify-center gap-2 rounded-lg transition-all ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
       >
         {isLoading && (
           <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
         )}
         {isSuccess
-          ? "Signed in ✓"
+          ? successLabel
           : isLoading
             ? nativePi
               ? "Approve in Pi…"

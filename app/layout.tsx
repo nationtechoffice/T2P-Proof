@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { PiAuthBootstrap } from "@/components/pi-auth-bootstrap"
 import { PiScriptLoader } from "@/components/pi-script-loader"
 import "./globals.css"
 
@@ -29,6 +30,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <PiScriptLoader />
+        <PiAuthBootstrap />
         {children}
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>

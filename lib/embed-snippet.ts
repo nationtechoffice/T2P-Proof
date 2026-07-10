@@ -15,7 +15,7 @@ export const EMBED_SNIPPET = `<!-- t2pproof.link Pi Sign-in -->
       Pi.signIn({
         clientId: PI_CLIENT_ID,
         redirectUri: "https://t2pproof.link/signin/callback",
-        scopes: ["username", "wallet_address"],
+        scopes: ["username"],
         state,
       });
     });

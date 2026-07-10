@@ -8,6 +8,8 @@ import {
   DEFAULT_RETURN_URL,
   getPiOAuthRedirectUri,
 } from "@/lib/pi-oauth"
+import { savePiSession, setPendingIntent } from "@/lib/pi-session"
+import { verifyAccessTokenWithBackend } from "@/lib/pi-auth"
 
 type CallbackStatus = "processing" | "success" | "error"
 
@@ -38,8 +40,9 @@ export default function PiSignInCallbackPage() {
         }
 
         let returnTo = DEFAULT_RETURN_URL
+        let decoded
         try {
-          const decoded = decodeOAuthState(stateParam)
+          decoded = decodeOAuthState(stateParam)
           returnTo = decoded.returnTo
         } catch {
           throw new Error("Invalid sign-in state. Please try again.")
@@ -61,15 +64,13 @@ export default function PiSignInCallbackPage() {
           throw new Error("No access token received from Pi Sign-in.")
         }
 
-        const response = await fetch("/api/verify-pi-login", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ accessToken }),
-        })
+        const data = await verifyAccessTokenWithBackend(accessToken)
 
-        const data = await response.json()
-        if (!response.ok) {
-          throw new Error(data.error || data.details || "Server verification failed.")
+        if (decoded.intent) {
+          setPendingIntent({
+            intent: decoded.intent,
+            ...(decoded.tokenId ? { tokenId: decoded.tokenId } : {}),
+          })
         }
 
         const username = data.user?.username

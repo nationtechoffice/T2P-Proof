@@ -1,6 +1,17 @@
-import { getPiApiBase } from "@/lib/pi-config"
+const PI_ME_ENDPOINT = "https://api.minepi.com/v2/me"
+const SESSION_COOKIE = "t2pproof_pi_session"
 
-const PI_ME_ENDPOINT = `${getPiApiBase()}/me`
+function buildSessionCookie(user) {
+  const payload = JSON.stringify({
+    uid: user.uid,
+    username: user.username,
+    verifiedAt: Date.now(),
+  })
+
+  return `${SESSION_COOKIE}=${encodeURIComponent(payload)}; Path=/; HttpOnly; SameSite=Lax; Max-Age=86400${
+    process.env.NODE_ENV === "production" ? "; Secure" : ""
+  }`
+}
 
 export async function POST(request) {
   let body
@@ -48,7 +59,14 @@ export async function POST(request) {
 
     const user = await piResponse.json()
 
-    return Response.json({ success: true, user })
+    return Response.json(
+      { success: true, user },
+      {
+        headers: {
+          "Set-Cookie": buildSessionCookie(user),
+        },
+      }
+    )
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown server error."
     return Response.json(
