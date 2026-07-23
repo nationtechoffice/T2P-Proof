@@ -68,6 +68,7 @@ export const siteConfig = {
     "licensed handyman",
     "Florida home improvements",
   ],
+  indexNowKey: "8f3a7c2e1b9d4f6a8c5e2b7d1a9f4c6e",
 } as const;
 
 export type ServiceCategory = "handyman" | "painting" | "fence";

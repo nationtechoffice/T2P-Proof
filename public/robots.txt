@@ -11,5 +11,8 @@ User-agent: Bingbot
 Allow: /
 Disallow: /api/
 
+# IndexNow key file for instant indexing (Bing, Yandex, Seznam, Naver, and more)
+# https://www.indexnow.org/documentation
+
 Sitemap: https://handymanprosflorida.com/sitemap.xml
 Host: https://handymanprosflorida.com

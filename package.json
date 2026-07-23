@@ -8,7 +8,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "postbuild": "tsx scripts/submit-indexnow.ts",
+    "start": "next start",
+    "indexnow": "tsx scripts/submit-indexnow.ts"
   },
   "dependencies": {
     "next": "latest",
@@ -25,6 +27,7 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "tsx": "latest"
   }
 }
