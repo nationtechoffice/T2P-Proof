@@ -21,8 +21,8 @@ export function localBusinessSchema() {
     name: siteConfig.name,
     alternateName: siteConfig.shortName,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/images/logo.png`,
-    image: `${siteConfig.url}/images/og-default.jpg`,
+    logo: `${siteConfig.url}/favicon.svg`,
+    image: `${siteConfig.url}/images/hero-handyman.png`,
     description: siteConfig.description,
     telephone: siteConfig.phoneTel,
     email: siteConfig.email,
@@ -43,12 +43,14 @@ export function localBusinessSchema() {
       "@type": "City",
       name: `${city}, FL`,
     })),
-    openingHoursSpecification: siteConfig.hours.map((h) => ({
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: h.day,
-      opens: h.opens,
-      closes: h.closes,
-    })),
+    openingHoursSpecification: siteConfig.hours
+      .filter((h) => h.opens !== "Closed")
+      .map((h) => ({
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: h.day,
+        opens: h.opens,
+        closes: h.closes,
+      })),
     priceRange: "$$",
     sameAs: Object.values(siteConfig.social),
     hasOfferCatalog: {

@@ -47,15 +47,15 @@ export default function ContactPage() {
                   <MapPin className="mt-1 h-6 w-6 text-[hsl(var(--primary))]" />
                   <div>
                     <p className="font-semibold">Service Area</p>
-                    <p className="text-[hsl(var(--muted-foreground))]">Serving all of Florida</p>
+                    <p className="text-[hsl(var(--muted-foreground))]">Tampa &amp; surrounding counties, FL</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 rounded-xl border border-[hsl(var(--border))] p-4">
                   <Clock className="mt-1 h-6 w-6 text-[hsl(var(--primary))]" />
                   <div>
                     <p className="font-semibold">Business Hours</p>
-                    <p className="text-sm text-[hsl(var(--muted-foreground))]">Mon-Fri: 7AM - 7PM</p>
-                    <p className="text-sm text-[hsl(var(--muted-foreground))]">Sat: 8AM - 5PM | Sun: 9AM - 3PM</p>
+                    <p className="text-sm text-[hsl(var(--muted-foreground))]">Mon-Fri: 10AM - 6PM</p>
+                    <p className="text-sm text-[hsl(var(--muted-foreground))]">Sat-Sun: Closed</p>
                   </div>
                 </div>
               </div>

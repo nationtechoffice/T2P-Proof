@@ -1,5 +1,6 @@
 import { Hero } from "@/components/hero";
 import { ServicesGrid } from "@/components/services-grid";
+import { PhotoGallery } from "@/components/photo-gallery";
 import { Testimonials } from "@/components/testimonials";
 import { FAQSection, homeFaqs } from "@/components/faq-section";
 import { CTASection } from "@/components/cta-section";
@@ -23,37 +24,51 @@ export default function HomePage() {
       />
       <Hero />
 
-      <section className="section-padding">
+      <section className="section-padding relative">
         <div className="container-site">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="hero-speakable">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
+                Based in Tampa
+              </p>
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Your Trusted Florida Handyman Company
+                Your Trusted Tampa Bay Handyman
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-[hsl(var(--muted-foreground))]">
-                Handyman Pros Florida is a full-service home improvement company serving homeowners across the Sunshine State. Whether you need a skilled handyman for home repairs, a professional painter for interior or exterior work, or a fence contractor for installation and repairs — we deliver quality craftsmanship with every project.
+                Handyman Pros FL is a mobile handyman service built around fast, flexible response for the Tampa area. Our tools travel with us — same-day help for urgent jobs across Hillsborough County and surrounding counties.
               </p>
               <ul className="space-y-3">
                 {[
-                  "Licensed, bonded, and insured professionals",
-                  "Free estimates with transparent pricing",
-                  "Same-day and emergency service available",
+                  "Licensed, bonded, and insured local Tampa experts",
+                  "Honest, upfront pricing with no surprise fees",
+                  "Mobile team with tools on board",
                   "60+ specialized services under one roof",
-                  "Serving 20+ cities across Florida",
+                  "Serving Tampa & all surrounding counties",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[hsl(var(--secondary))]" />
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[hsl(var(--accent))]" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl bg-gradient-to-br from-[hsl(var(--primary))]/5 to-[hsl(var(--secondary))]/5 p-8">
-              <h3 className="mb-4 text-xl font-bold">Service Areas Across Florida</h3>
+            <div className="glass-panel">
+              <h3 className="mb-2 text-xl font-bold">Counties We Serve</h3>
+              <p className="mb-4 text-sm text-[hsl(var(--muted-foreground))]">
+                Tampa and all surrounding counties across the Bay area.
+              </p>
+              <div className="mb-6 flex flex-wrap gap-2">
+                {siteConfig.counties.map((county) => (
+                  <span key={county} className="rounded-full bg-[hsl(var(--primary))]/10 px-3 py-1.5 text-sm font-medium text-[hsl(var(--primary))]">
+                    {county}
+                  </span>
+                ))}
+              </div>
+              <h3 className="mb-3 text-lg font-bold">Popular Neighborhoods</h3>
               <div className="flex flex-wrap gap-2">
                 {siteConfig.serviceAreas.map((city) => (
                   <span key={city} className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm shadow-sm">
-                    <MapPin className="h-3 w-3 text-[hsl(var(--primary))]" />
+                    <MapPin className="h-3 w-3 text-[hsl(var(--accent))]" />
                     {city}
                   </span>
                 ))}
@@ -67,20 +82,21 @@ export default function HomePage() {
       </section>
 
       <ServicesGrid />
+      <PhotoGallery />
       <Testimonials />
 
-      <section className="section-padding">
+      <section className="section-padding relative">
         <div className="container-site">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Home Improvement Tips & Guides</h2>
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Tampa Home Improvement Tips</h2>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
-              Expert advice from our Florida home service professionals to help you maintain and improve your property.
+              Expert advice from our Tampa Bay home service professionals.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {recentPosts.map((post) => (
               <article key={post.slug} className="card flex flex-col">
-                <span className="mb-2 text-xs font-semibold uppercase tracking-wider text-[hsl(var(--secondary))]">
+                <span className="mb-2 text-xs font-semibold uppercase tracking-wider text-[hsl(var(--accent))]">
                   {post.category}
                 </span>
                 <h3 className="mb-2 text-lg font-bold">

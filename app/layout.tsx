@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { AnimatedBackground } from "@/components/animated-background";
 import { JsonLd, localBusinessSchema, websiteSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
@@ -9,8 +10,8 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Handyman, Painting & Fence Services in Florida`,
-    template: `%s | ${siteConfig.name}`,
+    default: `${siteConfig.shortName} | Fast Affordable Handyman in Tampa, FL`,
+    template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords.join(", "),
@@ -30,15 +31,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | Handyman, Painting & Fence Services in Florida`,
+    title: `${siteConfig.shortName} | Fast Affordable Handyman in Tampa, FL`,
     description: siteConfig.description,
-    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630, alt: siteConfig.name }],
+    images: [{ url: "/images/hero-handyman.png", width: 1280, height: 832, alt: siteConfig.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
+    title: siteConfig.shortName,
     description: siteConfig.description,
-    images: ["/images/og-default.jpg"],
+    images: ["/images/hero-handyman.png"],
   },
   robots: {
     index: true,
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0057b8",
+  themeColor: siteConfig.themeColor,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -68,10 +69,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-US">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.webmanifest" />
       </head>
       <body>
+        <AnimatedBackground />
         <JsonLd data={[localBusinessSchema(), websiteSchema()]} />
         <Header />
         <main id="main-content">{children}</main>

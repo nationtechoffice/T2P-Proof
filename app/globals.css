@@ -1,33 +1,37 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: hsl(0 0% 100%);
-  --color-foreground: hsl(210 40% 12%);
-  --color-primary: hsl(210 100% 35%);
+  --color-background: hsl(38 40% 97%);
+  --color-foreground: hsl(200 60% 12%);
+  --color-primary: hsl(200 85% 38%);
   --color-primary-foreground: hsl(0 0% 100%);
-  --color-secondary: hsl(152 60% 40%);
+  --color-secondary: hsl(158 45% 38%);
   --color-secondary-foreground: hsl(0 0% 100%);
-  --color-accent: hsl(38 92% 50%);
-  --color-accent-foreground: hsl(210 40% 12%);
-  --color-muted: hsl(210 20% 96%);
-  --color-muted-foreground: hsl(210 15% 45%);
-  --color-border: hsl(210 20% 90%);
-  --radius: 0.5rem;
+  --color-accent: hsl(28 89% 50%);
+  --color-accent-foreground: hsl(0 0% 100%);
+  --color-muted: hsl(38 30% 94%);
+  --color-muted-foreground: hsl(200 20% 40%);
+  --color-border: hsl(38 25% 88%);
+  --radius: 0.75rem;
 }
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 40% 12%;
-    --primary: 210 100% 35%;
+    --background: 38 40% 97%;
+    --foreground: 200 60% 12%;
+    --primary: 200 85% 38%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 152 60% 40%;
+    --secondary: 158 45% 38%;
     --secondary-foreground: 0 0% 100%;
-    --accent: 38 92% 50%;
-    --accent-foreground: 210 40% 12%;
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 15% 45%;
-    --border: 210 20% 90%;
+    --accent: 28 89% 50%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 38 30% 94%;
+    --muted-foreground: 200 20% 40%;
+    --border: 38 25% 88%;
+    --florida-sky: 195 80% 55%;
+    --florida-coral: 12 85% 62%;
+    --florida-sand: 38 45% 92%;
+    --florida-palm: 145 50% 32%;
   }
 
   html {
@@ -37,11 +41,115 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    position: relative;
+    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold tracking-tight text-foreground;
   }
+}
+
+/* Florida animated background */
+.florida-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.florida-bg__gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    hsl(38 45% 96%) 0%,
+    hsl(195 60% 94%) 25%,
+    hsl(28 70% 95%) 50%,
+    hsl(195 50% 93%) 75%,
+    hsl(38 40% 96%) 100%
+  );
+  background-size: 400% 400%;
+  animation: florida-gradient 18s ease infinite;
+}
+
+.florida-bg__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  animation: florida-float 20s ease-in-out infinite;
+}
+
+.florida-bg__orb--1 {
+  width: 500px;
+  height: 500px;
+  background: hsl(var(--accent) / 0.5);
+  top: -10%;
+  right: -5%;
+  animation-delay: 0s;
+}
+
+.florida-bg__orb--2 {
+  width: 400px;
+  height: 400px;
+  background: hsl(var(--florida-sky) / 0.4);
+  bottom: 10%;
+  left: -8%;
+  animation-delay: -7s;
+}
+
+.florida-bg__orb--3 {
+  width: 350px;
+  height: 350px;
+  background: hsl(var(--secondary) / 0.3);
+  top: 40%;
+  left: 50%;
+  animation-delay: -14s;
+}
+
+.florida-bg__waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%230077b6' fill-opacity='0.06' d='M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z'/%3E%3C/svg%3E") repeat-x bottom;
+  background-size: 1440px 120px;
+  animation: florida-waves 25s linear infinite;
+}
+
+.florida-bg__palms {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 180px;
+  opacity: 0.04;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 120'%3E%3Cpath fill='%232d6a4f' d='M50 120V60M50 60C30 40 10 50 5 70C25 55 40 58 50 60M50 60C70 40 90 50 95 70C75 55 60 58 50 60M50 45C35 25 15 30 10 50C30 38 42 42 50 45M50 45C65 25 85 30 90 50C70 38 58 42 50 45M50 30C40 10 25 15 20 35C35 25 44 28 50 30M50 30C60 10 75 15 80 35C65 25 56 28 50 30'/%3E%3C/svg%3E") no-repeat bottom right;
+  background-size: contain;
+}
+
+@keyframes florida-gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes florida-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-20px, 15px) scale(0.95); }
+}
+
+@keyframes florida-waves {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 1440px; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
 }
 
 @layer components {
@@ -50,15 +158,15 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:brightness-110 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-xl bg-[hsl(var(--primary))] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[hsl(var(--primary)/0.25)] transition-all hover:brightness-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))] focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-lg border-2 border-primary bg-transparent px-6 py-3 text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-primary-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-xl border-2 border-[hsl(var(--primary))] bg-white/80 px-6 py-3 text-sm font-semibold text-[hsl(var(--primary))] backdrop-blur-sm transition-all hover:bg-[hsl(var(--primary))] hover:text-white focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))] focus:ring-offset-2;
   }
 
   .btn-accent {
-    @apply inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground shadow-md transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-xl bg-[hsl(var(--accent))] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[hsl(var(--accent)/0.3)] transition-all hover:brightness-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:ring-offset-2;
   }
 
   .section-padding {
@@ -66,7 +174,17 @@
   }
 
   .card {
-    @apply rounded-xl border border-border bg-white p-6 shadow-sm transition-shadow hover:shadow-md;
+    @apply rounded-2xl border border-[hsl(var(--border))] bg-white/80 p-6 shadow-sm backdrop-blur-sm transition-all hover:border-[hsl(var(--accent)/0.3)] hover:shadow-lg;
+  }
+
+  .glass-panel {
+    @apply rounded-2xl border border-white/40 bg-white/70 p-6 shadow-xl backdrop-blur-md;
+  }
+
+  .hero-shimmer {
+    background: linear-gradient(90deg, transparent, hsl(var(--accent) / 0.15), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 4s ease-in-out infinite;
   }
 
   .prose-blog h2 {
@@ -78,11 +196,11 @@
   }
 
   .prose-blog p {
-    @apply mb-4 leading-relaxed text-muted-foreground;
+    @apply mb-4 leading-relaxed text-[hsl(var(--muted-foreground))];
   }
 
   .prose-blog ul, .prose-blog ol {
-    @apply mb-4 ml-6 list-disc space-y-2 text-muted-foreground;
+    @apply mb-4 ml-6 list-disc space-y-2 text-[hsl(var(--muted-foreground))];
   }
 
   .prose-blog table {
@@ -90,10 +208,10 @@
   }
 
   .prose-blog th, .prose-blog td {
-    @apply border border-border px-4 py-2 text-left;
+    @apply border border-[hsl(var(--border))] px-4 py-2 text-left;
   }
 
   .prose-blog th {
-    @apply bg-muted font-semibold;
+    @apply bg-[hsl(var(--muted))] font-semibold;
   }
 }
