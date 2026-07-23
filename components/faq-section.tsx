@@ -18,8 +18,8 @@ const homeFaqs = [
     answer: "Yes, we frequently offer same-day service across Hillsborough County when our schedule allows. As a local mobile team based in Tampa, we can often reach Westchase, Carrollwood, and Citrus Park the same day you call.",
   },
   {
-    question: "Do you offer emergency handyman service?",
-    answer: `Our standard hours are Monday through Friday, 10:00 AM to 6:00 PM, but for genuine emergencies we do our best to respond quickly. Call ${siteConfig.phone} directly for urgent repairs.`,
+    question: "Are you open 24/7?",
+    answer: `Yes! Handyman Pros FL is open 24 hours a day, 7 days a week. Call ${siteConfig.phone} anytime — day or night — for handyman service, emergency repairs, or a free estimate.`,
   },
   {
     question: "What payment methods do you accept?",

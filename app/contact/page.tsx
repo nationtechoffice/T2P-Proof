@@ -53,9 +53,9 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4 rounded-xl border border-[hsl(var(--border))] p-4">
                   <Clock className="mt-1 h-6 w-6 text-[hsl(var(--primary))]" />
                   <div>
-                    <p className="font-semibold">Business Hours</p>
-                    <p className="text-sm text-[hsl(var(--muted-foreground))]">Mon-Fri: 10AM - 6PM</p>
-                    <p className="text-sm text-[hsl(var(--muted-foreground))]">Sat-Sun: Closed</p>
+                    <p className="font-semibold">Hours</p>
+                    <p className="text-sm font-medium text-[hsl(var(--accent))]">Open 24/7</p>
+                    <p className="text-sm text-[hsl(var(--muted-foreground))]">Always available — call anytime</p>
                   </div>
                 </div>
               </div>

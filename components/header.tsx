@@ -23,7 +23,7 @@ export function Header() {
         <a href={`tel:${siteConfig.phoneTel}`} className="inline-flex items-center gap-2 font-medium hover:underline">
           <Phone className="h-4 w-4" />
           <MapPin className="h-3 w-3 text-[hsl(var(--accent))]" />
-          Tampa Bay — Call for Free Estimate: {siteConfig.phone}
+          Tampa Bay — Open 24/7 — Call for Free Estimate: {siteConfig.phone}
         </a>
       </div>
       <div className="container-site flex h-16 items-center justify-between">

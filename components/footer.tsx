@@ -70,7 +70,7 @@ export function Footer() {
         <div className="mt-12 border-t border-gray-700 pt-8 text-center text-sm">
           <p>&copy; {currentYear} {siteConfig.name}. All rights reserved.</p>
           <p className="mt-2 text-xs text-gray-500">
-            Licensed &amp; Insured | Mon–Fri 10AM–6PM | Free Estimates | Satisfaction Guaranteed
+            Licensed &amp; Insured | Open 24/7 | Free Estimates | Satisfaction Guaranteed
           </p>
         </div>
       </div>

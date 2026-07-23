@@ -63,7 +63,7 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--primary))]/40 to-transparent" />
             </div>
             <div className="absolute -bottom-4 -left-4 rounded-xl bg-[hsl(var(--accent))] px-4 py-2 text-sm font-bold text-white shadow-lg">
-              Mon–Fri 10AM – 6PM
+              Open 24/7
             </div>
           </div>
         </div>
