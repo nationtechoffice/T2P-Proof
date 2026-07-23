@@ -3,16 +3,16 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { allServices, categoryMeta } from "@/lib/services";
-import { buildMetadata, buildPageTitle } from "@/lib/seo";
+import { buildMetadata, buildLocalTitle } from "@/lib/seo";
 import type { ServiceCategory } from "@/lib/site-config";
 import { Wrench, Paintbrush, Fence } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: buildPageTitle("All Home Services"),
+  title: buildLocalTitle("All Home Services in Tampa Bay"),
   description:
-    "Browse 60+ professional home services from Handyman Pros Florida. Handyman repairs, painting, fence installation, remodeling, and more. Free estimates statewide.",
+    "60+ handyman, painting & fence services in Tampa, Westchase, Carrollwood, Hillsborough County & surrounding areas. Licensed, insured & open 24/7. Free estimates.",
   path: "/services",
-  keywords: ["Florida home services", "handyman services list", "painting contractor", "fence installation"],
+  keywords: ["Tampa home services", "handyman services Tampa", "painting contractor Tampa Bay", "fence installation Tampa"],
 });
 
 const icons = { wrench: Wrench, paintbrush: Paintbrush, fence: Fence };

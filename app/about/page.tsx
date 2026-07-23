@@ -1,54 +1,64 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
-import { buildMetadata, buildPageTitle } from "@/lib/seo";
+import { buildMetadata, buildLocalTitle } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
-import { Shield, Users, Award, Heart } from "lucide-react";
+import { formatFullAddress } from "@/lib/local-seo";
+import { Shield, Users, Award, Heart, MapPin } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: buildPageTitle("About Us"),
+  title: buildLocalTitle("About Us"),
   description:
-    "Learn about Handyman Pros Florida — licensed handyman, painting, and fence contractors serving homeowners across the Sunshine State since day one.",
+    `Handyman Pros FL is based at ${formatFullAddress()} in Westchase, Tampa. Licensed handyman, painting & fence services open 24/7 across Hillsborough County & Tampa Bay.`,
   path: "/about",
-  keywords: ["about handyman pros florida", "Florida handyman company", "licensed contractors"],
+  keywords: ["about handyman pros Tampa", "Westchase handyman", "Tampa handyman company", "33626 handyman"],
 });
 
 const values = [
-  { icon: Shield, title: "Licensed & Insured", description: "Every team member is fully licensed and insured for your peace of mind." },
-  { icon: Users, title: "Experienced Team", description: "Our craftsmen bring years of experience in handyman, painting, and fencing." },
-  { icon: Award, title: "Quality Craftsmanship", description: "We take pride in every project, delivering results that exceed expectations." },
-  { icon: Heart, title: "Customer First", description: "Your satisfaction is our top priority. We don't leave until you're happy." },
+  { icon: Shield, title: "Licensed & Insured", description: "Fully licensed and insured for every job in Hillsborough County and Tampa Bay." },
+  { icon: Users, title: "Local Tampa Team", description: "Based in Westchase — we know Tampa homes, Florida weather, and neighborhood needs." },
+  { icon: Award, title: "Quality Craftsmanship", description: "We take pride in every repair, paint job, and fence installation." },
+  { icon: Heart, title: "Open 24/7", description: "Call anytime. We're available around the clock for Tampa Bay homeowners." },
 ];
 
 export default function AboutPage() {
+  const fullAddress = formatFullAddress();
+
   return (
     <>
       <Breadcrumbs items={[{ label: "About" }]} />
       <section className="section-padding">
         <div className="container-site">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="mb-4 text-4xl font-bold">About Handyman Pros Florida</h1>
+            <h1 className="mb-4 text-4xl font-bold">About Handyman Pros FL — Tampa</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
-              Your trusted partner for home repairs, painting, and fence services across the Sunshine State.
+              Your trusted local handyman based in Westchase, serving Tampa and all surrounding counties.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-[hsl(var(--muted))]">
+      <section className="section-padding bg-[hsl(var(--muted))]/50">
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
             <h2 className="mb-6 text-2xl font-bold">Who We Are</h2>
             <div className="space-y-4 text-[hsl(var(--muted-foreground))] leading-relaxed">
               <p>
-                Handyman Pros Florida is a full-service home improvement company built on a simple promise: deliver exceptional craftsmanship, honest pricing, and outstanding customer service on every job. From quick handyman repairs to complete painting projects and custom fence installations, we handle it all.
+                Handyman Pros FL is a licensed, insured home services company headquartered at {fullAddress} in the Westchase area of Tampa. We built our business on fast response, honest pricing, and quality work on every job.
               </p>
               <p>
-                Our team of skilled handymen, painters, and fence contractors serves homeowners across Florida — from Tampa and Orlando to Miami, Jacksonville, and beyond. We understand the unique challenges Florida homes face, from hurricane preparation to humidity-related maintenance, and we use materials and techniques built for our climate.
+                Our mobile team serves homeowners across Hillsborough, Pinellas, Pasco, Polk, Hernando, and Manatee counties — including Westchase, Carrollwood, Citrus Park, Town &apos;n&apos; Country, Brandon, Riverview, St. Petersburg, and Clearwater.
               </p>
               <p>
-                With over {siteConfig.serviceAreas.length} service areas and {60}+ specialized services, Handyman Pros Florida is the one call you need for any home project. We offer free estimates, transparent pricing, and a satisfaction guarantee on every job.
+                From furniture assembly and drywall repair to interior painting and fence installation, we offer 60+ services and are open 24 hours a day, 7 days a week. Call {siteConfig.phone} anytime for a free estimate.
               </p>
+            </div>
+            <div className="mt-8 flex items-start gap-3 rounded-xl border border-[hsl(var(--border))] bg-white/80 p-6">
+              <MapPin className="mt-1 h-6 w-6 shrink-0 text-[hsl(var(--accent))]" />
+              <div>
+                <p className="font-semibold">Our Tampa Location</p>
+                <address className="mt-1 not-italic text-[hsl(var(--muted-foreground))]">{fullAddress}</address>
+              </div>
             </div>
           </div>
         </div>
@@ -71,7 +81,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <CTASection title="Work With Florida's Best" />
+      <CTASection title="Tampa's Trusted Handyman — Open 24/7" />
     </>
   );
 }

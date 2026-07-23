@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
-import { buildMetadata, buildPageTitle } from "@/lib/seo";
+import { buildMetadata, buildLocalTitle } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { MapPin } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: buildPageTitle("Tampa Bay Service Areas"),
+  title: buildLocalTitle("Tampa Bay Service Areas"),
   description:
-    "Handyman Pros FL serves Tampa, Westchase, Carrollwood, Citrus Park, Brandon, and all of Hillsborough, Pinellas, Pasco, Polk, Hernando, and Manatee counties.",
+    `Handyman Pros FL serves Tampa from ${siteConfig.address.street}, Westchase 33626. Westchase, Carrollwood, Citrus Park, Brandon, Hillsborough, Pinellas, Pasco & all surrounding counties. Open 24/7.`,
   path: "/service-areas",
-  keywords: ["handyman near me Tampa", "Tampa Bay service areas", "Hillsborough County handyman"],
+  keywords: ["handyman near me Tampa", "handyman Westchase 33626", "Tampa Bay service areas", "Hillsborough County handyman"],
 });
 
 export default function ServiceAreasPage() {

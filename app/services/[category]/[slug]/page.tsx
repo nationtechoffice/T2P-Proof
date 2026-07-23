@@ -4,7 +4,8 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { FAQSection } from "@/components/faq-section";
 import { categoryMeta, getAllServiceSlugs, getService } from "@/lib/services";
-import { buildMetadata, buildPageTitle } from "@/lib/seo";
+import { buildMetadata, buildLocalTitle, buildPageTitle } from "@/lib/seo";
+import { getLocalPageDescription, getLocalPageTitle } from "@/lib/local-seo";
 import type { ServiceCategory } from "@/lib/site-config";
 import { JsonLd, breadcrumbSchema, serviceSchema, faqSchema, speakableSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
@@ -22,10 +23,10 @@ export async function generateMetadata({
   const service = getService(category as ServiceCategory, slug);
   if (!service) return {};
   return buildMetadata({
-    title: buildPageTitle(`${service.name} in Florida`),
-    description: `${service.shortDescription} Professional ${service.name.toLowerCase()} services across Florida. Free estimates. Call ${siteConfig.phone}.`,
+    title: buildLocalTitle(getLocalPageTitle(service.name)),
+    description: getLocalPageDescription(service.shortDescription, service.name),
     path: `/services/${category}/${slug}`,
-    keywords: service.keywords,
+    keywords: [...service.keywords, `${service.name} Tampa`, `${service.name} Westchase`, `${service.name} Hillsborough County`],
   });
 }
 
@@ -71,9 +72,9 @@ export default async function ServicePage({
       <article className="section-padding">
         <div className="container-site">
           <div className="mx-auto max-w-3xl">
-            <h1 className="mb-4 text-4xl font-bold">{service.name} in Florida</h1>
+            <h1 className="mb-4 text-4xl font-bold">{service.name} in Tampa, FL</h1>
             <p className="service-definition mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">
-              {service.shortDescription}
+              {service.shortDescription} Serving Westchase, Carrollwood, Citrus Park, Hillsborough County &amp; Tampa Bay — open 24/7.
             </p>
             <div className="service-description mb-8 rounded-xl bg-[hsl(var(--muted))] p-6">
               <h2 className="mb-3 text-xl font-bold">About Our {service.name} Service</h2>

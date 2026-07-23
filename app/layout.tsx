@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { AnimatedBackground } from "@/components/animated-background";
 import { JsonLd, localBusinessSchema, websiteSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { tampaLocalKeywords, formatFullAddress } from "@/lib/local-seo";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
-  keywords: siteConfig.keywords.join(", "),
+  keywords: [...siteConfig.keywords, ...tampaLocalKeywords].join(", "),
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
@@ -25,6 +26,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteConfig.url,
+  },
+  other: {
+    "business:contact_data:formatted_address": formatFullAddress(),
   },
   openGraph: {
     type: "website",

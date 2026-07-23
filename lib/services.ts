@@ -301,20 +301,20 @@ const fenceServices: Omit<Service, "category">[] = [
 export const categoryMeta: Record<ServiceCategory, { name: string; title: string; description: string; icon: string }> = {
   handyman: {
     name: "Handyman Services",
-    title: "Handyman & Home Repair Services in Florida",
-    description: "Professional handyman, handywoman, and handyperson services across Florida. Drywall, painting, plumbing fixtures, TV mounting, flooring, and general home repairs.",
+    title: "Handyman Services in Tampa, FL & Hillsborough County",
+    description: "Licensed handyman services in Tampa, Westchase, Carrollwood & Hillsborough County. Drywall, TV mounting, furniture assembly, repairs & more. Open 24/7.",
     icon: "wrench",
   },
   painting: {
     name: "Painting Services",
-    title: "Professional Painting Services in Florida",
-    description: "Expert painters for interior, exterior, cabinet, deck, and specialty painting. Faux finishes, wallpaper, wood staining, and water damage repair.",
+    title: "Painting Services in Tampa, FL & Tampa Bay",
+    description: "Professional painters in Tampa, Westchase & surrounding counties. Interior, exterior, cabinet, deck & specialty painting. Free estimates — open 24/7.",
     icon: "paintbrush",
   },
   fence: {
     name: "Fence Contractor",
-    title: "Fence Installation & Repair in Florida",
-    description: "Licensed fence contractors for wood, vinyl, aluminum, iron, and chain link fencing. Privacy fences, pool fences, gates, and custom designs.",
+    title: "Fence Installation & Repair in Tampa, FL",
+    description: "Tampa Bay fence contractors for wood, vinyl, aluminum & chain link fencing. Privacy fences, pool fences, gates & repairs. Serving Hillsborough & Pinellas County.",
     icon: "fence",
   },
 };

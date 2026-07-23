@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { categoryMeta, getServicesByCategory } from "@/lib/services";
-import { buildMetadata, buildPageTitle } from "@/lib/seo";
+import { buildMetadata, buildLocalTitle } from "@/lib/seo";
 import type { ServiceCategory } from "@/lib/site-config";
 import { JsonLd, breadcrumbSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
@@ -20,10 +20,10 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   if (!validCategories.includes(category as ServiceCategory)) return {};
   const meta = categoryMeta[category as ServiceCategory];
   return buildMetadata({
-    title: buildPageTitle(meta.title),
+    title: buildLocalTitle(meta.title),
     description: meta.description,
     path: `/services/${category}`,
-    keywords: [meta.name, `${meta.name} Florida`, `${category} contractor Florida`],
+    keywords: [meta.name, `${meta.name} Tampa`, `${meta.name} Westchase`, `${meta.name} Hillsborough County`],
   });
 }
 

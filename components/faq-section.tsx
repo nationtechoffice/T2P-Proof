@@ -19,7 +19,11 @@ const homeFaqs = [
   },
   {
     question: "Are you open 24/7?",
-    answer: `Yes! Handyman Pros FL is open 24 hours a day, 7 days a week. Call ${siteConfig.phone} anytime — day or night — for handyman service, emergency repairs, or a free estimate.`,
+    answer: `Yes! Handyman Pros FL is open 24 hours a day, 7 days a week. Call ${siteConfig.phone} anytime for handyman service, emergency repairs, or a free estimate.`,
+  },
+  {
+    question: "Where is Handyman Pros FL located?",
+    answer: `We are based at ${siteConfig.address.street}, ${siteConfig.address.street2}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip} in the Westchase area of Tampa. We are a mobile service covering Tampa and all surrounding counties.`,
   },
   {
     question: "What payment methods do you accept?",

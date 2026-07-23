@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "./site-config";
+import { formatFullAddress } from "./local-seo";
+import { tampaLocalKeywords } from "./local-seo";
 
 export interface SEOProps {
   title: string;
@@ -25,8 +27,9 @@ export function buildMetadata({
   noindex = false,
 }: SEOProps): Metadata {
   const url = `${siteConfig.url}${path}`;
-  const image = ogImage || `${siteConfig.url}/images/og-default.jpg`;
-  const allKeywords = [...siteConfig.keywords, ...keywords].join(", ");
+  const image = ogImage || `${siteConfig.url}/images/hero-handyman.png`;
+  const allKeywords = [...siteConfig.keywords, ...tampaLocalKeywords, ...keywords].join(", ");
+  const fullAddress = formatFullAddress();
 
   return {
     title,
@@ -62,8 +65,8 @@ export function buildMetadata({
       images: [
         {
           url: image,
-          width: 1200,
-          height: 630,
+          width: 1280,
+          height: 832,
           alt: title,
         },
       ],
@@ -78,10 +81,10 @@ export function buildMetadata({
     },
     other: {
       "geo.region": "US-FL",
-      "geo.placename": siteConfig.address.city,
+      "geo.placename": `${siteConfig.address.city}, ${siteConfig.address.neighborhood}`,
       "geo.position": `${siteConfig.geo.latitude};${siteConfig.geo.longitude}`,
       ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
-      "business:contact_data:street_address": siteConfig.address.street,
+      "business:contact_data:street_address": `${siteConfig.address.street}, ${siteConfig.address.street2}`,
       "business:contact_data:locality": siteConfig.address.city,
       "business:contact_data:region": siteConfig.address.state,
       "business:contact_data:postal_code": siteConfig.address.zip,
@@ -89,10 +92,15 @@ export function buildMetadata({
       "business:contact_data:email": siteConfig.email,
       "business:contact_data:phone_number": siteConfig.phone,
       "business:contact_data:website": siteConfig.url,
+      "business:contact_data:formatted_address": fullAddress,
     },
   };
 }
 
 export function buildPageTitle(pageTitle: string): string {
-  return `${pageTitle} | ${siteConfig.name}`;
+  return `${pageTitle} | ${siteConfig.shortName}`;
+}
+
+export function buildLocalTitle(pageTitle: string): string {
+  return `${pageTitle} | Tampa, FL | ${siteConfig.shortName}`;
 }

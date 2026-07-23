@@ -16,7 +16,7 @@ export function JsonLd({ data }: JsonLdProps) {
 export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     alternateName: siteConfig.shortName,
@@ -28,7 +28,7 @@ export function localBusinessSchema() {
     email: siteConfig.email,
     address: {
       "@type": "PostalAddress",
-      streetAddress: siteConfig.address.street,
+      streetAddress: `${siteConfig.address.street}, ${siteConfig.address.street2}`,
       addressLocality: siteConfig.address.city,
       addressRegion: siteConfig.address.state,
       postalCode: siteConfig.address.zip,
@@ -39,26 +39,59 @@ export function localBusinessSchema() {
       latitude: siteConfig.geo.latitude,
       longitude: siteConfig.geo.longitude,
     },
-    areaServed: siteConfig.serviceAreas.map((city) => ({
-      "@type": "City",
-      name: `${city}, FL`,
-    })),
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${siteConfig.address.street}, ${siteConfig.address.street2}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip}`)}`,
+    areaServed: [
+      ...siteConfig.counties.map((county) => ({
+        "@type": "AdministrativeArea",
+        name: county,
+      })),
+      ...siteConfig.serviceAreas.map((city) => ({
+        "@type": "City",
+        name: `${city}, FL`,
+      })),
+    ],
     openingHoursSpecification: siteConfig.hours.map((h) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: h.day,
       opens: h.opens,
       closes: h.closes,
     })),
+    openingHours: "Mo-Su 00:00-23:59",
     priceRange: "$$",
+    paymentAccepted: "Cash, Credit Card, Check",
+    currenciesAccepted: "USD",
     sameAs: Object.values(siteConfig.social),
+    knowsAbout: [
+      "Handyman Services",
+      "Home Repair",
+      "Interior Painting",
+      "Exterior Painting",
+      "Fence Installation",
+      "Fence Repair",
+      "Drywall Repair",
+      "Furniture Assembly",
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Home Services",
+      name: "Tampa Bay Home Services",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Handyman Services" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Painting Services" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fence Installation" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Handyman Services in Tampa" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Painting Services in Tampa" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fence Installation in Tampa Bay" } },
       ],
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: siteConfig.phoneTel,
+      contactType: "customer service",
+      areaServed: "US-FL",
+      availableLanguage: "English",
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "00:00",
+        closes: "23:59",
+      },
     },
   };
 }
@@ -72,6 +105,7 @@ export function websiteSchema() {
     name: siteConfig.name,
     description: siteConfig.description,
     publisher: { "@id": `${siteConfig.url}/#organization` },
+    inLanguage: "en-US",
     potentialAction: {
       "@type": "SearchAction",
       target: {
@@ -105,15 +139,22 @@ export function serviceSchema(service: {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: service.name,
+    name: `${service.name} in Tampa, FL`,
     description: service.description,
     url: service.url,
     provider: { "@id": `${siteConfig.url}/#organization` },
-    areaServed: {
-      "@type": "State",
-      name: "Florida",
-    },
+    areaServed: [
+      { "@type": "City", name: "Tampa, FL" },
+      { "@type": "AdministrativeArea", name: "Hillsborough County, FL" },
+      { "@type": "AdministrativeArea", name: "Pinellas County, FL" },
+      { "@type": "AdministrativeArea", name: "Pasco County, FL" },
+    ],
     serviceType: service.category,
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: service.url,
+      servicePhone: siteConfig.phoneTel,
+    },
   };
 }
 
@@ -159,7 +200,7 @@ export function articleSchema(article: {
       name: siteConfig.name,
       logo: {
         "@type": "ImageObject",
-        url: `${siteConfig.url}/images/logo.png`,
+        url: `${siteConfig.url}/favicon.svg`,
       },
     },
     image: `${siteConfig.url}${article.image}`,
