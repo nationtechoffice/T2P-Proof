@@ -1,7 +1,23 @@
-import { clsx, type ClassValue } from "clsx"
-import { toggleMerge } from "tailwind-merge"
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
-// Utility function to merge Tailwind classes cleanly without conflicts
 export function cn(...inputs: ClassValue[]) {
-  return clsx(inputs)
+  return twMerge(clsx(inputs));
+}
+
+export function formatDate(dateString: string): string {
+  return new Date(dateString).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
+export function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .trim();
 }

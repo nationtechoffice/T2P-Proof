@@ -1,86 +1,111 @@
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
-import { TokenDirectory } from "@/components/token-directory"
-import { DeveloperSection } from "@/components/developer-section"
-import { ArrowRight, ShieldCheck } from "lucide-react"
-import Link from "next/link"
+import { Hero } from "@/components/hero";
+import { ServicesGrid } from "@/components/services-grid";
+import { Testimonials } from "@/components/testimonials";
+import { FAQSection, homeFaqs } from "@/components/faq-section";
+import { CTASection } from "@/components/cta-section";
+import { JsonLd, faqSchema, speakableSchema } from "@/lib/json-ld";
+import { siteConfig } from "@/lib/site-config";
+import Link from "next/link";
+import { blogPosts } from "@/lib/blog-posts";
+import { formatDate } from "@/lib/utils";
+import { CheckCircle, MapPin } from "lucide-react";
 
-export default function Page() {
+export default function HomePage() {
+  const recentPosts = blogPosts.slice(0, 3);
+
   return (
-    <div className="min-h-screen bg-[#050508] text-slate-200">
-      <SiteHeader />
+    <>
+      <JsonLd
+        data={[
+          faqSchema(homeFaqs),
+          speakableSchema(siteConfig.url, [".hero-speakable", ".faq-speakable"]),
+        ]}
+      />
+      <Hero />
 
-      <main>
-        {/* Hero */}
-        <section className="relative overflow-hidden border-b border-slate-800">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(249,115,22,0.08)_0%,_transparent_60%)]" />
-          <div className="relative mx-auto max-w-7xl px-4 py-16 sm:py-24">
-            <div className="mx-auto max-w-3xl text-center">
-              <span className="inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-xs font-medium tracking-wide text-orange-300">
-                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-orange-400" />
-                Proof of Humanity · Pi Network
-              </span>
-              <h1 className="mt-6 text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-                Real Humans.{" "}
-                <span className="text-orange-400">Real Tokens.</span> Zero Bots.
-              </h1>
-              <p className="mx-auto mt-5 max-w-2xl text-pretty text-base leading-relaxed text-slate-400 sm:text-lg">
-                t2pproof.link is the two-sided platform for verified Web3 — a curated token
-                directory for Pioneers and a Pi CAPTCHA bypass API for developers.
+      <section className="section-padding">
+        <div className="container-site">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            <div className="hero-speakable">
+              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+                Your Trusted Florida Handyman Company
+              </h2>
+              <p className="mb-6 text-lg leading-relaxed text-[hsl(var(--muted-foreground))]">
+                Handyman Pros Florida is a full-service home improvement company serving homeowners across the Sunshine State. Whether you need a skilled handyman for home repairs, a professional painter for interior or exterior work, or a fence contractor for installation and repairs — we deliver quality craftsmanship with every project.
               </p>
-              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <a
-                  href="#directory"
-                  className="inline-flex items-center gap-2 rounded-lg bg-orange-500 px-6 py-3 text-sm font-semibold text-black shadow-[0_0_24px_rgba(249,115,22,0.45)] transition-all hover:bg-orange-400"
-                >
-                  Browse Verified Tokens
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-                <a
-                  href="#developers"
-                  className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-6 py-3 text-sm font-medium text-slate-300 transition-colors hover:border-orange-500/50 hover:text-orange-300"
-                >
-                  <ShieldCheck className="h-4 w-4" />
-                  Developer API
-                </a>
+              <ul className="space-y-3">
+                {[
+                  "Licensed, bonded, and insured professionals",
+                  "Free estimates with transparent pricing",
+                  "Same-day and emergency service available",
+                  "60+ specialized services under one roof",
+                  "Serving 20+ cities across Florida",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[hsl(var(--secondary))]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl bg-gradient-to-br from-[hsl(var(--primary))]/5 to-[hsl(var(--secondary))]/5 p-8">
+              <h3 className="mb-4 text-xl font-bold">Service Areas Across Florida</h3>
+              <div className="flex flex-wrap gap-2">
+                {siteConfig.serviceAreas.map((city) => (
+                  <span key={city} className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm shadow-sm">
+                    <MapPin className="h-3 w-3 text-[hsl(var(--primary))]" />
+                    {city}
+                  </span>
+                ))}
               </div>
+              <Link href="/service-areas" className="btn-primary mt-6 inline-block">
+                View All Service Areas
+              </Link>
             </div>
-          </div>
-        </section>
-
-        {/* Split content */}
-        <div className="mx-auto max-w-7xl space-y-24 px-4 py-16 sm:py-24">
-          <TokenDirectory />
-
-          <div className="relative">
-            <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-slate-800 to-transparent" />
-            <div className="relative flex justify-center">
-              <span className="bg-[#050508] px-4 text-xs font-medium uppercase tracking-widest text-slate-600">
-                Two platforms · One identity layer
-              </span>
-            </div>
-          </div>
-
-          <DeveloperSection />
-
-          {/* CTA strip */}
-          <div className="rounded-xl border border-orange-500/20 bg-orange-500/5 p-6 text-center sm:p-10">
-            <h3 className="text-xl font-semibold text-white">Ready to integrate?</h3>
-            <p className="mx-auto mt-2 max-w-md text-sm text-slate-400">
-              Get your API key, view metrics, and choose a pricing tier in the developer dashboard.
-            </p>
-            <Link
-              href="/developer"
-              className="mt-5 inline-flex items-center gap-2 rounded-lg bg-orange-500 px-5 py-2.5 text-sm font-semibold text-black transition-colors hover:bg-orange-400"
-            >
-              Open Developer Dashboard
-              <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
         </div>
-      </main>
+      </section>
 
-      <SiteFooter />
-    </div>
-  )
+      <ServicesGrid />
+      <Testimonials />
+
+      <section className="section-padding">
+        <div className="container-site">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Home Improvement Tips & Guides</h2>
+            <p className="text-lg text-[hsl(var(--muted-foreground))]">
+              Expert advice from our Florida home service professionals to help you maintain and improve your property.
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-3">
+            {recentPosts.map((post) => (
+              <article key={post.slug} className="card flex flex-col">
+                <span className="mb-2 text-xs font-semibold uppercase tracking-wider text-[hsl(var(--secondary))]">
+                  {post.category}
+                </span>
+                <h3 className="mb-2 text-lg font-bold">
+                  <Link href={`/blog/${post.slug}`} className="hover:text-[hsl(var(--primary))]">
+                    {post.title}
+                  </Link>
+                </h3>
+                <p className="mb-4 flex-1 text-sm text-[hsl(var(--muted-foreground))]">{post.excerpt}</p>
+                <div className="flex items-center justify-between text-xs text-[hsl(var(--muted-foreground))]">
+                  <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+                  <span>{post.readTime} min read</span>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link href="/blog" className="btn-secondary">View All Blog Posts</Link>
+          </div>
+        </div>
+      </section>
+
+      <div className="faq-speakable">
+        <FAQSection />
+      </div>
+      <CTASection />
+    </>
+  );
 }

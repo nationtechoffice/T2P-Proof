@@ -1,4 +1,21 @@
 {
-  "version": 2,
-  "cleanUrls": true
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "index, follow" }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.handymanprosflorida.com" }],
+      "destination": "https://handymanprosflorida.com/:path*",
+      "permanent": true
+    }
+  ]
 }

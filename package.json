@@ -1,5 +1,5 @@
 {
-  "name": "t2pproof-platform",
+  "name": "handymanprosflorida",
   "version": "1.0.0",
   "private": true,
   "engines": {
@@ -15,27 +15,16 @@
     "react": "latest",
     "react-dom": "latest",
     "lucide-react": "latest",
-    "canvas-confetti": "latest",
-    "three": "latest",
     "tailwindcss": "latest",
     "@tailwindcss/postcss": "latest",
-    "next-themes": "latest",
-    "d3": "latest",
-    "topojson-client": "latest",
     "clsx": "latest",
     "tailwind-merge": "latest",
-    "class-variance-authority": "latest",
-    "tailwindcss-animate": "latest",
-    "tw-animate-css": "latest",
-    "@vercel/analytics": "latest",
-    "@radix-ui/react-accordion": "latest"
+    "@vercel/analytics": "latest"
   },
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "@types/d3": "latest",
-    "@types/topojson-client": "latest",
     "typescript": "latest"
   }
 }

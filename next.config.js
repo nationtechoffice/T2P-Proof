@@ -1,25 +1,31 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
     unoptimized: true,
-  },
-  turbopack: {
-    root: __dirname,
   },
   async redirects() {
     return [
       {
         source: "/:path*",
-        has: [{ type: "host", value: "www.t2pproof.link" }],
-        destination: "https://t2pproof.link/:path*",
+        has: [{ type: "host", value: "www.handymanprosflorida.com" }],
+        destination: "https://handymanprosflorida.com/:path*",
         permanent: true,
       },
-    ]
+    ];
   },
-}
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+        ],
+      },
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
