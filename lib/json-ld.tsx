@@ -43,14 +43,12 @@ export function localBusinessSchema() {
       "@type": "City",
       name: `${city}, FL`,
     })),
-    openingHoursSpecification: siteConfig.hours
-      .filter((h) => h.opens !== "Closed")
-      .map((h) => ({
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: h.day,
-        opens: h.opens,
-        closes: h.closes,
-      })),
+    openingHoursSpecification: siteConfig.hours.map((h) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: h.day,
+      opens: h.opens,
+      closes: h.closes,
+    })),
     priceRange: "$$",
     sameAs: Object.values(siteConfig.social),
     hasOfferCatalog: {
