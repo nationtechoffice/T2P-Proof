@@ -73,11 +73,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-US">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
         <link rel="manifest" href="/manifest.webmanifest" />
+        <JsonLd data={[localBusinessSchema(), websiteSchema()]} />
       </head>
       <body>
         <AnimatedBackground />
-        <JsonLd data={[localBusinessSchema(), websiteSchema()]} />
         <Header />
         <main id="main-content">{children}</main>
         <Footer />

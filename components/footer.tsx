@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { BusinessNAP } from "@/components/business-nap";
+import { Logo } from "@/components/logo";
 import { MapPin } from "lucide-react";
 
 export function Footer() {
@@ -11,14 +12,8 @@ export function Footer() {
       <div className="container-site section-padding">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="mb-4 flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[hsl(var(--accent))] text-lg font-bold text-white">
-                HP
-              </div>
-              <div>
-                <span className="text-lg font-bold text-white">Handyman Pros</span>
-                <span className="block text-xs font-semibold text-[hsl(var(--accent))]">Tampa, FL 33626</span>
-              </div>
+            <div className="mb-4">
+              <Logo variant="light" />
             </div>
             <p className="mb-4 text-sm leading-relaxed">
               Based in Westchase, Tampa. Licensed mobile handyman serving Hillsborough, Pinellas, Pasco &amp; surrounding counties — open 24/7.
@@ -30,6 +25,7 @@ export function Footer() {
             <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">Services</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/services/handyman" className="hover:text-[hsl(var(--accent))]">Handyman Tampa</Link></li>
+              <li><Link href="/services/drywall-repair-tampa" className="hover:text-[hsl(var(--accent))]">Drywall Repair Tampa</Link></li>
               <li><Link href="/services/painting" className="hover:text-[hsl(var(--accent))]">Painting Tampa</Link></li>
               <li><Link href="/services/fence" className="hover:text-[hsl(var(--accent))]">Fence Contractor Tampa</Link></li>
               <li><Link href="/services" className="hover:text-[hsl(var(--accent))]">All Services</Link></li>
@@ -37,10 +33,10 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">Local Areas</h3>
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">Our Service Areas</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/service-areas" className="hover:text-[hsl(var(--accent))]">Westchase &amp; 33626</Link></li>
-              <li><Link href="/service-areas" className="hover:text-[hsl(var(--accent))]">Carrollwood</Link></li>
+              <li><Link href="/handyman-westchase-fl" className="hover:text-[hsl(var(--accent))]">Handyman Westchase FL</Link></li>
+              <li><Link href="/handyman-carrollwood-fl" className="hover:text-[hsl(var(--accent))]">Handyman Carrollwood FL</Link></li>
               <li><Link href="/service-areas" className="hover:text-[hsl(var(--accent))]">Citrus Park</Link></li>
               <li><Link href="/service-areas" className="hover:text-[hsl(var(--accent))]">All Service Areas</Link></li>
             </ul>

@@ -82,6 +82,29 @@ export default function HomePage() {
       </section>
 
       <ServicesGrid />
+
+      <section className="section-padding relative pt-0">
+        <div className="container-site">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-[hsl(var(--border))] bg-white/70 p-6 text-center shadow-sm backdrop-blur-sm md:p-8">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
+              Featured Service
+            </p>
+            <h2 className="mb-3 text-2xl font-bold md:text-3xl">Drywall Repair in Tampa</h2>
+            <p className="mb-6 text-[hsl(var(--muted-foreground))]">
+              Need a drywall patch, ceiling texture repair, or a trusted wall repair contractor? See our dedicated Tampa drywall page for details and booking.
+            </p>
+            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link href="/services/drywall-repair-tampa" className="btn-primary">
+                View Drywall Repair Tampa
+              </Link>
+              <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent">
+                Call {siteConfig.phone}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <PhotoGallery />
       <Testimonials />
 

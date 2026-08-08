@@ -30,6 +30,11 @@ export default function ServicesPage() {
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
               Handyman Pros Florida offers {allServices.length}+ professional services across handyman, painting, and fence contracting. Every job is backed by our satisfaction guarantee.
             </p>
+            <div className="mt-6">
+              <Link href="/services/drywall-repair-tampa" className="btn-accent inline-flex">
+                Featured: Drywall Repair Tampa
+              </Link>
+            </div>
           </div>
 
           {categories.map((cat) => {

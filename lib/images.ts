@@ -1,4 +1,12 @@
 export const siteImages = {
+  logo: {
+    src: "/images/logo.svg",
+    alt: "Handyman Pros FL logo featuring an orange wrench icon and bold navy and orange text",
+  },
+  logoLight: {
+    src: "/images/logo-light.svg",
+    alt: "Handyman Pros FL logo featuring an orange wrench icon and bold navy and orange text",
+  },
   hero: {
     src: "/images/hero-handyman.png",
     alt: "Handyman Pros FL technician arriving for service in Tampa, Florida",

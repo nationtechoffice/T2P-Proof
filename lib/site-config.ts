@@ -1,14 +1,18 @@
 export const siteConfig = {
   name: "Handyman Pros Florida",
   shortName: "Handyman Pros FL",
+  legalName: "Handyman Pros FL",
   domain: "handymanprosflorida.com",
   url: "https://handymanprosflorida.com",
   description:
     "Licensed & insured handyman based at 12021 Tuscany Bay Dr, Tampa FL 33626. Open 24/7 serving Westchase, Carrollwood, Citrus Park, Hillsborough County & Tampa Bay. Furniture assembly, drywall, painting, fences & emergency repairs.",
   tagline: "Your Tampa Handyman — Done Right, Done Fast",
   phone: "(656) 205-3185",
-  phoneTel: "+16562053185",
+  phoneTel: "6562053185",
   email: "support@handymanprosflorida.com",
+  baseCities: ["Westchase", "Carrollwood", "Citrus Park", "Tampa"] as const,
+  primaryZip: "33626",
+  themeAccent: "#F47D31",
   address: {
     street: "12021 Tuscany Bay Dr",
     street2: "Apt 203",
@@ -100,7 +104,7 @@ export const siteConfig = {
     "local handyman Tampa Bay",
   ],
   indexNowKey: "8f3a7c2e1b9d4f6a8c5e2b7d1a9f4c6e",
-  themeColor: "#f2760f",
+  themeColor: "#F47D31",
 } as const;
 
 export type ServiceCategory = "handyman" | "painting" | "fence";

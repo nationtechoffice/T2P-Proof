@@ -18,13 +18,17 @@ export function localBusinessSchema() {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": `${siteConfig.url}/#organization`,
-    name: siteConfig.name,
-    alternateName: siteConfig.shortName,
+    name: siteConfig.legalName,
+    legalName: siteConfig.legalName,
+    alternateName: [siteConfig.name, siteConfig.shortName],
     url: siteConfig.url,
-    logo: `${siteConfig.url}/favicon.svg`,
-    image: `${siteConfig.url}/images/hero-handyman.png`,
+    logo: `${siteConfig.url}/images/logo.svg`,
+    image: [
+      `${siteConfig.url}/images/logo.svg`,
+      `${siteConfig.url}/images/hero-handyman.png`,
+    ],
     description: siteConfig.description,
-    telephone: siteConfig.phoneTel,
+    telephone: siteConfig.phone,
     email: siteConfig.email,
     address: {
       "@type": "PostalAddress",
@@ -41,14 +45,32 @@ export function localBusinessSchema() {
     },
     hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${siteConfig.address.street}, ${siteConfig.address.street2}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip}`)}`,
     areaServed: [
+      {
+        "@type": "PostalCodeRange",
+        postalCodeBegin: siteConfig.primaryZip,
+        postalCodeEnd: siteConfig.primaryZip,
+      },
+      {
+        "@type": "PostalAddress",
+        postalCode: siteConfig.primaryZip,
+        addressLocality: "Westchase",
+        addressRegion: "FL",
+        addressCountry: "US",
+      },
+      ...siteConfig.baseCities.map((city) => ({
+        "@type": "City",
+        name: `${city}, FL`,
+      })),
       ...siteConfig.counties.map((county) => ({
         "@type": "AdministrativeArea",
         name: county,
       })),
-      ...siteConfig.serviceAreas.map((city) => ({
-        "@type": "City",
-        name: `${city}, FL`,
-      })),
+      ...siteConfig.serviceAreas
+        .filter((city) => !(siteConfig.baseCities as readonly string[]).includes(city))
+        .map((city) => ({
+          "@type": "City",
+          name: `${city}, FL`,
+        })),
     ],
     openingHoursSpecification: siteConfig.hours.map((h) => ({
       "@type": "OpeningHoursSpecification",
@@ -70,21 +92,24 @@ export function localBusinessSchema() {
       "Fence Repair",
       "Drywall Repair",
       "Furniture Assembly",
+      "Westchase Home Repairs",
+      "Carrollwood Home Maintenance",
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Tampa Bay Home Services",
       itemListElement: [
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Handyman Services in Tampa" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drywall Repair in Tampa" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Painting Services in Tampa" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fence Installation in Tampa Bay" } },
       ],
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: siteConfig.phoneTel,
+      telephone: siteConfig.phone,
       contactType: "customer service",
-      areaServed: "US-FL",
+      areaServed: ["US-FL", ...siteConfig.baseCities, siteConfig.primaryZip],
       availableLanguage: "English",
       hoursAvailable: {
         "@type": "OpeningHoursSpecification",
@@ -102,7 +127,7 @@ export function websiteSchema() {
     "@type": "WebSite",
     "@id": `${siteConfig.url}/#website`,
     url: siteConfig.url,
-    name: siteConfig.name,
+    name: siteConfig.legalName,
     description: siteConfig.description,
     publisher: { "@id": `${siteConfig.url}/#organization` },
     inLanguage: "en-US",
@@ -145,6 +170,10 @@ export function serviceSchema(service: {
     provider: { "@id": `${siteConfig.url}/#organization` },
     areaServed: [
       { "@type": "City", name: "Tampa, FL" },
+      { "@type": "City", name: "Westchase, FL" },
+      { "@type": "City", name: "Carrollwood, FL" },
+      { "@type": "City", name: "Citrus Park, FL" },
+      { "@type": "PostalAddress", postalCode: siteConfig.primaryZip, addressRegion: "FL" },
       { "@type": "AdministrativeArea", name: "Hillsborough County, FL" },
       { "@type": "AdministrativeArea", name: "Pinellas County, FL" },
       { "@type": "AdministrativeArea", name: "Pasco County, FL" },
@@ -153,7 +182,7 @@ export function serviceSchema(service: {
     availableChannel: {
       "@type": "ServiceChannel",
       serviceUrl: service.url,
-      servicePhone: siteConfig.phoneTel,
+      servicePhone: siteConfig.phone,
     },
   };
 }
@@ -197,10 +226,10 @@ export function articleSchema(article: {
     },
     publisher: {
       "@type": "Organization",
-      name: siteConfig.name,
+      name: siteConfig.legalName,
       logo: {
         "@type": "ImageObject",
-        url: `${siteConfig.url}/favicon.svg`,
+        url: `${siteConfig.url}/images/logo.svg`,
       },
     },
     image: `${siteConfig.url}${article.image}`,

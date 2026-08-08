@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 100" fill="none" role="img" aria-label="Handyman Pros FL logo featuring an orange wrench icon and bold navy and orange text">
+  <title>Handyman Pros FL</title>
+  <rect x="4" y="10" width="80" height="80" rx="18" fill="#F47D31"/>
+  <!-- White open-end wrench, tilted -->
+  <g transform="translate(44 50) rotate(-40)">
+    <path fill="#FFFFFF" d="M-4-2h8v30c0 2.2-1.8 4-4 4s-4-1.8-4-4V-2z"/>
+    <path fill="#FFFFFF" fill-rule="evenodd" d="M0-30c-9.4 0-17 7.6-17 17 0 3.5 1.1 6.8 2.9 9.5L-4-2h8l10.1-1.5C16.1-6.2 17-9 17-13c0-9.4-7.6-17-17-17zm0 8c5 0 9 4 9 9s-4 9-9 9-9-4-9-9 4-9 9-9z"/>
+    <path fill="#FFFFFF" d="M-12-28c-2.8 2.2-4.6 5.5-4.8 9.3h7.2c.3-2.1 1.5-3.9 3.2-5l-5.6-4.3z"/>
+    <path fill="#FFFFFF" d="M12-28l-5.6 4.3c1.7 1.1 2.9 2.9 3.2 5h7.2c-.2-3.8-2-7.1-4.8-9.3z"/>
+  </g>
+  <text x="108" y="64" font-family="Arial Black, Helvetica Neue, Arial, sans-serif" font-size="36" font-weight="800" letter-spacing="1">
+    <tspan fill="#1E293B">HANDYMAN PROS </tspan>
+    <tspan fill="#F47D31">FL</tspan>
+  </text>
+</svg>

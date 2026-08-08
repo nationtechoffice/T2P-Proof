@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { buildMetadata, buildLocalTitle } from "@/lib/seo";
@@ -30,6 +31,36 @@ export default function ServiceAreasPage() {
           </div>
 
           <div className="mb-12">
+            <h2 className="mb-6 text-center text-2xl font-bold">Our Service Areas</h2>
+            <div className="mx-auto mb-10 grid max-w-3xl gap-4 sm:grid-cols-2">
+              <Link
+                href="/handyman-westchase-fl"
+                className="card group flex items-start gap-3 hover:border-[hsl(var(--accent))]"
+              >
+                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[hsl(var(--accent))]" />
+                <div>
+                  <h3 className="font-bold group-hover:text-[hsl(var(--accent))]">Handyman Westchase FL</h3>
+                  <p className="text-sm text-[hsl(var(--muted-foreground))]">
+                    Local handyman for ZIP {siteConfig.primaryZip} home repairs &amp; fixture installation.
+                  </p>
+                </div>
+              </Link>
+              <Link
+                href="/handyman-carrollwood-fl"
+                className="card group flex items-start gap-3 hover:border-[hsl(var(--accent))]"
+              >
+                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[hsl(var(--accent))]" />
+                <div>
+                  <h3 className="font-bold group-hover:text-[hsl(var(--accent))]">Handyman Carrollwood FL</h3>
+                  <p className="text-sm text-[hsl(var(--muted-foreground))]">
+                    Carrollwood home maintenance, ceiling fan installation &amp; more.
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          <div className="mb-12">
             <h2 className="mb-6 text-center text-2xl font-bold">Counties We Serve</h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {siteConfig.counties.map((county) => (
@@ -45,15 +76,32 @@ export default function ServiceAreasPage() {
           <div>
             <h2 className="mb-6 text-center text-2xl font-bold">Cities & Neighborhoods</h2>
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {siteConfig.serviceAreas.map((city) => (
-                <div key={city} className="card flex items-center gap-3">
-                  <MapPin className="h-5 w-5 shrink-0 text-[hsl(var(--primary))]" />
-                  <div>
-                    <h3 className="font-semibold">{city}</h3>
-                    <p className="text-xs text-[hsl(var(--muted-foreground))]">Tampa Bay Area</p>
+              {siteConfig.serviceAreas.map((city) => {
+                const href =
+                  city === "Westchase"
+                    ? "/handyman-westchase-fl"
+                    : city === "Carrollwood"
+                      ? "/handyman-carrollwood-fl"
+                      : undefined;
+                const content = (
+                  <>
+                    <MapPin className="h-5 w-5 shrink-0 text-[hsl(var(--primary))]" />
+                    <div>
+                      <h3 className="font-semibold">{city}</h3>
+                      <p className="text-xs text-[hsl(var(--muted-foreground))]">Tampa Bay Area</p>
+                    </div>
+                  </>
+                );
+                return href ? (
+                  <Link key={city} href={href} className="card flex items-center gap-3 hover:border-[hsl(var(--accent))]">
+                    {content}
+                  </Link>
+                ) : (
+                  <div key={city} className="card flex items-center gap-3">
+                    {content}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
