@@ -1,7 +1,7 @@
 import { Star } from "lucide-react";
 
-/** Swap this placeholder for your direct Google Maps review / business reviews URL. */
-export const GOOGLE_REVIEW_LINK = "INSERT_YOUR_GOOGLE_REVIEW_LINK_HERE";
+/** Direct Google business / reviews link */
+export const GOOGLE_REVIEW_LINK = "https://share.google/Trs9YotuWPsTbuCu5";
 
 const reviews = [
   {
