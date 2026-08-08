@@ -81,14 +81,29 @@ export default async function ServicePage({
               <p className="leading-relaxed text-[hsl(var(--muted-foreground))]">{service.description}</p>
             </div>
             <div className="mb-8 rounded-xl border border-[hsl(var(--border))] p-6">
-              <h2 className="mb-3 text-xl font-bold">Why Choose Handyman Pros Florida?</h2>
+              <h2 className="mb-3 text-xl font-bold">Why Choose Handyman Pros FL?</h2>
               <ul className="space-y-2 text-[hsl(var(--muted-foreground))]">
-                <li>✓ Licensed and insured professionals</li>
+                <li>✓ Licensed and insured Tampa Bay professionals</li>
                 <li>✓ Free, no-obligation estimates</li>
-                <li>✓ Serving all of Florida</li>
+                <li>✓ Serving Westchase, Carrollwood, Citrus Park &amp; Tampa Bay</li>
                 <li>✓ Satisfaction guaranteed on every job</li>
-                <li>✓ Same-day service available</li>
+                <li>✓ Same-day and 24/7 service available</li>
               </ul>
+              <p className="mt-4 text-sm text-[hsl(var(--muted-foreground))]">
+                Also see{" "}
+                <a href="/handyman-westchase-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                  Handyman Westchase FL
+                </a>
+                ,{" "}
+                <a href="/handyman-carrollwood-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                  Handyman Carrollwood FL
+                </a>
+                , and{" "}
+                <a href="/services/drywall-repair-tampa" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                  Drywall Repair Tampa
+                </a>
+                .
+              </p>
             </div>
             <div className="text-center">
               <a href={`tel:${siteConfig.phoneTel}`} className="btn-primary mr-4">

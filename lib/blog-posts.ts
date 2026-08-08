@@ -75,7 +75,7 @@ Always get a written estimate before work begins.
 
 ## Why Choose Handyman Pros Florida?
 
-Handyman Pros Florida serves homeowners across the state with licensed, insured professionals. We offer free estimates, transparent pricing, and a satisfaction guarantee on every job. Call us at ${siteConfig.phone} for your free quote today.`,
+Handyman Pros FL serves homeowners across Tampa Bay — including Westchase, Carrollwood, Citrus Park, and Hillsborough County — with licensed, insured professionals. We offer free estimates, transparent pricing, and a satisfaction guarantee on every job. Call us at ${siteConfig.phone} for your free quote today.`,
   },
   {
     slug: "best-exterior-paint-florida-climate",
@@ -188,7 +188,7 @@ Most residential fence projects in Florida take 1-3 days for installation, plus 
 
 ## Get a Free Fence Estimate
 
-Handyman Pros Florida installs all fence types across the state. Our free consultations include site assessment, material recommendations, and detailed written quotes. Call ${siteConfig.phone} today.`,
+Handyman Pros FL installs all fence types across Tampa Bay. Our free consultations include site assessment, material recommendations, and detailed written quotes. Call ${siteConfig.phone} today.`,
   },
   {
     slug: "hurricane-prep-home-maintenance-florida",
@@ -260,7 +260,7 @@ Handyman Pros Florida offers emergency repair services during hurricane season. 
     slug: "drywall-repair-cost-guide-florida",
     title: "Drywall Repair Cost in Florida: 2026 Price Guide",
     description: "How much does drywall repair cost in Florida? Complete pricing guide for holes, cracks, water damage, and texture matching.",
-    excerpt: "Planning drywall repairs? See average costs for common drywall repair jobs across Florida.",
+    excerpt: "Planning drywall repairs? See average costs for common drywall patch and wall repair jobs across Tampa Bay.",
     author: "Handyman Pros Florida Team",
     publishedAt: "2026-02-18",
     updatedAt: "2026-02-18",

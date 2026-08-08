@@ -3,7 +3,9 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { allServices, categoryMeta } from "@/lib/services";
+import { JsonLd, breadcrumbSchema, servicesItemListSchema } from "@/lib/json-ld";
 import { buildMetadata, buildLocalTitle } from "@/lib/seo";
+import { siteConfig } from "@/lib/site-config";
 import type { ServiceCategory } from "@/lib/site-config";
 import { Wrench, Paintbrush, Fence } from "lucide-react";
 
@@ -19,9 +21,40 @@ const icons = { wrench: Wrench, paintbrush: Paintbrush, fence: Fence };
 
 export default function ServicesPage() {
   const categories: ServiceCategory[] = ["handyman", "painting", "fence"];
+  const featuredList = [
+    {
+      name: "Drywall Repair Tampa",
+      url: `${siteConfig.url}/services/drywall-repair-tampa`,
+      description: "Drywall patch, ceiling texture repair, and wall repair contractor services in Tampa Bay.",
+    },
+    {
+      name: "Handyman Services",
+      url: `${siteConfig.url}/services/handyman`,
+      description: "Licensed handyman repairs across Westchase, Carrollwood, and Tampa.",
+    },
+    {
+      name: "Painting Services",
+      url: `${siteConfig.url}/services/painting`,
+      description: "Interior and exterior painting for Tampa Bay homes.",
+    },
+    {
+      name: "Fence Contractor",
+      url: `${siteConfig.url}/services/fence`,
+      description: "Fence installation and repair throughout Hillsborough County and nearby areas.",
+    },
+  ];
 
   return (
     <>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", url: siteConfig.url },
+            { name: "Services", url: `${siteConfig.url}/services` },
+          ]),
+          servicesItemListSchema(featuredList),
+        ]}
+      />
       <Breadcrumbs items={[{ label: "Services" }]} />
       <section className="section-padding">
         <div className="container-site">

@@ -16,16 +16,19 @@ export function Hero() {
 
       <div className="container-site relative section-padding">
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div className="text-white">
+          <div className="hero-speakable text-white">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[hsl(var(--accent))]">
+              Handyman Pros FL
+            </p>
             <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium backdrop-blur-sm">
               <MapPin className="h-4 w-4 text-[hsl(var(--accent))]" />
-              Tampa &amp; Surrounding Counties — Free Estimates
+              Westchase · Carrollwood · Tampa Bay — Free Estimates
             </p>
             <h1 className="mb-6 text-4xl font-extrabold leading-tight text-white md:text-5xl lg:text-6xl">
               Your Tampa Handyman — Done Right, Done Fast
             </h1>
             <p className="mb-8 text-lg leading-relaxed text-blue-100 md:text-xl">
-              Furniture assembly, drywall repair, painting, fences, and emergency fixes across Tampa, Westchase, Carrollwood, Citrus Park &amp; Town &apos;n&apos; Country.
+              Furniture assembly, drywall repair, painting, fences, and emergency fixes across Tampa, Westchase, Carrollwood, Citrus Park &amp; Town &apos;n&apos; Country. Call {siteConfig.phone} — open 24/7.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent w-full sm:w-auto">

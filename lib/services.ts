@@ -9,7 +9,7 @@ const handymanServices: Omit<Service, "category">[] = [
       "Handyman Pros Florida provides thorough cleaning services for homes, garages, patios, and rental properties. Our handyperson team handles deep cleaning, move-in/move-out cleaning, and routine maintenance cleaning so your property stays spotless year-round.",
     keywords: ["home cleaning Florida", "house cleaning handyman", "deep cleaning services"],
     faqs: [
-      { question: "What cleaning services do you offer?", answer: "We offer deep cleaning, move-in/move-out cleaning, garage cleaning, patio cleaning, and post-construction cleanup across Florida." },
+      { question: "What cleaning services do you offer?", answer: "We offer deep cleaning, move-in/move-out cleaning, garage cleaning, patio cleaning, and post-construction cleanup across Tampa Bay, including Westchase, Carrollwood, and Hillsborough County." },
       { question: "Do you bring your own cleaning supplies?", answer: "Yes, our team arrives fully equipped with professional-grade cleaning supplies and equipment." },
     ],
   },
@@ -70,7 +70,7 @@ const handymanServices: Omit<Service, "category">[] = [
     description: "Restore damaged floors with expert flooring repair. We fix scratches, water damage, loose boards, cracked tiles, and subfloor issues throughout your Florida home.",
     keywords: ["flooring repair Florida", "hardwood floor repair", "tile floor fix"],
     faqs: [
-      { question: "What types of flooring can you repair?", answer: "We repair hardwood, laminate, vinyl, tile, and engineered flooring for residential properties across Florida." },
+      { question: "What types of flooring can you repair?", answer: "We repair hardwood, laminate, vinyl, tile, and engineered flooring for residential properties across Tampa, Westchase, Carrollwood, and surrounding Tampa Bay cities." },
     ],
   },
   {
@@ -87,7 +87,7 @@ const handymanServices: Omit<Service, "category">[] = [
     slug: "general-construction",
     name: "General Construction",
     shortDescription: "Residential general construction and build-out services.",
-    description: "From room additions to structural modifications, our general construction team handles framing, structural repairs, and residential build-outs across Florida.",
+    description: "From room additions to structural modifications, our general construction team handles framing, structural repairs, and residential build-outs across Tampa Bay.",
     keywords: ["general construction Florida", "residential contractor", "home construction"],
     faqs: [
       { question: "Are you licensed for construction in Florida?", answer: "Yes, our team includes licensed contractors who comply with all Florida building codes and permit requirements." },

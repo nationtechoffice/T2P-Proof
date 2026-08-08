@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
+import { JsonLd, breadcrumbSchema } from "@/lib/json-ld";
 import { buildMetadata, buildLocalTitle } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { MapPin } from "lucide-react";
@@ -17,6 +18,12 @@ export const metadata: Metadata = buildMetadata({
 export default function ServiceAreasPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: siteConfig.url },
+          { name: "Service Areas", url: `${siteConfig.url}/service-areas` },
+        ])}
+      />
       <Breadcrumbs items={[{ label: "Service Areas" }]} />
       <section className="section-padding relative">
         <div className="container-site">

@@ -18,6 +18,7 @@ export function getAllSiteUrls(): string[] {
     `${baseUrl}/about`,
     `${baseUrl}/contact`,
     `${baseUrl}/service-areas`,
+    `${baseUrl}/llms.txt`,
   ];
 
   const servicePages = getAllServiceSlugs().map(

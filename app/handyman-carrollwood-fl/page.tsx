@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
-import { JsonLd, breadcrumbSchema, speakableSchema } from "@/lib/json-ld";
+import { FAQSection } from "@/components/faq-section";
+import { JsonLd, breadcrumbSchema, faqSchema, speakableSchema } from "@/lib/json-ld";
+import { carrollwoodFaqs } from "@/lib/local-faqs";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { CheckCircle, MapPin, Phone } from "lucide-react";
@@ -33,6 +35,7 @@ export default function HandymanCarrollwoodPage() {
             { name: "Service Areas", url: `${siteConfig.url}/service-areas` },
             { name: "Handyman Carrollwood FL", url: pageUrl },
           ]),
+          faqSchema(carrollwoodFaqs),
           speakableSchema(pageUrl, [".location-intro", ".location-body"]),
         ]}
       />
@@ -148,6 +151,7 @@ export default function HandymanCarrollwoodPage() {
         </div>
       </article>
 
+      <FAQSection faqs={carrollwoodFaqs} title="Carrollwood Handyman FAQ" />
       <CTASection
         title="Need Carrollwood Home Maintenance Help?"
         description="Book our local handyman service for ceiling fan installation, repairs, and punch-list projects across Carrollwood, FL."

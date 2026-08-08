@@ -7,8 +7,9 @@ export function BusinessNAP({ className = "" }: { className?: string }) {
 
   return (
     <div className={`space-y-3 text-sm ${className}`} itemScope itemType="https://schema.org/LocalBusiness">
-      <meta itemProp="name" content={siteConfig.name} />
-      <meta itemProp="telephone" content={siteConfig.phoneTel} />
+      <meta itemProp="name" content={siteConfig.legalName} />
+      <meta itemProp="url" content={siteConfig.url} />
+      <meta itemProp="telephone" content={siteConfig.phoneE164} />
       <meta itemProp="email" content={siteConfig.email} />
       <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
         <meta itemProp="streetAddress" content={`${siteConfig.address.street}, ${siteConfig.address.street2}`} />
@@ -19,11 +20,11 @@ export function BusinessNAP({ className = "" }: { className?: string }) {
       </div>
       <a href={`tel:${siteConfig.phoneTel}`} className="flex items-center gap-2 hover:text-[hsl(var(--accent))]">
         <Phone className="h-4 w-4 shrink-0" />
-        <span itemProp="telephone">{siteConfig.phone}</span>
+        <span>{siteConfig.phone}</span>
       </a>
       <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2 hover:text-[hsl(var(--accent))]">
         <Mail className="h-4 w-4 shrink-0" />
-        <span itemProp="email">{siteConfig.email}</span>
+        <span>{siteConfig.email}</span>
       </a>
       <a
         href={getGoogleMapsUrl()}

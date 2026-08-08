@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
-import { JsonLd, breadcrumbSchema, serviceSchema, speakableSchema } from "@/lib/json-ld";
+import { FAQSection } from "@/components/faq-section";
+import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema, speakableSchema } from "@/lib/json-ld";
+import { drywallTampaFaqs } from "@/lib/local-faqs";
 import { buildMetadata, buildLocalTitle } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { siteImages } from "@/lib/images";
@@ -42,6 +44,7 @@ export default function DrywallRepairTampaPage() {
             url: pageUrl,
             category: "Drywall Repair",
           }),
+          faqSchema(drywallTampaFaqs),
           speakableSchema(pageUrl, [".service-definition", ".service-description"]),
         ]}
       />
@@ -147,6 +150,7 @@ export default function DrywallRepairTampaPage() {
         </div>
       </article>
 
+      <FAQSection faqs={drywallTampaFaqs} title="Drywall Repair Tampa FAQ" />
       <CTASection
         title="Need a Drywall Patch in Tampa?"
         description="Call our wall repair contractor team for drywall patch Tampa jobs and ceiling texture repair — free estimates, open 24/7."

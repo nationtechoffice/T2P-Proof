@@ -20,15 +20,20 @@ export function localBusinessSchema() {
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.legalName,
     legalName: siteConfig.legalName,
-    alternateName: [siteConfig.name, siteConfig.shortName],
+    alternateName: [siteConfig.name, "Handyman Pros"],
     url: siteConfig.url,
-    logo: `${siteConfig.url}/images/logo.svg`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteConfig.url}/images/logo.svg`,
+      width: 560,
+      height: 100,
+    },
     image: [
       `${siteConfig.url}/images/logo.svg`,
       `${siteConfig.url}/images/hero-handyman.png`,
     ],
     description: siteConfig.description,
-    telephone: siteConfig.phone,
+    telephone: siteConfig.phoneE164,
     email: siteConfig.email,
     address: {
       "@type": "PostalAddress",
@@ -46,16 +51,15 @@ export function localBusinessSchema() {
     hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${siteConfig.address.street}, ${siteConfig.address.street2}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip}`)}`,
     areaServed: [
       {
-        "@type": "PostalCodeRange",
-        postalCodeBegin: siteConfig.primaryZip,
-        postalCodeEnd: siteConfig.primaryZip,
-      },
-      {
-        "@type": "PostalAddress",
-        postalCode: siteConfig.primaryZip,
-        addressLocality: "Westchase",
-        addressRegion: "FL",
-        addressCountry: "US",
+        "@type": "Place",
+        name: `ZIP ${siteConfig.primaryZip}`,
+        address: {
+          "@type": "PostalAddress",
+          postalCode: siteConfig.primaryZip,
+          addressLocality: "Westchase",
+          addressRegion: "FL",
+          addressCountry: "US",
+        },
       },
       ...siteConfig.baseCities.map((city) => ({
         "@type": "City",
@@ -63,7 +67,7 @@ export function localBusinessSchema() {
       })),
       ...siteConfig.counties.map((county) => ({
         "@type": "AdministrativeArea",
-        name: county,
+        name: `${county}, FL`,
       })),
       ...siteConfig.serviceAreas
         .filter((city) => !(siteConfig.baseCities as readonly string[]).includes(city))
@@ -91,26 +95,79 @@ export function localBusinessSchema() {
       "Fence Installation",
       "Fence Repair",
       "Drywall Repair",
+      "Drywall Patch Tampa",
+      "Ceiling Texture Repair",
       "Furniture Assembly",
       "Westchase Home Repairs",
       "Carrollwood Home Maintenance",
+      "Ceiling Fan Installation",
+      "Fixture Installation",
     ],
+    slogan: siteConfig.tagline,
+    foundingLocation: {
+      "@type": "Place",
+      name: siteConfig.foundingLocation,
+    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Tampa Bay Home Services",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Handyman Services in Tampa" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drywall Repair in Tampa" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Painting Services in Tampa" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fence Installation in Tampa Bay" } },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Handyman Services in Tampa",
+            url: `${siteConfig.url}/services/handyman`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Drywall Repair in Tampa",
+            url: `${siteConfig.url}/services/drywall-repair-tampa`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Handyman in Westchase FL",
+            url: `${siteConfig.url}/handyman-westchase-fl`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Handyman in Carrollwood FL",
+            url: `${siteConfig.url}/handyman-carrollwood-fl`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Painting Services in Tampa",
+            url: `${siteConfig.url}/services/painting`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Fence Installation in Tampa Bay",
+            url: `${siteConfig.url}/services/fence`,
+          },
+        },
       ],
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: siteConfig.phone,
+      telephone: siteConfig.phoneE164,
       contactType: "customer service",
       areaServed: ["US-FL", ...siteConfig.baseCities, siteConfig.primaryZip],
-      availableLanguage: "English",
+      availableLanguage: ["English", "en-US"],
       hoursAvailable: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -128,17 +185,27 @@ export function websiteSchema() {
     "@id": `${siteConfig.url}/#website`,
     url: siteConfig.url,
     name: siteConfig.legalName,
+    alternateName: siteConfig.name,
     description: siteConfig.description,
     publisher: { "@id": `${siteConfig.url}/#organization` },
     inLanguage: "en-US",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${siteConfig.url}/services?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
+  };
+}
+
+export function servicesItemListSchema(
+  items: { name: string; url: string; description?: string }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Handyman Pros FL Tampa Bay Services",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: item.url,
+      ...(item.description ? { description: item.description } : {}),
+    })),
   };
 }
 

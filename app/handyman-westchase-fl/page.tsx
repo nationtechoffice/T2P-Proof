@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
-import { JsonLd, breadcrumbSchema, speakableSchema } from "@/lib/json-ld";
+import { FAQSection } from "@/components/faq-section";
+import { JsonLd, breadcrumbSchema, faqSchema, speakableSchema } from "@/lib/json-ld";
+import { westchaseFaqs } from "@/lib/local-faqs";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { CheckCircle, MapPin, Phone } from "lucide-react";
@@ -34,6 +36,7 @@ export default function HandymanWestchasePage() {
             { name: "Service Areas", url: `${siteConfig.url}/service-areas` },
             { name: "Handyman Westchase FL", url: pageUrl },
           ]),
+          faqSchema(westchaseFaqs),
           speakableSchema(pageUrl, [".location-intro", ".location-body"]),
         ]}
       />
@@ -149,6 +152,7 @@ export default function HandymanWestchasePage() {
         </div>
       </article>
 
+      <FAQSection faqs={westchaseFaqs} title="Westchase Handyman FAQ" />
       <CTASection
         title="Need a Handyman Near Me in Westchase?"
         description="Call Handyman Pros FL for Westchase home repairs, fixture installation, and local handyman 33626 service — open 24/7."

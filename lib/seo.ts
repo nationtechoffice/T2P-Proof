@@ -61,7 +61,7 @@ export function buildMetadata({
       url,
       title,
       description,
-      siteName: siteConfig.name,
+      siteName: siteConfig.legalName,
       images: [
         {
           url: image,

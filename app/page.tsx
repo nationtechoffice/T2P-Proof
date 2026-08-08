@@ -19,7 +19,7 @@ export default function HomePage() {
       <JsonLd
         data={[
           faqSchema(homeFaqs),
-          speakableSchema(siteConfig.url, [".hero-speakable", ".faq-speakable"]),
+          speakableSchema(siteConfig.url, [".hero-speakable", ".hero-speakable h1", ".faq-speakable"]),
         ]}
       />
       <Hero />
@@ -27,7 +27,7 @@ export default function HomePage() {
       <section className="section-padding relative">
         <div className="container-site">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="hero-speakable">
+            <div>
               <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
                 Based in Tampa
               </p>

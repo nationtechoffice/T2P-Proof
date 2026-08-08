@@ -8,11 +8,15 @@ export const siteConfig = {
     "Licensed & insured handyman based at 12021 Tuscany Bay Dr, Tampa FL 33626. Open 24/7 serving Westchase, Carrollwood, Citrus Park, Hillsborough County & Tampa Bay. Furniture assembly, drywall, painting, fences & emergency repairs.",
   tagline: "Your Tampa Handyman — Done Right, Done Fast",
   phone: "(656) 205-3185",
+  /** Click-to-call href value used sitewide */
   phoneTel: "6562053185",
+  /** E.164 form for schema / NAP consistency with dialers */
+  phoneE164: "+16562053185",
   email: "support@handymanprosflorida.com",
   baseCities: ["Westchase", "Carrollwood", "Citrus Park", "Tampa"] as const,
   primaryZip: "33626",
   themeAccent: "#F47D31",
+  foundingLocation: "Westchase, Tampa, FL",
   address: {
     street: "12021 Tuscany Bay Dr",
     street2: "Apt 203",
