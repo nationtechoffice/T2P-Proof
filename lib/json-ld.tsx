@@ -1,3 +1,4 @@
+import { schemaAreaServedCities } from "./location-silos";
 import { siteConfig } from "./site-config";
 
 interface JsonLdProps {
@@ -33,7 +34,7 @@ export function localBusinessSchema() {
       `${siteConfig.url}/images/hero-handyman.png`,
     ],
     description: siteConfig.description,
-    telephone: siteConfig.phoneE164,
+    telephone: siteConfig.phone,
     email: siteConfig.email,
     address: {
       "@type": "PostalAddress",
@@ -55,13 +56,14 @@ export function localBusinessSchema() {
         name: `ZIP ${siteConfig.primaryZip}`,
         address: {
           "@type": "PostalAddress",
+          streetAddress: `${siteConfig.address.street}, ${siteConfig.address.street2}`,
+          addressLocality: siteConfig.address.city,
+          addressRegion: siteConfig.address.state,
           postalCode: siteConfig.primaryZip,
-          addressLocality: "Westchase",
-          addressRegion: "FL",
           addressCountry: "US",
         },
       },
-      ...siteConfig.baseCities.map((city) => ({
+      ...schemaAreaServedCities.map((city) => ({
         "@type": "City",
         name: `${city}, FL`,
       })),
@@ -69,12 +71,6 @@ export function localBusinessSchema() {
         "@type": "AdministrativeArea",
         name: `${county}, FL`,
       })),
-      ...siteConfig.serviceAreas
-        .filter((city) => !(siteConfig.baseCities as readonly string[]).includes(city))
-        .map((city) => ({
-          "@type": "City",
-          name: `${city}, FL`,
-        })),
     ],
     openingHoursSpecification: siteConfig.hours.map((h) => ({
       "@type": "OpeningHoursSpecification",
@@ -164,9 +160,9 @@ export function localBusinessSchema() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: siteConfig.phoneE164,
+      telephone: siteConfig.phone,
       contactType: "customer service",
-      areaServed: ["US-FL", ...siteConfig.baseCities, siteConfig.primaryZip],
+      areaServed: ["US-FL", ...schemaAreaServedCities, siteConfig.primaryZip],
       availableLanguage: ["English", "en-US"],
       hoursAvailable: {
         "@type": "OpeningHoursSpecification",

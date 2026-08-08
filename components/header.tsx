@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { siteConfig } from "@/lib/site-config";
+import { allLocationLinks } from "@/lib/location-silos";
 import { Logo } from "@/components/logo";
 import { Phone, Menu, X, MapPin, ChevronDown } from "lucide-react";
 
@@ -15,8 +16,10 @@ const serviceLinks = [
 ];
 
 const areaLinks = [
-  { href: "/handyman-westchase-fl", label: "Handyman Westchase FL" },
-  { href: "/handyman-carrollwood-fl", label: "Handyman Carrollwood FL" },
+  ...allLocationLinks.map((area) => ({
+    href: area.href,
+    label: `Handyman ${area.label} FL`,
+  })),
   { href: "/service-areas", label: "All Service Areas" },
 ];
 
@@ -44,8 +47,8 @@ function DropdownMenu({
 }) {
   if (!open) return null;
   return (
-    <div className="absolute left-0 top-full z-50 min-w-[220px] pt-2">
-      <ul className="rounded-xl border border-[hsl(var(--border))] bg-white py-2 shadow-lg">
+    <div className="absolute left-0 top-full z-50 min-w-[240px] pt-2">
+      <ul className="max-h-[70vh] overflow-y-auto rounded-xl border border-[hsl(var(--border))] bg-white py-2 shadow-lg">
         {items.map((item) => (
           <li key={item.href}>
             <Link

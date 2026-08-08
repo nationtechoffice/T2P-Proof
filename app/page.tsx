@@ -1,6 +1,7 @@
 import { Hero } from "@/components/hero";
 import { ServicesGrid } from "@/components/services-grid";
 import { PhotoGallery } from "@/components/photo-gallery";
+import { GoogleReviews } from "@/components/google-reviews";
 import { Testimonials } from "@/components/testimonials";
 import { FAQSection, homeFaqs } from "@/components/faq-section";
 import { CTASection } from "@/components/cta-section";
@@ -106,6 +107,7 @@ export default function HomePage() {
       </section>
 
       <PhotoGallery />
+      <GoogleReviews />
       <Testimonials />
 
       <section className="section-padding relative">

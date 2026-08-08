@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { JsonLd, breadcrumbSchema } from "@/lib/json-ld";
+import { allLocationLinks } from "@/lib/location-silos";
 import { buildMetadata, buildLocalTitle } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { MapPin } from "lucide-react";
@@ -38,33 +39,33 @@ export default function ServiceAreasPage() {
           </div>
 
           <div className="mb-12">
-            <h2 className="mb-6 text-center text-2xl font-bold">Our Service Areas</h2>
-            <div className="mx-auto mb-10 grid max-w-3xl gap-4 sm:grid-cols-2">
-              <Link
-                href="/handyman-westchase-fl"
-                className="card group flex items-start gap-3 hover:border-[hsl(var(--accent))]"
-              >
-                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[hsl(var(--accent))]" />
-                <div>
-                  <h3 className="font-bold group-hover:text-[hsl(var(--accent))]">Handyman Westchase FL</h3>
-                  <p className="text-sm text-[hsl(var(--muted-foreground))]">
-                    Local handyman for ZIP {siteConfig.primaryZip} home repairs &amp; fixture installation.
-                  </p>
-                </div>
-              </Link>
-              <Link
-                href="/handyman-carrollwood-fl"
-                className="card group flex items-start gap-3 hover:border-[hsl(var(--accent))]"
-              >
-                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[hsl(var(--accent))]" />
-                <div>
-                  <h3 className="font-bold group-hover:text-[hsl(var(--accent))]">Handyman Carrollwood FL</h3>
-                  <p className="text-sm text-[hsl(var(--muted-foreground))]">
-                    Carrollwood home maintenance, ceiling fan installation &amp; more.
-                  </p>
-                </div>
-              </Link>
+            <h2 className="mb-6 text-center text-2xl font-bold">Our Florida Service Areas</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {allLocationLinks.map((area) => (
+                <Link
+                  key={area.href}
+                  href={area.href}
+                  className="card group flex items-start gap-3 hover:border-[hsl(var(--accent))]"
+                >
+                  <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[hsl(var(--accent))]" />
+                  <div>
+                    <h3 className="font-bold group-hover:text-[hsl(var(--accent))]">
+                      Handyman {area.label} FL
+                    </h3>
+                    <p className="text-sm text-[hsl(var(--muted-foreground))]">
+                      Local handyman landing page for {area.label}.
+                    </p>
+                  </div>
+                </Link>
+              ))}
             </div>
+            <p className="mx-auto mt-6 max-w-2xl text-center text-sm text-[hsl(var(--muted-foreground))]">
+              Call{" "}
+              <a href={`tel:${siteConfig.phoneTel}`} className="font-semibold text-[hsl(var(--accent))] hover:underline">
+                {siteConfig.phone}
+              </a>{" "}
+              for service in any Tampa Bay neighborhood.
+            </p>
           </div>
 
           <div className="mb-12">
@@ -84,12 +85,9 @@ export default function ServiceAreasPage() {
             <h2 className="mb-6 text-center text-2xl font-bold">Cities & Neighborhoods</h2>
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {siteConfig.serviceAreas.map((city) => {
-                const href =
-                  city === "Westchase"
-                    ? "/handyman-westchase-fl"
-                    : city === "Carrollwood"
-                      ? "/handyman-carrollwood-fl"
-                      : undefined;
+                const match = allLocationLinks.find(
+                  (area) => area.label === city || (city === "Town 'n' Country" && area.label === "Town 'n' Country")
+                );
                 const content = (
                   <>
                     <MapPin className="h-5 w-5 shrink-0 text-[hsl(var(--primary))]" />
@@ -99,8 +97,8 @@ export default function ServiceAreasPage() {
                     </div>
                   </>
                 );
-                return href ? (
-                  <Link key={city} href={href} className="card flex items-center gap-3 hover:border-[hsl(var(--accent))]">
+                return match ? (
+                  <Link key={city} href={match.href} className="card flex items-center gap-3 hover:border-[hsl(var(--accent))]">
                     {content}
                   </Link>
                 ) : (

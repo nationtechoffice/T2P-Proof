@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { FAQSection } from "@/components/faq-section";
+import { GoogleReviews } from "@/components/google-reviews";
 import { JsonLd, breadcrumbSchema, faqSchema, speakableSchema } from "@/lib/json-ld";
 import { westchaseFaqs } from "@/lib/local-faqs";
 import { buildMetadata } from "@/lib/seo";
@@ -152,6 +153,7 @@ export default function HandymanWestchasePage() {
         </div>
       </article>
 
+      <GoogleReviews />
       <FAQSection faqs={westchaseFaqs} title="Westchase Handyman FAQ" />
       <CTASection
         title="Need a Handyman Near Me in Westchase?"

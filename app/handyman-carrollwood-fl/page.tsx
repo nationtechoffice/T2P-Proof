@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { FAQSection } from "@/components/faq-section";
+import { GoogleReviews } from "@/components/google-reviews";
 import { JsonLd, breadcrumbSchema, faqSchema, speakableSchema } from "@/lib/json-ld";
 import { carrollwoodFaqs } from "@/lib/local-faqs";
 import { buildMetadata } from "@/lib/seo";
@@ -151,6 +152,7 @@ export default function HandymanCarrollwoodPage() {
         </div>
       </article>
 
+      <GoogleReviews />
       <FAQSection faqs={carrollwoodFaqs} title="Carrollwood Handyman FAQ" />
       <CTASection
         title="Need Carrollwood Home Maintenance Help?"

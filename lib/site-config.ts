@@ -66,6 +66,7 @@ export const siteConfig = {
     "Brandon",
     "Riverview",
     "Temple Terrace",
+    "Seffner",
     "Plant City",
     "South Tampa",
     "Hyde Park",
