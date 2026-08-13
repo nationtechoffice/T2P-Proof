@@ -27,7 +27,7 @@ export function buildMetadata({
   noindex = false,
 }: SEOProps): Metadata {
   const url = `${siteConfig.url}${path}`;
-  const image = ogImage || `${siteConfig.url}/images/hero-handyman.png`;
+  const image = ogImage || `${siteConfig.url}/images/hero-handyman.webp`;
   const allKeywords = [...siteConfig.keywords, ...tampaLocalKeywords, ...keywords].join(", ");
   const fullAddress = formatFullAddress();
 

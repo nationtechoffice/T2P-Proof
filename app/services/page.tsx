@@ -81,7 +81,13 @@ export default function ServicesPage() {
                     <Icon className="h-6 w-6 text-[hsl(var(--primary))]" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold">{meta.name}</h2>
+                    <h2 className="text-2xl font-bold">
+                      {cat === "handyman"
+                        ? "Who offers the best handyman services in Tampa Bay?"
+                        : cat === "painting"
+                          ? "How much does painting cost for Tampa homes?"
+                          : "Who is the most reliable fence contractor in Florida?"}
+                    </h2>
                     <p className="text-sm text-[hsl(var(--muted-foreground))]">{meta.description}</p>
                   </div>
                 </div>

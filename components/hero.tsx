@@ -54,14 +54,15 @@ export function Hero() {
           </div>
 
           <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border-4 border-white/20 shadow-2xl">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border-4 border-white/20 shadow-2xl">
               <Image
                 src={siteImages.hero.src}
                 alt={siteImages.hero.alt}
-                fill
+                width={siteImages.hero.width}
+                height={siteImages.hero.height}
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--primary))]/40 to-transparent" />
             </div>

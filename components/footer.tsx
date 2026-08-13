@@ -9,7 +9,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-gradient-to-br from-[hsl(200,60%,12%)] to-[hsl(200,70%,18%)] text-gray-300">
+    <footer className="relative bg-gradient-to-br from-[hsl(200,60%,12%)] to-[hsl(200,70%,18%)] pb-20 text-gray-300 lg:pb-0">
       <div className="container-site section-padding">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           <div>

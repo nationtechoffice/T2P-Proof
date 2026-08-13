@@ -26,9 +26,10 @@ export function PhotoGallery() {
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  fill
+                  width={image.width}
+                  height={image.height}
                   sizes={index === 0 ? "(max-width: 640px) 100vw, 66vw" : "(max-width: 640px) 100vw, 33vw"}
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   priority={index === 0}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[hsl(200,80%,15%)]/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />

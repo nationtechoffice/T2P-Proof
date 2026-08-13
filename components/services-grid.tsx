@@ -7,7 +7,7 @@ import { Wrench, Paintbrush, Fence } from "lucide-react";
 
 const icons = { wrench: Wrench, paintbrush: Paintbrush, fence: Fence };
 
-const categoryImages: Record<ServiceCategory, { src: string; alt: string }> = {
+const categoryImages: Record<ServiceCategory, (typeof siteImages)[keyof typeof siteImages]> = {
   handyman: siteImages.furnitureAssembly,
   painting: siteImages.painting,
   fence: siteImages.fenceRepair,
@@ -36,13 +36,14 @@ export function ServicesGrid() {
             const image = categoryImages[cat];
             return (
               <div key={cat} className="card group overflow-hidden !p-0">
-                <div className="relative aspect-[16/10] overflow-hidden">
+                <div className="relative aspect-[16/10] w-full overflow-hidden">
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    fill
+                    width={image.width}
+                    height={image.height}
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--foreground))]/80 via-[hsl(var(--foreground))]/20 to-transparent" />
                   <div className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[hsl(var(--accent))] shadow-lg">

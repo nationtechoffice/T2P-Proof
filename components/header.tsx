@@ -171,9 +171,21 @@ export function Header() {
               )}
             </div>
           ))}
-          <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent mt-3 w-full">
-            Call {siteConfig.phone}
+          <a
+            href={`tel:${siteConfig.phoneTel}`}
+            className="btn-accent mt-3 flex w-full items-center justify-center gap-2"
+            onClick={() => setMobileOpen(false)}
+          >
+            <Phone className="h-4 w-4" />
+            Click to Call {siteConfig.phone}
           </a>
+          <Link
+            href="/contact"
+            className="btn-secondary mt-2 w-full text-center"
+            onClick={() => setMobileOpen(false)}
+          >
+            Get a Quote
+          </Link>
         </nav>
       )}
     </header>
