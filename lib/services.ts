@@ -336,3 +336,40 @@ export function getService(category: ServiceCategory, slug: string): Service | u
 export function getAllServiceSlugs(): { category: ServiceCategory; slug: string }[] {
   return allServices.map((s) => ({ category: s.category, slug: s.slug }));
 }
+
+/** Voice-search / AI Overview friendly H2 questions for service pages */
+export function getServiceVoiceH2s(serviceName: string): { about: string; why: string } {
+  const lower = serviceName.toLowerCase();
+
+  const costPatterns: Record<string, string> = {
+    "tv mounting": "How much does it cost to mount a TV in Tampa?",
+    "drywall repair": "How much does drywall repair cost in Tampa?",
+    "furniture assembly": "How much does furniture assembly cost in Tampa?",
+    "ceiling fan installation": "How much does ceiling fan installation cost in Tampa?",
+    "fan installation": "How much does fan installation cost in Tampa?",
+    "fence installation": "How much does fence installation cost in Tampa?",
+    "fence repairs & maintenance": "How much does fence repair cost in Tampa?",
+    "general repairs & maintenance": "How much does fence repair cost in Tampa?",
+    "exterior painting": "How much does exterior painting cost in Tampa?",
+    "cabinet painting": "How much does cabinet painting cost in Tampa?",
+    "gutter cleaning": "How much does gutter cleaning cost in Tampa?",
+  };
+
+  const about =
+    costPatterns[lower] ??
+    (lower.includes("repair")
+      ? `How much does ${lower} cost in Tampa?`
+      : lower.includes("installation") || lower.includes("install")
+        ? `How much does ${lower} cost in Tampa Bay?`
+        : `What should I know before hiring ${lower} in Tampa?`);
+
+  const why = lower.includes("drywall")
+    ? "Who is the most reliable handyman for drywall repair in Florida?"
+    : lower.includes("fence")
+      ? `Who is the most reliable fence contractor for ${lower} in Florida?`
+      : lower.includes("paint")
+        ? `Who is the most reliable painter for ${lower} in Tampa?`
+        : `Who is the most reliable handyman for ${lower} in Florida?`;
+
+  return { about, why };
+}

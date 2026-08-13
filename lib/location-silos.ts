@@ -12,6 +12,7 @@ export interface LocationSilo {
   mapTitle: string;
   services: string[];
   paragraphs: string[];
+  faqs?: { question: string; answer: string }[];
   relatedPaths?: { href: string; label: string }[];
 }
 
@@ -328,12 +329,12 @@ export const locationSilos: LocationSilo[] = [
     displayName: "South Tampa, FL",
     path: "/handyman-south-tampa-fl",
     eyebrow: "South Tampa · Premium neighborhoods",
-    h1: "South Tampa Handyman for Premium Home Care",
+    h1: "Professional Handyman Services in South Tampa",
     intro:
-      "Handyman Pros FL provides South Tampa handyman service focused on premium home care — discreet scheduling, careful finishes, and pro TV wall mounting.",
-    keywords: ["South Tampa handyman", "premium home care", "TV wall mounting", "handyman South Tampa FL"],
+      "Handyman Pros FL provides professional handyman services in South Tampa — discreet scheduling, careful finishes, and pro TV wall mounting for Hyde Park, Beach Park, and Palma Ceia homes.",
+    keywords: ["South Tampa handyman", "premium home care", "TV wall mounting", "handyman South Tampa FL", "Professional Handyman Services in South Tampa"],
     metaDescription:
-      "South Tampa handyman for premium home care and TV wall mounting. Licensed Handyman Pros FL — call (656) 205-3185 for a free estimate.",
+      "Professional handyman services in South Tampa for premium home care and TV wall mounting. Licensed Handyman Pros FL — call (656) 205-3185 for a free estimate.",
     mapQuery: "South Tampa, FL",
     mapTitle: "Google Map of South Tampa, Florida",
     services: [
@@ -345,15 +346,86 @@ export const locationSilos: LocationSilo[] = [
       "Door, trim, and paint-ready repairs",
     ],
     paragraphs: [
-      "A South Tampa handyman should respect both the architecture and the lifestyle of neighborhoods from Hyde Park to Beach Park and beyond. Handyman Pros FL delivers premium home care: punctual arrivals, protective coverings, and finish details that match higher-end interiors rather than “good enough” patchwork.",
-      "TV wall mounting is one of our signature South Tampa services. We confirm wall construction, use proper lag hardware into studs or rated anchors, level multi-display setups when needed, and plan cable paths so living rooms stay polished. Soundbar brackets and component shelves can be included in the same visit.",
-      "Premium home care also means coordinating small repairs before events, photography, or seasonal returns from travel. We handle fixture swaps, closet upgrades, discreet drywall blending, and hardware refreshes that elevate how a room feels without a full remodel timeline.",
-      "Schedule your South Tampa handyman visit at (656) 205-3185. Open 24/7, Handyman Pros FL offers free estimates for TV wall mounting and premium home care lists across South Tampa and nearby central bay addresses.",
-      "Discreet, licensed, and detail-oriented — that is how we approach every South Tampa property.",
+      "Professional handyman services in South Tampa should respect both the architecture and the lifestyle of neighborhoods from Hyde Park to Beach Park, Palma Ceia, and Bayshore Boulevard corridors. Handyman Pros FL delivers premium home care: punctual arrivals, protective coverings, and finish details that match higher-end interiors rather than “good enough” patchwork. Homeowners near Davis Islands approaches and SoHo dining streets often need discreet visits that fit around work-from-home schedules and weekend entertaining.",
+      "TV wall mounting is one of our signature South Tampa services. We confirm wall construction, use proper lag hardware into studs or rated anchors, level multi-display setups when needed, and plan cable paths so living rooms stay polished. Soundbar brackets and component shelves can be included in the same visit — especially helpful in open-concept condos and renovated bungalows common south of Kennedy Boulevard.",
+      "South Tampa’s mix of historic bungalows and updated estates creates recurring housing issues: humidity-swollen doors, hairline drywall cracks after settling, aging outdoor hardware near the bay, and closet systems that never quite fit after a remodel. Premium home care also means coordinating small repairs before events, photography, or seasonal returns from travel. We handle fixture swaps, closet upgrades, discreet drywall blending, and hardware refreshes that elevate how a room feels without a full remodel timeline.",
+      "Schedule your South Tampa handyman visit at (656) 205-3185. Open 24/7, Handyman Pros FL offers free estimates for TV wall mounting and premium home care lists across South Tampa and nearby central bay addresses. Discreet, licensed, and detail-oriented — that is how we approach every South Tampa property.",
+      "Whether you live steps from Bayshore Boulevard or deeper into quiet cul-de-sacs west of Dale Mabry, our crew arrives stocked, quotes clearly, and leaves the job site tidy so your home is ready for guests the same day.",
     ],
     relatedPaths: [
-      { href: "/handyman-town-n-country-fl", label: "Handyman Town n Country FL" },
+      { href: "/handyman-clearwater-fl", label: "Handyman Clearwater FL" },
+      { href: "/handyman-dunedin-fl", label: "Handyman Dunedin FL" },
       { href: "/services/drywall-repair-tampa", label: "Drywall Repair Tampa" },
+    ],
+  },
+  {
+    slug: "clearwater",
+    city: "Clearwater",
+    displayName: "Clearwater, FL",
+    path: "/handyman-clearwater-fl",
+    eyebrow: "Clearwater · Pinellas County",
+    h1: "Professional Handyman Services in Clearwater",
+    intro:
+      "Count on Handyman Pros FL for professional handyman services in Clearwater — coastal-ready repairs, TV mounting, and punch-list fixes from Countryside to Clearwater Beach-adjacent neighborhoods.",
+    keywords: ["Clearwater handyman", "handyman Clearwater FL", "Professional Handyman Services in Clearwater", "Pinellas handyman"],
+    metaDescription:
+      "Professional handyman services in Clearwater, FL. Drywall, TV mounting, screens, and coastal home repairs. Call Handyman Pros FL at (656) 205-3185 — open 24/7.",
+    mapQuery: "Clearwater, FL",
+    mapTitle: "Google Map of Clearwater, Florida",
+    services: [
+      "TV mounting & cable concealment",
+      "Drywall patch & texture blend",
+      "Patio screen & door repairs",
+      "Fixture and hardware installs",
+      "Furniture assembly for rentals",
+      "Fence board and gate fixes",
+    ],
+    paragraphs: [
+      "Professional handyman services in Clearwater have to account for salt air, afternoon storms, and the mix of vacation rentals and year-round homes near Clearwater Beach, Pier 60, and downtown Clearwater’s Coachman Park corridor. Handyman Pros FL routes into Pinellas County from our Tampa / Westchase base with fasteners, sealants, and outdoor hardware chosen for coastal humidity — not interior-only shortcuts that fail after one storm season.",
+      "Common Clearwater housing issues include swollen entry doors after rainy weeks, corroded exterior hinges and latches, patio screen tears from wind, and drywall patches after furniture moves between guest stays. Condos and townhomes near the Causeway and Countryside Mall area often need careful TV mounting on shared walls, with stud finding and rated anchors so neighbors below never hear a loose bracket. We also assemble flat-pack furniture and install towel bars, curtain rods, and shelving that keep short-term rentals guest-ready.",
+      "Homeowners near Clearwater Marine Aquarium, Coachman Park, and the beaches want a crew that shows up on time, protects floors, and finishes cleanly before evening check-ins. We quote before we start, combine indoor and outdoor tasks when schedules allow, and tell you upfront if a job needs a licensed specialist beyond handyman scope.",
+      "Call (656) 205-3185 anytime for Clearwater estimates — Handyman Pros FL is open 24/7. From a single drywall patch to a full honey-do day across Clearwater and nearby Largo or Dunedin, you get licensed, insured technicians and clear Tampa Bay accountability.",
+      "Whether your property sits blocks from the sand or inland toward Countryside, professional handyman services in Clearwater should feel local, responsive, and built for Florida’s coast — that is the standard we bring to every visit.",
+    ],
+    relatedPaths: [
+      { href: "/handyman-dunedin-fl", label: "Handyman Dunedin FL" },
+      { href: "/handyman-oldsmar-fl", label: "Handyman Oldsmar FL" },
+      { href: "/handyman-south-tampa-fl", label: "Handyman South Tampa FL" },
+    ],
+  },
+  {
+    slug: "dunedin",
+    city: "Dunedin",
+    displayName: "Dunedin, FL",
+    path: "/handyman-dunedin-fl",
+    eyebrow: "Dunedin · Pinellas County",
+    h1: "Professional Handyman Services in Dunedin",
+    intro:
+      "Handyman Pros FL delivers professional handyman services in Dunedin — careful repairs for bungalows near Main Street, the Pinellas Trail, and Causeway-adjacent homes.",
+    keywords: ["Dunedin handyman", "handyman Dunedin FL", "Professional Handyman Services in Dunedin", "Pinellas Trail handyman"],
+    metaDescription:
+      "Professional handyman services in Dunedin, FL. Drywall, doors, TV mounting, and bungalow-friendly repairs. Call Handyman Pros FL at (656) 205-3185.",
+    mapQuery: "Dunedin, FL",
+    mapTitle: "Google Map of Dunedin, Florida",
+    services: [
+      "Drywall & trim repairs for bungalows",
+      "Humidity-swollen door adjustments",
+      "TV mounting & shelving installs",
+      "Furniture assembly",
+      "Screen, fence, and outdoor hardware fixes",
+      "Fixture installation & caulking",
+    ],
+    paragraphs: [
+      "Professional handyman services in Dunedin should feel as neighborhood-focused as a stroll down Main Street. Handyman Pros FL serves homeowners near Downtown Dunedin shops, the Pinellas Trail trailheads, Edgewater Drive, and residential streets stretching toward the Dunedin Causeway. Many properties are charming bungalows or updated ranch homes where careful anchoring, matching trim, and moisture-aware sealing matter more than rushing through a punch list.",
+      "Common Dunedin housing issues include doors that stick after humid weeks, hairline cracks in drywall after Florida settling, patio screen wear from bay breezes, and outdoor hardware that needs stainless or coated replacements. We also mount TVs for living rooms overlooking quiet courtyards, assemble furniture after downtown loft moves, and refresh towel bars and curtain rods without scarring older plaster or thin drywall.",
+      "Families and snowbirds near Weaver Park, downtown festivals, and Causeway-adjacent streets often want same-week help that respects landscaping and HOA expectations. Our technicians arrive with a stocked truck, shoe covers for indoor work, and clear pricing before tools come out. If a repair needs permitting or a specialty trade, we say so honestly instead of forcing a temporary fix.",
+      "Schedule professional handyman services in Dunedin at (656) 205-3185 — open 24/7 for free estimates. Handyman Pros FL already covers Clearwater, Oldsmar, and greater Tampa Bay, so routing into Dunedin is straightforward for mixed indoor and outdoor jobs.",
+      "From a single sticky door near Main Street to a full pre-listing punch list by the Pinellas Trail, you get licensed, insured workmanship and the same accountability Tampa neighbors already trust.",
+    ],
+    relatedPaths: [
+      { href: "/handyman-clearwater-fl", label: "Handyman Clearwater FL" },
+      { href: "/handyman-oldsmar-fl", label: "Handyman Oldsmar FL" },
+      { href: "/handyman-westchase-fl", label: "Handyman Westchase FL" },
     ],
   },
 ];
@@ -378,6 +450,8 @@ export const schemaAreaServedCities = [
   "Oldsmar",
   "Lutz",
   "South Tampa",
+  "Clearwater",
+  "Dunedin",
   "Citrus Park",
   "Brandon",
 ] as const;

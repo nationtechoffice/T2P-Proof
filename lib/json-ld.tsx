@@ -31,7 +31,7 @@ export function localBusinessSchema() {
     },
     image: [
       `${siteConfig.url}/images/logo.svg`,
-      `${siteConfig.url}/images/hero-handyman.png`,
+      `${siteConfig.url}/images/hero-handyman.webp`,
     ],
     description: siteConfig.description,
     telephone: siteConfig.phone,

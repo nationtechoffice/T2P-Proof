@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
+import { QuoteForm } from "@/components/quote-form";
 import { categoryMeta, getServicesByCategory } from "@/lib/services";
 import { buildMetadata, buildLocalTitle } from "@/lib/seo";
 import type { ServiceCategory } from "@/lib/site-config";
@@ -50,20 +51,47 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold">{meta.title}</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">{meta.description}</p>
+            <h2 className="mt-8 text-2xl font-bold">
+              {cat === "handyman"
+                ? "Who is the most reliable handyman for home repairs in Florida?"
+                : cat === "painting"
+                  ? "How much does professional painting cost in Tampa?"
+                  : "How much does fence installation cost in Tampa Bay?"}
+            </h2>
+            <p className="mt-3 text-[hsl(var(--muted-foreground))]">
+              Browse our {meta.name.toLowerCase()} below, then call {siteConfig.phone} or use Get a Quote for a free estimate.
+            </p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <Link
-                key={service.slug}
-                href={`/services/${category}/${service.slug}`}
-                className="card group hover:border-[hsl(var(--primary))]"
-              >
-                <h2 className="mb-2 text-lg font-semibold group-hover:text-[hsl(var(--primary))]">
-                  {service.name}
-                </h2>
-                <p className="text-sm text-[hsl(var(--muted-foreground))]">{service.shortDescription}</p>
-              </Link>
-            ))}
+          <div className="mb-10 lg:hidden">
+            <QuoteForm
+              compact
+              defaultService={cat === "painting" || cat === "fence" ? cat : "handyman"}
+              title="Get a Quote"
+            />
+          </div>
+          <div className="grid items-start gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {services.map((service) => (
+                <Link
+                  key={service.slug}
+                  href={`/services/${category}/${service.slug}`}
+                  className="card group hover:border-[hsl(var(--primary))]"
+                >
+                  <h3 className="mb-2 text-lg font-semibold group-hover:text-[hsl(var(--primary))]">
+                    {service.name}
+                  </h3>
+                  <p className="text-sm text-[hsl(var(--muted-foreground))]">{service.shortDescription}</p>
+                </Link>
+              ))}
+            </div>
+            <aside className="hidden lg:block">
+              <div className="sticky top-28">
+                <QuoteForm
+                  defaultService={cat === "painting" || cat === "fence" ? cat : "handyman"}
+                  title="Get a Quote"
+                />
+              </div>
+            </aside>
           </div>
         </div>
       </section>

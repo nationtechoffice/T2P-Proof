@@ -2,10 +2,12 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { StickyCallBar } from "@/components/sticky-call-bar";
 import { AnimatedBackground } from "@/components/animated-background";
 import { JsonLd, localBusinessSchema, websiteSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import { tampaLocalKeywords, formatFullAddress } from "@/lib/local-seo";
+import { siteImages } from "@/lib/images";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -37,13 +39,20 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.shortName} | Fast Affordable Handyman in Tampa, FL`,
     description: siteConfig.description,
-    images: [{ url: "/images/hero-handyman.png", width: 1280, height: 832, alt: siteConfig.name }],
+    images: [
+      {
+        url: siteImages.hero.src,
+        width: siteImages.hero.width,
+        height: siteImages.hero.height,
+        alt: siteConfig.name,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.shortName,
     description: siteConfig.description,
-    images: ["/images/hero-handyman.png"],
+    images: [siteImages.hero.src],
   },
   robots: {
     index: true,
@@ -81,8 +90,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <AnimatedBackground />
         <Header />
-        <main id="main-content">{children}</main>
+        <main id="main-content" className="pb-20 lg:pb-0">
+          {children}
+        </main>
         <Footer />
+        <StickyCallBar />
         <Analytics />
       </body>
     </html>
