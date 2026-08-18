@@ -6,7 +6,7 @@ import { CANONICAL_HOST, PATH_ALIASES, stripTrailingSlash } from "@/lib/redirect
  * Collapse host, trailing-slash, and alias mismatches into ONE 301.
  * Prevents GSC "Page with redirect" chains (www → slash → alias).
  */
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone();
   const hostname = request.headers.get("host")?.split(":")[0]?.toLowerCase() ?? url.hostname;
   let pathname = stripTrailingSlash(url.pathname);
