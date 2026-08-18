@@ -1,30 +1,34 @@
 import { NextResponse } from "next/server";
 import { submitAllPagesToIndexNow, submitToIndexNow } from "@/lib/indexnow";
 
-export async function GET() {
-  const secret = process.env.INDEXNOW_SECRET;
-  if (secret) {
+function isAuthorized(request: Request): boolean {
+  const secret = process.env.INDEXNOW_SECRET || process.env.CRON_SECRET;
+  if (!secret) {
+    return process.env.NODE_ENV !== "production";
+  }
+  const auth = request.headers.get("authorization");
+  return auth === `Bearer ${secret}`;
+}
+
+export async function GET(request: Request) {
+  if (!isAuthorized(request)) {
     return NextResponse.json(
-      { message: "Use POST with Authorization header to trigger IndexNow submission." },
-      { status: 200 }
+      { message: "Use POST or GET with Authorization: Bearer <INDEXNOW_SECRET|CRON_SECRET>." },
+      { status: 401 }
     );
   }
 
   const results = await submitAllPagesToIndexNow();
   return NextResponse.json({
     submitted: true,
+    urlCount: "all",
     results,
   });
 }
 
 export async function POST(request: Request) {
-  const secret = process.env.INDEXNOW_SECRET;
-
-  if (secret) {
-    const auth = request.headers.get("authorization");
-    if (auth !== `Bearer ${secret}`) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
+  if (!isAuthorized(request)) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   let urlList: string[] | undefined;
@@ -35,7 +39,7 @@ export async function POST(request: Request) {
       urlList = body.urlList.filter((url: unknown) => typeof url === "string");
     }
   } catch {
-    // No body — submit all pages
+    // No body — submit all canonical pages
   }
 
   const results = urlList ? await submitToIndexNow(urlList) : await submitAllPagesToIndexNow();

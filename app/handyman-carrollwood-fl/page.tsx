@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { FAQSection } from "@/components/faq-section";
 import { GoogleReviews } from "@/components/google-reviews";
+import { RelatedContent } from "@/components/related-content";
 import { JsonLd, breadcrumbSchema, faqSchema, speakableSchema } from "@/lib/json-ld";
 import { carrollwoodFaqs } from "@/lib/local-faqs";
 import { buildMetadata } from "@/lib/seo";
@@ -14,9 +15,9 @@ const pagePath = "/handyman-carrollwood-fl";
 const pageUrl = `${siteConfig.url}${pagePath}`;
 
 export const metadata: Metadata = buildMetadata({
-  title: `Carrollwood Home Maintenance & Local Handyman Service | ${siteConfig.shortName}`,
+  title: "Handyman in Carrollwood, FL | 24/7 Local Service | Handyman Pros FL",
   description:
-    "Trusted Carrollwood home maintenance and local handyman service. Ceiling fan installation, repairs, and punch-list projects across Carrollwood, FL. Call for a free estimate.",
+    "Carrollwood home maintenance, ceiling fans & repairs. Licensed local handyman, open 24/7. Call Handyman Pros FL at (656) 205-3185.",
   path: pagePath,
   keywords: [
     "Carrollwood home maintenance",
@@ -56,8 +57,8 @@ export default function HandymanCarrollwoodPage() {
             <h1 className="mb-4 text-4xl font-bold">
               Local Handyman Service in Carrollwood, FL
             </h1>
-            <p className="location-intro mb-8 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">
-              Handyman Pros FL delivers dependable Carrollwood home maintenance — from ceiling fan installation to everyday repairs — with the care of a true local handyman service.
+            <p className="location-intro entity-definition mb-8 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">
+              Handyman Pros FL is a licensed and insured mobile handyman provider based in Westchase, Tampa, FL offering 24/7 emergency repairs, drywall patching, painting, and fence contracting. We deliver dependable Carrollwood home maintenance — from ceiling fan installation to everyday repairs.
             </p>
 
             <div className="location-body prose-content space-y-5 text-base leading-relaxed text-[hsl(var(--foreground))]">
@@ -138,11 +139,13 @@ export default function HandymanCarrollwoodPage() {
             <p className="mb-4 text-sm text-[hsl(var(--muted-foreground))]">
               See the Carrollwood neighborhood where our local handyman service completes home maintenance and ceiling fan installation jobs.
             </p>
-            <div className="overflow-hidden rounded-2xl border border-[hsl(var(--border))] bg-[hsl(var(--muted))] shadow-sm">
+            <div className="aspect-[16/9] overflow-hidden rounded-2xl border border-[hsl(var(--border))] bg-[hsl(var(--muted))] shadow-sm">
               <iframe
                 title="Google Map of Carrollwood, Florida"
                 src="https://maps.google.com/maps?q=Carrollwood%2C%20Tampa%2C%20FL&z=13&output=embed"
-                className="h-[320px] w-full border-0 md:h-[420px]"
+                width={800}
+                height={450}
+                className="h-full w-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 allowFullScreen
@@ -154,6 +157,7 @@ export default function HandymanCarrollwoodPage() {
 
       <GoogleReviews />
       <FAQSection faqs={carrollwoodFaqs} title="Carrollwood Handyman FAQ" />
+      <RelatedContent currentPath={pagePath} />
       <CTASection
         title="Need Carrollwood Home Maintenance Help?"
         description="Book our local handyman service for ceiling fan installation, repairs, and punch-list projects across Carrollwood, FL."

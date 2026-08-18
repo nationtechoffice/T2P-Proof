@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { siteConfig } from "@/lib/site-config";
 import { allLocationLinks } from "@/lib/location-silos";
+import { sitelinkNav } from "@/lib/internal-links";
 import { Logo } from "@/components/logo";
 import { Phone, Menu, X, MapPin, ChevronDown } from "lucide-react";
 
@@ -12,6 +13,7 @@ const serviceLinks = [
   { href: "/services/handyman", label: "Handyman Services" },
   { href: "/services/painting", label: "Painting Services" },
   { href: "/services/fence", label: "Fence Contractor" },
+  { href: "/services/handyman/general-repairs", label: "Emergency Repairs" },
   { href: "/services", label: "All Services" },
 ];
 
@@ -53,7 +55,7 @@ function DropdownMenu({
           <li key={item.href}>
             <Link
               href={item.href}
-              className="block px-4 py-2 text-sm text-[hsl(var(--foreground))] hover:bg-[hsl(var(--muted))] hover:text-[hsl(var(--accent))]"
+              className="flex min-h-12 items-center px-4 py-3 text-sm text-[hsl(var(--foreground))] hover:bg-[hsl(var(--muted))] hover:text-[hsl(var(--accent))]"
             >
               {item.label}
             </Link>
@@ -71,16 +73,21 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[hsl(var(--border))] bg-white/90 backdrop-blur-md">
       <div className="bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--secondary))] py-2 text-center text-sm text-white">
-        <a href={`tel:${siteConfig.phoneTel}`} className="inline-flex items-center gap-2 font-medium hover:underline">
-          <Phone className="h-4 w-4" />
-          <MapPin className="h-3 w-3 text-[hsl(var(--accent))]" />
-          Tampa Bay — Open 24/7 — Call for Free Estimate: {siteConfig.phone}
+        <a
+          href={`tel:${siteConfig.phoneTel}`}
+          className="inline-flex min-h-12 items-center justify-center gap-2 px-3 font-medium hover:underline"
+          aria-label="Call Handyman Pros Florida Now"
+        >
+          <Phone className="h-4 w-4" aria-hidden="true" />
+          <MapPin className="h-3 w-3 text-[hsl(var(--accent))]" aria-hidden="true" />
+          <span className="hidden sm:inline">Tampa Bay — Open 24/7 — Call for Free Estimate: {siteConfig.phone}</span>
+          <span className="sm:hidden">Open 24/7 · {siteConfig.phone}</span>
         </a>
       </div>
       <div className="container-site flex h-16 items-center justify-between">
         <Logo priority />
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-2 lg:flex" aria-label="Main navigation">
           {navLinks.map((link) =>
             link.dropdown ? (
               <div
@@ -91,7 +98,7 @@ export function Header() {
               >
                 <Link
                   href={link.href}
-                  className="inline-flex items-center gap-1 text-sm font-medium text-[hsl(var(--foreground))] transition-colors hover:text-[hsl(var(--accent))]"
+                  className="inline-flex min-h-12 items-center gap-1 px-2 text-sm font-medium text-[hsl(var(--foreground))] transition-colors hover:text-[hsl(var(--accent))]"
                   aria-expanded={openDropdown === link.dropdown}
                   aria-haspopup="true"
                 >
@@ -107,19 +114,23 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-[hsl(var(--foreground))] transition-colors hover:text-[hsl(var(--accent))]"
+                className="inline-flex min-h-12 items-center px-2 text-sm font-medium text-[hsl(var(--foreground))] transition-colors hover:text-[hsl(var(--accent))]"
               >
                 {link.label}
               </Link>
             )
           )}
-          <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent !py-2 !text-xs">
-            Free Estimate
+          <a
+            href={`tel:${siteConfig.phoneTel}`}
+            className="btn-accent !px-4 !text-xs"
+            aria-label="Call Handyman Pros Florida Now"
+          >
+            Call Now
           </a>
         </nav>
 
         <button
-          className="rounded-lg p-2 lg:hidden"
+          className="inline-flex min-h-12 min-w-12 items-center justify-center rounded-lg lg:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
@@ -134,7 +145,7 @@ export function Header() {
             <div key={link.href}>
               <Link
                 href={link.href}
-                className="block py-3 text-sm font-medium text-[hsl(var(--foreground))] hover:text-[hsl(var(--accent))]"
+                className="flex min-h-12 items-center text-sm font-medium text-[hsl(var(--foreground))] hover:text-[hsl(var(--accent))]"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
@@ -145,7 +156,7 @@ export function Header() {
                     <li key={item.href}>
                       <Link
                         href={item.href}
-                        className="block py-1.5 text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--accent))]"
+                        className="flex min-h-12 items-center text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--accent))]"
                         onClick={() => setMobileOpen(false)}
                       >
                         {item.label}
@@ -155,12 +166,12 @@ export function Header() {
                 </ul>
               )}
               {link.dropdown === "areas" && (
-                <ul className="mb-2 ml-3 space-y-1 border-l border-[hsl(var(--border))] pl-3">
+                <ul className="mb-2 ml-3 max-h-64 space-y-1 overflow-y-auto border-l border-[hsl(var(--border))] pl-3">
                   {areaLinks.map((item) => (
                     <li key={item.href}>
                       <Link
                         href={item.href}
-                        className="block py-1.5 text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--accent))]"
+                        className="flex min-h-12 items-center text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--accent))]"
                         onClick={() => setMobileOpen(false)}
                       >
                         {item.label}
@@ -171,8 +182,24 @@ export function Header() {
               )}
             </div>
           ))}
-          <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent mt-3 w-full">
-            Call {siteConfig.phone}
+          <div className="mt-2 flex flex-wrap gap-2">
+            {sitelinkNav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="related-chip !min-h-10 text-xs"
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+          <a
+            href={`tel:${siteConfig.phoneTel}`}
+            className="btn-accent mt-3 w-full"
+            aria-label="Call Handyman Pros Florida Now"
+          >
+            Call Now {siteConfig.phone}
           </a>
         </nav>
       )}

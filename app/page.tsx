@@ -1,16 +1,29 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/hero";
 import { ServicesGrid } from "@/components/services-grid";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { GoogleReviews } from "@/components/google-reviews";
 import { Testimonials } from "@/components/testimonials";
-import { FAQSection, homeFaqs } from "@/components/faq-section";
+import { FAQSection } from "@/components/faq-section";
 import { CTASection } from "@/components/cta-section";
+import { EntityFacts } from "@/components/entity-facts";
+import { RelatedContent } from "@/components/related-content";
 import { JsonLd, faqSchema, speakableSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { buildMetadata, homeMetadataDescription, homeMetadataTitle } from "@/lib/seo";
+import { homeVoiceFaqs } from "@/lib/geo-content";
+import { locationHrefForCity, popularServiceLinks } from "@/lib/internal-links";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog-posts";
 import { formatDate } from "@/lib/utils";
 import { CheckCircle, MapPin } from "lucide-react";
+
+export const metadata: Metadata = buildMetadata({
+  title: homeMetadataTitle,
+  description: homeMetadataDescription,
+  path: "/",
+  keywords: ["fast handyman Tampa FL", "24/7 handyman Westchase", "emergency handyman Tampa"],
+});
 
 export default function HomePage() {
   const recentPosts = blogPosts.slice(0, 3);
@@ -19,8 +32,8 @@ export default function HomePage() {
     <>
       <JsonLd
         data={[
-          faqSchema(homeFaqs),
-          speakableSchema(siteConfig.url, [".hero-speakable", ".hero-speakable h1", ".faq-speakable"]),
+          faqSchema(homeVoiceFaqs),
+          speakableSchema(siteConfig.url, [".hero-speakable", ".hero-speakable h1", ".faq-speakable", ".entity-definition"]),
         ]}
       />
       <Hero />
@@ -35,16 +48,16 @@ export default function HomePage() {
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
                 Your Trusted Tampa Bay Handyman
               </h2>
-              <p className="mb-6 text-lg leading-relaxed text-[hsl(var(--muted-foreground))]">
-                Handyman Pros FL is a mobile handyman service built around fast, flexible response for the Tampa area. Our tools travel with us — same-day help for urgent jobs across Hillsborough County and surrounding counties.
+              <p className="entity-definition mb-6 text-lg leading-relaxed text-[hsl(var(--muted-foreground))]">
+                Handyman Pros FL is a licensed and insured mobile handyman provider based in Westchase, Tampa, FL offering 24/7 emergency repairs, drywall patching, painting, and fence contracting. Our tools travel with us — same-day help across Hillsborough County and Tampa Bay.
               </p>
               <ul className="space-y-3">
                 {[
                   "Licensed, bonded, and insured local Tampa experts",
-                  "Honest, upfront pricing with no surprise fees",
+                  "Transparent $$ pricing — free estimates, no surprise fees",
                   "Mobile team with tools on board",
                   "60+ specialized services under one roof",
-                  "Serving Tampa & all surrounding counties",
+                  "Serving Tampa & all surrounding counties 24/7",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[hsl(var(--accent))]" />
@@ -60,25 +73,51 @@ export default function HomePage() {
               </p>
               <div className="mb-6 flex flex-wrap gap-2">
                 {siteConfig.counties.map((county) => (
-                  <span key={county} className="rounded-full bg-[hsl(var(--primary))]/10 px-3 py-1.5 text-sm font-medium text-[hsl(var(--primary))]">
+                  <Link
+                    key={county}
+                    href="/service-areas"
+                    className="inline-flex min-h-12 items-center rounded-full bg-[hsl(var(--primary))]/10 px-3 py-1.5 text-sm font-medium text-[hsl(var(--primary))]"
+                  >
                     {county}
-                  </span>
+                  </Link>
                 ))}
               </div>
               <h3 className="mb-3 text-lg font-bold">Popular Neighborhoods</h3>
               <div className="flex flex-wrap gap-2">
-                {siteConfig.serviceAreas.map((city) => (
-                  <span key={city} className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm shadow-sm">
-                    <MapPin className="h-3 w-3 text-[hsl(var(--accent))]" />
-                    {city}
-                  </span>
-                ))}
+                {siteConfig.serviceAreas.map((city) => {
+                  const href = locationHrefForCity(city) ?? "/service-areas";
+                  return (
+                    <Link
+                      key={city}
+                      href={href}
+                      className="inline-flex min-h-12 items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm shadow-sm hover:text-[hsl(var(--accent))]"
+                    >
+                      <MapPin className="h-3 w-3 text-[hsl(var(--accent))]" />
+                      {city}
+                    </Link>
+                  );
+                })}
               </div>
               <Link href="/service-areas" className="btn-primary mt-6 inline-block">
                 View All Service Areas
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="relative pb-8">
+        <div className="container-site">
+          <h2 className="mb-6 text-center text-2xl font-bold">Popular Tampa services</h2>
+          <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {popularServiceLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="related-link">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -98,8 +137,8 @@ export default function HomePage() {
               <Link href="/services/drywall-repair-tampa" className="btn-primary">
                 View Drywall Repair Tampa
               </Link>
-              <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent">
-                Call {siteConfig.phone}
+              <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent" aria-label="Call Handyman Pros Florida Now">
+                Call Now {siteConfig.phone}
               </a>
             </div>
           </div>
@@ -109,6 +148,7 @@ export default function HomePage() {
       <PhotoGallery />
       <GoogleReviews />
       <Testimonials />
+      <EntityFacts />
 
       <section className="section-padding relative">
         <div className="container-site">
@@ -130,7 +170,7 @@ export default function HomePage() {
                   </Link>
                 </h3>
                 <p className="mb-4 flex-1 text-sm text-[hsl(var(--muted-foreground))]">{post.excerpt}</p>
-                <div className="flex items-center justify-between text-xs text-[hsl(var(--muted-foreground))]">
+                <div className="flex min-h-12 items-center justify-between text-xs text-[hsl(var(--muted-foreground))]">
                   <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
                   <span>{post.readTime} min read</span>
                 </div>
@@ -144,8 +184,9 @@ export default function HomePage() {
       </section>
 
       <div className="faq-speakable">
-        <FAQSection />
+        <FAQSection faqs={homeVoiceFaqs} />
       </div>
+      <RelatedContent />
       <CTASection />
     </>
   );

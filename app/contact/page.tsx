@@ -31,7 +31,7 @@ export default function ContactPage() {
             <div>
               <h2 className="mb-6 text-2xl font-bold">Get In Touch</h2>
               <div className="space-y-6">
-                <a href={`tel:${siteConfig.phoneTel}`} className="flex items-start gap-4 rounded-xl border border-[hsl(var(--border))] bg-white/80 p-4 transition-colors hover:border-[hsl(var(--primary))]">
+                <a href={`tel:${siteConfig.phoneTel}`} className="flex min-h-12 items-start gap-4 rounded-xl border border-[hsl(var(--border))] bg-white/80 p-4 transition-colors hover:border-[hsl(var(--primary))]" aria-label="Call Handyman Pros Florida Now">
                   <Phone className="mt-1 h-6 w-6 text-[hsl(var(--primary))]" />
                   <div>
                     <p className="font-semibold">Phone — Open 24/7</p>
@@ -117,7 +117,7 @@ export default function ContactPage() {
                     <label htmlFor="message" className="mb-1 block text-sm font-medium">Project Details</label>
                     <textarea id="message" name="message" rows={4} className="w-full rounded-lg border border-[hsl(var(--border))] px-4 py-2.5 focus:border-[hsl(var(--primary))] focus:outline-none focus:ring-1 focus:ring-[hsl(var(--primary))]" placeholder="Describe your project..."></textarea>
                   </div>
-                  <button type="submit" className="btn-primary w-full">Submit Request</button>
+                  <button type="submit" className="btn-primary w-full min-h-12">Submit Request</button>
                 </form>
               )}
             </div>

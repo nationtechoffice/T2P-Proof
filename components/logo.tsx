@@ -27,6 +27,7 @@ export function Logo({ className, priority = false, variant = "default" }: LogoP
         width={220}
         height={40}
         priority={priority}
+        unoptimized
         className="h-8 w-auto max-w-[180px] object-contain object-left sm:h-9 sm:max-w-[220px] md:h-10 md:max-w-[240px]"
       />
     </Link>

@@ -1,4 +1,5 @@
 import { schemaAreaServedCities } from "./location-silos";
+import { sitelinkNav } from "./internal-links";
 import { siteConfig } from "./site-config";
 
 interface JsonLdProps {
@@ -14,14 +15,23 @@ export function JsonLd({ data }: JsonLdProps) {
   );
 }
 
+const napAddress = {
+  "@type": "PostalAddress",
+  streetAddress: `${siteConfig.address.street}, ${siteConfig.address.street2}`,
+  addressLocality: siteConfig.address.city,
+  addressRegion: siteConfig.address.state,
+  postalCode: siteConfig.address.zip,
+  addressCountry: siteConfig.address.country,
+};
+
 export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+    "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.legalName,
     legalName: siteConfig.legalName,
-    alternateName: [siteConfig.name, "Handyman Pros"],
+    alternateName: [siteConfig.name, "Handyman Pros", "Handyman Pros Florida"],
     url: siteConfig.url,
     logo: {
       "@type": "ImageObject",
@@ -30,26 +40,22 @@ export function localBusinessSchema() {
       height: 100,
     },
     image: [
-      `${siteConfig.url}/images/logo.svg`,
       `${siteConfig.url}/images/hero-handyman.png`,
+      `${siteConfig.url}/images/logo.svg`,
     ],
     description: siteConfig.description,
-    telephone: siteConfig.phone,
+    telephone: siteConfig.phoneE164,
     email: siteConfig.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: `${siteConfig.address.street}, ${siteConfig.address.street2}`,
-      addressLocality: siteConfig.address.city,
-      addressRegion: siteConfig.address.state,
-      postalCode: siteConfig.address.zip,
-      addressCountry: siteConfig.address.country,
-    },
+    priceRange: "$$",
+    address: napAddress,
     geo: {
       "@type": "GeoCoordinates",
       latitude: siteConfig.geo.latitude,
       longitude: siteConfig.geo.longitude,
     },
-    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${siteConfig.address.street}, ${siteConfig.address.street2}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip}`)}`,
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      `${siteConfig.address.street}, ${siteConfig.address.street2}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip}`
+    )}`,
     areaServed: [
       {
         "@type": "Place",
@@ -79,7 +85,6 @@ export function localBusinessSchema() {
       closes: h.closes,
     })),
     openingHours: "Mo-Su 00:00-23:59",
-    priceRange: "$$",
     paymentAccepted: "Cash, Credit Card, Check",
     currenciesAccepted: "USD",
     sameAs: Object.values(siteConfig.social),
@@ -97,6 +102,7 @@ export function localBusinessSchema() {
       "Westchase Home Repairs",
       "Carrollwood Home Maintenance",
       "Ceiling Fan Installation",
+      "Emergency Handyman Tampa",
       "Fixture Installation",
     ],
     slogan: siteConfig.tagline,
@@ -110,6 +116,7 @@ export function localBusinessSchema() {
       itemListElement: [
         {
           "@type": "Offer",
+          priceRange: "$$",
           itemOffered: {
             "@type": "Service",
             name: "Handyman Services in Tampa",
@@ -118,6 +125,7 @@ export function localBusinessSchema() {
         },
         {
           "@type": "Offer",
+          priceRange: "$$",
           itemOffered: {
             "@type": "Service",
             name: "Drywall Repair in Tampa",
@@ -126,22 +134,7 @@ export function localBusinessSchema() {
         },
         {
           "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Handyman in Westchase FL",
-            url: `${siteConfig.url}/handyman-westchase-fl`,
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Handyman in Carrollwood FL",
-            url: `${siteConfig.url}/handyman-carrollwood-fl`,
-          },
-        },
-        {
-          "@type": "Offer",
+          priceRange: "$$",
           itemOffered: {
             "@type": "Service",
             name: "Painting Services in Tampa",
@@ -150,27 +143,52 @@ export function localBusinessSchema() {
         },
         {
           "@type": "Offer",
+          priceRange: "$$",
           itemOffered: {
             "@type": "Service",
             name: "Fence Installation in Tampa Bay",
             url: `${siteConfig.url}/services/fence`,
           },
         },
+        {
+          "@type": "Offer",
+          priceRange: "$$",
+          itemOffered: {
+            "@type": "Service",
+            name: "Emergency Home Repairs in Tampa",
+            url: `${siteConfig.url}/services/handyman/general-repairs`,
+          },
+        },
       ],
     },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: siteConfig.phone,
-      contactType: "customer service",
-      areaServed: ["US-FL", ...schemaAreaServedCities, siteConfig.primaryZip],
-      availableLanguage: ["English", "en-US"],
-      hoursAvailable: {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        opens: "00:00",
-        closes: "23:59",
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.phoneE164,
+        contactType: "customer service",
+        availableLanguage: ["English", "en-US"],
+        areaServed: ["US-FL", ...schemaAreaServedCities, siteConfig.primaryZip],
+        hoursAvailable: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          opens: "00:00",
+          closes: "23:59",
+        },
       },
-    },
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.phoneE164,
+        contactType: "emergency",
+        availableLanguage: ["English"],
+        areaServed: "US-FL",
+        hoursAvailable: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          opens: "00:00",
+          closes: "23:59",
+        },
+      },
+    ],
   };
 }
 
@@ -185,6 +203,28 @@ export function websiteSchema() {
     description: siteConfig.description,
     publisher: { "@id": `${siteConfig.url}/#organization` },
     inLanguage: "en-US",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteConfig.url}/search?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+}
+
+export function siteNavigationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Handyman Pros FL primary navigation",
+    itemListElement: sitelinkNav.map((item, index) => ({
+      "@type": "SiteNavigationElement",
+      position: index + 1,
+      name: item.label,
+      url: `${siteConfig.url}${item.href}`,
+    })),
   };
 }
 
@@ -242,10 +282,16 @@ export function serviceSchema(service: {
       { "@type": "AdministrativeArea", name: "Pasco County, FL" },
     ],
     serviceType: service.category,
+    offers: {
+      "@type": "Offer",
+      priceRange: "$$",
+      availability: "https://schema.org/InStock",
+      url: service.url,
+    },
     availableChannel: {
       "@type": "ServiceChannel",
       serviceUrl: service.url,
-      servicePhone: siteConfig.phone,
+      servicePhone: siteConfig.phoneE164,
     },
   };
 }

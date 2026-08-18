@@ -3,16 +3,18 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { allServices, categoryMeta } from "@/lib/services";
-import { JsonLd, breadcrumbSchema, servicesItemListSchema } from "@/lib/json-ld";
-import { buildMetadata, buildLocalTitle } from "@/lib/seo";
+import { JsonLd, breadcrumbSchema, servicesItemListSchema, faqSchema } from "@/lib/json-ld";
+import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import type { ServiceCategory } from "@/lib/site-config";
 import { Wrench, Paintbrush, Fence } from "lucide-react";
+import { RelatedContent } from "@/components/related-content";
+import { homeVoiceFaqs } from "@/lib/geo-content";
 
 export const metadata: Metadata = buildMetadata({
-  title: buildLocalTitle("All Home Services in Tampa Bay"),
+  title: "Handyman, Painting & Fence | Tampa FL | Handyman Pros FL",
   description:
-    "60+ handyman, painting & fence services in Tampa, Westchase, Carrollwood, Hillsborough County & surrounding areas. Licensed, insured & open 24/7. Free estimates.",
+    "60+ handyman, painting & fence services in Tampa, Westchase & Hillsborough County. Licensed, insured, 24/7. Call (656) 205-3185.",
   path: "/services",
   keywords: ["Tampa home services", "handyman services Tampa", "painting contractor Tampa Bay", "fence installation Tampa"],
 });
@@ -53,6 +55,7 @@ export default function ServicesPage() {
             { name: "Services", url: `${siteConfig.url}/services` },
           ]),
           servicesItemListSchema(featuredList),
+          faqSchema(homeVoiceFaqs.slice(0, 4)),
         ]}
       />
       <Breadcrumbs items={[{ label: "Services" }]} />
@@ -90,7 +93,7 @@ export default function ServicesPage() {
                     <Link
                       key={service.slug}
                       href={`/services/${cat}/${service.slug}`}
-                      className="card group hover:border-[hsl(var(--primary))]"
+                      className="card group flex min-h-12 flex-col justify-center hover:border-[hsl(var(--primary))]"
                     >
                       <h3 className="mb-2 font-semibold group-hover:text-[hsl(var(--primary))]">
                         {service.name}
@@ -104,6 +107,7 @@ export default function ServicesPage() {
           })}
         </div>
       </section>
+      <RelatedContent />
       <CTASection />
     </>
   );

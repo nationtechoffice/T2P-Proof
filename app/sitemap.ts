@@ -1,13 +1,17 @@
 import type { MetadataRoute } from "next";
-import { getAllSiteUrls } from "@/lib/sitemap-urls";
+import { getAllSiteUrls, getUrlPriority } from "@/lib/sitemap-urls";
+
+const LASTMOD = new Date("2026-08-18T00:00:00.000Z");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
-  return getAllSiteUrls().map((url, index) => ({
+  return getAllSiteUrls().map((url) => ({
     url,
-    lastModified: now,
-    changeFrequency: url.includes("/blog/") ? "weekly" : url.includes("/services/") ? "monthly" : "weekly",
-    priority: index === 0 ? 1.0 : url.endsWith("/services") || url.includes("/services/handyman") ? 0.9 : 0.7,
+    lastModified: LASTMOD,
+    changeFrequency: url.includes("/blog/")
+      ? "weekly"
+      : url.includes("/services/")
+        ? "monthly"
+        : "weekly",
+    priority: getUrlPriority(url),
   }));
 }

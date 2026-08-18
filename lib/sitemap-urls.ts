@@ -3,6 +3,13 @@ import { getAllServiceSlugs } from "./services";
 import { getAllBlogSlugs } from "./blog-posts";
 import { allLocationLinks } from "./location-silos";
 
+const REDIRECTED_OR_PARAM_PATHS = new Set([
+  "/llms.txt",
+  "/home",
+  "/index.html",
+  "/search",
+]);
+
 export function getAllSiteUrls(): string[] {
   const baseUrl = siteConfig.url;
 
@@ -17,7 +24,6 @@ export function getAllSiteUrls(): string[] {
     `${baseUrl}/about`,
     `${baseUrl}/contact`,
     `${baseUrl}/service-areas`,
-    `${baseUrl}/llms.txt`,
   ];
 
   const locationPages = allLocationLinks.map((link) => `${baseUrl}${link.href}`);
@@ -28,5 +34,25 @@ export function getAllSiteUrls(): string[] {
 
   const blogPages = getAllBlogSlugs().map((slug) => `${baseUrl}/blog/${slug}`);
 
-  return [...staticPages, ...locationPages, ...servicePages, ...blogPages];
+  return [...staticPages, ...locationPages, ...servicePages, ...blogPages].filter((url) => {
+    const path = url.replace(baseUrl, "") || "/";
+    return !REDIRECTED_OR_PARAM_PATHS.has(path);
+  });
+}
+
+export function getUrlPriority(url: string): number {
+  if (url === siteConfig.url) return 1;
+  if (
+    url.endsWith("/services") ||
+    url.endsWith("/services/handyman") ||
+    url.endsWith("/services/drywall-repair-tampa") ||
+    url.endsWith("/handyman-westchase-fl")
+  ) {
+    return 0.9;
+  }
+  if (url.includes("/services/painting") || url.includes("/services/fence") || url.includes("/handyman-")) {
+    return 0.8;
+  }
+  if (url.includes("/blog/")) return 0.6;
+  return 0.7;
 }

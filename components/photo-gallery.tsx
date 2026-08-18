@@ -22,7 +22,7 @@ export function PhotoGallery() {
                 index === 0 ? "sm:col-span-2 sm:row-span-2" : ""
               }`}
             >
-              <div className={`relative w-full ${index === 0 ? "aspect-[16/10] sm:aspect-auto sm:h-full sm:min-h-[420px]" : "aspect-[4/3]"}`}>
+              <div className={`relative w-full overflow-hidden ${index === 0 ? "aspect-[16/10] sm:min-h-[420px]" : "aspect-[4/3]"}`}>
                 <Image
                   src={image.src}
                   alt={image.alt}

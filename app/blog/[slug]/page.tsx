@@ -3,11 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
+import { RelatedContent } from "@/components/related-content";
 import { blogPosts, getAllBlogSlugs, getBlogPost } from "@/lib/blog-posts";
-import { buildMetadata, buildPageTitle } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, articleSchema, speakableSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import { formatDate } from "@/lib/utils";
+import { siteImages } from "@/lib/images";
 
 export function generateStaticParams() {
   return getAllBlogSlugs().map((slug) => ({ slug }));
@@ -18,14 +20,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getBlogPost(slug);
   if (!post) return {};
   return buildMetadata({
-    title: buildPageTitle(post.title),
+    title: post.title,
     description: post.description,
     path: `/blog/${slug}`,
     keywords: post.tags,
     ogType: "article",
     publishedTime: post.publishedAt,
     modifiedTime: post.updatedAt,
-    ogImage: `${siteConfig.url}${post.image}`,
+    ogImage: `${siteConfig.url}${siteImages.hero.src}`,
   });
 }
 
@@ -110,7 +112,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             publishedAt: post.publishedAt,
             updatedAt: post.updatedAt,
             author: post.author,
-            image: post.image,
+            image: siteImages.hero.src,
           }),
           speakableSchema(pageUrl, [".article-summary", ".article-content"]),
         ]}
@@ -158,6 +160,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </div>
         </section>
       )}
+      <RelatedContent />
       <CTASection />
     </>
   );

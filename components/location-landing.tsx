@@ -2,9 +2,14 @@ import Link from "next/link";
 import { Fragment, type ReactNode } from "react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
+import { EntityFacts } from "@/components/entity-facts";
+import { FAQSection } from "@/components/faq-section";
 import { GoogleReviews } from "@/components/google-reviews";
-import { JsonLd, breadcrumbSchema, speakableSchema } from "@/lib/json-ld";
+import { RelatedContent } from "@/components/related-content";
+import { JsonLd, breadcrumbSchema, faqSchema, speakableSchema } from "@/lib/json-ld";
+import { buildLocationFaqs } from "@/lib/geo-content";
 import type { LocationSilo } from "@/lib/location-silos";
+import { popularServiceLinks } from "@/lib/internal-links";
 import { siteConfig } from "@/lib/site-config";
 import { CheckCircle, MapPin, Phone } from "lucide-react";
 
@@ -18,6 +23,7 @@ function withClickToCall(text: string): ReactNode {
         <a
           href={`tel:${siteConfig.phoneTel}`}
           className="font-semibold text-[hsl(var(--accent))] hover:underline"
+          aria-label="Call Handyman Pros Florida Now"
         >
           {siteConfig.phone}
         </a>
@@ -29,6 +35,7 @@ function withClickToCall(text: string): ReactNode {
 export function LocationLanding({ location }: { location: LocationSilo }) {
   const pageUrl = `${siteConfig.url}${location.path}`;
   const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(location.mapQuery)}&z=13&output=embed`;
+  const faqs = buildLocationFaqs(location);
 
   return (
     <>
@@ -39,7 +46,8 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
             { name: "Service Areas", url: `${siteConfig.url}/service-areas` },
             { name: `Handyman ${location.city} FL`, url: pageUrl },
           ]),
-          speakableSchema(pageUrl, [".location-intro", ".location-body"]),
+          faqSchema(faqs),
+          speakableSchema(pageUrl, [".location-intro", ".location-body", ".entity-definition"]),
         ]}
       />
       <Breadcrumbs
@@ -56,17 +64,18 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
               {location.eyebrow}
             </p>
             <h1 className="mb-4 text-4xl font-bold">{location.h1}</h1>
-            <p className="location-intro mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">
-              {location.intro}
+            <p className="location-intro entity-definition mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">
+              {location.intro} Handyman Pros FL is a licensed and insured mobile handyman provider based in Westchase, Tampa, FL offering 24/7 emergency repairs, drywall patching, painting, and fence contracting in {location.displayName}.
             </p>
 
             <div className="mb-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href={`tel:${siteConfig.phoneTel}`}
                 className="btn-accent inline-flex items-center justify-center gap-2"
+                aria-label="Call Handyman Pros Florida Now"
               >
                 <Phone className="h-4 w-4" />
-                Call {siteConfig.phone}
+                Call Now {siteConfig.phone}
               </a>
               <Link href="/contact" className="btn-secondary inline-flex items-center justify-center">
                 Request Free Estimate
@@ -85,34 +94,36 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
               </h2>
               <ul className="grid gap-3 sm:grid-cols-2">
                 {location.services.map((service) => (
-                  <li key={service} className="flex items-start gap-2 text-sm">
+                  <li key={service} className="flex min-h-12 items-start gap-2 text-sm">
                     <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(var(--accent))]" />
                     <span>{service}</span>
                   </li>
                 ))}
               </ul>
+              <ul className="mt-6 flex flex-wrap gap-2">
+                {popularServiceLinks.slice(0, 6).map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="related-chip">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
+
+            <EntityFacts compact city={location.displayName} />
 
             <p className="mt-8 text-sm text-[hsl(var(--muted-foreground))]">
               Ready to book? Call{" "}
               <a
                 href={`tel:${siteConfig.phoneTel}`}
                 className="font-semibold text-[hsl(var(--accent))] hover:underline"
+                aria-label="Call Handyman Pros Florida Now"
               >
                 {siteConfig.phone}
               </a>{" "}
               anytime — Handyman Pros FL is open 24/7 for {location.city} estimates.
             </p>
-
-            {location.relatedPaths && location.relatedPaths.length > 0 && (
-              <div className="mt-6 flex flex-wrap gap-3">
-                {location.relatedPaths.map((link) => (
-                  <Link key={link.href} href={link.href} className="btn-secondary !py-2 !text-xs">
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            )}
           </div>
 
           <section className="mx-auto mt-16 max-w-4xl" aria-labelledby={`${location.slug}-map-heading`}>
@@ -125,11 +136,13 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
             <p className="mb-4 text-sm text-[hsl(var(--muted-foreground))]">
               Explore the {location.displayName} area we serve for local handyman visits.
             </p>
-            <div className="overflow-hidden rounded-2xl border border-[hsl(var(--border))] bg-[hsl(var(--muted))] shadow-sm">
+            <div className="aspect-[16/9] overflow-hidden rounded-2xl border border-[hsl(var(--border))] bg-[hsl(var(--muted))] shadow-sm">
               <iframe
                 title={location.mapTitle}
                 src={mapSrc}
-                className="h-[320px] w-full border-0 md:h-[420px]"
+                width={800}
+                height={450}
+                className="h-full w-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 allowFullScreen
@@ -139,6 +152,8 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
         </div>
       </article>
 
+      <FAQSection faqs={faqs} title={`${location.city} Handyman FAQ`} />
+      <RelatedContent currentPath={location.path} headingAreas={`More cities near ${location.city}`} />
       <GoogleReviews />
       <CTASection
         title={`Need a Handyman in ${location.city}?`}

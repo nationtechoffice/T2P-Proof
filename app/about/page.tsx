@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
-import { buildMetadata, buildLocalTitle } from "@/lib/seo";
+import { EntityFacts } from "@/components/entity-facts";
+import { RelatedContent } from "@/components/related-content";
+import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { formatFullAddress } from "@/lib/local-seo";
 import { Shield, Users, Award, Heart, MapPin } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: buildLocalTitle("About Us"),
+  title: "About Handyman Pros FL | Tampa & Westchase",
   description:
-    `Handyman Pros FL is based at ${formatFullAddress()} in Westchase, Tampa. Licensed handyman, painting & fence services open 24/7 across Hillsborough County & Tampa Bay.`,
+    "Licensed Westchase Tampa handyman at 12021 Tuscany Bay Dr. Painting, fences & 24/7 repairs across Hillsborough County. Call (656) 205-3185.",
   path: "/about",
   keywords: ["about handyman pros Tampa", "Westchase handyman", "Tampa handyman company", "33626 handyman"],
 });
@@ -81,6 +83,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <EntityFacts />
+      <RelatedContent />
       <CTASection title="Tampa's Trusted Handyman — Open 24/7" />
     </>
   );

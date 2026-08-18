@@ -11,15 +11,15 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
     <nav aria-label="Breadcrumb" className="container-site py-4">
       <ol className="flex flex-wrap items-center gap-1 text-sm text-[hsl(var(--muted-foreground))]">
         <li>
-          <Link href="/" className="hover:text-[hsl(var(--primary))]">Home</Link>
+          <Link href="/" className="inline-flex min-h-12 items-center hover:text-[hsl(var(--primary))]">Home</Link>
         </li>
         {items.map((item, i) => (
           <li key={i} className="flex items-center gap-1">
             <ChevronRight className="h-3 w-3" aria-hidden="true" />
             {item.href ? (
-              <Link href={item.href} className="hover:text-[hsl(var(--primary))]">{item.label}</Link>
+              <Link href={item.href} className="inline-flex min-h-12 items-center hover:text-[hsl(var(--primary))]">{item.label}</Link>
             ) : (
-              <span className="font-medium text-[hsl(var(--foreground))]" aria-current="page">{item.label}</span>
+              <span className="inline-flex min-h-12 items-center font-medium text-[hsl(var(--foreground))]" aria-current="page">{item.label}</span>
             )}
           </li>
         ))}

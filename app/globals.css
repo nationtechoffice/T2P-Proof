@@ -45,6 +45,18 @@
     min-height: 100vh;
   }
 
+  @media (max-width: 767px) {
+    body {
+      padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+    }
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold tracking-tight text-foreground;
   }
@@ -80,6 +92,29 @@
   filter: blur(80px);
   opacity: 0.35;
   animation: florida-float 20s ease-in-out infinite;
+}
+
+@media (max-width: 767px) {
+  .florida-bg__orb,
+  .florida-bg__waves,
+  .florida-bg__palms,
+  .hero-shimmer {
+    display: none;
+  }
+
+  .florida-bg__gradient {
+    animation: none;
+    background-size: 100% 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .florida-bg__gradient,
+  .florida-bg__orb,
+  .florida-bg__waves,
+  .hero-shimmer {
+    animation: none !important;
+  }
 }
 
 .florida-bg__orb--1 {
@@ -158,15 +193,62 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-xl bg-[hsl(var(--primary))] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[hsl(var(--primary)/0.25)] transition-all hover:brightness-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))] focus:ring-offset-2;
+    @apply inline-flex min-h-12 min-w-12 items-center justify-center rounded-xl bg-[hsl(var(--primary))] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[hsl(var(--primary)/0.25)] transition-all hover:brightness-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))] focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-xl border-2 border-[hsl(var(--primary))] bg-white/80 px-6 py-3 text-sm font-semibold text-[hsl(var(--primary))] backdrop-blur-sm transition-all hover:bg-[hsl(var(--primary))] hover:text-white focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))] focus:ring-offset-2;
+    @apply inline-flex min-h-12 min-w-12 items-center justify-center rounded-xl border-2 border-[hsl(var(--primary))] bg-white/80 px-6 py-3 text-sm font-semibold text-[hsl(var(--primary))] backdrop-blur-sm transition-all hover:bg-[hsl(var(--primary))] hover:text-white focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))] focus:ring-offset-2;
   }
 
   .btn-accent {
-    @apply inline-flex items-center justify-center rounded-xl bg-[hsl(var(--accent))] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[hsl(var(--accent)/0.3)] transition-all hover:brightness-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:ring-offset-2;
+    @apply inline-flex min-h-12 min-w-12 items-center justify-center rounded-xl bg-[hsl(var(--accent))] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[hsl(var(--accent)/0.3)] transition-all hover:brightness-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[hsl(var(--accent))] focus:ring-offset-2;
+  }
+
+  .touch-target {
+    @apply inline-flex min-h-12 min-w-12 items-center;
+  }
+
+  .related-link {
+    @apply flex min-h-12 items-center rounded-xl border border-[hsl(var(--border))] bg-white/80 px-4 py-3 text-sm font-medium text-[hsl(var(--foreground))] transition-colors hover:border-[hsl(var(--accent))] hover:text-[hsl(var(--accent))];
+  }
+
+  .related-chip {
+    @apply inline-flex min-h-12 items-center rounded-full border border-[hsl(var(--border))] bg-white px-4 py-2 text-sm font-medium hover:border-[hsl(var(--accent))] hover:text-[hsl(var(--accent))];
+  }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:shadow-lg;
+  }
+
+  .mobile-call-bar {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 40;
+    padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid hsl(var(--border));
+    background: hsl(0 0% 100% / 0.96);
+    box-shadow: 0 -8px 24px hsl(200 60% 12% / 0.12);
+    backdrop-filter: blur(10px);
+  }
+
+  .mobile-call-bar__button {
+    display: flex;
+    min-height: 48px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    border-radius: 0.75rem;
+    background: hsl(var(--accent));
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 8px 20px hsl(var(--accent) / 0.35);
   }
 
   .section-padding {
