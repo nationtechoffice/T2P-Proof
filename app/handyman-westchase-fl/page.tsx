@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { FAQSection } from "@/components/faq-section";
 import { GoogleReviews } from "@/components/google-reviews";
+import { RelatedContent } from "@/components/related-content";
 import { JsonLd, breadcrumbSchema, faqSchema, speakableSchema } from "@/lib/json-ld";
 import { westchaseFaqs } from "@/lib/local-faqs";
 import { buildMetadata } from "@/lib/seo";
@@ -14,9 +15,9 @@ const pagePath = "/handyman-westchase-fl";
 const pageUrl = `${siteConfig.url}${pagePath}`;
 
 export const metadata: Metadata = buildMetadata({
-  title: `Handyman Near Me in Westchase FL ${siteConfig.primaryZip} | ${siteConfig.shortName}`,
+  title: "Handyman in Westchase, FL | 24/7 Local Service | Handyman Pros FL",
   description:
-    "Looking for a handyman near me in Westchase? Handyman Pros FL handles Westchase home repairs, fixture installation, and local handyman 33626 jobs 24/7. Call for a free estimate.",
+    "24/7 handyman near me in Westchase ZIP 33626. Drywall, fixtures & home repairs. Licensed Handyman Pros FL. Call (656) 205-3185.",
   path: pagePath,
   keywords: [
     "handyman near me",
@@ -57,8 +58,8 @@ export default function HandymanWestchasePage() {
             <h1 className="mb-4 text-4xl font-bold">
               Handyman Near Me in Westchase, FL
             </h1>
-            <p className="location-intro mb-8 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">
-              When you need a reliable local handyman 33626 homeowners trust, Handyman Pros FL is right in your neighborhood — ready for Westchase home repairs, fixture installation, and same-day fixes.
+            <p className="location-intro entity-definition mb-8 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">
+              Handyman Pros FL is a licensed and insured mobile handyman provider based in Westchase, Tampa, FL offering 24/7 emergency repairs, drywall patching, painting, and fence contracting. When you need a reliable local handyman 33626 homeowners trust, we are right in your neighborhood.
             </p>
 
             <div className="location-body prose-content space-y-5 text-base leading-relaxed text-[hsl(var(--foreground))]">
@@ -139,11 +140,13 @@ export default function HandymanWestchasePage() {
             <p className="mb-4 text-sm text-[hsl(var(--muted-foreground))]">
               Explore the Westchase neighborhood we serve — including ZIP {siteConfig.primaryZip} and nearby Tampa communities.
             </p>
-            <div className="overflow-hidden rounded-2xl border border-[hsl(var(--border))] bg-[hsl(var(--muted))] shadow-sm">
+            <div className="overflow-hidden rounded-2xl border border-[hsl(var(--border))] bg-[hsl(var(--muted))] shadow-sm aspect-[16/9]">
               <iframe
                 title="Google Map of Westchase, Florida"
                 src="https://maps.google.com/maps?q=Westchase%2C%20FL%2033626&z=13&output=embed"
-                className="h-[320px] w-full border-0 md:h-[420px]"
+                width={800}
+                height={450}
+                className="h-full w-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 allowFullScreen
@@ -155,6 +158,7 @@ export default function HandymanWestchasePage() {
 
       <GoogleReviews />
       <FAQSection faqs={westchaseFaqs} title="Westchase Handyman FAQ" />
+      <RelatedContent currentPath={pagePath} />
       <CTASection
         title="Need a Handyman Near Me in Westchase?"
         description="Call Handyman Pros FL for Westchase home repairs, fixture installation, and local handyman 33626 service — open 24/7."

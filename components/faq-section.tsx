@@ -49,10 +49,10 @@ export function FAQSection({ faqs = homeFaqs, title = "Frequently Asked Question
         <div className="mx-auto max-w-3xl space-y-4">
           {faqs.map((faq, i) => (
             <details key={i} className="card group" open={i === 0}>
-              <summary className="cursor-pointer text-lg font-semibold text-[hsl(var(--foreground))] marker:content-none">
-                <span className="flex items-center justify-between">
+              <summary className="flex min-h-12 cursor-pointer list-none items-center text-lg font-semibold text-[hsl(var(--foreground))] marker:content-none">
+                <span className="flex w-full items-center justify-between gap-3 py-1">
                   {faq.question}
-                  <span className="ml-4 text-[hsl(var(--accent))] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                  <span className="ml-4 shrink-0 text-[hsl(var(--accent))] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
                 </span>
               </summary>
               <p className="mt-4 leading-relaxed text-[hsl(var(--muted-foreground))]">{faq.answer}</p>

@@ -2,16 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
+import { RelatedContent } from "@/components/related-content";
 import { JsonLd, breadcrumbSchema } from "@/lib/json-ld";
 import { allLocationLinks } from "@/lib/location-silos";
-import { buildMetadata, buildLocalTitle } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { MapPin } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: buildLocalTitle("Tampa Bay Service Areas"),
+  title: "Tampa Bay Service Areas | Handyman Pros FL",
   description:
-    `Handyman Pros FL serves Tampa from ${siteConfig.address.street}, Westchase 33626. Westchase, Carrollwood, Citrus Park, Brandon, Hillsborough, Pinellas, Pasco & all surrounding counties. Open 24/7.`,
+    "Handyman coverage from Westchase 33626 across Tampa, Carrollwood, Lutz, Wesley Chapel & Hillsborough County. Open 24/7. Call (656) 205-3185.",
   path: "/service-areas",
   keywords: ["handyman near me Tampa", "handyman Westchase 33626", "Tampa Bay service areas", "Hillsborough County handyman"],
 });
@@ -121,6 +122,7 @@ export default function ServiceAreasPage() {
           </div>
         </div>
       </section>
+      <RelatedContent headingAreas="Neighborhood landing pages" />
       <CTASection />
     </>
   );

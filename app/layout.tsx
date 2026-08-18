@@ -2,19 +2,21 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { MobileCallBar } from "@/components/mobile-call-bar";
 import { AnimatedBackground } from "@/components/animated-background";
-import { JsonLd, localBusinessSchema, websiteSchema } from "@/lib/json-ld";
+import { JsonLd, localBusinessSchema, websiteSchema, siteNavigationSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
-import { tampaLocalKeywords, formatFullAddress } from "@/lib/local-seo";
+import { tampaLocalKeywords } from "@/lib/local-seo";
+import { homeMetadataDescription, homeMetadataTitle } from "@/lib/seo";
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.shortName} | Fast Affordable Handyman in Tampa, FL`,
-    template: `%s | ${siteConfig.shortName}`,
+    default: homeMetadataTitle,
+    template: `%s`,
   },
-  description: siteConfig.description,
+  description: homeMetadataDescription,
   keywords: [...siteConfig.keywords, ...tampaLocalKeywords].join(", "),
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -24,26 +26,26 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  alternates: {
-    canonical: siteConfig.url,
-  },
-  other: {
-    "business:contact_data:formatted_address": formatFullAddress(),
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.shortName} | Fast Affordable Handyman in Tampa, FL`,
-    description: siteConfig.description,
+    title: homeMetadataTitle,
+    description: homeMetadataDescription,
+    phoneNumbers: [siteConfig.phoneE164],
+    emails: [siteConfig.email],
     images: [{ url: "/images/hero-handyman.png", width: 1280, height: 832, alt: siteConfig.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.shortName,
-    description: siteConfig.description,
+    title: homeMetadataTitle,
+    description: homeMetadataDescription,
     images: ["/images/hero-handyman.png"],
+  },
+  other: {
+    "og:phone_number": siteConfig.phoneE164,
+    "og:email": siteConfig.email,
   },
   robots: {
     index: true,
@@ -66,6 +68,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: siteConfig.themeColor,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -76,13 +79,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="apple-touch-icon" href="/favicon.svg" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt" />
-        <JsonLd data={[localBusinessSchema(), websiteSchema()]} />
+        <JsonLd data={[localBusinessSchema(), websiteSchema(), siteNavigationSchema()]} />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `html{scroll-behavior:smooth}body{margin:0;background:#faf6f0;color:#0b2a33;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}.btn-accent,.btn-primary,.btn-secondary{min-height:48px}`,
+          }}
+        />
       </head>
       <body>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <AnimatedBackground />
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <MobileCallBar />
         <Analytics />
       </body>
     </html>

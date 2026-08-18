@@ -4,9 +4,11 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { FAQSection } from "@/components/faq-section";
+import { RelatedContent } from "@/components/related-content";
+import { EntityFacts } from "@/components/entity-facts";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema, speakableSchema } from "@/lib/json-ld";
 import { drywallTampaFaqs } from "@/lib/local-faqs";
-import { buildMetadata, buildLocalTitle } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { siteImages } from "@/lib/images";
 import { CheckCircle, Phone } from "lucide-react";
@@ -15,9 +17,9 @@ const pagePath = "/services/drywall-repair-tampa";
 const pageUrl = `${siteConfig.url}${pagePath}`;
 
 export const metadata: Metadata = buildMetadata({
-  title: buildLocalTitle("Drywall Patch & Wall Repair Contractor"),
+  title: "Drywall Repair Tampa, FL | Same-Day Patch | Handyman Pros FL",
   description:
-    "Need a drywall patch Tampa homeowners trust? Handyman Pros FL handles ceiling texture repair and wall repair contractor services across Westchase, Carrollwood & Tampa Bay.",
+    "Drywall patch & ceiling texture repair in Tampa, Westchase & Carrollwood. Licensed wall repair, 24/7. Call (656) 205-3185.",
   path: pagePath,
   keywords: [
     "drywall patch Tampa",
@@ -62,18 +64,21 @@ export default function DrywallRepairTampaPage() {
               Drywall · Tampa Bay
             </p>
             <h1 className="mb-4 text-4xl font-bold">Drywall Repair in Tampa, FL</h1>
-            <p className="service-definition mb-8 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">
-              From a clean drywall patch Tampa residents can barely see, to full ceiling texture repair, Handyman Pros FL is the wall repair contractor neighborhoods rely on.
+            <p className="service-definition entity-definition mb-8 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">
+              Handyman Pros FL is a licensed and insured mobile handyman provider based in Westchase, Tampa, FL offering 24/7 emergency repairs, drywall patching, painting, and fence contracting. From a clean drywall patch Tampa residents can barely see, to full ceiling texture repair, we are the wall repair contractor neighborhoods rely on.
             </p>
 
             <div className="relative mb-10 aspect-[16/9] overflow-hidden rounded-2xl">
               <Image
                 src={siteImages.drywallRepair.src}
                 alt={siteImages.drywallRepair.alt}
-                fill
+                width={1280}
+                height={720}
                 sizes="(max-width: 768px) 100vw, 768px"
-                className="object-cover"
+                className="h-full w-full object-cover"
                 priority
+                fetchPriority="high"
+                loading="eager"
               />
             </div>
 
@@ -138,19 +143,21 @@ export default function DrywallRepairTampaPage() {
             </ul>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent inline-flex items-center justify-center gap-2">
+              <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent inline-flex items-center justify-center gap-2" aria-label="Call Handyman Pros Florida Now">
                 <Phone className="h-4 w-4" />
-                Call {siteConfig.phone}
+                Call Now {siteConfig.phone}
               </a>
               <Link href="/services/handyman/drywall-repair" className="btn-secondary inline-flex items-center justify-center">
                 Related Drywall Services
               </Link>
             </div>
+            <EntityFacts compact city="Tampa, FL" />
           </div>
         </div>
       </article>
 
       <FAQSection faqs={drywallTampaFaqs} title="Drywall Repair Tampa FAQ" />
+      <RelatedContent category="handyman" slug="drywall-repair" />
       <CTASection
         title="Need a Drywall Patch in Tampa?"
         description="Call our wall repair contractor team for drywall patch Tampa jobs and ceiling texture repair — free estimates, open 24/7."

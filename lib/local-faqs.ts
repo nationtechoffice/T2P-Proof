@@ -55,9 +55,14 @@ export const carrollwoodFaqs = [
 
 export const drywallTampaFaqs = [
   {
-    question: "How much does a drywall patch in Tampa usually cost?",
+    question: "How much does a drywall repair cost in Tampa?",
     answer:
-      "Small drywall patch Tampa jobs often start as flat-rate repairs, while larger holes, water damage, or ceiling texture repair are quoted after we see the wall. Estimates are free — call for pricing on your specific repair.",
+      "Small drywall patch Tampa jobs often start as flat-rate repairs, while larger holes, water damage, or ceiling texture repair are quoted after we see the wall. Estimates are free — call (656) 205-3185 for pricing on your specific repair.",
+  },
+  {
+    question: "Do you offer same-day drywall repair in Westchase?",
+    answer:
+      "Yes. Because Handyman Pros FL is based in Westchase, same-day drywall patches are often available across ZIP 33626, Carrollwood, and greater Tampa when the schedule allows. We are open 24/7.",
   },
   {
     question: "Can you match ceiling texture repair to my existing finish?",

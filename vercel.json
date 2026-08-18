@@ -8,14 +8,18 @@
       "headers": [
         { "key": "X-Robots-Tag", "value": "index, follow" }
       ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
     }
   ],
-  "redirects": [
+  "crons": [
     {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.handymanprosflorida.com" }],
-      "destination": "https://handymanprosflorida.com/:path*",
-      "permanent": true
+      "path": "/api/indexnow",
+      "schedule": "0 8 * * *"
     }
   ]
 }

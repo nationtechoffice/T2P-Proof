@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { buildMetadata, buildLocalTitle } from "@/lib/seo";
-import { siteConfig } from "@/lib/site-config";
-import { formatFullAddress } from "@/lib/local-seo";
+import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: buildLocalTitle("Contact Us — Free Estimate"),
+  title: "Call Handyman Pros FL | Tampa 24/7 Estimates",
   description:
-    `Contact Handyman Pros FL at ${formatFullAddress()}, Tampa. Open 24/7. Call ${siteConfig.phone} for handyman, painting & fence services in Westchase, Carrollwood & Hillsborough County.`,
+    "Contact Handyman Pros FL in Westchase, Tampa. Open 24/7 for handyman, painting & fence estimates. Call (656) 205-3185 now.",
   path: "/contact",
   keywords: ["contact handyman Tampa", "handyman Westchase", "free estimate Tampa", "handyman 33626"],
 });

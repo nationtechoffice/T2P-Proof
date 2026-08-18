@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
+import { RelatedContent } from "@/components/related-content";
 import { blogPosts } from "@/lib/blog-posts";
-import { buildMetadata, buildPageTitle } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import { formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = buildMetadata({
-  title: buildPageTitle("Home Improvement Blog & Tips"),
+  title: "Tampa Home Repair Tips | Handyman Pros FL",
   description:
-    "Expert home improvement tips, guides, and advice from Handyman Pros Florida. Learn about handyman services, painting, fencing, and Florida home maintenance.",
+    "Florida home maintenance guides from Handyman Pros FL: drywall, painting, fencing, and hurricane prep for Tampa Bay homeowners.",
   path: "/blog",
   keywords: ["home improvement blog", "Florida home tips", "handyman advice", "painting guides"],
 });
@@ -54,6 +55,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+      <RelatedContent />
       <CTASection />
     </>
   );

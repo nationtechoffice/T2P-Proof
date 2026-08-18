@@ -18,7 +18,7 @@ export function BusinessNAP({ className = "" }: { className?: string }) {
         <meta itemProp="postalCode" content={siteConfig.address.zip} />
         <meta itemProp="addressCountry" content={siteConfig.address.country} />
       </div>
-      <a href={`tel:${siteConfig.phoneTel}`} className="flex items-center gap-2 hover:text-[hsl(var(--accent))]">
+      <a href={`tel:${siteConfig.phoneTel}`} className="flex min-h-12 items-center gap-2 hover:text-[hsl(var(--accent))]" aria-label="Call Handyman Pros Florida Now">
         <Phone className="h-4 w-4 shrink-0" />
         <span>{siteConfig.phone}</span>
       </a>
