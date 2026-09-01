@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "./site-config";
 import { formatFullAddress } from "./local-seo";
-import { tampaLocalKeywords } from "./local-seo";
 
 export interface SEOProps {
   title: string;
@@ -15,6 +14,25 @@ export interface SEOProps {
   noindex?: boolean;
 }
 
+const BRAND = siteConfig.shortName;
+const TITLE_LIMIT = 60;
+
+function brandedTitle(title: string): string {
+  const alreadyBranded =
+    title.includes(BRAND) || title.includes(siteConfig.name) || title.includes(siteConfig.legalName);
+  const full = alreadyBranded ? title : `${title} | ${BRAND}`;
+  if (full.length <= TITLE_LIMIT) return full;
+  if (alreadyBranded && title.length <= TITLE_LIMIT) return title;
+  const withoutBrand = title.replace(` | ${BRAND}`, "").trim();
+  const shortened = `${withoutBrand} | ${BRAND}`;
+  return shortened.length <= TITLE_LIMIT ? shortened : withoutBrand.slice(0, TITLE_LIMIT);
+}
+
+export function canonicalUrl(path: string): string {
+  if (!path || path === "/") return siteConfig.url;
+  return `${siteConfig.url}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
 export function buildMetadata({
   title,
   description,
@@ -26,21 +44,24 @@ export function buildMetadata({
   modifiedTime,
   noindex = false,
 }: SEOProps): Metadata {
-  const url = `${siteConfig.url}${path}`;
+  const url = canonicalUrl(path);
   const image = ogImage || `${siteConfig.url}/images/hero-handyman.png`;
-  const allKeywords = [...siteConfig.keywords, ...tampaLocalKeywords, ...keywords].join(", ");
+  const fullTitle = brandedTitle(title);
   const fullAddress = formatFullAddress();
 
   return {
-    title,
+    title: { absolute: fullTitle },
     description,
-    keywords: allKeywords,
+    keywords: keywords.slice(0, 12),
     authors: [{ name: siteConfig.name, url: siteConfig.url }],
     creator: siteConfig.name,
     publisher: siteConfig.name,
     metadataBase: new URL(siteConfig.url),
     alternates: {
       canonical: url,
+      types: {
+        "text/plain": `${siteConfig.url}/llms.txt`,
+      },
     },
     robots: noindex
       ? { index: false, follow: false }
@@ -59,7 +80,7 @@ export function buildMetadata({
       type: ogType,
       locale: "en_US",
       url,
-      title,
+      title: fullTitle,
       description,
       siteName: siteConfig.legalName,
       images: [
@@ -67,7 +88,7 @@ export function buildMetadata({
           url: image,
           width: 1280,
           height: 832,
-          alt: title,
+          alt: fullTitle,
         },
       ],
       ...(publishedTime && { publishedTime }),
@@ -75,13 +96,13 @@ export function buildMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: fullTitle,
       description,
       images: [image],
     },
     other: {
       "geo.region": "US-FL",
-      "geo.placename": `${siteConfig.address.city}, ${siteConfig.address.neighborhood}`,
+      "geo.placename": `${siteConfig.address.neighborhood}, ${siteConfig.address.city}`,
       "geo.position": `${siteConfig.geo.latitude};${siteConfig.geo.longitude}`,
       ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
       "business:contact_data:street_address": `${siteConfig.address.street}, ${siteConfig.address.street2}`,
@@ -97,10 +118,15 @@ export function buildMetadata({
   };
 }
 
+/** Page-only title. Brand is appended once in buildMetadata. */
 export function buildPageTitle(pageTitle: string): string {
-  return `${pageTitle} | ${siteConfig.shortName}`;
+  return pageTitle;
 }
 
 export function buildLocalTitle(pageTitle: string): string {
-  return `${pageTitle} | Tampa, FL | ${siteConfig.shortName}`;
+  return pageTitle;
+}
+
+export function locationMetaTitle(city: string): string {
+  return `Handyman ${city} FL`;
 }

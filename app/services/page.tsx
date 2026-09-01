@@ -4,13 +4,13 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { allServices, categoryMeta } from "@/lib/services";
 import { JsonLd, breadcrumbSchema, servicesItemListSchema } from "@/lib/json-ld";
-import { buildMetadata, buildLocalTitle } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import type { ServiceCategory } from "@/lib/site-config";
 import { Wrench, Paintbrush, Fence } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: buildLocalTitle("All Home Services in Tampa Bay"),
+  title: "All Home Services in Tampa",
   description:
     "60+ handyman, painting & fence services in Tampa, Westchase, Carrollwood, Hillsborough County & surrounding areas. Licensed, insured & open 24/7. Free estimates.",
   path: "/services",

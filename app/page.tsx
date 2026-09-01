@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/hero";
 import { ServicesGrid } from "@/components/services-grid";
 import { PhotoGallery } from "@/components/photo-gallery";
@@ -5,12 +6,28 @@ import { GoogleReviews } from "@/components/google-reviews";
 import { Testimonials } from "@/components/testimonials";
 import { FAQSection, homeFaqs } from "@/components/faq-section";
 import { CTASection } from "@/components/cta-section";
+import { HqDispatch } from "@/components/hq-dispatch";
 import { JsonLd, faqSchema, speakableSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { allLocationLinks } from "@/lib/location-silos";
+import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog-posts";
 import { formatDate } from "@/lib/utils";
 import { CheckCircle, MapPin } from "lucide-react";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Tampa Handyman Near Me",
+  description: siteConfig.description,
+  path: "/",
+  keywords: [
+    "handyman Tampa FL",
+    "handyman Westchase",
+    "handyman 33626",
+    "handyman near me Tampa",
+    "licensed handyman Tampa Bay",
+  ],
+});
 
 export default function HomePage() {
   const recentPosts = blogPosts.slice(0, 3);
@@ -30,20 +47,20 @@ export default function HomePage() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
-                Based in Tampa
+                One Tampa location
               </p>
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
                 Your Trusted Tampa Bay Handyman
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-[hsl(var(--muted-foreground))]">
-                Handyman Pros FL is a mobile handyman service built around fast, flexible response for the Tampa area. Our tools travel with us — same-day help for urgent jobs across Hillsborough County and surrounding counties.
+                Handyman Pros FL is a single-location mobile handyman based in Westchase, Tampa. Our tools travel with us — same-day help for urgent jobs across Hillsborough County and surrounding counties. We do not operate extra branches.
               </p>
               <ul className="space-y-3">
                 {[
                   "Licensed, bonded, and insured local Tampa experts",
                   "Honest, upfront pricing with no surprise fees",
-                  "Mobile team with tools on board",
-                  "60+ specialized services under one roof",
+                  "Mobile team dispatched from Westchase HQ",
+                  "60+ specialized services from one crew",
                   "Serving Tampa & all surrounding counties",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
@@ -56,7 +73,7 @@ export default function HomePage() {
             <div className="glass-panel">
               <h3 className="mb-2 text-xl font-bold">Counties We Serve</h3>
               <p className="mb-4 text-sm text-[hsl(var(--muted-foreground))]">
-                Tampa and all surrounding counties across the Bay area.
+                Coverage from our only Tampa headquarters — we come to you.
               </p>
               <div className="mb-6 flex flex-wrap gap-2">
                 {siteConfig.counties.map((county) => (
@@ -67,17 +84,38 @@ export default function HomePage() {
               </div>
               <h3 className="mb-3 text-lg font-bold">Popular Neighborhoods</h3>
               <div className="flex flex-wrap gap-2">
-                {siteConfig.serviceAreas.map((city) => (
-                  <span key={city} className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm shadow-sm">
-                    <MapPin className="h-3 w-3 text-[hsl(var(--accent))]" />
-                    {city}
-                  </span>
-                ))}
+                {siteConfig.serviceAreas.map((city) => {
+                  const match = allLocationLinks.find(
+                    (area) => area.label === city || (city === "Town 'n' Country" && area.label === "Town 'n' Country")
+                  );
+                  const chip = (
+                    <>
+                      <MapPin className="h-3 w-3 text-[hsl(var(--accent))]" />
+                      {city}
+                    </>
+                  );
+                  return match ? (
+                    <Link
+                      key={city}
+                      href={match.href}
+                      className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm shadow-sm hover:text-[hsl(var(--accent))]"
+                    >
+                      {chip}
+                    </Link>
+                  ) : (
+                    <span key={city} className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm shadow-sm">
+                      {chip}
+                    </span>
+                  );
+                })}
               </div>
               <Link href="/service-areas" className="btn-primary mt-6 inline-block">
                 View All Service Areas
               </Link>
             </div>
+          </div>
+          <div className="mt-12">
+            <HqDispatch />
           </div>
         </div>
       </section>

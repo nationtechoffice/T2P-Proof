@@ -23,7 +23,7 @@ export default function ContactPage() {
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold">Contact Handyman Pros FL — Tampa</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
-              Based at {fullAddress}. Call anytime — we&apos;re open 24/7 — or fill out the form for a free estimate.
+              Based at {fullAddress}. That is our only Tampa location. Call anytime — we&apos;re open 24/7 — or fill out the form for a free estimate. City pages on this site are service areas we drive to, not extra branches.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export default function ContactPage() {
                       {siteConfig.address.street}, {siteConfig.address.street2}<br />
                       {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}
                     </address>
-                    <p className="mt-1 text-xs text-[hsl(var(--accent))]">Westchase / Tampa Bay area</p>
+                    <p className="mt-1 text-xs text-[hsl(var(--accent))]">Only location · Westchase / Tampa Bay</p>
                   </div>
                 </a>
                 <div className="flex items-start gap-4 rounded-xl border border-[hsl(var(--border))] bg-white/80 p-4">

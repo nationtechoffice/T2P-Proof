@@ -3,10 +3,11 @@ import { Fragment, type ReactNode } from "react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { GoogleReviews } from "@/components/google-reviews";
-import { JsonLd, breadcrumbSchema, speakableSchema } from "@/lib/json-ld";
-import type { LocationSilo } from "@/lib/location-silos";
+import { JsonLd, breadcrumbSchema, speakableSchema, serviceSchema } from "@/lib/json-ld";
+import { allLocationLinks, type LocationSilo } from "@/lib/location-silos";
 import { siteConfig } from "@/lib/site-config";
 import { CheckCircle, MapPin, Phone } from "lucide-react";
+import { HqDispatch } from "@/components/hq-dispatch";
 
 function withClickToCall(text: string): ReactNode {
   const parts = text.split(siteConfig.phone);
@@ -39,6 +40,13 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
             { name: "Service Areas", url: `${siteConfig.url}/service-areas` },
             { name: `Handyman ${location.city} FL`, url: pageUrl },
           ]),
+          serviceSchema({
+            name: `Handyman service`,
+            description: location.intro,
+            url: pageUrl,
+            category: "Handyman",
+            areaName: location.displayName,
+          }),
           speakableSchema(pageUrl, [".location-intro", ".location-body"]),
         ]}
       />
@@ -79,6 +87,10 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
               ))}
             </div>
 
+            <div className="mt-8">
+              <HqDispatch area={location.displayName} />
+            </div>
+
             <div className="mt-10 rounded-2xl border border-[hsl(var(--border))] bg-white/70 p-6">
               <h2 className="mb-4 text-2xl font-bold">
                 Popular {location.city} Handyman Services
@@ -104,15 +116,34 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
               anytime — Handyman Pros FL is open 24/7 for {location.city} estimates.
             </p>
 
-            {location.relatedPaths && location.relatedPaths.length > 0 && (
-              <div className="mt-6 flex flex-wrap gap-3">
-                {location.relatedPaths.map((link) => (
-                  <Link key={link.href} href={link.href} className="btn-secondary !py-2 !text-xs">
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            )}
+            <div className="mt-6 flex flex-wrap gap-3">
+              {(location.relatedPaths || []).map((link) => (
+                <Link key={link.href} href={link.href} className="btn-secondary !py-2 !text-xs">
+                  {link.label}
+                </Link>
+              ))}
+              <Link href="/services/handyman" className="btn-secondary !py-2 !text-xs">
+                Handyman Services
+              </Link>
+              <Link href="/handyman-westchase-fl" className="btn-secondary !py-2 !text-xs">
+                Westchase HQ
+              </Link>
+            </div>
+            <nav className="mt-8" aria-label="Other Tampa Bay service areas">
+              <p className="mb-3 text-sm font-semibold">Other areas we cover from Tampa HQ</p>
+              <ul className="flex flex-wrap gap-2 text-sm">
+                {allLocationLinks
+                  .filter((area) => area.href !== location.path)
+                  .slice(0, 8)
+                  .map((area) => (
+                    <li key={area.href}>
+                      <Link href={area.href} className="text-[hsl(var(--primary))] hover:underline">
+                        {area.label}
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+            </nav>
           </div>
 
           <section className="mx-auto mt-16 max-w-4xl" aria-labelledby={`${location.slug}-map-heading`}>
@@ -123,7 +154,8 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
               </h2>
             </div>
             <p className="mb-4 text-sm text-[hsl(var(--muted-foreground))]">
-              Explore the {location.displayName} area we serve for local handyman visits.
+              Explore the {location.displayName} area we serve from our single Tampa / Westchase headquarters.
+              This is a service area, not a separate branch.
             </p>
             <div className="overflow-hidden rounded-2xl border border-[hsl(var(--border))] bg-[hsl(var(--muted))] shadow-sm">
               <iframe

@@ -1,9 +1,13 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 
-const disallowApi = ["/api/", "/_next/"];
+/**
+ * Do not block /_next/ — Next.js CSS/JS live under /_next/static/.
+ * Blocking those resources is the Semrush "blocked internal resources"
+ * warning and stops crawlers from rendering pages.
+ */
+const disallow = ["/api/"];
 
-/** Allow major search + AI answer-engine crawlers to index public pages. */
 const aiUserAgents = [
   "GPTBot",
   "OAI-SearchBot",
@@ -15,6 +19,9 @@ const aiUserAgents = [
   "Applebot-Extended",
   "Bytespider",
   "meta-externalagent",
+  "CCBot",
+  "Amazonbot",
+  "YouBot",
 ];
 
 export default function robots(): MetadataRoute.Robots {
@@ -22,23 +29,23 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
-        allow: ["/", "/llms.txt"],
-        disallow: disallowApi,
+        allow: ["/", "/llms.txt", "/llms-full.txt", "/sitemap.xml", "/_next/static/"],
+        disallow,
       },
       {
         userAgent: "Googlebot",
         allow: "/",
-        disallow: ["/api/"],
+        disallow,
       },
       {
         userAgent: "Bingbot",
         allow: "/",
-        disallow: ["/api/"],
+        disallow,
       },
       ...aiUserAgents.map((userAgent) => ({
         userAgent,
-        allow: ["/", "/llms.txt", "/sitemap.xml"],
-        disallow: ["/api/"],
+        allow: ["/", "/llms.txt", "/llms-full.txt", "/sitemap.xml"],
+        disallow,
       })),
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,

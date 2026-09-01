@@ -5,17 +5,16 @@ import { Footer } from "@/components/footer";
 import { AnimatedBackground } from "@/components/animated-background";
 import { JsonLd, localBusinessSchema, websiteSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
-import { tampaLocalKeywords, formatFullAddress } from "@/lib/local-seo";
+import { formatFullAddress } from "@/lib/local-seo";
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.shortName} | Fast Affordable Handyman in Tampa, FL`,
-    template: `%s | ${siteConfig.shortName}`,
+    default: "Tampa Handyman Near Me | Handyman Pros FL",
+    template: "%s | Handyman Pros FL",
   },
   description: siteConfig.description,
-  keywords: [...siteConfig.keywords, ...tampaLocalKeywords].join(", "),
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
@@ -26,6 +25,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteConfig.url,
+    types: {
+      "text/plain": `${siteConfig.url}/llms.txt`,
+    },
   },
   other: {
     "business:contact_data:formatted_address": formatFullAddress(),
@@ -34,14 +36,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteConfig.url,
-    siteName: siteConfig.name,
-    title: `${siteConfig.shortName} | Fast Affordable Handyman in Tampa, FL`,
+    siteName: siteConfig.legalName,
+    title: "Tampa Handyman Near Me | Handyman Pros FL",
     description: siteConfig.description,
     images: [{ url: "/images/hero-handyman.png", width: 1280, height: 832, alt: siteConfig.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.shortName,
+    title: "Tampa Handyman Near Me | Handyman Pros FL",
     description: siteConfig.description,
     images: ["/images/hero-handyman.png"],
   },
@@ -55,9 +57,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "google-site-verification-placeholder",
   },
   category: "home services",
 };
@@ -76,6 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="apple-touch-icon" href="/favicon.svg" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMs full context" />
         <JsonLd data={[localBusinessSchema(), websiteSchema()]} />
       </head>
       <body>

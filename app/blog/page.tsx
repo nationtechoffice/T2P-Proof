@@ -3,11 +3,11 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { blogPosts } from "@/lib/blog-posts";
-import { buildMetadata, buildPageTitle } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import { formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = buildMetadata({
-  title: buildPageTitle("Home Improvement Blog & Tips"),
+  title: "Tampa Home Improvement Blog",
   description:
     "Expert home improvement tips, guides, and advice from Handyman Pros Florida. Learn about handyman services, painting, fencing, and Florida home maintenance.",
   path: "/blog",

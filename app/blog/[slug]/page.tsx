@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { blogPosts, getAllBlogSlugs, getBlogPost } from "@/lib/blog-posts";
-import { buildMetadata, buildPageTitle } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import { JsonLd, breadcrumbSchema, articleSchema, speakableSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import { formatDate } from "@/lib/utils";
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getBlogPost(slug);
   if (!post) return {};
   return buildMetadata({
-    title: buildPageTitle(post.title),
+    title: post.title,
     description: post.description,
     path: `/blog/${slug}`,
     keywords: post.tags,

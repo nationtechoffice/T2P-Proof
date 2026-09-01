@@ -15,7 +15,8 @@ export function getGoogleMapsUrl(): string {
 }
 
 export function getLocalPageTitle(serviceName: string): string {
-  return `${serviceName} in Tampa, FL`;
+  const withCity = `${serviceName} Tampa`;
+  return withCity.length <= 42 ? withCity : serviceName;
 }
 
 export function getLocalPageDescription(shortDescription: string, serviceName: string): string {

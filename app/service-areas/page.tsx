@@ -4,12 +4,13 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { JsonLd, breadcrumbSchema } from "@/lib/json-ld";
 import { allLocationLinks } from "@/lib/location-silos";
-import { buildMetadata, buildLocalTitle } from "@/lib/seo";
+import { HqDispatch } from "@/components/hq-dispatch";
+import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { MapPin } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: buildLocalTitle("Tampa Bay Service Areas"),
+  title: "Tampa Bay Service Areas",
   description:
     `Handyman Pros FL serves Tampa from ${siteConfig.address.street}, Westchase 33626. Westchase, Carrollwood, Citrus Park, Brandon, Hillsborough, Pinellas, Pasco & all surrounding counties. Open 24/7.`,
   path: "/service-areas",
@@ -34,7 +35,7 @@ export default function ServiceAreasPage() {
             </p>
             <h1 className="mb-4 text-4xl font-bold">Tampa & Surrounding Counties</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
-              Handyman Pros FL is based in Tampa and serves homeowners across the entire Bay area. Don&apos;t see your neighborhood? Call us — we likely serve your area.
+              Handyman Pros FL has one headquarters in Westchase, Tampa. City pages below are service areas we drive to — not extra branches. Don&apos;t see your neighborhood? Call us — we likely serve your area.
             </p>
           </div>
 
@@ -64,8 +65,12 @@ export default function ServiceAreasPage() {
               <a href={`tel:${siteConfig.phoneTel}`} className="font-semibold text-[hsl(var(--accent))] hover:underline">
                 {siteConfig.phone}
               </a>{" "}
-              for service in any Tampa Bay neighborhood.
+              for service in any Tampa Bay neighborhood. We dispatch from one Westchase headquarters.
             </p>
+          </div>
+
+          <div className="mb-12">
+            <HqDispatch />
           </div>
 
           <div className="mb-12">

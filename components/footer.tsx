@@ -5,6 +5,18 @@ import { BusinessNAP } from "@/components/business-nap";
 import { Logo } from "@/components/logo";
 import { MapPin } from "lucide-react";
 
+const footerServiceLinks = [
+  { href: "/services/handyman", label: "Handyman Tampa" },
+  { href: "/services/drywall-repair-tampa", label: "Drywall Repair Tampa" },
+  { href: "/services/handyman/furniture-assembly", label: "Furniture Assembly" },
+  { href: "/services/handyman/tv-mounting", label: "TV Mounting" },
+  { href: "/services/handyman/fan-installation", label: "Fan Installation" },
+  { href: "/services/handyman/general-repairs", label: "General Repairs" },
+  { href: "/services/painting", label: "Painting Tampa" },
+  { href: "/services/fence", label: "Fence Contractor Tampa" },
+  { href: "/services", label: "All Services" },
+];
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -17,7 +29,7 @@ export function Footer() {
               <Logo variant="light" />
             </div>
             <p className="mb-4 text-sm leading-relaxed">
-              Based in Westchase, Tampa. Licensed mobile handyman serving Hillsborough, Pinellas, Pasco &amp; surrounding counties — open 24/7.
+              One Tampa location in Westchase. Licensed mobile handyman serving Hillsborough, Pinellas, Pasco &amp; surrounding counties — open 24/7. We come to you.
             </p>
             <BusinessNAP />
           </div>
@@ -25,11 +37,13 @@ export function Footer() {
           <div>
             <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services/handyman" className="hover:text-[hsl(var(--accent))]">Handyman Tampa</Link></li>
-              <li><Link href="/services/drywall-repair-tampa" className="hover:text-[hsl(var(--accent))]">Drywall Repair Tampa</Link></li>
-              <li><Link href="/services/painting" className="hover:text-[hsl(var(--accent))]">Painting Tampa</Link></li>
-              <li><Link href="/services/fence" className="hover:text-[hsl(var(--accent))]">Fence Contractor Tampa</Link></li>
-              <li><Link href="/services" className="hover:text-[hsl(var(--accent))]">All Services</Link></li>
+              {footerServiceLinks.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="hover:text-[hsl(var(--accent))]">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
             <h3 className="mb-4 mt-8 text-sm font-bold uppercase tracking-wider text-white">Company</h3>
             <ul className="space-y-2 text-sm">
@@ -37,6 +51,7 @@ export function Footer() {
               <li><Link href="/blog" className="hover:text-[hsl(var(--accent))]">Blog &amp; Tips</Link></li>
               <li><Link href="/contact" className="hover:text-[hsl(var(--accent))]">Contact Us</Link></li>
               <li><Link href="/service-areas" className="hover:text-[hsl(var(--accent))]">All Service Areas</Link></li>
+              <li><Link href="/handyman-westchase-fl" className="hover:text-[hsl(var(--accent))]">Westchase HQ</Link></li>
             </ul>
           </div>
 
@@ -61,6 +76,9 @@ export function Footer() {
           <h3 className="mb-5 text-center text-sm font-bold uppercase tracking-wider text-white">
             Our Florida Service Areas
           </h3>
+          <p className="mx-auto mb-5 max-w-2xl text-center text-xs text-gray-400">
+            Coverage from our only Tampa / Westchase headquarters — not separate branches.
+          </p>
           <nav aria-label="Florida service area pages">
             <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
               {allLocationLinks.map((area) => (
@@ -80,7 +98,7 @@ export function Footer() {
         <div className="mt-12 border-t border-gray-700 pt-8 text-center text-sm">
           <p>&copy; {currentYear} {siteConfig.legalName}. All rights reserved.</p>
           <p className="mt-2 text-xs text-gray-500">
-            {siteConfig.address.street}, {siteConfig.address.street2}, {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip} | Licensed &amp; Insured | Open 24/7
+            {siteConfig.address.street}, {siteConfig.address.street2}, {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip} | Licensed &amp; Insured | Open 24/7 | Single Tampa location
           </p>
         </div>
       </div>

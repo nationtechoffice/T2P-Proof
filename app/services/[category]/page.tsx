@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { categoryMeta, getServicesByCategory } from "@/lib/services";
-import { buildMetadata, buildLocalTitle } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import type { ServiceCategory } from "@/lib/site-config";
 import { JsonLd, breadcrumbSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   if (!validCategories.includes(category as ServiceCategory)) return {};
   const meta = categoryMeta[category as ServiceCategory];
   return buildMetadata({
-    title: buildLocalTitle(meta.title),
+    title: meta.title,
     description: meta.description,
     path: `/services/${category}`,
     keywords: [meta.name, `${meta.name} Tampa`, `${meta.name} Westchase`, `${meta.name} Hillsborough County`],
@@ -50,6 +50,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold">{meta.title}</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">{meta.description}</p>
+            <p className="mt-4 text-sm text-[hsl(var(--muted-foreground))]">
+              Every {meta.name.toLowerCase()} job is dispatched from our single Westchase, Tampa headquarters.
+            </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (

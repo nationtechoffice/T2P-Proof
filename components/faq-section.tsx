@@ -23,7 +23,11 @@ const homeFaqs = [
   },
   {
     question: "Where is Handyman Pros FL located?",
-    answer: `We are based at ${siteConfig.address.street}, ${siteConfig.address.street2}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip} in the Westchase area of Tampa. We are a mobile service covering Tampa and all surrounding counties.`,
+    answer: `We are based at ${siteConfig.address.street}, ${siteConfig.address.street2}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip} in the Westchase area of Tampa. That is our only location. We are a mobile service covering Tampa and all surrounding counties — we come to you.`,
+  },
+  {
+    question: "Do you have more than one branch?",
+    answer: `No. Handyman Pros FL is a single-location company. Every job is dispatched from our Tampa / Westchase headquarters. City pages on this site are service areas, not extra offices.`,
   },
   {
     question: "What payment methods do you accept?",

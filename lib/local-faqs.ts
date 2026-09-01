@@ -51,6 +51,11 @@ export const carrollwoodFaqs = [
     question: "Are estimates free for Carrollwood handyman work?",
     answer: `Yes. Estimates are free and no-obligation. Call ${siteConfig.phone} 24/7 or request service through our contact page.`,
   },
+  {
+    question: "Do you have a Carrollwood branch office?",
+    answer:
+      "No. Handyman Pros FL has one Tampa headquarters in Westchase. Carrollwood is a service area we drive to — not a separate storefront.",
+  },
 ];
 
 export const drywallTampaFaqs = [

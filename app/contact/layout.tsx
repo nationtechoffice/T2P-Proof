@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { buildMetadata, buildLocalTitle } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { formatFullAddress } from "@/lib/local-seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: buildLocalTitle("Contact Us — Free Estimate"),
+  title: "Contact Tampa Handyman",
   description:
     `Contact Handyman Pros FL at ${formatFullAddress()}, Tampa. Open 24/7. Call ${siteConfig.phone} for handyman, painting & fence services in Westchase, Carrollwood & Hillsborough County.`,
   path: "/contact",

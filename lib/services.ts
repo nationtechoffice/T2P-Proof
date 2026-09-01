@@ -301,19 +301,19 @@ const fenceServices: Omit<Service, "category">[] = [
 export const categoryMeta: Record<ServiceCategory, { name: string; title: string; description: string; icon: string }> = {
   handyman: {
     name: "Handyman Services",
-    title: "Handyman Services in Tampa, FL & Hillsborough County",
+    title: "Handyman Services in Tampa",
     description: "Licensed handyman services in Tampa, Westchase, Carrollwood & Hillsborough County. Drywall, TV mounting, furniture assembly, repairs & more. Open 24/7.",
     icon: "wrench",
   },
   painting: {
     name: "Painting Services",
-    title: "Painting Services in Tampa, FL & Tampa Bay",
+    title: "Painting Services in Tampa",
     description: "Professional painters in Tampa, Westchase & surrounding counties. Interior, exterior, cabinet, deck & specialty painting. Free estimates — open 24/7.",
     icon: "paintbrush",
   },
   fence: {
     name: "Fence Contractor",
-    title: "Fence Installation & Repair in Tampa, FL",
+    title: "Fence Installation in Tampa",
     description: "Tampa Bay fence contractors for wood, vinyl, aluminum & chain link fencing. Privacy fences, pool fences, gates & repairs. Serving Hillsborough & Pinellas County.",
     icon: "fence",
   },
@@ -335,4 +335,15 @@ export function getService(category: ServiceCategory, slug: string): Service | u
 
 export function getAllServiceSlugs(): { category: ServiceCategory; slug: string }[] {
   return allServices.map((s) => ({ category: s.category, slug: s.slug }));
+}
+
+export function getRelatedServices(service: Service, limit = 4): Service[] {
+  const sameCategory = allServices.filter(
+    (item) => item.category === service.category && item.slug !== service.slug
+  );
+  if (sameCategory.length >= limit) return sameCategory.slice(0, limit);
+  const extras = allServices.filter(
+    (item) => item.category !== service.category && item.slug !== service.slug
+  );
+  return [...sameCategory, ...extras].slice(0, limit);
 }

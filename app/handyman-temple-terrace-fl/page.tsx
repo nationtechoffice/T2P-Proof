@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { LocationLanding } from "@/components/location-landing";
 import { getLocationSilo } from "@/lib/location-silos";
-import { buildMetadata } from "@/lib/seo";
-import { siteConfig } from "@/lib/site-config";
+import { buildMetadata, locationMetaTitle } from "@/lib/seo";
 
 const location = getLocationSilo("temple-terrace");
 
@@ -12,7 +11,7 @@ if (!location) {
 }
 
 export const metadata: Metadata = buildMetadata({
-  title: `${location.h1} | ${siteConfig.shortName}`,
+  title: locationMetaTitle(location.city),
   description: location.metaDescription,
   path: location.path,
   keywords: location.keywords,

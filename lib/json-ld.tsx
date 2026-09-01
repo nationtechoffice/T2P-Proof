@@ -15,6 +15,8 @@ export function JsonLd({ data }: JsonLdProps) {
 }
 
 export function localBusinessSchema() {
+  const hqAddress = `${siteConfig.address.street}, ${siteConfig.address.street2}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip}`;
+
   return {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
@@ -33,11 +35,13 @@ export function localBusinessSchema() {
       `${siteConfig.url}/images/logo.svg`,
       `${siteConfig.url}/images/hero-handyman.png`,
     ],
-    description: siteConfig.description,
-    telephone: siteConfig.phone,
+    description:
+      "Single-location Tampa handyman company headquartered in Westchase (ZIP 33626). Licensed technicians dispatch from 12021 Tuscany Bay Dr to homes across Tampa Bay — we do not operate additional branches.",
+    telephone: siteConfig.phoneE164,
     email: siteConfig.email,
     address: {
       "@type": "PostalAddress",
+      name: "Handyman Pros FL Tampa Headquarters",
       streetAddress: `${siteConfig.address.street}, ${siteConfig.address.street2}`,
       addressLocality: siteConfig.address.city,
       addressRegion: siteConfig.address.state,
@@ -49,8 +53,23 @@ export function localBusinessSchema() {
       latitude: siteConfig.geo.latitude,
       longitude: siteConfig.geo.longitude,
     },
-    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${siteConfig.address.street}, ${siteConfig.address.street2}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip}`)}`,
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hqAddress)}`,
+    additionalProperty: {
+      "@type": "PropertyValue",
+      name: "numberOfLocations",
+      value: "1",
+    },
     areaServed: [
+      {
+        "@type": "GeoCircle",
+        name: "Tampa Bay service radius from Westchase HQ",
+        geoMidpoint: {
+          "@type": "GeoCoordinates",
+          latitude: siteConfig.geo.latitude,
+          longitude: siteConfig.geo.longitude,
+        },
+        geoRadius: "40000",
+      },
       {
         "@type": "Place",
         name: `ZIP ${siteConfig.primaryZip}`,
@@ -160,7 +179,7 @@ export function localBusinessSchema() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: siteConfig.phone,
+      telephone: siteConfig.phoneE164,
       contactType: "customer service",
       areaServed: ["US-FL", ...schemaAreaServedCities, siteConfig.primaryZip],
       availableLanguage: ["English", "en-US"],
@@ -223,29 +242,41 @@ export function serviceSchema(service: {
   description: string;
   url: string;
   category: string;
+  areaName?: string;
 }) {
+  const areaName = service.areaName || "Tampa, FL";
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: `${service.name} in Tampa, FL`,
+    name: `${service.name} in ${areaName}`,
     description: service.description,
     url: service.url,
     provider: { "@id": `${siteConfig.url}/#organization` },
-    areaServed: [
-      { "@type": "City", name: "Tampa, FL" },
-      { "@type": "City", name: "Westchase, FL" },
-      { "@type": "City", name: "Carrollwood, FL" },
-      { "@type": "City", name: "Citrus Park, FL" },
-      { "@type": "PostalAddress", postalCode: siteConfig.primaryZip, addressRegion: "FL" },
-      { "@type": "AdministrativeArea", name: "Hillsborough County, FL" },
-      { "@type": "AdministrativeArea", name: "Pinellas County, FL" },
-      { "@type": "AdministrativeArea", name: "Pasco County, FL" },
-    ],
+    brand: { "@id": `${siteConfig.url}/#organization` },
+    areaServed: service.areaName
+      ? [{ "@type": "City", name: service.areaName }]
+      : [
+          { "@type": "City", name: "Tampa, FL" },
+          { "@type": "City", name: "Westchase, FL" },
+          { "@type": "City", name: "Carrollwood, FL" },
+          { "@type": "City", name: "Citrus Park, FL" },
+          { "@type": "PostalAddress", postalCode: siteConfig.primaryZip, addressRegion: "FL" },
+          { "@type": "AdministrativeArea", name: "Hillsborough County, FL" },
+          { "@type": "AdministrativeArea", name: "Pinellas County, FL" },
+          { "@type": "AdministrativeArea", name: "Pasco County, FL" },
+        ],
     serviceType: service.category,
+    hoursAvailable: siteConfig.hours.map((h) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: h.day,
+      opens: h.opens,
+      closes: h.closes,
+    })),
     availableChannel: {
       "@type": "ServiceChannel",
       serviceUrl: service.url,
-      servicePhone: siteConfig.phone,
+      servicePhone: siteConfig.phoneE164,
+      serviceLocation: { "@id": `${siteConfig.url}/#organization` },
     },
   };
 }

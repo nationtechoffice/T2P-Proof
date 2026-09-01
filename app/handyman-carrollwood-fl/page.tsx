@@ -4,7 +4,8 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { FAQSection } from "@/components/faq-section";
 import { GoogleReviews } from "@/components/google-reviews";
-import { JsonLd, breadcrumbSchema, faqSchema, speakableSchema } from "@/lib/json-ld";
+import { HqDispatch } from "@/components/hq-dispatch";
+import { JsonLd, breadcrumbSchema, faqSchema, speakableSchema, serviceSchema } from "@/lib/json-ld";
 import { carrollwoodFaqs } from "@/lib/local-faqs";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
@@ -14,7 +15,7 @@ const pagePath = "/handyman-carrollwood-fl";
 const pageUrl = `${siteConfig.url}${pagePath}`;
 
 export const metadata: Metadata = buildMetadata({
-  title: `Carrollwood Home Maintenance & Local Handyman Service | ${siteConfig.shortName}`,
+  title: "Carrollwood Handyman",
   description:
     "Trusted Carrollwood home maintenance and local handyman service. Ceiling fan installation, repairs, and punch-list projects across Carrollwood, FL. Call for a free estimate.",
   path: pagePath,
@@ -37,6 +38,14 @@ export default function HandymanCarrollwoodPage() {
             { name: "Handyman Carrollwood FL", url: pageUrl },
           ]),
           faqSchema(carrollwoodFaqs),
+          serviceSchema({
+            name: "Handyman service",
+            description:
+              "Carrollwood home maintenance dispatched from Handyman Pros FL's only Tampa / Westchase headquarters.",
+            url: pageUrl,
+            category: "Handyman",
+            areaName: "Carrollwood, FL",
+          }),
           speakableSchema(pageUrl, [".location-intro", ".location-body"]),
         ]}
       />
@@ -125,6 +134,9 @@ export default function HandymanCarrollwoodPage() {
               <Link href="/handyman-westchase-fl" className="btn-secondary inline-flex items-center justify-center">
                 Also Serving Westchase
               </Link>
+            </div>
+            <div className="mt-8">
+              <HqDispatch area="Carrollwood, FL" />
             </div>
           </div>
 

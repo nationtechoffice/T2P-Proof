@@ -10,6 +10,9 @@ import { Phone, Menu, X, MapPin, ChevronDown } from "lucide-react";
 const serviceLinks = [
   { href: "/services/drywall-repair-tampa", label: "Drywall Repair Tampa" },
   { href: "/services/handyman", label: "Handyman Services" },
+  { href: "/services/handyman/furniture-assembly", label: "Furniture Assembly" },
+  { href: "/services/handyman/tv-mounting", label: "TV Mounting" },
+  { href: "/services/handyman/fan-installation", label: "Fan Installation" },
   { href: "/services/painting", label: "Painting Services" },
   { href: "/services/fence", label: "Fence Contractor" },
   { href: "/services", label: "All Services" },
@@ -45,10 +48,16 @@ function DropdownMenu({
   items: { href: string; label: string }[];
   open: boolean;
 }) {
-  if (!open) return null;
   return (
-    <div className="absolute left-0 top-full z-50 min-w-[240px] pt-2">
-      <ul className="max-h-[70vh] overflow-y-auto rounded-xl border border-[hsl(var(--border))] bg-white py-2 shadow-lg">
+    <div
+      className={`absolute left-0 top-full z-50 min-w-[240px] pt-2 ${open ? "" : "lg:pointer-events-none"}`}
+    >
+      <ul
+        aria-hidden={!open}
+        className={`max-h-[70vh] overflow-y-auto rounded-xl border border-[hsl(var(--border))] bg-white py-2 shadow-lg ${
+          open ? "lg:visible lg:opacity-100" : "lg:invisible lg:opacity-0"
+        }`}
+      >
         {items.map((item) => (
           <li key={item.href}>
             <Link
@@ -74,7 +83,7 @@ export function Header() {
         <a href={`tel:${siteConfig.phoneTel}`} className="inline-flex items-center gap-2 font-medium hover:underline">
           <Phone className="h-4 w-4" />
           <MapPin className="h-3 w-3 text-[hsl(var(--accent))]" />
-          Tampa Bay — Open 24/7 — Call for Free Estimate: {siteConfig.phone}
+          One Tampa location · Open 24/7 · Call {siteConfig.phone}
         </a>
       </div>
       <div className="container-site flex h-16 items-center justify-between">

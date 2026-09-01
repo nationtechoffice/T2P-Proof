@@ -4,7 +4,7 @@
   "installCommand": "npm install",
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/((?!llms\\.txt|llms-full\\.txt|api/).*)",
       "headers": [
         { "key": "X-Robots-Tag", "value": "index, follow" }
       ]

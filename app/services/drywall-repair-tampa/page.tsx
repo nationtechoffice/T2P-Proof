@@ -6,7 +6,7 @@ import { CTASection } from "@/components/cta-section";
 import { FAQSection } from "@/components/faq-section";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema, speakableSchema } from "@/lib/json-ld";
 import { drywallTampaFaqs } from "@/lib/local-faqs";
-import { buildMetadata, buildLocalTitle } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { siteImages } from "@/lib/images";
 import { CheckCircle, Phone } from "lucide-react";
@@ -15,7 +15,7 @@ const pagePath = "/services/drywall-repair-tampa";
 const pageUrl = `${siteConfig.url}${pagePath}`;
 
 export const metadata: Metadata = buildMetadata({
-  title: buildLocalTitle("Drywall Patch & Wall Repair Contractor"),
+  title: "Drywall Repair Tampa",
   description:
     "Need a drywall patch Tampa homeowners trust? Handyman Pros FL handles ceiling texture repair and wall repair contractor services across Westchase, Carrollwood & Tampa Bay.",
   path: pagePath,
