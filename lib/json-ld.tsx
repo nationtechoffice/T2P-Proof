@@ -1,4 +1,10 @@
-import { schemaAreaServedCities } from "./location-silos";
+import {
+  schemaAreaServed,
+  schemaPhone,
+  schemaSameAs,
+  schemaServicesOffered,
+  schemaUrl,
+} from "./programmatic";
 import { siteConfig } from "./site-config";
 
 interface JsonLdProps {
@@ -19,12 +25,12 @@ export function localBusinessSchema() {
 
   return {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+    "@type": ["Handyman", "HomeAndConstructionBusiness"],
     "@id": `${siteConfig.url}/#organization`,
-    name: siteConfig.legalName,
+    name: "Handyman Pros FL",
     legalName: siteConfig.legalName,
     alternateName: [siteConfig.name, "Handyman Pros"],
-    url: siteConfig.url,
+    url: schemaUrl,
     logo: {
       "@type": "ImageObject",
       url: `${siteConfig.url}/images/logo.svg`,
@@ -37,7 +43,7 @@ export function localBusinessSchema() {
     ],
     description:
       "Single-location Tampa handyman company headquartered in Westchase (ZIP 33626). Licensed technicians dispatch from 12021 Tuscany Bay Dr to homes across Tampa Bay — we do not operate additional branches.",
-    telephone: siteConfig.phoneE164,
+    telephone: schemaPhone,
     email: siteConfig.email,
     address: {
       "@type": "PostalAddress",
@@ -59,38 +65,10 @@ export function localBusinessSchema() {
       name: "numberOfLocations",
       value: "1",
     },
-    areaServed: [
-      {
-        "@type": "GeoCircle",
-        name: "Tampa Bay service radius from Westchase HQ",
-        geoMidpoint: {
-          "@type": "GeoCoordinates",
-          latitude: siteConfig.geo.latitude,
-          longitude: siteConfig.geo.longitude,
-        },
-        geoRadius: "40000",
-      },
-      {
-        "@type": "Place",
-        name: `ZIP ${siteConfig.primaryZip}`,
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: `${siteConfig.address.street}, ${siteConfig.address.street2}`,
-          addressLocality: siteConfig.address.city,
-          addressRegion: siteConfig.address.state,
-          postalCode: siteConfig.primaryZip,
-          addressCountry: "US",
-        },
-      },
-      ...schemaAreaServedCities.map((city) => ({
-        "@type": "City",
-        name: `${city}, FL`,
-      })),
-      ...siteConfig.counties.map((county) => ({
-        "@type": "AdministrativeArea",
-        name: `${county}, FL`,
-      })),
-    ],
+    areaServed: schemaAreaServed.map((name) => ({
+      "@type": "City",
+      name,
+    })),
     openingHoursSpecification: siteConfig.hours.map((h) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: h.day,
@@ -99,25 +77,11 @@ export function localBusinessSchema() {
     })),
     openingHours: "Mo-Su 00:00-23:59",
     priceRange: "$$",
+    serviceType: [...schemaServicesOffered],
     paymentAccepted: "Cash, Credit Card, Check",
     currenciesAccepted: "USD",
-    sameAs: Object.values(siteConfig.social),
-    knowsAbout: [
-      "Handyman Services",
-      "Home Repair",
-      "Interior Painting",
-      "Exterior Painting",
-      "Fence Installation",
-      "Fence Repair",
-      "Drywall Repair",
-      "Drywall Patch Tampa",
-      "Ceiling Texture Repair",
-      "Furniture Assembly",
-      "Westchase Home Repairs",
-      "Carrollwood Home Maintenance",
-      "Ceiling Fan Installation",
-      "Fixture Installation",
-    ],
+    sameAs: [...schemaSameAs],
+    knowsAbout: [...schemaServicesOffered],
     slogan: siteConfig.tagline,
     foundingLocation: {
       "@type": "Place",
@@ -126,62 +90,21 @@ export function localBusinessSchema() {
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Tampa Bay Home Services",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Handyman Services in Tampa",
-            url: `${siteConfig.url}/services/handyman`,
-          },
+      itemListElement: schemaServicesOffered.map((name, index) => ({
+        "@type": "Offer",
+        position: index + 1,
+        itemOffered: {
+          "@type": "Service",
+          name,
+          areaServed: schemaAreaServed.map((city) => ({ "@type": "City", name: city })),
         },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Drywall Repair in Tampa",
-            url: `${siteConfig.url}/services/drywall-repair-tampa`,
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Handyman in Westchase FL",
-            url: `${siteConfig.url}/handyman-westchase-fl`,
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Handyman in Carrollwood FL",
-            url: `${siteConfig.url}/handyman-carrollwood-fl`,
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Painting Services in Tampa",
-            url: `${siteConfig.url}/services/painting`,
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Fence Installation in Tampa Bay",
-            url: `${siteConfig.url}/services/fence`,
-          },
-        },
-      ],
+      })),
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: siteConfig.phoneE164,
+      telephone: schemaPhone,
       contactType: "customer service",
-      areaServed: ["US-FL", ...schemaAreaServedCities, siteConfig.primaryZip],
+      areaServed: ["US-FL", ...schemaAreaServed, siteConfig.primaryZip],
       availableLanguage: ["English", "en-US"],
       hoursAvailable: {
         "@type": "OpeningHoursSpecification",

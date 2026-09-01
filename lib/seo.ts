@@ -12,6 +12,7 @@ export interface SEOProps {
   publishedTime?: string;
   modifiedTime?: string;
   noindex?: boolean;
+  exactTitle?: boolean;
 }
 
 const BRAND = siteConfig.shortName;
@@ -43,10 +44,15 @@ export function buildMetadata({
   publishedTime,
   modifiedTime,
   noindex = false,
+  exactTitle = false,
 }: SEOProps): Metadata {
   const url = canonicalUrl(path);
   const image = ogImage || `${siteConfig.url}/images/hero-handyman.png`;
-  const fullTitle = brandedTitle(title);
+  const fullTitle = exactTitle
+    ? title.includes(BRAND)
+      ? title
+      : `${title} | ${BRAND}`
+    : brandedTitle(title);
   const fullAddress = formatFullAddress();
 
   return {

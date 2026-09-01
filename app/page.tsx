@@ -10,6 +10,7 @@ import { HqDispatch } from "@/components/hq-dispatch";
 import { JsonLd, faqSchema, speakableSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import { allLocationLinks } from "@/lib/location-silos";
+import { coreServices, hrefForAreaName } from "@/lib/programmatic";
 import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog-posts";
@@ -85,19 +86,23 @@ export default function HomePage() {
               <h3 className="mb-3 text-lg font-bold">Popular Neighborhoods</h3>
               <div className="flex flex-wrap gap-2">
                 {siteConfig.serviceAreas.map((city) => {
-                  const match = allLocationLinks.find(
-                    (area) => area.label === city || (city === "Town 'n' Country" && area.label === "Town 'n' Country")
-                  );
+                  const href =
+                    hrefForAreaName(city) ||
+                    allLocationLinks.find(
+                      (area) =>
+                        area.label.toLowerCase() === city.toLowerCase() ||
+                        (city === "Town 'n' Country" && area.label === "Town 'n' Country")
+                    )?.href;
                   const chip = (
                     <>
                       <MapPin className="h-3 w-3 text-[hsl(var(--accent))]" />
                       {city}
                     </>
                   );
-                  return match ? (
+                  return href ? (
                     <Link
                       key={city}
-                      href={match.href}
+                      href={href}
                       className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm shadow-sm hover:text-[hsl(var(--accent))]"
                     >
                       {chip}
@@ -124,6 +129,29 @@ export default function HomePage() {
 
       <section className="section-padding relative pt-0">
         <div className="container-site">
+          <div className="mx-auto mb-8 max-w-3xl text-center">
+            <h2 className="mb-3 text-2xl font-bold md:text-3xl">Popular Handyman Jobs in Tampa, FL</h2>
+            <p className="text-[hsl(var(--muted-foreground))]">
+              Fast, reliable home repairs dispatched from our only Westchase headquarters.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {coreServices.map((service) => (
+              <Link
+                key={service.slug}
+                href={`/services/${service.slug}`}
+                className="card hover:border-[hsl(var(--accent))]"
+              >
+                <h3 className="mb-2 text-lg font-bold">{service.name} in Tampa, FL</h3>
+                <p className="text-sm text-[hsl(var(--muted-foreground))]">{service.intro}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding relative pt-0">
+        <div className="container-site">
           <div className="mx-auto max-w-3xl rounded-2xl border border-[hsl(var(--border))] bg-white/70 p-6 text-center shadow-sm backdrop-blur-sm md:p-8">
             <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
               Featured Service
@@ -133,7 +161,7 @@ export default function HomePage() {
               Need a drywall patch, ceiling texture repair, or a trusted wall repair contractor? See our dedicated Tampa drywall page for details and booking.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href="/services/drywall-repair-tampa" className="btn-primary">
+              <Link href="/services/drywall-repair" className="btn-primary">
                 View Drywall Repair Tampa
               </Link>
               <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent">

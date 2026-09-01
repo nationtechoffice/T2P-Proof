@@ -1,19 +1,16 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { allLocationLinks } from "@/lib/location-silos";
+import { coreServices, targetLocations } from "@/lib/programmatic";
 import { BusinessNAP } from "@/components/business-nap";
 import { Logo } from "@/components/logo";
 import { MapPin } from "lucide-react";
 
 const footerServiceLinks = [
-  { href: "/services/handyman", label: "Handyman Tampa" },
-  { href: "/services/drywall-repair-tampa", label: "Drywall Repair Tampa" },
-  { href: "/services/handyman/furniture-assembly", label: "Furniture Assembly" },
-  { href: "/services/handyman/tv-mounting", label: "TV Mounting" },
-  { href: "/services/handyman/fan-installation", label: "Fan Installation" },
-  { href: "/services/handyman/general-repairs", label: "General Repairs" },
-  { href: "/services/painting", label: "Painting Tampa" },
-  { href: "/services/fence", label: "Fence Contractor Tampa" },
+  ...coreServices.map((service) => ({
+    href: `/services/${service.slug}`,
+    label: service.name,
+  })),
   { href: "/services", label: "All Services" },
 ];
 
@@ -50,8 +47,9 @@ export function Footer() {
               <li><Link href="/about" className="hover:text-[hsl(var(--accent))]">About Us</Link></li>
               <li><Link href="/blog" className="hover:text-[hsl(var(--accent))]">Blog &amp; Tips</Link></li>
               <li><Link href="/contact" className="hover:text-[hsl(var(--accent))]">Contact Us</Link></li>
+              <li><Link href="/locations" className="hover:text-[hsl(var(--accent))]">Tampa Bay Locations</Link></li>
               <li><Link href="/service-areas" className="hover:text-[hsl(var(--accent))]">All Service Areas</Link></li>
-              <li><Link href="/handyman-westchase-fl" className="hover:text-[hsl(var(--accent))]">Westchase HQ</Link></li>
+              <li><Link href="/locations/westchase-fl" className="hover:text-[hsl(var(--accent))]">Westchase HQ</Link></li>
             </ul>
           </div>
 
@@ -81,7 +79,19 @@ export function Footer() {
           </p>
           <nav aria-label="Florida service area pages">
             <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-              {allLocationLinks.map((area) => (
+              {targetLocations.map((location) => (
+                <li key={location.slug}>
+                  <Link
+                    href={`/locations/${location.slug}`}
+                    className="block rounded-md px-1 py-1.5 text-gray-300 transition-colors hover:bg-white/5 hover:text-[hsl(var(--accent))]"
+                  >
+                    {location.city}
+                  </Link>
+                </li>
+              ))}
+              {allLocationLinks
+                .filter((area) => !targetLocations.some((location) => `/locations/${location.slug}` === area.href))
+                .map((area) => (
                 <li key={area.href}>
                   <Link
                     href={area.href}

@@ -131,7 +131,7 @@ export default function HandymanCarrollwoodPage() {
                 <Phone className="h-4 w-4" />
                 Call {siteConfig.phone}
               </a>
-              <Link href="/handyman-westchase-fl" className="btn-secondary inline-flex items-center justify-center">
+              <Link href="/locations/westchase-fl" className="btn-secondary inline-flex items-center justify-center">
                 Also Serving Westchase
               </Link>
             </div>

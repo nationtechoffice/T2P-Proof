@@ -3,26 +3,26 @@
 import Link from "next/link";
 import { useState } from "react";
 import { siteConfig } from "@/lib/site-config";
-import { allLocationLinks } from "@/lib/location-silos";
+import { targetLocations } from "@/lib/programmatic";
 import { Logo } from "@/components/logo";
 import { Phone, Menu, X, MapPin, ChevronDown } from "lucide-react";
 
 const serviceLinks = [
-  { href: "/services/drywall-repair-tampa", label: "Drywall Repair Tampa" },
-  { href: "/services/handyman", label: "Handyman Services" },
-  { href: "/services/handyman/furniture-assembly", label: "Furniture Assembly" },
-  { href: "/services/handyman/tv-mounting", label: "TV Mounting" },
-  { href: "/services/handyman/fan-installation", label: "Fan Installation" },
-  { href: "/services/painting", label: "Painting Services" },
-  { href: "/services/fence", label: "Fence Contractor" },
+  { href: "/services/tv-wall-mounting", label: "TV Wall Mounting" },
+  { href: "/services/drywall-repair", label: "Drywall Repair" },
+  { href: "/services/electrical-fixture-installation", label: "Electrical Fixtures" },
+  { href: "/services/plumbing-fixture-repair", label: "Plumbing Fixtures" },
+  { href: "/services/furniture-assembly", label: "Furniture Assembly" },
+  { href: "/services/door-repair", label: "Door Repair" },
   { href: "/services", label: "All Services" },
 ];
 
 const areaLinks = [
-  ...allLocationLinks.map((area) => ({
-    href: area.href,
-    label: `Handyman ${area.label} FL`,
+  ...targetLocations.map((location) => ({
+    href: `/locations/${location.slug}`,
+    label: `Handyman ${location.city} FL`,
   })),
+  { href: "/locations", label: "All Tampa Bay locations" },
   { href: "/service-areas", label: "All Service Areas" },
 ];
 
@@ -35,7 +35,7 @@ type NavLink = {
 const navLinks: NavLink[] = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services", dropdown: "services" },
-  { href: "/service-areas", label: "Service Areas", dropdown: "areas" },
+  { href: "/locations", label: "Locations", dropdown: "areas" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },

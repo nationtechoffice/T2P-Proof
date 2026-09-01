@@ -11,7 +11,7 @@ import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { CheckCircle, MapPin, Phone } from "lucide-react";
 
-const pagePath = "/handyman-westchase-fl";
+const pagePath = "/locations/westchase-fl";
 const pageUrl = `${siteConfig.url}${pagePath}`;
 
 export const metadata: Metadata = buildMetadata({
@@ -132,7 +132,7 @@ export default function HandymanWestchasePage() {
                 <Phone className="h-4 w-4" />
                 Call {siteConfig.phone}
               </a>
-              <Link href="/services/drywall-repair-tampa" className="btn-secondary inline-flex items-center justify-center">
+              <Link href="/services/drywall-repair" className="btn-secondary inline-flex items-center justify-center">
                 Drywall Repair in Tampa
               </Link>
             </div>

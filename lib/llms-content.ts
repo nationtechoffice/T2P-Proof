@@ -1,5 +1,6 @@
 import { allLocationLinks } from "./location-silos";
 import { allServices, categoryMeta } from "./services";
+import { targetLocations } from "./programmatic";
 import { formatFullAddress } from "./local-seo";
 import { siteConfig } from "./site-config";
 import { blogPosts } from "./blog-posts";
@@ -30,10 +31,13 @@ ${siteConfig.legalName} is a single-location service-area business. There are no
 
 ${link("Home", "/", "Tampa handyman homepage with services, reviews, and the Westchase HQ NAP.")}
 ${link("All services", "/services", "Hub for 60+ handyman, painting, and fence services.")}
+${link("TV wall mounting", "/services/tv-wall-mounting", "Tampa TV mounting with cable concealment.")}
+${link("Drywall repair", "/services/drywall-repair", "Drywall patch and texture matching in Tampa.")}
+${link("Locations", "/locations", "Tampa Bay city pages dispatched from one Westchase HQ.")}
+${targetLocations.map((location) => link(`Handyman ${location.city} FL`, `/locations/${location.slug}`, `Service area in ${location.displayName}.`)).join("\n")}
 ${link("Handyman services", "/services/handyman", "Core handyman repairs dispatched from Tampa HQ.")}
 ${link("Painting services", "/services/painting", "Interior and exterior painting for Tampa Bay homes.")}
 ${link("Fence contractor", "/services/fence", "Fence installation and repair from the Tampa crew.")}
-${link("Drywall repair Tampa", "/services/drywall-repair-tampa", "Drywall patch, ceiling texture, and wall repair in Tampa.")}
 ${link("Service areas", "/service-areas", "Cities covered from the one Tampa location.")}
 ${link("About", "/about", "Company story, one-location model, and Westchase address.")}
 ${link("Contact", "/contact", "Call, email, or request a free estimate.")}

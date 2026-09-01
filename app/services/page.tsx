@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { allServices, categoryMeta } from "@/lib/services";
+import { coreServices } from "@/lib/programmatic";
 import { JsonLd, breadcrumbSchema, servicesItemListSchema } from "@/lib/json-ld";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
@@ -21,28 +22,11 @@ const icons = { wrench: Wrench, paintbrush: Paintbrush, fence: Fence };
 
 export default function ServicesPage() {
   const categories: ServiceCategory[] = ["handyman", "painting", "fence"];
-  const featuredList = [
-    {
-      name: "Drywall Repair Tampa",
-      url: `${siteConfig.url}/services/drywall-repair-tampa`,
-      description: "Drywall patch, ceiling texture repair, and wall repair contractor services in Tampa Bay.",
-    },
-    {
-      name: "Handyman Services",
-      url: `${siteConfig.url}/services/handyman`,
-      description: "Licensed handyman repairs across Westchase, Carrollwood, and Tampa.",
-    },
-    {
-      name: "Painting Services",
-      url: `${siteConfig.url}/services/painting`,
-      description: "Interior and exterior painting for Tampa Bay homes.",
-    },
-    {
-      name: "Fence Contractor",
-      url: `${siteConfig.url}/services/fence`,
-      description: "Fence installation and repair throughout Hillsborough County and nearby areas.",
-    },
-  ];
+  const featuredList = coreServices.slice(0, 6).map((service) => ({
+    name: `${service.name} in Tampa`,
+    url: `${siteConfig.url}/services/${service.slug}`,
+    description: service.intro,
+  }));
 
   return (
     <>
@@ -63,10 +47,12 @@ export default function ServicesPage() {
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
               Handyman Pros Florida offers {allServices.length}+ professional services across handyman, painting, and fence contracting. Every job is backed by our satisfaction guarantee.
             </p>
-            <div className="mt-6">
-              <Link href="/services/drywall-repair-tampa" className="btn-accent inline-flex">
-                Featured: Drywall Repair Tampa
-              </Link>
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+              {coreServices.map((service) => (
+                <Link key={service.slug} href={`/services/${service.slug}`} className="btn-secondary !py-2 !text-sm">
+                  {service.name}
+                </Link>
+              ))}
             </div>
           </div>
 

@@ -130,7 +130,7 @@ export default async function ServicePage({
               </ul>
               <p className="mt-4 text-sm text-[hsl(var(--muted-foreground))]">
                 Also see{" "}
-                <Link href="/handyman-westchase-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                <Link href="/locations/westchase-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
                   Handyman Westchase FL
                 </Link>
                 ,{" "}
@@ -138,7 +138,7 @@ export default async function ServicePage({
                   Handyman Carrollwood FL
                 </Link>
                 , and{" "}
-                <Link href="/services/drywall-repair-tampa" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                <Link href="/services/drywall-repair" className="font-medium text-[hsl(var(--primary))] hover:underline">
                   Drywall Repair Tampa
                 </Link>
                 .

@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import { siteConfig } from "./site-config";
+import { localAnswerPosts } from "./blog-local-answers";
 
 export interface BlogPost {
   slug: string;
@@ -16,7 +16,7 @@ export interface BlogPost {
   image: string;
 }
 
-export const blogPosts: BlogPost[] = [
+export const existingBlogPosts: BlogPost[] = [
   {
     slug: "how-to-choose-handyman-florida",
     title: "How to Choose the Best Handyman in Florida: A Complete Guide",
@@ -361,6 +361,10 @@ Professional TV mounting typically costs $75-$200 depending on TV size, wall typ
 Handyman Pros Florida mounts TVs on all wall types with clean cable management. Same-day service available. Call ${siteConfig.phone}.`,
   },
 ];
+
+export const blogPosts: BlogPost[] = [...existingBlogPosts, ...localAnswerPosts].sort(
+  (a, b) => b.publishedAt.localeCompare(a.publishedAt) || b.updatedAt.localeCompare(a.updatedAt)
+);
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);

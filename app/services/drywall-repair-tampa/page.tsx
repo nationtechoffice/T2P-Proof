@@ -11,7 +11,7 @@ import { siteConfig } from "@/lib/site-config";
 import { siteImages } from "@/lib/images";
 import { CheckCircle, Phone } from "lucide-react";
 
-const pagePath = "/services/drywall-repair-tampa";
+const pagePath = "/services/drywall-repair";
 const pageUrl = `${siteConfig.url}${pagePath}`;
 
 export const metadata: Metadata = buildMetadata({
@@ -112,7 +112,7 @@ export default function DrywallRepairTampaPage() {
                 </a>{" "}
                 for a free estimate. Handyman Pros FL is open 24/7 and proudly serves Tampa, Westchase, Carrollwood, and ZIP{" "}
                 {siteConfig.primaryZip}.{" "}
-                <Link href="/handyman-westchase-fl" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                <Link href="/locations/westchase-fl" className="font-semibold text-[hsl(var(--primary))] hover:underline">
                   Book Westchase service
                 </Link>{" "}
                 or{" "}

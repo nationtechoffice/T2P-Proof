@@ -4,8 +4,6 @@ const INDEXNOW_ENDPOINTS = [
   "https://api.indexnow.org/indexnow",
   "https://www.bing.com/indexnow",
   "https://yandex.com/indexnow",
-  "https://search.seznam.cz/indexnow",
-  "https://search.naver.com/indexnow",
 ] as const;
 
 const MAX_URLS_PER_REQUEST = 10_000;

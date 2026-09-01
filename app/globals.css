@@ -43,6 +43,13 @@
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     position: relative;
     min-height: 100vh;
+    padding-bottom: 5.5rem;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      padding-bottom: 0;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {

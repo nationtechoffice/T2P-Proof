@@ -125,7 +125,7 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
               <Link href="/services/handyman" className="btn-secondary !py-2 !text-xs">
                 Handyman Services
               </Link>
-              <Link href="/handyman-westchase-fl" className="btn-secondary !py-2 !text-xs">
+              <Link href="/locations/westchase-fl" className="btn-secondary !py-2 !text-xs">
                 Westchase HQ
               </Link>
             </div>

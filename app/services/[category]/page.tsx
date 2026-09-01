@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { CoreServiceLanding } from "@/components/core-service-landing";
 import { CTASection } from "@/components/cta-section";
 import { categoryMeta, getServicesByCategory } from "@/lib/services";
+import { coreServices, getCoreService, serviceMetaDescription, serviceMetaTitle } from "@/lib/programmatic";
 import { buildMetadata } from "@/lib/seo";
 import type { ServiceCategory } from "@/lib/site-config";
 import { JsonLd, breadcrumbSchema } from "@/lib/json-ld";
@@ -12,11 +14,24 @@ import { siteConfig } from "@/lib/site-config";
 const validCategories: ServiceCategory[] = ["handyman", "painting", "fence"];
 
 export function generateStaticParams() {
-  return validCategories.map((category) => ({ category }));
+  return [
+    ...validCategories.map((category) => ({ category })),
+    ...coreServices.map((service) => ({ category: service.slug })),
+  ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> {
   const { category } = await params;
+  const core = getCoreService(category);
+  if (core) {
+    return buildMetadata({
+      title: serviceMetaTitle(core.name, "Tampa"),
+      description: serviceMetaDescription(core.name, "Tampa"),
+      path: `/services/${core.slug}`,
+      keywords: [core.keyword, `${core.name} Tampa`, `${core.name} Westchase`],
+      exactTitle: true,
+    });
+  }
   if (!validCategories.includes(category as ServiceCategory)) return {};
   const meta = categoryMeta[category as ServiceCategory];
   return buildMetadata({
@@ -29,6 +44,8 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params;
+  const core = getCoreService(category);
+  if (core) return <CoreServiceLanding service={core} />;
   if (!validCategories.includes(category as ServiceCategory)) notFound();
 
   const cat = category as ServiceCategory;
@@ -55,6 +72,19 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {cat === "handyman" &&
+              coreServices.map((service) => (
+                <Link
+                  key={service.slug}
+                  href={`/services/${service.slug}`}
+                  className="card group hover:border-[hsl(var(--accent))]"
+                >
+                  <h2 className="mb-2 text-lg font-semibold group-hover:text-[hsl(var(--primary))]">
+                    {service.name} in Tampa, FL
+                  </h2>
+                  <p className="text-sm text-[hsl(var(--muted-foreground))]">{service.intro}</p>
+                </Link>
+              ))}
             {services.map((service) => (
               <Link
                 key={service.slug}

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { StickyCallBar } from "@/components/sticky-call-bar";
 import { AnimatedBackground } from "@/components/animated-background";
 import { JsonLd, localBusinessSchema, websiteSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
@@ -83,6 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <StickyCallBar />
         <Analytics />
       </body>
     </html>

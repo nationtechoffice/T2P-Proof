@@ -47,7 +47,7 @@ export const locationSilos: LocationSilo[] = [
     ],
     relatedPaths: [
       { href: "/handyman-lutz-fl", label: "Handyman Lutz FL" },
-      { href: "/services/drywall-repair-tampa", label: "Drywall Repair Tampa" },
+      { href: "/services/drywall-repair", label: "Drywall Repair Tampa" },
     ],
   },
   {
@@ -115,7 +115,7 @@ export const locationSilos: LocationSilo[] = [
     ],
     relatedPaths: [
       { href: "/handyman-valrico-fl", label: "Handyman Valrico FL" },
-      { href: "/services/drywall-repair-tampa", label: "Drywall Repair Tampa" },
+      { href: "/services/drywall-repair", label: "Drywall Repair Tampa" },
     ],
   },
   {
@@ -224,7 +224,7 @@ export const locationSilos: LocationSilo[] = [
     slug: "town-n-country",
     city: "Town 'n' Country",
     displayName: "Town 'n' Country, FL",
-    path: "/handyman-town-n-country-fl",
+    path: "/locations/town-n-country-fl",
     eyebrow: "Town 'n' Country · West Tampa",
     h1: "Town n Country Handyman for Appliance Setup & Repairs",
     intro:
@@ -250,15 +250,15 @@ export const locationSilos: LocationSilo[] = [
       "Neighbors choose us because we communicate, protect the home, and finish clean — the basics every Town n Country address deserves.",
     ],
     relatedPaths: [
-      { href: "/handyman-westchase-fl", label: "Handyman Westchase FL" },
-      { href: "/handyman-oldsmar-fl", label: "Handyman Oldsmar FL" },
+      { href: "/locations/westchase-fl", label: "Handyman Westchase FL" },
+      { href: "/locations/oldsmar-fl", label: "Handyman Oldsmar FL" },
     ],
   },
   {
     slug: "oldsmar",
     city: "Oldsmar",
     displayName: "Oldsmar, FL",
-    path: "/handyman-oldsmar-fl",
+    path: "/locations/oldsmar-fl",
     eyebrow: "Oldsmar · Pinellas / Tampa Bay",
     h1: "Oldsmar FL Handyman Services for Mounts & Decks",
     intro:
@@ -284,8 +284,8 @@ export const locationSilos: LocationSilo[] = [
       "From waterfront-adjacent homes to neighborhood cul-de-sacs, Handyman Pros FL brings Tampa Bay reliability to every Oldsmar visit.",
     ],
     relatedPaths: [
-      { href: "/handyman-westchase-fl", label: "Handyman Westchase FL" },
-      { href: "/handyman-town-n-country-fl", label: "Handyman Town n Country FL" },
+      { href: "/locations/westchase-fl", label: "Handyman Westchase FL" },
+      { href: "/locations/town-n-country-fl", label: "Handyman Town n Country FL" },
     ],
   },
   {
@@ -352,14 +352,14 @@ export const locationSilos: LocationSilo[] = [
       "Discreet, licensed, and detail-oriented — that is how we approach every South Tampa property.",
     ],
     relatedPaths: [
-      { href: "/handyman-town-n-country-fl", label: "Handyman Town n Country FL" },
-      { href: "/services/drywall-repair-tampa", label: "Drywall Repair Tampa" },
+      { href: "/locations/town-n-country-fl", label: "Handyman Town n Country FL" },
+      { href: "/services/drywall-repair", label: "Drywall Repair Tampa" },
     ],
   },
 ];
 
 export const allLocationLinks = [
-  { href: "/handyman-westchase-fl", label: "Westchase" },
+  { href: "/locations/westchase-fl", label: "Westchase" },
   { href: "/handyman-carrollwood-fl", label: "Carrollwood" },
   ...locationSilos.map((l) => ({ href: l.path, label: l.city })),
 ] as const;

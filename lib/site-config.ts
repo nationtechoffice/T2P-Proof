@@ -12,6 +12,8 @@ export const siteConfig = {
   phoneTel: "6562053185",
   /** E.164 form for schema / NAP consistency with dialers */
   phoneE164: "+16562053185",
+  /** Schema.org telephone as specified for local SEO */
+  phoneSchema: "+1-656-205-3185",
   email: "support@handymanprosflorida.com",
   baseCities: ["Westchase", "Carrollwood", "Citrus Park", "Tampa"] as const,
   primaryZip: "33626",
@@ -41,7 +43,7 @@ export const siteConfig = {
     { day: "Sunday", opens: "00:00", closes: "23:59" },
   ],
   social: {
-    facebook: "https://www.facebook.com/handymanprosflorida",
+    facebook: "https://www.facebook.com/profile.php?id=61591619618815",
     instagram: "https://www.instagram.com/handymanprosflorida",
     google: "https://g.page/handymanprosflorida",
   },
@@ -73,9 +75,11 @@ export const siteConfig = {
     "New Tampa",
     "St. Petersburg",
     "Clearwater",
+    "Palm Harbor",
     "Largo",
     "Dunedin",
     "Safety Harbor",
+    "Tarpon Springs",
     "Wesley Chapel",
     "Land O' Lakes",
     "New Port Richey",

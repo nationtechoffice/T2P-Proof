@@ -24,12 +24,12 @@ export function HqDispatch({ area }: { area?: string }) {
         </span>
       </p>
       <p className="mt-4 text-sm">
-        <Link href="/handyman-westchase-fl" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+        <Link href="/locations/westchase-fl" className="font-semibold text-[hsl(var(--primary))] hover:underline">
           Westchase headquarters page
         </Link>
         {" · "}
-        <Link href="/service-areas" className="font-semibold text-[hsl(var(--primary))] hover:underline">
-          All service areas
+        <Link href="/locations" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+          All locations
         </Link>
         {" · "}
         <Link href="/contact" className="font-semibold text-[hsl(var(--primary))] hover:underline">

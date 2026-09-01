@@ -9,35 +9,35 @@ export const siteImages = {
   },
   hero: {
     src: "/images/hero-handyman.png",
-    alt: "Handyman Pros FL technician arriving for service in Tampa, Florida",
+    alt: "Handyman arriving for home repairs in Tampa FL",
   },
   fenceRepair: {
     src: "/images/fence-repair.png",
-    alt: "Professional fence repair with palm trees in Tampa, Florida neighborhood",
+    alt: "Handyman repairing a fence in Tampa FL",
   },
   cabinetRepair: {
     src: "/images/cabinet-repair.png",
-    alt: "Kitchen cabinet repair and hardware installation in Tampa home",
+    alt: "Handyman repairing kitchen cabinets in Tampa FL",
   },
   furnitureAssembly: {
     src: "/images/furniture-assembly.png",
-    alt: "Furniture assembly service by licensed handyman in Tampa, FL",
+    alt: "Handyman assembling furniture in Tampa FL",
   },
   painting: {
     src: "/images/painting.png",
-    alt: "Interior painting service with professional finish in Tampa, Florida",
+    alt: "Handyman painting an interior wall in Tampa FL",
   },
   drywallRepair: {
     src: "/images/drywall-repair.png",
-    alt: "Drywall hole repair and patching by Tampa handyman professional",
+    alt: "Handyman repairing drywall in Tampa FL",
   },
   teamHandyman: {
     src: "/images/team-handyman.png",
-    alt: "Friendly licensed handyman assembling furniture in Tampa area home",
+    alt: "Licensed handyman completing furniture assembly in Tampa FL",
   },
   ogDefault: {
     src: "/images/hero-handyman.png",
-    alt: "Handyman Pros FL - Tampa Bay area handyman, painting, and fence services",
+    alt: "Handyman Pros FL technician serving Tampa Bay FL",
   },
 } as const;
 
