@@ -3,11 +3,12 @@
 import { useState } from "react";
 import { siteConfig } from "@/lib/site-config";
 import { coreServices } from "@/lib/programmatic";
+import { instantEstimate } from "@/lib/instant-estimate";
 
 export function QuoteForm({
   defaultService = "",
   defaultCity = "",
-  heading = "Instant quote",
+  heading = "Instant Phone Estimate",
 }: {
   defaultService?: string;
   defaultCity?: string;
@@ -29,7 +30,7 @@ export function QuoteForm({
           <a href={`tel:${siteConfig.phoneTel}`} className="font-semibold text-[hsl(var(--accent))]">
             {siteConfig.phone}
           </a>{" "}
-          now — we are open 24/7.
+          now for an instant phone estimate — we are open 24/7.
         </p>
       </div>
     );
@@ -43,7 +44,7 @@ export function QuoteForm({
     >
       <h2 className="text-xl font-bold">{heading}</h2>
       <p className="text-sm text-[hsl(var(--muted-foreground))]">
-        Tell us the job. We call or text back with a free Tampa Bay estimate.
+        Tell us the job or call {siteConfig.phone} now for an instant phone estimate — 24/7 dispatch.
       </p>
       <div>
         <label htmlFor="quote-name" className="mb-1 block text-sm font-medium">
@@ -118,10 +119,10 @@ export function QuoteForm({
         />
       </div>
       <button type="submit" className="btn-primary w-full">
-        Get instant quote
+        Get instant phone estimate
       </button>
-      <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent flex w-full items-center justify-center">
-        Call now: {siteConfig.phone}
+      <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent flex w-full items-center justify-center font-bold">
+        {instantEstimate.ctaLabel}: {siteConfig.phone}
       </a>
     </form>
   );

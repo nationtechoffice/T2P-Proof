@@ -4,11 +4,14 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { FAQSection } from "@/components/faq-section";
 import { HqDispatch } from "@/components/hq-dispatch";
 import { QuoteForm } from "@/components/quote-form";
+import { TrustBadges } from "@/components/trust-badges";
+import { PhoneEstimateCta } from "@/components/phone-estimate-cta";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/json-ld";
 import type { CoreService } from "@/lib/programmatic";
 import { targetLocations } from "@/lib/programmatic";
+import { instantEstimate, serviceH1 } from "@/lib/instant-estimate";
 import { siteConfig } from "@/lib/site-config";
-import { CheckCircle, Phone } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 export function CoreServiceLanding({ service }: { service: CoreService }) {
   const pageUrl = `${siteConfig.url}/services/${service.slug}`;
@@ -37,17 +40,18 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
         <div className="container-site grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
-              Tampa Bay · One location
+              Instant Phone Estimates · 24/7 Tampa Bay
             </p>
-            <h1 className="mb-4 text-4xl font-bold">{service.h1}</h1>
+            <h1 className="mb-4 text-4xl font-bold">{serviceH1(service.name, "Tampa")}</h1>
+            <p className="mb-4 text-xl font-semibold text-[hsl(var(--primary))]">{instantEstimate.heroHeadline}</p>
             <p className="mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">{service.intro}</p>
+            <div className="mb-6">
+              <TrustBadges />
+            </div>
             <div className="mb-8 flex flex-col gap-3 sm:flex-row">
-              <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent inline-flex items-center justify-center gap-2">
-                <Phone className="h-4 w-4" />
-                Call Now: {siteConfig.phone}
-              </a>
+              <PhoneEstimateCta />
               <Link href="#instant-quote" className="btn-secondary inline-flex items-center justify-center">
-                Instant quote form
+                Or send job details
               </Link>
             </div>
             <div className="relative mb-8 aspect-[16/10] overflow-hidden rounded-2xl">

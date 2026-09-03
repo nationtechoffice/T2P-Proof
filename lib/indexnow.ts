@@ -13,8 +13,7 @@ function getIndexNowKey(): string {
 }
 
 export function getIndexNowKeyLocation(): string {
-  const key = getIndexNowKey();
-  return `${siteConfig.url}/${key}.txt`;
+  return `${siteConfig.url}/key.txt`;
 }
 
 export interface IndexNowResult {

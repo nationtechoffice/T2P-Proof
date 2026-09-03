@@ -48,11 +48,7 @@ export function buildMetadata({
 }: SEOProps): Metadata {
   const url = canonicalUrl(path);
   const image = ogImage || `${siteConfig.url}/images/hero-handyman.png`;
-  const fullTitle = exactTitle
-    ? title.includes(BRAND)
-      ? title
-      : `${title} | ${BRAND}`
-    : brandedTitle(title);
+  const fullTitle = exactTitle ? title : brandedTitle(title);
   const fullAddress = formatFullAddress();
 
   return {

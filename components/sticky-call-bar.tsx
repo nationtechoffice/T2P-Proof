@@ -9,7 +9,7 @@ export function StickyCallBar() {
         className="flex w-full items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-4 py-3 text-base font-bold text-white"
       >
         <Phone className="h-5 w-5" />
-        Call Now: {siteConfig.phone}
+        Call Now for Instant Estimate: {siteConfig.phone}
       </a>
     </div>
   );

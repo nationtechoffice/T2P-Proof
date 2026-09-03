@@ -11,6 +11,7 @@ import { JsonLd, faqSchema, speakableSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import { allLocationLinks } from "@/lib/location-silos";
 import { coreServices, hrefForAreaName } from "@/lib/programmatic";
+import { homeTitle, locationDescription } from "@/lib/instant-estimate";
 import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog-posts";
@@ -18,9 +19,10 @@ import { formatDate } from "@/lib/utils";
 import { CheckCircle, MapPin } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Tampa Handyman Near Me",
-  description: siteConfig.description,
+  title: homeTitle(),
+  description: locationDescription("Tampa"),
   path: "/",
+  exactTitle: true,
   keywords: [
     "handyman Tampa FL",
     "handyman Westchase",

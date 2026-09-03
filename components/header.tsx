@@ -5,7 +5,7 @@ import { useState } from "react";
 import { siteConfig } from "@/lib/site-config";
 import { targetLocations } from "@/lib/programmatic";
 import { Logo } from "@/components/logo";
-import { Phone, Menu, X, MapPin, ChevronDown } from "lucide-react";
+import { Phone, Menu, X, ChevronDown } from "lucide-react";
 
 const serviceLinks = [
   { href: "/services/tv-wall-mounting", label: "TV Wall Mounting" },
@@ -79,11 +79,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[hsl(var(--border))] bg-white/90 backdrop-blur-md">
-      <div className="bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--secondary))] py-2 text-center text-sm text-white">
-        <a href={`tel:${siteConfig.phoneTel}`} className="inline-flex items-center gap-2 font-medium hover:underline">
+      <div className="bg-[hsl(var(--accent))] py-2.5 text-center text-sm font-bold text-white">
+        <a href={`tel:${siteConfig.phoneTel}`} className="inline-flex items-center gap-2 hover:underline">
           <Phone className="h-4 w-4" />
-          <MapPin className="h-3 w-3 text-[hsl(var(--accent))]" />
-          One Tampa location · Open 24/7 · Call {siteConfig.phone}
+          Instant Phone Estimate · 24/7 · Call {siteConfig.phone}
         </a>
       </div>
       <div className="container-site flex h-16 items-center justify-between">
@@ -122,8 +121,8 @@ export function Header() {
               </Link>
             )
           )}
-          <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent !py-2 !text-xs">
-            Free Estimate
+          <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent !py-2.5 !px-4 !text-sm font-bold shadow-lg">
+            Call {siteConfig.phone}
           </a>
         </nav>
 
@@ -180,8 +179,8 @@ export function Header() {
               )}
             </div>
           ))}
-          <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent mt-3 w-full">
-            Call {siteConfig.phone}
+          <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent mt-3 w-full font-bold">
+            Instant Phone Estimate: {siteConfig.phone}
           </a>
         </nav>
       )}

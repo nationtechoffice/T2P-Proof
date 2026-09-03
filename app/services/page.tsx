@@ -3,7 +3,8 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { allServices, categoryMeta } from "@/lib/services";
-import { coreServices } from "@/lib/programmatic";
+import { coreServices, targetLocations } from "@/lib/programmatic";
+import { serviceTitle, serviceDescription } from "@/lib/instant-estimate";
 import { JsonLd, breadcrumbSchema, servicesItemListSchema } from "@/lib/json-ld";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
@@ -11,10 +12,10 @@ import type { ServiceCategory } from "@/lib/site-config";
 import { Wrench, Paintbrush, Fence } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: "All Home Services in Tampa",
-  description:
-    "60+ handyman, painting & fence services in Tampa, Westchase, Carrollwood, Hillsborough County & surrounding areas. Licensed, insured & open 24/7. Free estimates.",
+  title: serviceTitle("Home Services", "Tampa"),
+  description: serviceDescription("home repairs and property maintenance", "Tampa"),
   path: "/services",
+  exactTitle: true,
   keywords: ["Tampa home services", "handyman services Tampa", "painting contractor Tampa Bay", "fence installation Tampa"],
 });
 
@@ -43,14 +44,25 @@ export default function ServicesPage() {
       <section className="section-padding">
         <div className="container-site">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <h1 className="mb-4 text-4xl font-bold">Our Home Services</h1>
+            <h1 className="mb-4 text-4xl font-bold">Home Services in Tampa, FL</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
-              Handyman Pros Florida offers {allServices.length}+ professional services across handyman, painting, and fence contracting. Every job is backed by our satisfaction guarantee.
+              Instant phone estimates and 24/7 dispatch for {allServices.length}+ handyman, painting, and fence jobs. Call {siteConfig.phone} to speak with a local expert now.
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               {coreServices.map((service) => (
                 <Link key={service.slug} href={`/services/${service.slug}`} className="btn-secondary !py-2 !text-sm">
-                  {service.name}
+                  {service.name} in Tampa
+                </Link>
+              ))}
+            </div>
+            <div className="mt-6 flex flex-wrap justify-center gap-2 text-sm">
+              {targetLocations.slice(0, 8).map((location) => (
+                <Link
+                  key={location.slug}
+                  href={`/locations/${location.slug}`}
+                  className="rounded-full bg-white px-3 py-1.5 shadow-sm hover:text-[hsl(var(--accent))]"
+                >
+                  {location.city}, FL
                 </Link>
               ))}
             </div>

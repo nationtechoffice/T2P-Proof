@@ -5,6 +5,7 @@ import {
   schemaServicesOffered,
   schemaUrl,
 } from "./programmatic";
+import { instantEstimate } from "./instant-estimate";
 import { siteConfig } from "./site-config";
 
 interface JsonLdProps {
@@ -41,9 +42,9 @@ export function localBusinessSchema() {
       `${siteConfig.url}/images/logo.svg`,
       `${siteConfig.url}/images/hero-handyman.png`,
     ],
-    description:
-      "Single-location Tampa handyman company headquartered in Westchase (ZIP 33626). Licensed technicians dispatch from 12021 Tuscany Bay Dr to homes across Tampa Bay — we do not operate additional branches.",
+    description: instantEstimate.schemaDescription,
     telephone: schemaPhone,
+    telephony: schemaPhone,
     email: siteConfig.email,
     address: {
       "@type": "PostalAddress",
@@ -104,14 +105,20 @@ export function localBusinessSchema() {
       "@type": "ContactPoint",
       telephone: schemaPhone,
       contactType: "customer service",
-      areaServed: ["US-FL", ...schemaAreaServed, siteConfig.primaryZip],
       availableLanguage: ["English", "en-US"],
+      areaServed: ["US-FL", ...schemaAreaServed, siteConfig.primaryZip],
       hoursAvailable: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         opens: "00:00",
         closes: "23:59",
       },
+    },
+    potentialAction: {
+      "@type": "CommunicateAction",
+      name: instantEstimate.ctaLabel,
+      description: instantEstimate.schemaDescription,
+      target: `tel:${siteConfig.phoneE164}`,
     },
   };
 }
@@ -200,6 +207,11 @@ export function serviceSchema(service: {
       serviceUrl: service.url,
       servicePhone: siteConfig.phoneE164,
       serviceLocation: { "@id": `${siteConfig.url}/#organization` },
+    },
+    potentialAction: {
+      "@type": "CommunicateAction",
+      name: instantEstimate.ctaLabel,
+      target: `tel:${siteConfig.phoneE164}`,
     },
   };
 }

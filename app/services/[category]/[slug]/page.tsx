@@ -29,6 +29,7 @@ export async function generateMetadata({
     description: getLocalPageDescription(service.shortDescription, service.name),
     path: `/services/${category}/${slug}`,
     keywords: [...service.keywords.slice(0, 6), `${service.name} Tampa`],
+    exactTitle: true,
   });
 }
 
@@ -164,11 +165,11 @@ export default async function ServicePage({
             <HqDispatch />
 
             <div className="mt-8 text-center">
-              <a href={`tel:${siteConfig.phoneTel}`} className="btn-primary mr-4">
-                Call {siteConfig.phone}
+              <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent mr-4">
+                Get Instant Phone Estimate: {siteConfig.phone}
               </a>
               <Link href="/contact" className="btn-secondary">
-                Request Free Estimate
+                Request a callback
               </Link>
             </div>
           </div>

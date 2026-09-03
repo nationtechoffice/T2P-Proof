@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { StickyCallBar } from "@/components/sticky-call-bar";
 import { AnimatedBackground } from "@/components/animated-background";
 import { JsonLd, localBusinessSchema, websiteSchema } from "@/lib/json-ld";
+import { homeTitle } from "@/lib/instant-estimate";
 import { siteConfig } from "@/lib/site-config";
 import { formatFullAddress } from "@/lib/local-seo";
 import "./globals.css";
@@ -12,7 +13,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Tampa Handyman Near Me | Handyman Pros FL",
+    default: homeTitle(),
     template: "%s | Handyman Pros FL",
   },
   description: siteConfig.description,
@@ -38,13 +39,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.legalName,
-    title: "Tampa Handyman Near Me | Handyman Pros FL",
+    title: homeTitle(),
     description: siteConfig.description,
     images: [{ url: "/images/hero-handyman.png", width: 1280, height: 832, alt: siteConfig.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tampa Handyman Near Me | Handyman Pros FL",
+    title: homeTitle(),
     description: siteConfig.description,
     images: ["/images/hero-handyman.png"],
   },

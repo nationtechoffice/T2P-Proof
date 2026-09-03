@@ -1,17 +1,19 @@
 import { siteConfig } from "./site-config";
+import { serviceDescription, serviceTitle } from "./instant-estimate";
 
 export const schemaAreaServed = [
-  "Tampa, FL",
-  "Clearwater, FL",
-  "Westchase, FL",
-  "Palm Harbor, FL",
-  "Dunedin, FL",
-  "Oldsmar, FL",
-  "Town 'N' Country, FL",
-  "Citrus Park, FL",
-  "Safety Harbor, FL",
-  "Tarpon Springs, FL",
-  "New Port Richey, FL",
+    "Tampa, FL",
+    "Clearwater, FL",
+    "Westchase, FL",
+    "Palm Harbor, FL",
+    "Dunedin, FL",
+    "Oldsmar, FL",
+    "Town 'N' Country, FL",
+    "Citrus Park, FL",
+    "Safety Harbor, FL",
+    "Tarpon Springs, FL",
+    "New Port Richey, FL",
+    "Wesley Chapel, FL",
 ] as const;
 
 export const schemaServicesOffered = [
@@ -436,14 +438,15 @@ export function hrefForAreaName(name: string): string | undefined {
     "hyde park": "tampa-fl",
     "new tampa": "tampa-fl",
   };
+  if (normalized === "wesley chapel") return "/handyman-wesley-chapel-fl";
   const slug = aliases[normalized];
   return slug ? `/locations/${slug}` : undefined;
 }
 
 export function serviceMetaTitle(serviceName: string, city: string): string {
-  return `${serviceName} in ${city}, FL | ${siteConfig.shortName}`;
+  return serviceTitle(serviceName, city);
 }
 
 export function serviceMetaDescription(serviceName: string, city: string): string {
-  return `Need fast, reliable ${serviceName} in ${city}, FL? Handyman Pros FL offers expert home repairs and property maintenance. Call ${siteConfig.phone} today!`;
+  return serviceDescription(serviceName, city);
 }

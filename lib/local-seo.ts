@@ -1,4 +1,5 @@
 import { siteConfig } from "./site-config";
+import { serviceDescription, serviceTitle } from "./instant-estimate";
 
 export function formatFullAddress(): string {
   const { street, street2, city, state, zip } = siteConfig.address;
@@ -15,12 +16,11 @@ export function getGoogleMapsUrl(): string {
 }
 
 export function getLocalPageTitle(serviceName: string): string {
-  const withCity = `${serviceName} Tampa`;
-  return withCity.length <= 42 ? withCity : serviceName;
+  return serviceTitle(serviceName, "Tampa");
 }
 
-export function getLocalPageDescription(shortDescription: string, serviceName: string): string {
-  return `${shortDescription} Licensed ${serviceName.toLowerCase()} serving Tampa, Westchase, Carrollwood, Hillsborough County & surrounding areas. Open 24/7. Call ${siteConfig.phone}.`;
+export function getLocalPageDescription(_shortDescription: string, serviceName: string): string {
+  return serviceDescription(serviceName, "Tampa");
 }
 
 export const tampaLocalKeywords = [

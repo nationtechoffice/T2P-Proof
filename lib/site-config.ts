@@ -5,8 +5,8 @@ export const siteConfig = {
   domain: "handymanprosflorida.com",
   url: "https://handymanprosflorida.com",
   description:
-    "Licensed & insured handyman with one Tampa headquarters at 12021 Tuscany Bay Dr, Westchase FL 33626. Open 24/7 serving Westchase, Carrollwood, Citrus Park, Hillsborough County & Tampa Bay. Furniture assembly, drywall, painting, fences & emergency repairs.",
-  tagline: "Your Tampa Handyman — Done Right, Done Fast",
+    "Need immediate handyman service in Tampa? Call now for an instant phone estimate! Fast 24/7 response, honest pricing, and local experts on standby. One Westchase headquarters — we come to you.",
+  tagline: "Instant Estimates Over the Phone – Speak to a Local Expert Right Now!",
   phone: "(656) 205-3185",
   /** Click-to-call href value used sitewide */
   phoneTel: "6562053185",

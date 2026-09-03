@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { siteImages } from "@/lib/images";
-import { Shield, Clock, Star, MapPin } from "lucide-react";
+import { instantEstimate } from "@/lib/instant-estimate";
+import { TrustBadges } from "@/components/trust-badges";
+import { Phone } from "lucide-react";
 
 export function Hero() {
   return (
@@ -18,38 +20,28 @@ export function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="hero-speakable text-white">
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[hsl(var(--accent))]">
-              Handyman Pros FL
+              Instant Phone Estimates · 24/7 Dispatch
             </p>
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium backdrop-blur-sm">
-              <MapPin className="h-4 w-4 text-[hsl(var(--accent))]" />
-              Westchase · One Tampa location — Free Estimates
-            </p>
-            <h1 className="mb-6 text-4xl font-extrabold leading-tight text-white md:text-5xl lg:text-6xl">
-              Your Tampa Handyman — Done Right, Done Fast
+            <h1 className="mb-4 text-4xl font-extrabold leading-tight text-white md:text-5xl lg:text-6xl">
+              Handyman in Tampa, FL
             </h1>
+            <p className="mb-6 text-2xl font-bold leading-snug text-[hsl(var(--accent))] md:text-3xl">
+              {instantEstimate.heroHeadline}
+            </p>
             <p className="mb-8 text-lg leading-relaxed text-blue-100 md:text-xl">
-              Furniture assembly, drywall repair, painting, fences, and emergency fixes across Tampa, Westchase, Carrollwood, Citrus Park &amp; Town &apos;n&apos; Country. One Tampa crew — we come to you. Call {siteConfig.phone} — open 24/7.
+              {instantEstimate.heroSubhead} One Tampa crew based in Westchase — we come to you.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent w-full sm:w-auto">
-                Call {siteConfig.phone}
+              <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent w-full sm:w-auto inline-flex items-center justify-center gap-2 text-base font-bold">
+                <Phone className="h-5 w-5" />
+                {instantEstimate.ctaLabel}: {siteConfig.phone}
               </a>
-              <Link href="/services" className="btn-secondary !border-white !text-white hover:!bg-white hover:!text-[hsl(var(--primary))] w-full sm:w-auto">
-                View Our Services
+              <Link href="/contact" className="btn-secondary !border-white !text-white hover:!bg-white hover:!text-[hsl(var(--primary))] w-full sm:w-auto">
+                Or request a callback
               </Link>
             </div>
-            <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-              {[
-                { icon: Shield, label: "Licensed & Insured" },
-                { icon: Clock, label: "Same-Day Service" },
-                { icon: Star, label: "5-Star Rated" },
-                { icon: MapPin, label: "Truly Local" },
-              ].map(({ icon: Icon, label }) => (
-                <div key={label} className="flex flex-col items-center gap-2 rounded-xl bg-white/10 p-3 backdrop-blur-sm">
-                  <Icon className="h-6 w-6 text-[hsl(var(--accent))]" />
-                  <span className="text-center text-xs font-medium">{label}</span>
-                </div>
-              ))}
+            <div className="mt-10">
+              <TrustBadges variant="dark" />
             </div>
           </div>
 
@@ -66,7 +58,7 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--primary))]/40 to-transparent" />
             </div>
             <div className="absolute -bottom-4 -left-4 rounded-xl bg-[hsl(var(--accent))] px-4 py-2 text-sm font-bold text-white shadow-lg">
-              Open 24/7
+              Open 24/7 · Instant Phone Estimates
             </div>
           </div>
         </div>

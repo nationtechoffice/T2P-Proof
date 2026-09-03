@@ -2,11 +2,14 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 
 /**
- * Do not block /_next/ — Next.js CSS/JS live under /_next/static/.
- * Blocking those resources is the Semrush "blocked internal resources"
- * warning and stops crawlers from rendering pages.
+ * Allow Googlebot / Bingbot / Yandex to fetch HTML and /_next/static JS+CSS.
+ * Never disallow /_next/ — that was the Semrush blocked-resource crawl issue.
+ * /api/ is the only blocked path (admin indexing endpoints).
  */
 const disallow = ["/api/"];
+const staticAllow = ["/", "/_next/static/", "/sitemap.xml", "/llms.txt", "/llms-full.txt", "/key.txt"];
+
+const searchBots = ["Googlebot", "Googlebot-Image", "Bingbot", "Yandex", "YandexBot"];
 
 const aiUserAgents = [
   "GPTBot",
@@ -29,19 +32,14 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
-        allow: ["/", "/llms.txt", "/llms-full.txt", "/sitemap.xml", "/_next/static/"],
+        allow: staticAllow,
         disallow,
       },
-      {
-        userAgent: "Googlebot",
-        allow: "/",
+      ...searchBots.map((userAgent) => ({
+        userAgent,
+        allow: staticAllow,
         disallow,
-      },
-      {
-        userAgent: "Bingbot",
-        allow: "/",
-        disallow,
-      },
+      })),
       ...aiUserAgents.map((userAgent) => ({
         userAgent,
         allow: ["/", "/llms.txt", "/llms-full.txt", "/sitemap.xml"],

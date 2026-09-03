@@ -7,8 +7,8 @@ interface CTASectionProps {
 }
 
 export function CTASection({
-  title = "Need It Fixed Fast? Call Now for a Free Quote.",
-  description = "Licensed & insured local handyman service across Tampa & Hillsborough County — same-day help available for urgent jobs.",
+  title = "Need It Fixed Fast? Call Now for an Instant Phone Estimate.",
+  description = "Immediate 24/7 response, honest pricing, and local Tampa Bay experts on standby. Speak to a dispatcher right now — no ticket queue.",
 }: CTASectionProps) {
   return (
     <section className="section-padding relative">
@@ -20,10 +20,10 @@ export function CTASection({
             <p className="mx-auto mb-8 max-w-2xl text-lg text-blue-100">{description}</p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a href={`tel:${siteConfig.phoneTel}`} className="btn-accent w-full sm:w-auto">
-                Call {siteConfig.phone}
+                Get Instant Phone Estimate: {siteConfig.phone}
               </a>
               <Link href="/contact" className="btn-secondary !border-white !text-white hover:!bg-white hover:!text-[hsl(var(--primary))] w-full sm:w-auto">
-                Request Free Estimate
+                Request a callback
               </Link>
             </div>
           </div>

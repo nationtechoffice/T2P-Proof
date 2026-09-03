@@ -5,15 +5,16 @@ import { CTASection } from "@/components/cta-section";
 import { HqDispatch } from "@/components/hq-dispatch";
 import { JsonLd, breadcrumbSchema } from "@/lib/json-ld";
 import { targetLocations } from "@/lib/programmatic";
+import { locationTitle, locationDescription } from "@/lib/instant-estimate";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { MapPin } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Handyman Locations in Tampa Bay",
-  description:
-    "Handyman Pros FL covers Tampa, Clearwater, Westchase, Palm Harbor, Oldsmar and more from one Westchase headquarters. Call (656) 205-3185.",
+  title: locationTitle("Tampa Bay"),
+  description: locationDescription("Tampa Bay"),
   path: "/locations",
+  exactTitle: true,
   keywords: ["handyman Tampa Bay", "handyman locations", "Westchase handyman"],
 });
 
@@ -30,9 +31,9 @@ export default function LocationsIndexPage() {
       <section className="section-padding">
         <div className="container-site">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <h1 className="mb-4 text-4xl font-bold">Handyman Locations in Tampa Bay, FL</h1>
+            <h1 className="mb-4 text-4xl font-bold">Handyman in Tampa Bay, FL</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
-              One Tampa headquarters. These city pages are service areas we drive to — not extra branches.
+              Instant phone estimates and same-day dispatch from one Westchase headquarters. These city pages are service areas we drive to — not extra branches.
             </p>
           </div>
           <div className="mb-10">
@@ -49,7 +50,7 @@ export default function LocationsIndexPage() {
                 <div>
                   <h2 className="font-bold">Handyman in {location.displayName}</h2>
                   <p className="text-sm text-[hsl(var(--muted-foreground))]">
-                    {location.county} · {location.zipHint}
+                    Instant phone estimates · {location.county}
                   </p>
                 </div>
               </Link>
