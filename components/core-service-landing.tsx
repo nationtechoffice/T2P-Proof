@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { FAQSection } from "@/components/faq-section";
 import { HqDispatch } from "@/components/hq-dispatch";
+import { GoogleListingCta } from "@/components/google-listing-cta";
 import { QuoteForm } from "@/components/quote-form";
 import { TrustBadges } from "@/components/trust-badges";
 import { PhoneEstimateCta } from "@/components/phone-estimate-cta";
@@ -88,6 +89,9 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
             </ul>
             <div className="mt-10">
               <HqDispatch />
+            </div>
+            <div className="mt-6">
+              <GoogleListingCta />
             </div>
           </div>
           <div id="instant-quote" className="lg:sticky lg:top-24 h-fit">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { HqDispatch } from "@/components/hq-dispatch";
+import { GoogleListingCta } from "@/components/google-listing-cta";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { formatFullAddress } from "@/lib/local-seo";
@@ -66,6 +67,9 @@ export default function AboutPage() {
             </div>
             <div className="mt-8">
               <HqDispatch />
+            </div>
+            <div className="mt-6">
+              <GoogleListingCta />
             </div>
           </div>
         </div>

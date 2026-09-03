@@ -28,7 +28,10 @@ export const schemaServicesOffered = [
   "Exterior Painting",
 ] as const;
 
-export const schemaSameAs = ["https://www.facebook.com/profile.php?id=61591619618815"] as const;
+export const schemaSameAs = [
+  "https://www.facebook.com/profile.php?id=61591619618815",
+  "https://share.google/aKnmum6pV5rYGmwY2",
+] as const;
 
 export const schemaPhone = "+1-656-205-3185";
 export const schemaUrl = "https://handymanprosflorida.com/";

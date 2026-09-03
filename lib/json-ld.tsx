@@ -7,6 +7,8 @@ import {
 } from "./programmatic";
 import { instantEstimate } from "./instant-estimate";
 import { siteConfig } from "./site-config";
+import { googleBusiness } from "./google-business";
+import { galleryImages } from "./images";
 
 interface JsonLdProps {
   data: Record<string, unknown> | Record<string, unknown>[];
@@ -22,7 +24,6 @@ export function JsonLd({ data }: JsonLdProps) {
 }
 
 export function localBusinessSchema() {
-  const hqAddress = `${siteConfig.address.street}, ${siteConfig.address.street2}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip}`;
 
   return {
     "@context": "https://schema.org",
@@ -40,7 +41,7 @@ export function localBusinessSchema() {
     },
     image: [
       `${siteConfig.url}/images/logo.svg`,
-      `${siteConfig.url}/images/hero-handyman.png`,
+      ...galleryImages.map((image) => `${siteConfig.url}${image.src}`),
     ],
     description: instantEstimate.schemaDescription,
     telephone: schemaPhone,
@@ -60,7 +61,7 @@ export function localBusinessSchema() {
       latitude: siteConfig.geo.latitude,
       longitude: siteConfig.geo.longitude,
     },
-    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hqAddress)}`,
+    hasMap: googleBusiness.mapsQueryUrl,
     additionalProperty: {
       "@type": "PropertyValue",
       name: "numberOfLocations",

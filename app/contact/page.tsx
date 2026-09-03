@@ -2,8 +2,10 @@
 
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { QuoteForm } from "@/components/quote-form";
+import { GoogleMapEmbed } from "@/components/google-map-embed";
+import { GoogleListingCta } from "@/components/google-listing-cta";
 import { siteConfig } from "@/lib/site-config";
-import { formatFullAddress, getGoogleMapsUrl } from "@/lib/local-seo";
+import { formatFullAddress } from "@/lib/local-seo";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export default function ContactPage() {
@@ -40,7 +42,7 @@ export default function ContactPage() {
                   </div>
                 </a>
                 <a
-                  href={getGoogleMapsUrl()}
+                  href={siteConfig.social.google}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 rounded-xl border border-[hsl(var(--border))] bg-white/80 p-4 transition-colors hover:border-[hsl(var(--primary))]"
@@ -63,6 +65,12 @@ export default function ContactPage() {
                     <p className="text-sm text-[hsl(var(--muted-foreground))]">Serving Tampa, Westchase, Carrollwood &amp; all surrounding counties</p>
                   </div>
                 </div>
+              </div>
+              <div className="mt-8">
+                <GoogleMapEmbed />
+              </div>
+              <div className="mt-6">
+                <GoogleListingCta />
               </div>
             </div>
 

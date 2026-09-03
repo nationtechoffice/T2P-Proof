@@ -50,6 +50,16 @@ export function Footer() {
               <li><Link href="/locations" className="hover:text-[hsl(var(--accent))]">Tampa Bay Locations</Link></li>
               <li><Link href="/service-areas" className="hover:text-[hsl(var(--accent))]">All Service Areas</Link></li>
               <li><Link href="/locations/westchase-fl" className="hover:text-[hsl(var(--accent))]">Westchase HQ</Link></li>
+              <li>
+                <a
+                  href={siteConfig.social.google}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[hsl(var(--accent))]"
+                >
+                  Google Reviews &amp; Photos
+                </a>
+              </li>
             </ul>
           </div>
 

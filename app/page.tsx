@@ -3,7 +3,6 @@ import { Hero } from "@/components/hero";
 import { ServicesGrid } from "@/components/services-grid";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { GoogleReviews } from "@/components/google-reviews";
-import { Testimonials } from "@/components/testimonials";
 import { FAQSection, homeFaqs } from "@/components/faq-section";
 import { CTASection } from "@/components/cta-section";
 import { HqDispatch } from "@/components/hq-dispatch";
@@ -176,7 +175,6 @@ export default function HomePage() {
 
       <PhotoGallery />
       <GoogleReviews />
-      <Testimonials />
 
       <section className="section-padding relative">
         <div className="container-site">
