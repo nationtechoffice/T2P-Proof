@@ -14,7 +14,7 @@
     "index": "tsx scripts/submit-indexnow.ts"
   },
   "dependencies": {
-    "next": "latest",
+    "next": "16.2.11",
     "react": "latest",
     "react-dom": "latest",
     "lucide-react": "latest",
