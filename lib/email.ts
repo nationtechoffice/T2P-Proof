@@ -212,37 +212,40 @@ async function sendViaFormSubmit(
 }
 
 /**
- * Delivers website leads to nationtechoffice@gmail.com.
+ * Delivers website leads to the configured inbox.
+ * Public site always shows support@handymanprosflorida.com.
  * Priority: Gmail App Password → Resend → Web3Forms → FormSubmit.
  */
 export async function sendLeadEmail(payload: LeadEmailPayload): Promise<LeadEmailResult> {
   const to = getLeadInbox();
   const { subject, text, html } = formatLeadEmail(payload);
   const errors: string[] = [];
+  /** Never expose a private ops inbox to the browser — always return the public support address. */
+  const publicTo = siteConfig.email;
 
   const gmail = await sendViaGmail(to, subject, text, html);
-  if (gmail.ok) return { ok: true, via: "gmail", to };
+  if (gmail.ok) return { ok: true, via: "gmail", to: publicTo };
   if (gmail.error) errors.push(gmail.error);
 
   const resend = await sendViaResend(to, subject, text, html, payload.email);
-  if (resend.ok) return { ok: true, via: "resend", to };
+  if (resend.ok) return { ok: true, via: "resend", to: publicTo };
   if (resend.error) errors.push(resend.error);
 
   const web3 = await sendViaWeb3Forms(to, subject, text, payload);
-  if (web3.ok) return { ok: true, via: "web3forms", to };
+  if (web3.ok) return { ok: true, via: "web3forms", to: publicTo };
   if (web3.error) errors.push(web3.error);
 
   const formSubmit = await sendViaFormSubmit(to, subject, text, payload);
-  if (formSubmit.ok) return { ok: true, via: "formsubmit", to };
+  if (formSubmit.ok) return { ok: true, via: "formsubmit", to: publicTo };
   if (formSubmit.error) errors.push(formSubmit.error);
 
   const error = [...new Set(errors)].join(" | ");
   console.error("[leads] Failed to deliver email to", to, error);
-  return { ok: false, via: "none", to, error };
+  return { ok: false, via: "none", to: publicTo, error };
 }
 
 export function buildLeadMailto(payload: LeadEmailPayload): string {
-  const to = getLeadInbox();
+  const to = siteConfig.email;
   const { subject, text } = formatLeadEmail(payload);
   return `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
 }

@@ -166,7 +166,7 @@ export function QuoteForm({
         </h2>
         {emailed ? (
           <p className="mb-3 text-sm text-[hsl(var(--muted-foreground))]">
-            We emailed your request to <strong>{siteConfig.leadEmail}</strong>. Category:{" "}
+            We received your request and emailed our team at <strong>{siteConfig.email}</strong>. Category:{" "}
             <strong>{analysis.label}</strong>
             {analysis.usedAi ? " (AI-assisted)" : ""}.
           </p>
@@ -180,11 +180,11 @@ export function QuoteForm({
             or{" "}
             {mailtoLink ? (
               <a href={mailtoLink} className="font-bold underline">
-                tap here to email {siteConfig.leadEmail}
+                tap here to email {siteConfig.email}
               </a>
             ) : (
-              <a href={`mailto:${siteConfig.leadEmail}`} className="font-bold underline">
-                email {siteConfig.leadEmail}
+              <a href={`mailto:${siteConfig.email}`} className="font-bold underline">
+                email {siteConfig.email}
               </a>
             )}
             .
@@ -217,7 +217,7 @@ export function QuoteForm({
       <h2 className="text-xl font-bold">{heading}</h2>
       <p className="text-sm text-[hsl(var(--muted-foreground))]">
         Tell us the job or call {siteConfig.phone} now for an instant phone estimate — 24/7 dispatch.
-        Requests go to {siteConfig.leadEmail}.
+        Or email {siteConfig.email}.
       </p>
       <div>
         <label htmlFor="quote-name" className="mb-1 block text-sm font-medium">
