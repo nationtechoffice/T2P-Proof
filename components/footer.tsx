@@ -45,7 +45,7 @@ export function Footer() {
             <h3 className="mb-4 mt-8 text-sm font-bold uppercase tracking-wider text-white">Company</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="hover:text-[hsl(var(--accent))]">About Us</Link></li>
-              <li><Link href="/work" className="hover:text-[hsl(var(--accent))]">Our Work Showcase</Link></li>
+              <li><Link href="/work" className="hover:text-[hsl(var(--accent))]">Work Photos</Link></li>
               <li><Link href="/blog" className="hover:text-[hsl(var(--accent))]">Blog &amp; Tips</Link></li>
               <li><Link href="/contact" className="hover:text-[hsl(var(--accent))]">Contact Us</Link></li>
               <li><Link href="/locations" className="hover:text-[hsl(var(--accent))]">Tampa Bay Locations</Link></li>
@@ -58,7 +58,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-[hsl(var(--accent))]"
                 >
-                  Google Reviews &amp; Photos
+                  Leave a Review
                 </a>
               </li>
             </ul>
