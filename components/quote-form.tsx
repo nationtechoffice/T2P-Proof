@@ -15,6 +15,79 @@ interface QuoteAnalysisResponse {
   usedAi: boolean;
 }
 
+async function browserEmailFallback(fields: {
+  name: string;
+  phone: string;
+  email: string;
+  city: string;
+  service: string;
+  message: string;
+  summary: string;
+}): Promise<boolean> {
+  const to = siteConfig.leadEmail;
+  const subject = `[Website Lead] ${fields.service || "Handyman request"} — ${fields.city}`;
+  const text = [
+    `Name: ${fields.name}`,
+    `Phone: ${fields.phone}`,
+    `Email: ${fields.email || "n/a"}`,
+    `City: ${fields.city}`,
+    `Service: ${fields.service || "n/a"}`,
+    "",
+    fields.message || "(no details)",
+    "",
+    fields.summary ? `AI summary: ${fields.summary}` : "",
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  const web3Key = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+  if (web3Key) {
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: web3Key,
+          subject,
+          from_name: fields.name,
+          email: fields.email || to,
+          phone: fields.phone,
+          city: fields.city,
+          message: text,
+        }),
+      });
+      const data = (await response.json()) as { success?: boolean };
+      if (response.ok && data.success) return true;
+    } catch {
+      // continue
+    }
+  }
+
+  try {
+    const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        _subject: subject,
+        name: fields.name,
+        phone: fields.phone,
+        email: fields.email || "noreply@handymanprosflorida.com",
+        city: fields.city,
+        service: fields.service,
+        message: text,
+        _template: "table",
+        _captcha: "false",
+      }),
+    });
+    const raw = await response.text();
+    if (raw.includes("Just a moment") || raw.trim().startsWith("<!DOCTYPE")) return false;
+    const data = JSON.parse(raw) as { success?: string | boolean };
+    return data.success === true || data.success === "true";
+  } catch {
+    return false;
+  }
+}
+
 export function QuoteForm({
   defaultService = "",
   defaultCity = "",
@@ -27,6 +100,8 @@ export function QuoteForm({
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [analysis, setAnalysis] = useState<QuoteAnalysisResponse | null>(null);
+  const [emailed, setEmailed] = useState(false);
+  const [mailtoLink, setMailtoLink] = useState<string | null>(null);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -35,6 +110,12 @@ export function QuoteForm({
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const name = String(formData.get("name") || "");
+    const phone = String(formData.get("phone") || "");
+    const email = String(formData.get("email") || "");
+    const city = String(formData.get("city") || "");
+    const service = String(formData.get("service") || "");
+    const message = String(formData.get("message") || "");
 
     try {
       const response = await fetch("/api/quote", {
@@ -44,6 +125,8 @@ export function QuoteForm({
       const data = (await response.json()) as {
         ok: boolean;
         error?: string;
+        emailed?: boolean;
+        mailto?: string;
         analysis?: QuoteAnalysisResponse;
       };
 
@@ -51,6 +134,21 @@ export function QuoteForm({
         throw new Error(data.error || "Could not submit your request.");
       }
 
+      let delivered = Boolean(data.emailed);
+      if (!delivered) {
+        delivered = await browserEmailFallback({
+          name,
+          phone,
+          email,
+          city,
+          service: service || data.analysis.label,
+          message,
+          summary: data.analysis.summary,
+        });
+      }
+
+      setEmailed(delivered);
+      setMailtoLink(delivered ? null : data.mailto || null);
       setAnalysis(data.analysis);
       form.reset();
     } catch (err) {
@@ -63,12 +161,35 @@ export function QuoteForm({
   if (analysis) {
     return (
       <div className="rounded-2xl border border-[hsl(var(--border))] bg-white/90 p-6 text-center">
-        <h2 className="mb-3 text-xl font-bold text-[hsl(var(--secondary))]">Quote request received</h2>
-        <p className="mb-3 text-sm text-[hsl(var(--muted-foreground))]">
-          We emailed your request to <strong>{siteConfig.leadEmail}</strong>. Category:{" "}
-          <strong>{analysis.label}</strong>
-          {analysis.usedAi ? " (AI-assisted)" : ""}.
-        </p>
+        <h2 className="mb-3 text-xl font-bold text-[hsl(var(--secondary))]">
+          {emailed ? "Quote request received" : "Estimate ready — please call or email us"}
+        </h2>
+        {emailed ? (
+          <p className="mb-3 text-sm text-[hsl(var(--muted-foreground))]">
+            We emailed your request to <strong>{siteConfig.leadEmail}</strong>. Category:{" "}
+            <strong>{analysis.label}</strong>
+            {analysis.usedAi ? " (AI-assisted)" : ""}.
+          </p>
+        ) : (
+          <p className="mb-3 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+            Your estimate was calculated, but automatic email delivery is not configured yet on the server.
+            Please call{" "}
+            <a href={`tel:${siteConfig.phoneTel}`} className="font-bold underline">
+              {siteConfig.phone}
+            </a>{" "}
+            or{" "}
+            {mailtoLink ? (
+              <a href={mailtoLink} className="font-bold underline">
+                tap here to email {siteConfig.leadEmail}
+              </a>
+            ) : (
+              <a href={`mailto:${siteConfig.leadEmail}`} className="font-bold underline">
+                email {siteConfig.leadEmail}
+              </a>
+            )}
+            .
+          </p>
+        )}
         <p className="mb-4 rounded-xl bg-[hsl(var(--muted))] px-4 py-3 text-sm">
           Baseline Tampa Bay range:{" "}
           <strong>
@@ -76,13 +197,12 @@ export function QuoteForm({
           </strong>
           <span className="mt-1 block text-xs text-[hsl(var(--muted-foreground))]">{analysis.summary}</span>
         </p>
-        <p className="text-sm text-[hsl(var(--muted-foreground))]">
-          For the fastest answer, call{" "}
-          <a href={`tel:${siteConfig.phoneTel}`} className="font-semibold text-[hsl(var(--accent))]">
-            {siteConfig.phone}
-          </a>{" "}
-          now for an instant phone estimate — we are open 24/7.
-        </p>
+        <a
+          href={`tel:${siteConfig.phoneTel}`}
+          className="btn-accent inline-flex w-full items-center justify-center font-bold"
+        >
+          {instantEstimate.ctaLabel}: {siteConfig.phone}
+        </a>
       </div>
     );
   }

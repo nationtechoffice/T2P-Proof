@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import type { AiImagePart } from "@/lib/ai";
-import { sendLeadEmail } from "@/lib/email";
+import { buildLeadMailto, sendLeadEmail } from "@/lib/email";
 import { analyzeQuoteRequest } from "@/lib/quote-estimates";
 import { siteConfig } from "@/lib/site-config";
 
@@ -78,7 +78,7 @@ export async function POST(request: Request) {
       images,
     });
 
-    const mail = await sendLeadEmail({
+    const leadPayload = {
       name: name.trim(),
       phone: phone.trim(),
       email: email.trim() || undefined,
@@ -92,13 +92,17 @@ export async function POST(request: Request) {
       summary: analysis.summary,
       source: "website-quote-form",
       photoCount: images.length,
-    });
+    };
+
+    const mail = await sendLeadEmail(leadPayload);
 
     return NextResponse.json({
       ok: true,
       emailed: mail.ok,
-      emailTo: siteConfig.leadEmail,
+      emailTo: mail.to,
       emailVia: mail.via,
+      emailError: mail.error,
+      mailto: mail.ok ? undefined : buildLeadMailto(leadPayload),
       analysis: {
         category: analysis.category,
         label: analysis.label,
