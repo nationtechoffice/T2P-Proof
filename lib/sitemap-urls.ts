@@ -13,6 +13,12 @@ const REDIRECTED_PATHS = [
   "/services/handyman/furniture-assembly",
   "/services/handyman/drywall-repair",
   "/services/drywall-repair-tampa",
+  "/locations/tampa-fl",
+  "/locations/clearwater-fl",
+  "/locations/st-petersburg-fl",
+  "/gallery",
+  "/photos",
+  "/showcase",
 ];
 
 function isCanonicalUrl(url: string): boolean {
@@ -35,17 +41,15 @@ export function getAllSiteUrls(): string[] {
     `${baseUrl}/contact`,
     `${baseUrl}/service-areas`,
     `${baseUrl}/locations`,
+    `${baseUrl}/work`,
   ];
 
   const coreServicePages = coreServices.map((service) => `${baseUrl}/services/${service.slug}`);
   const cityPages = targetLocations.map((location) => `${baseUrl}/locations/${location.slug}`);
-
   const locationPages = allLocationLinks.map((link) => `${baseUrl}${link.href}`);
-
   const nestedServicePages = getAllServiceSlugs().map(
     ({ category, slug }) => `${baseUrl}/services/${category}/${slug}`
   );
-
   const blogPages = getAllBlogSlugs().map((slug) => `${baseUrl}/blog/${slug}`);
 
   return [
@@ -62,7 +66,15 @@ export function getAllSiteUrls(): string[] {
 
 export function sitemapPriority(url: string): number {
   if (url === siteConfig.url) return 1.0;
-  if (url.endsWith("/locations/westchase-fl") || url.endsWith("/locations/tampa-fl")) return 0.95;
+  if (
+    url.endsWith("/locations/westchase-fl") ||
+    url.endsWith("/locations/tampa") ||
+    url.endsWith("/locations/clearwater") ||
+    url.endsWith("/locations/st-petersburg")
+  ) {
+    return 0.95;
+  }
+  if (url.endsWith("/work")) return 0.9;
   if (url.includes("/locations/")) return 0.9;
   if (url.endsWith("/services/tv-wall-mounting") || url.endsWith("/services/drywall-repair")) return 0.9;
   if (coreServices.some((service) => url.endsWith(`/services/${service.slug}`))) return 0.88;

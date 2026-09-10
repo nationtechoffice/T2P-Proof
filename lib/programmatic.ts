@@ -4,6 +4,7 @@ import { serviceDescription, serviceTitle } from "./instant-estimate";
 export const schemaAreaServed = [
     "Tampa, FL",
     "Clearwater, FL",
+    "St. Petersburg, FL",
     "Westchase, FL",
     "Palm Harbor, FL",
     "Dunedin, FL",
@@ -12,8 +13,11 @@ export const schemaAreaServed = [
     "Citrus Park, FL",
     "Safety Harbor, FL",
     "Tarpon Springs, FL",
+    "Largo, FL",
     "New Port Richey, FL",
     "Wesley Chapel, FL",
+    "Hillsborough County, FL",
+    "Pinellas County, FL",
 ] as const;
 
 export const schemaServicesOffered = [
@@ -297,22 +301,89 @@ function locationCopy(
 
 export const targetLocations: TargetLocation[] = [
   {
-    slug: "tampa-fl",
+    slug: "tampa",
     city: "Tampa",
     displayName: "Tampa, FL",
     county: "Hillsborough County",
     zipHint: "33602–33647",
-    neighborhoods: ["South Tampa", "Hyde Park", "Seminole Heights", "Westchase", "New Tampa"],
-    ...locationCopy("Tampa", "Hillsborough County", ["South Tampa", "Hyde Park", "Seminole Heights"]),
+    neighborhoods: ["South Tampa", "Hyde Park", "Seminole Heights", "Westchase", "New Tampa", "Carrollwood"],
+    intro:
+      "Looking for Handyman Tampa FL service with same-day help? Handyman Pros FL handles drywall repair Tampa, TV mounting Tampa, fixture swaps, and furniture assembly from our only Westchase headquarters.",
+    paragraphs: [
+      `Handyman Tampa FL searches should land on a real local crew — not a lead marketplace. We dispatch from ${siteConfig.address.street} in Westchase with a stocked truck for drywall repair Tampa jobs, TV mounting Tampa installs, door repairs, and punch lists across South Tampa, Hyde Park, Seminole Heights, and New Tampa.`,
+      "Drywall repair Tampa homeowners book most after kids, doorknobs, or summer humidity stains. We cut clean patches, blend orange peel or knockdown, and leave paint-ready walls. TV mounting Tampa visits include stud finding, rated hardware, and clean cable runs for living rooms, bedrooms, and lanais.",
+      "Hillsborough County homes see Florida humidity, stucco, and HOA punch lists every week. Bundle drywall, mounting, and fixture work into one Handyman Tampa FL visit to save a trip charge.",
+      `Call ${siteConfig.phone} 24/7 for an instant phone estimate on Handyman Tampa FL, drywall repair Tampa, or TV mounting Tampa — or send photos through the quote form.`,
+    ],
+    faqs: [
+      {
+        question: "Do you offer Handyman Tampa FL service same-day?",
+        answer: `Often yes. Because Westchase is our only HQ, same-day Handyman Tampa FL windows are common when our crew is already routing through your zip. Call ${siteConfig.phone}.`,
+      },
+      {
+        question: "How much is drywall repair Tampa or TV mounting Tampa?",
+        answer:
+          "Small drywall repair Tampa patches are usually flat-rate after photos. TV mounting Tampa pricing depends on TV size, wall type, and cable concealment. Estimates are free over the phone.",
+      },
+      {
+        question: "Is Handyman Pros FL based in Tampa?",
+        answer: `Yes. Our only location is ${siteConfig.address.street}, Apt 203, Tampa, FL 33626 (Westchase). City pages are service areas we drive to — not extra branches.`,
+      },
+    ],
   },
   {
-    slug: "clearwater-fl",
+    slug: "clearwater",
     city: "Clearwater",
     displayName: "Clearwater, FL",
     county: "Pinellas County",
     zipHint: "33755–33767",
-    neighborhoods: ["Clearwater Beach", "Coachman", "Countryside"],
-    ...locationCopy("Clearwater", "Pinellas County", ["Clearwater Beach", "Coachman", "Countryside"]),
+    neighborhoods: ["Clearwater Beach", "Coachman", "Countryside", "Downtown Clearwater"],
+    intro:
+      "Need Handyman Services Clearwater homeowners can trust? Handyman Pros FL delivers home repair Clearwater FL — TV mounting, drywall, doors, fixtures, and furniture assembly — dispatched from Tampa / Westchase.",
+    paragraphs: [
+      "Handyman Services Clearwater should feel local even when the truck starts in Westchase. Pinellas County beach and mainland homes deal with salt air, sliding doors, and vacation-rental turnovers. We bring the right anchors, weatherstrip, and exterior-rated hardware for home repair Clearwater FL jobs that last through humid summers.",
+      "Popular Clearwater requests include TV wall mounting near Coachman and Countryside, drywall patches after renovations, sticky patio doors on Clearwater Beach condos, and furniture assembly for seasonal rentals. Neighbors often bundle a honey-do list into one visit.",
+      "Clearwater is a Pinellas service area — not a second office. You get one phone number, one Google listing, and the same licensed crew that serves Tampa Bay.",
+      `Call ${siteConfig.phone} for Handyman Services Clearwater and home repair Clearwater FL estimates anytime — we answer 24/7.`,
+    ],
+    faqs: [
+      {
+        question: "Do you provide Handyman Services Clearwater same week?",
+        answer: `Yes. We route through Pinellas regularly, so Handyman Services Clearwater and home repair Clearwater FL visits are often same-week and sometimes same-day. Call ${siteConfig.phone}.`,
+      },
+      {
+        question: "Is there a Clearwater handyman office?",
+        answer:
+          "No. Handyman Pros FL has one Tampa / Westchase headquarters. Clearwater is a service area we drive to, which keeps reviews and NAP data on a single Google Business Profile.",
+      },
+    ],
+  },
+  {
+    slug: "st-petersburg",
+    city: "St. Petersburg",
+    displayName: "St. Petersburg, FL",
+    county: "Pinellas County",
+    zipHint: "33701–33716",
+    neighborhoods: ["Downtown St. Pete", "Snell Isle", "Kenwood", "Northeast Park", "Tyrone"],
+    intro:
+      "Need a St. Pete Handyman who shows up ready? Handyman Pros FL is the local carpenter St. Petersburg FL homeowners call for TV mounts, drywall, doors, trim, and fixture work.",
+    paragraphs: [
+      "St. Pete Handyman searches often mean bungalows in Kenwood, condos downtown, and waterfront homes in Snell Isle — each with different wall types and humidity challenges. As your local carpenter St. Petersburg FL option, we hang doors true, patch plaster-adjacent drywall, and mount TVs into real structure.",
+      "Downtown and Northeast Park punch lists pile up fast: sticky millwork, uneven floors under new furniture, and rental turnover repairs. We keep estimates honest and scope clear so a St. Pete Handyman visit finishes the list instead of creating callbacks.",
+      "St. Petersburg is a Pinellas service area served from our only Westchase / Tampa headquarters. One NAP, one review profile, one crew.",
+      `Call ${siteConfig.phone} for a St. Pete Handyman or local carpenter St. Petersburg FL estimate — instant phone quotes 24/7.`,
+    ],
+    faqs: [
+      {
+        question: "Can I get a St. Pete Handyman same-day?",
+        answer: `When our Pinellas route has capacity, yes. Call ${siteConfig.phone} for the next St. Pete Handyman window.`,
+      },
+      {
+        question: "Do you do trim and carpentry in St. Petersburg?",
+        answer:
+          "Yes. As a local carpenter St. Petersburg FL crews trust for punch-list work, we handle trim repairs, door planing, shelf installs, and related handyman carpentry — not full custom millwork shops.",
+      },
+    ],
   },
   {
     slug: "westchase-fl",
@@ -425,10 +496,13 @@ export function getTargetLocation(slug: string): TargetLocation | undefined {
 export function hrefForAreaName(name: string): string | undefined {
   const normalized = name.toLowerCase().replace(/['’]/g, "").trim();
   const aliases: Record<string, string> = {
-    tampa: "tampa-fl",
+    tampa: "tampa",
     westchase: "westchase-fl",
     "tuscany bay": "westchase-fl",
-    clearwater: "clearwater-fl",
+    clearwater: "clearwater",
+    "st petersburg": "st-petersburg",
+    "st. petersburg": "st-petersburg",
+    "saint petersburg": "st-petersburg",
     "palm harbor": "palm-harbor-fl",
     oldsmar: "oldsmar-fl",
     dunedin: "dunedin-fl",
@@ -437,9 +511,9 @@ export function hrefForAreaName(name: string): string | undefined {
     "safety harbor": "safety-harbor-fl",
     "tarpon springs": "tarpon-springs-fl",
     "new port richey": "new-port-richey-fl",
-    "south tampa": "tampa-fl",
-    "hyde park": "tampa-fl",
-    "new tampa": "tampa-fl",
+    "south tampa": "tampa",
+    "hyde park": "tampa",
+    "new tampa": "tampa",
   };
   if (normalized === "wesley chapel") return "/handyman-wesley-chapel-fl";
   const slug = aliases[normalized];

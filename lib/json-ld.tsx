@@ -67,10 +67,13 @@ export function localBusinessSchema() {
       name: "numberOfLocations",
       value: "1",
     },
-    areaServed: schemaAreaServed.map((name) => ({
-      "@type": "City",
-      name,
-    })),
+    areaServed: [
+      ...schemaAreaServed.map((name) =>
+        name.includes("County")
+          ? { "@type": "AdministrativeArea", name }
+          : { "@type": "City", name }
+      ),
+    ],
     openingHoursSpecification: siteConfig.hours.map((h) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: h.day,

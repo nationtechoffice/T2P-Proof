@@ -14,7 +14,9 @@ export const siteConfig = {
   phoneE164: "+16562053185",
   /** Schema.org telephone as specified for local SEO */
   phoneSchema: "+1-656-205-3185",
-  email: "support@handymanprosflorida.com",
+  email: "nationtechoffice@gmail.com",
+  /** Inbox for all website quote / contact form submissions */
+  leadEmail: "nationtechoffice@gmail.com",
   baseCities: ["Westchase", "Carrollwood", "Citrus Park", "Tampa"] as const,
   primaryZip: "33626",
   themeAccent: "#F47D31",

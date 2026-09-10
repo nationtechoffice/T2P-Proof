@@ -183,7 +183,15 @@ export async function inspectPriorityUrls(urlList: string[]): Promise<GoogleInde
 export function priorityInspectUrls(allUrls: string[]): string[] {
   const rank = (url: string) => {
     if (url === siteConfig.url) return 0;
-    if (url.endsWith("/locations/westchase-fl") || url.endsWith("/locations/tampa-fl")) return 1;
+    if (
+      url.endsWith("/locations/westchase-fl") ||
+      url.endsWith("/locations/tampa") ||
+      url.endsWith("/locations/clearwater") ||
+      url.endsWith("/locations/st-petersburg") ||
+      url.endsWith("/work")
+    ) {
+      return 1;
+    }
     if (url.includes("/services/tv-wall-mounting") || url.includes("/services/drywall-repair")) return 2;
     if (url.endsWith("/contact") || url.endsWith("/services")) return 3;
     return 9;

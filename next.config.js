@@ -17,10 +17,16 @@ const nextConfig = {
       { source: "/handyman-westchase-fl", destination: "/locations/westchase-fl", permanent: true },
       { source: "/handyman-oldsmar-fl", destination: "/locations/oldsmar-fl", permanent: true },
       { source: "/handyman-town-n-country-fl", destination: "/locations/town-n-country-fl", permanent: true },
+      { source: "/locations/tampa-fl", destination: "/locations/tampa", permanent: true },
+      { source: "/locations/clearwater-fl", destination: "/locations/clearwater", permanent: true },
+      { source: "/locations/st-petersburg-fl", destination: "/locations/st-petersburg", permanent: true },
       { source: "/services/handyman/tv-mounting", destination: "/services/tv-wall-mounting", permanent: true },
       { source: "/services/handyman/furniture-assembly", destination: "/services/furniture-assembly", permanent: true },
       { source: "/services/handyman/drywall-repair", destination: "/services/drywall-repair", permanent: true },
       { source: "/services/drywall-repair-tampa", destination: "/services/drywall-repair", permanent: true },
+      { source: "/gallery", destination: "/work", permanent: true },
+      { source: "/photos", destination: "/work", permanent: true },
+      { source: "/showcase", destination: "/work", permanent: true },
     ];
   },
   async headers() {
