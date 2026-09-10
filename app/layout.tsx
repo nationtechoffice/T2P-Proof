@@ -41,13 +41,13 @@ export const metadata: Metadata = {
     siteName: siteConfig.legalName,
     title: homeTitle(),
     description: siteConfig.description,
-    images: [{ url: "/images/hero-handyman.png", width: 1280, height: 832, alt: siteConfig.name }],
+    images: [{ url: "/images/work/service-van-tampa.jpg", width: 1600, height: 1200, alt: siteConfig.name }],
   },
   twitter: {
     card: "summary_large_image",
     title: homeTitle(),
     description: siteConfig.description,
-    images: ["/images/hero-handyman.png"],
+    images: ["/images/work/service-van-tampa.jpg"],
   },
   robots: {
     index: true,

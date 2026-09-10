@@ -28,7 +28,7 @@ export function PhotoGallery() {
         <div className="mx-auto mb-8 max-w-3xl text-center">
           <h2 className="mb-3 text-3xl font-bold md:text-4xl">Recent Handyman Work</h2>
           <p className="text-[hsl(var(--muted-foreground))]">
-            TV mounting, drywall, fencing, and painting across Tampa Bay.
+            Real Google Maps job photos — drywall, tile, flooring, and exterior work across Tampa Bay.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

@@ -15,7 +15,7 @@ export const localAnswerPosts: BlogPost[] = [
     category: "Handyman Tips",
     tags: ["handyman cost Tampa", "Tampa handyman prices", "TV mounting cost"],
     readTime: 7,
-    image: "/images/hero-handyman.png",
+    image: "/images/work/service-van-tampa.jpg",
     content: `## How much does a handyman cost in Tampa, FL?
 
 Tampa Bay homeowners asking this in 2026 see three models: hourly, half-day blocks, and flat-rate per task.
@@ -60,7 +60,7 @@ See also our [TV wall mounting](/services/tv-wall-mounting) and [drywall repair]
     category: "Handyman Tips",
     tags: ["Florida handyman license", "Tampa contractor", "489.103"],
     readTime: 8,
-    image: "/images/team-handyman.png",
+    image: "/images/work/wall-patch-repair.jpg",
     content: `## Does a handyman need a license in Florida?
 
 Florida does **not** issue a statewide "handyman license." What exists is an **exemption** in Florida Statute 489.103(9): casual, minor, inconsequential work under **$2,500** (labor and materials combined) that is not a regulated trade.
@@ -95,7 +95,7 @@ Call ${siteConfig.phone} if you are unsure which bucket your job is in.`,
     category: "Handyman Tips",
     tags: ["TV mounting Tampa", "TV over fireplace", "cable concealment"],
     readTime: 6,
-    image: "/images/hero-handyman.png",
+    image: "/images/work/service-van-tampa.jpg",
     content: `## Can a handyman mount a TV over a fireplace in Tampa?
 
 Often yes — if heat, structure, and viewing height work. Payless TV Mounting and Tampa Bay Repair specialize in cheap drywall mounts. Over-fireplace jobs fail when installers lag into a hollow chase or ignore heat.
@@ -124,7 +124,7 @@ Book [TV wall mounting](/services/tv-wall-mounting) or call ${siteConfig.phone}.
     category: "Handyman Tips",
     tags: ["same day handyman Tampa", "emergency handyman", "Westchase handyman"],
     readTime: 5,
-    image: "/images/team-handyman.png",
+    image: "/images/work/wall-patch-repair.jpg",
     content: `## Can I get a same-day handyman in Tampa?
 
 Sometimes. Routing, parts, and weather decide it. We are open 24/7 for **estimates and urgent scheduling**. Same-day arrival is most likely in **Westchase, Citrus Park, Town 'N' Country, and Tampa** because that is where the truck starts.
@@ -160,7 +160,7 @@ Call ${siteConfig.phone} and say you need same-day. If we cannot make it, we giv
     category: "Handyman Tips",
     tags: ["handyman electrical Tampa", "handyman plumbing", "fixture installation"],
     readTime: 6,
-    image: "/images/cabinet-repair.png",
+    image: "/images/work/under-sink-plumbing.jpg",
     content: `## Can a handyman do electrical work in Tampa?
 
 **Like-for-like fixture swaps** at an existing box — vanity lights, many ceiling fans, porch lanterns — are common handyman work when the box is supported and the circuit is already there.
@@ -188,7 +188,7 @@ See [electrical fixture installation](/services/electrical-fixture-installation)
     category: "Handyman Tips",
     tags: ["door repair Tampa", "sticking door humidity", "sliding glass door"],
     readTime: 5,
-    image: "/images/cabinet-repair.png",
+    image: "/images/work/under-sink-plumbing.jpg",
     content: `## Why does my Tampa door stick after it rains?
 
 Wood slabs and jambs take on moisture. Hinges also walk out of cheap screws. Sanding the latch edge every August without fixing the hinge is why the door looks chewed.
@@ -216,7 +216,7 @@ Call ${siteConfig.phone} before the next rain set swells it shut.`,
     category: "Handyman Tips",
     tags: ["TV mounting cost Tampa", "TV wall mounting Tampa", "fireplace TV mount"],
     readTime: 6,
-    image: "/images/hero-handyman.png",
+    image: "/images/work/service-van-tampa.jpg",
     content: `## How much does TV mounting cost in Tampa, FL?
 
 It depends on the wall, the mount, and whether you want the cords hidden.

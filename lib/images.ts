@@ -1,3 +1,5 @@
+import { workPhotos } from "./work-showcase";
+
 export const siteImages = {
   logo: {
     src: "/images/logo.svg",
@@ -7,46 +9,43 @@ export const siteImages = {
     src: "/images/logo-light.svg",
     alt: "Handyman Pros FL logo featuring an orange wrench icon and bold navy and orange text",
   },
+  /** Real Google Maps / GMB service van photo */
   hero: {
-    src: "/images/hero-handyman.png",
-    alt: "Handyman arriving for home repairs in Tampa FL",
+    src: "/images/work/service-van-tampa.jpg",
+    alt: "Handyman Pros FL branded service van arriving for Tampa Bay home repairs",
   },
   fenceRepair: {
-    src: "/images/fence-repair.png",
-    alt: "Handyman repairing a fence in Tampa FL",
+    src: "/images/work/exterior-trim-gutters.jpg",
+    alt: "Exterior trim, gutters, and outdoor handyman detailing in Tampa Bay FL",
   },
   cabinetRepair: {
-    src: "/images/cabinet-repair.png",
-    alt: "Handyman repairing kitchen cabinets in Tampa FL",
+    src: "/images/work/under-sink-plumbing.jpg",
+    alt: "Kitchen cabinet and under-sink handyman repair in Tampa FL",
   },
   furnitureAssembly: {
-    src: "/images/furniture-assembly.png",
-    alt: "Handyman assembling furniture in Tampa FL",
+    src: "/images/work/accent-wall-flooring.jpg",
+    alt: "Interior remodel with accent wall and flooring in Tampa FL",
   },
   painting: {
-    src: "/images/painting.png",
-    alt: "Handyman painting an interior wall in Tampa FL",
+    src: "/images/work/exterior-trim-gutters.jpg",
+    alt: "Exterior painting and trim finish by Handyman Pros FL",
   },
   drywallRepair: {
-    src: "/images/drywall-repair.png",
-    alt: "Handyman repairing drywall in Tampa FL",
+    src: "/images/work/drywall-finish-ladder.jpg",
+    alt: "Drywall finishing and wall repair in Tampa FL",
   },
   teamHandyman: {
-    src: "/images/team-handyman.png",
-    alt: "Licensed handyman completing furniture assembly in Tampa FL",
+    src: "/images/work/wall-patch-repair.jpg",
+    alt: "Handyman Pros FL technician completing interior wall repair in Tampa",
   },
   ogDefault: {
-    src: "/images/hero-handyman.png",
+    src: "/images/work/service-van-tampa.jpg",
     alt: "Handyman Pros FL technician serving Tampa Bay FL",
   },
 } as const;
 
-export const galleryImages = [
-  siteImages.hero,
-  siteImages.fenceRepair,
-  siteImages.painting,
-  siteImages.furnitureAssembly,
-  siteImages.drywallRepair,
-  siteImages.cabinetRepair,
-  siteImages.teamHandyman,
-];
+/** Homepage preview uses the real Google Maps work photos */
+export const galleryImages = workPhotos.slice(0, 8).map((photo) => ({
+  src: photo.src,
+  alt: photo.alt,
+}));

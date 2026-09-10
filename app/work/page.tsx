@@ -12,14 +12,14 @@ import { workPhotos } from "@/lib/work-showcase";
 export const metadata: Metadata = buildMetadata({
   title: "Handyman Work Photos | Tampa, Clearwater & St. Pete",
   description:
-    "Job photos with SEO captions from Handyman Pros FL — TV mounting Tampa, drywall repair Tampa, fence repair Clearwater, and furniture assembly St. Petersburg.",
+    "Real Google Maps job photos from Handyman Pros FL — drywall repair Tampa, tile install, flooring, accent walls, and exterior trim across Tampa Bay.",
   path: "/work",
   keywords: [
     "handyman Tampa FL photos",
-    "TV mounting Tampa",
     "drywall repair Tampa",
-    "fence repair Clearwater",
-    "furniture assembly St Petersburg",
+    "tile install Tampa",
+    "flooring handyman Tampa",
+    "Handyman Pros FL Google photos",
   ],
 });
 
@@ -61,7 +61,7 @@ export default function WorkPage() {
           <div className="mx-auto mb-10 max-w-3xl text-center">
             <h1 className="mb-3 text-4xl font-bold">Handyman Work Photos</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
-              Real jobs across Tampa, Clearwater, and St. Petersburg.
+              Real photos from our Google Maps listing — drywall, tile, flooring, and exterior work across Tampa Bay.
             </p>
           </div>
 

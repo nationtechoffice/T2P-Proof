@@ -71,7 +71,7 @@ export const coreServices: CoreService[] = [
     name: "TV Wall Mounting",
     h1: "TV Wall Mounting in Tampa, FL",
     keyword: "TV wall mounting",
-    image: "/images/hero-handyman.png",
+    image: "/images/work/service-van-tampa.jpg",
     imageAlt: "Handyman mounting a TV on a wall in Tampa FL",
     intro:
       "Need fast, reliable TV wall mounting in Tampa, FL? Handyman Pros FL hangs TVs level, into real structure, with clean cable runs — dispatched from our only Westchase headquarters.",
@@ -105,7 +105,7 @@ export const coreServices: CoreService[] = [
     name: "Drywall Repair",
     h1: "Drywall Repair in Tampa, FL",
     keyword: "drywall repair",
-    image: "/images/drywall-repair.png",
+    image: "/images/work/drywall-finish-ladder.jpg",
     imageAlt: "Handyman repairing drywall in Tampa FL",
     intro:
       "Need fast, reliable drywall repair in Tampa, FL? Handyman Pros FL patches holes, blends texture, and preps walls for paint across Tampa Bay.",
@@ -139,7 +139,7 @@ export const coreServices: CoreService[] = [
     name: "Electrical Fixture Installation",
     h1: "Electrical Fixture Installation in Tampa, FL",
     keyword: "electrical fixture installation",
-    image: "/images/cabinet-repair.png",
+    image: "/images/work/under-sink-plumbing.jpg",
     imageAlt: "Handyman installing an electrical light fixture in Tampa FL",
     intro:
       "Need fast, reliable electrical fixture installation in Tampa, FL? We swap lights, fans, and vanity fixtures at existing boxes — safely and level.",
@@ -173,7 +173,7 @@ export const coreServices: CoreService[] = [
     name: "Plumbing Fixture Repair",
     h1: "Plumbing Fixture Repair in Tampa, FL",
     keyword: "plumbing fixture repair",
-    image: "/images/cabinet-repair.png",
+    image: "/images/work/under-sink-plumbing.jpg",
     imageAlt: "Handyman repairing a plumbing fixture in Tampa FL",
     intro:
       "Need fast, reliable plumbing fixture repair in Tampa, FL? We stop drips, swap faucets, and reset toilets at existing supply lines.",
@@ -207,7 +207,7 @@ export const coreServices: CoreService[] = [
     name: "Furniture Assembly",
     h1: "Furniture Assembly in Tampa, FL",
     keyword: "furniture assembly",
-    image: "/images/furniture-assembly.png",
+    image: "/images/work/accent-wall-flooring.jpg",
     imageAlt: "Handyman assembling furniture in Tampa FL",
     intro:
       "Need fast, reliable furniture assembly in Tampa, FL? IKEA, Wayfair, Amazon, and office sets built square, tight, and placed where you want them.",
@@ -241,7 +241,7 @@ export const coreServices: CoreService[] = [
     name: "Door Repair",
     h1: "Door Repair in Tampa, FL",
     keyword: "door repair",
-    image: "/images/cabinet-repair.png",
+    image: "/images/work/under-sink-plumbing.jpg",
     imageAlt: "Handyman repairing a door in Tampa FL",
     intro:
       "Need fast, reliable door repair in Tampa, FL? We fix sticking, swelling, and hardware that Florida humidity wrecks.",
