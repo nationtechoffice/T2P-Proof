@@ -24,7 +24,7 @@ async function browserEmailFallback(fields: {
   message: string;
   summary: string;
 }): Promise<boolean> {
-  const to = siteConfig.leadEmail;
+  const to = siteConfig.email;
   const subject = `[Website Lead] ${fields.service || "Handyman request"} — ${fields.city}`;
   const text = [
     `Name: ${fields.name}`,
