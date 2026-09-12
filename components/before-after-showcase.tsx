@@ -29,7 +29,7 @@ export function BeforeAfterShowcase() {
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
             Before &amp; After
           </p>
-          <h2 id="before-after-heading" className="mb-4 text-3xl font-bold md:text-4xl">
+          <h2 id="before-after-heading" className="mb-4 text-3xl font-bold text-white md:text-4xl">
             Transformation-Ready Craftsmanship
           </h2>
           <p className="text-lg text-slate-300">
