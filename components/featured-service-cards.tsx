@@ -50,13 +50,13 @@ export function FeaturedServiceCards() {
       <div className="container-site relative z-10">
         <ScrollReveal className="mx-auto mb-12 max-w-3xl text-center" variant="flip-up">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
-            Signature Craftsmanship
+            Tampa Bay Favorites
           </p>
           <h2 id="featured-services-heading" className="mb-4 text-3xl font-bold md:text-4xl">
-            High-Demand Services Across Tampa &amp; Pinellas
+            Top Handyman Services in Tampa &amp; Pinellas
           </h2>
           <p className="text-lg text-[hsl(var(--muted-foreground))]">
-            Move your cursor — cards lift, tilt, and track in 3D space like tools on a workbench.
+            Drywall repair, TV mounting, pressure washing, and ceiling fans — the jobs Tampa Bay homeowners call for most.
           </p>
         </ScrollReveal>
 

@@ -13,8 +13,9 @@ import { JsonLd, faqSchema, speakableSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import { allLocationLinks } from "@/lib/location-silos";
 import { coreServices, hrefForAreaName } from "@/lib/programmatic";
-import { homeTitle, locationDescription } from "@/lib/instant-estimate";
+import { homeTitle, homeDescription } from "@/lib/instant-estimate";
 import { buildMetadata } from "@/lib/seo";
+import { tampaLocalKeywords } from "@/lib/local-seo";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog-posts";
 import { formatDate } from "@/lib/utils";
@@ -22,15 +23,23 @@ import { CheckCircle, MapPin } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
   title: homeTitle(),
-  description: locationDescription("Tampa"),
+  description: homeDescription(),
   path: "/",
   exactTitle: true,
   keywords: [
     "handyman Tampa FL",
-    "handyman Westchase",
-    "handyman 33626",
     "handyman near me Tampa",
-    "licensed handyman Tampa Bay",
+    "handyman Westchase 33626",
+    "drywall repair Tampa",
+    "TV mounting Tampa",
+    "home repair Tampa Bay",
+    "handyman Carrollwood",
+    "handyman Citrus Park",
+    "handyman Hillsborough County",
+    "handyman Pinellas County",
+    "same day handyman Tampa",
+    "pressure washing Tampa",
+    ...tampaLocalKeywords.slice(0, 2),
   ],
 });
 

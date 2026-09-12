@@ -21,7 +21,7 @@ type TiltCardProps = {
 };
 
 /**
- * High-intensity CSS 3D tilt with float, lift, and glare.
+ * High-intensity CSS tilt with float, lift, and glare.
  * No Three.js — keeps mobile CWV intact.
  */
 export function TiltCard({

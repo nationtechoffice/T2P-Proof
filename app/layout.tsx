@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer";
 import { StickyCallBar } from "@/components/sticky-call-bar";
 import { AnimatedBackground } from "@/components/animated-background";
 import { JsonLd, localBusinessSchema, websiteSchema } from "@/lib/json-ld";
-import { homeTitle } from "@/lib/instant-estimate";
+import { homeTitle, homeDescription } from "@/lib/instant-estimate";
 import { siteConfig } from "@/lib/site-config";
 import { formatFullAddress } from "@/lib/local-seo";
 import "./globals.css";
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     default: homeTitle(),
     template: "%s | Handyman Pros FL",
   },
-  description: siteConfig.description,
+  description: homeDescription(),
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     siteName: siteConfig.legalName,
     title: homeTitle(),
-    description: siteConfig.description,
-    images: [{ url: "/images/work/service-van-tampa.jpg", width: 1600, height: 1200, alt: siteConfig.name }],
+    description: homeDescription(),
+    images: [{ url: "/images/work/service-van-tampa.jpg", width: 1600, height: 1200, alt: "Handyman Pros FL serving Tampa Bay" }],
   },
   twitter: {
     card: "summary_large_image",
     title: homeTitle(),
-    description: siteConfig.description,
+    description: homeDescription(),
     images: ["/images/work/service-van-tampa.jpg"],
   },
   robots: {

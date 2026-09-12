@@ -14,13 +14,13 @@ type SpatialFieldProps = {
   className?: string;
   /** Intensity of mouse parallax (0–1). */
   intensity?: number;
-  /** Show ambient floating 3D orbs/planes. */
+  /** Show ambient floating orbs/planes. */
   orbs?: boolean;
   tone?: "dark" | "light";
 };
 
 /**
- * Mouse-reactive 3D stage — parallax depth planes + drifting orbs.
+ * Mouse-reactive depth stage — parallax planes and drifting orbs.
  * Pure CSS/Framer; no WebGL cost.
  */
 export function SpatialField({

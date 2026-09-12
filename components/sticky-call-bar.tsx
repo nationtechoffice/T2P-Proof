@@ -1,7 +1,7 @@
 import { siteConfig } from "@/lib/site-config";
 import { ClipboardList, Phone } from "lucide-react";
 
-/** Sticky dual CTA — stays above video / 3D canvases (z-[60]). */
+/** Sticky dual CTA — stays above video / motion layers (z-[60]). */
 export function StickyCallBar() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-[60] border-t border-white/10 bg-slate-950/95 p-2.5 shadow-[0_-10px_28px_rgba(0,0,0,0.35)] backdrop-blur-md md:hidden">

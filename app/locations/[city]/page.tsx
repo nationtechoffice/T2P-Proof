@@ -18,9 +18,19 @@ export async function generateMetadata({
   if (!location) return {};
   return buildMetadata({
     title: serviceMetaTitle("Handyman", location.city),
-    description: serviceMetaDescription("handyman service", location.city),
+    description: serviceMetaDescription("handyman repairs", location.city),
     path: `/locations/${location.slug}`,
-    keywords: [`handyman ${location.city}`, `handyman near me ${location.city}`, `${location.city} FL handyman`],
+    keywords: [
+      `handyman ${location.city} FL`,
+      `handyman near me ${location.city}`,
+      `${location.city} home repair`,
+      `drywall repair ${location.city}`,
+      `TV mounting ${location.city}`,
+      `same day handyman ${location.city}`,
+      "handyman Tampa Bay",
+      "handyman Hillsborough County",
+      "handyman Pinellas County",
+    ],
     exactTitle: true,
   });
 }

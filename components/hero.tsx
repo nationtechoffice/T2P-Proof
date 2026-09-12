@@ -16,8 +16,8 @@ import { TrustBadges } from "@/components/trust-badges";
 import { VideoBackground } from "@/components/video-background";
 
 /**
- * Full-bleed cinematic hero with mouse-driven 3D parallax,
- * drifting depth layers, and continuous spatial motion.
+ * Full-bleed cinematic hero with mouse-driven depth parallax,
+ * drifting layers, and continuous ambient motion.
  */
 export function Hero() {
   const stageRef = useRef<HTMLElement>(null);
@@ -136,7 +136,7 @@ export function Hero() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[hsl(var(--accent))]"
           >
-            One Crew · TV · Drywall · Fence · Done
+            Tampa · Westchase · Hillsborough · Pinellas
           </motion.p>
 
           <motion.p
@@ -155,7 +155,7 @@ export function Hero() {
             transition={{ duration: 0.65, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
             className="mb-5 text-xl font-semibold leading-snug text-white/95 md:text-2xl lg:text-3xl"
           >
-            Handyman in Tampa, FL — speak to a local expert right now
+            Handyman near you in Tampa, FL — call for an instant estimate
           </motion.h1>
 
           <motion.p

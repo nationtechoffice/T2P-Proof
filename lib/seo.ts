@@ -130,5 +130,5 @@ export function buildLocalTitle(pageTitle: string): string {
 }
 
 export function locationMetaTitle(city: string): string {
-  return `Handyman ${city} FL`;
+  return `Handyman ${city} FL | Home Repair Near Me`;
 }
