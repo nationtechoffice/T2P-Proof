@@ -40,7 +40,7 @@ export function CoverageAreasMotion() {
 
         <div className="grid gap-5 md:grid-cols-3">
           {coverageHubs.map((hub, index) => (
-            <ScrollReveal key={hub.city} delay={index * 0.1} variant="fade-up">
+            <ScrollReveal key={hub.city} delay={index * 0.1} variant="flip-up">
               <Link
                 href={hub.href}
                 className="group flex h-full flex-col rounded-2xl border border-[hsl(var(--border))] bg-white/80 p-6 shadow-sm backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-[hsl(var(--accent)/0.45)] hover:shadow-lg"

@@ -37,7 +37,7 @@ export function BeforeAfterShowcase() {
           </p>
         </ScrollReveal>
 
-        <ScrollReveal variant="scale-in" className="mx-auto max-w-5xl">
+        <ScrollReveal variant="flip-up" className="mx-auto max-w-5xl">
           <div
             ref={trackRef}
             className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-white/10 shadow-2xl"

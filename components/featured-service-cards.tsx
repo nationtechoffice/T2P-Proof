@@ -2,6 +2,7 @@
 
 import { TiltCard } from "@/components/tilt-card";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { SpatialField } from "@/components/spatial-field";
 import { Fan, Hammer, Monitor, SprayCan } from "lucide-react";
 
 const featuredServices = [
@@ -42,11 +43,12 @@ const featuredServices = [
 export function FeaturedServiceCards() {
   return (
     <section
-      className="section-padding relative pt-4 md:pt-8"
+      className="section-padding relative overflow-hidden pt-4 md:pt-8"
       aria-labelledby="featured-services-heading"
     >
-      <div className="container-site">
-        <ScrollReveal className="mx-auto mb-12 max-w-3xl text-center">
+      <SpatialField className="absolute inset-0 opacity-70" intensity={0.4} tone="light" />
+      <div className="container-site relative z-10">
+        <ScrollReveal className="mx-auto mb-12 max-w-3xl text-center" variant="flip-up">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
             Signature Craftsmanship
           </p>
@@ -54,13 +56,17 @@ export function FeaturedServiceCards() {
             High-Demand Services Across Tampa &amp; Pinellas
           </h2>
           <p className="text-lg text-[hsl(var(--muted-foreground))]">
-            Interactive depth cards for the jobs Tampa Bay homeowners book most — hover to feel the craftsmanship.
+            Move your cursor — cards lift, tilt, and track in 3D space like tools on a workbench.
           </p>
         </ScrollReveal>
 
-        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-7 sm:grid-cols-2 xl:grid-cols-4">
           {featuredServices.map((service, index) => (
-            <ScrollReveal key={service.href} delay={index * 0.08} variant="scale-in">
+            <ScrollReveal
+              key={service.href}
+              delay={index * 0.1}
+              variant={index % 2 === 0 ? "flip-up" : "swing-in"}
+            >
               <TiltCard
                 href={service.href}
                 title={service.title}
