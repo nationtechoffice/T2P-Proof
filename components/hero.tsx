@@ -136,7 +136,7 @@ export function Hero() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[hsl(var(--accent))]"
           >
-            Instant Phone Estimates · 24/7 Dispatch
+            One Crew. Whole Home. Aerial Craft Loop
           </motion.p>
 
           <motion.p
