@@ -12,8 +12,8 @@ import { Phone } from "lucide-react";
  */
 export function BeforeAfterShowcase() {
   const [position, setPosition] = useState(50);
-  const [dragging, setDragging] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
+  const draggingRef = useRef(false);
 
   const updateFromClientX = useCallback((clientX: number) => {
     const track = trackRef.current;
@@ -47,16 +47,20 @@ export function BeforeAfterShowcase() {
             ref={trackRef}
             className="relative aspect-[16/9] touch-none select-none overflow-hidden rounded-2xl border border-white/10 shadow-2xl"
             onPointerDown={(event) => {
-              setDragging(true);
+              draggingRef.current = true;
               (event.currentTarget as HTMLElement).setPointerCapture(event.pointerId);
               updateFromClientX(event.clientX);
             }}
             onPointerMove={(event) => {
-              if (!dragging && event.buttons !== 1) return;
+              if (!draggingRef.current && event.buttons !== 1) return;
               updateFromClientX(event.clientX);
             }}
-            onPointerUp={() => setDragging(false)}
-            onPointerCancel={() => setDragging(false)}
+            onPointerUp={() => {
+              draggingRef.current = false;
+            }}
+            onPointerCancel={() => {
+              draggingRef.current = false;
+            }}
             role="slider"
             aria-valuemin={5}
             aria-valuemax={95}
