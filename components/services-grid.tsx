@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import Image from "next/image";
 import { categoryMeta, getServicesByCategory } from "@/lib/services";
 import type { ServiceCategory } from "@/lib/site-config";
@@ -19,7 +22,7 @@ export function ServicesGrid() {
   return (
     <section className="section-padding relative">
       <div className="container-site">
-        <div className="mx-auto mb-12 max-w-3xl text-center">
+        <ScrollReveal className="mx-auto mb-12 max-w-3xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
             What We Do
           </p>
@@ -27,7 +30,7 @@ export function ServicesGrid() {
           <p className="text-lg text-[hsl(var(--muted-foreground))]">
             Licensed professionals for handyman repairs, painting, and fence services throughout Hillsborough County and surrounding areas.
           </p>
-        </div>
+        </ScrollReveal>
         <div className="grid gap-8 md:grid-cols-3">
           {categories.map((cat) => {
             const meta = categoryMeta[cat];
@@ -35,7 +38,8 @@ export function ServicesGrid() {
             const services = getServicesByCategory(cat);
             const image = categoryImages[cat];
             return (
-              <div key={cat} className="card group overflow-hidden !p-0">
+              <ScrollReveal key={cat} delay={0.08} variant="scale-in">
+              <div className="card group overflow-hidden !p-0">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
                     src={image.src}
@@ -58,6 +62,7 @@ export function ServicesGrid() {
                   </Link>
                 </div>
               </div>
+              </ScrollReveal>
             );
           })}
         </div>

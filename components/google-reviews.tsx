@@ -1,3 +1,6 @@
+"use client";
+
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { Star, ExternalLink } from "lucide-react";
 import { JsonLd } from "@/lib/json-ld";
 import { googleBusiness } from "@/lib/google-business";
@@ -51,14 +54,14 @@ export function GoogleReviews() {
         }}
       />
       <div className="container-site">
-        <div className="mx-auto mb-8 max-w-3xl text-center">
+        <ScrollReveal className="mx-auto mb-8 max-w-3xl text-center">
           <h2 id="reviews-heading" className="mb-3 text-3xl font-bold md:text-4xl">
             Tampa Bay Customer Reviews
           </h2>
           <p className="text-[hsl(var(--muted-foreground))]">
             Recent 5-star feedback from local homeowners.
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {reviews.map((review) => (
