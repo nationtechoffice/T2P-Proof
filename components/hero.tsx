@@ -8,7 +8,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { Phone, Sparkles, Wrench } from "lucide-react";
+import { Phone } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { siteConfig } from "@/lib/site-config";
 import { instantEstimate } from "@/lib/instant-estimate";
@@ -33,14 +33,9 @@ export function Hero() {
   const stageRY = useTransform(sx, [-0.5, 0.5], [-10, 10]);
   const copyX = useTransform(sx, [-0.5, 0.5], [-10, 10]);
   const copyY = useTransform(sy, [-0.5, 0.5], [-8, 8]);
-  const panelX = useTransform(sx, [-0.5, 0.5], [36, -36]);
-  const panelY = useTransform(sy, [-0.5, 0.5], [24, -24]);
-  const panelRotate = useTransform(sx, [-0.5, 0.5], [-10, 10]);
-  const orbX = useTransform(panelX, (v) => v * -0.85);
-  const orbY = useTransform(panelY, (v) => v * -0.65);
   const glowX = useTransform(sx, [-0.5, 0.5], [28, 72]);
   const glowY = useTransform(sy, [-0.5, 0.5], [32, 68]);
-  const glow = useMotionTemplate`radial-gradient(560px circle at ${glowX}% ${glowY}%, rgba(244,125,49,0.3), transparent 60%)`;
+  const glow = useMotionTemplate`radial-gradient(560px circle at ${glowX}% ${glowY}%, rgba(244,125,49,0.22), transparent 60%)`;
 
   useEffect(() => {
     const node = stageRef.current;
@@ -84,12 +79,13 @@ export function Hero() {
         />
       </motion.div>
 
+      {/* Soft left wash only — keep TV → drywall → fence beats readable */}
       <div
-        className="absolute inset-0 bg-gradient-to-r from-slate-950/92 via-slate-900/78 to-slate-950/20"
+        className="absolute inset-0 bg-gradient-to-r from-slate-950/72 via-slate-900/28 to-transparent"
         aria-hidden
       />
       <div
-        className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-slate-950/40"
+        className="absolute inset-0 bg-gradient-to-t from-slate-950/55 via-transparent to-slate-950/15"
         aria-hidden
       />
       <motion.div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: glow }} />
@@ -99,30 +95,8 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 [transform-style:preserve-3d]"
         style={{ rotateX: stageRX, rotateY: stageRY }}
       >
-        <div className="spatial-ring absolute left-[6%] top-[16%] h-[22rem] w-[22rem] rounded-full border border-white/15" />
-        <div className="spatial-ring-reverse absolute right-[2%] top-[10%] h-[30rem] w-[30rem] rounded-full border border-dashed border-orange-300/25" />
-
-        <motion.div
-          className="spatial-float absolute right-[9%] top-[26%] hidden h-40 w-32 rounded-2xl border border-white/20 bg-white/10 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.55)] backdrop-blur-md md:block"
-          style={{ x: panelX, y: panelY, rotateZ: panelRotate, translateZ: 150 }}
-        >
-          <div className="flex h-full flex-col items-center justify-center gap-2 p-4 text-white">
-            <Wrench className="h-8 w-8 text-[hsl(var(--accent))]" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">Craft</span>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="spatial-float-slow absolute bottom-[20%] right-[20%] hidden h-28 w-28 rounded-full border border-cyan-200/30 bg-cyan-400/10 md:block"
-          style={{ x: orbX, y: orbY, translateZ: 100 }}
-        />
-
-        <motion.div
-          className="spatial-orbit absolute bottom-[28%] left-[40%] hidden h-16 w-16 items-center justify-center rounded-xl border border-orange-300/40 bg-orange-500/20 text-orange-100 md:flex"
-          style={{ translateZ: 190 }}
-        >
-          <Sparkles className="h-5 w-5" />
-        </motion.div>
+        <div className="spatial-ring absolute left-[4%] top-[18%] h-[18rem] w-[18rem] rounded-full border border-white/10" />
+        <div className="spatial-ring-reverse absolute right-[4%] top-[12%] h-[24rem] w-[24rem] rounded-full border border-dashed border-orange-300/15" />
       </motion.div>
 
       <div className="container-site relative z-10 flex min-h-[min(94vh,920px)] items-center py-20 md:py-28">
