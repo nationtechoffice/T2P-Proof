@@ -222,3 +222,8 @@
     @apply bg-[hsl(var(--muted))] font-semibold;
   }
 }
+
+/* Cinematic UI helpers */
+.tilt-preserve {
+  transform-style: preserve-3d;
+}

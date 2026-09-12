@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/hero";
+import { CoverageAreasMotion } from "@/components/coverage-areas-motion";
+import { BeforeAfterShowcase } from "@/components/before-after-showcase";
+import { FeaturedServiceCards } from "@/components/featured-service-cards";
 import { ServicesGrid } from "@/components/services-grid";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { GoogleReviews } from "@/components/google-reviews";
@@ -43,6 +46,10 @@ export default function HomePage() {
         ]}
       />
       <Hero />
+
+      <FeaturedServiceCards />
+      <CoverageAreasMotion />
+      <BeforeAfterShowcase />
 
       <section className="section-padding relative">
         <div className="container-site">
