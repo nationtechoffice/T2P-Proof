@@ -18,8 +18,8 @@ export function Hero() {
       <div className="absolute inset-0">
         <VideoBackground
           priority
-          mp4Src="/videos/hero-loop.mp4?v=3"
-          posterSrc="/images/cinematic/hero-poster.jpg?v=3"
+          mp4Src="/videos/hero-loop.mp4?v=4"
+          posterSrc="/images/cinematic/hero-poster.jpg?v=4"
           className="hero-video-bright"
         />      </div>
 
