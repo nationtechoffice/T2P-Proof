@@ -64,10 +64,10 @@
   font-family: var(--font-display), "Segoe UI", sans-serif;
 }
 
-/* Keep hero footage bright — overlays are panel-only, not a full wash */
+/* Mild lift only — keep detail; panel overlay handles readability */
 .hero-video-bright img,
 .hero-video-bright video {
-  filter: brightness(1.14) contrast(1.08) saturate(1.12);
+  filter: brightness(1.06) contrast(1.05) saturate(1.06);
 }
 
 /* Florida animated background */
