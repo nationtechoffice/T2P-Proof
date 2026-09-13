@@ -24,9 +24,14 @@ export function getLocalPageDescription(_shortDescription: string, serviceName: 
 }
 
 export const tampaLocalKeywords = [
+  "Tampa handyman",
+  "handyman Tampa",
   "handyman near me Tampa",
+  "Tampa FL handyman",
+  "best handyman Tampa",
   "handyman 33626",
   "handyman Westchase Tampa",
+  "Westchase handyman",
   "handyman Tuscany Bay",
   "handyman Carrollwood FL",
   "handyman Citrus Park",
@@ -37,11 +42,11 @@ export const tampaLocalKeywords = [
   "handyman Riverview FL",
   "handyman St Petersburg",
   "handyman Clearwater FL",
-  "painting contractor Tampa",
-  "fence repair Tampa Bay",
   "emergency handyman Tampa 24/7",
   "licensed handyman Tampa FL",
   "affordable handyman Tampa",
   "local handyman Tampa Bay",
   "home repair 33626",
+  "fence repair Tampa",
+  "TV mounting Tampa FL",
 ] as const;

@@ -27,19 +27,19 @@ export const metadata: Metadata = buildMetadata({
   path: "/",
   exactTitle: true,
   keywords: [
+    "Tampa handyman",
+    "handyman Tampa",
     "handyman Tampa FL",
+    "Tampa FL handyman",
     "handyman near me Tampa",
+    "best handyman Tampa",
+    "same day handyman Tampa",
     "handyman Westchase 33626",
     "drywall repair Tampa",
     "TV mounting Tampa",
-    "home repair Tampa Bay",
     "handyman Carrollwood",
-    "handyman Citrus Park",
-    "handyman Hillsborough County",
-    "handyman Pinellas County",
-    "same day handyman Tampa",
-    "pressure washing Tampa",
-    ...tampaLocalKeywords.slice(0, 2),
+    "home repair Tampa Bay",
+    ...tampaLocalKeywords.slice(0, 4),
   ],
 });
 
@@ -65,13 +65,13 @@ export default function HomePage() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
-                One Tampa location
+                Tampa handyman · one crew
               </p>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Your Trusted Tampa Bay Handyman
+              <h2 className="mb-4 font-display text-3xl font-bold md:text-4xl">
+                Tampa handyman you can call today
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-[hsl(var(--muted-foreground))]">
-                Handyman Pros FL is a single-location mobile handyman based in Westchase, Tampa. Our tools travel with us — same-day help for urgent jobs across Hillsborough County and surrounding counties. We do not operate extra branches.
+                Looking for a Tampa handyman near Westchase, Carrollwood, or Citrus Park? Handyman Pros FL is one local crew — TV mounting, drywall repair, pressure washing, and home fixes with same-day help across Hillsborough &amp; Pinellas.
               </p>
               <ul className="space-y-3">
                 {[

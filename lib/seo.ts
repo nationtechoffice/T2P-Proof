@@ -54,7 +54,7 @@ export function buildMetadata({
   return {
     title: { absolute: fullTitle },
     description,
-    keywords: keywords.slice(0, 12),
+    keywords: keywords.slice(0, 18),
     authors: [{ name: siteConfig.name, url: siteConfig.url }],
     creator: siteConfig.name,
     publisher: siteConfig.name,
