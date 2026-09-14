@@ -9,34 +9,36 @@ import { TrustBadges } from "@/components/trust-badges";
 import { VideoBackground } from "@/components/video-background";
 
 /**
- * Bright cinematic hero — full-bleed job video stays visible on the right;
- * copy sits on a solid left panel so we never wash out the footage.
+ * Bright cinematic hero — RIGHT half is uncovered job video (no washout).
+ * Copy lives on a solid left panel so the footage stays sharp and readable.
  */
 export function Hero() {
   return (
     <section className="relative isolate min-h-[min(92vh,880px)] overflow-hidden bg-[hsl(210_45%_10%)]">
+      {/* Full-bleed video; framed to the right so jobs stay visible */}
       <div className="absolute inset-0">
         <VideoBackground
           priority
-          mp4Src="/videos/hero-loop.mp4?v=6"
-          posterSrc="/images/cinematic/hero-poster.jpg?v=6"
-          className="hero-video-bright"
+          mp4Src="/videos/hero-loop.mp4?v=7"
+          posterSrc="/images/cinematic/hero-poster.jpg?v=7"
+          className="hero-video-bright hero-video-focus-right"
         />
       </div>
 
-      {/* Keep RIGHT side crystal clear — lighter shade only under copy */}
+      {/* Solid left readability panel — does NOT tint the right-side video */}
       <div
-        className="absolute inset-0 bg-gradient-to-r from-[hsl(210_50%_8%/0.92)] via-[hsl(210_50%_8%/0.55)] from-42% via-48% to-transparent to-68% md:from-38% md:via-44% md:to-62%"
+        className="absolute inset-y-0 left-0 z-[1] w-full bg-[hsl(210_50%_8%)] md:w-[46%] lg:w-[42%]"
         aria-hidden
       />
+      {/* Soft seam only — keeps edge clean without darkening the job footage */}
       <div
-        className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[hsl(210_50%_8%/0.4)] to-transparent md:hidden"
+        className="absolute inset-y-0 left-0 z-[1] hidden w-[52%] bg-gradient-to-r from-[hsl(210_50%_8%)] from-80% to-transparent md:block lg:w-[48%]"
         aria-hidden
       />
 
       <div className="container-site relative z-10 flex min-h-[min(92vh,880px)] items-center py-20 md:py-24">
         <motion.div
-          className="hero-speakable max-w-xl text-white"
+          className="hero-speakable max-w-md text-white md:max-w-lg"
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
@@ -46,17 +48,17 @@ export function Hero() {
           </p>
 
           <p
-            className="mb-3 font-display text-4xl font-extrabold leading-[0.98] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
+            className="mb-3 font-display text-4xl font-extrabold leading-[0.98] tracking-tight text-white sm:text-5xl md:text-6xl"
             style={{ textShadow: "0 12px 36px rgba(0,0,0,0.45)" }}
           >
             {siteConfig.name}
           </p>
 
-          <h1 className="mb-5 font-display text-xl font-semibold leading-snug text-white md:text-2xl lg:text-[1.7rem]">
+          <h1 className="mb-5 font-display text-xl font-semibold leading-snug text-white md:text-2xl">
             Tampa handyman near you — TV mounting, drywall &amp; home repair
           </h1>
 
-          <p className="mb-8 max-w-lg text-base leading-relaxed text-slate-200 md:text-lg">
+          <p className="mb-8 max-w-md text-base leading-relaxed text-slate-200 md:text-lg">
             {instantEstimate.heroSubhead}
           </p>
 
@@ -76,7 +78,7 @@ export function Hero() {
             </Link>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-10 max-w-md">
             <TrustBadges variant="dark" />
           </div>
         </motion.div>
