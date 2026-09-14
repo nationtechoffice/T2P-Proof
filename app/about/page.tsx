@@ -58,8 +58,17 @@ export default function AboutPage() {
             <div className="mt-8 flex items-start gap-3 rounded-xl border border-[hsl(var(--border))] bg-white/80 p-6">
               <MapPin className="mt-1 h-6 w-6 shrink-0 text-[hsl(var(--accent))]" />
               <div>
-                <p className="font-semibold">Our only Tampa location</p>
+                <p className="font-semibold">Our only Tampa location — Westchase HQ</p>
                 <address className="mt-1 not-italic text-[hsl(var(--muted-foreground))]">{fullAddress}</address>
+                <p className="mt-2 text-sm text-[hsl(var(--muted-foreground))]">
+                  <a href={`tel:${siteConfig.phoneTel}`} className="font-medium text-[hsl(var(--primary))] hover:underline">
+                    {siteConfig.phone}
+                  </a>
+                  {" · "}
+                  <a href={`mailto:${siteConfig.email}`} className="font-medium text-[hsl(var(--primary))] hover:underline">
+                    {siteConfig.email}
+                  </a>
+                </p>
                 <p className="mt-2 text-sm text-[hsl(var(--muted-foreground))]">
                   We dispatch from this Westchase address. There are no additional Handyman Pros FL branches.
                 </p>

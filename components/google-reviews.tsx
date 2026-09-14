@@ -2,9 +2,7 @@
 
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Star, ExternalLink } from "lucide-react";
-import { JsonLd } from "@/lib/json-ld";
 import { googleBusiness } from "@/lib/google-business";
-import { siteConfig } from "@/lib/site-config";
 
 const reviews = [
   {
@@ -33,26 +31,6 @@ const reviews = [
 export function GoogleReviews() {
   return (
     <section className="section-padding relative" aria-labelledby="reviews-heading">
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "@id": `${siteConfig.url}/#organization`,
-          name: siteConfig.legalName,
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "5",
-            reviewCount: String(reviews.length),
-            bestRating: "5",
-          },
-          review: reviews.map((review) => ({
-            "@type": "Review",
-            author: { "@type": "Person", name: review.name },
-            reviewBody: review.text,
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-          })),
-        }}
-      />
       <div className="container-site">
         <ScrollReveal className="mx-auto mb-8 max-w-3xl text-center">
           <h2 id="reviews-heading" className="mb-3 text-3xl font-bold md:text-4xl">
@@ -89,17 +67,17 @@ export function GoogleReviews() {
           ))}
         </div>
 
-        <div className="mt-8 text-center">
+        <p className="mt-8 text-center text-sm text-[hsl(var(--muted-foreground))]">
           <a
             href={googleBusiness.shareUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary inline-flex items-center gap-2"
+            className="inline-flex items-center gap-1.5 font-semibold text-[hsl(var(--primary))] underline decoration-[hsl(var(--primary))]/40 underline-offset-4 hover:decoration-[hsl(var(--primary))]"
           >
-            More reviews
-            <ExternalLink className="h-4 w-4" />
+            Read our Google reviews
+            <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
           </a>
-        </div>
+        </p>
       </div>
     </section>
   );

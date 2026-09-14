@@ -79,6 +79,10 @@ export function Footer() {
               <a href={`tel:${siteConfig.phoneTel}`} className="font-semibold text-white hover:text-[hsl(var(--accent))]">
                 {siteConfig.phone}
               </a>
+              {" · "}
+              <a href={`mailto:${siteConfig.email}`} className="font-semibold text-white hover:text-[hsl(var(--accent))]">
+                {siteConfig.email}
+              </a>
             </p>
           </div>
         </div>

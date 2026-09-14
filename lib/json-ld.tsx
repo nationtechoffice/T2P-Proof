@@ -23,11 +23,17 @@ export function JsonLd({ data }: JsonLdProps) {
   );
 }
 
+function areaServedNode(name: string) {
+  return name.includes("County")
+    ? { "@type": "AdministrativeArea" as const, name }
+    : { "@type": "City" as const, name };
+}
+
 export function localBusinessSchema() {
 
   return {
     "@context": "https://schema.org",
-    "@type": ["Handyman", "HomeAndConstructionBusiness"],
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": `${siteConfig.url}/#organization`,
     name: "Handyman Pros FL",
     legalName: siteConfig.legalName,
@@ -45,7 +51,6 @@ export function localBusinessSchema() {
     ],
     description: instantEstimate.schemaDescription,
     telephone: schemaPhone,
-    telephony: schemaPhone,
     email: siteConfig.email,
     address: {
       "@type": "PostalAddress",
@@ -67,13 +72,7 @@ export function localBusinessSchema() {
       name: "numberOfLocations",
       value: "1",
     },
-    areaServed: [
-      ...schemaAreaServed.map((name) =>
-        name.includes("County")
-          ? { "@type": "AdministrativeArea", name }
-          : { "@type": "City", name }
-      ),
-    ],
+    areaServed: schemaAreaServed.map((name) => areaServedNode(name)),
     openingHoursSpecification: siteConfig.hours.map((h) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: h.day,
@@ -101,7 +100,7 @@ export function localBusinessSchema() {
         itemOffered: {
           "@type": "Service",
           name,
-          areaServed: schemaAreaServed.map((city) => ({ "@type": "City", name: city })),
+          areaServed: schemaAreaServed.map((name) => areaServedNode(name)),
         },
       })),
     },

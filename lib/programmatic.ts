@@ -34,7 +34,7 @@ export const schemaServicesOffered = [
 
 export const schemaSameAs = [
   "https://www.facebook.com/profile.php?id=61591619618815",
-  "https://share.google/aKnmum6pV5rYGmwY2",
+  "https://maps.app.goo.gl/XhDwjzgTujJK7JyT9",
 ] as const;
 
 export const schemaPhone = "+1-656-205-3185";

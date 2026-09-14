@@ -10,6 +10,11 @@ const homeFaqs = [
     answer: "Yes, all our handymen, painters, and fence contractors are fully licensed and insured in Florida. We carry comprehensive liability insurance for your protection.",
   },
   {
+    question: "Do you install new electrical circuits or replace panels?",
+    answer:
+      "New circuits, panel work, and running wire through walls need a licensed electrician. Like-for-like fixture swaps at existing boxes are a common Tampa handyman job. If a project needs new wiring or a panel change, we tell you up front instead of improvising.",
+  },
+  {
     question: "How much does a handyman cost in Tampa?",
     answer: "Handyman rates in the Tampa area typically range from $50 to $120 per hour. We also offer flat-rate pricing for common jobs. All estimates are free with no obligation.",
   },
