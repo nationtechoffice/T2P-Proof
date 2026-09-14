@@ -3,7 +3,7 @@
 import { TiltCard } from "@/components/tilt-card";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { SpatialField } from "@/components/spatial-field";
-import { Fan, Hammer, Monitor, SprayCan } from "lucide-react";
+import { Fan, Fence, Hammer, Monitor } from "lucide-react";
 
 const featuredServices = [
   {
@@ -23,12 +23,12 @@ const featuredServices = [
     icon: <Monitor className="h-5 w-5" />,
   },
   {
-    title: "Pressure Washing",
-    description: "Restore driveways, lanais, and siding with careful Florida-safe cleaning.",
-    href: "/services/handyman/cleaning",
-    imageSrc: "/images/cinematic/service-pressure-wash.jpg",
-    imageAlt: "Pressure washing a Florida home exterior driveway and siding",
-    icon: <SprayCan className="h-5 w-5" />,
+    title: "Fence Repair",
+    description: "Storm-damaged pickets, leaning posts, and privacy fence fixes across Tampa Bay.",
+    href: "/services/fence",
+    imageSrc: "/images/work/fence-repair.jpg",
+    imageAlt: "Wood privacy fence repair with new pickets in a Tampa Bay backyard",
+    icon: <Fence className="h-5 w-5" />,
   },
   {
     title: "Ceiling Fans",
@@ -56,7 +56,7 @@ export function FeaturedServiceCards() {
             Top Handyman Services in Tampa &amp; Pinellas
           </h2>
           <p className="text-lg text-[hsl(var(--muted-foreground))]">
-            Drywall repair, TV mounting, pressure washing, and ceiling fans — the jobs Tampa Bay homeowners call for most.
+            Drywall repair, TV mounting, fence repair, and ceiling fans — the jobs Tampa Bay homeowners call for most.
           </p>
         </ScrollReveal>
 
