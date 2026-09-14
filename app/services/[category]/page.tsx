@@ -10,6 +10,8 @@ import { buildMetadata } from "@/lib/seo";
 import type { ServiceCategory } from "@/lib/site-config";
 import { JsonLd, breadcrumbSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { InternalLinkHub } from "@/components/internal-link-hub";
+import { tampaBayLocationLinks, fenceCategoryLinks, authorityHubLinks } from "@/lib/internal-links";
 
 const validCategories: ServiceCategory[] = ["handyman", "painting", "fence"];
 
@@ -98,6 +100,23 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="section-padding pt-0">
+        <div className="container-site">
+          <InternalLinkHub
+            title={`${meta.name} across Tampa Bay`}
+            intro="Internal links help search engines and AI assistants connect this service hub to the cities we actually serve from Westchase HQ."
+            links={tampaBayLocationLinks()}
+          />
+          {cat === "fence" ? (
+            <InternalLinkHub title="Fence service details" links={fenceCategoryLinks} />
+          ) : (
+            <InternalLinkHub
+              title="Related Tampa service hubs"
+              links={[authorityHubLinks.fence, authorityHubLinks.drywall, authorityHubLinks.tvMount, authorityHubLinks.services]}
+            />
+          )}
         </div>
       </section>
       <CTASection title={`Need ${meta.name}?`} />

@@ -15,8 +15,12 @@ export const siteImages = {
     alt: "Handyman Pros FL branded service van arriving for Tampa Bay home repairs",
   },
   fenceRepair: {
-    src: "/images/work/exterior-trim-gutters.jpg",
-    alt: "Exterior trim, gutters, and outdoor handyman detailing in Tampa Bay FL",
+    src: "/images/work/fence-repair.jpg",
+    alt: "Wood privacy fence repair with new pickets in a Tampa Bay FL backyard",
+  },
+  fencePostReset: {
+    src: "/images/work/fence-post-reset.jpg",
+    alt: "Fence post reset with concrete footing and level in Tampa FL",
   },
   cabinetRepair: {
     src: "/images/work/under-sink-plumbing.jpg",

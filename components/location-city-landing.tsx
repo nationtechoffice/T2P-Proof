@@ -6,10 +6,16 @@ import { GoogleListingCta } from "@/components/google-listing-cta";
 import { QuoteForm } from "@/components/quote-form";
 import { TrustBadges } from "@/components/trust-badges";
 import { PhoneEstimateCta } from "@/components/phone-estimate-cta";
+import { InternalLinkHub } from "@/components/internal-link-hub";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/json-ld";
 import { coreServices, type TargetLocation } from "@/lib/programmatic";
 import { instantEstimate, serviceH1 } from "@/lib/instant-estimate";
 import { siteConfig } from "@/lib/site-config";
+import {
+  authorityHubLinks,
+  coreServiceLinks,
+  fenceCategoryLinks,
+} from "@/lib/internal-links";
 import { CheckCircle } from "lucide-react";
 
 export function LocationCityLanding({ location }: { location: TargetLocation }) {
@@ -78,6 +84,15 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/services/fence"
+                  className="flex items-start gap-2 rounded-xl border border-[hsl(var(--border))] bg-white/70 px-4 py-3 text-sm font-medium hover:border-[hsl(var(--accent))]"
+                >
+                  <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(var(--accent))]" />
+                  Fence Installation &amp; Repair in {location.city}
+                </Link>
+              </li>
             </ul>
             <h2 className="mt-10 mb-3 text-2xl font-bold">{location.city} neighborhoods we visit</h2>
             <p className="mb-3 text-sm text-[hsl(var(--muted-foreground))]">
@@ -90,6 +105,27 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                 </li>
               ))}
             </ul>
+
+            <InternalLinkHub
+              title={`Popular ${location.city} handyman services`}
+              intro={`These links connect ${location.city} searches to our Tampa service pages so Google, Bing, and AI answers can follow the full Handyman Pros FL coverage map.`}
+              links={coreServiceLinks(location.city)}
+            />
+            <InternalLinkHub
+              title="Fence installation & repair options"
+              links={fenceCategoryLinks}
+            />
+            <InternalLinkHub
+              title="Nearby Tampa Bay areas we serve"
+              links={[
+                authorityHubLinks.tampa,
+                authorityHubLinks.westchase,
+                authorityHubLinks.carrollwood,
+                authorityHubLinks.clearwater,
+                authorityHubLinks.stPete,
+                authorityHubLinks.locations,
+              ].filter((link) => link.href !== `/locations/${location.slug}`)}
+            />
             <div className="mt-10">
               <HqDispatch area={location.displayName} />
             </div>
