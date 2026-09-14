@@ -18,19 +18,19 @@ export function Hero() {
       <div className="absolute inset-0">
         <VideoBackground
           priority
-          mp4Src="/videos/hero-loop.mp4?v=5"
-          posterSrc="/images/cinematic/hero-poster.jpg?v=5"
+          mp4Src="/videos/hero-loop.mp4?v=6"
+          posterSrc="/images/cinematic/hero-poster.jpg?v=6"
           className="hero-video-bright"
         />
       </div>
 
-      {/* Keep the RIGHT side of the video crystal clear — only shade under copy */}
+      {/* Keep RIGHT side crystal clear — lighter shade only under copy */}
       <div
-        className="absolute inset-0 bg-gradient-to-r from-[hsl(210_50%_8%)] via-[hsl(210_50%_8%/0.88)] from-55% via-55% to-transparent to-78% md:from-45% md:via-48% md:to-72%"
+        className="absolute inset-0 bg-gradient-to-r from-[hsl(210_50%_8%/0.92)] via-[hsl(210_50%_8%/0.55)] from-42% via-48% to-transparent to-68% md:from-38% md:via-44% md:to-62%"
         aria-hidden
       />
       <div
-        className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[hsl(210_50%_8%/0.55)] to-transparent md:hidden"
+        className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[hsl(210_50%_8%/0.4)] to-transparent md:hidden"
         aria-hidden
       />
 

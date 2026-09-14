@@ -64,10 +64,10 @@
   font-family: var(--font-display), "Segoe UI", sans-serif;
 }
 
-/* Mild lift only — keep detail; panel overlay handles readability */
+/* Strong clarity lift so the hero jobs read sharp on the right side */
 .hero-video-bright img,
 .hero-video-bright video {
-  filter: brightness(1.06) contrast(1.05) saturate(1.06);
+  filter: brightness(1.16) contrast(1.14) saturate(1.1);
 }
 
 /* Florida animated background */
