@@ -18,10 +18,11 @@ export function Hero() {
       <div className="absolute inset-0">
         <VideoBackground
           priority
-          mp4Src="/videos/hero-loop.mp4?v=4"
-          posterSrc="/images/cinematic/hero-poster.jpg?v=4"
+          mp4Src="/videos/hero-loop.mp4?v=5"
+          posterSrc="/images/cinematic/hero-poster.jpg?v=5"
           className="hero-video-bright"
-        />      </div>
+        />
+      </div>
 
       {/* Keep the RIGHT side of the video crystal clear — only shade under copy */}
       <div

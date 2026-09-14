@@ -11,6 +11,8 @@ import { getLocalPageDescription, getLocalPageTitle, formatFullAddress } from "@
 import type { ServiceCategory } from "@/lib/site-config";
 import { JsonLd, breadcrumbSchema, serviceSchema, faqSchema, speakableSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { InternalLinkHub } from "@/components/internal-link-hub";
+import { tampaBayLocationLinks, fenceCategoryLinks, authorityHubLinks } from "@/lib/internal-links";
 
 export function generateStaticParams() {
   return getAllServiceSlugs();
@@ -162,6 +164,20 @@ export default async function ServicePage({
               </ul>
             </div>
 
+
+            <InternalLinkHub
+              title={`${service.name} near you in Tampa Bay`}
+              intro="City pages and this service page reinforce each other for local rankings and AI citations."
+              links={tampaBayLocationLinks()}
+            />
+            {service.category === "fence" ? (
+              <InternalLinkHub title="More fence services" links={fenceCategoryLinks} />
+            ) : (
+              <InternalLinkHub
+                title="Related services"
+                links={[authorityHubLinks.fence, authorityHubLinks.drywall, authorityHubLinks.tvMount, authorityHubLinks.home]}
+              />
+            )}
             <HqDispatch />
 
             <div className="mt-8 text-center">

@@ -5,6 +5,8 @@ import { CTASection } from "@/components/cta-section";
 import { GoogleReviews } from "@/components/google-reviews";
 import { JsonLd, breadcrumbSchema, speakableSchema, serviceSchema } from "@/lib/json-ld";
 import { allLocationLinks, type LocationSilo } from "@/lib/location-silos";
+import { linkifyServiceLabel, authorityHubLinks, fenceCategoryLinks } from "@/lib/internal-links";
+import { InternalLinkHub } from "@/components/internal-link-hub";
 import { siteConfig } from "@/lib/site-config";
 import { CheckCircle, MapPin, Phone } from "lucide-react";
 import { HqDispatch } from "@/components/hq-dispatch";
@@ -96,12 +98,21 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
                 Popular {location.city} Handyman Services
               </h2>
               <ul className="grid gap-3 sm:grid-cols-2">
-                {location.services.map((service) => (
-                  <li key={service} className="flex items-start gap-2 text-sm">
-                    <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(var(--accent))]" />
-                    <span>{service}</span>
-                  </li>
-                ))}
+                {location.services.map((service) => {
+                  const linked = linkifyServiceLabel(service);
+                  return (
+                    <li key={service} className="flex items-start gap-2 text-sm">
+                      <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(var(--accent))]" />
+                      {linked ? (
+                        <Link href={linked.href} className="font-medium text-[hsl(var(--primary))] hover:underline">
+                          {linked.label}
+                        </Link>
+                      ) : (
+                        <span>{service}</span>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 
@@ -129,6 +140,21 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
                 Westchase HQ
               </Link>
             </div>
+            <InternalLinkHub
+              title="Fence services for Tampa Bay yards"
+              links={fenceCategoryLinks}
+            />
+            <InternalLinkHub
+              title="Core Tampa handyman hubs"
+              links={[
+                authorityHubLinks.fence,
+                authorityHubLinks.drywall,
+                authorityHubLinks.tvMount,
+                authorityHubLinks.services,
+                authorityHubLinks.tampa,
+                authorityHubLinks.westchase,
+              ]}
+            />
             <nav className="mt-8" aria-label="Other Tampa Bay service areas">
               <p className="mb-3 text-sm font-semibold">Other areas we cover from Tampa HQ</p>
               <ul className="flex flex-wrap gap-2 text-sm">

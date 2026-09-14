@@ -104,6 +104,26 @@ export const workPhotos: WorkPhoto[] = [
     href: "/services/painting",
   },
   {
+    slug: "fence-repair-tampa",
+    src: "/images/work/fence-repair.jpg",
+    alt: "Wood privacy fence repair with new pickets in a Tampa Bay backyard",
+    caption:
+      "Fence repair Tampa — storm-damaged pickets replaced with fresh boards for a strong, straight privacy line.",
+    service: "Fence Repair",
+    city: "Tampa, FL",
+    href: "/services/fence",
+  },
+  {
+    slug: "fence-post-reset-tampa",
+    src: "/images/work/fence-post-reset.jpg",
+    alt: "Fence post reset with concrete footing and level in Tampa FL",
+    caption:
+      "Fence post reset Tampa — plumb posts set in concrete so leaning sections stop spreading after Florida storms.",
+    service: "Fence Installation",
+    city: "Tampa, FL",
+    href: "/services/fence/fence-repairs-maintenance",
+  },
+  {
     slug: "under-sink-plumbing-tampa",
     src: "/images/work/under-sink-plumbing.jpg",
     alt: "Under-sink plumbing repair in a Tampa kitchen by Handyman Pros FL",
