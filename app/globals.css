@@ -70,6 +70,12 @@
   filter: brightness(1.16) contrast(1.14) saturate(1.1);
 }
 
+/* Prefer the right half of the frame — that's the uncovered clear zone */
+.hero-video-focus-right img,
+.hero-video-focus-right video {
+  object-position: 70% center;
+}
+
 /* Florida animated background */
 .florida-bg {
   position: fixed;
