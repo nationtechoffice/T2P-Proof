@@ -5,7 +5,7 @@ export const instantEstimate = {
   titleSuffix: "Same-Day Help",
   heroHeadline: "Instant Estimates Over the Phone – Speak to a Local Expert Right Now!",
   heroSubhead:
-    "Need a Tampa handyman today? Call now for an instant phone estimate — TV mounting, drywall, and home repairs with fast 24/7 response across Hillsborough & Pinellas.",
+    "Need a licensed Tampa handyman today? Call now for an instant phone estimate — TV mounting, drywall, and home repairs with fast 24/7 response across Hillsborough & Pinellas.",
   ctaLabel: "Get Instant Phone Estimate",
   ctaCallNow: `Call Now: ${siteConfig.phone}`,
   stickyLabel: `Instant Phone Estimate: ${siteConfig.phone}`,
@@ -38,9 +38,9 @@ export function locationDescription(city: string): string {
 
 /** Homepage title — lead with primary search intent “Tampa handyman”. */
 export function homeTitle(): string {
-  return `Tampa Handyman | TV Mounting, Drywall & Home Repair`;
+  return `Tampa Handyman Near Me | Licensed Drywall & TV Mount`;
 }
 
 export function homeDescription(): string {
-  return `Tampa handyman for TV mounting, drywall repair, pressure washing & home fixes across Westchase, Carrollwood & Tampa Bay. Instant phone estimates 24/7 — call ${siteConfig.phone}.`;
+  return `Licensed Tampa handyman near Westchase & Carrollwood. TV mounting, drywall repair, fence fixes & same-day home repair. Instant estimates 24/7 — call ${siteConfig.phone}.`;
 }

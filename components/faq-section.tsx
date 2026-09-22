@@ -16,7 +16,11 @@ const homeFaqs = [
   },
   {
     question: "How much does a handyman cost in Tampa?",
-    answer: "Handyman rates in the Tampa area typically range from $50 to $120 per hour. We also offer flat-rate pricing for common jobs. All estimates are free with no obligation.",
+    answer: "Handyman rates in the Tampa area typically range from $50 to $120 per hour. A typical quick visit is often $150–$250 and a half-day punch list $400–$550, depending on scope and materials. We also offer flat-rate pricing for common jobs. All estimates are free with no obligation.",
+  },
+  {
+    question: "Can I find a handyman near me in Westchase or Carrollwood today?",
+    answer: `Yes. Handyman Pros FL is based in Westchase (ZIP ${siteConfig.primaryZip}) and routinely reaches Carrollwood, Citrus Park, Town 'n' Country, and greater Tampa the same day. Call ${siteConfig.phone} for a same-day window when our route allows.`,
   },
   {
     question: "Do you offer same-day handyman service in Hillsborough County?",

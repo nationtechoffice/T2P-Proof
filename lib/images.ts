@@ -53,3 +53,35 @@ export const galleryImages = workPhotos.slice(0, 8).map((photo) => ({
   src: photo.src,
   alt: photo.alt,
 }));
+
+/** Bright GBP job photos for the homepage hero — no black TV screens. */
+export const heroBackgroundPhotos = [
+  {
+    src: "/images/work/service-van-tampa.jpg",
+    alt: "Handyman Pros FL licensed service van arriving at a Tampa Bay home",
+  },
+  {
+    src: "/images/cinematic/hero-maps-reference.jpg",
+    alt: "Handyman Pros FL crew on a Tampa job — van, fence, and interior wall finish",
+  },
+  {
+    src: "/images/work/fence-repair.jpg",
+    alt: "Wood privacy fence repair in a Tampa Bay backyard with new cedar pickets",
+  },
+  {
+    src: "/images/work/drywall-finish-ladder.jpg",
+    alt: "Handyman finishing an interior wall repair in a Tampa home",
+  },
+  {
+    src: "/images/work/porcelain-tile-install.jpg",
+    alt: "Large-format porcelain floor tile installation in a Tampa kitchen",
+  },
+  {
+    src: "/images/work/bathroom-tile-grout.jpg",
+    alt: "Bathroom wall tile grouting completed by Handyman Pros FL in Tampa",
+  },
+  {
+    src: "/images/cinematic/service-tv-mount.jpg",
+    alt: "TV wall mounting in a bright Tampa living room — screen on, job finished level",
+  },
+] as const;

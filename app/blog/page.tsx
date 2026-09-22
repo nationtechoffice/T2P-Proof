@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
@@ -28,7 +29,17 @@ export default function BlogPage() {
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => (
-              <article key={post.slug} className="card flex flex-col">
+              <article key={post.slug} className="card flex flex-col overflow-hidden !p-0">
+                <Link href={`/blog/${post.slug}`} className="relative block aspect-[16/9]">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                </Link>
+                <div className="flex flex-1 flex-col p-6">
                 <span className="mb-2 text-xs font-semibold uppercase tracking-wider text-[hsl(var(--secondary))]">
                   {post.category}
                 </span>
@@ -48,6 +59,7 @@ export default function BlogPage() {
                 <div className="flex items-center justify-between text-xs text-[hsl(var(--muted-foreground))]">
                   <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
                   <span>{post.readTime} min read</span>
+                </div>
                 </div>
               </article>
             ))}

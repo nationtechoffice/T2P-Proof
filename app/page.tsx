@@ -17,6 +17,7 @@ import { homeTitle, homeDescription } from "@/lib/instant-estimate";
 import { buildMetadata } from "@/lib/seo";
 import { tampaLocalKeywords } from "@/lib/local-seo";
 import Link from "next/link";
+import Image from "next/image";
 import { blogPosts } from "@/lib/blog-posts";
 import { formatDate } from "@/lib/utils";
 import { CheckCircle, MapPin } from "lucide-react";
@@ -38,6 +39,8 @@ export const metadata: Metadata = buildMetadata({
     "drywall repair Tampa",
     "TV mounting Tampa",
     "handyman Carrollwood",
+    "licensed handyman Tampa",
+    "handyman near me Westchase",
     "home repair Tampa Bay",
     ...tampaLocalKeywords.slice(0, 4),
   ],
@@ -57,6 +60,7 @@ export default function HomePage() {
       <Hero />
 
       <FeaturedServiceCards />
+      <PhotoGallery />
       <CoverageAreasMotion />
       <BeforeAfterShowcase />
 
@@ -68,7 +72,7 @@ export default function HomePage() {
                 Tampa handyman · one crew
               </p>
               <h2 className="mb-4 font-display text-3xl font-bold md:text-4xl">
-                Tampa handyman you can call today
+                Tampa handyman near me — Westchase HQ
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-[hsl(var(--muted-foreground))]">
                 Looking for a Tampa handyman near Westchase, Carrollwood, or Citrus Park? Handyman Pros FL is one local crew — TV mounting, drywall repair, pressure washing, and home fixes with same-day help across Hillsborough &amp; Pinellas.
@@ -189,7 +193,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <PhotoGallery />
       <GoogleReviews />
 
       <section className="section-padding relative">
@@ -202,7 +205,17 @@ export default function HomePage() {
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {recentPosts.map((post) => (
-              <article key={post.slug} className="card flex flex-col">
+              <article key={post.slug} className="card flex flex-col !p-0 overflow-hidden">
+                <Link href={`/blog/${post.slug}`} className="relative block aspect-[16/9]">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                </Link>
+                <div className="flex flex-1 flex-col p-6">
                 <span className="mb-2 text-xs font-semibold uppercase tracking-wider text-[hsl(var(--accent))]">
                   {post.category}
                 </span>
@@ -215,6 +228,7 @@ export default function HomePage() {
                 <div className="flex items-center justify-between text-xs text-[hsl(var(--muted-foreground))]">
                   <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
                   <span>{post.readTime} min read</span>
+                </div>
                 </div>
               </article>
             ))}

@@ -5,7 +5,7 @@ export const siteConfig = {
   domain: "handymanprosflorida.com",
   url: "https://handymanprosflorida.com",
   description:
-    "Handyman in Tampa, Westchase, Carrollwood & Tampa Bay. Drywall repair, TV mounting, pressure washing, ceiling fans & home repairs. Instant phone estimates 24/7 — call (656) 205-3185.",
+    "Licensed Tampa handyman near Westchase, Carrollwood & Tampa Bay. Drywall repair, TV mounting, pressure washing, ceiling fans & home repairs. Instant phone estimates 24/7 — call (656) 205-3185.",
   tagline: "Instant Estimates Over the Phone – Speak to a Local Expert Right Now!",
   phone: "(656) 205-3185",
   /** Click-to-call href value used sitewide */

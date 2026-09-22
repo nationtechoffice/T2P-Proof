@@ -6,33 +6,20 @@ import { Phone } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { instantEstimate } from "@/lib/instant-estimate";
 import { TrustBadges } from "@/components/trust-badges";
-import { VideoBackground } from "@/components/video-background";
+import { HeroPhotoReel } from "@/components/hero-photo-reel";
 
 /**
- * Bright cinematic hero — RIGHT half is uncovered job video (no washout).
- * Copy lives on a solid left panel so the footage stays sharp and readable.
+ * Photo-first hero using real Google Maps job photos.
+ * Text sits on a partial gradient so the work stays visible — no full-bleed black panel.
  */
 export function Hero() {
   return (
-    <section className="relative isolate min-h-[min(92vh,880px)] overflow-hidden bg-[hsl(210_45%_10%)]">
-      {/* Full-bleed video; framed to the right so jobs stay visible */}
-      <div className="absolute inset-0">
-        <VideoBackground
-          priority
-          mp4Src="/videos/hero-loop.mp4?v=7"
-          posterSrc="/images/cinematic/hero-poster.jpg?v=7"
-          className="hero-video-bright hero-video-focus-right"
-        />
-      </div>
+    <section className="relative isolate min-h-[min(92vh,880px)] overflow-hidden bg-slate-200">
+      <HeroPhotoReel />
 
-      {/* Solid left readability panel — does NOT tint the right-side video */}
+      {/* Readability wash only — image stays visible on mobile and desktop */}
       <div
-        className="absolute inset-y-0 left-0 z-[1] w-full bg-[hsl(210_50%_8%)] md:w-[46%] lg:w-[42%]"
-        aria-hidden
-      />
-      {/* Soft seam only — keeps edge clean without darkening the job footage */}
-      <div
-        className="absolute inset-y-0 left-0 z-[1] hidden w-[52%] bg-gradient-to-r from-[hsl(210_50%_8%)] from-80% to-transparent md:block lg:w-[48%]"
+        className="absolute inset-0 z-[1] bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-slate-950/15 md:bg-gradient-to-r md:from-slate-950/80 md:via-slate-950/45 md:to-transparent"
         aria-hidden
       />
 
@@ -44,7 +31,7 @@ export function Hero() {
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.32em] text-[hsl(var(--accent))] sm:text-sm">
-            Tampa handyman · Westchase · Tampa Bay
+            Tampa handyman near me · Westchase · Licensed &amp; Insured
           </p>
 
           <p
@@ -58,7 +45,7 @@ export function Hero() {
             Tampa handyman near you — TV mounting, drywall &amp; home repair
           </h1>
 
-          <p className="mb-8 max-w-md text-base leading-relaxed text-slate-200 md:text-lg">
+          <p className="mb-8 max-w-md text-base leading-relaxed text-slate-100 md:text-lg">
             {instantEstimate.heroSubhead}
           </p>
 
