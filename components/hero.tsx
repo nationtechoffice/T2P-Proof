@@ -18,8 +18,8 @@ export function Hero() {
       <div className="relative h-[50vh] min-h-[300px] w-full md:absolute md:inset-0 md:h-auto md:min-h-0">
         <VideoBackground
           priority
-          mp4Src="/videos/hero-loop.mp4?v=8"
-          posterSrc="/images/cinematic/hero-poster.jpg?v=8"
+          mp4Src="/videos/hero-loop.mp4?v=9"
+          posterSrc="/images/cinematic/hero-poster.jpg?v=9"
         />
       </div>
 

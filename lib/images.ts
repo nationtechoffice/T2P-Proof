@@ -54,19 +54,19 @@ export const galleryImages = workPhotos.slice(0, 8).map((photo) => ({
   alt: photo.alt,
 }));
 
-/** Real Google Maps job photos — used as the hero video slideshow. */
+/** Real Google Maps handyman job photos — used as the hero video slideshow. */
 export const heroBackgroundPhotos = [
   {
-    src: "/images/work/fence-repair.jpg",
-    alt: "Wood privacy fence repair in a Tampa Bay backyard with new cedar pickets",
+    src: "/images/work/drywall-finish-ladder.jpg",
+    alt: "Handyman finishing an interior wall repair in a Tampa home",
   },
   {
     src: "/images/work/maps-baseboard-paint.jpg",
     alt: "Handyman Pros FL technician painting a baseboard in a Tampa home",
   },
   {
-    src: "/images/work/drywall-finish-ladder.jpg",
-    alt: "Handyman finishing an interior wall repair in a Tampa home",
+    src: "/images/work/wall-patch-repair.jpg",
+    alt: "Handyman Pros FL technician completing interior wall repair in Tampa",
   },
   {
     src: "/images/work/porcelain-tile-install.jpg",
