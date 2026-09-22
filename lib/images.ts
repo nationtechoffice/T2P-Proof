@@ -57,6 +57,10 @@ export const galleryImages = workPhotos.slice(0, 8).map((photo) => ({
 /** Bright GBP job photos for the homepage hero — no black TV screens. */
 export const heroBackgroundPhotos = [
   {
+    src: "/images/gmb/cover-1920x1080.jpg",
+    alt: "Handyman Pros FL van and technician arriving at a Tampa Bay home",
+  },
+  {
     src: "/images/work/service-van-tampa.jpg",
     alt: "Handyman Pros FL licensed service van arriving at a Tampa Bay home",
   },
