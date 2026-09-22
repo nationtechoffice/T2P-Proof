@@ -28,7 +28,7 @@ export const existingBlogPosts: BlogPost[] = [
     category: "Handyman Tips",
     tags: ["handyman", "hiring guide", "Florida home repair"],
     readTime: 8,
-    image: "/images/blog/choose-handyman.jpg",
+    image: "/images/work/service-van-tampa.jpg",
     content: `## What Is a Handyman?
 
 A handyman (also called a handywoman or handyperson) is a skilled professional who handles a wide range of home repair, maintenance, and improvement tasks. In Florida, handymen commonly perform drywall repair, painting, fixture installation, furniture assembly, TV mounting, and general home maintenance.
@@ -88,7 +88,7 @@ Handyman Pros FL serves homeowners across Tampa Bay — including Westchase, Car
     category: "Painting",
     tags: ["exterior painting", "Florida climate", "paint tips"],
     readTime: 7,
-    image: "/images/blog/exterior-paint.jpg",
+    image: "/images/work/exterior-trim-gutters.jpg",
     content: `## Why Florida's Climate Is Hard on Exterior Paint
 
 Florida experiences intense UV radiation, high humidity (averaging 74% year-round), frequent rain, and salt air in coastal areas. Standard exterior paints that work in northern climates often fail within 2-3 years in Florida.
@@ -201,7 +201,7 @@ Handyman Pros FL installs all fence types across Tampa Bay. Our free consultatio
     category: "Home Maintenance",
     tags: ["hurricane prep", "Florida maintenance", "storm preparation"],
     readTime: 9,
-    image: "/images/blog/hurricane-prep.jpg",
+    image: "/images/work/fence-repair.jpg",
     content: `## When Is Hurricane Season in Florida?
 
 Atlantic hurricane season runs from June 1 through November 30, with peak activity between August and October. Florida homeowners should complete preparation tasks by May each year.
@@ -267,7 +267,7 @@ Handyman Pros Florida offers emergency repair services during hurricane season. 
     category: "Handyman Tips",
     tags: ["drywall repair", "cost guide", "home repair pricing"],
     readTime: 6,
-    image: "/images/blog/drywall-repair.jpg",
+    image: "/images/work/drywall-finish-ladder.jpg",
     content: `## Average Drywall Repair Costs in Florida
 
 Drywall repair costs in Florida depend on damage size, location, and whether texture matching and painting are included.
@@ -317,7 +317,7 @@ Handyman Pros Florida provides free drywall repair estimates with transparent, u
     category: "Handyman Tips",
     tags: ["TV mounting", "home entertainment", "wall mounting"],
     readTime: 5,
-    image: "/images/blog/tv-mounting.jpg",
+    image: "/images/cinematic/service-tv-mount.jpg",
     content: `## What Is the Best TV Mounting Height?
 
 The ideal TV mounting height places the center of the screen at eye level when seated. For most living rooms, this is 42-48 inches from the floor to the center of the TV.

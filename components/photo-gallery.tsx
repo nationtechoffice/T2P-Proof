@@ -3,10 +3,11 @@ import Link from "next/link";
 import { galleryImages } from "@/lib/images";
 import { JsonLd } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { googleBusiness } from "@/lib/google-business";
 
 /** Compact homepage teaser — full captioned gallery lives on /work. */
 export function PhotoGallery() {
-  const preview = galleryImages.slice(0, 4);
+  const preview = galleryImages.slice(0, 8);
 
   return (
     <section className="section-padding relative pt-0">
@@ -28,7 +29,16 @@ export function PhotoGallery() {
         <div className="mx-auto mb-8 max-w-3xl text-center">
           <h2 className="mb-3 text-3xl font-bold md:text-4xl">Recent Handyman Work</h2>
           <p className="text-[hsl(var(--muted-foreground))]">
-            Real Google Maps job photos — drywall, tile, flooring, and exterior work across Tampa Bay.
+            Real Google Maps job photos — drywall, tile, flooring, and exterior work across Tampa Bay.{" "}
+            <a
+              href={googleBusiness.shareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[hsl(var(--primary))] underline underline-offset-4"
+            >
+              See more on our Google listing
+            </a>
+            .
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

@@ -10,8 +10,8 @@ const featuredServices = [
     title: "Drywall Repair",
     description: "Clean patches, texture matching, and paint-ready finishes for Tampa homes.",
     href: "/services/handyman/drywall-repair",
-    imageSrc: "/images/cinematic/service-drywall.jpg",
-    imageAlt: "Professional drywall patching and finishing in a modern Florida home",
+    imageSrc: "/images/work/drywall-finish-ladder.jpg",
+    imageAlt: "Handyman finishing drywall repair on an interior Tampa wall",
     icon: <Hammer className="h-5 w-5" />,
   },
   {
@@ -19,7 +19,7 @@ const featuredServices = [
     description: "Centered, secure wall mounts with clean cable routing and level results.",
     href: "/services/handyman/tv-mounting",
     imageSrc: "/images/cinematic/service-tv-mount.jpg",
-    imageAlt: "Flat-screen TV professionally mounted on a living room wall",
+    imageAlt: "Handyman leveling a wall-mounted TV in a bright Tampa living room",
     icon: <Monitor className="h-5 w-5" />,
   },
   {
