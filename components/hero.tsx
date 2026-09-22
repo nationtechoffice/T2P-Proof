@@ -17,15 +17,15 @@ export function Hero() {
     <section className="relative isolate min-h-[min(92vh,880px)] overflow-hidden bg-slate-200">
       <HeroPhotoReel />
 
-      {/* Readability wash only — image stays visible on mobile and desktop */}
+      {/* Readability wash only — image stays visible; darker on mobile so white van copy still reads */}
       <div
-        className="absolute inset-0 z-[1] bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-slate-950/15 md:bg-gradient-to-r md:from-slate-950/80 md:via-slate-950/45 md:to-transparent"
+        className="absolute inset-0 z-[1] bg-gradient-to-t from-slate-950/90 via-slate-950/70 to-slate-950/45 md:bg-gradient-to-r md:from-slate-950/80 md:via-slate-950/45 md:to-transparent"
         aria-hidden
       />
 
-      <div className="container-site relative z-10 flex min-h-[min(92vh,880px)] items-center py-20 md:py-24">
+      <div className="container-site relative z-10 flex min-h-[min(92vh,880px)] items-end py-24 md:items-center md:py-24">
         <motion.div
-          className="hero-speakable max-w-md text-white md:max-w-lg"
+          className="hero-speakable max-w-md rounded-2xl bg-slate-950/55 p-5 text-white backdrop-blur-sm md:max-w-lg md:bg-transparent md:p-0 md:backdrop-blur-none"
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
