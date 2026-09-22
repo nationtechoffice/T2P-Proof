@@ -14,6 +14,46 @@ export interface WorkPhoto {
  */
 export const workPhotos: WorkPhoto[] = [
   {
+    slug: "maps-baseboard-paint-tampa",
+    src: "/images/work/maps-baseboard-paint.jpg",
+    alt: "Handyman Pros FL technician painting a baseboard in a Tampa home",
+    caption:
+      "Interior paint Tampa — baseboard cut-in and wall finish by the same licensed crew customers see on Google Maps.",
+    service: "Interior Painting",
+    city: "Tampa, FL",
+    href: "/services/painting",
+  },
+  {
+    slug: "maps-insulation-room-tampa",
+    src: "/images/work/maps-insulation-room.jpg",
+    alt: "Interior insulation and wainscoting work in a Tampa home",
+    caption:
+      "Insulation & trim Tampa — open-wall insulation, window, and beadboard work documented on the Google listing.",
+    service: "Interior Remodel",
+    city: "Tampa, FL",
+    href: "/services",
+  },
+  {
+    slug: "maps-builtin-dresser-tampa",
+    src: "/images/work/maps-builtin-dresser.jpg",
+    alt: "Built-in dresser carpentry in progress in a Tampa home",
+    caption:
+      "Built-in carpentry Tampa — cane-front dressers set as a custom wall unit with the drill still on the floor.",
+    service: "Carpentry",
+    city: "Tampa, FL",
+    href: "/services",
+  },
+  {
+    slug: "maps-ceiling-fan-tampa",
+    src: "/images/work/maps-ceiling-fan.jpg",
+    alt: "Bathroom ceiling fan and light installed in a Tampa home",
+    caption:
+      "Ceiling fan Tampa — flush-mount fan and light installed over a tiled shower, level and ready to use.",
+    service: "Electrical Fixtures",
+    city: "Tampa, FL",
+    href: "/services/electrical-fixture-installation",
+  },
+  {
     slug: "service-van-tampa",
     src: "/images/work/service-van-tampa.jpg",
     alt: "Handyman Pros FL branded service van arriving for a Tampa Bay home repair",

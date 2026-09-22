@@ -54,23 +54,15 @@ export const galleryImages = workPhotos.slice(0, 8).map((photo) => ({
   alt: photo.alt,
 }));
 
-/** Bright GBP job photos for the homepage hero — no black TV screens. */
+/** Real Google Maps job photos — used as the hero video slideshow. */
 export const heroBackgroundPhotos = [
-  {
-    src: "/images/gmb/cover-1920x1080.jpg",
-    alt: "Handyman Pros FL van and technician arriving at a Tampa Bay home",
-  },
-  {
-    src: "/images/work/service-van-tampa.jpg",
-    alt: "Handyman Pros FL licensed service van arriving at a Tampa Bay home",
-  },
-  {
-    src: "/images/cinematic/hero-maps-reference.jpg",
-    alt: "Handyman Pros FL crew on a Tampa job — van, fence, and interior wall finish",
-  },
   {
     src: "/images/work/fence-repair.jpg",
     alt: "Wood privacy fence repair in a Tampa Bay backyard with new cedar pickets",
+  },
+  {
+    src: "/images/work/maps-baseboard-paint.jpg",
+    alt: "Handyman Pros FL technician painting a baseboard in a Tampa home",
   },
   {
     src: "/images/work/drywall-finish-ladder.jpg",
@@ -81,8 +73,16 @@ export const heroBackgroundPhotos = [
     alt: "Large-format porcelain floor tile installation in a Tampa kitchen",
   },
   {
-    src: "/images/work/bathroom-tile-grout.jpg",
-    alt: "Bathroom wall tile grouting completed by Handyman Pros FL in Tampa",
+    src: "/images/work/maps-builtin-dresser.jpg",
+    alt: "Built-in dresser carpentry in progress in a Tampa home",
+  },
+  {
+    src: "/images/work/accent-wall-flooring.jpg",
+    alt: "Wood slat accent wall and flooring in a Tampa home office",
+  },
+  {
+    src: "/images/work/maps-insulation-room.jpg",
+    alt: "Interior insulation and wainscoting work in a Tampa home",
   },
   {
     src: "/images/cinematic/service-tv-mount.jpg",

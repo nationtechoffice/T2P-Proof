@@ -6,21 +6,25 @@ import { Phone } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { instantEstimate } from "@/lib/instant-estimate";
 import { TrustBadges } from "@/components/trust-badges";
-import { HeroPhotoReel } from "@/components/hero-photo-reel";
+import { VideoBackground } from "@/components/video-background";
 
 /**
- * Mobile: photo band is its own block — nothing covers it.
- * Desktop: full-bleed photo with a left-only gradient for copy.
+ * Live looping job-photo video. Mobile keeps the footage in its own
+ * uncovered band so it cannot be hidden by a black panel.
  */
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-white">
-      <div className="relative h-[48vh] min-h-[280px] w-full md:absolute md:inset-0 md:h-auto md:min-h-0">
-        <HeroPhotoReel />
+      <div className="relative h-[50vh] min-h-[300px] w-full md:absolute md:inset-0 md:h-auto md:min-h-0">
+        <VideoBackground
+          priority
+          mp4Src="/videos/hero-loop.mp4?v=8"
+          posterSrc="/images/cinematic/hero-poster.jpg?v=8"
+        />
       </div>
 
       <div
-        className="pointer-events-none absolute inset-0 z-[1] hidden bg-gradient-to-r from-slate-950/82 via-slate-950/42 to-transparent md:block"
+        className="pointer-events-none absolute inset-0 z-[1] hidden bg-gradient-to-r from-slate-950/82 via-slate-950/40 to-transparent md:block"
         aria-hidden
       />
 
