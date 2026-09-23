@@ -311,7 +311,7 @@ export const categoryMeta: Record<ServiceCategory, { name: string; title: string
   handyman: {
     name: "Handyman Services",
     title: "Handyman Services in Tampa",
-    description: "Licensed handyman services in Tampa, Westchase, Carrollwood & Hillsborough County. Drywall, TV mounting, furniture assembly, repairs & more. Open 24/7.",
+    description: "Licensed handyman services in Tampa, Westchase, Carrollwood & Hillsborough County. Drywall, TV mounting, tile installation, furniture assembly, repairs & more. Open 24/7.",
     icon: "wrench",
   },
   painting: {

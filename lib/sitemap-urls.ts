@@ -15,6 +15,9 @@ const REDIRECTED_PATHS = [
   "/services/handyman/drywall-repair",
   "/services/drywall-repair-tampa",
   "/services/fan-installation",
+  "/services/handyman/tile-installation",
+  "/services/tile-install",
+  "/services/install-replace-tile",
   "/services/same-day",
   "/same-day",
   "/same-day-handyman",
@@ -92,6 +95,7 @@ export function sitemapPriority(url: string): number {
     url.endsWith("/services/tv-wall-mounting") ||
     url.endsWith("/services/drywall-repair") ||
     url.endsWith("/services/same-day-handyman") ||
+    url.endsWith("/services/tile-installation") ||
     url.endsWith("/services/handyman/fan-installation")
   ) {
     return 0.9;

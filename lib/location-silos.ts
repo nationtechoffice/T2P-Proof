@@ -320,6 +320,7 @@ export const locationSilos: LocationSilo[] = [
       "Whether you are near Dale Mabry, Van Dyke, or further into Lutz’s residential pockets, we show up prepared and leave the job site tidy.",
     ],
     relatedPaths: [
+      { href: "/services/tile-installation", label: "Tile Installation Tampa" },
       { href: "/handyman-wesley-chapel-fl", label: "Handyman Wesley Chapel FL" },
       { href: "/handyman-carrollwood-fl", label: "Handyman Carrollwood FL" },
       { href: "/locations/oldsmar-fl", label: "Handyman Oldsmar FL" },

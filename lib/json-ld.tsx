@@ -177,6 +177,7 @@ export function serviceSchema(service: {
   category: string;
   areaName?: string;
   image?: string;
+  offer?: { low: number; high: number; description: string };
 }) {
   const areaName = service.areaName || "Tampa, FL";
   const image = service.image
@@ -218,6 +219,23 @@ export function serviceSchema(service: {
       servicePhone: siteConfig.phoneE164,
       serviceLocation: { "@id": `${siteConfig.url}/#organization` },
     },
+    ...(service.offer
+      ? {
+          offers: {
+            "@type": "Offer",
+            url: service.url,
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            description: service.offer.description,
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              priceCurrency: "USD",
+              minPrice: service.offer.low,
+              maxPrice: service.offer.high,
+            },
+          },
+        }
+      : {}),
     potentialAction: {
       "@type": "CommunicateAction",
       name: instantEstimate.ctaLabel,

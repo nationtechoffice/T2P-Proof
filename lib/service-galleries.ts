@@ -147,6 +147,14 @@ export function galleryForPage(categoryOrSlug: string, slug?: string): ServicePh
   }
   if (key === "furniture-assembly") return furnitureGallery;
   if (key === "same-day-handyman") return sameDayGallery;
+  if (
+    key === "tile-installation" ||
+    key === "tile-install" ||
+    key === "tile-work-installation" ||
+    key === "tile-work-replacement"
+  ) {
+    return tileGallery;
+  }
   if (key === "door-repair") return [];
   if (key === "fence" || category === "fence") return fenceGallery;
   if (key.includes("tile")) return tileGallery;

@@ -12,6 +12,9 @@ const ALIAS_REDIRECTS: Record<string, string> = {
   "/services/handyman/drywall-repair": "/services/drywall-repair",
   "/services/handyman/furniture-assembly": "/services/furniture-assembly",
   "/services/drywall-repair-tampa": "/services/drywall-repair",
+  "/services/handyman/tile-installation": "/services/tile-installation",
+  "/services/tile-install": "/services/tile-installation",
+  "/services/install-replace-tile": "/services/tile-installation",
 };
 
 export function middleware(request: NextRequest) {
@@ -34,5 +37,8 @@ export const config = {
     "/services/handyman/drywall-repair",
     "/services/handyman/furniture-assembly",
     "/services/drywall-repair-tampa",
+    "/services/handyman/tile-installation",
+    "/services/tile-install",
+    "/services/install-replace-tile",
   ],
 };

@@ -71,7 +71,7 @@ export const workPhotos: WorkPhoto[] = [
       "Tile & grout Tampa — terracotta floor joints packed, cleaned, and vacuum-prepped for a durable commercial-kitchen finish.",
     service: "Tile & Grout",
     city: "Tampa, FL",
-    href: "/services/handyman/tile-work-installation",
+    href: "/services/tile-installation",
   },
   {
     slug: "bathroom-tile-grout-tampa",
@@ -81,7 +81,7 @@ export const workPhotos: WorkPhoto[] = [
       "Bathroom tile Tampa — white wall tile floated and grouted clean for a sharp, water-ready remodel finish.",
     service: "Tile Installation",
     city: "Tampa, FL",
-    href: "/services/handyman/tile-work-installation",
+    href: "/services/tile-installation",
   },
   {
     slug: "porcelain-tile-install-tampa",
@@ -91,7 +91,7 @@ export const workPhotos: WorkPhoto[] = [
       "Porcelain tile install Tampa — large-format marble-look flooring leveled with spacers for a flat, modern kitchen floor.",
     service: "Flooring",
     city: "Tampa, FL",
-    href: "/services/handyman/tile-work-installation",
+    href: "/services/tile-installation",
   },
   {
     slug: "accent-wall-flooring-tampa",

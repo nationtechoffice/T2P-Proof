@@ -193,7 +193,13 @@ export function priorityInspectUrls(allUrls: string[]): string[] {
     ) {
       return 1;
     }
-    if (url.includes("/services/tv-wall-mounting") || url.includes("/services/drywall-repair")) return 2;
+    if (
+      url.includes("/services/tv-wall-mounting") ||
+      url.includes("/services/drywall-repair") ||
+      url.includes("/services/tile-installation")
+    ) {
+      return 2;
+    }
     if (url.endsWith("/contact") || url.endsWith("/services")) return 3;
     return 9;
   };

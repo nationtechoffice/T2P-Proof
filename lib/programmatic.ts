@@ -53,6 +53,8 @@ export interface CoreService {
   paragraphs: string[];
   bullets: string[];
   faqs: { question: string; answer: string }[];
+  /** Typical visit range for Service/Offer schema. Full remodels stay quoted separately. */
+  offer?: { low: number; high: number; description: string };
 }
 
 export interface TargetLocation {
@@ -308,6 +310,66 @@ export const coreServices: CoreService[] = [
           "Texture-matched ceiling repairs need dry time. Discontinued parts we have to buy, and work that needs a permit, usually wait. New electrical circuits, running new wire, and panel work need a licensed electrician — those are not a same-day handyman add-on.",
       },
     ],
+  },
+  {
+    slug: "tile-installation",
+    name: "Tile Installation",
+    h1: "Tile Installation in Tampa, FL",
+    keyword: "tile installation Tampa",
+    image: "/images/work/porcelain-tile-install.jpg",
+    imageAlt: "Large-format porcelain floor tile installation in a Tampa kitchen",
+    intro:
+      "Need tile installed or replaced in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew that sets kitchen backsplashes, bathroom wall tile, floor-tile sections, and cracked-tile patches — dispatched from our only Westchase headquarters.",
+    paragraphs: [
+      "Tile installation in Tampa Bay is a handyman visit, not a flooring-company package for the whole house. Homeowners in Westchase, Carrollwood, Citrus Park, and Town 'N' Country call when a kitchen backsplash stops halfway, a shower wall has a cracked row, or a few floor tiles popped after Florida humidity worked the thinset loose.",
+      "We install and replace ceramic, porcelain, and subway tile the room already uses. Bring the boxes, or we pick up a stocked match when the store still has it. The visit is layout, cuts, spacers, thinset, and grout. We are not a flooring showroom, and we do not bid whole-home floor packages the way a flooring contractor does.",
+      "A sound wall or floor matters more than a pretty tile. We check for soft spots, hollow tile, and loose backer before we set anything new. If the subfloor is failing, or a shower needs a full waterproofing rebuild, we say so before we cover it. Cosmetic tile over a wet wall does not last in Hillsborough County humidity.",
+      "Jobs that fit this page: a kitchen backsplash, bathroom wall tile or a tub surround on a solid wall, a section of floor tile, grout repair, and one-for-one replacement of cracked pieces when a match exists. Discontinued tile gets an honest conversation — a border or a complementary field, not a claim that a close color is an exact match.",
+      `Call ${siteConfig.phone} or send photos on the quote form. Small patches and backsplashes are often scheduled the same week from Westchase. Grout needs cure time before anyone walks the floor, so a same-day finish depends on how much tile is being set. The crew is licensed and insured, with one Tampa / Westchase headquarters and no second branch.`,
+    ],
+    bullets: [
+      "Kitchen backsplash install and replace",
+      "Bathroom wall tile and tub surrounds on a sound wall",
+      "Floor-tile sections and cracked-tile replacement",
+      "Grout repair and one-for-one patches when a match exists",
+    ],
+    faqs: [
+      {
+        question: "How much does tile installation cost in Tampa?",
+        answer:
+          "A typical Tampa Bay handyman tile visit — a cracked-tile patch or a standard kitchen backsplash — is often quoted from about $175 to $700 after we see photos and know whether the tile is already on site. A full bathroom, or a floor that needs substrate repair, is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
+      },
+      {
+        question: "Can you replace a few cracked tiles without redoing the whole floor?",
+        answer:
+          "Yes, when the surrounding tile is solid and we can match size and color. We cut out the damaged pieces, check the substrate, set replacements, and grout to the existing joints. If the tile is discontinued, we tell you before we start.",
+      },
+      {
+        question: "Do you install and replace tile in Westchase?",
+        answer: `Yes. The truck leaves our only headquarters in Westchase ZIP 33626. Westchase, Carrollwood, Citrus Park, Town 'N' Country, and Tampa are the usual routes. Call ${siteConfig.phone}. We are licensed and insured.`,
+      },
+      {
+        question: "Is this a flooring company or a handyman tile job?",
+        answer:
+          "Handyman-scope tile. We install and replace backsplashes, wall tile, and floor sections. We are not a flooring showroom and we do not sell whole-house floor packages. If the job needs a structural subfloor rebuild or a permitted shower waterproofing system, we say so instead of forcing it into a handyman visit.",
+      },
+      {
+        question: "When should I call for tile repair instead of full replacement?",
+        answer:
+          "Call for repair when a few tiles are cracked, grout is missing, or a backsplash stops mid-wall. Call for replacement when a whole field is loose, the wall is soft behind the tile, or you want a new layout in that room. Photos help us tell which one it is before the truck rolls.",
+      },
+      {
+        question: "How does a tile install visit work?",
+        answer:
+          "You call or send photos. We confirm the tile is on site or name what we need to pick up, then check the wall or floor. Damaged pieces come out, the surface gets prepped, new tile is set level, and grout goes in after the thinset is ready. We walk the result with you and tell you how long to stay off the floor.",
+      },
+    ],
+    offer: {
+      low: 175,
+      high: 700,
+      description:
+        "Typical licensed handyman tile visit in Tampa Bay for patches, backsplashes, and small floor or wall sections. Full baths and substrate rebuilds are quoted separately.",
+    },
   },
 ];
 

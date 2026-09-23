@@ -14,11 +14,20 @@ import { siteConfig } from "@/lib/site-config";
 import { CheckCircle } from "lucide-react";
 import { ServicePhotoGallery } from "@/components/service-photo-gallery";
 import { galleryForPage } from "@/lib/service-galleries";
+import { authorityHubLinks } from "@/lib/internal-links";
 
 export function CoreServiceLanding({ service }: { service: CoreService }) {
   const pageUrl = `${siteConfig.url}/services/${service.slug}`;
   const photos = galleryForPage(service.slug);
   const primaryImage = photos[0]?.src;
+  const relatedServices = [
+    authorityHubLinks.drywall,
+    authorityHubLinks.tvMount,
+    authorityHubLinks.tile,
+    authorityHubLinks.fans,
+    authorityHubLinks.sameDay,
+    authorityHubLinks.westchase,
+  ].filter((link) => link.href !== `/services/${service.slug}`);
 
   return (
     <>
@@ -36,6 +45,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
             category: "Handyman",
             areaName: "Tampa, FL",
             image: primaryImage,
+            offer: service.offer,
           }),
           faqSchema(service.faqs),
         ]}
@@ -73,6 +83,19 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
                 <li key={item} className="flex items-start gap-2 text-sm">
                   <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(var(--accent))]" />
                   {item}
+                </li>
+              ))}
+            </ul>
+            <h2 className="mt-10 mb-4 text-2xl font-bold">Related Tampa Bay services</h2>
+            <ul className="mb-8 flex flex-wrap gap-2 text-sm">
+              {relatedServices.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="rounded-full bg-white px-3 py-1.5 shadow-sm hover:text-[hsl(var(--accent))]"
+                  >
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>

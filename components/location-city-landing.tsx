@@ -79,6 +79,15 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                   explains which jobs fit today and which ones wait.
                 </p>
               ) : null}
+              {location.slug === "westchase-fl" ? (
+                <p>
+                  Westchase kitchens and baths are a short drive from headquarters.{" "}
+                  <Link href="/services/tile-installation" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Tile installation and replacement in Tampa and Westchase
+                  </Link>{" "}
+                  covers backsplashes, wall tile, floor sections, and cracked-tile patches.
+                </p>
+              ) : null}
               {nearby.length > 0 ? (
                 <p>
                   From {location.city} we regularly continue to{" "}

@@ -9,6 +9,7 @@ export const authorityHubLinks = {
   drywall: { href: "/services/drywall-repair", label: "Drywall Repair Tampa" },
   tvMount: { href: "/services/tv-wall-mounting", label: "TV Mounting Tampa" },
   fans: { href: "/services/handyman/fan-installation", label: "Ceiling Fan Installation Tampa" },
+  tile: { href: "/services/tile-installation", label: "Tile Installation Tampa" },
   sameDay: { href: "/services/same-day-handyman", label: "Same-Day Handyman Tampa" },
   locations: { href: "/locations", label: "Tampa Bay Service Areas" },
   tampa: { href: "/locations/tampa", label: "Handyman Tampa FL" },
@@ -100,6 +101,9 @@ export function linkifyServiceLabel(label: string): { href: string; label: strin
   }
   if (lower.includes("fan")) {
     return { href: "/services/handyman/fan-installation", label };
+  }
+  if (lower.includes("tile") || lower.includes("backsplash") || lower.includes("grout")) {
+    return { href: "/services/tile-installation", label };
   }
   if (lower.includes("electrical") || lower.includes("fixture")) {
     return { href: "/services/electrical-fixture-installation", label };

@@ -129,6 +129,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 authorityHubLinks.fence,
                 authorityHubLinks.drywall,
                 authorityHubLinks.tvMount,
+                authorityHubLinks.tile,
                 authorityHubLinks.fans,
                 authorityHubLinks.sameDay,
                 authorityHubLinks.services,

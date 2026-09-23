@@ -154,6 +154,15 @@ export default async function ServicePage({
                 </Link>
                 .
               </p>
+              {service.slug.includes("tile") || service.slug.includes("floor") ? (
+                <p className="mt-4 text-sm text-[hsl(var(--muted-foreground))]">
+                  For install and replace visits, see{" "}
+                  <Link href="/services/tile-installation" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                    tile installation in Tampa and Westchase
+                  </Link>
+                  .
+                </p>
+              ) : null}
             </div>
 
             <div className="mb-8">
@@ -187,6 +196,7 @@ export default async function ServicePage({
                   authorityHubLinks.fence,
                   authorityHubLinks.drywall,
                   authorityHubLinks.tvMount,
+                  authorityHubLinks.tile,
                   authorityHubLinks.fans,
                   authorityHubLinks.sameDay,
                   authorityHubLinks.home,
