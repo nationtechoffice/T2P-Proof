@@ -20,6 +20,7 @@ export function Hero() {
           priority
           mp4Src="/videos/hero-loop.mp4?v=9"
           posterSrc="/images/cinematic/hero-poster.jpg?v=9"
+          posterAlt="Handyman Pros FL technician on a Tampa drywall, paint, and TV mounting job"
         />
       </div>
 

@@ -36,6 +36,7 @@ export async function generateMetadata({
     keywords: [...service.keywords.slice(0, 6), `${service.name} Tampa`],
     exactTitle: true,
     ogImage: photo ? `${siteConfig.url}${photo.src}` : undefined,
+    ogAlt: photo?.alt,
   });
 }
 

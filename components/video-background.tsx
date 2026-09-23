@@ -6,6 +6,7 @@ type VideoBackgroundProps = {
   mp4Src: string;
   webmSrc?: string;
   posterSrc: string;
+  posterAlt?: string;
   className?: string;
   /** Below-fold clips only — hero should keep this false/omit. */
   lazy?: boolean;
@@ -21,6 +22,7 @@ export function VideoBackground({
   mp4Src,
   webmSrc,
   posterSrc,
+  posterAlt = "Handyman Pros FL technician on a Tampa drywall, paint, and TV mounting job",
   className = "",
   lazy = false,
   priority = false,
@@ -156,8 +158,7 @@ export function VideoBackground({
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={posterSrc}
-        alt=""
-        aria-hidden="true"
+        alt={posterAlt}
         decoding={priority ? "sync" : "async"}
         fetchPriority={priority ? "high" : "auto"}
         className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${

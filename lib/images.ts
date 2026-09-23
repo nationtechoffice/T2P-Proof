@@ -1,5 +1,3 @@
-import { workPhotos } from "./work-showcase";
-
 export const siteImages = {
   logo: {
     src: "/images/logo.svg",
@@ -44,15 +42,45 @@ export const siteImages = {
   },
   ogDefault: {
     src: "/images/work/service-van-tampa.jpg",
-    alt: "Handyman Pros FL technician serving Tampa Bay FL",
+    alt: "Handyman Pros FL branded service van arriving for a Tampa Bay home repair",
   },
 } as const;
 
-/** Homepage preview uses the real Google Maps work photos */
-export const galleryImages = workPhotos.slice(0, 8).map((photo) => ({
-  src: photo.src,
-  alt: photo.alt,
-}));
+/** Homepage recent-work strip: van plus real job proof. Tile, fence, and plumbing stay here and on /work — not on TV or fan heroes. */
+export const galleryImages = [
+  {
+    src: "/images/work/service-van-tampa.jpg",
+    alt: "Handyman Pros FL branded service van arriving for a Tampa Bay home repair",
+  },
+  {
+    src: "/images/work/drywall-finish-ladder.jpg",
+    alt: "Licensed handyman finishing drywall compound on an interior wall in Tampa, FL",
+  },
+  {
+    src: "/images/cinematic/service-tv-mount.jpg",
+    alt: "TV wall mounting in a bright Tampa living room — screen on, job finished level",
+  },
+  {
+    src: "/images/work/maps-ceiling-fan.jpg",
+    alt: "Bathroom ceiling fan and light installed in a Tampa home",
+  },
+  {
+    src: "/images/work/wall-patch-repair.jpg",
+    alt: "Drywall hole patch and wall repair in a Tampa home",
+  },
+  {
+    src: "/images/work/fence-repair.jpg",
+    alt: "Wood privacy fence repair with new pickets in a Tampa Bay backyard",
+  },
+  {
+    src: "/images/work/bathroom-tile-grout.jpg",
+    alt: "Bathroom wall tile grouting by Handyman Pros FL in Tampa",
+  },
+  {
+    src: "/images/cinematic/service-ceiling-fan.jpg",
+    alt: "Ceiling fan installation in a Tampa bedroom at an existing fan-rated box",
+  },
+] as const;
 
 /** Real Google Maps handyman job photos — used as the hero video slideshow. */
 export const heroBackgroundPhotos = [

@@ -277,8 +277,8 @@ export const coreServices: CoreService[] = [
     name: "Same-Day Handyman",
     h1: "Same-Day Handyman in Tampa, FL",
     keyword: "same day handyman Tampa",
-    image: "/images/work/wall-patch-repair.jpg",
-    imageAlt: "Same-day drywall hole repair in a Tampa home",
+    image: "/images/work/service-van-tampa.jpg",
+    imageAlt: "Handyman Pros FL branded service van arriving for a Tampa Bay home repair",
     intro:
       "Need a same-day handyman in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew based in Westchase (ZIP 33626). We answer 24/7 for estimates. Same-day arrival is most likely in Westchase, Citrus Park, Town 'N' Country, and Tampa when the truck is already on that route.",
     paragraphs: [

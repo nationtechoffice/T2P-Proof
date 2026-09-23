@@ -80,7 +80,7 @@ export function BeforeAfterShowcase() {
           >
             <Image
               src="/images/cinematic/after-drywall.jpg"
-              alt="After — finished interior work"
+              alt="After drywall repair — finished wall in a Tampa home"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 1024px"
@@ -89,11 +89,10 @@ export function BeforeAfterShowcase() {
             <div
               className="absolute inset-0"
               style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
-              aria-hidden
             >
               <Image
                 src="/images/cinematic/before-drywall.jpg"
-                alt=""
+                alt="Before drywall repair — damaged interior wall in a Tampa home"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 1024px"

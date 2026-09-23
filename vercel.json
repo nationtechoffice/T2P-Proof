@@ -15,7 +15,16 @@
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.handymanprosflorida.com" }],
       "destination": "https://handymanprosflorida.com/:path*",
-      "permanent": true
-    }
+      "statusCode": 301
+    },
+    { "source": "/services/tv-mounting", "destination": "/services/tv-wall-mounting", "statusCode": 301 },
+    { "source": "/services/handyman/tv-mounting", "destination": "/services/tv-wall-mounting", "statusCode": 301 },
+    { "source": "/services/fan-installation", "destination": "/services/handyman/fan-installation", "statusCode": 301 },
+    { "source": "/services/same-day", "destination": "/services/same-day-handyman", "statusCode": 301 },
+    { "source": "/same-day", "destination": "/services/same-day-handyman", "statusCode": 301 },
+    { "source": "/same-day-handyman", "destination": "/services/same-day-handyman", "statusCode": 301 },
+    { "source": "/services/handyman/drywall-repair", "destination": "/services/drywall-repair", "statusCode": 301 },
+    { "source": "/services/handyman/furniture-assembly", "destination": "/services/furniture-assembly", "statusCode": 301 },
+    { "source": "/services/drywall-repair-tampa", "destination": "/services/drywall-repair", "statusCode": 301 }
   ]
 }

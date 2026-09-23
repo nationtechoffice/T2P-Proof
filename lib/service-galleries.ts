@@ -14,16 +14,20 @@ const drywallGallery: ServicePhoto[] = [
     alt: "Licensed handyman finishing drywall compound on an interior wall in Tampa, FL",
   },
   {
-    src: "/images/work/maps-insulation-room.jpg",
-    alt: "Open-wall insulation and wainscoting during a Tampa drywall and trim repair",
-  },
-  {
     src: "/images/work/ceiling-drywall-mud.jpg",
     alt: "Ceiling drywall taped and mudded before paint in a Westchase, Tampa home",
   },
   {
     src: "/images/work/wall-patch-repair.jpg",
     alt: "Drywall hole patch and wall repair in a Tampa home",
+  },
+  {
+    src: "/images/cinematic/before-drywall.jpg",
+    alt: "Before drywall repair — damaged interior wall in a Tampa home",
+  },
+  {
+    src: "/images/cinematic/after-drywall.jpg",
+    alt: "After drywall repair — finished wall in a Tampa home",
   },
 ];
 
@@ -98,12 +102,24 @@ const paintingGallery: ServicePhoto[] = [
 
 const sameDayGallery: ServicePhoto[] = [
   {
-    src: "/images/work/wall-patch-repair.jpg",
-    alt: "Same-day drywall hole repair in a Tampa home",
+    src: "/images/work/service-van-tampa.jpg",
+    alt: "Handyman Pros FL branded service van arriving for a Tampa Bay home repair",
+  },
+  {
+    src: "/images/work/drywall-finish-ladder.jpg",
+    alt: "Licensed handyman finishing drywall compound on an interior wall in Tampa, FL",
   },
   {
     src: "/images/cinematic/service-tv-mount.jpg",
-    alt: "Same-day TV wall mounting finished level in a Tampa living room",
+    alt: "TV wall mounting in a bright Tampa living room — screen on, job finished level",
+  },
+  {
+    src: "/images/work/maps-ceiling-fan.jpg",
+    alt: "Bathroom ceiling fan and light installed in a Tampa home",
+  },
+  {
+    src: "/images/work/wall-patch-repair.jpg",
+    alt: "Same-day drywall hole repair in a Tampa home",
   },
 ];
 

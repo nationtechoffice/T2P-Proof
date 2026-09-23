@@ -36,6 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
       keywords: [core.keyword, `${core.name} Tampa`, `${core.name} Westchase`],
       exactTitle: true,
       ogImage: photo ? `${siteConfig.url}${photo.src}` : undefined,
+      ogAlt: photo?.alt,
     });
   }
   if (!validCategories.includes(category as ServiceCategory)) return {};

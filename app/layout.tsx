@@ -54,13 +54,11 @@ export const metadata: Metadata = {
     siteName: siteConfig.legalName,
     title: homeTitle(),
     description: homeDescription(),
-    images: [{ url: "/images/work/service-van-tampa.jpg", width: 1600, height: 1200, alt: "Handyman Pros FL serving Tampa Bay" }],
   },
   twitter: {
     card: "summary_large_image",
     title: homeTitle(),
     description: homeDescription(),
-    images: ["/images/work/service-van-tampa.jpg"],
   },
   robots: {
     index: true,

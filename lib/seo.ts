@@ -8,6 +8,8 @@ export interface SEOProps {
   path: string;
   keywords?: string[];
   ogImage?: string;
+  /** Describes the og:image file. Never reuse a TV-mount sentence on the service van. */
+  ogAlt?: string;
   ogType?: "website" | "article";
   publishedTime?: string;
   modifiedTime?: string;
@@ -40,6 +42,7 @@ export function buildMetadata({
   path,
   keywords = [],
   ogImage,
+  ogAlt,
   ogType = "website",
   publishedTime,
   modifiedTime,
@@ -47,8 +50,11 @@ export function buildMetadata({
   exactTitle = false,
 }: SEOProps): Metadata {
   const url = canonicalUrl(path);
-  const image = ogImage || `${siteConfig.url}/images/work/service-van-tampa.jpg`;
   const fullTitle = exactTitle ? title : brandedTitle(title);
+  const vanImage = `${siteConfig.url}/images/work/service-van-tampa.jpg`;
+  const vanAlt = "Handyman Pros FL branded service van arriving for a Tampa Bay home repair";
+  const image = ogImage || vanImage;
+  const imageAlt = ogAlt || (image.endsWith("/images/work/service-van-tampa.jpg") ? vanAlt : fullTitle);
   const fullAddress = formatFullAddress();
 
   return {
@@ -90,7 +96,7 @@ export function buildMetadata({
           url: image,
           width: 1280,
           height: 832,
-          alt: fullTitle,
+          alt: imageAlt,
         },
       ],
       ...(publishedTime && { publishedTime }),
