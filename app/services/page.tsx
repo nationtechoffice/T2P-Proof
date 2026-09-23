@@ -91,7 +91,11 @@ export default function ServicesPage() {
                   {services.map((service) => (
                     <Link
                       key={service.slug}
-                      href={`/services/${cat}/${service.slug}`}
+                      href={
+                        cat === "handyman" && service.slug === "furniture-assembly"
+                          ? "/services/furniture-assembly"
+                          : `/services/${cat}/${service.slug}`
+                      }
                       className="card group hover:border-[hsl(var(--primary))]"
                     >
                       <h3 className="mb-2 font-semibold group-hover:text-[hsl(var(--primary))]">

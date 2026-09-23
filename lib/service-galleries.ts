@@ -85,7 +85,7 @@ const plumbingGallery: ServicePhoto[] = [
 const furnitureGallery: ServicePhoto[] = [
   {
     src: "/images/work/maps-builtin-dresser.jpg",
-    alt: "Built-in dresser carpentry in a Tampa home",
+    alt: "Built-in dresser furniture work by a licensed handyman in a Tampa home",
   },
 ];
 

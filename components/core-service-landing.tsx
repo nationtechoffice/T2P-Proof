@@ -24,6 +24,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
     authorityHubLinks.drywall,
     authorityHubLinks.tvMount,
     authorityHubLinks.tile,
+    authorityHubLinks.furniture,
     authorityHubLinks.fans,
     authorityHubLinks.sameDay,
     authorityHubLinks.westchase,
@@ -57,7 +58,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
               Instant Phone Estimates · 24/7 Tampa Bay
             </p>
-            <h1 className="mb-4 text-4xl font-bold">{serviceH1(service.name, "Tampa")}</h1>
+            <h1 className="mb-4 text-4xl font-bold">{service.h1 || serviceH1(service.name, "Tampa")}</h1>
             <p className="mb-4 text-xl font-semibold text-[hsl(var(--primary))]">{instantEstimate.heroHeadline}</p>
             <p className="mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">{service.intro}</p>
             <div className="mb-6">
@@ -74,6 +75,15 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
               {service.paragraphs.map((paragraph) => (
                 <p key={paragraph.slice(0, 40)}>{paragraph}</p>
               ))}
+              {service.slug === "furniture-assembly" ? (
+                <p>
+                  Need help loading or unloading a rental truck? That is a separate{" "}
+                  <Link href="/services/handyman/moving-assistance" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    moving assistance
+                  </Link>{" "}
+                  visit. This page is furniture assembly and in-home rearrangement only.
+                </p>
+              ) : null}
             </div>
             <h2 className="mt-10 mb-4 text-2xl font-bold">
               {service.name} in Tampa, Westchase &amp; Clearwater

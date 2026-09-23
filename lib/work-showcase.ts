@@ -38,7 +38,7 @@ export const workPhotos: WorkPhoto[] = [
     src: "/images/work/maps-builtin-dresser.jpg",
     alt: "Built-in dresser carpentry in progress in a Tampa home",
     caption:
-      "Built-in carpentry Tampa — cane-front dressers set as a custom wall unit with the drill still on the floor.",
+      "Furniture work Tampa — cane-front dressers set as a wall unit. The same licensed crew assembles flat-pack furniture and rearranges rooms across Tampa Bay.",
     service: "Carpentry",
     city: "Tampa, FL",
     href: "/services/furniture-assembly",

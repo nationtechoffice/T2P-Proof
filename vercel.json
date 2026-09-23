@@ -24,7 +24,14 @@
     { "source": "/same-day", "destination": "/services/same-day-handyman", "statusCode": 301 },
     { "source": "/same-day-handyman", "destination": "/services/same-day-handyman", "statusCode": 301 },
     { "source": "/services/handyman/drywall-repair", "destination": "/services/drywall-repair", "statusCode": 301 },
-    { "source": "/services/handyman/furniture-assembly", "destination": "/services/furniture-assembly", "statusCode": 301 },
+    { "source": "/services/handyman/furniture-assembly", "destination": "/services/furniture-assembly", "statusCode": 308 },
+    { "source": "/services/handyman/furniture-rearrangement", "destination": "/services/furniture-assembly", "statusCode": 308 },
+    { "source": "/services/handyman/assemble-furniture", "destination": "/services/furniture-assembly", "statusCode": 308 },
+    { "source": "/services/furniture-rearrangement", "destination": "/services/furniture-assembly", "statusCode": 308 },
+    { "source": "/services/assemble-furniture", "destination": "/services/furniture-assembly", "statusCode": 308 },
+    { "source": "/services/rearrange-furniture", "destination": "/services/furniture-assembly", "statusCode": 308 },
+    { "source": "/services/furniture-moving", "destination": "/services/furniture-assembly", "statusCode": 308 },
+    { "source": "/services/furniture-moving-help", "destination": "/services/furniture-assembly", "statusCode": 308 },
     { "source": "/services/drywall-repair-tampa", "destination": "/services/drywall-repair", "statusCode": 301 }
   ]
 }

@@ -98,7 +98,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                   <p className="text-sm text-[hsl(var(--muted-foreground))]">{service.intro}</p>
                 </Link>
               ))}
-            {services.map((service) => (
+            {services
+              .filter((service) => !(cat === "handyman" && service.slug === "furniture-assembly"))
+              .map((service) => (
               <Link
                 key={service.slug}
                 href={`/services/${category}/${service.slug}`}
@@ -130,6 +132,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 authorityHubLinks.drywall,
                 authorityHubLinks.tvMount,
                 authorityHubLinks.tile,
+                authorityHubLinks.furniture,
                 authorityHubLinks.fans,
                 authorityHubLinks.sameDay,
                 authorityHubLinks.services,

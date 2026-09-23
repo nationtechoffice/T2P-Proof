@@ -148,6 +148,7 @@ export const locationSilos: LocationSilo[] = [
       "From a single ceiling fan install to a weekend furniture assembly marathon, Handyman Pros FL helps Valrico households finish the list and enjoy the home.",
     ],
     relatedPaths: [
+      { href: "/services/furniture-assembly", label: "Furniture Assembly Tampa" },
       { href: "/handyman-riverview-fl", label: "Handyman Riverview FL" },
       { href: "/handyman-plant-city-fl", label: "Handyman Plant City FL" },
     ],

@@ -12,6 +12,13 @@ const REDIRECTED_PATHS = [
   "/services/handyman/tv-mounting",
   "/services/tv-mounting",
   "/services/handyman/furniture-assembly",
+  "/services/handyman/furniture-rearrangement",
+  "/services/handyman/assemble-furniture",
+  "/services/furniture-rearrangement",
+  "/services/assemble-furniture",
+  "/services/rearrange-furniture",
+  "/services/furniture-moving",
+  "/services/furniture-moving-help",
   "/services/handyman/drywall-repair",
   "/services/drywall-repair-tampa",
   "/services/fan-installation",
@@ -96,6 +103,7 @@ export function sitemapPriority(url: string): number {
     url.endsWith("/services/drywall-repair") ||
     url.endsWith("/services/same-day-handyman") ||
     url.endsWith("/services/tile-installation") ||
+    url.endsWith("/services/furniture-assembly") ||
     url.endsWith("/services/handyman/fan-installation")
   ) {
     return 0.9;

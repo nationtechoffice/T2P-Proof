@@ -85,11 +85,12 @@ const handymanServices: Omit<Service, "category">[] = [
   {
     slug: "furniture-assembly",
     name: "Furniture Assembly",
-    shortDescription: "Fast, professional furniture assembly for any brand.",
-    description: "Skip the frustration of flat-pack furniture. Our handyperson team assembles beds, desks, shelving, outdoor furniture, and more with precision and care.",
-    keywords: ["furniture assembly Florida", "IKEA assembly service", "furniture setup handyman"],
+    shortDescription: "Licensed furniture assembly and in-home rearrangement in Tampa Bay.",
+    description: "Skip the frustration of flat-pack furniture. Our licensed and insured handyperson team assembles beds, desks, shelving, and outdoor furniture, and rearranges pieces room to room across Tampa and Westchase.",
+    keywords: ["furniture assembly Tampa", "furniture rearrangement Westchase", "IKEA assembly service", "assemble furniture handyman"],
     faqs: [
-      { question: "Do you assemble all furniture brands?", answer: "Yes, we assemble furniture from IKEA, Wayfair, Amazon, Ashley, and all major brands." },
+      { question: "Do you assemble all furniture brands?", answer: "Yes. We assemble furniture from IKEA, Wayfair, Amazon, Ashley, and other major brands when the boxes are on site." },
+      { question: "Can you rearrange furniture in the same home?", answer: "Yes. We disassemble, move pieces room to room, and reassemble them. We do not provide a moving truck." },
     ],
   },
   {

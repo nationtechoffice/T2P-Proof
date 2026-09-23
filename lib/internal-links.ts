@@ -10,6 +10,7 @@ export const authorityHubLinks = {
   tvMount: { href: "/services/tv-wall-mounting", label: "TV Mounting Tampa" },
   fans: { href: "/services/handyman/fan-installation", label: "Ceiling Fan Installation Tampa" },
   tile: { href: "/services/tile-installation", label: "Tile Installation Tampa" },
+  furniture: { href: "/services/furniture-assembly", label: "Furniture Assembly Tampa" },
   sameDay: { href: "/services/same-day-handyman", label: "Same-Day Handyman Tampa" },
   locations: { href: "/locations", label: "Tampa Bay Service Areas" },
   tampa: { href: "/locations/tampa", label: "Handyman Tampa FL" },

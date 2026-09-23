@@ -88,6 +88,15 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                   covers backsplashes, wall tile, floor sections, and cracked-tile patches.
                 </p>
               ) : null}
+              {location.slug === "westchase-fl" ? (
+                <p>
+                  Flat-pack deliveries and room moves are a short drive from headquarters.{" "}
+                  <Link href="/services/furniture-assembly" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Furniture assembly and rearrangement in Tampa and Westchase
+                  </Link>{" "}
+                  covers IKEA, Wayfair, and Amazon sets, plus in-home moves that do not need a truck.
+                </p>
+              ) : null}
               {nearby.length > 0 ? (
                 <p>
                   From {location.city} we regularly continue to{" "}

@@ -209,36 +209,62 @@ export const coreServices: CoreService[] = [
   {
     slug: "furniture-assembly",
     name: "Furniture Assembly",
-    h1: "Furniture Assembly in Tampa, FL",
-    keyword: "furniture assembly",
+    h1: "Furniture Assembly & Rearrangement in Tampa, FL",
+    keyword: "furniture assembly Tampa",
     image: "/images/work/maps-builtin-dresser.jpg",
-    imageAlt: "Built-in dresser carpentry in a Tampa home",
+    imageAlt: "Built-in dresser furniture work in a Tampa home",
     intro:
-      "Need fast, reliable furniture assembly in Tampa, FL? IKEA, Wayfair, Amazon, and office sets built square, tight, and placed where you want them.",
+      "Need furniture assembled or rearranged in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew that builds IKEA, Wayfair, and Amazon sets, moves pieces room to room, and sets them where you want them — dispatched from our only Westchase headquarters.",
     paragraphs: [
-      "Furniture assembly in Tampa is one of our most booked visits — beds, desks, dressers, patio sets, and garage storage. We bring the bits your kit forgot and check that cams actually lock.",
-      "Florida rooms are tight. We assemble in place when the box will not turn a Westchase hallway, and we haul packaging out on request.",
-      "Outdoor furniture in Clearwater and Palm Harbor needs stainless or coated hardware. We flag cheap rust-prone screws before they stain the lanai.",
-      `Call ${siteConfig.phone} to stack several boxes into one furniture assembly visit and save a trip charge.`,
+      "Furniture assembly in Tampa Bay is a handyman visit, not a delivery window that leaves the boxes in the garage. Homeowners in Westchase, Carrollwood, Citrus Park, and Town 'N' Country call when a bed, desk, dresser, or patio set shows up flat, or when a room needs the furniture already in the house taken apart, moved, and put back together.",
+      "We assemble the brands already on site: IKEA, Wayfair, Amazon, Ashley, and office sets. Cams get locked, backs get screwed, and beds get checked for square before anyone sleeps on them. If a kit is missing hardware, we say so and use the right fastener instead of leaving a stripped cam.",
+      "Rearrangement is the other half of this page. A sectional that will not turn a Westchase hallway, a dresser that has to come apart to clear a door, or a home office that needs the desk on a different wall. We protect floors, disassemble only what has to come apart, move the pieces, and reassemble them level. This is in-home furniture help. We do not bring a moving truck, and we do not bid a whole-house move the way a moving company does.",
+      "Outdoor furniture in Clearwater and Palm Harbor needs hardware that can live in Florida weather. We flag cheap rust-prone screws before they stain a lanai. Garage shelving is the same stop when the boxes are already in the house.",
+      `Call ${siteConfig.phone} or send photos of the boxes on the quote form. Several pieces in one stop usually beat separate trip charges. The crew is licensed and insured, with one Tampa / Westchase headquarters and no second branch.`,
     ],
     bullets: [
-      "IKEA, Wayfair, Amazon, and office brands",
-      "Beds, cribs, desks, and storage systems",
-      "Patio and garage assembly",
-      "Placement and packaging haul-away on request",
+      "IKEA, Wayfair, Amazon, Ashley, and office furniture assembly",
+      "Beds, desks, dressers, cribs, and storage systems",
+      "In-home rearrangement — disassemble, move room to room, reassemble",
+      "Patio sets and packaging haul-away on request",
     ],
     faqs: [
       {
-        question: "How much is furniture assembly in Tampa?",
+        question: "How much does furniture assembly cost in Tampa?",
         answer:
-          "Pricing depends on piece count and complexity. A single dresser is faster than a wall of closets. We quote after you list the items or send photos of the boxes.",
+          "A typical Tampa Bay furniture assembly visit — one or two flat-pack pieces — is often quoted from about $75 to $250 after we know the piece count and whether the hardware is in the box. A full bedroom set or a room rearrangement is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
+      },
+      {
+        question: "Do you assemble IKEA, Wayfair, and Amazon furniture?",
+        answer:
+          "Yes. We assemble IKEA, Wayfair, Amazon, Ashley, and most office brands when the boxes are on site. Send a photo of the box label or the item name and we will tell you if it fits one visit.",
+      },
+      {
+        question: "Can you rearrange furniture that is already in the house?",
+        answer:
+          "Yes. We disassemble pieces that will not fit through a doorway, move them to the new room, and reassemble them level. Floors stay protected. We do not supply a moving truck — this is in-home furniture rearrangement from a licensed and insured handyman crew.",
+      },
+      {
+        question: "Do you assemble and rearrange furniture in Westchase?",
+        answer: `Yes. The truck leaves our only headquarters in Westchase ZIP 33626. Westchase, Carrollwood, Citrus Park, Town 'N' Country, and Tampa are the usual routes. Call ${siteConfig.phone}. We are licensed and insured.`,
       },
       {
         question: "Do you assemble outdoor furniture?",
         answer:
-          "Yes. We assemble patio sets and check hardware for Florida weather. Same-day furniture assembly is often available.",
+          "Yes. Patio sets and lanai furniture are a regular Tampa Bay request. We check hardware for Florida weather and flag rust-prone screws before they stain the deck or the pavers.",
+      },
+      {
+        question: "How does a furniture assembly visit work?",
+        answer:
+          "You call or send photos of the boxes. We confirm what is on site, clear a work area, assemble each piece square and tight, and place it where you want it. Packaging goes out on request. If a part is missing, we stop and tell you before the piece is left half-built.",
       },
     ],
+    offer: {
+      low: 75,
+      high: 250,
+      description:
+        "Typical licensed handyman furniture assembly visit in Tampa Bay for one or two flat-pack pieces. Full bedroom sets and room rearrangements are quoted separately.",
+    },
   },
   {
     slug: "door-repair",

@@ -163,6 +163,15 @@ export default async function ServicePage({
                   .
                 </p>
               ) : null}
+              {service.slug === "moving-assistance" || service.slug === "furniture-assembly" ? (
+                <p className="mt-4 text-sm text-[hsl(var(--muted-foreground))]">
+                  For flat-pack builds and room-to-room moves, see{" "}
+                  <Link href="/services/furniture-assembly" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                    furniture assembly and rearrangement in Tampa and Westchase
+                  </Link>
+                  .
+                </p>
+              ) : null}
             </div>
 
             <div className="mb-8">
@@ -197,6 +206,7 @@ export default async function ServicePage({
                   authorityHubLinks.drywall,
                   authorityHubLinks.tvMount,
                   authorityHubLinks.tile,
+                  authorityHubLinks.furniture,
                   authorityHubLinks.fans,
                   authorityHubLinks.sameDay,
                   authorityHubLinks.home,
