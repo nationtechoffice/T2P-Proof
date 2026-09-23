@@ -11,6 +11,17 @@ const REDIRECTED_PATHS = [
   "/handyman-town-n-country-fl",
   "/services/handyman/tv-mounting",
   "/services/tv-mounting",
+  "/services/handyman/flooring-installation",
+  "/services/flooring-repair",
+  "/services/install-flooring",
+  "/services/handyman/install-flooring",
+  "/services/handyman/flooring-repair",
+  "/services/handyman/repair-flooring",
+  "/services/repair-flooring",
+  "/services/replace-flooring",
+  "/services/flooring-replacement",
+  "/services/handyman/replace-flooring",
+  "/services/handyman/flooring-replacement",
   "/services/handyman/furniture-assembly",
   "/services/handyman/furniture-rearrangement",
   "/services/handyman/assemble-furniture",
@@ -104,6 +115,7 @@ export function sitemapPriority(url: string): number {
     url.endsWith("/services/same-day-handyman") ||
     url.endsWith("/services/tile-installation") ||
     url.endsWith("/services/furniture-assembly") ||
+    url.endsWith("/services/flooring-installation") ||
     url.endsWith("/services/handyman/fan-installation")
   ) {
     return 0.9;

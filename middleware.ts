@@ -16,6 +16,22 @@ const ALIAS_REDIRECTS: Record<string, string> = {
   "/services/install-replace-tile": "/services/tile-installation",
 };
 
+/** Flooring LSA/search aliases. 308 so caches and crawlers treat the canonical as permanent. */
+const FLOORING_CANONICAL = "/services/flooring-installation";
+const FLOORING_ALIAS_REDIRECTS: Record<string, string> = {
+  "/services/handyman/flooring-installation": FLOORING_CANONICAL,
+  "/services/flooring-repair": FLOORING_CANONICAL,
+  "/services/install-flooring": FLOORING_CANONICAL,
+  "/services/handyman/install-flooring": FLOORING_CANONICAL,
+  "/services/handyman/flooring-repair": FLOORING_CANONICAL,
+  "/services/handyman/repair-flooring": FLOORING_CANONICAL,
+  "/services/repair-flooring": FLOORING_CANONICAL,
+  "/services/replace-flooring": FLOORING_CANONICAL,
+  "/services/flooring-replacement": FLOORING_CANONICAL,
+  "/services/handyman/replace-flooring": FLOORING_CANONICAL,
+  "/services/handyman/flooring-replacement": FLOORING_CANONICAL,
+};
+
 /** Furniture LSA/search aliases. 308 so caches and crawlers treat the canonical as permanent. */
 const FURNITURE_ALIAS_REDIRECTS: Record<string, string> = {
   "/services/handyman/furniture-assembly": "/services/furniture-assembly",
@@ -29,6 +45,13 @@ const FURNITURE_ALIAS_REDIRECTS: Record<string, string> = {
 };
 
 export function middleware(request: NextRequest) {
+  const flooringDestination = FLOORING_ALIAS_REDIRECTS[request.nextUrl.pathname];
+  if (flooringDestination) {
+    const url = request.nextUrl.clone();
+    url.pathname = flooringDestination;
+    return NextResponse.redirect(url, 308);
+  }
+
   const furnitureDestination = FURNITURE_ALIAS_REDIRECTS[request.nextUrl.pathname];
   if (furnitureDestination) {
     const url = request.nextUrl.clone();
@@ -53,6 +76,17 @@ export const config = {
     "/same-day",
     "/same-day-handyman",
     "/services/handyman/drywall-repair",
+    "/services/handyman/flooring-installation",
+    "/services/flooring-repair",
+    "/services/install-flooring",
+    "/services/handyman/install-flooring",
+    "/services/handyman/flooring-repair",
+    "/services/handyman/repair-flooring",
+    "/services/repair-flooring",
+    "/services/replace-flooring",
+    "/services/flooring-replacement",
+    "/services/handyman/replace-flooring",
+    "/services/handyman/flooring-replacement",
     "/services/handyman/furniture-assembly",
     "/services/handyman/furniture-rearrangement",
     "/services/handyman/assemble-furniture",

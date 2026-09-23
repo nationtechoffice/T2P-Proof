@@ -82,6 +82,13 @@ const plumbingGallery: ServicePhoto[] = [
   },
 ];
 
+const flooringGallery: ServicePhoto[] = [
+  {
+    src: "/images/work/accent-wall-flooring.jpg",
+    alt: "Gray LVP flooring installed by a licensed handyman in a Tampa home office",
+  },
+];
+
 const furnitureGallery: ServicePhoto[] = [
   {
     src: "/images/work/maps-builtin-dresser.jpg",
@@ -146,6 +153,17 @@ export function galleryForPage(categoryOrSlug: string, slug?: string): ServicePh
     return plumbingGallery;
   }
   if (key === "furniture-assembly") return furnitureGallery;
+  if (
+    key === "flooring-installation" ||
+    key === "flooring-repair" ||
+    key === "install-flooring" ||
+    key === "repair-flooring" ||
+    key === "replace-flooring" ||
+    key === "flooring-replacement" ||
+    key.includes("flooring")
+  ) {
+    return flooringGallery;
+  }
   if (key === "same-day-handyman") return sameDayGallery;
   if (
     key === "tile-installation" ||

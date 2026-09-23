@@ -99,9 +99,9 @@ export const workPhotos: WorkPhoto[] = [
     alt: "Wood slat accent wall and LVP flooring install in a Tampa home office",
     caption:
       "Accent wall & flooring Tampa — fluted wood slat wall plus gray LVP flooring for a clean home-office remodel.",
-    service: "Interior Remodel",
+    service: "Flooring",
     city: "Tampa, FL",
-    href: "/services/handyman/install-flooring",
+    href: "/services/flooring-installation",
   },
   {
     slug: "drywall-finish-tampa",

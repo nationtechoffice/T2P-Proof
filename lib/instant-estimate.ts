@@ -42,5 +42,5 @@ export function homeTitle(): string {
 }
 
 export function homeDescription(): string {
-  return `Licensed Tampa handyman near Westchase & Carrollwood. TV mounting, drywall repair, tile installation, furniture assembly, fence fixes & same-day home repair. Instant estimates 24/7 — call ${siteConfig.phone}.`;
+  return `Licensed Tampa handyman near Westchase & Carrollwood. TV mounting, drywall repair, tile installation, flooring installation, furniture assembly, fence fixes & same-day home repair. Instant estimates 24/7 — call ${siteConfig.phone}.`;
 }

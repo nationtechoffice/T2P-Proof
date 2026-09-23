@@ -197,7 +197,8 @@ export function priorityInspectUrls(allUrls: string[]): string[] {
       url.includes("/services/tv-wall-mounting") ||
       url.includes("/services/drywall-repair") ||
       url.includes("/services/tile-installation") ||
-      url.includes("/services/furniture-assembly")
+      url.includes("/services/furniture-assembly") ||
+      url.includes("/services/flooring-installation")
     ) {
       return 2;
     }

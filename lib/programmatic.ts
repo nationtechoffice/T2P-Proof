@@ -29,6 +29,7 @@ export const schemaServicesOffered = [
   "Door Repair",
   "Same-Day Handyman",
   "Tile Work",
+  "Flooring Installation",
   "Gutter Cleaning",
   "Exterior Painting",
 ] as const;
@@ -395,6 +396,66 @@ export const coreServices: CoreService[] = [
       high: 700,
       description:
         "Typical licensed handyman tile visit in Tampa Bay for patches, backsplashes, and small floor or wall sections. Full baths and substrate rebuilds are quoted separately.",
+    },
+  },
+  {
+    slug: "flooring-installation",
+    name: "Flooring Installation",
+    h1: "Flooring Installation & Repair in Tampa, FL",
+    keyword: "flooring installation Tampa",
+    image: "/images/work/accent-wall-flooring.jpg",
+    imageAlt: "Gray LVP flooring installed with a wood slat accent wall in a Tampa home office",
+    intro:
+      "Need flooring installed, repaired, or replaced in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew that sets click-lock LVP, laminate, and vinyl plank, and replaces damaged sections — dispatched from our only Westchase headquarters.",
+    paragraphs: [
+      "Flooring installation in Tampa Bay is a handyman visit, not a flooring-showroom package for the whole house. Homeowners in Westchase, Carrollwood, Citrus Park, and Town 'N' Country call when a room of luxury vinyl plank is sitting in the garage, a laminate seam has popped in Florida humidity, or a water-damaged section needs to come out before it spreads.",
+      "We install and replace the flooring the room already uses when a match exists: click-lock LVP, vinyl plank, laminate, and engineered or solid-wood planks in a section. Bring the boxes, or we pick up a stocked match when the store still has it. The visit is layout, cuts, underlayment when the product calls for it, and transitions that meet the next room. We are not a flooring showroom, and we do not bid whole-home floor packages the way a flooring contractor does.",
+      "A sound floor matters more than a pretty plank. We check for soft spots, swollen laminate, and loose boards before we click anything new in. If the subfloor is failing, we say so before we cover it. Floating new planks over a rotten spot does not last in Hillsborough County humidity. Sanding and refinishing an entire hardwood floor is a refinisher's job, not this visit.",
+      "Jobs that fit this page: one room of click-lock LVP or laminate, a hallway of vinyl plank, replacement of cupped or water-stained boards, popped planks, squeaks from loose fasteners, and transition strips. Ceramic and porcelain floor tile is a different visit. Discontinued plank gets an honest conversation — a border or a complementary field, not a claim that a close color is an exact match.",
+      `Call ${siteConfig.phone} or send photos on the quote form. A section repair or a single room with material on site is often scheduled the same week from Westchase. Click-lock floors can usually be walked the same day; glue-down products need the cure time on the label. The crew is licensed and insured, with one Tampa / Westchase headquarters and no second branch.`,
+    ],
+    bullets: [
+      "Click-lock LVP and vinyl plank installation",
+      "Laminate install and section replacement",
+      "Engineered and hardwood plank repairs",
+      "Transitions, loose boards, and water-damaged sections on a sound subfloor",
+    ],
+    faqs: [
+      {
+        question: "How much does flooring installation cost in Tampa?",
+        answer:
+          "A typical Tampa Bay handyman flooring visit — a damaged-section repair or one room of click-lock LVP, laminate, or vinyl plank with the material already on site — is often quoted from about $175 to $850 after we see photos and know the square footage. A whole-home floor or a subfloor rebuild is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
+      },
+      {
+        question: "What flooring do you install and replace?",
+        answer:
+          "Click-lock luxury vinyl plank, vinyl plank, laminate, and engineered or solid-wood sections when a match exists. We are not a flooring showroom. Ceramic and porcelain floor tile is scheduled as tile work. We do not sand and refinish an entire hardwood floor.",
+      },
+      {
+        question: "Can you repair a section without replacing the whole floor?",
+        answer:
+          "Yes, when the surrounding floor is solid and we can match the plank. We cut out the damaged pieces, check the subfloor, set replacements, and reset the transition. If the plank is discontinued, or the subfloor is soft, we tell you before we start.",
+      },
+      {
+        question: "Do you install and repair flooring in Westchase?",
+        answer: `Yes. The truck leaves our only headquarters in Westchase ZIP 33626. Westchase, Carrollwood, Citrus Park, Town 'N' Country, and Tampa are the usual routes. Call ${siteConfig.phone}. We are licensed and insured.`,
+      },
+      {
+        question: "Is this a flooring company or a handyman flooring job?",
+        answer:
+          "Handyman-scope flooring. We install and replace LVP, laminate, vinyl plank, and wood sections, and we repair popped or water-damaged boards. We are not a flooring showroom and we do not sell whole-house floor packages. If the job needs a structural subfloor rebuild, we say so instead of forcing it into a handyman visit.",
+      },
+      {
+        question: "How does a flooring install or repair visit work?",
+        answer:
+          "You call or send photos. We confirm the flooring is on site or name what we need to pick up, then check the subfloor. Damaged pieces come out, the surface gets prepped, new planks are set, and transitions go in so the room meets the next floor. We walk the result with you and tell you when it can be walked on.",
+      },
+    ],
+    offer: {
+      low: 175,
+      high: 850,
+      description:
+        "Typical licensed handyman flooring visit in Tampa Bay for a section repair or one room of click-lock LVP, laminate, or vinyl plank with material on site. Whole-home floors and subfloor rebuilds are quoted separately.",
     },
   },
 ];

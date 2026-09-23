@@ -24,6 +24,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
     authorityHubLinks.drywall,
     authorityHubLinks.tvMount,
     authorityHubLinks.tile,
+    authorityHubLinks.flooring,
     authorityHubLinks.furniture,
     authorityHubLinks.fans,
     authorityHubLinks.sameDay,
@@ -82,6 +83,15 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
                     moving assistance
                   </Link>{" "}
                   visit. This page is furniture assembly and in-home rearrangement only.
+                </p>
+              ) : null}
+              {service.slug === "flooring-installation" ? (
+                <p>
+                  Ceramic and porcelain floor tile is a different visit. See{" "}
+                  <Link href="/services/tile-installation" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    tile installation in Tampa and Westchase
+                  </Link>{" "}
+                  for backsplashes, wall tile, and floor-tile sections. This page is LVP, laminate, vinyl plank, and wood-section install and repair.
                 </p>
               ) : null}
             </div>

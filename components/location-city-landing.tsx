@@ -97,6 +97,15 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                   covers IKEA, Wayfair, and Amazon sets, plus in-home moves that do not need a truck.
                 </p>
               ) : null}
+              {location.slug === "westchase-fl" ? (
+                <p>
+                  Rooms of click-lock plank and damaged sections are a short drive from headquarters.{" "}
+                  <Link href="/services/flooring-installation" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Flooring installation and repair in Tampa and Westchase
+                  </Link>{" "}
+                  covers LVP, laminate, vinyl plank, and wood-section replacement.
+                </p>
+              ) : null}
               {nearby.length > 0 ? (
                 <p>
                   From {location.city} we regularly continue to{" "}

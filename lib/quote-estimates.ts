@@ -11,6 +11,7 @@ export type RepairCategory =
   | "fence_repair"
   | "fan_install"
   | "tile_work"
+  | "flooring_installation"
   | "gutter_cleaning"
   | "general_handyman";
 
@@ -104,6 +105,13 @@ const BASELINES: Record<RepairCategory, EstimateRange> = {
     high: 700,
     notes: "Small repairs and backsplash-scale work; full baths quoted separately.",
   },
+  flooring_installation: {
+    category: "flooring_installation",
+    label: "Flooring Installation",
+    low: 175,
+    high: 850,
+    notes: "Section repairs and one room of click-lock LVP, laminate, or vinyl plank with material on site. Whole-home floors quoted separately.",
+  },
   gutter_cleaning: {
     category: "gutter_cleaning",
     label: "Gutter Cleaning",
@@ -130,6 +138,7 @@ const KEYWORD_MAP: Array<{ category: RepairCategory; patterns: RegExp[] }> = [
   { category: "door_repair", patterns: [/door/i, /sliding glass/i, /weatherstrip/i] },
   { category: "painting", patterns: [/paint/i] },
   { category: "fence_repair", patterns: [/fence/i, /gate/i] },
+  { category: "flooring_installation", patterns: [/flooring/i, /\blvp\b/i, /vinyl plank/i, /laminate floor/i] },
   { category: "tile_work", patterns: [/tile/i, /backsplash/i] },
   { category: "gutter_cleaning", patterns: [/gutter/i] },
 ];
@@ -148,6 +157,7 @@ function heuristicCategory(text: string, serviceHint?: string): RepairCategory {
   if (service.includes("door")) return "door_repair";
   if (service.includes("paint")) return "painting";
   if (service.includes("fence")) return "fence_repair";
+  if (service.includes("flooring")) return "flooring_installation";
   if (service.includes("tile")) return "tile_work";
   if (service.includes("gutter")) return "gutter_cleaning";
   return "general_handyman";
@@ -202,7 +212,7 @@ export async function analyzeQuoteRequest(input: {
         {
           role: "system",
           content: `You categorize Tampa Bay handyman jobs and return JSON only with keys:
-category (one of: drywall, tv_mounting, plumbing_fixture, electrical_fixture, furniture_assembly, door_repair, painting, fence_repair, fan_install, tile_work, gutter_cleaning, general_handyman),
+category (one of: drywall, tv_mounting, plumbing_fixture, electrical_fixture, furniture_assembly, door_repair, painting, fence_repair, fan_install, tile_work, flooring_installation, gutter_cleaning, general_handyman),
 label (string),
 confidence (0-1),
 summary (1-2 sentences),

@@ -75,11 +75,11 @@ const handymanServices: Omit<Service, "category">[] = [
   {
     slug: "flooring-repair",
     name: "Flooring Repair",
-    shortDescription: "Hardwood, laminate, and tile flooring repair services.",
-    description: "Restore damaged floors with expert flooring repair. We fix scratches, water damage, loose boards, cracked tiles, and subfloor issues throughout your Florida home.",
-    keywords: ["flooring repair Florida", "hardwood floor repair", "tile floor fix"],
+    shortDescription: "Licensed flooring repair for loose planks and water-damaged sections in Tampa Bay.",
+    description: "Restore damaged floors with licensed and insured flooring repair. We replace popped planks, water-damaged sections, and loose boards when the subfloor is sound across Tampa, Westchase, and Carrollwood.",
+    keywords: ["flooring repair Tampa", "LVP repair Westchase", "laminate floor repair"],
     faqs: [
-      { question: "What types of flooring can you repair?", answer: "We repair hardwood, laminate, vinyl, tile, and engineered flooring for residential properties across Tampa, Westchase, Carrollwood, and surrounding Tampa Bay cities." },
+      { question: "What types of flooring can you repair?", answer: "We repair LVP, vinyl plank, laminate, and wood sections for homes across Tampa, Westchase, Carrollwood, and surrounding Tampa Bay cities. The crew is licensed and insured. Whole-home floors and soft subfloors are quoted separately." },
     ],
   },
   {
@@ -136,11 +136,11 @@ const handymanServices: Omit<Service, "category">[] = [
   {
     slug: "install-flooring",
     name: "Install Flooring",
-    shortDescription: "Professional flooring installation for every room.",
-    description: "Transform your space with new flooring. We install hardwood, laminate, vinyl plank, tile, and carpet with expert subfloor preparation and finishing.",
-    keywords: ["flooring installation Florida", "new floor install", "vinyl plank installation"],
+    shortDescription: "Licensed LVP, laminate, and vinyl plank installation in Tampa and Westchase.",
+    description: "Install click-lock flooring with a licensed and insured handyman crew. We set LVP, laminate, and vinyl plank, plus wood sections, when the material is on site and the subfloor is sound.",
+    keywords: ["flooring installation Tampa", "LVP installation Westchase", "vinyl plank installation"],
     faqs: [
-      { question: "What flooring types do you install?", answer: "We install hardwood, engineered wood, laminate, LVP/LVT, ceramic tile, porcelain tile, and carpet." },
+      { question: "What flooring types do you install?", answer: "We install click-lock LVP, vinyl plank, laminate, and wood sections. Ceramic and porcelain floor tile is a separate tile visit. We are licensed and insured." },
     ],
   },
   {
@@ -206,11 +206,11 @@ const handymanServices: Omit<Service, "category">[] = [
   {
     slug: "repair-flooring",
     name: "Repair Flooring",
-    shortDescription: "Expert floor repair for scratches, gaps, and damage.",
-    description: "Don't replace — repair. We fix scratched hardwood, squeaky floors, loose tiles, and water-damaged sections to restore your floors without full replacement.",
-    keywords: ["floor repair Florida", "fix scratched floors", "squeaky floor repair"],
+    shortDescription: "Licensed floor repair for popped planks, gaps, and squeaks on a sound subfloor.",
+    description: "Repair the section instead of replacing the room. Our licensed and insured crew resets popped planks, tightens loose boards, and replaces water-damaged pieces when the subfloor is still solid.",
+    keywords: ["floor repair Tampa", "squeaky floor repair", "replace flooring section"],
     faqs: [
-      { question: "Can you fix squeaky hardwood floors?", answer: "Yes, we secure loose subfloor connections and eliminate squeaks without damaging your finished flooring." },
+      { question: "Can you fix squeaky hardwood floors?", answer: "Yes, when the squeak is a loose fastener or a board that has lifted. We secure it without damaging the finished flooring. A structural subfloor rebuild is quoted separately. The crew is licensed and insured." },
     ],
   },
   {
@@ -312,7 +312,7 @@ export const categoryMeta: Record<ServiceCategory, { name: string; title: string
   handyman: {
     name: "Handyman Services",
     title: "Handyman Services in Tampa",
-    description: "Licensed handyman services in Tampa, Westchase, Carrollwood & Hillsborough County. Drywall, TV mounting, tile installation, furniture assembly, repairs & more. Open 24/7.",
+    description: "Licensed handyman services in Tampa, Westchase, Carrollwood & Hillsborough County. Drywall, TV mounting, tile installation, flooring installation, furniture assembly, repairs & more. Open 24/7.",
     icon: "wrench",
   },
   painting: {

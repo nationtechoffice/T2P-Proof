@@ -13,6 +13,7 @@ const serviceLinks = [
   { href: "/services/drywall-repair", label: "Drywall Repair" },
   { href: "/services/same-day-handyman", label: "Same-Day Handyman" },
   { href: "/services/tile-installation", label: "Tile Installation" },
+  { href: "/services/flooring-installation", label: "Flooring Installation" },
   { href: "/services/handyman/fan-installation", label: "Ceiling Fan Installation" },
   { href: "/services/electrical-fixture-installation", label: "Electrical Fixtures" },
   { href: "/services/plumbing-fixture-repair", label: "Plumbing Fixtures" },
