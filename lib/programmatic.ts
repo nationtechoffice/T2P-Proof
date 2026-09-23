@@ -27,6 +27,7 @@ export const schemaServicesOffered = [
   "Plumbing Fixture Repair",
   "Furniture Assembly",
   "Door Repair",
+  "Same-Day Handyman",
   "Tile Work",
   "Gutter Cleaning",
   "Exterior Painting",
@@ -72,8 +73,8 @@ export const coreServices: CoreService[] = [
     name: "TV Wall Mounting",
     h1: "TV Wall Mounting in Tampa, FL",
     keyword: "TV wall mounting",
-    image: "/images/work/service-van-tampa.jpg",
-    imageAlt: "Handyman mounting a TV on a wall in Tampa FL",
+    image: "/images/cinematic/service-tv-mount.jpg",
+    imageAlt: "TV wall mounting in a bright Tampa living room — screen on, job finished level",
     intro:
       "Need fast, reliable TV wall mounting in Tampa, FL? Handyman Pros FL hangs TVs level, into real structure, with clean cable runs — dispatched from our only Westchase headquarters.",
     paragraphs: [
@@ -107,7 +108,7 @@ export const coreServices: CoreService[] = [
     h1: "Drywall Repair in Tampa, FL",
     keyword: "drywall repair",
     image: "/images/work/drywall-finish-ladder.jpg",
-    imageAlt: "Handyman repairing drywall in Tampa FL",
+    imageAlt: "Licensed handyman finishing drywall compound on an interior wall in Tampa, FL",
     intro:
       "Need fast, reliable drywall repair in Tampa, FL? Handyman Pros FL patches holes, blends texture, and preps walls for paint across Tampa Bay.",
     paragraphs: [
@@ -140,8 +141,8 @@ export const coreServices: CoreService[] = [
     name: "Electrical Fixture Installation",
     h1: "Electrical Fixture Installation in Tampa, FL",
     keyword: "electrical fixture installation",
-    image: "/images/work/under-sink-plumbing.jpg",
-    imageAlt: "Handyman installing an electrical light fixture in Tampa FL",
+    image: "/images/cinematic/service-ceiling-fan.jpg",
+    imageAlt: "Ceiling fan and light fixture swap at an existing box in Tampa",
     intro:
       "Need fast, reliable electrical fixture installation in Tampa, FL? We swap lights, fans, and vanity fixtures at existing boxes — safely and level.",
     paragraphs: [
@@ -175,7 +176,7 @@ export const coreServices: CoreService[] = [
     h1: "Plumbing Fixture Repair in Tampa, FL",
     keyword: "plumbing fixture repair",
     image: "/images/work/under-sink-plumbing.jpg",
-    imageAlt: "Handyman repairing a plumbing fixture in Tampa FL",
+    imageAlt: "Under-sink plumbing fixture repair in a Tampa kitchen",
     intro:
       "Need fast, reliable plumbing fixture repair in Tampa, FL? We stop drips, swap faucets, and reset toilets at existing supply lines.",
     paragraphs: [
@@ -208,8 +209,8 @@ export const coreServices: CoreService[] = [
     name: "Furniture Assembly",
     h1: "Furniture Assembly in Tampa, FL",
     keyword: "furniture assembly",
-    image: "/images/work/accent-wall-flooring.jpg",
-    imageAlt: "Handyman assembling furniture in Tampa FL",
+    image: "/images/work/maps-builtin-dresser.jpg",
+    imageAlt: "Built-in dresser carpentry in a Tampa home",
     intro:
       "Need fast, reliable furniture assembly in Tampa, FL? IKEA, Wayfair, Amazon, and office sets built square, tight, and placed where you want them.",
     paragraphs: [
@@ -242,8 +243,8 @@ export const coreServices: CoreService[] = [
     name: "Door Repair",
     h1: "Door Repair in Tampa, FL",
     keyword: "door repair",
-    image: "/images/work/under-sink-plumbing.jpg",
-    imageAlt: "Handyman repairing a door in Tampa FL",
+    image: "",
+    imageAlt: "",
     intro:
       "Need fast, reliable door repair in Tampa, FL? We fix sticking, swelling, and hardware that Florida humidity wrecks.",
     paragraphs: [
@@ -268,6 +269,43 @@ export const coreServices: CoreService[] = [
         question: "Can you repair a sliding glass door?",
         answer:
           "Yes. We replace rollers, clean tracks, and adjust locks on many Tampa patio sliders. Severely bent frames may need a replacement quote.",
+      },
+    ],
+  },
+  {
+    slug: "same-day-handyman",
+    name: "Same-Day Handyman",
+    h1: "Same-Day Handyman in Tampa, FL",
+    keyword: "same day handyman Tampa",
+    image: "/images/work/wall-patch-repair.jpg",
+    imageAlt: "Same-day drywall hole repair in a Tampa home",
+    intro:
+      "Need a same-day handyman in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew based in Westchase (ZIP 33626). We answer 24/7 for estimates. Same-day arrival is most likely in Westchase, Citrus Park, Town 'N' Country, and Tampa when the truck is already on that route.",
+    paragraphs: [
+      "Same-day handyman service in Tampa Bay is real when routing, parts, and weather line up — not a blanket promise for every zip. The truck starts at our only headquarters in Westchase. That is why 33626, Citrus Park, Town 'N' Country, and nearby Tampa streets get the fastest windows.",
+      "Clearwater, Palm Harbor, Dunedin, Tarpon Springs, and New Port Richey are regular routes. Same-day there depends on whether we already have a Pinellas or Pasco stop. If we cannot make it today, we give the next window — not a maybe.",
+      "Jobs that usually fit a same-day visit: TV wall mounting when the mount is on site, furniture assembly, a door that will not latch, a small drywall hole, and a like-for-like fixture swap when the fixture is already in the house. Texture-matched ceiling repairs need dry time. Parts we have to buy, and anything that needs a permit, usually wait.",
+      `You get the same licensed, insured Handyman Pros FL crew — one NAP, no second branch. Call ${siteConfig.phone} and say you need same-day. We will tell you if the window is today or the next open route.`,
+    ],
+    bullets: [
+      "Fastest in Westchase, Citrus Park, Town 'N' Country, and Tampa",
+      "TV mounts, small drywall patches, doors, and fixture swaps",
+      "Furniture assembly when the boxes are on site",
+      "Honest next window when same-day is not realistic",
+    ],
+    faqs: [
+      {
+        question: "Can I get a same-day handyman in Tampa?",
+        answer: `Sometimes. Same-day arrival is most likely in Westchase, Citrus Park, Town 'N' Country, and Tampa because that is where the truck starts. Call ${siteConfig.phone} and we will confirm today's window or the next one.`,
+      },
+      {
+        question: "Do you offer same-day handyman service in Westchase?",
+        answer: `Yes, often. Westchase ZIP 33626 is our only headquarters, so same-day visits are common when the schedule allows. We are licensed and insured. Call ${siteConfig.phone} for the current window.`,
+      },
+      {
+        question: "Which jobs do not fit a same-day visit?",
+        answer:
+          "Texture-matched ceiling repairs need dry time. Discontinued parts we have to buy, and work that needs a permit, usually wait. New electrical circuits, running new wire, and panel work need a licensed electrician — those are not a same-day handyman add-on.",
       },
     ],
   },

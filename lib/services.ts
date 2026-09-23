@@ -47,17 +47,26 @@ const handymanServices: Omit<Service, "category">[] = [
     slug: "fan-installation",
     name: "Fan Installation",
     shortDescription: "Ceiling and exhaust fan installation by licensed professionals.",
-    description: "Stay cool with expert ceiling fan and exhaust fan installation. We handle wiring, mounting, and balancing for safe, quiet operation in any room.",
+    description: "Stay cool with expert ceiling fan and exhaust fan installation. We mount, connect existing wiring, and balance the fan when the box is already fan-rated. New circuits and running new wire need a licensed electrician.",
     keywords: ["ceiling fan installation Florida", "exhaust fan install", "fan mounting service"],
     faqs: [
-      { question: "Can you install a fan where no fixture exists?", answer: "Yes, we can install ceiling fans in rooms with or without existing electrical boxes, including running new wiring when needed." },
+      {
+        question: "Can you install a fan where no fixture exists?",
+        answer:
+          "No. Like-for-like ceiling fan swaps at an existing fan-rated box are a common Tampa handyman job. We mount, connect the wiring that is already there, and balance the fan. If the room has no box, or the job needs a new circuit, new wiring, or panel work, that is licensed electrician scope. We say so before the visit instead of improvising.",
+      },
+      {
+        question: "Do you run new wiring for a ceiling fan?",
+        answer:
+          "No. New circuits, running wire through walls, and panel changes need a licensed electrician. We install or replace ceiling fans only when an existing fan-rated box and wiring already support the fixture.",
+      },
     ],
   },
   {
     slug: "fan-repair",
     name: "Fan Repair",
     shortDescription: "Ceiling fan repair, balancing, and motor replacement.",
-    description: "Wobbly, noisy, or non-working fans? Our handyman team diagnoses and repairs ceiling fans, replaces motors, fixes wiring issues, and rebalances blades for smooth operation.",
+    description: "Wobbly, noisy, or non-working fans? Our handyman team diagnoses and repairs ceiling fans, replaces motors, fixes existing fan wiring, and rebalances blades for smooth operation. New circuits still need a licensed electrician.",
     keywords: ["ceiling fan repair Florida", "fix wobbly fan", "fan motor replacement"],
     faqs: [
       { question: "Why is my ceiling fan wobbling?", answer: "Wobbling is usually caused by unbalanced blades, loose mounting, or bent blade brackets. We diagnose and fix the root cause." },

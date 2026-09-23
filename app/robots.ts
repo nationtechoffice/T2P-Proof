@@ -7,7 +7,15 @@ import { siteConfig } from "@/lib/site-config";
  * /api/ is the only blocked path (admin indexing endpoints).
  */
 const disallow = ["/api/"];
-const staticAllow = ["/", "/_next/static/", "/sitemap.xml", "/llms.txt", "/llms-full.txt", "/key.txt"];
+const staticAllow = [
+  "/",
+  "/_next/static/",
+  "/sitemap.xml",
+  "/llms.txt",
+  "/llms-full.txt",
+  "/key.txt",
+  `/${siteConfig.indexNowKey}.txt`,
+];
 
 const searchBots = ["Googlebot", "Googlebot-Image", "Bingbot", "Yandex", "YandexBot"];
 

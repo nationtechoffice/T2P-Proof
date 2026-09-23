@@ -12,7 +12,9 @@ import type { ServiceCategory } from "@/lib/site-config";
 import { JsonLd, breadcrumbSchema, serviceSchema, faqSchema, speakableSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import { InternalLinkHub } from "@/components/internal-link-hub";
+import { ServicePhotoGallery } from "@/components/service-photo-gallery";
 import { tampaBayLocationLinks, fenceCategoryLinks, authorityHubLinks } from "@/lib/internal-links";
+import { galleryForPage } from "@/lib/service-galleries";
 
 export function generateStaticParams() {
   return getAllServiceSlugs();
@@ -26,12 +28,14 @@ export async function generateMetadata({
   const { category, slug } = await params;
   const service = getService(category as ServiceCategory, slug);
   if (!service) return {};
+  const photo = galleryForPage(category, slug)[0];
   return buildMetadata({
     title: getLocalPageTitle(service.name),
     description: getLocalPageDescription(service.shortDescription, service.name),
     path: `/services/${category}/${slug}`,
     keywords: [...service.keywords.slice(0, 6), `${service.name} Tampa`],
     exactTitle: true,
+    ogImage: photo ? `${siteConfig.url}${photo.src}` : undefined,
   });
 }
 
@@ -47,6 +51,7 @@ export default async function ServicePage({
   const catMeta = categoryMeta[service.category];
   const pageUrl = `${siteConfig.url}/services/${category}/${slug}`;
   const related = getRelatedServices(service);
+  const photos = galleryForPage(service.category, service.slug);
   const hq = formatFullAddress();
   const serviceLower = service.name.toLowerCase();
   const faqs = [
@@ -76,6 +81,7 @@ export default async function ServicePage({
             description: service.description,
             url: pageUrl,
             category: catMeta.name,
+            image: photos[0]?.src,
           }),
           faqSchema(faqs),
           speakableSchema(pageUrl, [".service-definition", ".service-description"]),
@@ -95,6 +101,7 @@ export default async function ServicePage({
             <p className="service-definition mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">
               {service.shortDescription} Serving Westchase, Carrollwood, Citrus Park, Hillsborough County &amp; Tampa Bay — open 24/7.
             </p>
+            <ServicePhotoGallery photos={photos} title={`${service.name} photos in Tampa`} />
             <div className="service-description mb-8 rounded-xl bg-[hsl(var(--muted))] p-6">
               <h2 className="mb-3 text-xl font-bold">About Our {service.name} Service</h2>
               <p className="leading-relaxed text-[hsl(var(--muted-foreground))]">{service.description}</p>
@@ -175,7 +182,14 @@ export default async function ServicePage({
             ) : (
               <InternalLinkHub
                 title="Related services"
-                links={[authorityHubLinks.fence, authorityHubLinks.drywall, authorityHubLinks.tvMount, authorityHubLinks.home]}
+                links={[
+                  authorityHubLinks.fence,
+                  authorityHubLinks.drywall,
+                  authorityHubLinks.tvMount,
+                  authorityHubLinks.fans,
+                  authorityHubLinks.sameDay,
+                  authorityHubLinks.home,
+                ]}
               />
             )}
             <HqDispatch />

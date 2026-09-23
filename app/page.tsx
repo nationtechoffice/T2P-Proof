@@ -75,7 +75,11 @@ export default function HomePage() {
                 Tampa handyman near me — Westchase HQ
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-[hsl(var(--muted-foreground))]">
-                Looking for a Tampa handyman near Westchase, Carrollwood, or Citrus Park? Handyman Pros FL is one local crew — TV mounting, drywall repair, pressure washing, and home fixes with same-day help across Hillsborough &amp; Pinellas.
+                Looking for a Tampa handyman near Westchase, Carrollwood, or Citrus Park? Handyman Pros FL is one local crew — TV mounting, drywall repair, pressure washing, and home fixes with{" "}
+                <Link href="/services/same-day-handyman" className="font-semibold text-[hsl(var(--primary))] underline underline-offset-4">
+                  same-day help
+                </Link>{" "}
+                across Hillsborough &amp; Pinellas.
               </p>
               <ul className="space-y-3">
                 {[

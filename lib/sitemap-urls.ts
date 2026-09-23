@@ -10,9 +10,14 @@ const REDIRECTED_PATHS = [
   "/handyman-oldsmar-fl",
   "/handyman-town-n-country-fl",
   "/services/handyman/tv-mounting",
+  "/services/tv-mounting",
   "/services/handyman/furniture-assembly",
   "/services/handyman/drywall-repair",
   "/services/drywall-repair-tampa",
+  "/services/fan-installation",
+  "/services/same-day",
+  "/same-day",
+  "/same-day-handyman",
   "/locations/tampa-fl",
   "/locations/clearwater-fl",
   "/locations/st-petersburg-fl",
@@ -24,7 +29,13 @@ const REDIRECTED_PATHS = [
 function isCanonicalUrl(url: string): boolean {
   if (url.includes("?") || url.includes("#")) return false;
   if (url.includes("/api/") || url.endsWith("/api")) return false;
-  return !REDIRECTED_PATHS.some((path) => url === `${siteConfig.url}${path}` || url.endsWith(path));
+  let pathname = url;
+  try {
+    pathname = new URL(url).pathname;
+  } catch {
+    pathname = url;
+  }
+  return !REDIRECTED_PATHS.includes(pathname);
 }
 
 export function getAllSiteUrls(): string[] {
@@ -77,7 +88,14 @@ export function sitemapPriority(url: string): number {
   }
   if (url.endsWith("/work")) return 0.9;
   if (url.includes("/locations/")) return 0.9;
-  if (url.endsWith("/services/tv-wall-mounting") || url.endsWith("/services/drywall-repair")) return 0.9;
+  if (
+    url.endsWith("/services/tv-wall-mounting") ||
+    url.endsWith("/services/drywall-repair") ||
+    url.endsWith("/services/same-day-handyman") ||
+    url.endsWith("/services/handyman/fan-installation")
+  ) {
+    return 0.9;
+  }
   if (coreServices.some((service) => url.endsWith(`/services/${service.slug}`))) return 0.88;
   if (url.endsWith("/services") || url.endsWith("/services/handyman") || url.endsWith("/locations")) return 0.9;
   if (url.includes("/handyman-") && url.endsWith("-fl")) return 0.8;

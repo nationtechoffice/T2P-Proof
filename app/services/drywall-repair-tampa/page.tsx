@@ -142,7 +142,7 @@ export default function DrywallRepairTampaPage() {
                 <Phone className="h-4 w-4" />
                 Call {siteConfig.phone}
               </a>
-              <Link href="/services/handyman/drywall-repair" className="btn-secondary inline-flex items-center justify-center">
+              <Link href="/services/drywall-repair" className="btn-secondary inline-flex items-center justify-center">
                 Related Drywall Services
               </Link>
             </div>

@@ -132,6 +132,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </div>
             </header>
             <div className="article-content prose-blog">{renderContent(post.content)}</div>
+            {post.slug === "same-day-handyman-tampa-bay" ? (
+              <p className="mt-8 text-lg">
+                <Link href="/services/same-day-handyman" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                  Same-day handyman in Tampa and Westchase
+                </Link>
+              </p>
+            ) : null}
             <div className="mt-8 flex flex-wrap gap-2">
               {post.tags.map((tag) => (
                 <span key={tag} className="rounded-full bg-[hsl(var(--muted))] px-3 py-1 text-sm">

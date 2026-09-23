@@ -31,7 +31,7 @@ export const workPhotos: WorkPhoto[] = [
       "Insulation & trim Tampa — open-wall insulation, window, and beadboard work documented on the Google listing.",
     service: "Interior Remodel",
     city: "Tampa, FL",
-    href: "/services",
+    href: "/services/drywall-repair",
   },
   {
     slug: "maps-builtin-dresser-tampa",
@@ -41,7 +41,7 @@ export const workPhotos: WorkPhoto[] = [
       "Built-in carpentry Tampa — cane-front dressers set as a custom wall unit with the drill still on the floor.",
     service: "Carpentry",
     city: "Tampa, FL",
-    href: "/services",
+    href: "/services/furniture-assembly",
   },
   {
     slug: "maps-ceiling-fan-tampa",
@@ -51,7 +51,7 @@ export const workPhotos: WorkPhoto[] = [
       "Ceiling fan Tampa — flush-mount fan and light installed over a tiled shower, level and ready to use.",
     service: "Electrical Fixtures",
     city: "Tampa, FL",
-    href: "/services/electrical-fixture-installation",
+    href: "/services/handyman/fan-installation",
   },
   {
     slug: "service-van-tampa",
@@ -71,7 +71,7 @@ export const workPhotos: WorkPhoto[] = [
       "Tile & grout Tampa — terracotta floor joints packed, cleaned, and vacuum-prepped for a durable commercial-kitchen finish.",
     service: "Tile & Grout",
     city: "Tampa, FL",
-    href: "/services",
+    href: "/services/handyman/tile-work-installation",
   },
   {
     slug: "bathroom-tile-grout-tampa",
@@ -81,7 +81,7 @@ export const workPhotos: WorkPhoto[] = [
       "Bathroom tile Tampa — white wall tile floated and grouted clean for a sharp, water-ready remodel finish.",
     service: "Tile Installation",
     city: "Tampa, FL",
-    href: "/services",
+    href: "/services/handyman/tile-work-installation",
   },
   {
     slug: "porcelain-tile-install-tampa",
@@ -91,7 +91,7 @@ export const workPhotos: WorkPhoto[] = [
       "Porcelain tile install Tampa — large-format marble-look flooring leveled with spacers for a flat, modern kitchen floor.",
     service: "Flooring",
     city: "Tampa, FL",
-    href: "/services",
+    href: "/services/handyman/tile-work-installation",
   },
   {
     slug: "accent-wall-flooring-tampa",
@@ -101,7 +101,7 @@ export const workPhotos: WorkPhoto[] = [
       "Accent wall & flooring Tampa — fluted wood slat wall plus gray LVP flooring for a clean home-office remodel.",
     service: "Interior Remodel",
     city: "Tampa, FL",
-    href: "/services",
+    href: "/services/handyman/install-flooring",
   },
   {
     slug: "drywall-finish-tampa",
@@ -171,6 +171,6 @@ export const workPhotos: WorkPhoto[] = [
       "Kitchen plumbing help Tampa — under-sink fittings checked and tightened for everyday faucet and drain issues.",
     service: "Plumbing Help",
     city: "Tampa, FL",
-    href: "/services",
+    href: "/services/plumbing-fixture-repair",
   },
 ];

@@ -23,7 +23,7 @@ const icons = { wrench: Wrench, paintbrush: Paintbrush, fence: Fence };
 
 export default function ServicesPage() {
   const categories: ServiceCategory[] = ["handyman", "painting", "fence"];
-  const featuredList = coreServices.slice(0, 6).map((service) => ({
+  const featuredList = coreServices.map((service) => ({
     name: `${service.name} in Tampa`,
     url: `${siteConfig.url}/services/${service.slug}`,
     description: service.intro,
@@ -46,7 +46,11 @@ export default function ServicesPage() {
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold">Home Services in Tampa, FL</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
-              Instant phone estimates and 24/7 dispatch for {allServices.length}+ handyman, painting, and fence jobs. Call {siteConfig.phone} to speak with a local expert now.
+              Instant phone estimates and 24/7 dispatch for {allServices.length}+ handyman, painting, and fence jobs. Call {siteConfig.phone} to speak with a local expert now. For routing from Westchase, see{" "}
+              <Link href="/services/same-day-handyman" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                same-day handyman in Tampa
+              </Link>
+              .
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               {coreServices.map((service) => (

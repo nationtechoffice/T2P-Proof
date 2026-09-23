@@ -176,14 +176,21 @@ export function serviceSchema(service: {
   url: string;
   category: string;
   areaName?: string;
+  image?: string;
 }) {
   const areaName = service.areaName || "Tampa, FL";
+  const image = service.image
+    ? service.image.startsWith("http")
+      ? service.image
+      : `${siteConfig.url}${service.image}`
+    : undefined;
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     name: `${service.name} in ${areaName}`,
     description: service.description,
     url: service.url,
+    ...(image ? { image } : {}),
     provider: { "@id": `${siteConfig.url}/#organization` },
     brand: { "@id": `${siteConfig.url}/#organization` },
     areaServed: service.areaName

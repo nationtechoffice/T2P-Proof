@@ -11,6 +11,8 @@ import { Phone, Menu, X, ChevronDown } from "lucide-react";
 const serviceLinks = [
   { href: "/services/tv-wall-mounting", label: "TV Wall Mounting" },
   { href: "/services/drywall-repair", label: "Drywall Repair" },
+  { href: "/services/same-day-handyman", label: "Same-Day Handyman" },
+  { href: "/services/handyman/fan-installation", label: "Ceiling Fan Installation" },
   { href: "/services/electrical-fixture-installation", label: "Electrical Fixtures" },
   { href: "/services/plumbing-fixture-repair", label: "Plumbing Fixtures" },
   { href: "/services/furniture-assembly", label: "Furniture Assembly" },

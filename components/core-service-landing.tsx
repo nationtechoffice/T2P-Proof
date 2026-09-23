@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { FAQSection } from "@/components/faq-section";
@@ -13,9 +12,13 @@ import { targetLocations } from "@/lib/programmatic";
 import { instantEstimate, serviceH1 } from "@/lib/instant-estimate";
 import { siteConfig } from "@/lib/site-config";
 import { CheckCircle } from "lucide-react";
+import { ServicePhotoGallery } from "@/components/service-photo-gallery";
+import { galleryForPage } from "@/lib/service-galleries";
 
 export function CoreServiceLanding({ service }: { service: CoreService }) {
   const pageUrl = `${siteConfig.url}/services/${service.slug}`;
+  const photos = galleryForPage(service.slug);
+  const primaryImage = photos[0]?.src;
 
   return (
     <>
@@ -32,6 +35,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
             url: pageUrl,
             category: "Handyman",
             areaName: "Tampa, FL",
+            image: primaryImage,
           }),
           faqSchema(service.faqs),
         ]}
@@ -55,9 +59,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
                 Or send job details
               </Link>
             </div>
-            <div className="relative mb-8 aspect-[16/10] overflow-hidden rounded-2xl">
-              <Image src={service.image} alt={service.imageAlt} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 60vw" />
-            </div>
+            <ServicePhotoGallery photos={photos} title={`${service.name} photos in Tampa`} />
             <div className="space-y-4 leading-relaxed text-[hsl(var(--muted-foreground))]">
               {service.paragraphs.map((paragraph) => (
                 <p key={paragraph.slice(0, 40)}>{paragraph}</p>

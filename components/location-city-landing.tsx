@@ -70,6 +70,15 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               {location.paragraphs.map((paragraph) => (
                 <p key={paragraph.slice(0, 40)}>{paragraph}</p>
               ))}
+              {location.slug === "westchase-fl" ? (
+                <p>
+                  Same-day windows are most realistic here because the truck starts in ZIP 33626.{" "}
+                  <Link href="/services/same-day-handyman" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Same-day handyman in Tampa and Westchase
+                  </Link>{" "}
+                  explains which jobs fit today and which ones wait.
+                </p>
+              ) : null}
               {nearby.length > 0 ? (
                 <p>
                   From {location.city} we regularly continue to{" "}
@@ -110,6 +119,15 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                 >
                   <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(var(--accent))]" />
                   Fence Installation &amp; Repair in {location.city}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/handyman/fan-installation"
+                  className="flex items-start gap-2 rounded-xl border border-[hsl(var(--border))] bg-white/70 px-4 py-3 text-sm font-medium hover:border-[hsl(var(--accent))]"
+                >
+                  <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(var(--accent))]" />
+                  Ceiling Fan Installation in {location.city}
                 </Link>
               </li>
             </ul>

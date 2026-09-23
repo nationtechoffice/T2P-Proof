@@ -8,6 +8,8 @@ export const authorityHubLinks = {
   fence: { href: "/services/fence", label: "Fence Installation & Repair Tampa" },
   drywall: { href: "/services/drywall-repair", label: "Drywall Repair Tampa" },
   tvMount: { href: "/services/tv-wall-mounting", label: "TV Mounting Tampa" },
+  fans: { href: "/services/handyman/fan-installation", label: "Ceiling Fan Installation Tampa" },
+  sameDay: { href: "/services/same-day-handyman", label: "Same-Day Handyman Tampa" },
   locations: { href: "/locations", label: "Tampa Bay Service Areas" },
   tampa: { href: "/locations/tampa", label: "Handyman Tampa FL" },
   westchase: { href: "/locations/westchase-fl", label: "Handyman Westchase FL" },
@@ -93,7 +95,13 @@ export function linkifyServiceLabel(label: string): { href: string; label: strin
   if (lower.includes("furniture") || lower.includes("assembly")) {
     return { href: "/services/furniture-assembly", label };
   }
-  if (lower.includes("electrical") || lower.includes("fixture") || lower.includes("fan")) {
+  if (lower.includes("same-day") || lower.includes("same day")) {
+    return { href: "/services/same-day-handyman", label };
+  }
+  if (lower.includes("fan")) {
+    return { href: "/services/handyman/fan-installation", label };
+  }
+  if (lower.includes("electrical") || lower.includes("fixture")) {
     return { href: "/services/electrical-fixture-installation", label };
   }
   if (lower.includes("plumb") || lower.includes("faucet")) {

@@ -11,7 +11,9 @@ import type { ServiceCategory } from "@/lib/site-config";
 import { JsonLd, breadcrumbSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import { InternalLinkHub } from "@/components/internal-link-hub";
+import { ServicePhotoGallery } from "@/components/service-photo-gallery";
 import { tampaBayLocationLinks, fenceCategoryLinks, authorityHubLinks } from "@/lib/internal-links";
+import { galleryForPage } from "@/lib/service-galleries";
 
 const validCategories: ServiceCategory[] = ["handyman", "painting", "fence"];
 
@@ -26,12 +28,14 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const { category } = await params;
   const core = getCoreService(category);
   if (core) {
+    const photo = galleryForPage(core.slug)[0];
     return buildMetadata({
       title: serviceMetaTitle(core.name, "Tampa"),
       description: serviceMetaDescription(core.name, "Tampa"),
       path: `/services/${core.slug}`,
       keywords: [core.keyword, `${core.name} Tampa`, `${core.name} Westchase`],
       exactTitle: true,
+      ogImage: photo ? `${siteConfig.url}${photo.src}` : undefined,
     });
   }
   if (!validCategories.includes(category as ServiceCategory)) return {};
@@ -73,6 +77,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               Every {meta.name.toLowerCase()} job is dispatched from our single Westchase, Tampa headquarters.
             </p>
           </div>
+          {cat === "fence" || cat === "painting" ? (
+            <ServicePhotoGallery
+              photos={galleryForPage(cat)}
+              title={`${meta.name} photos in Tampa`}
+            />
+          ) : null}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {cat === "handyman" &&
               coreServices.map((service) => (
@@ -114,7 +124,14 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           ) : (
             <InternalLinkHub
               title="Related Tampa service hubs"
-              links={[authorityHubLinks.fence, authorityHubLinks.drywall, authorityHubLinks.tvMount, authorityHubLinks.services]}
+              links={[
+                authorityHubLinks.fence,
+                authorityHubLinks.drywall,
+                authorityHubLinks.tvMount,
+                authorityHubLinks.fans,
+                authorityHubLinks.sameDay,
+                authorityHubLinks.services,
+              ]}
             />
           )}
         </div>
