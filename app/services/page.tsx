@@ -94,7 +94,9 @@ export default function ServicesPage() {
                       href={
                         cat === "handyman" && service.slug === "furniture-assembly"
                           ? "/services/furniture-assembly"
-                          : `/services/${cat}/${service.slug}`
+                          : cat === "handyman" && service.slug === "gutter-cleaning"
+                            ? "/services/gutter-installation"
+                            : `/services/${cat}/${service.slug}`
                       }
                       className="card group hover:border-[hsl(var(--primary))]"
                     >

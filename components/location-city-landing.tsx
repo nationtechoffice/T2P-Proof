@@ -106,6 +106,15 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                   covers LVP, laminate, vinyl plank, and wood-section replacement.
                 </p>
               ) : null}
+              {location.slug === "westchase-fl" ? (
+                <p>
+                  Storm-clogged runs and loose downspouts are a short drive from headquarters.{" "}
+                  <Link href="/services/gutter-installation" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Gutter installation, repair, and cleaning in Tampa and Westchase
+                  </Link>{" "}
+                  covers flushes, section replacement, and short-run installs.
+                </p>
+              ) : null}
               {nearby.length > 0 ? (
                 <p>
                   From {location.city} we regularly continue to{" "}

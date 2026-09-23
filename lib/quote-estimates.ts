@@ -114,10 +114,10 @@ const BASELINES: Record<RepairCategory, EstimateRange> = {
   },
   gutter_cleaning: {
     category: "gutter_cleaning",
-    label: "Gutter Cleaning",
+    label: "Gutter Installation",
     low: 125,
-    high: 350,
-    notes: "Story count and roof pitch affect pricing.",
+    high: 650,
+    notes: "One-story cleaning, downspout flush, and short section repair or replacement. Full-run installs and steep roofs are quoted after photos.",
   },
   general_handyman: {
     category: "general_handyman",

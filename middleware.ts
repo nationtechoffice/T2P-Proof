@@ -32,6 +32,27 @@ const FLOORING_ALIAS_REDIRECTS: Record<string, string> = {
   "/services/handyman/flooring-replacement": FLOORING_CANONICAL,
 };
 
+/** Gutter LSA/search aliases. 308 so caches and crawlers treat the canonical as permanent. */
+const GUTTER_CANONICAL = "/services/gutter-installation";
+const GUTTER_ALIAS_REDIRECTS: Record<string, string> = {
+  "/services/handyman/gutter-installation": GUTTER_CANONICAL,
+  "/services/gutter-repair": GUTTER_CANONICAL,
+  "/services/gutter-cleaning": GUTTER_CANONICAL,
+  "/services/install-gutters": GUTTER_CANONICAL,
+  "/services/gutter-install": GUTTER_CANONICAL,
+  "/services/handyman/gutter-cleaning": GUTTER_CANONICAL,
+  "/services/handyman/gutter-repair": GUTTER_CANONICAL,
+  "/services/handyman/install-gutters": GUTTER_CANONICAL,
+  "/services/repair-gutters": GUTTER_CANONICAL,
+  "/services/handyman/repair-gutters": GUTTER_CANONICAL,
+  "/services/replace-gutters": GUTTER_CANONICAL,
+  "/services/gutter-replacement": GUTTER_CANONICAL,
+  "/services/handyman/replace-gutters": GUTTER_CANONICAL,
+  "/services/handyman/gutter-replacement": GUTTER_CANONICAL,
+  "/services/clean-gutters": GUTTER_CANONICAL,
+  "/services/handyman/clean-gutters": GUTTER_CANONICAL,
+};
+
 /** Furniture LSA/search aliases. 308 so caches and crawlers treat the canonical as permanent. */
 const FURNITURE_ALIAS_REDIRECTS: Record<string, string> = {
   "/services/handyman/furniture-assembly": "/services/furniture-assembly",
@@ -45,6 +66,13 @@ const FURNITURE_ALIAS_REDIRECTS: Record<string, string> = {
 };
 
 export function middleware(request: NextRequest) {
+  const gutterDestination = GUTTER_ALIAS_REDIRECTS[request.nextUrl.pathname];
+  if (gutterDestination) {
+    const url = request.nextUrl.clone();
+    url.pathname = gutterDestination;
+    return NextResponse.redirect(url, 308);
+  }
+
   const flooringDestination = FLOORING_ALIAS_REDIRECTS[request.nextUrl.pathname];
   if (flooringDestination) {
     const url = request.nextUrl.clone();
@@ -87,6 +115,22 @@ export const config = {
     "/services/flooring-replacement",
     "/services/handyman/replace-flooring",
     "/services/handyman/flooring-replacement",
+    "/services/handyman/gutter-installation",
+    "/services/gutter-repair",
+    "/services/gutter-cleaning",
+    "/services/install-gutters",
+    "/services/gutter-install",
+    "/services/handyman/gutter-cleaning",
+    "/services/handyman/gutter-repair",
+    "/services/handyman/install-gutters",
+    "/services/repair-gutters",
+    "/services/handyman/repair-gutters",
+    "/services/replace-gutters",
+    "/services/gutter-replacement",
+    "/services/handyman/replace-gutters",
+    "/services/handyman/gutter-replacement",
+    "/services/clean-gutters",
+    "/services/handyman/clean-gutters",
     "/services/handyman/furniture-assembly",
     "/services/handyman/furniture-rearrangement",
     "/services/handyman/assemble-furniture",

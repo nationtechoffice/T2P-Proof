@@ -116,11 +116,11 @@ const handymanServices: Omit<Service, "category">[] = [
   {
     slug: "gutter-cleaning",
     name: "Gutter Cleaning",
-    shortDescription: "Thorough gutter cleaning to protect your Florida home.",
-    description: "Florida's storms and foliage clog gutters fast. Our team clears debris, flushes downspouts, and inspects for damage to prevent water damage and foundation issues.",
-    keywords: ["gutter cleaning Florida", "gutter service Tampa", "downspout cleaning"],
+    shortDescription: "Licensed gutter cleaning, repair, and section replacement in Tampa Bay.",
+    description: "Florida storms and oak debris clog gutters fast. Our licensed and insured crew clears debris, flushes downspouts, reseats loose sections, and replaces damaged pieces across Tampa and Westchase.",
+    keywords: ["gutter cleaning Tampa", "gutter installation Westchase", "gutter repair Tampa", "downspout cleaning"],
     faqs: [
-      { question: "How often should gutters be cleaned in Florida?", answer: "We recommend cleaning gutters at least twice a year, and more frequently if you have overhanging trees." },
+      { question: "How often should gutters be cleaned in Florida?", answer: "At least twice a year, and more often when oaks or palms overhang the roof. The crew is licensed and insured. A full-run replacement is quoted separately." },
     ],
   },
   {
@@ -312,7 +312,7 @@ export const categoryMeta: Record<ServiceCategory, { name: string; title: string
   handyman: {
     name: "Handyman Services",
     title: "Handyman Services in Tampa",
-    description: "Licensed handyman services in Tampa, Westchase, Carrollwood & Hillsborough County. Drywall, TV mounting, tile installation, flooring installation, furniture assembly, repairs & more. Open 24/7.",
+    description: "Licensed handyman services in Tampa, Westchase, Carrollwood & Hillsborough County. Drywall, TV mounting, tile installation, flooring installation, furniture assembly, gutter installation, repairs & more. Open 24/7.",
     icon: "wrench",
   },
   painting: {

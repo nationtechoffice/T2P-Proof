@@ -89,6 +89,13 @@ const flooringGallery: ServicePhoto[] = [
   },
 ];
 
+const gutterGallery: ServicePhoto[] = [
+  {
+    src: "/images/work/exterior-trim-gutters.jpg",
+    alt: "Gutter downspout and soffit line on a Tampa Bay home after a licensed handyman visit",
+  },
+];
+
 const furnitureGallery: ServicePhoto[] = [
   {
     src: "/images/work/maps-builtin-dresser.jpg",
@@ -153,6 +160,20 @@ export function galleryForPage(categoryOrSlug: string, slug?: string): ServicePh
     return plumbingGallery;
   }
   if (key === "furniture-assembly") return furnitureGallery;
+  if (
+    key === "gutter-installation" ||
+    key === "gutter-cleaning" ||
+    key === "gutter-repair" ||
+    key === "gutter-replacement" ||
+    key === "install-gutters" ||
+    key === "gutter-install" ||
+    key === "repair-gutters" ||
+    key === "replace-gutters" ||
+    key === "clean-gutters" ||
+    key.includes("gutter")
+  ) {
+    return gutterGallery;
+  }
   if (
     key === "flooring-installation" ||
     key === "flooring-repair" ||

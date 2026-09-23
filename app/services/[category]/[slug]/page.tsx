@@ -163,6 +163,15 @@ export default async function ServicePage({
                   .
                 </p>
               ) : null}
+              {service.slug.includes("gutter") ? (
+                <p className="mt-4 text-sm text-[hsl(var(--muted-foreground))]">
+                  For install, repair, cleaning, and replacement visits, see{" "}
+                  <Link href="/services/gutter-installation" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                    gutter installation and repair in Tampa and Westchase
+                  </Link>
+                  .
+                </p>
+              ) : null}
               {service.slug.includes("floor") ? (
                 <p className="mt-4 text-sm text-[hsl(var(--muted-foreground))]">
                   For install, repair, and replacement visits, see{" "}
@@ -215,6 +224,8 @@ export default async function ServicePage({
                   authorityHubLinks.drywall,
                   authorityHubLinks.tvMount,
                   authorityHubLinks.tile,
+                  authorityHubLinks.flooring,
+                  authorityHubLinks.gutters,
                   authorityHubLinks.furniture,
                   authorityHubLinks.fans,
                   authorityHubLinks.sameDay,

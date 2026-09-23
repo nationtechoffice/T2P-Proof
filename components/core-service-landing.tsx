@@ -25,6 +25,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
     authorityHubLinks.tvMount,
     authorityHubLinks.tile,
     authorityHubLinks.flooring,
+    authorityHubLinks.gutters,
     authorityHubLinks.furniture,
     authorityHubLinks.fans,
     authorityHubLinks.sameDay,
@@ -92,6 +93,15 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
                     tile installation in Tampa and Westchase
                   </Link>{" "}
                   for backsplashes, wall tile, and floor-tile sections. This page is LVP, laminate, vinyl plank, and wood-section install and repair.
+                </p>
+              ) : null}
+              {service.slug === "gutter-installation" ? (
+                <p>
+                  Soft fascia behind a gutter gets called out before a new section goes up. Soffit and fascia paint is a separate{" "}
+                  <Link href="/services/painting" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    exterior painting
+                  </Link>{" "}
+                  visit. This page is gutter installation, repair, cleaning, and section replacement.
                 </p>
               ) : null}
             </div>

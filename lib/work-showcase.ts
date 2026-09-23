@@ -136,12 +136,12 @@ export const workPhotos: WorkPhoto[] = [
   {
     slug: "exterior-trim-gutters-tampa",
     src: "/images/work/exterior-trim-gutters.jpg",
-    alt: "Exterior soffit trim paint and gutter downspout on a Tampa Bay home",
+    alt: "Gutter downspout and soffit line on a Tampa Bay home after a licensed handyman visit",
     caption:
-      "Exterior trim & gutters Tampa Bay — fresh soffit paint, clean gutter lines, and tidy exterior detailing.",
-    service: "Exterior Painting",
+      "Gutters Tampa Bay — clean gutter lines, a tidy downspout, and soffit trim on a licensed handyman visit.",
+    service: "Gutters",
     city: "Tampa Bay, FL",
-    href: "/services/painting",
+    href: "/services/gutter-installation",
   },
   {
     slug: "fence-repair-tampa",

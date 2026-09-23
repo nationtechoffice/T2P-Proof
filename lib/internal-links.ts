@@ -12,6 +12,7 @@ export const authorityHubLinks = {
   tile: { href: "/services/tile-installation", label: "Tile Installation Tampa" },
   furniture: { href: "/services/furniture-assembly", label: "Furniture Assembly Tampa" },
   flooring: { href: "/services/flooring-installation", label: "Flooring Installation Tampa" },
+  gutters: { href: "/services/gutter-installation", label: "Gutter Installation Tampa" },
   sameDay: { href: "/services/same-day-handyman", label: "Same-Day Handyman Tampa" },
   locations: { href: "/locations", label: "Tampa Bay Service Areas" },
   tampa: { href: "/locations/tampa", label: "Handyman Tampa FL" },
@@ -103,6 +104,9 @@ export function linkifyServiceLabel(label: string): { href: string; label: strin
   }
   if (lower.includes("fan")) {
     return { href: "/services/handyman/fan-installation", label };
+  }
+  if (lower.includes("gutter") || lower.includes("downspout")) {
+    return { href: "/services/gutter-installation", label };
   }
   if (lower.includes("flooring") || lower.includes("lvp") || lower.includes("laminate") || lower.includes("vinyl plank")) {
     return { href: "/services/flooring-installation", label };

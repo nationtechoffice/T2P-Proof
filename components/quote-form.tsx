@@ -285,7 +285,6 @@ export function QuoteForm({
             </option>
           ))}
           <option value="tile-work">Tile Work</option>
-          <option value="gutter-cleaning">Gutter Cleaning</option>
           <option value="exterior-painting">Exterior Painting</option>
           <option value="other">Other home repair</option>
         </select>

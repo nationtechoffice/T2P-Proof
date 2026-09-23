@@ -30,6 +30,7 @@ export const schemaServicesOffered = [
   "Same-Day Handyman",
   "Tile Work",
   "Flooring Installation",
+  "Gutter Installation",
   "Gutter Cleaning",
   "Exterior Painting",
 ] as const;
@@ -456,6 +457,66 @@ export const coreServices: CoreService[] = [
       high: 850,
       description:
         "Typical licensed handyman flooring visit in Tampa Bay for a section repair or one room of click-lock LVP, laminate, or vinyl plank with material on site. Whole-home floors and subfloor rebuilds are quoted separately.",
+    },
+  },
+  {
+    slug: "gutter-installation",
+    name: "Gutter Installation",
+    h1: "Gutter Installation & Repair in Tampa, FL",
+    keyword: "gutter installation Tampa",
+    image: "/images/work/exterior-trim-gutters.jpg",
+    imageAlt: "Gutter downspout and soffit line on a Tampa Bay home after a licensed handyman visit",
+    intro:
+      "Need gutters installed, repaired, cleaned, or replaced in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew that hangs sections, reseats loose runs, flushes downspouts, and replaces damaged pieces — dispatched from our only Westchase headquarters.",
+    paragraphs: [
+      "Gutter work in Tampa Bay is a handyman visit, not a roofing-company package for the whole house. Homeowners in Westchase, Carrollwood, Citrus Park, and Town 'N' Country call when oak leaves and palm debris clog a run after a summer storm, a downspout dumps water against the slab, or a loose section has pulled off the fascia.",
+      "We clean, repair, and replace the gutter the house already uses when a match exists: standard K-style and half-round sections, downspouts, elbows, and splash blocks. Bring the pieces, or we pick up a stocked match. The visit is debris removal, a downspout flush, reseating loose hangers, and replacing the damaged length — not a gutter showroom and not a new roof.",
+      "A sound fascia matters more than a shiny gutter. We look for soft wood, separated spikes, and seams that leak onto the wall before we hang anything new. Covering rotten fascia with a fresh section does not last through Hillsborough County storms. If the roof itself is failing, or the pitch is too steep for a handyman ladder, we say so before we start.",
+      "Jobs that fit this page: a one-story cleaning and flush, reseating a sagging run, replacing a crushed section or a split downspout, hanging a short new run where the old one is gone, adding a downspout extension so water leaves the foundation, and fitting guards on an existing gutter to slow the debris. Whole-home metal systems and two-story steep roofs are quoted separately.",
+      `Call ${siteConfig.phone} or send photos on the quote form. A cleaning or a short section repair is often scheduled the same week from Westchase. The crew is licensed and insured, with one Tampa / Westchase headquarters and no second branch.`,
+    ],
+    bullets: [
+      "Gutter and downspout cleaning with a water flush",
+      "Loose-section reseating and hanger repair",
+      "Damaged gutter and downspout replacement",
+      "Short-run installation and guards on an existing system",
+    ],
+    faqs: [
+      {
+        question: "How much does gutter installation cost in Tampa?",
+        answer:
+          "A typical Tampa Bay handyman gutter visit — a one-story cleaning and flush, or a short section repair or replacement with the material already matched — is often quoted from about $125 to $650 after we see photos and know the story count. A full-run install or a steep roof is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
+      },
+      {
+        question: "Do you clean, repair, and replace gutters?",
+        answer:
+          "Yes. We clear debris, flush downspouts, reseat loose sections, and replace damaged gutter or downspout pieces when a match exists. We also hang a short new run and fit guards on an existing system. We are not a roofing company and we do not reroof the house.",
+      },
+      {
+        question: "Can you replace a section without replacing the whole gutter?",
+        answer:
+          "Yes, when the rest of the run is solid and we can match the profile. We cut out the damaged length, check the fascia, hang the new section, and reconnect the downspout. If the fascia is soft or the whole run has pulled away, we tell you before we start.",
+      },
+      {
+        question: "How often should gutters be cleaned in Tampa?",
+        answer:
+          "At least twice a year, and more often when oaks or palms hang over the roof. Afternoon storms move a lot of debris into one run. A flush that reaches the bottom of the downspout matters as much as the leaves you can see from the ground.",
+      },
+      {
+        question: "Do you install and clean gutters in Westchase?",
+        answer: `Yes. The truck leaves our only headquarters in Westchase ZIP 33626. Westchase, Carrollwood, Citrus Park, Town 'N' Country, and Tampa are the usual routes. Call ${siteConfig.phone}. We are licensed and insured.`,
+      },
+      {
+        question: "How does a gutter install, repair, or cleaning visit work?",
+        answer:
+          "You call or send photos. We confirm the story count and whether a matching section is on site. Debris comes out, downspouts get flushed, loose hangers are reseated, and damaged pieces are replaced so water leaves the foundation. We walk the result with you and point out any fascia that should be fixed before the next storm.",
+      },
+    ],
+    offer: {
+      low: 125,
+      high: 650,
+      description:
+        "Typical licensed handyman gutter visit in Tampa Bay for a one-story cleaning, downspout flush, or a short section repair or replacement. Full-run installs and steep roofs are quoted separately.",
     },
   },
 ];

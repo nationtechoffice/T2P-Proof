@@ -22,6 +22,22 @@ const REDIRECTED_PATHS = [
   "/services/flooring-replacement",
   "/services/handyman/replace-flooring",
   "/services/handyman/flooring-replacement",
+  "/services/handyman/gutter-installation",
+  "/services/gutter-repair",
+  "/services/gutter-cleaning",
+  "/services/install-gutters",
+  "/services/gutter-install",
+  "/services/handyman/gutter-cleaning",
+  "/services/handyman/gutter-repair",
+  "/services/handyman/install-gutters",
+  "/services/repair-gutters",
+  "/services/handyman/repair-gutters",
+  "/services/replace-gutters",
+  "/services/gutter-replacement",
+  "/services/handyman/replace-gutters",
+  "/services/handyman/gutter-replacement",
+  "/services/clean-gutters",
+  "/services/handyman/clean-gutters",
   "/services/handyman/furniture-assembly",
   "/services/handyman/furniture-rearrangement",
   "/services/handyman/assemble-furniture",
@@ -116,6 +132,7 @@ export function sitemapPriority(url: string): number {
     url.endsWith("/services/tile-installation") ||
     url.endsWith("/services/furniture-assembly") ||
     url.endsWith("/services/flooring-installation") ||
+    url.endsWith("/services/gutter-installation") ||
     url.endsWith("/services/handyman/fan-installation")
   ) {
     return 0.9;

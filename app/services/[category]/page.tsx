@@ -99,7 +99,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 </Link>
               ))}
             {services
-              .filter((service) => !(cat === "handyman" && service.slug === "furniture-assembly"))
+              .filter(
+                (service) =>
+                  !(
+                    cat === "handyman" &&
+                    (service.slug === "furniture-assembly" || service.slug === "gutter-cleaning")
+                  )
+              )
               .map((service) => (
               <Link
                 key={service.slug}
@@ -133,6 +139,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 authorityHubLinks.tvMount,
                 authorityHubLinks.tile,
                 authorityHubLinks.flooring,
+                authorityHubLinks.gutters,
                 authorityHubLinks.furniture,
                 authorityHubLinks.fans,
                 authorityHubLinks.sameDay,
