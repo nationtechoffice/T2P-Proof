@@ -14,7 +14,35 @@ export const authorityHubLinks = {
   carrollwood: { href: "/handyman-carrollwood-fl", label: "Handyman Carrollwood FL" },
   clearwater: { href: "/locations/clearwater", label: "Handyman Clearwater FL" },
   stPete: { href: "/locations/st-petersburg", label: "Handyman St. Petersburg FL" },
+  oldsmar: { href: "/locations/oldsmar-fl", label: "Handyman Oldsmar FL" },
+  safetyHarbor: { href: "/locations/safety-harbor-fl", label: "Handyman Safety Harbor FL" },
+  palmHarbor: { href: "/locations/palm-harbor-fl", label: "Handyman Palm Harbor FL" },
+  townNCountry: { href: "/locations/town-n-country-fl", label: "Handyman Town n Country FL" },
 } as const;
+
+/** Adjacent city pages so Bingbot can walk from crawled hubs to newer URLs. */
+const NEARBY_LOCATION_SLUGS: Record<string, readonly string[]> = {
+  tampa: ["westchase-fl", "town-n-country-fl", "citrus-park-fl", "clearwater"],
+  clearwater: ["safety-harbor-fl", "dunedin-fl", "oldsmar-fl", "st-petersburg"],
+  "st-petersburg": ["clearwater", "tampa"],
+  "westchase-fl": ["oldsmar-fl", "citrus-park-fl", "town-n-country-fl", "tampa"],
+  "palm-harbor-fl": ["oldsmar-fl", "dunedin-fl", "tarpon-springs-fl", "safety-harbor-fl"],
+  "oldsmar-fl": ["westchase-fl", "safety-harbor-fl", "palm-harbor-fl", "town-n-country-fl", "citrus-park-fl", "dunedin-fl"],
+  "dunedin-fl": ["safety-harbor-fl", "palm-harbor-fl", "clearwater", "oldsmar-fl"],
+  "town-n-country-fl": ["westchase-fl", "oldsmar-fl", "citrus-park-fl", "tampa"],
+  "citrus-park-fl": ["westchase-fl", "oldsmar-fl", "town-n-country-fl", "tampa"],
+  "safety-harbor-fl": ["oldsmar-fl", "clearwater", "dunedin-fl", "palm-harbor-fl"],
+  "tarpon-springs-fl": ["palm-harbor-fl", "new-port-richey-fl", "dunedin-fl"],
+  "new-port-richey-fl": ["tarpon-springs-fl", "palm-harbor-fl"],
+};
+
+export function nearbyLocationLinks(slug: string) {
+  const slugs = NEARBY_LOCATION_SLUGS[slug] ?? [];
+  return slugs.flatMap((near) => {
+    const location = targetLocations.find((item) => item.slug === near);
+    return location ? [{ href: `/locations/${location.slug}`, label: `Handyman ${location.city} FL` }] : [];
+  });
+}
 
 export function coreServiceLinks(cityLabel?: string) {
   return [

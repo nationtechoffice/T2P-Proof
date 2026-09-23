@@ -160,7 +160,6 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
               <ul className="flex flex-wrap gap-2 text-sm">
                 {allLocationLinks
                   .filter((area) => area.href !== location.path)
-                  .slice(0, 8)
                   .map((area) => (
                     <li key={area.href}>
                       <Link href={area.href} className="text-[hsl(var(--primary))] hover:underline">

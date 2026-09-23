@@ -22,6 +22,7 @@ export const metadata: Metadata = buildMetadata({
     "Pinellas County handyman",
     "handyman Carrollwood",
     "handyman Brandon FL",
+    "handyman Oldsmar FL",
   ],
 });
 
@@ -43,7 +44,11 @@ export default function ServiceAreasPage() {
             </p>
             <h1 className="mb-4 text-4xl font-bold">Tampa & Surrounding Counties</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
-              Handyman Pros FL has one headquarters in Westchase, Tampa. City pages below are service areas we drive to — not extra branches. Don&apos;t see your neighborhood? Call us — we likely serve your area.
+              Handyman Pros FL has one headquarters in Westchase, Tampa. City pages below are service areas we drive to — not extra branches. That includes{" "}
+              <Link href="/locations/oldsmar-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Oldsmar FL handyman services
+              </Link>{" "}
+              along the Hillsborough–Pinellas line. Don&apos;t see your neighborhood? Call us — we likely serve your area.
             </p>
           </div>
 

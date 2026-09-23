@@ -25,7 +25,7 @@ export function getLlmsTxt(): string {
 
 > Licensed and insured Tampa handyman with one headquarters at ${formatFullAddress()} in Westchase (ZIP ${siteConfig.primaryZip}). We dispatch furniture assembly, drywall, painting, fence work, and emergency repairs across Tampa Bay — open 24/7.
 
-${siteConfig.legalName} is a single-location service-area business. There are no additional branches or storefronts. Customers call ${siteConfig.phone} or visit ${siteConfig.url}. Technicians travel from the Westchase, Tampa headquarters to the job site.
+${siteConfig.legalName} is a single-location service-area business. There are no additional branches or storefronts. Customers call ${siteConfig.phone} or visit ${siteConfig.url}. Technicians travel from the Westchase, Tampa headquarters to the job site, including Oldsmar FL (${siteConfig.url}/locations/oldsmar-fl) on the Hillsborough–Pinellas line.
 
 ## Pages
 

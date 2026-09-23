@@ -70,7 +70,8 @@ export function sitemapPriority(url: string): number {
     url.endsWith("/locations/westchase-fl") ||
     url.endsWith("/locations/tampa") ||
     url.endsWith("/locations/clearwater") ||
-    url.endsWith("/locations/st-petersburg")
+    url.endsWith("/locations/st-petersburg") ||
+    url.endsWith("/locations/oldsmar-fl")
   ) {
     return 0.95;
   }

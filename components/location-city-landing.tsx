@@ -8,18 +8,20 @@ import { TrustBadges } from "@/components/trust-badges";
 import { PhoneEstimateCta } from "@/components/phone-estimate-cta";
 import { InternalLinkHub } from "@/components/internal-link-hub";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/json-ld";
-import { coreServices, type TargetLocation } from "@/lib/programmatic";
+import { coreServices, hrefForAreaName, type TargetLocation } from "@/lib/programmatic";
 import { instantEstimate, serviceH1 } from "@/lib/instant-estimate";
 import { siteConfig } from "@/lib/site-config";
 import {
   authorityHubLinks,
   coreServiceLinks,
   fenceCategoryLinks,
+  nearbyLocationLinks,
 } from "@/lib/internal-links";
 import { CheckCircle } from "lucide-react";
 
 export function LocationCityLanding({ location }: { location: TargetLocation }) {
   const pageUrl = `${siteConfig.url}/locations/${location.slug}`;
+  const nearby = nearbyLocationLinks(location.slug);
 
   return (
     <>
@@ -68,6 +70,23 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               {location.paragraphs.map((paragraph) => (
                 <p key={paragraph.slice(0, 40)}>{paragraph}</p>
               ))}
+              {nearby.length > 0 ? (
+                <p>
+                  From {location.city} we regularly continue to{" "}
+                  {nearby.map((link, index) => (
+                    <span key={link.href}>
+                      {index > 0 ? (index === nearby.length - 1 ? ", and " : ", ") : null}
+                      <Link
+                        href={link.href}
+                        className="font-medium text-[hsl(var(--primary))] hover:underline"
+                      >
+                        {link.label.replace(/^Handyman /, "").replace(/ FL$/, "")}
+                      </Link>
+                    </span>
+                  ))}
+                  . Those pages are service areas from the same Westchase headquarters.
+                </p>
+              ) : null}
             </div>
             <h2 className="mt-10 mb-4 text-2xl font-bold">
               Home repairs we handle in {location.city}, FL
@@ -99,11 +118,24 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               Dispatched from our only Tampa / Westchase headquarters.
             </p>
             <ul className="flex flex-wrap gap-2 text-sm">
-              {location.neighborhoods.map((item) => (
-                <li key={item} className="rounded-full bg-white px-3 py-1.5 shadow-sm">
-                  {item}
-                </li>
-              ))}
+              {location.neighborhoods.map((item) => {
+                const href = hrefForAreaName(item);
+                const chipClass = "rounded-full bg-white px-3 py-1.5 shadow-sm";
+                if (href && href !== `/locations/${location.slug}`) {
+                  return (
+                    <li key={item}>
+                      <Link href={href} className={`${chipClass} text-[hsl(var(--primary))] hover:underline`}>
+                        {item}
+                      </Link>
+                    </li>
+                  );
+                }
+                return (
+                  <li key={item} className={chipClass}>
+                    {item}
+                  </li>
+                );
+              })}
             </ul>
 
             <InternalLinkHub
@@ -118,13 +150,19 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
             <InternalLinkHub
               title="Nearby Tampa Bay areas we serve"
               links={[
+                ...nearby,
                 authorityHubLinks.tampa,
                 authorityHubLinks.westchase,
+                authorityHubLinks.oldsmar,
                 authorityHubLinks.carrollwood,
                 authorityHubLinks.clearwater,
                 authorityHubLinks.stPete,
                 authorityHubLinks.locations,
-              ].filter((link) => link.href !== `/locations/${location.slug}`)}
+              ].filter(
+                (link, index, list) =>
+                  link.href !== `/locations/${location.slug}` &&
+                  list.findIndex((item) => item.href === link.href) === index
+              )}
             />
             <div className="mt-10">
               <HqDispatch area={location.displayName} />

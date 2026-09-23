@@ -188,6 +188,7 @@ export function priorityInspectUrls(allUrls: string[]): string[] {
       url.endsWith("/locations/tampa") ||
       url.endsWith("/locations/clearwater") ||
       url.endsWith("/locations/st-petersburg") ||
+      url.endsWith("/locations/oldsmar-fl") ||
       url.endsWith("/work")
     ) {
       return 1;

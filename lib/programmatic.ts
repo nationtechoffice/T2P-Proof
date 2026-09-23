@@ -34,6 +34,7 @@ export const schemaServicesOffered = [
 
 export const schemaSameAs = [
   "https://www.facebook.com/profile.php?id=61591619618815",
+  "https://www.instagram.com/handymanprosflorida",
   "https://maps.app.goo.gl/XhDwjzgTujJK7JyT9",
 ] as const;
 
@@ -397,7 +398,7 @@ export const targetLocations: TargetLocation[] = [
     paragraphs: [
       `Handyman Pros FL is based at ${siteConfig.address.street}, Apt 203, Tampa, FL 33626 in Westchase. When you search handyman near me in Westchase, you are calling the actual local crew — not a lead mill.`,
       "Westchase HOA standards, stucco, and lanai sliders are daily work. We handle TV wall mounting, drywall repair, electrical fixture installation, plumbing fixture repair, furniture assembly, and door repair without a second office.",
-      "Tuscany Bay and Westchase Golf Club streets are inside our fastest response radius. Citrus Park and Town 'N' Country are the next hop.",
+      "Tuscany Bay and Westchase Golf Club streets are inside our fastest response radius. Citrus Park, Town 'N' Country, and Oldsmar (ZIP 34677, just across the Hillsborough–Pinellas line) are the next hop.",
       `Call ${siteConfig.phone} 24/7 for a Westchase estimate.`,
     ],
     faqs: [
@@ -427,7 +428,29 @@ export const targetLocations: TargetLocation[] = [
     county: "Pinellas / Hillsborough",
     zipHint: "34677",
     neighborhoods: ["East Lake Woodlands", "Shoreview", "Westchase"],
-    ...locationCopy("Oldsmar", "Pinellas County", ["East Lake Woodlands", "Shoreview", "Westchase"]),
+    intro:
+      "Need Oldsmar FL handyman services for TV mounts, bracket work, and deck maintenance? Licensed, insured Handyman Pros FL dispatches from Westchase across the Hillsborough–Pinellas line into ZIP 34677.",
+    paragraphs: [
+      `Oldsmar sits between our Westchase headquarters and the Pinellas coast — East Lake Woodlands, Shoreview, and the State Road 580 corridor. Technicians leave ${siteConfig.address.street} with a stocked truck for bracket mounting, deck hardware, drywall, doors, and fixture work. Oldsmar is a service area, not a second office: one phone number, one NAP, the same licensed crew.`,
+      "Bracket mounting is a frequent Oldsmar request: TVs and soundbars, garage track systems, pantry organizers, and shelves. We locate studs or use rated anchors, keep lines level, and conceal cords when the wall and code allow. Clean mounting is one of the fastest ways to finish a room after a move or remodel.",
+      "Deck maintenance keeps Tampa Bay outdoor living safe. We tighten loose rails, replace individual boards when feasible, secure popped fasteners, and advise on sealing timelines for Florida sun and rain. If a joist or post looks structural, we document it instead of hiding the problem.",
+      `Call ${siteConfig.phone} 24/7 for Oldsmar FL handyman services. Same-week and often same-day windows are common because Oldsmar is the next hop from Westchase — we also continue to Safety Harbor, Palm Harbor, Town 'N' Country, and Citrus Park on the same route.`,
+    ],
+    faqs: [
+      {
+        question: "Do you have a handyman office in Oldsmar?",
+        answer: `No. Handyman Pros FL has one Tampa location at ${siteConfig.address.street}, Apt 203, Tampa, FL 33626 (Westchase). Oldsmar ZIP 34677 is a service area we drive to so reviews and listings stay on a single NAP.`,
+      },
+      {
+        question: "How soon can a handyman get to Oldsmar, FL?",
+        answer: `Oldsmar is next to Westchase, so same-week and often same-day visits are common. Call ${siteConfig.phone} for the next window on TV mounts, deck hardware, or a mixed punch list.`,
+      },
+      {
+        question: "What Oldsmar jobs do you handle most?",
+        answer:
+          "TV and bracket mounting, deck rail and board maintenance, drywall patches, door and screen repairs, fixture installs, and outdoor furniture assembly. Licensed and insured for indoor and outdoor handyman scope.",
+      },
+    ],
   },
   {
     slug: "dunedin-fl",
@@ -505,6 +528,9 @@ export function hrefForAreaName(name: string): string | undefined {
     "saint petersburg": "st-petersburg",
     "palm harbor": "palm-harbor-fl",
     oldsmar: "oldsmar-fl",
+    "oldsmar border": "oldsmar-fl",
+    "east lake woodlands": "oldsmar-fl",
+    shoreview: "oldsmar-fl",
     dunedin: "dunedin-fl",
     "town n country": "town-n-country-fl",
     "citrus park": "citrus-park-fl",

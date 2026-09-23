@@ -286,6 +286,8 @@ export const locationSilos: LocationSilo[] = [
     relatedPaths: [
       { href: "/locations/westchase-fl", label: "Handyman Westchase FL" },
       { href: "/locations/town-n-country-fl", label: "Handyman Town n Country FL" },
+      { href: "/locations/safety-harbor-fl", label: "Handyman Safety Harbor FL" },
+      { href: "/locations/palm-harbor-fl", label: "Handyman Palm Harbor FL" },
     ],
   },
   {
@@ -320,6 +322,7 @@ export const locationSilos: LocationSilo[] = [
     relatedPaths: [
       { href: "/handyman-wesley-chapel-fl", label: "Handyman Wesley Chapel FL" },
       { href: "/handyman-carrollwood-fl", label: "Handyman Carrollwood FL" },
+      { href: "/locations/oldsmar-fl", label: "Handyman Oldsmar FL" },
     ],
   },
   {

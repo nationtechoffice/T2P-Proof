@@ -33,7 +33,23 @@ export default function LocationsIndexPage() {
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold">Handyman in Tampa Bay, FL</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
-              Instant phone estimates and same-day dispatch from one Westchase headquarters. These city pages are service areas we drive to — not extra branches.
+              Instant phone estimates and same-day dispatch from one Westchase headquarters. These city pages are service areas we drive to — not extra branches. Pinellas stops include{" "}
+              <Link href="/locations/oldsmar-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Oldsmar
+              </Link>
+              ,{" "}
+              <Link href="/locations/clearwater" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Clearwater
+              </Link>
+              ,{" "}
+              <Link href="/locations/safety-harbor-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Safety Harbor
+              </Link>
+              , and{" "}
+              <Link href="/locations/palm-harbor-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Palm Harbor
+              </Link>
+              .
             </p>
           </div>
           <div className="mb-10">

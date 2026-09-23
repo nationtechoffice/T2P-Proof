@@ -106,6 +106,8 @@ export const siteConfig = {
     "handyman Carrollwood",
     "handyman Citrus Park",
     "handyman Town n Country",
+    "handyman Oldsmar FL",
+    "Oldsmar FL handyman services",
     "handyman Hillsborough County",
     "handyman Pinellas County",
     "handyman Brandon FL",
