@@ -5,12 +5,14 @@ import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { instantEstimate } from "@/lib/instant-estimate";
+import { heroStory } from "@/lib/images";
 import { TrustBadges } from "@/components/trust-badges";
 import { VideoBackground } from "@/components/video-background";
 
 /**
- * Live looping job-photo video. Mobile keeps the footage in its own
- * uncovered band so it cannot be hidden by a black panel.
+ * Muted commercial loop: van arrival, technician walking up, handshake.
+ * Mobile keeps the footage in its own uncovered band so it cannot be hidden by a black panel.
+ * Handshake still is the LCP poster — same ~16:9 frame as the clip.
  */
 export function Hero() {
   return (
@@ -18,9 +20,12 @@ export function Hero() {
       <div className="relative h-[50vh] min-h-[300px] w-full md:absolute md:inset-0 md:h-auto md:min-h-0">
         <VideoBackground
           priority
-          mp4Src="/videos/hero-loop.mp4?v=9"
-          posterSrc="/images/cinematic/hero-poster.jpg?v=9"
-          posterAlt="Handyman Pros FL technician on a Tampa drywall, paint, and TV mounting job"
+          mp4Src={heroStory.video}
+          posterSrc={heroStory.poster.webp}
+          posterAvif={heroStory.poster.avif}
+          posterAlt={heroStory.poster.alt}
+          posterWidth={heroStory.poster.width}
+          posterHeight={heroStory.poster.height}
         />
       </div>
 

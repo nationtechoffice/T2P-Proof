@@ -8,7 +8,7 @@ import {
 import { instantEstimate } from "./instant-estimate";
 import { siteConfig } from "./site-config";
 import { googleBusiness } from "./google-business";
-import { galleryImages } from "./images";
+import { galleryImages, heroStory } from "./images";
 
 interface JsonLdProps {
   data: Record<string, unknown> | Record<string, unknown>[];
@@ -47,6 +47,7 @@ export function localBusinessSchema() {
     },
     image: [
       `${siteConfig.url}/images/logo.svg`,
+      ...heroStory.stills.map((image) => `${siteConfig.url}${image.webp}`),
       ...galleryImages.map((image) => `${siteConfig.url}${image.src}`),
     ],
     description: instantEstimate.schemaDescription,

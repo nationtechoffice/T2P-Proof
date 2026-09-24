@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { preload } from "react-dom";
 import { Hero } from "@/components/hero";
 import { CoverageAreasMotion } from "@/components/coverage-areas-motion";
 import { BeforeAfterShowcase } from "@/components/before-after-showcase";
@@ -16,6 +17,7 @@ import { coreServices, hrefForAreaName } from "@/lib/programmatic";
 import { homeTitle, homeDescription } from "@/lib/instant-estimate";
 import { buildMetadata } from "@/lib/seo";
 import { tampaLocalKeywords } from "@/lib/local-seo";
+import { heroStory } from "@/lib/images";
 import Link from "next/link";
 import Image from "next/image";
 import { blogPosts } from "@/lib/blog-posts";
@@ -44,9 +46,19 @@ export const metadata: Metadata = buildMetadata({
     "home repair Tampa Bay",
     ...tampaLocalKeywords.slice(0, 4),
   ],
+  ogImage: `${siteConfig.url}${heroStory.poster.webp}`,
+  ogAlt: heroStory.poster.alt,
+  ogWidth: heroStory.poster.width,
+  ogHeight: heroStory.poster.height,
 });
 
 export default function HomePage() {
+  preload(heroStory.poster.avif, {
+    as: "image",
+    type: "image/avif",
+    fetchPriority: "high",
+  });
+
   const recentPosts = blogPosts.slice(0, 3);
 
   return (

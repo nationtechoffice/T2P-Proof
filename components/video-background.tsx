@@ -6,7 +6,11 @@ type VideoBackgroundProps = {
   mp4Src: string;
   webmSrc?: string;
   posterSrc: string;
+  /** AVIF source for the LCP poster. WebP (posterSrc) stays the fallback. */
+  posterAvif?: string;
   posterAlt?: string;
+  posterWidth?: number;
+  posterHeight?: number;
   className?: string;
   /** Below-fold clips only — hero should keep this false/omit. */
   lazy?: boolean;
@@ -22,7 +26,10 @@ export function VideoBackground({
   mp4Src,
   webmSrc,
   posterSrc,
+  posterAvif,
   posterAlt = "Handyman Pros FL technician on a Tampa drywall, paint, and TV mounting job",
+  posterWidth,
+  posterHeight,
   className = "",
   lazy = false,
   priority = false,
@@ -154,17 +161,24 @@ export function VideoBackground({
 
   return (
     <div ref={containerRef} className={`absolute inset-0 overflow-hidden ${className}`}>
-      {/* Poster underneath until video is actually playing */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={posterSrc}
-        alt={posterAlt}
-        decoding={priority ? "sync" : "async"}
-        fetchPriority={priority ? "high" : "auto"}
-        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${
+      {/* Poster underneath until video is actually playing. AVIF, then WebP. */}
+      <picture
+        className={`absolute inset-0 block h-full w-full transition-opacity duration-300 ${
           playing ? "opacity-0" : "opacity-100"
         }`}
-      />
+      >
+        {posterAvif ? <source srcSet={posterAvif} type="image/avif" /> : null}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={posterSrc}
+          alt={posterAlt}
+          width={posterWidth}
+          height={posterHeight}
+          decoding={priority ? "sync" : "async"}
+          fetchPriority={priority ? "high" : "auto"}
+          className="h-full w-full object-cover object-center"
+        />
+      </picture>
 
       {shouldLoad ? (
         <video

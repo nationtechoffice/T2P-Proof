@@ -82,6 +82,44 @@ export const galleryImages = [
   },
 ] as const;
 
+/**
+ * Homepage hero story stills. Handshake is the LCP poster (same ~16:9 frame as the hero video).
+ * AVIF is the picture source; WebP is the img fallback and the video poster.
+ */
+export const heroStory = {
+  video: "/images/hero/handyman-pros-florida-technician-arrival-handshake-tampa.mp4",
+  poster: {
+    avif: "/images/hero/handyman-pros-florida-technician-handshake-customer-tampa.avif",
+    webp: "/images/hero/handyman-pros-florida-technician-handshake-customer-tampa.webp",
+    alt: "Handyman Pros Florida technician greeting a customer in Tampa",
+    width: 1920,
+    height: 1074,
+  },
+  stills: [
+    {
+      avif: "/images/hero/handyman-pros-florida-technician-handshake-customer-tampa.avif",
+      webp: "/images/hero/handyman-pros-florida-technician-handshake-customer-tampa.webp",
+      alt: "Handyman Pros Florida technician greeting a customer in Tampa",
+      width: 1920,
+      height: 1074,
+    },
+    {
+      avif: "/images/hero/handyman-pros-florida-technician-walking-to-house-tampa.avif",
+      webp: "/images/hero/handyman-pros-florida-technician-walking-to-house-tampa.webp",
+      alt: "Handyman Pros Florida technician walking up to a Tampa home",
+      width: 1920,
+      height: 1074,
+    },
+    {
+      avif: "/images/hero/handyman-pros-florida-van-drone-arrival-tampa.avif",
+      webp: "/images/hero/handyman-pros-florida-van-drone-arrival-tampa.webp",
+      alt: "Handyman Pros Florida service van arriving at a Tampa home",
+      width: 1920,
+      height: 1074,
+    },
+  ],
+} as const;
+
 /** Real Google Maps handyman job photos — used as the hero video slideshow. */
 export const heroBackgroundPhotos = [
   {

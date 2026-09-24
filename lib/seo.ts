@@ -10,6 +10,8 @@ export interface SEOProps {
   ogImage?: string;
   /** Describes the og:image file. Never reuse a TV-mount sentence on the service van. */
   ogAlt?: string;
+  ogWidth?: number;
+  ogHeight?: number;
   ogType?: "website" | "article";
   publishedTime?: string;
   modifiedTime?: string;
@@ -43,6 +45,8 @@ export function buildMetadata({
   keywords = [],
   ogImage,
   ogAlt,
+  ogWidth = 1280,
+  ogHeight = 832,
   ogType = "website",
   publishedTime,
   modifiedTime,
@@ -94,8 +98,8 @@ export function buildMetadata({
       images: [
         {
           url: image,
-          width: 1280,
-          height: 832,
+          width: ogWidth,
+          height: ogHeight,
           alt: imageAlt,
         },
       ],
