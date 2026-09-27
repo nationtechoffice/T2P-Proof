@@ -147,7 +147,7 @@
   left: 0;
   right: 0;
   height: 120px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%231D4ED8' fill-opacity='0.06' d='M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z'/%3E%3C/svg%3E") repeat-x bottom;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%231d4ed8' fill-opacity='0.06' d='M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z'/%3E%3C/svg%3E") repeat-x bottom;
   background-size: 1440px 120px;
   animation: florida-waves 25s linear infinite;
 }
@@ -159,7 +159,7 @@
   width: 200px;
   height: 180px;
   opacity: 0.04;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 120'%3E%3Cpath fill='%230A0A0A' d='M50 120V60M50 60C30 40 10 50 5 70C25 55 40 58 50 60M50 60C70 40 90 50 95 70C75 55 60 58 50 60M50 45C35 25 15 30 10 50C30 38 42 42 50 45M50 45C65 25 85 30 90 50C70 38 58 42 50 45M50 30C40 10 25 15 20 35C35 25 44 28 50 30M50 30C60 10 75 15 80 35C65 25 56 28 50 30'/%3E%3C/svg%3E") no-repeat bottom right;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 120'%3E%3Cpath fill='%230a0a0a' d='M50 120V60M50 60C30 40 10 50 5 70C25 55 40 58 50 60M50 60C70 40 90 50 95 70C75 55 60 58 50 60M50 45C35 25 15 30 10 50C30 38 42 42 50 45M50 45C65 25 85 30 90 50C70 38 58 42 50 45M50 30C40 10 25 15 20 35C35 25 44 28 50 30M50 30C60 10 75 15 80 35C65 25 56 28 50 30'/%3E%3C/svg%3E") no-repeat bottom right;
   background-size: contain;
 }
 
