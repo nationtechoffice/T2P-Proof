@@ -65,7 +65,7 @@ const FURNITURE_ALIAS_REDIRECTS: Record<string, string> = {
   "/services/furniture-moving-help": "/services/furniture-assembly",
 };
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const gutterDestination = GUTTER_ALIAS_REDIRECTS[request.nextUrl.pathname];
   if (gutterDestination) {
     const url = request.nextUrl.clone();
