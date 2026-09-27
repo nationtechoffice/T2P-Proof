@@ -10,10 +10,13 @@ interface LogoProps {
 }
 
 const LOGO_ALT =
-  "Handyman Pros FL logo featuring an orange wrench icon and bold navy and orange text";
+  "Handyman Pros Florida logo with an orange-outlined black shield, two crossed royal blue wrenches and the stacked HANDYMAN PROS FLORIDA wordmark";
 
 export function Logo({ className, priority = false, variant = "default" }: LogoProps) {
-  const src = variant === "light" ? "/images/logo-light.svg" : "/images/logo.svg";
+  const src =
+    variant === "light"
+      ? "/images/handyman-pros-florida-logo-light.svg"
+      : "/images/handyman-pros-florida-logo.svg";
 
   return (
     <Link
@@ -24,10 +27,10 @@ export function Logo({ className, priority = false, variant = "default" }: LogoP
       <Image
         src={src}
         alt={LOGO_ALT}
-        width={220}
-        height={40}
+        width={270}
+        height={112}
         priority={priority}
-        className="h-8 w-auto max-w-[180px] object-contain object-left sm:h-9 sm:max-w-[220px] md:h-10 md:max-w-[240px]"
+        className="h-10 w-auto max-w-[180px] object-contain object-left sm:h-11 sm:max-w-[220px] md:h-12 md:max-w-[240px]"
       />
     </Link>
   );

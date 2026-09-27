@@ -54,11 +54,20 @@ export const metadata: Metadata = {
     siteName: siteConfig.legalName,
     title: homeTitle(),
     description: homeDescription(),
+    images: [
+      {
+        url: "/images/handyman-pros-florida-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Handyman Pros Florida shield logo with five orange stars, Free Estimates and phone (656) 205-3185",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: homeTitle(),
     description: homeDescription(),
+    images: ["/images/handyman-pros-florida-og.png"],
   },
   robots: {
     index: true,
@@ -84,8 +93,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-US" className={`${bodyFont.variable} ${displayFont.variable}`}>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMs full context" />

@@ -1,11 +1,11 @@
 export const siteImages = {
   logo: {
-    src: "/images/logo.svg",
-    alt: "Handyman Pros FL logo featuring an orange wrench icon and bold navy and orange text",
+    src: "/images/handyman-pros-florida-logo.svg",
+    alt: "Handyman Pros Florida logo with an orange-outlined black shield, two crossed royal blue wrenches and the stacked HANDYMAN PROS FLORIDA wordmark",
   },
   logoLight: {
-    src: "/images/logo-light.svg",
-    alt: "Handyman Pros FL logo featuring an orange wrench icon and bold navy and orange text",
+    src: "/images/handyman-pros-florida-logo-light.svg",
+    alt: "Handyman Pros Florida logo with an orange-outlined black shield, two crossed royal blue wrenches and the stacked HANDYMAN PROS FLORIDA wordmark",
   },
   /** Real Google Maps / GMB service van photo */
   hero: {

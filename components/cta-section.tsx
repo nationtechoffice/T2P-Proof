@@ -13,7 +13,7 @@ export function CTASection({
   return (
     <section className="section-padding relative">
       <div className="container-site">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[hsl(var(--primary))] via-[hsl(200,75%,32%)] to-[hsl(var(--secondary))] p-8 text-center text-white shadow-2xl md:p-12">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[hsl(var(--primary))] via-[hsl(224,76%,36%)] to-[hsl(var(--secondary))] p-8 text-center text-white shadow-2xl md:p-12">
           <div className="hero-shimmer pointer-events-none absolute inset-0 rounded-3xl" />
           <div className="relative">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">{title}</h2>

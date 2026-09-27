@@ -28,7 +28,7 @@ export function BeforeAfterShowcase() {
       className="section-padding relative overflow-hidden bg-slate-950 text-white"
       aria-labelledby="before-after-heading"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(244,125,49,0.18),_transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,122,0,0.18),_transparent_55%)]" />
       <div className="container-site relative">
         <ScrollReveal className="mx-auto mb-10 max-w-3xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">

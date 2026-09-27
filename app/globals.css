@@ -1,17 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: hsl(210 28% 97%);
-  --color-foreground: hsl(210 45% 10%);
-  --color-primary: hsl(210 55% 18%);
+  /* Brand palette (uniform sheet): white #FFFFFF, orange #FF7A00, royal blue #1D4ED8, black #0A0A0A */
+  --color-brand-orange: #ff7a00;
+  --color-brand-blue: #1d4ed8;
+  --color-brand-black: #0a0a0a;
+  --color-brand-white: #ffffff;
+  --color-background: hsl(220 20% 98%);
+  --color-foreground: hsl(0 0% 4%);
+  --color-primary: hsl(224 76% 48%);
   --color-primary-foreground: hsl(0 0% 100%);
-  --color-secondary: hsl(168 48% 32%);
+  --color-secondary: hsl(224 71% 30%);
   --color-secondary-foreground: hsl(0 0% 100%);
-  --color-accent: hsl(24 92% 52%);
+  --color-accent: hsl(29 100% 50%);
   --color-accent-foreground: hsl(0 0% 100%);
-  --color-muted: hsl(210 22% 93%);
-  --color-muted-foreground: hsl(210 16% 38%);
-  --color-border: hsl(210 18% 86%);
+  --color-muted: hsl(220 14% 94%);
+  --color-muted-foreground: hsl(220 9% 34%);
+  --color-border: hsl(220 13% 87%);
   --radius: 0.75rem;
   --font-sans: var(--font-body), "Segoe UI", sans-serif;
   --font-family-display: var(--font-display), "Segoe UI", sans-serif;
@@ -19,21 +24,22 @@
 
 @layer base {
   :root {
-    --background: 210 28% 97%;
-    --foreground: 210 45% 10%;
-    --primary: 210 55% 18%;
+    /* Brand: orange #FF7A00 = CTA/accent, royal blue #1D4ED8 = primary accents, black #0A0A0A text */
+    --background: 220 20% 98%;
+    --foreground: 0 0% 4%;
+    --primary: 224 76% 48%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 168 48% 32%;
+    --secondary: 224 71% 30%;
     --secondary-foreground: 0 0% 100%;
-    --accent: 24 92% 52%;
+    --accent: 29 100% 50%;
     --accent-foreground: 0 0% 100%;
-    --muted: 210 22% 93%;
-    --muted-foreground: 210 16% 38%;
-    --border: 210 18% 86%;
-    --florida-sky: 198 72% 48%;
-    --florida-coral: 16 88% 58%;
-    --florida-sand: 40 35% 94%;
-    --florida-palm: 152 42% 28%;
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 9% 34%;
+    --border: 220 13% 87%;
+    --florida-sky: 224 76% 48%;
+    --florida-coral: 29 100% 50%;
+    --florida-sand: 0 0% 97%;
+    --florida-palm: 224 71% 30%;
   }
 
   html {
@@ -90,11 +96,11 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    hsl(38 45% 96%) 0%,
-    hsl(195 60% 94%) 25%,
-    hsl(28 70% 95%) 50%,
-    hsl(195 50% 93%) 75%,
-    hsl(38 40% 96%) 100%
+    hsl(0 0% 99%) 0%,
+    hsl(224 80% 97%) 25%,
+    hsl(29 100% 97%) 50%,
+    hsl(224 70% 96%) 75%,
+    hsl(0 0% 99%) 100%
   );
   background-size: 400% 400%;
   animation: florida-gradient 18s ease infinite;
@@ -141,7 +147,7 @@
   left: 0;
   right: 0;
   height: 120px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%230077b6' fill-opacity='0.06' d='M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z'/%3E%3C/svg%3E") repeat-x bottom;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%231D4ED8' fill-opacity='0.06' d='M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z'/%3E%3C/svg%3E") repeat-x bottom;
   background-size: 1440px 120px;
   animation: florida-waves 25s linear infinite;
 }
@@ -153,7 +159,7 @@
   width: 200px;
   height: 180px;
   opacity: 0.04;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 120'%3E%3Cpath fill='%232d6a4f' d='M50 120V60M50 60C30 40 10 50 5 70C25 55 40 58 50 60M50 60C70 40 90 50 95 70C75 55 60 58 50 60M50 45C35 25 15 30 10 50C30 38 42 42 50 45M50 45C65 25 85 30 90 50C70 38 58 42 50 45M50 30C40 10 25 15 20 35C35 25 44 28 50 30M50 30C60 10 75 15 80 35C65 25 56 28 50 30'/%3E%3C/svg%3E") no-repeat bottom right;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 120'%3E%3Cpath fill='%230A0A0A' d='M50 120V60M50 60C30 40 10 50 5 70C25 55 40 58 50 60M50 60C70 40 90 50 95 70C75 55 60 58 50 60M50 45C35 25 15 30 10 50C30 38 42 42 50 45M50 45C65 25 85 30 90 50C70 38 58 42 50 45M50 30C40 10 25 15 20 35C35 25 44 28 50 30M50 30C60 10 75 15 80 35C65 25 56 28 50 30'/%3E%3C/svg%3E") no-repeat bottom right;
   background-size: contain;
 }
 
@@ -184,7 +190,7 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-xl bg-[hsl(var(--primary))] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[hsl(var(--primary)/0.25)] transition-all hover:brightness-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))] focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-xl bg-[hsl(var(--accent))] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[hsl(var(--accent)/0.3)] transition-all hover:brightness-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary))] focus:ring-offset-2;
   }
 
   .btn-secondary {

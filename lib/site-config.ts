@@ -20,7 +20,7 @@ export const siteConfig = {
   leadEmail: "support@handymanprosflorida.com",
   baseCities: ["Westchase", "Carrollwood", "Citrus Park", "Tampa"] as const,
   primaryZip: "33626",
-  themeAccent: "#F47D31",
+  themeAccent: "#FF7A00",
   foundingLocation: "Westchase, Tampa, FL",
   address: {
     street: "12021 Tuscany Bay Dr",
@@ -122,7 +122,7 @@ export const siteConfig = {
     "local handyman Tampa Bay",
   ],
   indexNowKey: "8f3a7c2e1b9d4f6a8c5e2b7d1a9f4c6e",
-  themeColor: "#F47D31",
+  themeColor: "#0A0A0A",
 } as const;
 
 export type ServiceCategory = "handyman" | "painting" | "fence";

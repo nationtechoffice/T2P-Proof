@@ -48,7 +48,7 @@ export function SpatialField({
   const glowX = useTransform(sx, [-0.5, 0.5], [18, 82]);
   const glowY = useTransform(sy, [-0.5, 0.5], [22, 78]);
   const glow = useMotionTemplate`radial-gradient(680px circle at ${glowX}% ${glowY}%, ${
-    tone === "dark" ? "rgba(244,125,49,0.22)" : "rgba(244,125,49,0.14)"
+    tone === "dark" ? "rgba(255,122,0,0.22)" : "rgba(255,122,0,0.14)"
   }, transparent 55%)`;
   const contentRX = useTransform(rotateX, (v) => v * 0.35);
   const contentRY = useTransform(rotateY, (v) => v * 0.35);
@@ -99,7 +99,7 @@ export function SpatialField({
             style={{ x: shiftX, y: shiftY, translateZ: 80 }}
           />
           <motion.div
-            className="spatial-float-slow absolute -left-[6%] bottom-[18%] h-40 w-40 rounded-full border border-cyan-200/20 bg-cyan-400/15"
+            className="spatial-float-slow absolute -left-[6%] bottom-[18%] h-40 w-40 rounded-full border border-blue-300/20 bg-blue-600/15"
             style={{ x: counterX, y: counterY, translateZ: 120 }}
           />
           <motion.div

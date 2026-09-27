@@ -41,12 +41,13 @@ export function localBusinessSchema() {
     url: schemaUrl,
     logo: {
       "@type": "ImageObject",
-      url: `${siteConfig.url}/images/logo.svg`,
-      width: 560,
-      height: 100,
+      url: `${siteConfig.url}/images/handyman-pros-florida-logo.png`,
+      width: 600,
+      height: 688,
     },
     image: [
-      `${siteConfig.url}/images/logo.svg`,
+      `${siteConfig.url}/images/handyman-pros-florida-logo.png`,
+      `${siteConfig.url}/images/handyman-pros-florida-og.png`,
       ...heroStory.stills.map((image) => `${siteConfig.url}${image.webp}`),
       ...galleryImages.map((image) => `${siteConfig.url}${image.src}`),
     ],
@@ -287,7 +288,9 @@ export function articleSchema(article: {
       name: siteConfig.legalName,
       logo: {
         "@type": "ImageObject",
-        url: `${siteConfig.url}/images/logo.svg`,
+        url: `${siteConfig.url}/images/handyman-pros-florida-logo.png`,
+        width: 600,
+        height: 688,
       },
     },
     image: `${siteConfig.url}${article.image}`,

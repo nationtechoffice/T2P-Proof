@@ -61,14 +61,14 @@ export function Hero() {
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href={`tel:${siteConfig.phoneTel}`}
-                className="btn-accent inline-flex w-full items-center justify-center gap-2 text-base font-bold shadow-[0_18px_40px_-12px_rgba(244,125,49,0.75)] sm:w-auto"
+                className="btn-accent inline-flex w-full items-center justify-center gap-2 text-base font-bold shadow-[0_18px_40px_-12px_rgba(255,122,0,0.75)] sm:w-auto"
               >
                 <Phone className="h-5 w-5" />
                 {instantEstimate.ctaLabel}: {siteConfig.phone}
               </a>
               <Link
                 href="/contact"
-                className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white/80 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-[hsl(210_45%_12%)] sm:w-auto"
+                className="inline-flex w-full items-center justify-center rounded-xl border-2 border-white/80 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-[hsl(0_0%_4%)] sm:w-auto"
               >
                 Get Fast Estimate
               </Link>

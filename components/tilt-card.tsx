@@ -50,7 +50,7 @@ export function TiltCard({
   const glareX = useTransform(x, [-0.5, 0.5], [0, 100]);
   const glareY = useTransform(y, [-0.5, 0.5], [0, 100]);
   const glareBackground = useMotionTemplate`radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255,255,255,0.42), transparent 52%)`;
-  const shadow = useMotionTemplate`0 ${useTransform(y, [-0.5, 0.5], [26, 50])}px 60px -16px rgba(15,40,60,0.58)`;
+  const shadow = useMotionTemplate`0 ${useTransform(y, [-0.5, 0.5], [26, 50])}px 60px -16px rgba(10,10,10,0.58)`;
 
   function handleMove(event: MouseEvent<HTMLAnchorElement>) {
     const el = ref.current;
