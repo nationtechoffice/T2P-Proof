@@ -73,6 +73,10 @@ const tileGallery: ServicePhoto[] = [
     src: "/images/work/porcelain-tile-install.jpg",
     alt: "Large-format porcelain floor tile installation in a Tampa kitchen",
   },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-large-format-tile-floor-installation.webp",
+    alt: "Large light-colored floor tiles installed across a kitchen and living area under renovation",
+  },
 ];
 
 const plumbingGallery: ServicePhoto[] = [

@@ -6,6 +6,7 @@ import { BeforeAfterShowcase } from "@/components/before-after-showcase";
 import { FeaturedServiceCards } from "@/components/featured-service-cards";
 import { ServicesGrid } from "@/components/services-grid";
 import { PhotoGallery } from "@/components/photo-gallery";
+import { RecentWorkGallery } from "@/components/recent-work-gallery";
 import { GoogleReviews } from "@/components/google-reviews";
 import { FAQSection, homeFaqs } from "@/components/faq-section";
 import { CTASection } from "@/components/cta-section";
@@ -73,6 +74,7 @@ export default function HomePage() {
 
       <FeaturedServiceCards />
       <PhotoGallery />
+      <RecentWorkGallery />
       <CoverageAreasMotion />
       <BeforeAfterShowcase />
 

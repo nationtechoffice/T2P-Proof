@@ -8,6 +8,7 @@ import { JsonLd } from "@/lib/json-ld";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { workPhotos } from "@/lib/work-showcase";
+import { recentWorkPhotos } from "@/lib/recent-work";
 
 export const metadata: Metadata = buildMetadata({
   title: "Handyman Work Photos | Tampa, Clearwater & St. Pete",
@@ -43,13 +44,26 @@ export default function WorkPage() {
             "@type": "ImageGallery",
             name: "Tampa Bay handyman job photos",
             url: pageUrl,
-            associatedMedia: workPhotos.map((photo) => ({
-              "@type": "ImageObject",
-              contentUrl: `${siteConfig.url}${photo.src}`,
-              name: photo.alt,
-              description: photo.caption,
-              caption: photo.caption,
-            })),
+            associatedMedia: [
+              ...workPhotos.map((photo) => ({
+                "@type": "ImageObject",
+                contentUrl: `${siteConfig.url}${photo.src}`,
+                name: photo.alt,
+                description: photo.caption,
+                caption: photo.caption,
+              })),
+              ...recentWorkPhotos.map((photo) => ({
+                "@type": "ImageObject",
+                contentUrl: `${siteConfig.url}${photo.webp}`,
+                thumbnailUrl: `${siteConfig.url}${photo.thumb}`,
+                name: photo.alt,
+                description: photo.caption,
+                caption: photo.caption,
+                width: photo.width,
+                height: photo.height,
+                encodingFormat: "image/webp",
+              })),
+            ],
           },
         ]}
       />
@@ -66,6 +80,40 @@ export default function WorkPage() {
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {recentWorkPhotos.map((photo) => (
+              <figure
+                key={photo.slug}
+                id={photo.slug}
+                className="overflow-hidden rounded-2xl border border-[hsl(var(--border))] bg-white shadow-sm"
+              >
+                <picture>
+                  <source srcSet={photo.avif} type="image/avif" />
+                  <source
+                    srcSet={`${photo.thumb} ${photo.thumbWidth}w, ${photo.webp} ${photo.width}w`}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    type="image/webp"
+                  />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={photo.webp}
+                    alt={photo.alt}
+                    width={photo.width}
+                    height={photo.height}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-auto w-full bg-[hsl(var(--muted))]"
+                  />
+                </picture>
+                <figcaption className="space-y-3 p-5">
+                  <p className="text-sm leading-relaxed text-[hsl(var(--muted-foreground))]">{photo.caption}</p>
+                  {photo.href && photo.linkLabel ? (
+                    <Link href={photo.href} className="text-sm font-semibold text-[hsl(var(--primary))] hover:underline">
+                      {photo.linkLabel}
+                    </Link>
+                  ) : null}
+                </figcaption>
+              </figure>
+            ))}
             {workPhotos.map((photo) => (
               <figure
                 key={photo.slug}
