@@ -121,7 +121,7 @@ export const siteConfig = {
     "licensed handyman Tampa Bay",
     "local handyman Tampa Bay",
   ],
-  indexNowKey: "8f3a7c2e1b9d4f6a8c5e2b7d1a9f4c6e",
+  indexNowKey: "e4531a5497e657281ecc6d7664bd0b05",
   themeColor: "#0A0A0A",
 } as const;
 
