@@ -71,6 +71,19 @@ const nextConfig = {
       { source: "/showcase", destination: "/work", permanent: true },
     ];
   },
+  async rewrites() {
+    return {
+      // hcdn serves files in public/ before Node and maps unknown types to
+      // text/plain, so Next headers never see those AVIFs. Files live in media/
+      // and app/api/avif serves the same public URL as image/avif.
+      afterFiles: [
+        {
+          source: "/images/:path*.avif",
+          destination: "/api/avif/images/:path*.avif",
+        },
+      ],
+    };
+  },
   async headers() {
     return [
       {
