@@ -57,12 +57,14 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
       <article className="section-padding">
         <div className="container-site grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
+            <h1 className="mb-4 text-4xl font-bold">{service.h1 || serviceH1(service.name, "Tampa")}</h1>
+            <p className="service-definition mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">
+              {service.intro}
+            </p>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
               Instant Phone Estimates · 24/7 Tampa Bay
             </p>
-            <h1 className="mb-4 text-4xl font-bold">{service.h1 || serviceH1(service.name, "Tampa")}</h1>
             <p className="mb-4 text-xl font-semibold text-[hsl(var(--primary))]">{instantEstimate.heroHeadline}</p>
-            <p className="mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">{service.intro}</p>
             <div className="mb-6">
               <TrustBadges />
             </div>

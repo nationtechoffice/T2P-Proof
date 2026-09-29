@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { galleryImages } from "@/lib/images";
+import { OptimizedWorkImage } from "@/components/optimized-work-image";
+import { galleryImages, optimizedStill } from "@/lib/images";
 import { JsonLd } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import { googleBusiness } from "@/lib/google-business";
@@ -19,7 +20,7 @@ export function PhotoGallery() {
           url: `${siteConfig.url}/work`,
           associatedMedia: preview.map((image) => ({
             "@type": "ImageObject",
-            contentUrl: `${siteConfig.url}${image.src}`,
+            contentUrl: `${siteConfig.url}${optimizedStill(image.src)?.webp ?? image.src}`,
             description: image.alt,
             name: image.alt,
           })),
@@ -48,13 +49,21 @@ export function PhotoGallery() {
               href="/work"
               className="group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-md"
             >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                sizes="(max-width: 1024px) 50vw, 25vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+              {optimizedStill(image.src) ? (
+                <OptimizedWorkImage
+                  src={image.src}
+                  alt={image.alt}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              ) : (
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              )}
             </Link>
           ))}
         </div>

@@ -9,6 +9,8 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import { useRef, type MouseEvent, type ReactNode } from "react";
+import { OptimizedWorkImage } from "@/components/optimized-work-image";
+import { optimizedStill } from "@/lib/images";
 
 type TiltCardProps = {
   href: string;
@@ -91,13 +93,21 @@ export function TiltCard({
         />
 
         <div className="relative aspect-[16/11] overflow-hidden" style={{ transform: "translateZ(1px)" }}>
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            fill
-            sizes="(max-width: 768px) 100vw, 25vw"
-            className="object-cover transition-transform duration-700 group-hover:scale-110"
-          />
+          {optimizedStill(imageSrc) ? (
+            <OptimizedWorkImage
+              src={imageSrc}
+              alt={imageAlt}
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+          ) : (
+            <Image
+              src={imageSrc}
+              alt={imageAlt}
+              fill
+              sizes="(max-width: 768px) 100vw, 25vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/30 to-transparent" />
           {icon ? (
             <motion.div

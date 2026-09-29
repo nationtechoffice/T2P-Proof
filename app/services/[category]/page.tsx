@@ -42,10 +42,11 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   if (!validCategories.includes(category as ServiceCategory)) return {};
   const meta = categoryMeta[category as ServiceCategory];
   return buildMetadata({
-    title: meta.title,
-    description: meta.description,
+    title: meta.metaTitle,
+    description: meta.metaDescription,
     path: `/services/${category}`,
     keywords: [meta.name, `${meta.name} Tampa`, `${meta.name} Westchase`, `${meta.name} Hillsborough County`],
+    exactTitle: true,
   });
 }
 
