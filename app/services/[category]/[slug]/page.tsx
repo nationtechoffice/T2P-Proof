@@ -13,7 +13,7 @@ import { JsonLd, breadcrumbSchema, serviceSchema, faqSchema, speakableSchema } f
 import { siteConfig } from "@/lib/site-config";
 import { InternalLinkHub } from "@/components/internal-link-hub";
 import { ServicePhotoGallery } from "@/components/service-photo-gallery";
-import { tampaBayLocationLinks, fenceCategoryLinks, authorityHubLinks } from "@/lib/internal-links";
+import { tampaBayLocationLinks, fenceCategoryLinks, authorityHubLinks, moneyNearbyLinks } from "@/lib/internal-links";
 import { galleryForPage } from "@/lib/service-galleries";
 
 export function generateStaticParams() {
@@ -221,9 +221,17 @@ export default async function ServicePage({
 
 
             <InternalLinkHub
+              title={`${service.name} near Westchase headquarters`}
+              intro="Nearby city pages for the same licensed crew. Each link is a service area, not a second office."
+              links={moneyNearbyLinks(service.name)}
+            />
+            <InternalLinkHub
               title={`${service.name} near you in Tampa Bay`}
               intro="City pages and this service page reinforce each other for local rankings and AI citations."
-              links={tampaBayLocationLinks()}
+              links={tampaBayLocationLinks().map((link) => ({
+                ...link,
+                label: `${service.name} in ${link.label.replace(/^Handyman /, "").replace(/ FL$/, "")}`,
+              }))}
             />
             {service.category === "fence" ? (
               <InternalLinkHub title="More fence services" links={fenceCategoryLinks} />

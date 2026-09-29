@@ -68,7 +68,7 @@ export function FAQSection({ faqs = homeFaqs, title = "Frequently Asked Question
                   <span className="ml-4 text-[hsl(var(--accent))] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
                 </span>
               </summary>
-              <p className="mt-4 leading-relaxed text-[hsl(var(--muted-foreground))]">{faq.answer}</p>
+              <p className="faq-answer mt-4 leading-relaxed text-[hsl(var(--muted-foreground))]">{faq.answer}</p>
             </details>
           ))}
         </div>

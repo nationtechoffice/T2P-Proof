@@ -5,7 +5,7 @@ import { CTASection } from "@/components/cta-section";
 import { GoogleReviews } from "@/components/google-reviews";
 import { JsonLd, breadcrumbSchema, speakableSchema, serviceSchema } from "@/lib/json-ld";
 import { allLocationLinks, type LocationSilo } from "@/lib/location-silos";
-import { linkifyServiceLabel, authorityHubLinks, fenceCategoryLinks } from "@/lib/internal-links";
+import { linkifyServiceLabel, fenceCategoryLinks, moneyServiceLinks } from "@/lib/internal-links";
 import { InternalLinkHub } from "@/components/internal-link-hub";
 import { siteConfig } from "@/lib/site-config";
 import { CheckCircle, MapPin, Phone } from "lucide-react";
@@ -145,15 +145,11 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
               links={fenceCategoryLinks}
             />
             <InternalLinkHub
-              title="Core Tampa handyman hubs"
-              links={[
-                authorityHubLinks.fence,
-                authorityHubLinks.drywall,
-                authorityHubLinks.tvMount,
-                authorityHubLinks.services,
-                authorityHubLinks.tampa,
-                authorityHubLinks.westchase,
-              ]}
+              title={`Handyman services in ${location.city}`}
+              links={moneyServiceLinks.map((link) => ({
+                href: link.href,
+                label: `${link.label.replace(/ Tampa$/, "")} in ${location.city}`,
+              }))}
             />
             <nav className="mt-8" aria-label="Other Tampa Bay service areas">
               <p className="mb-3 text-sm font-semibold">Other areas we cover from Tampa HQ</p>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { planAMeta } from "./plan-a-seo";
 import { siteConfig } from "./site-config";
 import { formatFullAddress } from "./local-seo";
 
@@ -54,7 +55,12 @@ export function buildMetadata({
   exactTitle = false,
 }: SEOProps): Metadata {
   const url = canonicalUrl(path);
-  const fullTitle = exactTitle ? title : brandedTitle(title);
+  const normalizedPath = path === "/" ? "/" : `/${path.replace(/^\/+|\/+$/g, "")}`;
+  const override = planAMeta[normalizedPath];
+  const resolvedTitle = override?.title ?? title;
+  const resolvedDescription = override?.description ?? description;
+  const fullTitle = override || exactTitle ? resolvedTitle : brandedTitle(resolvedTitle);
+  description = resolvedDescription;
   const vanImage = `${siteConfig.url}/images/work/service-van-tampa.jpg`;
   const vanAlt = "Handyman Pros FL branded service van arriving for a Tampa Bay home repair";
   const image = ogImage || vanImage;

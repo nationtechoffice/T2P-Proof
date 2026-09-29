@@ -67,6 +67,30 @@ export function coreServiceLinks(cityLabel?: string) {
   ];
 }
 
+/** Nearby geo pages for money services. Anchors stay descriptive and service-specific. */
+export function moneyNearbyLinks(serviceName: string) {
+  const name = serviceName.replace(/\s+in Tampa.*$/i, "").trim();
+  return [
+    { href: "/locations/westchase-fl", label: `${name} in Westchase` },
+    { href: "/handyman-carrollwood-fl", label: `${name} in Carrollwood` },
+    { href: "/locations/citrus-park-fl", label: `${name} in Citrus Park` },
+    { href: "/handyman-south-tampa-fl", label: `${name} in South Tampa` },
+    { href: "/locations/clearwater", label: `${name} in Clearwater` },
+    { href: "/locations/st-petersburg", label: `${name} in St. Petersburg` },
+  ];
+}
+
+export const moneyServiceLinks = [
+  authorityHubLinks.tvMount,
+  authorityHubLinks.drywall,
+  authorityHubLinks.sameDay,
+  authorityHubLinks.tile,
+  authorityHubLinks.furniture,
+  authorityHubLinks.flooring,
+  authorityHubLinks.gutters,
+  authorityHubLinks.fans,
+] as const;
+
 export function tampaBayLocationLinks() {
   return targetLocations.map((location) => ({
     href: `/locations/${location.slug}`,

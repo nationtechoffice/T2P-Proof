@@ -13,6 +13,7 @@ const staticAllow = [
   "/sitemap.xml",
   "/llms.txt",
   "/llms-full.txt",
+  "/ai.txt",
   "/key.txt",
   `/${siteConfig.indexNowKey}.txt`,
 ];
