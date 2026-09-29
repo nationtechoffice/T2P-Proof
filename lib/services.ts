@@ -308,23 +308,38 @@ const fenceServices: Omit<Service, "category">[] = [
   { slug: "wood-fence-installation", name: "Wood Fence Installation", shortDescription: "Classic wood fence installation with cedar, pine, and pressure-treated options.", description: "Wood fencing remains a timeless choice. We install cedar, pressure-treated pine, and redwood fences in privacy, picket, and split-rail styles.", keywords: ["wood fence Florida", "cedar fence installation", "wood privacy fence"], faqs: [{ question: "What wood is best for Florida fences?", answer: "Pressure-treated pine and cedar are most popular. Cedar resists insects naturally; treated pine offers excellent value." }] },
 ];
 
-export const categoryMeta: Record<ServiceCategory, { name: string; title: string; description: string; icon: string }> = {
+export const categoryMeta: Record<
+  ServiceCategory,
+  { name: string; title: string; description: string; metaTitle: string; metaDescription: string; icon: string }
+> = {
   handyman: {
     name: "Handyman Services",
     title: "Handyman Services in Tampa",
-    description: "Licensed handyman services in Tampa, Westchase, Carrollwood & Hillsborough County. Drywall, TV mounting, tile installation, flooring installation, furniture assembly, gutter installation, repairs & more. Open 24/7.",
+    metaTitle: "Handyman Services Tampa FL | Drywall & TV",
+    description:
+      "Licensed handyman services in Tampa, Westchase, Carrollwood & Hillsborough County. Drywall, TV mounting, tile installation, flooring installation, furniture assembly, gutter installation, repairs & more. Open 24/7.",
+    metaDescription:
+      "Handyman services in Tampa, FL for drywall, TV mounting, fans, and home repairs. Licensed & insured Handyman Pros FL. Call (656) 205-3185 for an estimate.",
     icon: "wrench",
   },
   painting: {
     name: "Painting Services",
     title: "Painting Services in Tampa",
-    description: "Professional painters in Tampa, Westchase & surrounding counties. Interior, exterior, cabinet, deck & specialty painting. Free estimates — open 24/7.",
+    metaTitle: "Painting Services Tampa | Interior & Cabinets",
+    description:
+      "Professional painters in Tampa, Westchase & surrounding counties. Interior, exterior, cabinet, deck & specialty painting. Free estimates — open 24/7.",
+    metaDescription:
+      "Painting services in Tampa for interior walls, exteriors, cabinets, and trim. Licensed & insured Handyman Pros FL. Call (656) 205-3185 for a same-day estimate.",
     icon: "paintbrush",
   },
   fence: {
     name: "Fence Contractor",
     title: "Fence Installation in Tampa",
-    description: "Tampa Bay fence contractors for wood, vinyl, aluminum & chain link fencing. Privacy fences, pool fences, gates & repairs. Serving Hillsborough & Pinellas County.",
+    metaTitle: "Fence Installation Tampa | Wood, Vinyl, Aluminum",
+    description:
+      "Tampa Bay fence contractors for wood, vinyl, aluminum & chain link fencing. Privacy fences, pool fences, gates & repairs. Serving Hillsborough & Pinellas County.",
+    metaDescription:
+      "Fence installation in Tampa for wood, vinyl, and aluminum privacy fences, plus gate repairs. Licensed & insured Handyman Pros FL. Call (656) 205-3185.",
     icon: "fence",
   },
 };

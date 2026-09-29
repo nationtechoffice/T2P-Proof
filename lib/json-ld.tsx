@@ -8,7 +8,7 @@ import {
 import { instantEstimate } from "./instant-estimate";
 import { siteConfig } from "./site-config";
 import { googleBusiness } from "./google-business";
-import { galleryImages, heroStory } from "./images";
+import { galleryImages, heroStory, optimizedStill } from "./images";
 import { recentWorkPhotos } from "./recent-work";
 
 interface JsonLdProps {
@@ -50,7 +50,7 @@ export function localBusinessSchema() {
       `${siteConfig.url}/images/handyman-pros-florida-logo.png`,
       `${siteConfig.url}/images/handyman-pros-florida-og.png`,
       ...heroStory.stills.map((image) => `${siteConfig.url}${image.webp}`),
-      ...galleryImages.map((image) => `${siteConfig.url}${image.src}`),
+      ...galleryImages.map((image) => `${siteConfig.url}${optimizedStill(image.src)?.webp ?? image.src}`),
       ...recentWorkPhotos.map((photo) => `${siteConfig.url}${photo.webp}`),
     ],
     description: instantEstimate.schemaDescription,

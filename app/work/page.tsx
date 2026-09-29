@@ -7,13 +7,15 @@ import { QuoteForm } from "@/components/quote-form";
 import { JsonLd } from "@/lib/json-ld";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
+import { OptimizedWorkImage } from "@/components/optimized-work-image";
+import { optimizedStill } from "@/lib/images";
 import { workPhotos } from "@/lib/work-showcase";
 import { recentWorkPhotos } from "@/lib/recent-work";
 
 export const metadata: Metadata = buildMetadata({
   title: "Handyman Work Photos | Tampa, Clearwater & St. Pete",
   description:
-    "Real Google Maps job photos from Handyman Pros FL — drywall repair Tampa, tile install, flooring, accent walls, and exterior trim across Tampa Bay.",
+    "Job photos from licensed & insured Handyman Pros FL — drywall, tile, flooring, and fence work across Tampa Bay. Call (656) 205-3185 for an estimate today.",
   path: "/work",
   keywords: [
     "handyman Tampa FL photos",
@@ -47,7 +49,7 @@ export default function WorkPage() {
             associatedMedia: [
               ...workPhotos.map((photo) => ({
                 "@type": "ImageObject",
-                contentUrl: `${siteConfig.url}${photo.src}`,
+                contentUrl: `${siteConfig.url}${optimizedStill(photo.src)?.webp ?? photo.src}`,
                 name: photo.alt,
                 description: photo.caption,
                 caption: photo.caption,
@@ -121,13 +123,17 @@ export default function WorkPage() {
                 className="overflow-hidden rounded-2xl border border-[hsl(var(--border))] bg-white shadow-sm"
               >
                 <div className="relative aspect-[4/3]">
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    sizes="(max-width: 1024px) 50vw, 33vw"
-                    className="object-cover"
-                  />
+                  {optimizedStill(photo.src) ? (
+                    <OptimizedWorkImage src={photo.src} alt={photo.alt} className="h-full w-full object-cover" />
+                  ) : (
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      sizes="(max-width: 1024px) 50vw, 33vw"
+                      className="object-cover"
+                    />
+                  )}
                 </div>
                 <figcaption className="space-y-3 p-5">
                   <p className="text-xs font-semibold uppercase tracking-wider text-[hsl(var(--accent))]">

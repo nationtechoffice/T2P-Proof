@@ -100,7 +100,18 @@ export default async function ServicePage({
           <div className="mx-auto max-w-3xl">
             <h1 className="mb-4 text-4xl font-bold">{service.name} in Tampa, FL</h1>
             <p className="service-definition mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">
-              {service.shortDescription} Serving Westchase, Carrollwood, Citrus Park, Hillsborough County &amp; Tampa Bay — open 24/7.
+              {service.slug === "fan-installation" ? (
+                <>
+                  Ceiling and exhaust fan installation in Tampa by licensed Handyman Pros Fl. We mount and balance fans
+                  at existing fan-rated boxes and connect to present wiring — new circuits need a licensed electrician.
+                  Serving Westchase, Carrollwood, Citrus Park, and Tampa Bay with 24/7 estimates at {siteConfig.phone}.
+                </>
+              ) : (
+                <>
+                  {service.name} in Tampa, FL. {service.shortDescription} Serving Westchase, Carrollwood, Citrus Park,
+                  Hillsborough County &amp; Tampa Bay — open 24/7.
+                </>
+              )}
             </p>
             <ServicePhotoGallery photos={photos} title={`${service.name} photos in Tampa`} />
             <div className="service-description mb-8 rounded-xl bg-[hsl(var(--muted))] p-6">

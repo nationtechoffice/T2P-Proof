@@ -8,6 +8,12 @@
       "headers": [
         { "key": "X-Robots-Tag", "value": "index, follow" }
       ]
+    },
+    {
+      "source": "/(.*).avif",
+      "headers": [
+        { "key": "Content-Type", "value": "image/avif" }
+      ]
     }
   ],
   "redirects": [

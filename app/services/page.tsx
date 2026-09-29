@@ -13,7 +13,7 @@ import { Wrench, Paintbrush, Fence } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
   title: serviceTitle("Home Services", "Tampa"),
-  description: serviceDescription("home repairs and property maintenance", "Tampa"),
+  description: serviceDescription("Home services", "Tampa"),
   path: "/services",
   exactTitle: true,
   keywords: ["Tampa home services", "handyman services Tampa", "painting contractor Tampa Bay", "fence installation Tampa"],
@@ -46,6 +46,9 @@ export default function ServicesPage() {
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold">Home Services in Tampa, FL</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
+              Licensed home services in Tampa, FL cover handyman repairs, interior and exterior painting, and wood, vinyl, and aluminum fence installation — dispatched from our single Westchase headquarters.
+            </p>
+            <p className="mt-4 text-lg text-[hsl(var(--muted-foreground))]">
               Instant phone estimates and 24/7 dispatch for {allServices.length}+ handyman, painting, and fence jobs. Call {siteConfig.phone} to speak with a local expert now. For routing from Westchase, see{" "}
               <Link href="/services/same-day-handyman" className="font-semibold text-[hsl(var(--primary))] hover:underline">
                 same-day handyman in Tampa

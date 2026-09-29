@@ -82,6 +82,86 @@ export const galleryImages = [
   },
 ] as const;
 
+/** JPG path → AVIF/WebP stills for homepage and work galleries. Intrinsic size matches the fallback JPG, except the resized gravel WebP. */
+export const optimizedWorkStills = {
+  "/images/work/fence-repair.jpg": {
+    webp: "/images/work/fence-repair.webp",
+    avif: "/images/work/fence-repair.avif",
+    width: 1184,
+    height: 864,
+  },
+  "/images/work/service-van-tampa.jpg": {
+    webp: "/images/work/service-van-tampa.webp",
+    avif: "/images/work/service-van-tampa.avif",
+    width: 1376,
+    height: 768,
+  },
+  "/images/work/drywall-finish-ladder.jpg": {
+    webp: "/images/work/drywall-finish-ladder.webp",
+    avif: "/images/work/drywall-finish-ladder.avif",
+    width: 1600,
+    height: 1200,
+  },
+  "/images/work/maps-ceiling-fan.jpg": {
+    webp: "/images/work/maps-ceiling-fan.webp",
+    avif: "/images/work/maps-ceiling-fan.avif",
+    width: 1600,
+    height: 1200,
+  },
+  "/images/work/wall-patch-repair.jpg": {
+    webp: "/images/work/wall-patch-repair.webp",
+    avif: "/images/work/wall-patch-repair.avif",
+    width: 900,
+    height: 1200,
+  },
+  "/images/work/bathroom-tile-grout.jpg": {
+    webp: "/images/work/bathroom-tile-grout.webp",
+    avif: "/images/work/bathroom-tile-grout.avif",
+    width: 1600,
+    height: 873,
+  },
+  "/images/work/maps-builtin-dresser.jpg": {
+    webp: "/images/work/maps-builtin-dresser.webp",
+    avif: "/images/work/maps-builtin-dresser.avif",
+    width: 1600,
+    height: 1200,
+  },
+  "/images/work/maps-insulation-room.jpg": {
+    webp: "/images/work/maps-insulation-room.webp",
+    avif: "/images/work/maps-insulation-room.avif",
+    width: 1600,
+    height: 1200,
+  },
+  "/images/work/porcelain-tile-install.jpg": {
+    webp: "/images/work/porcelain-tile-install.webp",
+    avif: "/images/work/porcelain-tile-install.avif",
+    width: 1600,
+    height: 1200,
+  },
+  "/images/work/maps-baseboard-paint.jpg": {
+    webp: "/images/work/maps-baseboard-paint.webp",
+    avif: "/images/work/maps-baseboard-paint.avif",
+    width: 1200,
+    height: 1600,
+  },
+  "/images/work/floor-tile-grouting.jpg": {
+    webp: "/images/work/floor-tile-grouting.webp",
+    avif: "/images/work/floor-tile-grouting.avif",
+    width: 900,
+    height: 1200,
+  },
+  "/images/work/fence-post-reset.jpg": {
+    webp: "/images/work/fence-post-reset.webp",
+    avif: "/images/work/fence-post-reset.avif",
+    width: 1184,
+    height: 864,
+  },
+} as const;
+
+export function optimizedStill(src: string) {
+  return optimizedWorkStills[src as keyof typeof optimizedWorkStills];
+}
+
 /**
  * Homepage hero story stills. Handshake is the LCP poster (same ~16:9 frame as the hero video).
  * AVIF is the picture source; WebP is the img fallback and the video poster.
