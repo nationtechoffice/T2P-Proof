@@ -29,6 +29,26 @@ const drywallGallery: ServicePhoto[] = [
     src: "/images/cinematic/after-drywall.jpg",
     alt: "After drywall repair — finished wall in a Tampa home",
   },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-drywall-wall-repair-under-window.webp",
+    alt: "Handyman Pros Florida technician patching and finishing drywall under a window",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-drywall-room-window-prep.webp",
+    alt: "Unfinished room with drywall mud work around windows and a door, materials staged",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-drywall-room-chandelier-prep.webp",
+    alt: "Room under drywall repair with chandelier, masked doorway, and tools on the floor",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-drywall-finishing-worker.webp",
+    alt: "Worker finishing patched drywall in a room protected with plastic sheeting",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-protected-room-drywall-work.webp",
+    alt: "Room masked for drywall work with taped windows and protective coverings over furnishings",
+  },
 ];
 
 const fanGallery: ServicePhoto[] = [
