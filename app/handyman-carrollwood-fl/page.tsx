@@ -5,7 +5,9 @@ import { CTASection } from "@/components/cta-section";
 import { FAQSection } from "@/components/faq-section";
 import { GoogleReviews } from "@/components/google-reviews";
 import { HqDispatch } from "@/components/hq-dispatch";
+import { InternalLinkHub } from "@/components/internal-link-hub";
 import { JsonLd, breadcrumbSchema, faqSchema, speakableSchema, serviceSchema } from "@/lib/json-ld";
+import { moneyServiceLinks } from "@/lib/internal-links";
 import { carrollwoodFaqs } from "@/lib/local-faqs";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
@@ -135,6 +137,13 @@ export default function HandymanCarrollwoodPage() {
                 Also Serving Westchase
               </Link>
             </div>
+            <InternalLinkHub
+              title="Handyman services in Carrollwood"
+              links={moneyServiceLinks.map((link) => ({
+                href: link.href,
+                label: `${link.label.replace(/ Tampa$/, "")} in Carrollwood`,
+              }))}
+            />
             <div className="mt-8">
               <HqDispatch area="Carrollwood, FL" />
             </div>

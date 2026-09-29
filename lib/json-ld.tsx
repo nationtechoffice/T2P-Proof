@@ -303,6 +303,50 @@ export function articleSchema(article: {
   };
 }
 
+export function howToSchema(howto: {
+  name: string;
+  description: string;
+  totalTime?: string;
+  tool?: string[];
+  steps: { name: string; text: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: howto.name,
+    description: howto.description,
+    ...(howto.totalTime ? { totalTime: howto.totalTime } : {}),
+    ...(howto.tool ? { tool: howto.tool } : {}),
+    step: howto.steps.map((step) => ({
+      "@type": "HowToStep",
+      name: step.name,
+      text: step.text,
+    })),
+  };
+}
+
+export const tvMountHowTo = howToSchema({
+  name: "How Handyman Pros FL mounts a TV in Tampa",
+  description: "Licensed Tampa handyman TV wall mounting with stud finding, level mount, and cable management.",
+  totalTime: "PT2H",
+  tool: ["Stud finder", "Level", "Drill", "TV mount kit"],
+  steps: [
+    { name: "Confirm wall & mount", text: "Confirm TV size, mount type, and stud or solid backing locations." },
+    { name: "Mark & install bracket", text: "Mark level holes, install wall bracket into structure, verify torque." },
+    { name: "Hang & conceal", text: "Hang TV, conceal cables where possible, test power and inputs." },
+  ],
+});
+
+export const drywallHowTo = howToSchema({
+  name: "How Handyman Pros FL patches drywall in Tampa",
+  description: "Licensed drywall hole patch, texture blend, and paint prep in Tampa Bay.",
+  steps: [
+    { name: "Assess damage", text: "Measure holes/cracks and choose patch vs board replace." },
+    { name: "Patch & mud", text: "Install patch, apply joint compound in coats, sand smooth." },
+    { name: "Texture & prep", text: "Blend texture to match and prep for paint." },
+  ],
+});
+
 export function speakableSchema(url: string, cssSelectors: string[]) {
   return {
     "@context": "https://schema.org",

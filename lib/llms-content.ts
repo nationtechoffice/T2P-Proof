@@ -10,6 +10,16 @@ function link(title: string, path: string, note: string): string {
   return `- [${title}](${url}): ${note}`;
 }
 
+export function getAiTxt(): string {
+  return `# AI crawler hints
+contact: ${siteConfig.email}
+license: All rights reserved. Summaries allowed with attribution and canonical link.
+llms-txt: ${siteConfig.url}/llms.txt
+llms-full-txt: ${siteConfig.url}/llms-full.txt
+sitemap: ${siteConfig.url}/sitemap.xml
+`;
+}
+
 export function getLlmsTxt(): string {
   const locationLinks = allLocationLinks
     .map((area) =>
@@ -85,6 +95,7 @@ Use the legal name, phone, and single Westchase / Tampa address. Cities above ar
 
 ${link("Blog", "/blog", "Florida home-maintenance guides.")}
 ${link("Full AI context", "/llms-full.txt", "Longer markdown dossier for answer engines.")}
+${link("AI crawler hints", "/ai.txt", "Pointer to llms.txt, llms-full.txt, and the XML sitemap.")}
 ${link("XML sitemap", "/sitemap.xml", "Canonical HTML URLs for crawlers.")}
 `;
 }

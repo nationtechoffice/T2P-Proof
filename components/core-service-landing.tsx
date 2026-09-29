@@ -6,15 +6,16 @@ import { GoogleListingCta } from "@/components/google-listing-cta";
 import { QuoteForm } from "@/components/quote-form";
 import { TrustBadges } from "@/components/trust-badges";
 import { PhoneEstimateCta } from "@/components/phone-estimate-cta";
-import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/json-ld";
+import { JsonLd, breadcrumbSchema, drywallHowTo, faqSchema, serviceSchema, speakableSchema, tvMountHowTo } from "@/lib/json-ld";
 import type { CoreService } from "@/lib/programmatic";
 import { targetLocations } from "@/lib/programmatic";
 import { instantEstimate, serviceH1 } from "@/lib/instant-estimate";
 import { siteConfig } from "@/lib/site-config";
 import { CheckCircle } from "lucide-react";
+import { InternalLinkHub } from "@/components/internal-link-hub";
 import { ServicePhotoGallery } from "@/components/service-photo-gallery";
 import { galleryForPage } from "@/lib/service-galleries";
-import { authorityHubLinks } from "@/lib/internal-links";
+import { authorityHubLinks, moneyNearbyLinks } from "@/lib/internal-links";
 
 export function CoreServiceLanding({ service }: { service: CoreService }) {
   const pageUrl = `${siteConfig.url}/services/${service.slug}`;
@@ -51,6 +52,9 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
             offer: service.offer,
           }),
           faqSchema(service.faqs),
+          speakableSchema(pageUrl, ["h1", ".service-definition", ".faq-answer"]),
+          ...(service.slug === "tv-wall-mounting" ? [tvMountHowTo] : []),
+          ...(service.slug === "drywall-repair" ? [drywallHowTo] : []),
         ]}
       />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: service.name }]} />
@@ -131,6 +135,11 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
                 </li>
               ))}
             </ul>
+            <InternalLinkHub
+              title={`${service.name} near Westchase headquarters`}
+              intro="Nearby city pages for the same licensed crew. Each link is a service area, not a second office."
+              links={moneyNearbyLinks(service.name)}
+            />
             <h2 className="mt-10 mb-4 text-2xl font-bold">{service.name} near you in Tampa Bay</h2>
             <ul className="flex flex-wrap gap-2 text-sm">
               {targetLocations.map((location) => (
@@ -139,7 +148,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
                     href={`/locations/${location.slug}`}
                     className="rounded-full bg-white px-3 py-1.5 shadow-sm hover:text-[hsl(var(--accent))]"
                   >
-                    {location.city}
+                    {service.name} in {location.city}
                   </Link>
                 </li>
               ))}
