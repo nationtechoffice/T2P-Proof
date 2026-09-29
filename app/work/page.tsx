@@ -15,7 +15,7 @@ import { recentWorkPhotos } from "@/lib/recent-work";
 export const metadata: Metadata = buildMetadata({
   title: "Handyman Work Photos | Tampa, Clearwater & St. Pete",
   description:
-    "Real Google Maps job photos from Handyman Pros FL — drywall repair Tampa, tile install, flooring, accent walls, and exterior trim across Tampa Bay, FL.",
+    "Job photos from licensed & insured Handyman Pros FL — drywall, tile, flooring, and fence work across Tampa Bay. Call (656) 205-3185 for an estimate today.",
   path: "/work",
   keywords: [
     "handyman Tampa FL photos",

@@ -81,6 +81,10 @@ const nextConfig = {
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
         ],
       },
+      {
+        source: "/:path*.avif",
+        headers: [{ key: "Content-Type", value: "image/avif" }],
+      },
     ];
   },
 };

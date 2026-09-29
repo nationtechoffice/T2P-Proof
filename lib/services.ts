@@ -315,31 +315,31 @@ export const categoryMeta: Record<
   handyman: {
     name: "Handyman Services",
     title: "Handyman Services in Tampa",
-    metaTitle: "Handyman Services Tampa FL | Drywall, TV Mount & More",
+    metaTitle: "Handyman Services Tampa FL | Drywall & TV",
     description:
       "Licensed handyman services in Tampa, Westchase, Carrollwood & Hillsborough County. Drywall, TV mounting, tile installation, flooring installation, furniture assembly, gutter installation, repairs & more. Open 24/7.",
     metaDescription:
-      "Handyman services in Tampa, FL — licensed & insured drywall, TV mounting, tile, and same-day repairs. Instant phone estimates from Westchase. Open 24/7.",
+      "Handyman services in Tampa, FL for drywall, TV mounting, fans, and home repairs. Licensed & insured Handyman Pros FL. Call (656) 205-3185 for an estimate.",
     icon: "wrench",
   },
   painting: {
     name: "Painting Services",
     title: "Painting Services in Tampa",
-    metaTitle: "Painting Services Tampa FL | Interior Exterior Cabinets",
+    metaTitle: "Painting Services Tampa | Interior & Cabinets",
     description:
       "Professional painters in Tampa, Westchase & surrounding counties. Interior, exterior, cabinet, deck & specialty painting. Free estimates — open 24/7.",
     metaDescription:
-      "Painting services in Tampa, FL — licensed & insured interior, exterior, and cabinet painting. Same-day help from our Westchase crew. Instant phone estimates.",
+      "Painting services in Tampa for interior walls, exteriors, cabinets, and trim. Licensed & insured Handyman Pros FL. Call (656) 205-3185 for a same-day estimate.",
     icon: "paintbrush",
   },
   fence: {
     name: "Fence Contractor",
     title: "Fence Installation in Tampa",
-    metaTitle: "Fence Installation Tampa FL | Wood, Vinyl & Aluminum",
+    metaTitle: "Fence Installation Tampa | Wood, Vinyl, Aluminum",
     description:
       "Tampa Bay fence contractors for wood, vinyl, aluminum & chain link fencing. Privacy fences, pool fences, gates & repairs. Serving Hillsborough & Pinellas County.",
     metaDescription:
-      "Fence installation in Tampa, FL — licensed & insured wood, vinyl, and aluminum fences, plus repairs. Same-day help from Westchase. Instant phone estimates.",
+      "Fence installation in Tampa for wood, vinyl, and aluminum privacy fences, plus gate repairs. Licensed & insured Handyman Pros FL. Call (656) 205-3185.",
     icon: "fence",
   },
 };
