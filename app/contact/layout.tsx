@@ -8,7 +8,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     `Contact Handyman Pros FL at ${formatFullAddress()}, Tampa. Open 24/7. Call ${siteConfig.phone} for handyman, painting & fence services in Westchase, Carrollwood & Hillsborough County.`,
   path: "/contact",
-  keywords: ["contact handyman Tampa", "handyman Westchase", "free estimate Tampa", "handyman 33626"],
+  keywords: ["contact handyman Tampa", "handyman Westchase", "free estimate Tampa", "handyman 33626", "Hablamos español", "reparaciones del hogar"],
 });
 
 export default function ContactLayout({ children }: { children: React.ReactNode }) {

@@ -315,21 +315,21 @@ export const categoryMeta: Record<
   handyman: {
     name: "Handyman Services",
     title: "Handyman Services in Tampa",
-    metaTitle: "Handyman Services Tampa FL | Drywall & TV",
+    metaTitle: "Handyman Services Tampa | Manitas y Drywall",
     description:
-      "Licensed handyman services in Tampa, Westchase, Carrollwood & Hillsborough County. Drywall, TV mounting, tile installation, flooring installation, furniture assembly, gutter installation, repairs & more. Open 24/7.",
+      "Licensed handyman services in Tampa, Westchase, Carrollwood & Hillsborough County. Drywall, TV mounting, tile installation, flooring installation, furniture assembly, gutter installation, repairs & more. Open 24/7. Hablamos español.",
     metaDescription:
-      "Handyman services in Tampa, FL for drywall, TV mounting, fans, and home repairs. Licensed & insured Handyman Pros FL. Call (656) 205-3185 for an estimate.",
+      "Manitas y servicios de handyman Tampa: drywall, TV, fans y reparaciones en casa. Licensed & insured Handyman Pros FL. Call (656) 205-3185 today.",
     icon: "wrench",
   },
   painting: {
     name: "Painting Services",
     title: "Painting Services in Tampa",
-    metaTitle: "Painting Services Tampa | Interior & Cabinets",
+    metaTitle: "Painting Services Tampa | Pintura del Hogar",
     description:
-      "Professional painters in Tampa, Westchase & surrounding counties. Interior, exterior, cabinet, deck & specialty painting. Free estimates — open 24/7.",
+      "Professional painters in Tampa, Westchase & surrounding counties. Interior, exterior, cabinet, deck & specialty painting. Free estimates — open 24/7. Hablamos español.",
     metaDescription:
-      "Painting services in Tampa for interior walls, exteriors, cabinets, and trim. Licensed & insured Handyman Pros FL. Call (656) 205-3185 for a same-day estimate.",
+      "Pintura in Tampa for interior walls, exteriors, cabinets, and trim. Licensed & insured Handyman Pros FL. Call (656) 205-3185 for an estimate.",
     icon: "paintbrush",
   },
   fence: {

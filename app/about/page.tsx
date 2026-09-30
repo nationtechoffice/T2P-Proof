@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     `Handyman Pros FL is based at ${formatFullAddress()} in Westchase, Tampa. Licensed handyman, painting & fence services open 24/7 across Hillsborough County & Tampa Bay.`,
   path: "/about",
-  keywords: ["about handyman pros Tampa", "Westchase handyman", "Tampa handyman company", "33626 handyman"],
+  keywords: ["about handyman pros Tampa", "Westchase handyman", "Tampa handyman company", "33626 handyman", "manitas Tampa", "Hablamos español"],
 });
 
 const values = [

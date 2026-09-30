@@ -1,8 +1,8 @@
 /** PLAN A UPDATE rows only. KEEP pages are omitted so their shipped titles and metas stay as-is. */
 export const planAMeta: Record<string, { title: string; description: string }> = {
   "/about": {
-    title: "About Handyman Pros FL | Westchase Licensed Crew",
-    description: "Licensed Handyman Pros FL is based at 12021 Tuscany Bay Dr, Apt 203, Tampa, FL 33626 (Westchase). One HQ for drywall, TV mounts, painting & fence work.",
+    title: "About Handyman Pros FL | Hablamos Español",
+    description: "Licensed & insured Handyman Pros FL at 12021 Tuscany Bay Dr, Apt 203, Tampa, FL 33626 (Westchase). Hablamos español. Call (656) 205-3185 today.",
   },
   "/blog/best-exterior-paint-florida-climate": {
     title: "Best Exterior Paint for Florida's Climate: What Homeowners N",
@@ -57,12 +57,12 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     description: "TV mounting tips for Florida homes: height, wall types, cable management & hurricane-safe installs. From licensed Handyman Pros Call (656) 205-3185 today.",
   },
   "/contact": {
-    title: "Contact Handyman Pros FL | 24/7 Estimates",
-    description: "Contact licensed Handyman Pros FL in Westchase (33626). Open 24/7 for handyman, painting & fence estimates across Hillsborough & Pinellas. Call (656) 205-3185.",
+    title: "Contact Handyman Pros FL | Hablamos Español",
+    description: "Contact licensed & insured Handyman Pros FL in Westchase (33626). Hablamos español. Open 24/7 for reparaciones del hogar. Call (656) 205-3185.",
   },
   "/handyman-carrollwood-fl": {
-    title: "Carrollwood Handyman | Fans & Punch Lists",
-    description: "Licensed Handyman Pros FL serves Carrollwood near Carrollwood Village & Lake Carroll. Ceiling fans & punch lists with honest phone estimates. Open 24/7.",
+    title: "Carrollwood Handyman FL | Manitas y Fans",
+    description: "Licensed & insured Handyman Pros FL in Carrollwood. Hablamos español. Ceiling fans, punch lists y reparaciones en casa. Call (656) 205-3185.",
   },
   "/handyman-lutz-fl": {
     title: "Handyman Lutz FL | Tile Patch & Repairs | Handyman Pros FL",
@@ -81,8 +81,8 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     description: "Licensed Handyman Pros FL serves Seffner near 33584 & Broadway corridor. Gutters & exterior fixes with honest phone estimates. Open 24/7 — call (656) 205-3185.",
   },
   "/handyman-south-tampa-fl": {
-    title: "Handyman South Tampa | TV Mount Premium | Handyman Pros FL",
-    description: "Licensed Handyman Pros FL serves South Tampa near Bayshore & Hyde Park. Tv mounting & premium punch lists with honest phone estimates. Open 24/7 — call (656).",
+    title: "Handyman South Tampa | Manitas y TV Mount",
+    description: "Licensed & insured Handyman Pros FL in South Tampa near Bayshore & Hyde Park. Hablamos español. TV mounting y reparaciones. Call (656) 205-3185.",
   },
   "/handyman-temple-terrace-fl": {
     title: "Handyman Temple Terrace | Drywall & Doors",
@@ -105,8 +105,8 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     description: "Licensed & insured handyman in Citrus Park (Gunn Hwy & Race Track Rd). Ceiling fans, TV mounts & door fixes from our Westchase HQ. Instant estimate: (656).",
   },
   "/locations/clearwater": {
-    title: "Handyman Clearwater FL | Drywall & Door Fixes",
-    description: "Licensed & insured handyman in Clearwater (Coachman & Clearwater Beach). Drywall patches & sticky-door repairs from our Westchase HQ. Instant estimate: (656).",
+    title: "Handyman Clearwater FL | Manitas y Drywall",
+    description: "Licensed & insured handyman in Clearwater. Hablamos español. Drywall, sticky doors y reparaciones del hogar from Westchase. Call (656) 205-3185.",
   },
   "/locations/dunedin-fl": {
     title: "Handyman Dunedin FL | Assembly & Fixture Help",
@@ -129,12 +129,12 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     description: "Licensed & insured handyman in Safety Harbor (Main St & Philippe Park area). Door repair, fans & punch lists from our Westchase HQ. Instant estimate: (656).",
   },
   "/locations/st-petersburg": {
-    title: "Handyman St. Petersburg FL | TV Mounts & Punch Lists",
-    description: "Licensed & insured handyman in St. Petersburg (Downtown St. Pete & Snell Isle). TV mounts & condo punch-list repairs from our Westchase HQ. Instant estimate.",
+    title: "Handyman St. Petersburg FL | Manitas y TV",
+    description: "Licensed & insured handyman in St. Petersburg. Hablamos español. TV mounts, punch lists y reparaciones del hogar. Call (656) 205-3185 today.",
   },
   "/locations/tampa": {
-    title: "Handyman Tampa FL | Drywall TV & Same-Day",
-    description: "Licensed & insured handyman in Tampa (South Tampa & Seminole Heights). Drywall, TV mounts & same-day repairs from our Westchase HQ. Instant estimate: (656).",
+    title: "Handyman Tampa FL | Manitas, Drywall & TV",
+    description: "Licensed & insured handyman y manitas in Tampa. Reparaciones del hogar, drywall y instalación de TV from our Westchase HQ. Call (656) 205-3185.",
   },
   "/locations/tarpon-springs-fl": {
     title: "Handyman Tarpon Springs FL | Fence & Exterior Repairs",
@@ -145,20 +145,20 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     description: "Licensed & insured handyman in Town 'N' Country (Webb Rd & Hillsborough Ave). Fan installs & fixture swaps from our Westchase HQ. Instant estimate: (656).",
   },
   "/locations/westchase-fl": {
-    title: "Handyman Westchase FL | HQ Same-Day Dispatch",
-    description: "Licensed & insured handyman in Westchase (ZIP 33626 headquarters). Same-day handyman dispatch from HQ from our Westchase HQ. Instant estimate: (656) 205-3185.",
+    title: "Handyman Westchase FL | Manitas Same-Day",
+    description: "Licensed & insured handyman in Westchase (ZIP 33626). Hablamos español. Same-day reparaciones en casa from our Westchase HQ. Call (656) 205-3185.",
   },
   "/service-areas": {
     title: "Handyman Service Areas | Westchase HQ Coverage",
     description: "Licensed Handyman Pros FL covers Westchase, Carrollwood, Citrus Park, Town 'N' Country, Tampa & Pinellas from ZIP 33626. Same-day when nearby — (656) 205-3185.",
   },
   "/services/drywall-repair": {
-    title: "Drywall Repair Tampa FL | Same-Day Patch",
-    description: "Need drywall repair in Tampa? Licensed Handyman Pros Fl patches holes, blends texture & preps walls for paint. Same-day help — Call (656) 205-3185 today.",
+    title: "Drywall Repair Tampa FL | Yeso y Parches",
+    description: "Drywall y yeso repair in Tampa. Licensed & insured Handyman Pros FL patches holes, blends texture and preps walls for paint. Call (656) 205-3185.",
   },
   "/services/electrical-fixture-installation": {
-    title: "Electrical Fixture Install Tampa | Lights & Fans",
-    description: "Electrical fixture installation in Tampa for lights, fans, and vanity swaps at existing boxes. Licensed & insured Handyman Pros FL. Call (656) 205-3185.",
+    title: "Electrical Fixtures Tampa | Electricidad Menor",
+    description: "Electricidad menor in Tampa for lights, fans and vanity swaps at existing boxes. Licensed & insured Handyman Pros FL. Call (656) 205-3185 today.",
   },
   "/services/fence/fence-repairs-maintenance": {
     title: "Fence Repairs Tampa FL | Maintenance & Fixes",
@@ -169,23 +169,23 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     description: "Flooring installation in Tampa — click-lock LVP, laminate & vinyl plank repair. Licensed Handyman Pros Fl. Instant estimate: (656) 205-3185. Licensed & insured.",
   },
   "/services/furniture-assembly": {
-    title: "Furniture Assembly Tampa | IKEA & Wayfair",
-    description: "Furniture assembly in Tampa for IKEA, Wayfair & Amazon sets. Licensed Handyman Pros Fl builds & rearranges rooms fast. Call (656) 205-3185 today Upfront quotes.",
+    title: "Furniture Assembly Tampa | Montaje de Muebles",
+    description: "Montaje de muebles in Tampa for IKEA, Wayfair and Amazon sets. Licensed & insured Handyman Pros FL builds and rearranges rooms. Call (656) 205-3185.",
   },
   "/services/gutter-installation": {
     title: "Gutter Installation Tampa | Repair & Clean",
     description: "Gutter installation & repair in Tampa Bay. Hang, reseat, flush downspouts & replace damaged sections. Licensed Handyman Pros Fl: (656) 205-3185 Upfront quotes.",
   },
   "/services/handyman/fan-installation": {
-    title: "Fan Installation Tampa FL | Ceiling & Bath",
-    description: "Ceiling & exhaust fan installation in Tampa Bay. Licensed Handyman Pros Fl mounts, balances & connects at fan-rated boxes. Call (656) 205-3185 Upfront quotes.",
+    title: "Fan Installation Tampa FL | Ventiladores",
+    description: "Instalación de ventiladores in Tampa Bay. Licensed & insured Handyman Pros FL mounts, balances and connects ceiling and bath fans. Call (656) 205-3185.",
   },
   "/services/tile-installation": {
     title: "Tile Installation Tampa | Bath & Kitchen",
     description: "Tile installation in Tampa — kitchen backsplashes, bath walls & floor-tile patches. Licensed Handyman Pros Fl. Instant estimate: (656) 205-3185 Upfront quotes.",
   },
   "/services/tv-wall-mounting": {
-    title: "TV Wall Mounting Tampa | Same-Day Install",
-    description: "TV wall mounting in Tampa by licensed pros. Level mounts, clean cable runs, same-day Westchase dispatch. Instant estimate — call (656) 205-3185 Upfront quotes.",
+    title: "TV Wall Mounting Tampa | Instalación de TV",
+    description: "Instalación de TV in Tampa by licensed & insured pros. Level mounts, clean cable runs, same-day Westchase dispatch. Call (656) 205-3185 today.",
   },
 };

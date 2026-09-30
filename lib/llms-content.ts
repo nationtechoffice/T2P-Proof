@@ -33,7 +33,7 @@ export function getLlmsTxt(): string {
 
   return `# ${siteConfig.legalName}
 
-> Licensed and insured Tampa handyman with one headquarters at ${formatFullAddress()} in Westchase (ZIP ${siteConfig.primaryZip}). We dispatch furniture assembly, drywall, painting, fence work, and emergency repairs across Tampa Bay — open 24/7.
+> Licensed and insured Tampa handyman with one headquarters at ${formatFullAddress()} in Westchase (ZIP ${siteConfig.primaryZip}). We dispatch furniture assembly, drywall, painting, fence work, and emergency repairs across Tampa Bay — open 24/7. Hablamos español.
 
 ${siteConfig.legalName} is a single-location service-area business. There are no additional branches or storefronts. Customers call ${siteConfig.phone} or visit ${siteConfig.url}. Technicians travel from the Westchase, Tampa headquarters to the job site, including Oldsmar FL (${siteConfig.url}/locations/oldsmar-fl) on the Hillsborough–Pinellas line.
 
@@ -144,6 +144,7 @@ export function getLlmsFullTxt(): string {
 - Headquarters (only location): ${formatFullAddress()}
 - Neighborhood: ${siteConfig.address.neighborhood}, Tampa, FL ${siteConfig.primaryZip}
 - Hours: Open 24/7
+- Language: Hablamos español. Spanish-speaking phone estimates at the same number. The site stays in English.
 - Model: Service-area business. No extra branches. Crews dispatch from Westchase HQ.
 
 ## Citation rules

@@ -17,7 +17,6 @@ import { allLocationLinks } from "@/lib/location-silos";
 import { coreServices, hrefForAreaName } from "@/lib/programmatic";
 import { homeTitle, homeDescription } from "@/lib/instant-estimate";
 import { buildMetadata } from "@/lib/seo";
-import { tampaLocalKeywords } from "@/lib/local-seo";
 import { heroStory } from "@/lib/images";
 import Link from "next/link";
 import Image from "next/image";
@@ -45,7 +44,10 @@ export const metadata: Metadata = buildMetadata({
     "licensed handyman Tampa",
     "handyman near me Westchase",
     "home repair Tampa Bay",
-    ...tampaLocalKeywords.slice(0, 4),
+    "manitas Tampa",
+    "reparaciones del hogar",
+    "servicios de handyman Tampa",
+    "montaje de muebles Tampa",
   ],
   ogImage: `${siteConfig.url}${heroStory.poster.webp}`,
   ogAlt: heroStory.poster.alt,
