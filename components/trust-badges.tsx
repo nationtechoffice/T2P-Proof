@@ -1,11 +1,17 @@
-import { BadgeCheck, Clock, MapPinned, Shield } from "lucide-react";
+import { BadgeCheck, Clock, Languages, MapPinned, Shield } from "lucide-react";
 
-const badges = [
+const badges: {
+  label: string;
+  Icon: typeof Shield;
+  lang?: "es";
+  wide?: boolean;
+}[] = [
+  { label: "Hablamos español", Icon: Languages, lang: "es", wide: true },
   { label: "Licensed & Insured", Icon: Shield },
   { label: "24/7 Dispatch", Icon: Clock },
   { label: "Hillsborough County", Icon: MapPinned },
   { label: "Pinellas County", Icon: BadgeCheck },
-] as const;
+];
 
 export function TrustBadges({
   variant = "light",
@@ -16,10 +22,13 @@ export function TrustBadges({
 
   return (
     <ul className="grid grid-cols-2 gap-2.5">
-      {badges.map(({ label, Icon }) => (
+      {badges.map(({ label, Icon, lang, wide }) => (
         <li
           key={label}
+          lang={lang}
           className={`flex items-center gap-2 rounded-lg px-3 py-2 text-left ${
+            wide ? "col-span-2" : ""
+          } ${
             onDark
               ? "border border-white/15 bg-slate-950/50 text-white"
               : "border border-[hsl(var(--border))] bg-white/90 shadow-sm"

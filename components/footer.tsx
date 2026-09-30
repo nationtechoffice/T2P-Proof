@@ -30,6 +30,15 @@ export function Footer() {
             <p className="mb-4 text-sm leading-relaxed">
               One Tampa location in Westchase. Licensed mobile handyman serving Hillsborough, Pinellas, Pasco &amp; surrounding counties — open 24/7. We come to you.
             </p>
+            <p className="mb-4 text-sm leading-relaxed">
+              <span lang="es" className="font-semibold text-white">Hablamos español</span>
+              {" — "}
+              Spanish-speaking phone estimates for reparaciones del hogar. Call{" "}
+              <a href={`tel:${siteConfig.phoneTel}`} className="font-semibold text-white hover:text-[hsl(var(--accent))]">
+                {siteConfig.phone}
+              </a>
+              .
+            </p>
             <BusinessNAP />
           </div>
 
@@ -125,7 +134,7 @@ export function Footer() {
         <div className="mt-12 border-t border-gray-700 pt-8 text-center text-sm">
           <p>&copy; {currentYear} {siteConfig.legalName}. All rights reserved.</p>
           <p className="mt-2 text-xs text-gray-500">
-            {siteConfig.address.street}, {siteConfig.address.street2}, {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip} | Licensed &amp; Insured | Open 24/7 | Single Tampa location
+            {siteConfig.address.street}, {siteConfig.address.street2}, {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip} | Licensed &amp; Insured | <span lang="es">Hablamos español</span> | Open 24/7 | Single Tampa location
           </p>
         </div>
       </div>

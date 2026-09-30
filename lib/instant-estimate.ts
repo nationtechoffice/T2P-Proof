@@ -14,52 +14,52 @@ export const instantEstimate = {
   formHelp: `Prefer to talk? Call ${siteConfig.phone} now for an instant phone estimate — 24/7 dispatch from Westchase, Tampa.`,
   trust: ["24/7 Response", "Licensed & Insured", "Local Guarantee", "Same-Day Service"] as const,
   schemaDescription:
-    "Tampa Bay handyman offering instant phone estimates and same-day home repair. Call now to speak with a local expert. 24/7 dispatch from Westchase headquarters serving Hillsborough and Pinellas.",
+    "Tampa Bay handyman offering instant phone estimates and same-day home repair. Hablamos español. Call now to speak with a local expert. 24/7 dispatch from Westchase headquarters serving Hillsborough and Pinellas.",
 };
 
 const PHONE = siteConfig.phone;
 
 /** Auditor-exact titles. These win over the 40–60 aim. */
 const exactTitles: Record<string, string> = {
-  "TV Wall Mounting": "TV Wall Mounting Tampa | Same-Day Install",
-  "Drywall Repair": "Drywall Repair Tampa FL | Same-Day Patch",
-  "Fan Installation": "Fan Installation Tampa FL | Ceiling & Bath",
+  "TV Wall Mounting": "TV Wall Mounting Tampa | Instalación de TV",
+  "Drywall Repair": "Drywall Repair Tampa FL | Yeso y Parches",
+  "Fan Installation": "Fan Installation Tampa FL | Ventiladores",
   "Same-Day Handyman": "Same-Day Handyman Tampa | Westchase Crew",
   "Tile Installation": "Tile Installation Tampa | Bath & Kitchen",
-  "Furniture Assembly": "Furniture Assembly Tampa | IKEA & Wayfair",
+  "Furniture Assembly": "Furniture Assembly Tampa | Montaje de Muebles",
   "Flooring Installation": "Flooring Installation Tampa | LVP & Vinyl",
   "Gutter Installation": "Gutter Installation Tampa | Repair & Clean",
-  "Home Services": "Tampa Home Services | Handyman & Painting",
-  "Door Repair": "Door Repair Tampa FL | Sticky Door Fixes",
-  "Electrical Fixture Installation": "Electrical Fixture Installation Tampa FL",
-  "Plumbing Fixture Repair": "Plumbing Fixture Repair Tampa | Faucet Leaks",
+  "Home Services": "Servicios de Handyman Tampa | Home Repairs",
+  "Door Repair": "Door Repair Tampa | Reparación de Puertas",
+  "Electrical Fixture Installation": "Electrical Fixtures Tampa | Electricidad Menor",
+  "Plumbing Fixture Repair": "Plumbing Fixtures Tampa | Plomería Menor",
 };
 
 const exactMetas: Record<string, string> = {
   "TV Wall Mounting":
-    "TV wall mounting in Tampa by licensed pros. Level mounts, clean cable runs, same-day Westchase dispatch. Instant estimate — call (656) 205-3185.",
+    "Instalación de TV in Tampa by licensed & insured pros. Level mounts, clean cable runs, same-day Westchase dispatch. Call (656) 205-3185 today.",
   "Drywall Repair":
-    "Need drywall repair in Tampa? Licensed Handyman Pros Fl patches holes, blends texture & preps walls for paint. Same-day help — call (656) 205-3185.",
+    "Drywall y yeso repair in Tampa. Licensed & insured Handyman Pros FL patches holes, blends texture and preps walls for paint. Call (656) 205-3185.",
   "Fan Installation":
-    "Ceiling & exhaust fan installation in Tampa Bay. Licensed Handyman Pros Fl mounts, balances & connects at fan-rated boxes. Call (656) 205-3185.",
+    "Instalación de ventiladores in Tampa Bay. Licensed & insured Handyman Pros FL mounts, balances and connects ceiling and bath fans. Call (656) 205-3185.",
   "Same-Day Handyman":
     "Need a same-day handyman in Tampa or Westchase? Licensed & insured Handyman Pros Fl answers 24/7 for estimates. Fastest near Westchase — (656) 205-3185.",
   "Tile Installation":
     "Tile installation in Tampa — kitchen backsplashes, bath walls & floor-tile patches. Licensed Handyman Pros Fl. Instant estimate: (656) 205-3185.",
   "Furniture Assembly":
-    "Furniture assembly in Tampa for IKEA, Wayfair & Amazon sets. Licensed Handyman Pros Fl builds & rearranges rooms fast. Call (656) 205-3185 today.",
+    "Montaje de muebles in Tampa for IKEA, Wayfair and Amazon sets. Licensed & insured Handyman Pros FL builds and rearranges rooms. Call (656) 205-3185.",
   "Flooring Installation":
     "Flooring installation in Tampa — click-lock LVP, laminate & vinyl plank repair. Licensed Handyman Pros Fl. Instant estimate: (656) 205-3185.",
   "Gutter Installation":
     "Gutter installation & repair in Tampa Bay. Hang, reseat, flush downspouts & replace damaged sections. Licensed Handyman Pros Fl: (656) 205-3185.",
   "Home services":
-    "Tampa Bay home services for handyman repairs, painting, and fence installation. Licensed & insured Handyman Pros FL. Call (656) 205-3185 for an estimate.",
+    "Servicios de handyman Tampa: reparaciones del hogar, pintura, drywall y carpintería menor. Licensed & insured Handyman Pros FL. Call (656) 205-3185.",
   "Door Repair":
-    "Door repair in Tampa for sticking, swollen slabs, and worn hardware. Licensed & insured Handyman Pros FL planes, resets, and weatherstrips. Call (656) 205-3185.",
+    "Reparación de puertas in Tampa for sticking slabs, swollen frames and worn hardware. Licensed & insured Handyman Pros FL. Call (656) 205-3185.",
   "Electrical Fixture Installation":
-    "Electrical fixture installation in Tampa for lights, fans, and vanity swaps at existing boxes. Licensed & insured Handyman Pros FL. Call (656) 205-3185.",
+    "Electricidad menor in Tampa for lights, fans and vanity swaps at existing boxes. Licensed & insured Handyman Pros FL. Call (656) 205-3185 today.",
   "Plumbing Fixture Repair":
-    "Plumbing fixture repair in Tampa for dripping faucets, running toilets, and supply lines. Licensed & insured Handyman Pros FL. Call (656) 205-3185 today.",
+    "Plomería menor in Tampa for dripping faucets, running toilets and supply lines. Licensed & insured Handyman Pros FL. Call (656) 205-3185 today.",
   "General Repairs":
     "General repairs in Tampa for doors, windows, trim, and wall patches. Licensed & insured Handyman Pros FL handles the honey-do list. Call (656) 205-3185.",
 };
@@ -190,11 +190,11 @@ export function locationDescription(city: string): string {
   return `Looking for a handyman in ${city}, FL? Handyman Pros FL handles drywall, TV mounting, repairs & more across Tampa Bay. Instant phone estimates, same-day service. Call ${siteConfig.phone}.`;
 }
 
-/** Homepage title leads with Tampa handyman. Licensed stays in the meta and on the page. */
+/** Homepage title leads with Tampa handyman and keeps a Spanish search term. Licensed stays in the meta. */
 export function homeTitle(): string {
-  return "Tampa Handyman Near Me | Drywall & TV Mount";
+  return "Tampa Handyman & Manitas | Reparaciones del Hogar";
 }
 
 export function homeDescription(): string {
-  return "Licensed Tampa handyman near Westchase & Carrollwood. TV mounting, drywall, tile & same-day home repair. Instant estimates 24/7 — call (656) 205-3185.";
+  return "Licensed & insured Tampa handyman y manitas near Westchase. Reparaciones del hogar, drywall y TV mounts. Instant estimates 24/7 — call (656) 205-3185.";
 }

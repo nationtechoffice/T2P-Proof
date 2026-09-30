@@ -130,10 +130,18 @@ export function Header() {
         className="sticky top-0 z-[70] border-b border-[hsl(var(--border))] bg-white/95 backdrop-blur-md"
       >
         <div className="bg-[hsl(var(--accent))] py-2.5 text-center text-sm font-bold text-white">
-          <a href={`tel:${siteConfig.phoneTel}`} className="inline-flex items-center gap-2 hover:underline">
-            <Phone className="h-4 w-4" />
-            Instant Phone Estimate · 24/7 · Call {siteConfig.phone}
-          </a>
+          <div className="container-site flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+            <span
+              lang="es"
+              className="inline-flex items-center rounded-full bg-white/20 px-2.5 py-0.5 text-xs font-bold tracking-wide"
+            >
+              Hablamos español
+            </span>
+            <a href={`tel:${siteConfig.phoneTel}`} className="inline-flex items-center gap-2 hover:underline">
+              <Phone className="h-4 w-4" />
+              Instant Phone Estimate · 24/7 · Call {siteConfig.phone}
+            </a>
+          </div>
         </div>
         <div className="container-site flex h-16 items-center justify-between">
           <Logo priority />

@@ -16,7 +16,18 @@ export const metadata: Metadata = buildMetadata({
   description: serviceDescription("Home services", "Tampa"),
   path: "/services",
   exactTitle: true,
-  keywords: ["Tampa home services", "handyman services Tampa", "painting contractor Tampa Bay", "fence installation Tampa"],
+  keywords: [
+    "Tampa home services",
+    "handyman services Tampa",
+    "servicios de handyman Tampa",
+    "reparaciones del hogar",
+    "reparaciones en casa",
+    "manitas Tampa",
+    "pintura Tampa",
+    "carpintería menor Tampa",
+    "painting contractor Tampa Bay",
+    "fence installation Tampa",
+  ],
 });
 
 const icons = { wrench: Wrench, paintbrush: Paintbrush, fence: Fence };
