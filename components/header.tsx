@@ -20,6 +20,7 @@ const serviceLinks = [
   { href: "/services/plumbing-fixture-repair", label: "Plumbing Fixtures" },
   { href: "/services/furniture-assembly", label: "Furniture Assembly" },
   { href: "/services/door-repair", label: "Door Repair" },
+  { href: "/services/fence-handyman", label: "Fence Handyman" },
   { href: "/services", label: "All Services" },
 ];
 

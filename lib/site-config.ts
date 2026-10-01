@@ -92,6 +92,9 @@ export const siteConfig = {
     "Valrico",
     "Fish Hawk",
     "Lutz",
+    "Pinellas Park",
+    "Seminole",
+    "Spring Hill",
   ],
   keywords: [
     "Tampa handyman",

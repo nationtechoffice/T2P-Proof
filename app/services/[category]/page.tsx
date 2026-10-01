@@ -78,6 +78,15 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             <p className="mt-4 text-sm text-[hsl(var(--muted-foreground))]">
               Every {meta.name.toLowerCase()} job is dispatched from our single Westchase, Tampa headquarters.
             </p>
+            {cat === "fence" ? (
+              <p className="mt-4 text-sm leading-relaxed text-[hsl(var(--muted-foreground))]">
+                For a fence handyman or fencing handyman repair — pickets, a gate, or a short matching section — start with{" "}
+                <Link href="/services/fence-handyman" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                  fence handyman service
+                </Link>
+                . The list below is material-specific work from the same licensed and insured crew. We are a handyman company, not a separate fencing contractor.
+              </p>
+            ) : null}
           </div>
           {cat === "fence" || cat === "painting" ? (
             <ServicePhotoGallery

@@ -116,7 +116,7 @@ export default function DrywallRepairTampaPage() {
                   Book Westchase service
                 </Link>{" "}
                 or{" "}
-                <Link href="/handyman-carrollwood-fl" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                <Link href="/locations/carrollwood" className="font-semibold text-[hsl(var(--primary))] hover:underline">
                   Carrollwood service
                 </Link>{" "}
                 today and get drywall that looks like it was never damaged.

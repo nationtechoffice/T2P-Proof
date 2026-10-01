@@ -156,7 +156,7 @@ export default async function ServicePage({
                   Handyman Westchase FL
                 </Link>
                 ,{" "}
-                <Link href="/handyman-carrollwood-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                <Link href="/locations/carrollwood" className="font-medium text-[hsl(var(--primary))] hover:underline">
                   Handyman Carrollwood FL
                 </Link>
                 , and{" "}

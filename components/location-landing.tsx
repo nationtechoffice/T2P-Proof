@@ -10,6 +10,7 @@ import { InternalLinkHub } from "@/components/internal-link-hub";
 import { siteConfig } from "@/lib/site-config";
 import { CheckCircle, MapPin, Phone } from "lucide-react";
 import { HqDispatch } from "@/components/hq-dispatch";
+import { NeighborhoodBlocks } from "@/components/neighborhood-blocks";
 
 function withClickToCall(text: string): ReactNode {
   const parts = text.split(siteConfig.phone);
@@ -88,6 +89,13 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
                 <p key={paragraph.slice(0, 48)}>{withClickToCall(paragraph)}</p>
               ))}
             </div>
+            {location.spots && location.spots.length > 0 ? (
+              <NeighborhoodBlocks
+                title="Hyde Park, Seminole Heights, New Tampa, and Carrollwood"
+                intro="South Tampa visits start with Hyde Park and the neighborhoods around it. The other three are Tampa areas the same Westchase crew covers, each with its own hub so the pages stay specific."
+                spots={location.spots}
+              />
+            ) : null}
 
             <div className="mt-8">
               <HqDispatch area={location.displayName} />

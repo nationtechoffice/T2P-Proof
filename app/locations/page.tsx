@@ -49,7 +49,51 @@ export default function LocationsIndexPage() {
               <Link href="/locations/palm-harbor-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
                 Palm Harbor
               </Link>
-              .
+              . East and south Hillsborough hubs include{" "}
+              <Link href="/locations/brandon" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Brandon
+              </Link>
+              ,{" "}
+              <Link href="/locations/riverview" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Riverview
+              </Link>
+              , and{" "}
+              <Link href="/locations/plant-city" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Plant City
+              </Link>
+              . North of headquarters:{" "}
+              <Link href="/locations/carrollwood" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Carrollwood
+              </Link>
+              ,{" "}
+              <Link href="/locations/lutz" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Lutz
+              </Link>
+              ,{" "}
+              <Link href="/locations/wesley-chapel" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Wesley Chapel
+              </Link>
+              , and{" "}
+              <Link href="/locations/land-o-lakes" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Land O&apos; Lakes
+              </Link>
+              . Pinellas adds{" "}
+              <Link href="/locations/largo" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Largo
+              </Link>
+              ,{" "}
+              <Link href="/locations/pinellas-park" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Pinellas Park
+              </Link>
+              , and{" "}
+              <Link href="/locations/seminole" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Seminole
+              </Link>
+              .{" "}
+              <Link href="/locations/spring-hill" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Spring Hill
+              </Link>{" "}
+              is the Hernando stop, still dispatched from Westchase.
             </p>
           </div>
           <div className="mb-10">

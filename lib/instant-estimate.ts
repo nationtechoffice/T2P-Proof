@@ -33,6 +33,7 @@ const exactTitles: Record<string, string> = {
   "Door Repair": "Door Repair Tampa | Reparación de Puertas",
   "Electrical Fixture Installation": "Electrical Fixtures Tampa | Electricidad Menor",
   "Plumbing Fixture Repair": "Plumbing Fixtures Tampa | Plomería Menor",
+  "Fence Handyman": "Fence Handyman Tampa FL | Fencing Handyman",
 };
 
 const exactMetas: Record<string, string> = {
@@ -60,6 +61,8 @@ const exactMetas: Record<string, string> = {
     "Electricidad menor in Tampa for lights, fans and vanity swaps at existing boxes. Licensed & insured Handyman Pros FL. Call (656) 205-3185 today.",
   "Plumbing Fixture Repair":
     "Plomería menor in Tampa for dripping faucets, running toilets and supply lines. Licensed & insured Handyman Pros FL. Call (656) 205-3185 today.",
+  "Fence Handyman":
+    "Fence handyman and fencing handyman in Tampa Bay: licensed & insured board, gate, and short-section repairs from Westchase. Call (656) 205-3185.",
   "General Repairs":
     "General repairs in Tampa for doors, windows, trim, and wall patches. Licensed & insured Handyman Pros FL handles the honey-do list. Call (656) 205-3185.",
 };

@@ -11,7 +11,7 @@ const footerServiceLinks = [
     href: `/services/${service.slug}`,
     label: service.name,
   })),
-  { href: "/services/fence", label: "Fence Installation & Repair" },
+  { href: "/services/fence", label: "Fence service list" },
   { href: "/services/painting", label: "Painting" },
   { href: "/services", label: "All Services" },
 ];
