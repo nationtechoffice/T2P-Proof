@@ -16,6 +16,8 @@ import { InternalLinkHub } from "@/components/internal-link-hub";
 import { ServicePhotoGallery } from "@/components/service-photo-gallery";
 import { galleryForPage } from "@/lib/service-galleries";
 import { authorityHubLinks, moneyNearbyLinks } from "@/lib/internal-links";
+import { moneyNeighborhoodSpots } from "@/lib/tampa-neighborhoods";
+import { NeighborhoodBlocks } from "@/components/neighborhood-blocks";
 
 export function CoreServiceLanding({ service }: { service: CoreService }) {
   const pageUrl = `${siteConfig.url}/services/${service.slug}`;
@@ -110,7 +112,63 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
                   visit. This page is gutter installation, repair, cleaning, and section replacement.
                 </p>
               ) : null}
+              {service.slug === "fence-handyman" ? (
+                <p>
+                  Fence handyman calls cluster east and north of Tampa:{" "}
+                  <Link href="/locations/plant-city" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Plant City
+                  </Link>
+                  ,{" "}
+                  <Link href="/locations/brandon" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Brandon
+                  </Link>
+                  ,{" "}
+                  <Link href="/locations/riverview" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Riverview
+                  </Link>
+                  ,{" "}
+                  <Link href="/locations/lutz" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Lutz
+                  </Link>
+                  ,{" "}
+                  <Link href="/locations/wesley-chapel" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Wesley Chapel
+                  </Link>
+                  ,{" "}
+                  <Link href="/locations/land-o-lakes" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Land O&apos; Lakes
+                  </Link>
+                  , and{" "}
+                  <Link href="/locations/spring-hill" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Spring Hill
+                  </Link>
+                  . Pinellas fence repairs are on the{" "}
+                  <Link href="/locations/largo" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Largo
+                  </Link>
+                  ,{" "}
+                  <Link href="/locations/seminole" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Seminole
+                  </Link>
+                  , and{" "}
+                  <Link href="/locations/pinellas-park" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Pinellas Park
+                  </Link>{" "}
+                  hubs. Material-specific pages stay under{" "}
+                  <Link href="/services/fence" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    fence services
+                  </Link>
+                  ; this page is the fencing handyman repair.
+                </p>
+              ) : null}
             </div>
+            {moneyNeighborhoodSpots[service.slug] ? (
+              <NeighborhoodBlocks
+                title="Hyde Park, Seminole Heights, New Tampa, and Carrollwood"
+                intro={`How ${service.name.toLowerCase()} actually shows up in these Tampa neighborhoods. Each link is a service area from Westchase, not another office.`}
+                spots={moneyNeighborhoodSpots[service.slug]}
+              />
+            ) : null}
             <h2 className="mt-10 mb-4 text-2xl font-bold">
               {service.name} in Tampa, Westchase &amp; Clearwater
             </h2>

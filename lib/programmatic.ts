@@ -1,5 +1,7 @@
 import { siteConfig } from "./site-config";
 import { serviceDescription, serviceTitle } from "./instant-estimate";
+import { expansionLocations, fenceHandymanService } from "./tampa-bay-expansion";
+import { tampaLocationSpots } from "./tampa-neighborhoods";
 
 export const schemaAreaServed = [
     "Tampa, FL",
@@ -16,8 +18,20 @@ export const schemaAreaServed = [
     "Largo, FL",
     "New Port Richey, FL",
     "Wesley Chapel, FL",
+    "Brandon, FL",
+    "Riverview, FL",
+    "Plant City, FL",
+    "Lutz, FL",
+    "Carrollwood, FL",
+    "Temple Terrace, FL",
+    "Land O' Lakes, FL",
+    "Seminole, FL",
+    "Pinellas Park, FL",
+    "Spring Hill, FL",
     "Hillsborough County, FL",
     "Pinellas County, FL",
+    "Pasco County, FL",
+    "Hernando County, FL",
 ] as const;
 
 export const schemaServicesOffered = [
@@ -69,6 +83,10 @@ export interface TargetLocation {
   intro: string;
   paragraphs: string[];
   faqs: { question: string; answer: string }[];
+  /** Linked sentences rendered under the city copy. */
+  callouts?: { before: string; href: string; label: string; after: string }[];
+  /** Neighborhood sections with their own internal links. */
+  spots?: { name: string; body: string; links: { href: string; label: string }[] }[];
 }
 
 export const coreServices: CoreService[] = [
@@ -519,6 +537,7 @@ export const coreServices: CoreService[] = [
         "Typical licensed handyman gutter visit in Tampa Bay for a one-story cleaning, downspout flush, or a short section repair or replacement. Full-run installs and steep roofs are quoted separately.",
     },
   },
+  fenceHandymanService,
 ];
 
 function locationCopy(
@@ -556,6 +575,7 @@ export const targetLocations: TargetLocation[] = [
     county: "Hillsborough County",
     zipHint: "33602–33647",
     neighborhoods: ["South Tampa", "Hyde Park", "Seminole Heights", "Westchase", "New Tampa", "Carrollwood"],
+    spots: tampaLocationSpots,
     intro:
       "Looking for Handyman Tampa FL service with same-day help? Handyman Pros FL handles drywall repair Tampa, TV mounting Tampa, fixture swaps, and furniture assembly from our only Westchase headquarters.",
     paragraphs: [
@@ -754,6 +774,7 @@ export const targetLocations: TargetLocation[] = [
     neighborhoods: ["Downtown NPR", "Trinity", "Holiday"],
     ...locationCopy("New Port Richey", "Pasco County", ["Downtown NPR", "Trinity"]),
   },
+  ...expansionLocations,
 ];
 
 export function getCoreService(slug: string): CoreService | undefined {
@@ -786,10 +807,29 @@ export function hrefForAreaName(name: string): string | undefined {
     "tarpon springs": "tarpon-springs-fl",
     "new port richey": "new-port-richey-fl",
     "south tampa": "tampa",
-    "hyde park": "tampa",
+    "seminole heights": "tampa",
     "new tampa": "tampa",
+    brandon: "brandon",
+    riverview: "riverview",
+    "plant city": "plant-city",
+    lutz: "lutz",
+    "lutz lake fern": "lutz",
+    carrollwood: "carrollwood",
+    "carrollwood village": "carrollwood",
+    northdale: "carrollwood",
+    "temple terrace": "temple-terrace",
+    "land o lakes": "land-o-lakes",
+    "land o' lakes": "land-o-lakes",
+    seminole: "seminole",
+    "pinellas park": "pinellas-park",
+    "spring hill": "spring-hill",
+    largo: "largo",
   };
-  if (normalized === "wesley chapel") return "/handyman-wesley-chapel-fl";
+  if (normalized === "wesley chapel") return "/locations/wesley-chapel";
+  if (normalized === "south tampa") return "/handyman-south-tampa-fl";
+  if (normalized === "hyde park") return "/locations/tampa#hyde-park";
+  if (normalized === "seminole heights") return "/locations/tampa#seminole-heights";
+  if (normalized === "new tampa") return "/locations/tampa#new-tampa";
   const slug = aliases[normalized];
   return slug ? `/locations/${slug}` : undefined;
 }

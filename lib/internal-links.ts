@@ -5,7 +5,7 @@ import { allLocationLinks } from "@/lib/location-silos";
 export const authorityHubLinks = {
   home: { href: "/", label: "Tampa Handyman" },
   services: { href: "/services", label: "All Handyman Services" },
-  fence: { href: "/services/fence", label: "Fence Installation & Repair Tampa" },
+  fence: { href: "/services/fence-handyman", label: "Fence Handyman Tampa" },
   drywall: { href: "/services/drywall-repair", label: "Drywall Repair Tampa" },
   tvMount: { href: "/services/tv-wall-mounting", label: "TV Mounting Tampa" },
   fans: { href: "/services/handyman/fan-installation", label: "Ceiling Fan Installation Tampa" },
@@ -17,7 +17,7 @@ export const authorityHubLinks = {
   locations: { href: "/locations", label: "Tampa Bay Service Areas" },
   tampa: { href: "/locations/tampa", label: "Handyman Tampa FL" },
   westchase: { href: "/locations/westchase-fl", label: "Handyman Westchase FL" },
-  carrollwood: { href: "/handyman-carrollwood-fl", label: "Handyman Carrollwood FL" },
+  carrollwood: { href: "/locations/carrollwood", label: "Handyman Carrollwood FL" },
   clearwater: { href: "/locations/clearwater", label: "Handyman Clearwater FL" },
   stPete: { href: "/locations/st-petersburg", label: "Handyman St. Petersburg FL" },
   oldsmar: { href: "/locations/oldsmar-fl", label: "Handyman Oldsmar FL" },
@@ -28,18 +28,30 @@ export const authorityHubLinks = {
 
 /** Adjacent city pages so Bingbot can walk from crawled hubs to newer URLs. */
 const NEARBY_LOCATION_SLUGS: Record<string, readonly string[]> = {
-  tampa: ["westchase-fl", "town-n-country-fl", "citrus-park-fl", "clearwater"],
-  clearwater: ["safety-harbor-fl", "dunedin-fl", "oldsmar-fl", "st-petersburg"],
-  "st-petersburg": ["clearwater", "tampa"],
-  "westchase-fl": ["oldsmar-fl", "citrus-park-fl", "town-n-country-fl", "tampa"],
+  tampa: ["westchase-fl", "carrollwood", "town-n-country-fl", "citrus-park-fl", "temple-terrace"],
+  clearwater: ["safety-harbor-fl", "dunedin-fl", "oldsmar-fl", "largo", "seminole"],
+  "st-petersburg": ["clearwater", "pinellas-park", "seminole", "tampa"],
+  "westchase-fl": ["oldsmar-fl", "citrus-park-fl", "town-n-country-fl", "carrollwood", "tampa"],
   "palm-harbor-fl": ["oldsmar-fl", "dunedin-fl", "tarpon-springs-fl", "safety-harbor-fl"],
   "oldsmar-fl": ["westchase-fl", "safety-harbor-fl", "palm-harbor-fl", "town-n-country-fl", "citrus-park-fl", "dunedin-fl"],
   "dunedin-fl": ["safety-harbor-fl", "palm-harbor-fl", "clearwater", "oldsmar-fl"],
-  "town-n-country-fl": ["westchase-fl", "oldsmar-fl", "citrus-park-fl", "tampa"],
-  "citrus-park-fl": ["westchase-fl", "oldsmar-fl", "town-n-country-fl", "tampa"],
+  "town-n-country-fl": ["westchase-fl", "oldsmar-fl", "citrus-park-fl", "carrollwood", "tampa"],
+  "citrus-park-fl": ["westchase-fl", "carrollwood", "oldsmar-fl", "town-n-country-fl", "tampa"],
   "safety-harbor-fl": ["oldsmar-fl", "clearwater", "dunedin-fl", "palm-harbor-fl"],
   "tarpon-springs-fl": ["palm-harbor-fl", "new-port-richey-fl", "dunedin-fl"],
-  "new-port-richey-fl": ["tarpon-springs-fl", "palm-harbor-fl"],
+  "new-port-richey-fl": ["tarpon-springs-fl", "palm-harbor-fl", "spring-hill"],
+  "plant-city": ["brandon", "riverview"],
+  brandon: ["plant-city", "riverview", "tampa"],
+  riverview: ["brandon", "plant-city"],
+  lutz: ["wesley-chapel", "land-o-lakes", "carrollwood"],
+  "wesley-chapel": ["lutz", "land-o-lakes"],
+  largo: ["seminole", "pinellas-park", "clearwater"],
+  "pinellas-park": ["largo", "seminole", "st-petersburg"],
+  carrollwood: ["citrus-park-fl", "tampa", "lutz", "temple-terrace"],
+  "temple-terrace": ["tampa", "carrollwood"],
+  "land-o-lakes": ["wesley-chapel", "lutz", "spring-hill"],
+  seminole: ["largo", "pinellas-park", "clearwater"],
+  "spring-hill": ["new-port-richey-fl", "land-o-lakes"],
 };
 
 export function nearbyLocationLinks(slug: string) {
@@ -58,7 +70,7 @@ export function coreServiceLinks(cityLabel?: string) {
     })),
     {
       href: "/services/fence",
-      label: cityLabel ? `Fence Repair in ${cityLabel}` : "Fence Installation & Repair",
+      label: cityLabel ? `Fence service list in ${cityLabel}` : "Fence service list",
     },
     {
       href: "/services/painting",
@@ -72,7 +84,9 @@ export function moneyNearbyLinks(serviceName: string) {
   const name = serviceName.replace(/\s+in Tampa.*$/i, "").trim();
   return [
     { href: "/locations/westchase-fl", label: `${name} in Westchase` },
-    { href: "/handyman-carrollwood-fl", label: `${name} in Carrollwood` },
+    { href: "/locations/carrollwood", label: `${name} in Carrollwood` },
+    { href: "/locations/brandon", label: `${name} in Brandon` },
+    { href: "/locations/plant-city", label: `${name} in Plant City` },
     { href: "/locations/citrus-park-fl", label: `${name} in Citrus Park` },
     { href: "/handyman-south-tampa-fl", label: `${name} in South Tampa` },
     { href: "/locations/clearwater", label: `${name} in Clearwater` },
@@ -115,7 +129,7 @@ export function linkifyServiceLabel(label: string): { href: string; label: strin
     return { href: "/services/drywall-repair", label };
   }
   if (lower.includes("fence")) {
-    return { href: "/services/fence", label };
+    return { href: "/services/fence-handyman", label };
   }
   if (lower.includes("door")) {
     return { href: "/services/door-repair", label };
@@ -154,6 +168,7 @@ export function linkifyServiceLabel(label: string): { href: string; label: strin
 }
 
 export const fenceCategoryLinks = [
+  { href: "/services/fence-handyman", label: "Fence Handyman Tampa" },
   { href: "/services/fence", label: "Fence Services Tampa" },
   { href: "/services/fence/wood-fence-installation", label: "Wood Fence Installation" },
   { href: "/services/fence/fence-repairs-maintenance", label: "Fence Repair & Maintenance" },

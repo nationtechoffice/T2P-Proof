@@ -219,7 +219,7 @@ export function galleryForPage(categoryOrSlug: string, slug?: string): ServicePh
     return tileGallery;
   }
   if (key === "door-repair") return [];
-  if (key === "fence" || category === "fence") return fenceGallery;
+  if (key === "fence" || key === "fence-handyman" || category === "fence") return fenceGallery;
   if (key.includes("tile")) return tileGallery;
   if (key === "painting" || category === "painting" || key.includes("paint")) return paintingGallery;
   return [];

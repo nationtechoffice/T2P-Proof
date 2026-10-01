@@ -1,3 +1,6 @@
+import type { NeighborhoodSpot } from "@/lib/tampa-neighborhoods";
+import { southTampaSpots } from "@/lib/tampa-neighborhoods";
+
 export interface LocationSilo {
   slug: string;
   city: string;
@@ -13,111 +16,10 @@ export interface LocationSilo {
   services: string[];
   paragraphs: string[];
   relatedPaths?: { href: string; label: string }[];
+  spots?: NeighborhoodSpot[];
 }
 
 export const locationSilos: LocationSilo[] = [
-  {
-    slug: "temple-terrace",
-    city: "Temple Terrace",
-    displayName: "Temple Terrace, FL",
-    path: "/handyman-temple-terrace-fl",
-    eyebrow: "Temple Terrace · Hillsborough County",
-    h1: "Temple Terrace Home Repair & Handyman Near Me",
-    intro:
-      "Handyman Pros FL is the local contractor Temple Terrace homeowners call for dependable Temple Terrace home repair, punch-list fixes, and same-day help when you search handyman near me.",
-    keywords: ["Temple Terrace home repair", "handyman near me", "local contractor", "handyman Temple Terrace FL"],
-    metaDescription:
-      "Need Temple Terrace home repair? Handyman Pros FL is a local contractor for handyman near me jobs — drywall, fixtures, doors, and more. Call (656) 205-3185.",
-    mapQuery: "Temple Terrace, FL",
-    mapTitle: "Google Map of Temple Terrace, Florida",
-    services: [
-      "Drywall patching & texture touch-ups",
-      "Door, trim, and hardware repairs",
-      "Fixture and shelf installation",
-      "TV mounting & furniture assembly",
-      "Fence board and gate fixes",
-      "Caulking, weatherstripping, and punch lists",
-    ],
-    paragraphs: [
-      "Temple Terrace home repair requests rarely wait for a perfect weekend. Between university-area rentals, established family homes, and busy schedules along Busch Boulevard corridors, residents need a local contractor who answers the phone and arrives prepared. Handyman Pros FL serves Temple Terrace from our Tampa / Westchase base with a fully stocked truck, clear estimates, and licensed, insured technicians.",
-      "When neighbors search handyman near me, they usually want more than a vague callback. They want someone who can assess a sticking door, patch drywall after a remodel, hang blinds level, and tighten loose stair rails in one productive visit. Our team treats Temple Terrace properties with the same care we give Westchase and Carrollwood homes — shoe covers indoors, dust control during sanding, and a walkthrough before we leave.",
-      "As your local contractor for everyday improvements, we also help with rental turnovers and pre-listing punch lists. Fresh caulk in bathrooms, replaced outlet covers, adjusted cabinet hinges, and securely mounted TVs make a measurable difference for buyers and tenants. If a job needs permitting or a specialist trade, we say so upfront rather than forcing a poor DIY-style fix.",
-      "Temple Terrace’s mix of mid-century homes and newer builds means fasteners, wall types, and outdoor exposure vary block to block. We bring the right anchors, blades, and finishes so repairs hold up in Florida humidity. Call Handyman Pros FL at (656) 205-3185 anytime — we are open 24/7 for Temple Terrace home repair estimates and scheduling.",
-      "Whether you found us searching handyman near me or were referred by a neighbor, you get transparent pricing and local accountability. From fixture swaps to fence patches, Handyman Pros FL is ready to keep your Temple Terrace property working smoothly.",
-    ],
-    relatedPaths: [
-      { href: "/handyman-lutz-fl", label: "Handyman Lutz FL" },
-      { href: "/services/drywall-repair", label: "Drywall Repair Tampa" },
-    ],
-  },
-  {
-    slug: "wesley-chapel",
-    city: "Wesley Chapel",
-    displayName: "Wesley Chapel, FL",
-    path: "/handyman-wesley-chapel-fl",
-    eyebrow: "Wesley Chapel · Pasco County",
-    h1: "Wesley Chapel Handyman Services & Home Maintenance",
-    intro:
-      "Count on Handyman Pros FL for Wesley Chapel handyman services — proactive home maintenance, fixture setup, and clean repairs for growing Pasco County households.",
-    keywords: ["Wesley Chapel handyman services", "home maintenance", "fixture setup", "handyman Wesley Chapel FL"],
-    metaDescription:
-      "Wesley Chapel handyman services for home maintenance and fixture setup. Licensed Handyman Pros FL — open 24/7. Call (656) 205-3185 for a free estimate.",
-    mapQuery: "Wesley Chapel, FL",
-    mapTitle: "Google Map of Wesley Chapel, Florida",
-    services: [
-      "Scheduled home maintenance visits",
-      "Fixture setup (lights, faucets, hardware)",
-      "Ceiling fan installation & balancing",
-      "Garage storage and shelving installs",
-      "Screen, door, and weatherstrip repairs",
-      "Drywall touch-ups after kids or moves",
-    ],
-    paragraphs: [
-      "Wesley Chapel handyman services should match the pace of this fast-growing community. New construction punch lists, HOA expectations, and Florida storm seasons create a constant stream of small-to-medium jobs. Handyman Pros FL provides practical home maintenance so families in Wiregrass, Meadow Pointe, and nearby neighborhoods stay ahead of wear instead of reacting to every surprise.",
-      "Fixture setup is one of our most booked Wesley Chapel requests. Online deliveries arrive boxed — vanity lights, towel bars, curtain rods, smart thermostats mounts, and faucet upgrades — and you want them installed level, sealed, and ready to use. We bring ladders, voltage testers, and finishing supplies so fixture setup does not turn into an all-day DIY project.",
-      "Ongoing home maintenance visits help protect larger investments. We tighten loose railings, reseal wet areas, adjust doors swollen by humidity, and catch minor fence or screen issues before they spread. Because we already serve Tampa Bay daily, routing into Wesley Chapel is straightforward for same-week and often same-day appointments.",
-      "Homeowners choosing Wesley Chapel handyman services from Handyman Pros FL get licensed, insured technicians and clear communication. We quote before we start, protect floors and furnishings, and finish with a quick review of what was completed. Call (656) 205-3185 anytime — open 24/7 — to book home maintenance or fixture setup across Wesley Chapel and nearby Pasco communities.",
-      "From first-year builder lists to long-term seasonal care, our Wesley Chapel handyman services keep your home comfortable, safe, and looking finished.",
-    ],
-    relatedPaths: [
-      { href: "/handyman-lutz-fl", label: "Handyman Lutz FL" },
-      { href: "/handyman-carrollwood-fl", label: "Handyman Carrollwood FL" },
-    ],
-  },
-  {
-    slug: "riverview",
-    city: "Riverview",
-    displayName: "Riverview, FL",
-    path: "/handyman-riverview-fl",
-    eyebrow: "Riverview · South Hillsborough",
-    h1: "Riverview FL Home Improvements by Local Handymen",
-    intro:
-      "Handyman Pros FL delivers Riverview FL home improvements — from drywall repair and fence patch work to everyday fixes that keep South County homes looking sharp.",
-    keywords: ["Riverview FL home improvements", "drywall repair", "fence patch", "handyman Riverview FL"],
-    metaDescription:
-      "Riverview FL home improvements including drywall repair and fence patch services. Call Handyman Pros FL at (656) 205-3185 for a free estimate.",
-    mapQuery: "Riverview, FL",
-    mapTitle: "Google Map of Riverview, Florida",
-    services: [
-      "Drywall repair & hole patching",
-      "Fence patch and gate adjustments",
-      "Interior trim and baseboard fixes",
-      "TV mounting and cable concealment help",
-      "Exterior hardware and shutter repairs",
-      "Move-in / move-out punch lists",
-    ],
-    paragraphs: [
-      "Riverview FL home improvements often start with the little things that affect daily comfort — a hole behind a door stop, a leaning fence section after summer storms, or texture that never quite matched after a remodel. Handyman Pros FL focuses on those high-impact repairs with the care of a neighborhood crew and the reliability of a licensed Tampa Bay company.",
-      "Drywall repair is a Riverview staple. Kids, furniture moves, and television remounts leave scars that paint alone cannot hide. We cut clean patches, install backing when needed, tape and feather compound, and prep surfaces for paint so the wall looks continuous again. Larger water-damage sections are assessed carefully so you are not sealing over a moisture problem.",
-      "Fence patch jobs protect privacy and curb appeal without requiring a full replacement. We replace broken boards, resecure rails, reset loose posts when feasible, and straighten gates that drag. Pair fence patch work with latch upgrades or staining prep when you want a more complete outdoor refresh.",
-      "Families across Riverview appreciate that we can combine indoor and outdoor tasks in one visit when schedules allow — drywall repair in the morning, fence patch in the afternoon. Call (656) 205-3185 for Riverview FL home improvements anytime; Handyman Pros FL is open 24/7 for estimates and urgent scheduling.",
-      "Whether you are refreshing a rental or preparing a primary home for guests, our Riverview team brings tools, materials knowledge, and respectful job-site habits to every stop.",
-    ],
-    relatedPaths: [
-      { href: "/handyman-valrico-fl", label: "Handyman Valrico FL" },
-      { href: "/services/drywall-repair", label: "Drywall Repair Tampa" },
-    ],
-  },
   {
     slug: "valrico",
     city: "Valrico",
@@ -149,8 +51,9 @@ export const locationSilos: LocationSilo[] = [
     ],
     relatedPaths: [
       { href: "/services/furniture-assembly", label: "Furniture Assembly Tampa" },
-      { href: "/handyman-riverview-fl", label: "Handyman Riverview FL" },
-      { href: "/handyman-plant-city-fl", label: "Handyman Plant City FL" },
+      { href: "/locations/riverview", label: "Handyman Riverview FL" },
+      { href: "/locations/plant-city", label: "Handyman Plant City FL" },
+      { href: "/locations/brandon", label: "Handyman Brandon FL" },
     ],
   },
   {
@@ -183,41 +86,8 @@ export const locationSilos: LocationSilo[] = [
       "From acreage edges to neighborhood lots, Seffner property owners deserve a local handyman who shows up prepared and finishes clean.",
     ],
     relatedPaths: [
-      { href: "/handyman-plant-city-fl", label: "Handyman Plant City FL" },
-      { href: "/handyman-valrico-fl", label: "Handyman Valrico FL" },
-    ],
-  },
-  {
-    slug: "plant-city",
-    city: "Plant City",
-    displayName: "Plant City, FL",
-    path: "/handyman-plant-city-fl",
-    eyebrow: "Plant City · Eastern Hillsborough",
-    h1: "Plant City Home Handyman for Doors & Wood Repair",
-    intro:
-      "Hire Handyman Pros FL as your Plant City home handyman for door installation support, rotten wood repair, and durable fixes built for Florida weather.",
-    keywords: ["Plant City home handyman", "door installation", "rotten wood repair", "handyman Plant City FL"],
-    metaDescription:
-      "Plant City home handyman for door installation and rotten wood repair. Call Handyman Pros FL at (656) 205-3185 for a free estimate.",
-    mapQuery: "Plant City, FL",
-    mapTitle: "Google Map of Plant City, Florida",
-    services: [
-      "Door installation & alignment",
-      "Rotten wood repair on trim and sills",
-      "Exterior caulking and sealing",
-      "Fence board replacement",
-      "Interior hardware refreshes",
-      "Porch and entry touch repairs",
-    ],
-    paragraphs: [
-      "A Plant City home handyman needs to understand both historic downtown charm and newer suburban builds east of Tampa. Humidity, sun, and storm exposure age wood trim, door sills, and outdoor structures faster than many owners expect. Handyman Pros FL brings practical carpentry and repair skills to keep entries tight and exteriors looking maintained.",
-      "Door installation and replacement projects improve security, energy efficiency, and curb appeal. We hang prehung units when openings are ready, adjust existing doors that rub or latch poorly, and upgrade hinges, sweeps, and hardware for smoother daily use. Proper shimming and sealing matter in Florida’s climate — shortcuts show up as drafts and swollen edges within a season.",
-      "Rotten wood repair is another frequent Plant City request. Soft sills, fascia edges, and decorative trim can be cut back, treated, and patched or replaced so moisture does not keep traveling. We focus on sound repairs you can paint and maintain rather than cosmetic cover-ups that fail after the next storm.",
-      "Call (656) 205-3185 to schedule your Plant City home handyman visit. Handyman Pros FL is open 24/7 for estimates covering door installation, rotten wood repair, and related punch-list work across eastern Hillsborough County.",
-      "From strawberry-country homesteads to subdivision addresses, we treat every Plant City job with clean workmanship and clear pricing.",
-    ],
-    relatedPaths: [
-      { href: "/handyman-seffner-fl", label: "Handyman Seffner FL" },
+      { href: "/locations/plant-city", label: "Handyman Plant City FL" },
+      { href: "/locations/brandon", label: "Handyman Brandon FL" },
       { href: "/handyman-valrico-fl", label: "Handyman Valrico FL" },
     ],
   },
@@ -292,42 +162,6 @@ export const locationSilos: LocationSilo[] = [
     ],
   },
   {
-    slug: "lutz",
-    city: "Lutz",
-    displayName: "Lutz, FL",
-    path: "/handyman-lutz-fl",
-    eyebrow: "Lutz · ZIP 33549 & nearby",
-    h1: "Lutz Home Repair Expert & Local Handyman 33549",
-    intro:
-      "Need a Lutz home repair expert? Handyman Pros FL is the local handyman 33549 residents trust for tile patch work, indoor fixes, and careful outdoor repairs.",
-    keywords: ["Lutz home repair expert", "tile patch", "local handyman 33549", "handyman Lutz FL"],
-    metaDescription:
-      "Lutz home repair expert and local handyman 33549 for tile patch and general repairs. Call Handyman Pros FL at (656) 205-3185.",
-    mapQuery: "Lutz, FL 33549",
-    mapTitle: "Google Map of Lutz, Florida 33549",
-    services: [
-      "Tile patch and regrout touch support",
-      "Drywall and trim repairs",
-      "Ceiling fan and fixture installs",
-      "Fence and gate adjustments",
-      "Furniture assembly",
-      "General Lutz home maintenance",
-    ],
-    paragraphs: [
-      "A Lutz home repair expert should understand larger lots, lake-adjacent humidity, and the mix of custom and production homes around ZIP 33549. Handyman Pros FL serves Lutz as a true local handyman 33549 option — close enough for responsive scheduling, skilled enough for clean finish work that lasts.",
-      "Tile patch requests often follow a cracked floor tile, a chipped shower surround, or a remodel that left an unfinished edge. We assess substrate condition, match size and layout when materials are available, and complete careful cuts so the repair blends rather than shouts. For specialty porcelain or unavailable discontinued tile, we discuss realistic options before starting.",
-      "Beyond tile patch projects, Lutz homeowners book us for drywall, fans, doors, and outdoor punch lists. Acreage properties may need extra travel time between structures; we plan visits so barn offices, casitas, or detached garages can be addressed efficiently when that is part of your scope.",
-      "Call (656) 205-3185 to reach your local handyman 33549 team anytime. Handyman Pros FL is open 24/7 for Lutz home repair expert estimates, including multi-trade honey-do days that combine indoor and outdoor tasks.",
-      "Whether you are near Dale Mabry, Van Dyke, or further into Lutz’s residential pockets, we show up prepared and leave the job site tidy.",
-    ],
-    relatedPaths: [
-      { href: "/services/tile-installation", label: "Tile Installation Tampa" },
-      { href: "/handyman-wesley-chapel-fl", label: "Handyman Wesley Chapel FL" },
-      { href: "/handyman-carrollwood-fl", label: "Handyman Carrollwood FL" },
-      { href: "/locations/oldsmar-fl", label: "Handyman Oldsmar FL" },
-    ],
-  },
-  {
     slug: "south-tampa",
     city: "South Tampa",
     displayName: "South Tampa, FL",
@@ -357,15 +191,17 @@ export const locationSilos: LocationSilo[] = [
       "Discreet, licensed, and detail-oriented — that is how we approach every South Tampa property.",
     ],
     relatedPaths: [
-      { href: "/locations/town-n-country-fl", label: "Handyman Town n Country FL" },
+      { href: "/locations/tampa", label: "Handyman Tampa FL" },
+      { href: "/locations/carrollwood", label: "Handyman Carrollwood FL" },
       { href: "/services/drywall-repair", label: "Drywall Repair Tampa" },
+      { href: "/services/fence-handyman", label: "Fence Handyman Tampa" },
     ],
+    spots: southTampaSpots,
   },
 ];
 
 export const allLocationLinks = [
   { href: "/locations/westchase-fl", label: "Westchase" },
-  { href: "/handyman-carrollwood-fl", label: "Carrollwood" },
   ...locationSilos.map((l) => ({ href: l.path, label: l.city })),
 ] as const;
 

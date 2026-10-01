@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { JsonLd, breadcrumbSchema } from "@/lib/json-ld";
 import { allLocationLinks } from "@/lib/location-silos";
+import { targetLocations } from "@/lib/programmatic";
 import { HqDispatch } from "@/components/hq-dispatch";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
@@ -55,7 +56,26 @@ export default function ServiceAreasPage() {
           <div className="mb-12">
             <h2 className="mb-6 text-center text-2xl font-bold">Our Florida Service Areas</h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {allLocationLinks.map((area) => (
+              {targetLocations.map((location) => (
+                <Link
+                  key={location.slug}
+                  href={`/locations/${location.slug}`}
+                  className="card group flex items-start gap-3 hover:border-[hsl(var(--accent))]"
+                >
+                  <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[hsl(var(--accent))]" />
+                  <div>
+                    <h3 className="font-bold group-hover:text-[hsl(var(--accent))]">
+                      Handyman {location.city} FL
+                    </h3>
+                    <p className="text-sm text-[hsl(var(--muted-foreground))]">
+                      Service area in {location.displayName}. {location.county}.
+                    </p>
+                  </div>
+                </Link>
+              ))}
+              {allLocationLinks
+                .filter((area) => !targetLocations.some((location) => `/locations/${location.slug}` === area.href))
+                .map((area) => (
                 <Link
                   key={area.href}
                   href={area.href}

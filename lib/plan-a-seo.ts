@@ -136,6 +136,58 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     title: "Handyman Tampa FL | Manitas, Drywall & TV",
     description: "Licensed & insured handyman y manitas in Tampa. Reparaciones del hogar, drywall y instalación de TV from our Westchase HQ. Call (656) 205-3185.",
   },
+  "/locations/plant-city": {
+    title: "Handyman Plant City FL | Doors, Wood & Fence",
+    description: "Licensed & insured Plant City handyman for doors, rotten wood, and fence picket repair. Dispatched from our Westchase HQ. Call (656) 205-3185.",
+  },
+  "/locations/brandon": {
+    title: "Handyman Brandon FL | Fans, Drywall & Fence",
+    description: "Licensed & insured Brandon handyman for ceiling fans, drywall patches, and fence-section repairs in Bloomingdale. Westchase dispatch. Call (656) 205-3185.",
+  },
+  "/locations/riverview": {
+    title: "Handyman Riverview FL | Drywall & Fence Fix",
+    description: "Licensed & insured Riverview handyman for drywall patches and fence-section fixes near Winthrop and Balm. From Westchase HQ. Call (656) 205-3185.",
+  },
+  "/locations/lutz": {
+    title: "Handyman Lutz FL | Tile Patch & Acreage Jobs",
+    description: "Licensed & insured Lutz FL handyman in ZIP 33549 for tile patches, ceiling fans, and acreage fence repairs. Westchase HQ. Call (656) 205-3185.",
+  },
+  "/locations/wesley-chapel": {
+    title: "Handyman Wesley Chapel FL | Fixtures & Fence",
+    description: "Licensed & insured Wesley Chapel handyman for fixture setup, HOA punch lists, and fence-board repair. From Westchase HQ. Call (656) 205-3185.",
+  },
+  "/locations/largo": {
+    title: "Handyman Largo FL | Doors, Fans & Fence Repair",
+    description: "Licensed & insured Largo handyman for sticking doors, ceiling fans, and older fence repairs in Pinellas. From Westchase. Call (656) 205-3185.",
+  },
+  "/locations/pinellas-park": {
+    title: "Handyman Pinellas Park FL | Punch Lists & Gates",
+    description: "Licensed & insured Pinellas Park handyman for punch lists, doors, and gate repairs along Park Blvd. Westchase HQ. Open 24/7. Call (656) 205-3185.",
+  },
+  "/locations/carrollwood": {
+    title: "Handyman Carrollwood FL | Fans & Home Repairs",
+    description: "Licensed & insured Carrollwood handyman for ceiling fans, punch lists, and dragging gates. Hablamos español. Westchase HQ. Call (656) 205-3185.",
+  },
+  "/locations/temple-terrace": {
+    title: "Handyman Temple Terrace FL | Drywall & Doors",
+    description: "Licensed & insured Temple Terrace handyman for drywall, sticking doors, and fixture installs near 56th St. From Westchase. Call (656) 205-3185.",
+  },
+  "/locations/land-o-lakes": {
+    title: "Handyman Land O' Lakes FL | Fence & Gutter Fixes",
+    description: "Licensed & insured Land O' Lakes handyman for gutter sections, fence repairs, and punch lists. Dispatched from Westchase. Call (656) 205-3185.",
+  },
+  "/locations/seminole": {
+    title: "Handyman Seminole FL | Fans, Doors & Fences",
+    description: "Licensed & insured Seminole FL handyman — Pinellas, not Seminole Heights — for fans, doors, and fence repair from Westchase. Call (656) 205-3185.",
+  },
+  "/locations/spring-hill": {
+    title: "Handyman Spring Hill FL | Fence & Home Repair",
+    description: "Licensed & insured Spring Hill handyman for fence sections, doors, and home repairs in Hernando. From Westchase HQ only. Call (656) 205-3185.",
+  },
+  "/services/fence-handyman": {
+    title: "Fence Handyman Tampa FL | Fencing Handyman",
+    description: "Fence handyman and fencing handyman in Tampa Bay: licensed & insured board, gate, and short-section repairs from Westchase. Call (656) 205-3185.",
+  },
   "/locations/tarpon-springs-fl": {
     title: "Handyman Tarpon Springs FL | Fence & Exterior Repairs",
     description: "Licensed & insured handyman in Tarpon Springs (Sponge Docks & East Lake). Fence fixes & exterior wood repairs from our Westchase HQ. Instant estimate: (656).",

@@ -151,7 +151,7 @@ export const workPhotos: WorkPhoto[] = [
       "Fence repair Tampa — storm-damaged pickets replaced with fresh boards for a strong, straight privacy line.",
     service: "Fence Repair",
     city: "Tampa, FL",
-    href: "/services/fence",
+    href: "/services/fence-handyman",
   },
   {
     slug: "fence-post-reset-tampa",

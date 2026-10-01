@@ -9,6 +9,7 @@ import { PhoneEstimateCta } from "@/components/phone-estimate-cta";
 import { InternalLinkHub } from "@/components/internal-link-hub";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/json-ld";
 import { coreServices, hrefForAreaName, type TargetLocation } from "@/lib/programmatic";
+import { NeighborhoodBlocks } from "@/components/neighborhood-blocks";
 import { instantEstimate, serviceH1 } from "@/lib/instant-estimate";
 import { siteConfig } from "@/lib/site-config";
 import {
@@ -69,6 +70,15 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
             <div className="space-y-4 leading-relaxed text-[hsl(var(--muted-foreground))]">
               {location.paragraphs.map((paragraph) => (
                 <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+              ))}
+              {location.callouts?.map((callout) => (
+                <p key={callout.href + callout.before.slice(0, 24)}>
+                  {callout.before}
+                  <Link href={callout.href} className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    {callout.label}
+                  </Link>
+                  {callout.after}
+                </p>
               ))}
               {location.slug === "westchase-fl" ? (
                 <p>
@@ -150,15 +160,6 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               ))}
               <li>
                 <Link
-                  href="/services/fence"
-                  className="flex items-start gap-2 rounded-xl border border-[hsl(var(--border))] bg-white/70 px-4 py-3 text-sm font-medium hover:border-[hsl(var(--accent))]"
-                >
-                  <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(var(--accent))]" />
-                  Fence Installation &amp; Repair in {location.city}
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/services/handyman/fan-installation"
                   className="flex items-start gap-2 rounded-xl border border-[hsl(var(--border))] bg-white/70 px-4 py-3 text-sm font-medium hover:border-[hsl(var(--accent))]"
                 >
@@ -191,6 +192,13 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                 );
               })}
             </ul>
+            {location.spots && location.spots.length > 0 ? (
+              <NeighborhoodBlocks
+                title={`${location.city} neighborhoods we cover in more detail`}
+                intro="Each neighborhood below is still a drive from our only Westchase headquarters. The links go to the matching city hub or service page."
+                spots={location.spots}
+              />
+            ) : null}
 
             <InternalLinkHub
               title={`Popular ${location.city} handyman services`}

@@ -9,6 +9,18 @@ const REDIRECTED_PATHS = [
   "/handyman-westchase-fl",
   "/handyman-oldsmar-fl",
   "/handyman-town-n-country-fl",
+  "/handyman-plant-city-fl",
+  "/handyman-brandon-fl",
+  "/handyman-riverview-fl",
+  "/handyman-lutz-fl",
+  "/handyman-wesley-chapel-fl",
+  "/handyman-largo-fl",
+  "/handyman-pinellas-park-fl",
+  "/handyman-carrollwood-fl",
+  "/handyman-temple-terrace-fl",
+  "/handyman-land-o-lakes-fl",
+  "/handyman-seminole-fl",
+  "/handyman-spring-hill-fl",
   "/services/handyman/tv-mounting",
   "/services/tv-mounting",
   "/services/handyman/flooring-installation",
@@ -133,7 +145,8 @@ export function sitemapPriority(url: string): number {
     url.endsWith("/services/furniture-assembly") ||
     url.endsWith("/services/flooring-installation") ||
     url.endsWith("/services/gutter-installation") ||
-    url.endsWith("/services/handyman/fan-installation")
+    url.endsWith("/services/handyman/fan-installation") ||
+    url.endsWith("/services/fence-handyman")
   ) {
     return 0.9;
   }
