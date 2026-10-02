@@ -57,6 +57,25 @@ export function CoverageAreasMotion() {
             </ScrollReveal>
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-[hsl(var(--muted-foreground))]">
+          East Hillsborough is the same Westchase crew:{" "}
+          <Link href="/locations/brandon" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+            Brandon
+          </Link>
+          ,{" "}
+          <Link href="/locations/riverview" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+            Riverview
+          </Link>
+          ,{" "}
+          <Link href="/locations/temple-terrace" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+            Temple Terrace
+          </Link>
+          , and{" "}
+          <Link href="/locations/plant-city" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+            Plant City
+          </Link>{" "}
+          for downtown doors, Walden Lake fence boards, and acreage fence repairs.
+        </p>
       </div>
     </section>
   );

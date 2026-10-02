@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { HqDispatch } from "@/components/hq-dispatch";
@@ -49,7 +50,11 @@ export default function AboutPage() {
                 Handyman Pros FL is a licensed, insured home services company headquartered at {fullAddress} in the Westchase area of Tampa. That is our only location. We built our business on fast response, honest pricing, and quality work on every job.
               </p>
               <p>
-                Our mobile team serves homeowners across Hillsborough, Pinellas, Pasco, Polk, Hernando, and Manatee counties — including Westchase, Carrollwood, Citrus Park, Town &apos;n&apos; Country, Brandon, Riverview, St. Petersburg, and Clearwater. Those cities are service areas, not extra storefronts.
+                Our mobile team serves homeowners across Hillsborough, Pinellas, Pasco, Polk, Hernando, and Manatee counties — including Westchase, Carrollwood, Citrus Park, Town &apos;n&apos; Country, Brandon, Riverview,{" "}
+                <Link href="/locations/plant-city" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                  Plant City
+                </Link>
+                , St. Petersburg, and Clearwater. Those cities are service areas, not extra storefronts. There is no Lakeland office — Plant City is the east Hillsborough hub on that side of I-4.
               </p>
               <p>
                 From furniture assembly and drywall repair to interior painting and fence installation, we offer 60+ services and are open 24 hours a day, 7 days a week. Call {siteConfig.phone} anytime for a free estimate.

@@ -70,20 +70,55 @@ export const expansionLocations: TargetLocation[] = [
     displayName: "Plant City, FL",
     county: "Hillsborough County",
     zipHint: "33563–33567",
-    neighborhoods: ["Downtown Plant City", "Walden Lake", "US-92 corridor", "Park Road"],
+    neighborhoods: ["Downtown Plant City", "Walden Lake", "Trapnell", "Knights Griffin", "Park Road", "Varrea", "US-92 corridor"],
     intro:
-      "Need a Plant City home handyman for doors, rotten wood, and fence boards? Licensed and insured Handyman Pros FL drives east from our only Westchase headquarters — Plant City is a service area, not a second office.",
+      "Need a Plant City handyman for a door that swelled, rotten wood at a sill, or a fence board on a golf-course lot or a strawberry-acreage line? Licensed and insured Handyman Pros FL drives east from our only Westchase headquarters — Plant City is a service area, not a second office.",
     paragraphs: [
-      `Plant City mixes downtown blocks near the water tower with Walden Lake and houses along the US-92 corridor. Humidity eats sills and bottom rails faster than owners expect. Technicians leave ${hq} in Westchase with door hardware, exterior caulk, and fence fasteners already on the truck.`,
-      "Door work here is alignment and weather, not a millwork shop. We hang a prehung unit when the opening is ready, plane a slab that rubs after rain, and replace sweeps so the entry actually closes. Rotten wood on a sill or fascia edge gets cut back and patched so the next storm does not travel farther into the trim.",
-      "Fence lines on the east side of Hillsborough fail one section at a time — a soft post at a garden gate, a row of cupped boards behind Walden Lake. We repair that section. Strawberry-country lots and newer subdivisions get the same licensed crew and the same phone number.",
+      `Plant City is not a Brandon ranch corridor and not a Riverview subdivision punch list. Downtown blocks around the water tower are older wood. Walden Lake is a golf-community fence line. East of Park Road, Trapnell and Knights Griffin open into pasture and strawberry fields. Technicians leave ${hq} in Westchase with door hardware, exterior caulk, and fence fasteners already on the truck.`,
+      "Door work here is alignment after rain, a sweep that actually seals, and a prehung unit only when the opening is ready. Rotten wood on a sill or a short fascia edge gets cut back so the next storm does not travel into the trim. A downtown cottage and a Walden Lake two-story do not fail the same way, and we do not write them up as if they do.",
+      "Fence calls split in two. Walden Lake is usually a privacy board, a soft bottom rail, or a gate that will not latch. Acreage toward Knights Griffin and County Line Road — Lakeland is the next city on I-4, and we do not have a shop there — is a longer wood run or a farm gate. Still one failed section, not a fencing-contractor bid.",
       `Call ${phone} for a Plant City estimate. We are open 24/7 for scheduling. Hablamos español. There is no Plant City branch; the only address is Westchase, Tampa.`,
     ],
     callouts: [
       fenceCallout(
         "Plant City",
-        "Walden Lake and the US-92 corridor call most often for a soft bottom rail, a gate that will not latch, or a handful of rotten pickets."
+        "Walden Lake privacy lines and the acreage fences toward Knights Griffin usually fail as a soft bottom rail, a gate that will not latch, or a short run of rotten boards."
       ),
+    ],
+    spots: [
+      {
+        name: "Downtown Plant City",
+        body: "Blocks around the water tower, Collins Street, and Evers are older wood-frame houses. A rainy week swells the entry, a sill goes soft at the corners, and a porch rail lets go. We plane the door, replace a sweep, and cut rotten wood back to sound material. This is not a Brandon Boulevard ranch and not a new-construction punch list.",
+        links: [
+          { href: "/services/door-repair", label: "Door repair" },
+          { href: "/services/drywall-repair", label: "Drywall repair" },
+        ],
+      },
+      {
+        name: "Walden Lake",
+        body: "Walden Lake is the golf-course community: wood privacy fences on the back lot, a gate that dropped, and family rooms that need a TV mount on block. We repair the fence section that failed and hang the bracket into real structure. We do not bid a new fence around the whole fairway lot.",
+        links: [
+          { href: "/services/fence-handyman", label: "Fence handyman" },
+          { href: "/services/tv-wall-mounting", label: "TV wall mounting" },
+        ],
+      },
+      {
+        name: "Knights Griffin and Trapnell",
+        body: "East of Park Road the lots open into pasture, garden rows, and strawberry acreage toward County Line Road. Fence work here is a rotten bottom board, a sagging farm gate, or one soft post when the hole is still sound — a longer line than a Walden Lake panel, still a handyman section, not ranch fencing by the mile.",
+        links: [
+          { href: "/services/fence-handyman", label: "Acreage fence repair" },
+          { href: "/services/same-day-handyman", label: "Same-day scheduling" },
+        ],
+      },
+      {
+        name: "Park Road and Varrea",
+        body: "Park Road and newer south-side houses in Varrea book the indoor list after a move: a drywall scar, a mount, a door that rubs. The housing is newer than downtown and tighter than the acreage. Same licensed crew, same Westchase truck, different materials on the van.",
+        links: [
+          { href: "/services/drywall-repair", label: "Drywall repair" },
+          { href: "/services/tv-wall-mounting", label: "TV mounting" },
+          { href: "/services/door-repair", label: "Door repair" },
+        ],
+      },
     ],
     faqs: [
       {
@@ -94,6 +129,11 @@ export const expansionLocations: TargetLocation[] = [
         question: "Can you repair rotten wood and doors in Plant City?",
         answer:
           "Yes. We align doors, replace sweeps, and repair rotten sills and trim when the damage is still a handyman repair. Structural framing beyond that scope is called out before we cover it.",
+      },
+      {
+        question: "Do you repair fences on Plant City acreage and in Walden Lake?",
+        answer:
+          "Yes, within handyman scope. Walden Lake and Park Road are board, rail, and gate repairs. Knights Griffin and Trapnell acreage is the same idea on a longer line: the section that failed, not a new fence around a field. Full property installs are quoted separately.",
       },
       {
         question: "How fast can you reach Plant City?",
@@ -121,6 +161,13 @@ export const expansionLocations: TargetLocation[] = [
         "Brandon",
         "Bloomingdale and Providence Lakes privacy fences usually need a few boards or a gate, not a new fence around the whole lot."
       ),
+      {
+        before:
+          "Bloomingdale and Providence Lakes stay on this page. When the east Hillsborough day reaches older wood houses and longer fence lines, that work is the ",
+        href: "/locations/plant-city",
+        label: "Plant City handyman hub",
+        after: " — downtown doors, Walden Lake boards, and acreage sections — from the same Westchase crew.",
+      },
     ],
     faqs: [
       {
@@ -159,6 +206,13 @@ export const expansionLocations: TargetLocation[] = [
         "Riverview",
         "Winthrop and Southbend fences take the worst of a south-county storm: one racked panel, a loose rail, or a gate out of square."
       ),
+      {
+        before:
+          "Winthrop and Southbend punch lists stay here. Northeast of Riverview, strawberry-acreage fences and downtown door repairs are the ",
+        href: "/locations/plant-city",
+        label: "Plant City",
+        after: " service area, not a second office and not a copy of this page.",
+      },
     ],
     faqs: [
       {
@@ -385,6 +439,13 @@ export const expansionLocations: TargetLocation[] = [
         "Temple Terrace",
         "Side-yard wood fences near 56th Street and the golf course typically need boards and a latch, not a new layout."
       ),
+      {
+        before: "56th Street drywall and doors stay on this page. Farther east, past Brandon, ",
+        href: "/locations/plant-city",
+        label: "Plant City",
+        after:
+          " is where we fix swollen downtown doors, Walden Lake fence boards, and acreage lines. Same license, same Westchase headquarters.",
+      },
     ],
     faqs: [
       {
