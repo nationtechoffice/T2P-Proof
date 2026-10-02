@@ -88,6 +88,24 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
               {location.paragraphs.map((paragraph) => (
                 <p key={paragraph.slice(0, 48)}>{withClickToCall(paragraph)}</p>
               ))}
+              {location.slug === "valrico" ? (
+                <p>
+                  East of Valrico, older wood and acreage fences are the{" "}
+                  <Link href="/locations/plant-city" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Plant City handyman hub
+                  </Link>
+                  . Doors, rotten sills, and fence boards live on that page — this one stays assembly and fans.
+                </p>
+              ) : null}
+              {location.slug === "seffner" ? (
+                <p>
+                  Seffner sits between Brandon and{" "}
+                  <Link href="/locations/plant-city" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Plant City
+                  </Link>
+                  . Gutter and exterior work stays here. Downtown doors and strawberry-acreage fence boards are on the Plant City hub.
+                </p>
+              ) : null}
             </div>
             {location.spots && location.spots.length > 0 ? (
               <NeighborhoodBlocks

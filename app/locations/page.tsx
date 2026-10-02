@@ -93,7 +93,11 @@ export default function LocationsIndexPage() {
               <Link href="/locations/spring-hill" className="font-medium text-[hsl(var(--primary))] hover:underline">
                 Spring Hill
               </Link>{" "}
-              is the Hernando stop, still dispatched from Westchase.
+              is the Hernando stop, still dispatched from Westchase.{" "}
+              <Link href="/locations/plant-city" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Plant City door, wood, and acreage fence repairs
+              </Link>{" "}
+              are their own hub — downtown sills, Walden Lake boards, and Knights Griffin lines — not a copy of Brandon or Riverview.
             </p>
           </div>
           <div className="mb-10">
