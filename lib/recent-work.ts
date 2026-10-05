@@ -1,8 +1,12 @@
+import { jobSitePhotos } from "./images";
+
 export interface RecentWorkPhoto {
   slug: string;
   webp: string;
   avif: string;
   thumb: string;
+  /** JPG fallback when the picture sources are skipped. */
+  jpg?: string;
   width: number;
   height: number;
   thumbWidth: number;
@@ -15,10 +19,71 @@ export interface RecentWorkPhoto {
 }
 
 /**
- * Real Google Business Profile job photos.
- * Alt text and captions are copied from the photo manifest — no added locations.
+ * Job-site photos for the homepage recent-work strip and /work.
+ * Older entries are Google Business Profile stills. Oct 5 blind and window
+ * photos use the auditor alt text verbatim.
  */
 export const recentWorkPhotos: RecentWorkPhoto[] = [
+  {
+    slug: jobSitePhotos.blindsInstallBrandedBack.slug,
+    webp: jobSitePhotos.blindsInstallBrandedBack.webp,
+    avif: jobSitePhotos.blindsInstallBrandedBack.avif,
+    thumb: jobSitePhotos.blindsInstallBrandedBack.thumb,
+    jpg: jobSitePhotos.blindsInstallBrandedBack.jpg,
+    width: jobSitePhotos.blindsInstallBrandedBack.width,
+    height: jobSitePhotos.blindsInstallBrandedBack.height,
+    thumbWidth: jobSitePhotos.blindsInstallBrandedBack.thumbWidth,
+    thumbHeight: jobSitePhotos.blindsInstallBrandedBack.thumbHeight,
+    alt: jobSitePhotos.blindsInstallBrandedBack.alt,
+    caption: "Window blind installation in a Tampa Bay home. The shirt shows the Handyman Pros Florida phone number.",
+    href: "/services/handyman/general-repairs",
+    linkLabel: "General repairs",
+  },
+  {
+    slug: jobSitePhotos.blindsHardwareDrillProfile.slug,
+    webp: jobSitePhotos.blindsHardwareDrillProfile.webp,
+    avif: jobSitePhotos.blindsHardwareDrillProfile.avif,
+    thumb: jobSitePhotos.blindsHardwareDrillProfile.thumb,
+    jpg: jobSitePhotos.blindsHardwareDrillProfile.jpg,
+    width: jobSitePhotos.blindsHardwareDrillProfile.width,
+    height: jobSitePhotos.blindsHardwareDrillProfile.height,
+    thumbWidth: jobSitePhotos.blindsHardwareDrillProfile.thumbWidth,
+    thumbHeight: jobSitePhotos.blindsHardwareDrillProfile.thumbHeight,
+    alt: jobSitePhotos.blindsHardwareDrillProfile.alt,
+    caption: "Drilling blind hardware into a window frame with a cordless drill.",
+    href: "/services/handyman/general-repairs",
+    linkLabel: "General repairs",
+  },
+  {
+    slug: jobSitePhotos.windowWorkBrandedShirt.slug,
+    webp: jobSitePhotos.windowWorkBrandedShirt.webp,
+    avif: jobSitePhotos.windowWorkBrandedShirt.avif,
+    thumb: jobSitePhotos.windowWorkBrandedShirt.thumb,
+    jpg: jobSitePhotos.windowWorkBrandedShirt.jpg,
+    width: jobSitePhotos.windowWorkBrandedShirt.width,
+    height: jobSitePhotos.windowWorkBrandedShirt.height,
+    thumbWidth: jobSitePhotos.windowWorkBrandedShirt.thumbWidth,
+    thumbHeight: jobSitePhotos.windowWorkBrandedShirt.thumbHeight,
+    alt: jobSitePhotos.windowWorkBrandedShirt.alt,
+    caption: "Branded uniform listing home repairs, painting, drywall, and fences.",
+    href: "/services",
+    linkLabel: "Home services",
+  },
+  {
+    slug: jobSitePhotos.blindsInstallBrandedReach.slug,
+    webp: jobSitePhotos.blindsInstallBrandedReach.webp,
+    avif: jobSitePhotos.blindsInstallBrandedReach.avif,
+    thumb: jobSitePhotos.blindsInstallBrandedReach.thumb,
+    jpg: jobSitePhotos.blindsInstallBrandedReach.jpg,
+    width: jobSitePhotos.blindsInstallBrandedReach.width,
+    height: jobSitePhotos.blindsInstallBrandedReach.height,
+    thumbWidth: jobSitePhotos.blindsInstallBrandedReach.thumbWidth,
+    thumbHeight: jobSitePhotos.blindsInstallBrandedReach.thumbHeight,
+    alt: jobSitePhotos.blindsInstallBrandedReach.alt,
+    caption: "Installing white mini blinds at a residential window.",
+    href: "/services/handyman/general-repairs",
+    linkLabel: "General repairs",
+  },
   {
     slug: "backyard-gravel-landscape-prep",
     webp: "/images/work/handyman-pros-florida-tampa-bay-backyard-gravel-landscape-prep.webp",

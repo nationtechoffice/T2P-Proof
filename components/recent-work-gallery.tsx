@@ -1,9 +1,19 @@
 import { JsonLd } from "@/lib/json-ld";
+import { galleryImages, optimizedStill } from "@/lib/images";
 import { recentWorkPhotos } from "@/lib/recent-work";
 import { siteConfig } from "@/lib/site-config";
 
-/** Below-the-fold Google Business Profile photos. Native lazy pictures, AVIF then WebP. */
+/** WebP URLs already shown in the homepage teaser above this section. */
+const homepageTeaserWebp = new Set<string>();
+for (const image of galleryImages.slice(0, 10)) {
+  const webp = optimizedStill(image.src)?.webp;
+  if (webp) homepageTeaserWebp.add(webp);
+}
+
+/** Below-the-fold job photos that are not already in the teaser. Native lazy pictures, AVIF then WebP. */
 export function RecentWorkGallery() {
+  const photos = recentWorkPhotos.filter((photo) => !homepageTeaserWebp.has(photo.webp));
+
   return (
     <section className="section-padding relative pt-0" aria-labelledby="recent-work-heading">
       <JsonLd
@@ -12,7 +22,7 @@ export function RecentWorkGallery() {
           "@type": "ImageGallery",
           name: "Recent work around Tampa Bay",
           url: siteConfig.url,
-          associatedMedia: recentWorkPhotos.map((photo) => ({
+          associatedMedia: photos.map((photo) => ({
             "@type": "ImageObject",
             contentUrl: `${siteConfig.url}${photo.webp}`,
             thumbnailUrl: `${siteConfig.url}${photo.thumb}`,
@@ -31,11 +41,11 @@ export function RecentWorkGallery() {
             Recent work around Tampa Bay
           </h2>
           <p className="text-[hsl(var(--muted-foreground))]">
-            Job-site photos from the Handyman Pros FL Google Business Profile.
+            Job-site photos from Handyman Pros FL work around Tampa Bay.
           </p>
         </div>
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {recentWorkPhotos.map((photo) => (
+          {photos.map((photo) => (
             <li key={photo.slug} className="overflow-hidden rounded-2xl border border-[hsl(var(--border))] bg-white shadow-sm">
               <figure>
                 <picture>
@@ -47,7 +57,7 @@ export function RecentWorkGallery() {
                   />
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={photo.webp}
+                    src={photo.jpg ?? photo.webp}
                     alt={photo.alt}
                     width={photo.width}
                     height={photo.height}
