@@ -19,10 +19,16 @@ import {
   nearbyLocationLinks,
 } from "@/lib/internal-links";
 import { CheckCircle } from "lucide-react";
+import { JobSitePhoto } from "@/components/job-site-photo";
+import { jobSitePhotos } from "@/lib/images";
 
 export function LocationCityLanding({ location }: { location: TargetLocation }) {
   const pageUrl = `${siteConfig.url}/locations/${location.slug}`;
   const nearby = nearbyLocationLinks(location.slug);
+  const cityJobPhotos =
+    location.slug === "tampa"
+      ? [jobSitePhotos.blindsInstallBrandedBack, jobSitePhotos.windowWorkBrandedShirt]
+      : [jobSitePhotos.windowWorkBrandedShirt];
 
   return (
     <>
@@ -41,6 +47,23 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
             areaName: location.displayName,
           }),
           faqSchema(location.faqs),
+          {
+            "@context": "https://schema.org",
+            "@type": "ImageGallery",
+            name: `Handyman job photos in ${location.city}`,
+            url: pageUrl,
+            associatedMedia: cityJobPhotos.map((photo) => ({
+              "@type": "ImageObject",
+              contentUrl: `${siteConfig.url}${photo.webp}`,
+              thumbnailUrl: `${siteConfig.url}${photo.thumb}`,
+              name: photo.alt,
+              description: photo.alt,
+              caption: photo.alt,
+              width: photo.width,
+              height: photo.height,
+              encodingFormat: "image/webp",
+            })),
+          },
         ]}
       />
       <Breadcrumbs
@@ -143,6 +166,22 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                 </p>
               ) : null}
             </div>
+            <ul
+              className={`my-8 grid gap-4 ${cityJobPhotos.length > 1 ? "sm:grid-cols-2" : "max-w-sm"}`}
+            >
+              {cityJobPhotos.map((photo) => (
+                <li key={photo.slug}>
+                  <JobSitePhoto
+                    photo={photo}
+                    sizes={
+                      cityJobPhotos.length > 1
+                        ? "(max-width: 640px) 100vw, 40vw"
+                        : "(max-width: 640px) 100vw, 384px"
+                    }
+                  />
+                </li>
+              ))}
+            </ul>
             <h2 className="mt-10 mb-4 text-2xl font-bold">
               Home repairs we handle in {location.city}, FL
             </h2>

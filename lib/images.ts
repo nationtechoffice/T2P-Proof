@@ -46,11 +46,80 @@ export const siteImages = {
   },
 } as const;
 
+/** Oct 5 job-site stills. Alt text is the auditor brief, verbatim. */
+export const jobSitePhotos = {
+  blindsInstallBrandedBack: {
+    slug: "handyman-pros-florida-blinds-install-branded-back",
+    jpg: "/images/work/handyman-pros-florida-blinds-install-branded-back.jpg",
+    webp: "/images/work/handyman-pros-florida-blinds-install-branded-back.webp",
+    avif: "/images/work/handyman-pros-florida-blinds-install-branded-back.avif",
+    thumb: "/images/work/handyman-pros-florida-blinds-install-branded-back-thumb.webp",
+    width: 1200,
+    height: 1600,
+    thumbWidth: 800,
+    thumbHeight: 1067,
+    alt: "Handyman Pros Florida technician installing window blinds in a Tampa Bay home, branded shirt with phone (656) 205-3185",
+  },
+  blindsHardwareDrillProfile: {
+    slug: "handyman-pros-florida-blinds-hardware-drill-profile",
+    jpg: "/images/work/handyman-pros-florida-blinds-hardware-drill-profile.jpg",
+    webp: "/images/work/handyman-pros-florida-blinds-hardware-drill-profile.webp",
+    avif: "/images/work/handyman-pros-florida-blinds-hardware-drill-profile.avif",
+    thumb: "/images/work/handyman-pros-florida-blinds-hardware-drill-profile-thumb.webp",
+    width: 1200,
+    height: 1600,
+    thumbWidth: 800,
+    thumbHeight: 1067,
+    alt: "Handyman Pros Florida tech drilling blind hardware into a window frame with a cordless drill",
+  },
+  windowWorkBrandedShirt: {
+    slug: "handyman-pros-florida-window-work-branded-shirt-back",
+    jpg: "/images/work/handyman-pros-florida-window-work-branded-shirt-back.jpg",
+    webp: "/images/work/handyman-pros-florida-window-work-branded-shirt-back.webp",
+    avif: "/images/work/handyman-pros-florida-window-work-branded-shirt-back.avif",
+    thumb: "/images/work/handyman-pros-florida-window-work-branded-shirt-back-thumb.webp",
+    width: 1200,
+    height: 1600,
+    thumbWidth: 800,
+    thumbHeight: 1067,
+    alt: "Back of Handyman Pros Florida uniform showing home repairs, painting, drywall, and fences services",
+  },
+  blindsInstallBrandedReach: {
+    slug: "handyman-pros-florida-blinds-install-branded-reach",
+    jpg: "/images/work/handyman-pros-florida-blinds-install-branded-reach.jpg",
+    webp: "/images/work/handyman-pros-florida-blinds-install-branded-reach.webp",
+    avif: "/images/work/handyman-pros-florida-blinds-install-branded-reach.avif",
+    thumb: "/images/work/handyman-pros-florida-blinds-install-branded-reach-thumb.webp",
+    width: 1200,
+    height: 1600,
+    thumbWidth: 800,
+    thumbHeight: 1067,
+    alt: "Handyman Pros Florida installing white mini blinds at a residential window",
+  },
+} as const;
+
+export type JobSitePhoto = (typeof jobSitePhotos)[keyof typeof jobSitePhotos];
+
+/** Blind install proof for the general-repairs money page. Shirt-back brand shot stays on the homepage and city hubs. */
+export const homeRepairJobPhotos = [
+  jobSitePhotos.blindsInstallBrandedBack,
+  jobSitePhotos.blindsHardwareDrillProfile,
+  jobSitePhotos.blindsInstallBrandedReach,
+] as const;
+
 /** Homepage recent-work strip: van plus real job proof. Tile, fence, and plumbing stay here and on /work — not on TV or fan heroes. */
 export const galleryImages = [
   {
     src: "/images/work/service-van-tampa.jpg",
     alt: "Handyman Pros FL branded service van arriving for a Tampa Bay home repair",
+  },
+  {
+    src: jobSitePhotos.blindsInstallBrandedBack.jpg,
+    alt: jobSitePhotos.blindsInstallBrandedBack.alt,
+  },
+  {
+    src: jobSitePhotos.windowWorkBrandedShirt.jpg,
+    alt: jobSitePhotos.windowWorkBrandedShirt.alt,
   },
   {
     src: "/images/work/drywall-finish-ladder.jpg",
@@ -155,6 +224,30 @@ export const optimizedWorkStills = {
     avif: "/images/work/fence-post-reset.avif",
     width: 1184,
     height: 864,
+  },
+  [jobSitePhotos.blindsInstallBrandedBack.jpg]: {
+    webp: jobSitePhotos.blindsInstallBrandedBack.webp,
+    avif: jobSitePhotos.blindsInstallBrandedBack.avif,
+    width: jobSitePhotos.blindsInstallBrandedBack.width,
+    height: jobSitePhotos.blindsInstallBrandedBack.height,
+  },
+  [jobSitePhotos.blindsHardwareDrillProfile.jpg]: {
+    webp: jobSitePhotos.blindsHardwareDrillProfile.webp,
+    avif: jobSitePhotos.blindsHardwareDrillProfile.avif,
+    width: jobSitePhotos.blindsHardwareDrillProfile.width,
+    height: jobSitePhotos.blindsHardwareDrillProfile.height,
+  },
+  [jobSitePhotos.windowWorkBrandedShirt.jpg]: {
+    webp: jobSitePhotos.windowWorkBrandedShirt.webp,
+    avif: jobSitePhotos.windowWorkBrandedShirt.avif,
+    width: jobSitePhotos.windowWorkBrandedShirt.width,
+    height: jobSitePhotos.windowWorkBrandedShirt.height,
+  },
+  [jobSitePhotos.blindsInstallBrandedReach.jpg]: {
+    webp: jobSitePhotos.blindsInstallBrandedReach.webp,
+    avif: jobSitePhotos.blindsInstallBrandedReach.avif,
+    width: jobSitePhotos.blindsInstallBrandedReach.width,
+    height: jobSitePhotos.blindsInstallBrandedReach.height,
   },
 } as const;
 

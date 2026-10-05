@@ -88,10 +88,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               </p>
             ) : null}
           </div>
-          {cat === "fence" || cat === "painting" ? (
+          {cat === "fence" || cat === "painting" || cat === "handyman" ? (
             <ServicePhotoGallery
-              photos={galleryForPage(cat)}
-              title={`${meta.name} photos in Tampa`}
+              photos={cat === "handyman" ? galleryForPage("general-repairs") : galleryForPage(cat)}
+              title={cat === "handyman" ? "Home repair photos in Tampa" : `${meta.name} photos in Tampa`}
             />
           ) : null}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

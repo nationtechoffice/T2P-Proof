@@ -7,6 +7,8 @@ import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { formatFullAddress } from "@/lib/local-seo";
 import { Shield, Users, Award, Heart, MapPin } from "lucide-react";
+import { JobSitePhoto } from "@/components/job-site-photo";
+import { jobSitePhotos } from "@/lib/images";
 
 export const metadata: Metadata = buildMetadata({
   title: "About Our Tampa Handyman",
@@ -86,7 +88,18 @@ export default function AboutPage() {
 
       <section className="section-padding">
         <div className="container-site">
-          <h2 className="mb-12 text-center text-2xl font-bold">Our Core Values</h2>
+          <div className="mx-auto mb-12 grid max-w-5xl items-center gap-8 md:grid-cols-[18rem_1fr]">
+            <JobSitePhoto
+              photo={jobSitePhotos.windowWorkBrandedShirt}
+              sizes="(max-width: 768px) 80vw, 288px"
+            />
+            <div>
+              <h2 className="mb-3 text-2xl font-bold">Our Core Values</h2>
+              <p className="text-[hsl(var(--muted-foreground))]">
+                The crew on a Tampa Bay window job, in the branded uniform homeowners see at the door.
+              </p>
+            </div>
+          </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {values.map(({ icon: Icon, title, description }) => (
               <div key={title} className="card text-center">

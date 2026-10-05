@@ -77,7 +77,7 @@ export default function WorkPage() {
           <div className="mx-auto mb-10 max-w-3xl text-center">
             <h1 className="mb-3 text-4xl font-bold">Handyman Work Photos</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
-              Real photos from our Google Maps listing — drywall, tile, flooring, and exterior work across Tampa Bay.
+              Real job photos — drywall, blinds, tile, flooring, and exterior work across Tampa Bay.
             </p>
           </div>
 
@@ -97,7 +97,7 @@ export default function WorkPage() {
                   />
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={photo.webp}
+                    src={photo.jpg ?? photo.webp}
                     alt={photo.alt}
                     width={photo.width}
                     height={photo.height}

@@ -8,7 +8,7 @@ import { googleBusiness } from "@/lib/google-business";
 
 /** Compact homepage teaser — full captioned gallery lives on /work. */
 export function PhotoGallery() {
-  const preview = galleryImages.slice(0, 8);
+  const preview = galleryImages.slice(0, 10);
 
   return (
     <section className="section-padding relative pt-0">
@@ -18,19 +18,25 @@ export function PhotoGallery() {
           "@type": "ImageGallery",
           name: "Handyman Pros FL Tampa job photos",
           url: `${siteConfig.url}/work`,
-          associatedMedia: preview.map((image) => ({
-            "@type": "ImageObject",
-            contentUrl: `${siteConfig.url}${optimizedStill(image.src)?.webp ?? image.src}`,
-            description: image.alt,
-            name: image.alt,
-          })),
+          associatedMedia: preview.map((image) => {
+            const still = optimizedStill(image.src);
+            return {
+              "@type": "ImageObject",
+              contentUrl: `${siteConfig.url}${still?.webp ?? image.src}`,
+              description: image.alt,
+              name: image.alt,
+              ...(still
+                ? { width: still.width, height: still.height, encodingFormat: "image/webp" }
+                : {}),
+            };
+          }),
         }}
       />
       <div className="container-site" id="work-photos">
         <div className="mx-auto mb-8 max-w-3xl text-center">
           <h2 className="mb-3 text-3xl font-bold md:text-4xl">Recent Handyman Work</h2>
           <p className="text-[hsl(var(--muted-foreground))]">
-            Real Google Maps job photos — drywall, tile, flooring, and exterior work across Tampa Bay.{" "}
+            Real job photos — drywall, blinds, tile, and exterior work across Tampa Bay.{" "}
             <a
               href={googleBusiness.shareUrl}
               target="_blank"
