@@ -1,5 +1,5 @@
-import type { CoreService, TargetLocation } from "@/lib/programmatic";
-import { siteConfig } from "@/lib/site-config";
+import type { CoreService, TargetLocation } from "./programmatic";
+import { siteConfig } from "./site-config";
 
 const phone = siteConfig.phone;
 const hq = siteConfig.address.street;
