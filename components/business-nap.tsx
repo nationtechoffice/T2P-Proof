@@ -12,7 +12,7 @@ export function BusinessNAP({ className = "" }: { className?: string }) {
       <meta itemProp="telephone" content={siteConfig.phoneE164} />
       <meta itemProp="email" content={siteConfig.email} />
       <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-        <meta itemProp="streetAddress" content={`${siteConfig.address.street}, ${siteConfig.address.street2}`} />
+        <meta itemProp="streetAddress" content={siteConfig.address.street} />
         <meta itemProp="addressLocality" content={siteConfig.address.city} />
         <meta itemProp="addressRegion" content={siteConfig.address.state} />
         <meta itemProp="postalCode" content={siteConfig.address.zip} />

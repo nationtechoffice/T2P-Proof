@@ -2,13 +2,12 @@ import { siteConfig } from "./site-config";
 import { serviceDescription, serviceTitle } from "./instant-estimate";
 
 export function formatFullAddress(): string {
-  const { street, street2, city, state, zip } = siteConfig.address;
-  return `${street}, ${street2}, ${city}, ${state} ${zip}`;
+  const { street, city, state, zip } = siteConfig.address;
+  return `${street}, ${city}, ${state} ${zip}`;
 }
 
 export function formatStreetAddress(): string {
-  const { street, street2 } = siteConfig.address;
-  return `${street}, ${street2}`;
+  return siteConfig.address.street;
 }
 
 export function getGoogleMapsUrl(): string {

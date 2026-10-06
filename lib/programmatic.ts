@@ -575,7 +575,7 @@ export const targetLocations: TargetLocation[] = [
       },
       {
         question: "Is Handyman Pros FL based in Tampa?",
-        answer: `Yes. Our only location is ${siteConfig.address.street}, Apt 203, Tampa, FL 33626 (Westchase). City pages are service areas we drive to — not extra branches.`,
+        answer: `Yes. Our only location is ${siteConfig.address.street}, Tampa, FL 33626 (Westchase). City pages are service areas we drive to — not extra branches.`,
       },
     ],
   },
@@ -590,7 +590,7 @@ export const targetLocations: TargetLocation[] = [
     intro:
       "Need a fast, reliable handyman in Westchase, FL? This is our headquarters zip. TV wall mounting, drywall repair, and fixture work often same-day in 33626.",
     paragraphs: [
-      `Handyman Pros FL is based at ${siteConfig.address.street}, Apt 203, Tampa, FL 33626 in Westchase. When you search handyman near me in Westchase, you are calling the actual local crew — not a lead mill.`,
+      `Handyman Pros FL is based at ${siteConfig.address.street}, Tampa, FL 33626 in Westchase. When you search handyman near me in Westchase, you are calling the actual local crew — not a lead mill.`,
       "Westchase HOA standards, stucco, and lanai sliders are daily work. We handle TV wall mounting, drywall repair, electrical fixture installation, plumbing fixture repair, furniture assembly, and door repair without a second office.",
       "Tuscany Bay and Westchase Golf Club streets are inside our fastest response radius. Citrus Park, Town 'N' Country, and Oldsmar (ZIP 34677, just across the Hillsborough–Pinellas line) are the next hop.",
       `Call ${siteConfig.phone} 24/7 for a Westchase estimate.`,
@@ -598,7 +598,7 @@ export const targetLocations: TargetLocation[] = [
     faqs: [
       {
         question: "Are you actually based in Westchase?",
-        answer: `Yes. Our only location is ${siteConfig.address.street}, Apt 203, Tampa, FL 33626. Westchase is headquarters, not a marketing city.`,
+        answer: `Yes. Our only location is ${siteConfig.address.street}, Tampa, FL 33626. Westchase is headquarters, not a marketing city.`,
       },
       {
         question: "How fast is Westchase handyman service?",

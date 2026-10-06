@@ -33,7 +33,6 @@ export const siteConfig = {
   },
   address: {
     street: "12021 Tuscany Bay Dr",
-    street2: "Apt 203",
     city: "Tampa",
     state: "FL",
     zip: "33626",

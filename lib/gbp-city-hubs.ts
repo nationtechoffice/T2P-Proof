@@ -2,7 +2,7 @@ import type { TargetLocation } from "./programmatic";
 import { siteConfig } from "./site-config";
 
 const phone = siteConfig.phone;
-const hq = `${siteConfig.address.street}, Apt 203, Tampa, FL 33626`;
+const hq = `${siteConfig.address.street}, Tampa, FL 33626`;
 
 /**
  * Google Business Profile service areas.

@@ -59,7 +59,7 @@ export function localBusinessSchema() {
     address: {
       "@type": "PostalAddress",
       name: "Handyman Pros FL Tampa Headquarters",
-      streetAddress: `${siteConfig.address.street}, ${siteConfig.address.street2}`,
+      streetAddress: siteConfig.address.street,
       addressLocality: siteConfig.address.city,
       addressRegion: siteConfig.address.state,
       postalCode: siteConfig.address.zip,

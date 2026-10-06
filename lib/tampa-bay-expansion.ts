@@ -123,7 +123,7 @@ export const expansionLocations: TargetLocation[] = [
     faqs: [
       {
         question: "Do you have a handyman office in Plant City?",
-        answer: `No. Handyman Pros FL has one location at ${hq}, Apt 203, Tampa, FL 33626 in Westchase. Plant City is a service area we drive to.`,
+        answer: `No. Handyman Pros FL has one location at ${hq}, Tampa, FL 33626 in Westchase. Plant City is a service area we drive to.`,
       },
       {
         question: "Can you repair rotten wood and doors in Plant City?",
@@ -222,7 +222,7 @@ export const expansionLocations: TargetLocation[] = [
       },
       {
         question: "Do you have a Riverview location?",
-        answer: `No. Crews leave ${hq}, Apt 203, Tampa, FL 33626. Riverview is a drive from that single headquarters.`,
+        answer: `No. Crews leave ${hq}, Tampa, FL 33626. Riverview is a drive from that single headquarters.`,
       },
       {
         question: "Can one visit cover drywall and a fence board?",
@@ -373,7 +373,7 @@ export const expansionLocations: TargetLocation[] = [
       },
       {
         question: "Where are you based if I book Pinellas Park?",
-        answer: `We leave ${hq}, Apt 203, Tampa, FL 33626. Pinellas Park is a service area.`,
+        answer: `We leave ${hq}, Tampa, FL 33626. Pinellas Park is a service area.`,
       },
       {
         question: "What should I send for an estimate?",
@@ -394,7 +394,7 @@ export const expansionLocations: TargetLocation[] = [
       "Carrollwood Village, Original Carrollwood, and Northdale are inside our fastest Hillsborough radius after Westchase itself. Families book a fan that wobbles, a drywall scar from a move, and a Saturday list of blinds, shelves, and door hardware. The truck is already stocked because headquarters is minutes away at ZIP 33626.",
       "Ceiling fan installation is the Carrollwood request we hear most. We confirm the box is fan-rated, make the connections at that existing box, and balance the blades. If the brace will not hold a fan, we stop instead of hanging weight from drywall.",
       "Backyard fences in Northdale and along Dale Mabry need a board or a dragging gate more often than a new fence. We repair the section and keep the rest of the honey-do list moving. Citrus Park and Town 'N' Country are the adjacent service areas.",
-      `Call ${phone} anytime. Licensed and insured. Hablamos español for reparaciones en casa. Carrollwood is a service area — our only address remains ${hq}, Apt 203, Tampa, FL 33626.`,
+      `Call ${phone} anytime. Licensed and insured. Hablamos español for reparaciones en casa. Carrollwood is a service area — our only address remains ${hq}, Tampa, FL 33626.`,
     ],
     callouts: [
       fenceCallout(
@@ -460,7 +460,7 @@ export const expansionLocations: TargetLocation[] = [
       },
       {
         question: "Is Temple Terrace its own Handyman Pros location?",
-        answer: `No. The only location is ${hq}, Apt 203, Tampa, FL 33626.`,
+        answer: `No. The only location is ${hq}, Tampa, FL 33626.`,
       },
     ],
   },
@@ -531,7 +531,7 @@ export const expansionLocations: TargetLocation[] = [
       },
       {
         question: "Do you have an office in Seminole?",
-        answer: `No. We drive from ${hq}, Apt 203, Tampa, FL 33626 in Westchase.`,
+        answer: `No. We drive from ${hq}, Tampa, FL 33626 in Westchase.`,
       },
       {
         question: "What Seminole jobs are most common?",

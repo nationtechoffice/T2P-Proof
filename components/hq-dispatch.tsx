@@ -19,7 +19,7 @@ export function HqDispatch({ area }: { area?: string }) {
       <p className="flex items-start gap-2 text-sm">
         <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(var(--accent))]" />
         <span>
-          {siteConfig.address.street}, {siteConfig.address.street2}, {siteConfig.address.city},{" "}
+          {siteConfig.address.street}, {siteConfig.address.city},{" "}
           {siteConfig.address.state} {siteConfig.address.zip}
         </span>
       </p>

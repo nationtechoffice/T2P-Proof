@@ -123,7 +123,7 @@ export function buildMetadata({
       "geo.placename": `${siteConfig.address.neighborhood}, ${siteConfig.address.city}`,
       "geo.position": `${siteConfig.geo.latitude};${siteConfig.geo.longitude}`,
       ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
-      "business:contact_data:street_address": `${siteConfig.address.street}, ${siteConfig.address.street2}`,
+      "business:contact_data:street_address": siteConfig.address.street,
       "business:contact_data:locality": siteConfig.address.city,
       "business:contact_data:region": siteConfig.address.state,
       "business:contact_data:postal_code": siteConfig.address.zip,

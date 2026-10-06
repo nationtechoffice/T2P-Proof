@@ -49,7 +49,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold">Business Address</p>
                     <address className="not-italic text-[hsl(var(--muted-foreground))]">
-                      {siteConfig.address.street}, {siteConfig.address.street2}<br />
+                      {siteConfig.address.street}<br />
                       {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}
                     </address>
                     <p className="mt-1 text-xs text-[hsl(var(--accent))]">Only location · Westchase / Tampa Bay</p>
