@@ -1,5 +1,3 @@
-"use client";
-
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { QuoteForm } from "@/components/quote-form";
 import { GoogleMapEmbed } from "@/components/google-map-embed";

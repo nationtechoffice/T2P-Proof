@@ -22,6 +22,15 @@ export const siteConfig = {
   primaryZip: "33626",
   themeAccent: "#FF7A00",
   foundingLocation: "Westchase, Tampa, FL",
+  owner: {
+    name: "Abdalah El Mohtar",
+    role: "Owner and founder",
+    /**
+     * Optional owner photo path under public/, such as "/images/owner-abdalah-el-mohtar.jpg".
+     * Leave null until a real photo is provided. Do not invent a headshot.
+     */
+    photo: null as string | null,
+  },
   address: {
     street: "12021 Tuscany Bay Dr",
     street2: "Apt 203",

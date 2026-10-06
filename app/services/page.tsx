@@ -71,7 +71,7 @@ export default function ServicesPage() {
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               {coreServices.map((service) => (
                 <Link key={service.slug} href={`/services/${service.slug}`} className="btn-secondary !py-2 !text-sm">
-                  {service.name} in Tampa
+                  {service.slug === "flooring-installation" ? "Flooring Installation & Repair" : `${service.name} in Tampa`}
                 </Link>
               ))}
             </div>

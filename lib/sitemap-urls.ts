@@ -8,6 +8,7 @@ import { locationAlternatePaths } from "./location-redirects";
 /** Legacy paths that 301 to a canonical URL — never list these in the sitemap. */
 const REDIRECTED_PATHS = [
   "/handyman-westchase-fl",
+  "/handyman-valrico-fl",
   "/handyman-oldsmar-fl",
   "/handyman-town-n-country-fl",
   "/handyman-plant-city-fl",
@@ -31,6 +32,8 @@ const REDIRECTED_PATHS = [
   "/services/handyman/flooring-repair",
   "/services/handyman/repair-flooring",
   "/services/repair-flooring",
+  "/services/handyman/paint-indoors",
+  "/services/paint-indoors",
   "/services/replace-flooring",
   "/services/flooring-replacement",
   "/services/handyman/replace-flooring",

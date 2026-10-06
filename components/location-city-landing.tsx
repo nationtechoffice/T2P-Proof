@@ -19,6 +19,7 @@ import {
   nearbyLocationLinks,
 } from "@/lib/internal-links";
 import { CheckCircle } from "lucide-react";
+import { GoogleReviews } from "@/components/google-reviews";
 import { JobSitePhoto } from "@/components/job-site-photo";
 import { jobSitePhotos } from "@/lib/images";
 import { gbpHubSlugSet } from "@/lib/gbp-city-hubs";
@@ -306,6 +307,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
           </div>
         </div>
       </article>
+      <GoogleReviews variant="compact" />
       <FAQSection faqs={location.faqs} title={`Handyman in ${location.city} FAQ`} />
     </>
   );

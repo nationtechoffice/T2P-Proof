@@ -32,6 +32,12 @@ const FLOORING_ALIAS_REDIRECTS: Record<string, string> = {
   "/services/handyman/flooring-replacement": FLOORING_CANONICAL,
 };
 
+const PAINTING_CANONICAL = "/services/handyman/interior-painting";
+const PAINTING_ALIAS_REDIRECTS: Record<string, string> = {
+  "/services/handyman/paint-indoors": PAINTING_CANONICAL,
+  "/services/paint-indoors": PAINTING_CANONICAL,
+};
+
 /** Gutter LSA/search aliases. 308 so caches and crawlers treat the canonical as permanent. */
 const GUTTER_CANONICAL = "/services/gutter-installation";
 const GUTTER_ALIAS_REDIRECTS: Record<string, string> = {
@@ -73,6 +79,13 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(url, 308);
   }
 
+  const paintingDestination = PAINTING_ALIAS_REDIRECTS[request.nextUrl.pathname];
+  if (paintingDestination) {
+    const url = request.nextUrl.clone();
+    url.pathname = paintingDestination;
+    return NextResponse.redirect(url, 308);
+  }
+
   const flooringDestination = FLOORING_ALIAS_REDIRECTS[request.nextUrl.pathname];
   if (flooringDestination) {
     const url = request.nextUrl.clone();
@@ -111,6 +124,8 @@ export const config = {
     "/services/handyman/flooring-repair",
     "/services/handyman/repair-flooring",
     "/services/repair-flooring",
+    "/services/handyman/paint-indoors",
+    "/services/paint-indoors",
     "/services/replace-flooring",
     "/services/flooring-replacement",
     "/services/handyman/replace-flooring",

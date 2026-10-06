@@ -61,6 +61,18 @@ export default function AboutPage() {
               <p>
                 From furniture assembly and drywall repair to interior painting and fence installation, we offer 60+ services and are open 24 hours a day, 7 days a week. Call {siteConfig.phone} anytime for a free estimate.
               </p>
+              <p>
+                <strong className="text-[hsl(var(--foreground))]">{siteConfig.owner.name}</strong> is the {siteConfig.owner.role.toLowerCase()} of Handyman Pros Florida. He leads the licensed, insured crew that answers {siteConfig.phone} from this Westchase address. Hablamos español.
+              </p>
+              {/* Owner photo: set siteConfig.owner.photo when a real headshot is available. */}
+              {siteConfig.owner.photo ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={siteConfig.owner.photo}
+                  alt={`${siteConfig.owner.name}, ${siteConfig.owner.role} of Handyman Pros Florida`}
+                  className="mt-4 h-40 w-40 rounded-2xl object-cover"
+                />
+              ) : null}
             </div>
             <div className="mt-8 flex items-start gap-3 rounded-xl border border-[hsl(var(--border))] bg-white/80 p-6">
               <MapPin className="mt-1 h-6 w-6 shrink-0 text-[hsl(var(--accent))]" />

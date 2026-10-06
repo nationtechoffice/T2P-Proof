@@ -21,42 +21,6 @@ export interface LocationSilo {
 
 export const locationSilos: LocationSilo[] = [
   {
-    slug: "valrico",
-    city: "Valrico",
-    displayName: "Valrico, FL",
-    path: "/handyman-valrico-fl",
-    eyebrow: "Valrico · Eastern Hillsborough",
-    h1: "Valrico Handyman Near Me for Assembly & Fan Install",
-    intro:
-      "Searching for a Valrico handyman near me? Handyman Pros FL handles furniture assembly, ceiling fan install projects, and practical home fixes across eastern Hillsborough.",
-    keywords: ["Valrico handyman near me", "furniture assembly", "ceiling fan install", "handyman Valrico FL"],
-    metaDescription:
-      "Valrico handyman near me for furniture assembly and ceiling fan install. Licensed Handyman Pros FL — call (656) 205-3185 anytime.",
-    mapQuery: "Valrico, FL",
-    mapTitle: "Google Map of Valrico, Florida",
-    services: [
-      "Furniture assembly (beds, desks, shelving)",
-      "Ceiling fan install & balancing",
-      "Picture, mirror, and TV mounting",
-      "Closet systems and garage hooks",
-      "Door closer and lock adjustments",
-      "General honey-do list completion",
-    ],
-    paragraphs: [
-      "A Valrico handyman near me search should connect you with someone who already works eastern Hillsborough regularly — not a random out-of-area lead. Handyman Pros FL routes through Valrico, Brandon, and Riverview often, which means faster arrival windows and familiarity with local home styles, garages, and lanai layouts.",
-      "Furniture assembly saves hours of frustration. Flat-pack beds, office desks, outdoor sets, and kids’ storage systems are assembled with the right tools and hardware checks so pieces sit square and stable. We recycle packaging on request and place finished items exactly where you want them.",
-      "Ceiling fan install work keeps Valrico rooms cooler through long Florida summers. We verify box support, make safe electrical connections, mount canopies cleanly, and balance blades to reduce wobble. Replacing an outdated fixture or adding a fan where a light already exists are both common requests we handle the same day when schedules allow.",
-      "Beyond assembly and fans, homeowners book us for mounting projects, closet upgrades, and small repairs that never make it onto a remodeler’s calendar. Call (656) 205-3185 — your Valrico handyman near me option that is licensed, insured, and open 24/7 for free estimates.",
-      "From a single ceiling fan install to a weekend furniture assembly marathon, Handyman Pros FL helps Valrico households finish the list and enjoy the home.",
-    ],
-    relatedPaths: [
-      { href: "/services/furniture-assembly", label: "Furniture Assembly Tampa" },
-      { href: "/locations/riverview", label: "Handyman Riverview FL" },
-      { href: "/locations/plant-city", label: "Handyman Plant City FL" },
-      { href: "/locations/brandon", label: "Handyman Brandon FL" },
-    ],
-  },
-  {
     slug: "seffner",
     city: "Seffner",
     displayName: "Seffner, FL",
@@ -88,7 +52,7 @@ export const locationSilos: LocationSilo[] = [
     relatedPaths: [
       { href: "/locations/plant-city", label: "Handyman Plant City FL" },
       { href: "/locations/brandon", label: "Handyman Brandon FL" },
-      { href: "/handyman-valrico-fl", label: "Handyman Valrico FL" },
+      { href: "/locations/valrico", label: "Handyman Valrico FL" },
     ],
   },
   {

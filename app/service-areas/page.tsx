@@ -27,7 +27,26 @@ export const metadata: Metadata = buildMetadata({
   ],
 });
 
+function cityKey(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, "");
+}
+
 export default function ServiceAreasPage() {
+  const seenCities = new Set<string>();
+  const uniqueHubs = targetLocations.filter((location) => {
+    const key = cityKey(location.city);
+    if (seenCities.has(key)) return false;
+    seenCities.add(key);
+    return true;
+  });
+  const extraAreas = allLocationLinks.filter((area) => {
+    if (targetLocations.some((location) => `/locations/${location.slug}` === area.href)) return false;
+    const key = cityKey(area.label);
+    if (seenCities.has(key)) return false;
+    seenCities.add(key);
+    return true;
+  });
+
   return (
     <>
       <JsonLd
@@ -60,7 +79,7 @@ export default function ServiceAreasPage() {
           <div className="mb-12">
             <h2 className="mb-6 text-center text-2xl font-bold">Our Florida Service Areas</h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {targetLocations.map((location) => (
+              {uniqueHubs.map((location) => (
                 <Link
                   key={location.slug}
                   href={`/locations/${location.slug}`}
@@ -77,9 +96,7 @@ export default function ServiceAreasPage() {
                   </div>
                 </Link>
               ))}
-              {allLocationLinks
-                .filter((area) => !targetLocations.some((location) => `/locations/${location.slug}` === area.href))
-                .map((area) => (
+              {extraAreas.map((area) => (
                 <Link
                   key={area.href}
                   href={area.href}

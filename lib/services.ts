@@ -73,16 +73,6 @@ const handymanServices: Omit<Service, "category">[] = [
     ],
   },
   {
-    slug: "flooring-repair",
-    name: "Flooring Repair",
-    shortDescription: "Licensed flooring repair for loose planks and water-damaged sections in Tampa Bay.",
-    description: "Restore damaged floors with licensed and insured flooring repair. We replace popped planks, water-damaged sections, and loose boards when the subfloor is sound across Tampa, Westchase, and Carrollwood.",
-    keywords: ["flooring repair Tampa", "LVP repair Westchase", "laminate floor repair"],
-    faqs: [
-      { question: "What types of flooring can you repair?", answer: "We repair LVP, vinyl plank, laminate, and wood sections for homes across Tampa, Westchase, Carrollwood, and surrounding Tampa Bay cities. The crew is licensed and insured. Whole-home floors and soft subfloors are quoted separately." },
-    ],
-  },
-  {
     slug: "furniture-assembly",
     name: "Furniture Assembly",
     shortDescription: "Licensed furniture assembly and in-home rearrangement in Tampa Bay.",
@@ -134,16 +124,6 @@ const handymanServices: Omit<Service, "category">[] = [
     ],
   },
   {
-    slug: "install-flooring",
-    name: "Install Flooring",
-    shortDescription: "Licensed LVP, laminate, and vinyl plank installation in Tampa and Westchase.",
-    description: "Install click-lock flooring with a licensed and insured handyman crew. We set LVP, laminate, and vinyl plank, plus wood sections, when the material is on site and the subfloor is sound.",
-    keywords: ["flooring installation Tampa", "LVP installation Westchase", "vinyl plank installation"],
-    faqs: [
-      { question: "What flooring types do you install?", answer: "We install click-lock LVP, vinyl plank, laminate, and wood sections. Ceramic and porcelain floor tile is a separate tile visit. We are licensed and insured." },
-    ],
-  },
-  {
     slug: "interior-painting",
     name: "Interior Painting",
     shortDescription: "Beautiful interior painting with clean, precise finishes.",
@@ -161,16 +141,6 @@ const handymanServices: Omit<Service, "category">[] = [
     keywords: ["moving help Florida", "loading unloading service", "move assistance handyman"],
     faqs: [
       { question: "Do you provide the moving truck?", answer: "We provide labor for loading, unloading, and furniture setup. Truck rental is arranged separately, and we're happy to recommend partners." },
-    ],
-  },
-  {
-    slug: "paint-indoors",
-    name: "Paint Indoors",
-    shortDescription: "Indoor painting for walls, ceilings, doors, and trim.",
-    description: "Our indoor painting specialists deliver flawless finishes for every interior surface. Low-VOC paints available for families and pet-friendly homes.",
-    keywords: ["indoor painting Florida", "wall painting service", "ceiling painting"],
-    faqs: [
-      { question: "Do you use low-VOC paint?", answer: "Yes, we offer low-VOC and zero-VOC paint options that are safe for children, pets, and sensitive individuals." },
     ],
   },
   {
@@ -201,16 +171,6 @@ const handymanServices: Omit<Service, "category">[] = [
     keywords: ["home remodeling Florida", "kitchen remodel", "bathroom renovation"],
     faqs: [
       { question: "Do you handle permits for remodeling?", answer: "Yes, we assist with permit applications and ensure all work meets Florida building codes." },
-    ],
-  },
-  {
-    slug: "repair-flooring",
-    name: "Repair Flooring",
-    shortDescription: "Licensed floor repair for popped planks, gaps, and squeaks on a sound subfloor.",
-    description: "Repair the section instead of replacing the room. Our licensed and insured crew resets popped planks, tightens loose boards, and replaces water-damaged pieces when the subfloor is still solid.",
-    keywords: ["floor repair Tampa", "squeaky floor repair", "replace flooring section"],
-    faqs: [
-      { question: "Can you fix squeaky hardwood floors?", answer: "Yes, when the squeak is a loose fastener or a board that has lifted. We secure it without damaging the finished flooring. A structural subfloor rebuild is quoted separately. The crew is licensed and insured." },
     ],
   },
   {

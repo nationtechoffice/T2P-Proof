@@ -27,7 +27,13 @@ export const LOCATION_HUB_COUNT = 29;
 const SITEMAP_FORBIDDEN_PATHS = [
   "/handyman-plant-city-fl",
   "/handyman-westchase-fl",
+  "/handyman-valrico-fl",
   "/locations/westchase",
+  "/services/handyman/paint-indoors",
+  "/services/paint-indoors",
+  "/services/handyman/flooring-repair",
+  "/services/handyman/install-flooring",
+  "/services/handyman/repair-flooring",
 ] as const;
 
 function isHttpUrl(value: string): boolean {
@@ -164,7 +170,7 @@ function escapeXml(value: string): string {
     .replace(/'/g, "&apos;");
 }
 
-/** Same URL set as the Next sitemap route, written for Hostinger's static file server. */
+/** Canonical URL set written to public/sitemap.xml for Hostinger's static file server. */
 export function renderSitemapXml(entries: MetadataRoute.Sitemap): string {
   const hasImages = entries.some((entry) => entry.images && entry.images.length > 0);
   const imageNs = hasImages ? ' xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"' : "";

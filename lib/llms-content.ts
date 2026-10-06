@@ -72,6 +72,7 @@ ${targetLocations
   .join("\n")}
 ${link("Handyman services", "/services/handyman", "Core handyman repairs dispatched from Tampa HQ.")}
 ${link("Painting services", "/services/painting", "Interior and exterior painting for Tampa Bay homes.")}
+${link("Interior painting", "/services/handyman/interior-painting", "Interior painting for walls, ceilings, and trim. /services/handyman/paint-indoors 308s here.")}
 ${link("Fence handyman", "/services/fence-handyman", "Fence handyman and fencing handyman repair: boards, gates, and short matching sections. Not a fencing-contractor rebrand.")}
 ${link("Fence service list", "/services/fence", "Material-specific fence pages from the same Tampa handyman crew.")}
 ${link("Service areas", "/service-areas", "Cities covered from the one Tampa location.")}
@@ -132,6 +133,7 @@ export function getLlmsFullTxt(): string {
         "flooring-repair",
         "install-flooring",
         "repair-flooring",
+        "paint-indoors",
         "gutter-cleaning",
       ]);
       const items = allServices
