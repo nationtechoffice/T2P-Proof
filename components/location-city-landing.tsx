@@ -73,6 +73,15 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
           },
         ]}
       />
+      {location.slug === "westchase-fl" ? (
+        <div className="container-site pb-1">
+          <PhoneEstimateCta
+            className="w-full sm:w-auto"
+            label={`Call ${siteConfig.phone}`}
+            phoneTel={siteConfig.phoneE164}
+          />
+        </div>
+      ) : null}
       <Breadcrumbs
         items={[
           { label: "Locations", href: "/locations" },
@@ -86,13 +95,6 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               Instant Phone Estimates · {location.county}
             </p>
             <h1 className="mb-4 text-4xl font-bold">{serviceH1("Handyman", location.city)}</h1>
-            {location.slug === "westchase-fl" ? (
-              <PhoneEstimateCta
-                className="mb-4 w-full sm:w-auto"
-                label={`Call ${siteConfig.phone}`}
-                phoneTel={siteConfig.phoneE164}
-              />
-            ) : null}
             <p className="mb-4 text-xl font-semibold text-[hsl(var(--primary))]">{instantEstimate.heroHeadline}</p>
             <p className="mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">{location.intro}</p>
             <div className="mb-6">
