@@ -26,9 +26,16 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
   const pageUrl = `${siteConfig.url}/locations/${location.slug}`;
   const nearby = nearbyLocationLinks(location.slug);
   const cityJobPhotos =
-    location.slug === "tampa"
-      ? [jobSitePhotos.blindsInstallBrandedBack, jobSitePhotos.windowWorkBrandedShirt]
-      : [jobSitePhotos.windowWorkBrandedShirt];
+    location.slug === "westchase-fl"
+      ? [
+          jobSitePhotos.blindsInstallBrandedBack,
+          jobSitePhotos.blindsHardwareDrillProfile,
+          jobSitePhotos.windowWorkBrandedShirt,
+          jobSitePhotos.blindsInstallBrandedReach,
+        ]
+      : location.slug === "tampa"
+        ? [jobSitePhotos.blindsInstallBrandedBack, jobSitePhotos.windowWorkBrandedShirt]
+        : [jobSitePhotos.windowWorkBrandedShirt];
 
   return (
     <>
@@ -66,6 +73,15 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
           },
         ]}
       />
+      {location.slug === "westchase-fl" ? (
+        <div className="container-site pb-1">
+          <PhoneEstimateCta
+            className="w-full sm:w-auto"
+            label={`Call ${siteConfig.phone}`}
+            phoneTel={siteConfig.phoneE164}
+          />
+        </div>
+      ) : null}
       <Breadcrumbs
         items={[
           { label: "Locations", href: "/locations" },
@@ -166,8 +182,11 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                 </p>
               ) : null}
             </div>
+            {location.slug === "westchase-fl" ? (
+              <h2 className="mt-8 text-lg font-bold">Recent blinds and window work</h2>
+            ) : null}
             <ul
-              className={`my-8 grid gap-4 ${cityJobPhotos.length > 1 ? "sm:grid-cols-2" : "max-w-sm"}`}
+              className={`${location.slug === "westchase-fl" ? "mb-8 mt-3" : "my-8"} grid gap-4 ${cityJobPhotos.length > 1 ? "sm:grid-cols-2" : "max-w-sm"}`}
             >
               {cityJobPhotos.map((photo) => (
                 <li key={photo.slug}>

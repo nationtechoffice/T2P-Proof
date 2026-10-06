@@ -67,6 +67,7 @@ const REDIRECTED_PATHS = [
   "/services/same-day",
   "/same-day",
   "/same-day-handyman",
+  "/locations/westchase",
   "/locations/tampa-fl",
   "/locations/clearwater-fl",
   "/locations/st-petersburg-fl",
