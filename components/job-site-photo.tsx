@@ -1,4 +1,14 @@
-import type { JobSitePhoto as JobSitePhotoData } from "@/lib/images";
+/** Fields the picture element actually reads. City hubs and the Oct 5 set both satisfy this. */
+type JobPhotoSource = {
+  avif: string;
+  thumb: string;
+  thumbWidth: number;
+  webp: string;
+  width: number;
+  jpg: string;
+  alt: string;
+  height: number;
+};
 
 /** AVIF, then a sized WebP, then the JPG. Width and height reserve the portrait frame. */
 export function JobSitePhoto({
@@ -6,7 +16,7 @@ export function JobSitePhoto({
   sizes = "(max-width: 640px) 100vw, 360px",
   className = "",
 }: {
-  photo: JobSitePhotoData;
+  photo: JobPhotoSource;
   sizes?: string;
   className?: string;
 }) {

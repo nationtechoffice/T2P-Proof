@@ -1,6 +1,7 @@
 import { siteConfig } from "./site-config";
 import { serviceDescription, serviceTitle } from "./instant-estimate";
 import { expansionLocations, fenceHandymanService } from "./tampa-bay-expansion";
+import { gbpCityHubs } from "./gbp-city-hubs";
 import { tampaLocationSpots } from "./tampa-neighborhoods";
 
 export const schemaAreaServed = [
@@ -540,33 +541,6 @@ export const coreServices: CoreService[] = [
   fenceHandymanService,
 ];
 
-function locationCopy(
-  city: string,
-  county: string,
-  neighborhoods: string[]
-): Pick<TargetLocation, "intro" | "paragraphs" | "faqs"> {
-  const nearby = neighborhoods.slice(0, 3).join(", ");
-  return {
-    intro: `Need a fast, reliable handyman in ${city}, FL? Handyman Pros FL dispatches from one Westchase, Tampa headquarters for TV wall mounting, drywall repair, fixtures, furniture assembly, and door repair.`,
-    paragraphs: [
-      `Handyman work in ${city} should not mean a franchise call center. Our technicians leave ${siteConfig.address.street} in Westchase and drive to ${city} with tools on the truck. ${county} homes see the same humidity, stucco, and HOA punch lists we handle every day in Tampa.`,
-      `Popular ${city} jobs include TV wall mounting, drywall repair, electrical fixture installation, plumbing fixture repair, furniture assembly, and door repair. Neighbors around ${nearby} often bundle a honey-do list into one visit.`,
-      `${city} is a service area — not a second branch. You get one phone number, one NAP, and the same licensed crew that serves Tampa Bay.`,
-      `Call ${siteConfig.phone} or submit the instant quote form. We answer 24/7 for ${city} estimates.`,
-    ],
-    faqs: [
-      {
-        question: `Do you have a handyman office in ${city}?`,
-        answer: `No. Handyman Pros FL has one Tampa location in Westchase. ${city} is a service area we drive to. That keeps Google listings and reviews on a single NAP.`,
-      },
-      {
-        question: `How soon can a handyman get to ${city}?`,
-        answer: `Because we already route through Tampa Bay daily, same-week and often same-day visits are available for ${city}. Call ${siteConfig.phone} for the next window.`,
-      },
-    ],
-  };
-}
-
 export const targetLocations: TargetLocation[] = [
   {
     slug: "tampa",
@@ -600,60 +574,7 @@ export const targetLocations: TargetLocation[] = [
       },
     ],
   },
-  {
-    slug: "clearwater",
-    city: "Clearwater",
-    displayName: "Clearwater, FL",
-    county: "Pinellas County",
-    zipHint: "33755–33767",
-    neighborhoods: ["Clearwater Beach", "Coachman", "Countryside", "Downtown Clearwater"],
-    intro:
-      "Need Handyman Services Clearwater homeowners can trust? Handyman Pros FL delivers home repair Clearwater FL — TV mounting, drywall, doors, fixtures, and furniture assembly — dispatched from Tampa / Westchase.",
-    paragraphs: [
-      "Handyman Services Clearwater should feel local even when the truck starts in Westchase. Pinellas County beach and mainland homes deal with salt air, sliding doors, and vacation-rental turnovers. We bring the right anchors, weatherstrip, and exterior-rated hardware for home repair Clearwater FL jobs that last through humid summers.",
-      "Popular Clearwater requests include TV wall mounting near Coachman and Countryside, drywall patches after renovations, sticky patio doors on Clearwater Beach condos, and furniture assembly for seasonal rentals. Neighbors often bundle a honey-do list into one visit.",
-      "Clearwater is a Pinellas service area — not a second office. You get one phone number, one Google listing, and the same licensed crew that serves Tampa Bay.",
-      `Call ${siteConfig.phone} for Handyman Services Clearwater and home repair Clearwater FL estimates anytime — we answer 24/7.`,
-    ],
-    faqs: [
-      {
-        question: "Do you provide Handyman Services Clearwater same week?",
-        answer: `Yes. We route through Pinellas regularly, so Handyman Services Clearwater and home repair Clearwater FL visits are often same-week and sometimes same-day. Call ${siteConfig.phone}.`,
-      },
-      {
-        question: "Is there a Clearwater handyman office?",
-        answer:
-          "No. Handyman Pros FL has one Tampa / Westchase headquarters. Clearwater is a service area we drive to, which keeps reviews and NAP data on a single Google Business Profile.",
-      },
-    ],
-  },
-  {
-    slug: "st-petersburg",
-    city: "St. Petersburg",
-    displayName: "St. Petersburg, FL",
-    county: "Pinellas County",
-    zipHint: "33701–33716",
-    neighborhoods: ["Downtown St. Pete", "Snell Isle", "Kenwood", "Northeast Park", "Tyrone"],
-    intro:
-      "Need a St. Pete Handyman who shows up ready? Handyman Pros FL is the local carpenter St. Petersburg FL homeowners call for TV mounts, drywall, doors, trim, and fixture work.",
-    paragraphs: [
-      "St. Pete Handyman searches often mean bungalows in Kenwood, condos downtown, and waterfront homes in Snell Isle — each with different wall types and humidity challenges. As your local carpenter St. Petersburg FL option, we hang doors true, patch plaster-adjacent drywall, and mount TVs into real structure.",
-      "Downtown and Northeast Park punch lists pile up fast: sticky millwork, uneven floors under new furniture, and rental turnover repairs. We keep estimates honest and scope clear so a St. Pete Handyman visit finishes the list instead of creating callbacks.",
-      "St. Petersburg is a Pinellas service area served from our only Westchase / Tampa headquarters. One NAP, one review profile, one crew.",
-      `Call ${siteConfig.phone} for a St. Pete Handyman or local carpenter St. Petersburg FL estimate — instant phone quotes 24/7.`,
-    ],
-    faqs: [
-      {
-        question: "Can I get a St. Pete Handyman same-day?",
-        answer: `When our Pinellas route has capacity, yes. Call ${siteConfig.phone} for the next St. Pete Handyman window.`,
-      },
-      {
-        question: "Do you do trim and carpentry in St. Petersburg?",
-        answer:
-          "Yes. As a local carpenter St. Petersburg FL crews trust for punch-list work, we handle trim repairs, door planing, shelf installs, and related handyman carpentry — not full custom millwork shops.",
-      },
-    ],
-  },
+  ...gbpCityHubs.filter((hub) => hub.slug === "clearwater" || hub.slug === "st-petersburg"),
   {
     slug: "westchase-fl",
     city: "Westchase",
@@ -680,100 +601,7 @@ export const targetLocations: TargetLocation[] = [
       },
     ],
   },
-  {
-    slug: "palm-harbor-fl",
-    city: "Palm Harbor",
-    displayName: "Palm Harbor, FL",
-    county: "Pinellas County",
-    zipHint: "34683–34685",
-    neighborhoods: ["Ozona", "Crystal Beach", "Highland Lakes"],
-    ...locationCopy("Palm Harbor", "Pinellas County", ["Ozona", "Crystal Beach", "Highland Lakes"]),
-  },
-  {
-    slug: "oldsmar-fl",
-    city: "Oldsmar",
-    displayName: "Oldsmar, FL",
-    county: "Pinellas / Hillsborough",
-    zipHint: "34677",
-    neighborhoods: ["East Lake Woodlands", "Shoreview", "Westchase"],
-    intro:
-      "Need Oldsmar FL handyman services for TV mounts, bracket work, and deck maintenance? Licensed, insured Handyman Pros FL dispatches from Westchase across the Hillsborough–Pinellas line into ZIP 34677.",
-    paragraphs: [
-      `Oldsmar sits between our Westchase headquarters and the Pinellas coast — East Lake Woodlands, Shoreview, and the State Road 580 corridor. Technicians leave ${siteConfig.address.street} with a stocked truck for bracket mounting, deck hardware, drywall, doors, and fixture work. Oldsmar is a service area, not a second office: one phone number, one NAP, the same licensed crew.`,
-      "Bracket mounting is a frequent Oldsmar request: TVs and soundbars, garage track systems, pantry organizers, and shelves. We locate studs or use rated anchors, keep lines level, and conceal cords when the wall and code allow. Clean mounting is one of the fastest ways to finish a room after a move or remodel.",
-      "Deck maintenance keeps Tampa Bay outdoor living safe. We tighten loose rails, replace individual boards when feasible, secure popped fasteners, and advise on sealing timelines for Florida sun and rain. If a joist or post looks structural, we document it instead of hiding the problem.",
-      `Call ${siteConfig.phone} 24/7 for Oldsmar FL handyman services. Same-week and often same-day windows are common because Oldsmar is the next hop from Westchase — we also continue to Safety Harbor, Palm Harbor, Town 'N' Country, and Citrus Park on the same route.`,
-    ],
-    faqs: [
-      {
-        question: "Do you have a handyman office in Oldsmar?",
-        answer: `No. Handyman Pros FL has one Tampa location at ${siteConfig.address.street}, Apt 203, Tampa, FL 33626 (Westchase). Oldsmar ZIP 34677 is a service area we drive to so reviews and listings stay on a single NAP.`,
-      },
-      {
-        question: "How soon can a handyman get to Oldsmar, FL?",
-        answer: `Oldsmar is next to Westchase, so same-week and often same-day visits are common. Call ${siteConfig.phone} for the next window on TV mounts, deck hardware, or a mixed punch list.`,
-      },
-      {
-        question: "What Oldsmar jobs do you handle most?",
-        answer:
-          "TV and bracket mounting, deck rail and board maintenance, drywall patches, door and screen repairs, fixture installs, and outdoor furniture assembly. Licensed and insured for indoor and outdoor handyman scope.",
-      },
-    ],
-  },
-  {
-    slug: "dunedin-fl",
-    city: "Dunedin",
-    displayName: "Dunedin, FL",
-    county: "Pinellas County",
-    zipHint: "34698",
-    neighborhoods: ["Downtown Dunedin", "Scottish Highlands", "Clearwater border"],
-    ...locationCopy("Dunedin", "Pinellas County", ["Downtown Dunedin", "Scottish Highlands"]),
-  },
-  {
-    slug: "town-n-country-fl",
-    city: "Town 'N' Country",
-    displayName: "Town 'N' Country, FL",
-    county: "Hillsborough County",
-    zipHint: "33615",
-    neighborhoods: ["Rocky Creek", "Webb Road corridor", "West Tampa"],
-    ...locationCopy("Town 'N' Country", "Hillsborough County", ["Rocky Creek", "West Tampa"]),
-  },
-  {
-    slug: "citrus-park-fl",
-    city: "Citrus Park",
-    displayName: "Citrus Park, FL",
-    county: "Hillsborough County",
-    zipHint: "33625",
-    neighborhoods: ["Citrus Park mall area", "Westchase", "Carrollwood"],
-    ...locationCopy("Citrus Park", "Hillsborough County", ["Westchase", "Carrollwood"]),
-  },
-  {
-    slug: "safety-harbor-fl",
-    city: "Safety Harbor",
-    displayName: "Safety Harbor, FL",
-    county: "Pinellas County",
-    zipHint: "34695",
-    neighborhoods: ["Downtown Safety Harbor", "Oldsmar border", "Clearwater"],
-    ...locationCopy("Safety Harbor", "Pinellas County", ["Downtown Safety Harbor", "Oldsmar"]),
-  },
-  {
-    slug: "tarpon-springs-fl",
-    city: "Tarpon Springs",
-    displayName: "Tarpon Springs, FL",
-    county: "Pinellas County",
-    zipHint: "34689",
-    neighborhoods: ["Sponge Docks", "Lake Tarpon", "Palm Harbor"],
-    ...locationCopy("Tarpon Springs", "Pinellas County", ["Sponge Docks", "Palm Harbor"]),
-  },
-  {
-    slug: "new-port-richey-fl",
-    city: "New Port Richey",
-    displayName: "New Port Richey, FL",
-    county: "Pasco County",
-    zipHint: "34652–34655",
-    neighborhoods: ["Downtown NPR", "Trinity", "Holiday"],
-    ...locationCopy("New Port Richey", "Pasco County", ["Downtown NPR", "Trinity"]),
-  },
+  ...gbpCityHubs.filter((hub) => hub.slug !== "clearwater" && hub.slug !== "st-petersburg"),
   ...expansionLocations,
 ];
 
@@ -796,16 +624,31 @@ export function hrefForAreaName(name: string): string | undefined {
     "st. petersburg": "st-petersburg",
     "saint petersburg": "st-petersburg",
     "palm harbor": "palm-harbor-fl",
+    ozona: "palm-harbor-fl",
+    "crystal beach": "palm-harbor-fl",
     oldsmar: "oldsmar-fl",
     "oldsmar border": "oldsmar-fl",
     "east lake woodlands": "oldsmar-fl",
     shoreview: "oldsmar-fl",
+    "west oldsmar": "oldsmar-fl",
     dunedin: "dunedin-fl",
+    "downtown dunedin": "dunedin-fl",
     "town n country": "town-n-country-fl",
     "citrus park": "citrus-park-fl",
+    "citrus park town center": "citrus-park-fl",
     "safety harbor": "safety-harbor-fl",
+    "downtown safety harbor": "safety-harbor-fl",
     "tarpon springs": "tarpon-springs-fl",
+    "sponge docks": "tarpon-springs-fl",
     "new port richey": "new-port-richey-fl",
+    "downtown new port richey": "new-port-richey-fl",
+    "gulf harbors": "new-port-richey-fl",
+    holiday: "holiday",
+    "holiday lake": "holiday",
+    anclote: "holiday",
+    keystone: "keystone",
+    "lake keystone": "keystone",
+    "brooker creek": "keystone",
     "south tampa": "tampa",
     "seminole heights": "tampa",
     "new tampa": "tampa",
