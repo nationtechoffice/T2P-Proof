@@ -20,6 +20,7 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["Clearwater Beach", "Island Estates", "Coachman", "Countryside", "Downtown Clearwater"],
     intro:
       "Need a licensed Clearwater handyman for sliders, drywall, and TV mounts? Handyman Pros FL serves the beach, Coachman, and Countryside from one Westchase headquarters. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Clearwater with handyman repairs for sliding doors, drywall patches, TV mounts, and fixture swaps. Crews leave the only Westchase headquarters for Clearwater Beach, Island Estates, Coachman, and Countryside. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Clearwater splits into two kinds of houses. Clearwater Beach and Island Estates are condos and low-rise buildings where salt air swells sliding doors and balcony hardware. Coachman and Countryside are mainland neighborhoods of single-family homes with the usual Florida stucco, lanais, and interior drywall.",
       "Beach visits are often a slider that will not lock, a drywall scar inside a rental, or a TV that has to sit level on a concrete or block wall. Mainland lists add ceiling fans at an existing box, fixture swaps, and a punch list before guests arrive. We do not run new circuits or open walls for new wiring.",
@@ -63,6 +64,7 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["Downtown St. Pete", "Kenwood", "Old Northeast", "Snell Isle", "Tyrone"],
     intro:
       "Need a licensed St. Petersburg handyman for bungalow walls, TV mounts, and doors? Handyman Pros FL works Kenwood, downtown, and Snell Isle from Westchase. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves St. Petersburg with handyman repairs for Kenwood walls, downtown condo TV mounts, and doors in older bungalows. Snell Isle and Tyrone are on the same Pinellas route from the Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "St. Petersburg housing changes block by block. Kenwood and Old Northeast are older wood-frame bungalows and masonry houses where a small hole still has to disappear into plaster or older drywall. Downtown and the waterfront are more condos. Tyrone is later single-family stock along the west side.",
       "The useful visits are practical: hang a TV into real structure, patch a wall so it can take paint, plane a door that sticks after rain, and reset trim that has pulled. We are a handyman crew, not a restoration shop for historic millwork.",
@@ -106,6 +108,7 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["Downtown Palm Harbor", "Ozona", "Crystal Beach", "Highland Lakes", "East Lake"],
     intro:
       "Need a licensed Palm Harbor handyman for TV mounts, drywall, and fence boards? Handyman Pros FL serves Ozona, East Lake, and Highland Lakes from Westchase. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Palm Harbor with handyman repairs for TV mounts, drywall patches, and fence boards in Ozona, East Lake, and Highland Lakes. Crystal Beach is on that same north Pinellas drive from Westchase. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Palm Harbor is two eras of houses. Ozona and the downtown streets are older cottages and block homes near the water. East Lake and Highland Lakes are later subdivisions with HOA fences, lanais, and drywall that shows every furniture ding.",
       "Ozona calls are often a door, a soft exterior board, or a TV on a mixed wall. East Lake calls stack a fan at an existing box, a drywall patch, and a privacy-fence board after wind. We repair the section that failed. A whole-yard fence is a larger quote.",
@@ -149,6 +152,7 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["East Lake Woodlands", "Shoreview", "West Oldsmar", "Tampa Road"],
     intro:
       "Need a licensed Oldsmar handyman for tile patches, doors, and TV mounts? ZIP 34677 is the next hop west from our Westchase headquarters. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Oldsmar with handyman repairs for tile patches, doors, and TV mounts in ZIP 34677. East Lake Woodlands, Shoreview, and West Oldsmar are the next hop west from the Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Oldsmar sits on Tampa Road between Westchase and the rest of Pinellas. East Lake Woodlands and Shoreview are golf-course and subdivision houses. West Oldsmar and the SR 580 corridor mix older block homes with small commercial streets.",
       "Because the drive is short, lists here are often mixed: a tile or LVP patch, a door that swells, a TV or shelf that has to be level, and deck or lanai hardware that loosened. We repair the section. We do not rebuild a soft subfloor or a failed deck frame.",
@@ -192,6 +196,7 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["Downtown Dunedin", "Edgewater Drive", "Victoria Drive", "Curlew"],
     intro:
       "Need a licensed Dunedin handyman for furniture assembly, fixtures, and doors? Handyman Pros FL serves downtown and the Edgewater streets from Westchase. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Dunedin with handyman repairs for furniture assembly, fixture swaps, and doors downtown and along Edgewater. Victoria Drive and Curlew are on the same mid-Pinellas route from Westchase. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Downtown Dunedin is a walkable Main Street with cottages and small lots just off the water. Edgewater Drive and the nearby streets are older houses where hardware and doors feel the humidity. Farther east, Curlew and the Clearwater border are more suburban.",
       "Assembly work shows up after a move into those cottages: beds, shelves, and outdoor sets that have to sit square on floors that are not perfectly flat. Fixture swaps and a door that rubs are the usual add-ons. We do not provide a moving truck.",
@@ -235,6 +240,7 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["Downtown Safety Harbor", "Main Street", "Philippe Park area", "Oldsmar border"],
     intro:
       "Need a licensed Safety Harbor handyman for doors, ceiling fans, and punch lists? Handyman Pros FL serves Main Street and the Philippe Park side from Westchase. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Safety Harbor with handyman repairs for sticking doors, ceiling fans, and short punch lists near Main Street and Philippe Park. The Oldsmar border is on the same drive from Westchase. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Safety Harbor is a small waterfront town on the bay. Downtown Main Street and the streets toward Philippe Park are older cottages and block houses. The Oldsmar border is a short drive back toward our headquarters.",
       "The lists fit a handyman visit: a door that sticks after a wet week, a ceiling fan wobbling at an existing box, drywall from a moved piece of furniture, and a short punch list before company arrives. New wiring and panel work stay with an electrician.",
@@ -278,6 +284,7 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["Sponge Docks", "Downtown Tarpon Springs", "East Lake", "Lake Tarpon"],
     intro:
       "Need a licensed Tarpon Springs handyman for fence boards and exterior wood? Handyman Pros FL serves the Sponge Docks side and East Lake from Westchase. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Tarpon Springs with handyman repairs for fence boards, gates, and exterior wood near the Sponge Docks and Lake Tarpon. Downtown and East Lake are on the same route from Westchase. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Tarpon Springs has a historic downtown and the Sponge Docks by the Anclote River, plus newer houses east toward Lake Tarpon and East Lake. Humidity and sun wear exterior wood, gates, and the bottom of fence boards first.",
       "A fence handyman visit here is the failed section: cupped pickets, a gate that drags, a short run you already matched. Waterfront and older downtown houses also need doors and trim that actually close. We do not rebuild a seawall or a whole property fence in one handyman stop.",
@@ -321,6 +328,7 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["US-19 corridor", "Holiday Lake", "Anclote", "Gulf Trace"],
     intro:
       "Need a licensed Holiday FL handyman for doors, gutters, and fence patches? Holiday is a Pasco service area on US-19, dispatched from Westchase. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Holiday with handyman repairs for doors, gutters, and fence patches along US-19. Holiday Lake, Anclote, and Gulf Trace are older Pasco blocks dispatched from the Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Holiday is unincorporated Pasco between Tarpon Springs and New Port Richey. Houses along US-19, Holiday Lake, and the Anclote side are often older concrete-block ranches on low lots, with carports, short fence runs, and gutters that clog after oak debris and hard rain.",
       "The handyman list is doors that stick, a gutter section that dumps at the slab, a fence panel that leaned, and drywall inside after a leak is already dry. We do not treat an active roof leak as a paint-over. If water is still coming in, that gets named before we patch.",
@@ -364,6 +372,7 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["Downtown New Port Richey", "Sims Park", "Gulf Harbors", "Jasmine Estates"],
     intro:
       "Need a licensed New Port Richey handyman for gutters, fence patches, and doors? Handyman Pros FL serves downtown and Gulf Harbors from Westchase. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves New Port Richey with handyman repairs for gutters, fence patches, and doors downtown and in Gulf Harbors. Jasmine Estates is on the same Pasco route from Westchase, scheduled by window rather than same-hour. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "New Port Richey mixes a small downtown around Sims Park and Main Street with canal homes in Gulf Harbors and older neighborhoods such as Jasmine Estates. Salt air and afternoon rain show up as gutters that overflow, gates that drop, and doors that swell.",
       "We reseat gutter sections, patch fence boards, and adjust doors when the frame is still sound. Canal-front houses get the same scope as inland ones. We are not a marine contractor, and we do not rebuild seawalls.",
@@ -407,6 +416,7 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["Gunn Highway", "Lake Keystone", "Brooker Creek", "North Mobley Road"],
     intro:
       "Need a licensed Keystone handyman for fence sections, fans, and drywall on larger lots? Keystone is northwest Hillsborough, dispatched from Westchase. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Keystone with handyman repairs for fence sections, ceiling fans, and drywall on larger Gunn Highway lots near Lake Keystone. Brooker Creek and North Mobley are on that northwest Hillsborough drive from Westchase. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Keystone is unincorporated Hillsborough along Gunn Highway, near Lake Keystone and Brooker Creek Preserve. Lots are larger than in Citrus Park, with oaks, long driveways, and fences that fail one section at a time instead of one shared wall.",
       "The work that fits is a fence board or gate, a ceiling fan at an existing box, drywall inside the house, and a door that no longer latches. We do not treat acreage as a reason to invent a second crew. The same Westchase truck comes north.",
@@ -450,6 +460,7 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["Citrus Park Town Center", "Gunn Highway", "Veterans Expressway", "Ehrlich Road"],
     intro:
       "Need a licensed Citrus Park handyman for ceiling fans, doors, and TV mounts? The mall area and Gunn Highway are a short drive from our Westchase headquarters. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Citrus Park with handyman repairs for ceiling fans, doors, and TV mounts near the Town Center mall, Gunn Highway, and Ehrlich Road. The crew leaves the nearby Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Citrus Park grew around the Town Center mall, Gunn Highway, and the Veterans Expressway. The houses are mostly later subdivisions and townhomes, with ceiling fans, interior doors, and drywall that take the wear of family use.",
       "A typical stop is a fan that wobbles at an existing box, a bedroom door that will not latch, and a TV mount in a living room. Ehrlich Road and the streets between the mall and Westchase are close enough that a short punch list can share one visit.",
@@ -493,6 +504,7 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["Hillsborough Avenue", "Waters Avenue", "Memorial Highway", "Rocky Creek"],
     intro:
       "Need a licensed Town 'N' Country handyman for fans, fixture swaps, and drywall? Hillsborough Avenue and Waters Avenue are close to our Westchase headquarters. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Town 'N' Country with handyman repairs for ceiling fans, fixture swaps, and drywall along Hillsborough Avenue, Waters Avenue, and Memorial Highway. Rocky Creek is a short trip from the Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Town 'N' Country is an unincorporated Hillsborough community west of Tampa, along Hillsborough Avenue, Waters Avenue, and Memorial Highway. Many houses are older block ranches and townhomes with carports, original fans, and drywall that has been patched more than once.",
       "Fixture swaps and fan replacements at an existing box are the common call, plus a door, a drywall scar, and a shelf that has to be level. Rocky Creek and the streets toward Westchase are a short trip, so a modest list does not need a second appointment when the parts match.",
