@@ -5,6 +5,17 @@ import { formatFullAddress } from "./local-seo";
 import { siteConfig } from "./site-config";
 import { blogPosts } from "./blog-posts";
 
+const locationNotes: Record<string, string> = {
+  "plant-city":
+    "East Hillsborough service area for downtown doors, rotten wood, Walden Lake fence boards, and acreage fence sections. Not a second office.",
+  valrico:
+    "East Hillsborough service area for window screens, doors, and drywall in Fish Hawk and Sydney. A recent visit replaced 7 window screens. Not a second office.",
+  "apollo-beach":
+    "South Hillsborough service area for flooring, doors, and drywall in MiraBay and Symphony Isles. A recent visit was a flooring job. Not a second office.",
+  gulfport:
+    "South Pinellas service area for ceiling fans, doors, and drywall near the waterfront and 49th Street. A recent visit was a ceiling fan installation. Not a second office.",
+};
+
 function link(title: string, path: string, note: string): string {
   const url = path.startsWith("http") ? path : `${siteConfig.url}${path}`;
   return `- [${title}](${url}): ${note}`;
@@ -55,9 +66,7 @@ ${targetLocations
     link(
       `Handyman ${location.city} FL`,
       `/locations/${location.slug}`,
-      location.slug === "plant-city"
-        ? "East Hillsborough service area for downtown doors, rotten wood, Walden Lake fence boards, and acreage fence sections. Not a second office."
-        : `Service area in ${location.displayName}.`
+      locationNotes[location.slug] ?? `Service area in ${location.displayName}.`
     )
   )
   .join("\n")}
@@ -142,9 +151,11 @@ export function getLlmsFullTxt(): string {
     .join("\n");
 
   const areas = [
-    ...targetLocations.map(
-      (location) => `- [${location.city}](${siteConfig.url}/locations/${location.slug})`
-    ),
+    ...targetLocations.map((location) => {
+      const note = locationNotes[location.slug];
+      const href = `${siteConfig.url}/locations/${location.slug}`;
+      return note ? `- [${location.city}](${href}): ${note}` : `- [${location.city}](${href})`;
+    }),
     ...allLocationLinks
       .filter((area) => !targetLocations.some((location) => `/locations/${location.slug}` === area.href))
       .map((area) => `- [${area.label}](${siteConfig.url}${area.href})`),

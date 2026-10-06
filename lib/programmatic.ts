@@ -29,6 +29,9 @@ export const schemaAreaServed = [
     "Seminole, FL",
     "Pinellas Park, FL",
     "Spring Hill, FL",
+    "Valrico, FL",
+    "Apollo Beach, FL",
+    "Gulfport, FL",
     "Hillsborough County, FL",
     "Pinellas County, FL",
     "Pasco County, FL",
@@ -668,6 +671,10 @@ export function hrefForAreaName(name: string): string | undefined {
     seminole: "seminole",
     "pinellas park": "pinellas-park",
     "spring hill": "spring-hill",
+    valrico: "valrico",
+    "fish hawk": "valrico",
+    "apollo beach": "apollo-beach",
+    gulfport: "gulfport",
     largo: "largo",
   };
   if (normalized === "wesley chapel") return "/locations/wesley-chapel";

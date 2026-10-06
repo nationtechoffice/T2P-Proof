@@ -196,6 +196,21 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     title: "Handyman Holiday FL | Licensed Gutter & Door",
     description: "Licensed & insured Holiday FL handyman for doors, gutters, and fence patches on US-19. Hablamos español. Dispatched from Westchase. Call (656) 205-3185.",
   },
+  "/locations/valrico": {
+    title: "Handyman Valrico FL | Window Screens & Doors",
+    description:
+      "Licensed & insured Valrico handyman for window screens, doors, and drywall in Fish Hawk and Sydney. Replaced 7 screens. Hablamos español. Call (656) 205-3185.",
+  },
+  "/locations/apollo-beach": {
+    title: "Handyman Apollo Beach FL | Flooring & Doors",
+    description:
+      "Licensed & insured Apollo Beach handyman for flooring, doors, and drywall in MiraBay. A recent visit was a flooring job. Hablamos español. Call (656) 205-3185.",
+  },
+  "/locations/gulfport": {
+    title: "Handyman Gulfport FL | Ceiling Fan Install",
+    description:
+      "Licensed & insured Gulfport handyman for ceiling fan installation, doors, and drywall near the waterfront, 49th Street. Hablamos español. Call (656) 205-3185.",
+  },
   "/locations/keystone": {
     title: "Handyman Keystone FL | Licensed Fence Repair",
     description: "Licensed & insured Keystone handyman for fence sections, fans, and drywall on Gunn Highway lots. Hablamos español. From Westchase HQ. Call (656) 205-3185.",

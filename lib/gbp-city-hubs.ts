@@ -7,8 +7,9 @@ const hq = `${siteConfig.address.street}, Apt 203, Tampa, FL 33626`;
 /**
  * Google Business Profile service areas.
  * Slugs follow the hub that already exists: Clearwater and St. Petersburg have no -fl suffix;
- * the older Pinellas and northwest Hillsborough hubs keep -fl. Holiday and Keystone follow
- * the newer Brandon/Lutz hubs and have no suffix.
+ * the older Pinellas and northwest Hillsborough hubs keep -fl. Holiday, Keystone,
+ * Valrico, Apollo Beach, and Gulfport follow Brandon, Riverview, and St. Petersburg
+ * and have no suffix. The -fl forms of those three 308 to the hub.
  */
 export const gbpCityHubs: TargetLocation[] = [
   {
@@ -536,6 +537,138 @@ export const gbpCityHubs: TargetLocation[] = [
       {
         question: "Can I ask for Spanish?",
         answer: `Yes. Hablamos español at ${phone}.`,
+      },
+    ],
+  },
+  {
+    slug: "valrico",
+    city: "Valrico",
+    displayName: "Valrico, FL",
+    county: "Hillsborough County",
+    zipHint: "33594–33596",
+    neighborhoods: ["Fish Hawk", "Sydney", "Valrico Road", "State Road 60"],
+    intro:
+      "Need a licensed Valrico handyman for window screens, doors, and drywall? Fish Hawk and Sydney are an east Hillsborough drive from our only Westchase headquarters. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Valrico with handyman repairs for window screens, doors, and drywall in Fish Hawk, Sydney, and along Valrico Road. A recent visit replaced 7 window screens. Crews leave the only Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+    paragraphs: [
+      "Valrico sits east of Brandon along Valrico Road and State Road 60. Fish Hawk and Sydney are the neighborhoods we drive most. The houses mix later subdivisions with older lots, and the truck still leaves Westchase. There is no Valrico office.",
+      "A recent Valrico visit was replacing 7 window screens. The other calls on this side of Hillsborough are usually a door that swells after rain or a drywall patch, not a remodel. We bring the screen spline and the door hardware that fit a handyman stop.",
+      "Brandon is the next hub west, Riverview is south, and Plant City is farther east. Those pages are the same licensed crew. We do not treat Valrico as a second storefront.",
+      `Call ${phone} for a Valrico estimate. Licensed and insured. Open 24/7 for scheduling. Hablamos español on the same number.`,
+    ],
+    callouts: [
+      {
+        before: "Screen, door, and small punch-list work in Valrico is a ",
+        href: "/services/handyman/general-repairs",
+        label: "general repairs",
+        after: " visit from the Westchase crew.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you have a handyman office in Valrico?",
+        answer: `No. The only office is ${hq} in Westchase. Valrico, including Fish Hawk and Sydney, is a service area we drive to.`,
+      },
+      {
+        question: "Do you replace window screens in Valrico?",
+        answer:
+          "Yes. A recent Valrico visit replaced 7 window screens. Doors and drywall patches are on the same east Hillsborough route when they are still handyman work.",
+      },
+      {
+        question: "Which Valrico areas do you cover?",
+        answer: `Fish Hawk, Sydney, and the Valrico Road corridor. Brandon, Riverview, and Plant City are the neighboring hubs. Call ${phone} if your street is just outside those names.`,
+      },
+      {
+        question: "Do you speak Spanish in Valrico?",
+        answer: `Yes. Hablamos español. Call ${phone} and ask for Spanish if you want the estimate in Spanish.`,
+      },
+    ],
+  },
+  {
+    slug: "apollo-beach",
+    city: "Apollo Beach",
+    displayName: "Apollo Beach, FL",
+    county: "Hillsborough County",
+    zipHint: "33572",
+    neighborhoods: ["MiraBay", "Symphony Isles", "US-41", "Apollo Beach Boulevard"],
+    intro:
+      "Need a licensed Apollo Beach handyman for flooring, doors, and drywall? MiraBay and Symphony Isles are a south Hillsborough drive from Westchase. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Apollo Beach with handyman repairs for flooring, doors, and drywall in Symphony Isles, MiraBay, and along US-41. A recent visit was a flooring job. Crews leave the only Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+    paragraphs: [
+      "Apollo Beach is the bay community south of Riverview, along US-41, with MiraBay and Symphony Isles among the neighborhoods we already route. It is a service area. There is no Apollo Beach shop.",
+      "A recent Apollo Beach visit was a flooring job. Doors and drywall patches are the other lists on these houses. We repair the section that failed, and we say so when a soft subfloor is past a handyman visit.",
+      "Riverview is the inland neighbor. Brandon is farther north on many of the same days. The crew is still the Westchase crew, with one phone number.",
+      `Call ${phone} for an Apollo Beach estimate. Licensed and insured. Hablamos español.`,
+    ],
+    callouts: [
+      {
+        before: "Flooring sections in Apollo Beach are a ",
+        href: "/services/flooring-installation",
+        label: "flooring installation",
+        after: " visit when the work is still a repair or a short run, not a whole-house remodel.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is there an Apollo Beach handyman office?",
+        answer: `No. Handyman Pros FL has one location at ${hq}. Apollo Beach is a south Hillsborough service area.`,
+      },
+      {
+        question: "Do you take flooring jobs in Apollo Beach?",
+        answer:
+          "Yes, within handyman scope. A recent Apollo Beach visit was a flooring job. If the subfloor has failed, we say that before we cover it.",
+      },
+      {
+        question: "Which Apollo Beach neighborhoods do you drive to?",
+        answer: `MiraBay, Symphony Isles, and the US-41 corridor. Riverview and Brandon are the neighboring hubs. Call ${phone} for a street just outside that list.`,
+      },
+      {
+        question: "Can we speak Spanish for an Apollo Beach estimate?",
+        answer: `Yes. Hablamos español at ${phone}.`,
+      },
+    ],
+  },
+  {
+    slug: "gulfport",
+    city: "Gulfport",
+    displayName: "Gulfport, FL",
+    county: "Pinellas County",
+    zipHint: "33707",
+    neighborhoods: ["Gulfport waterfront", "49th Street", "Pasadena edge", "Beach Boulevard"],
+    intro:
+      "Need a licensed Gulfport handyman for ceiling fans, doors, and drywall? The waterfront and 49th Street are a south Pinellas drive from Westchase. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Gulfport with handyman repairs for ceiling fans, doors, and drywall near the waterfront, 49th Street, and the Pasadena edge. A recent visit was a ceiling fan installation. Crews leave the only Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+    paragraphs: [
+      "Gulfport is the waterfront city on Boca Ciega Bay, south of St. Petersburg. Stops cluster near the beach, 49th Street, and the Pasadena edge. We do not keep a Gulfport storefront.",
+      "A recent Gulfport visit was a ceiling fan installation at an existing fan-rated box. Doors that stick in the salt air and small drywall patches fill out a typical list. New wiring is electrician work, and we stop if the box is not fan-rated.",
+      "St. Petersburg is the next hub north. Pinellas Park and Seminole are the usual continuation of a south Pinellas day. One headquarters in Westchase, one phone number.",
+      `Call ${phone} for a Gulfport estimate. Licensed and insured. Hablamos español.`,
+    ],
+    callouts: [
+      {
+        before: "Ceiling fans in Gulfport are a ",
+        href: "/services/handyman/fan-installation",
+        label: "ceiling fan installation",
+        after: " when a fan-rated box is already in the room.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you have a Gulfport location?",
+        answer: `No. Crews leave ${hq}. Gulfport is a Pinellas service area, not a second office.`,
+      },
+      {
+        question: "Do you install ceiling fans in Gulfport?",
+        answer:
+          "Yes, at an existing fan-rated box. A recent Gulfport visit was a ceiling fan installation. If the room has no fan box, that is electrician scope and we say so before the visit.",
+      },
+      {
+        question: "Which Gulfport areas do you cover?",
+        answer: `The waterfront, 49th Street, and the Pasadena edge. St. Petersburg, Pinellas Park, and Seminole are the neighboring hubs. Call ${phone} to confirm a side street.`,
+      },
+      {
+        question: "Is Spanish available for Gulfport?",
+        answer: `Yes. Hablamos español. The number is ${phone}.`,
       },
     ],
   },

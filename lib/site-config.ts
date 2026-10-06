@@ -90,6 +90,7 @@ export const siteConfig = {
     "Bradenton",
     "Apollo Beach",
     "Valrico",
+    "Gulfport",
     "Fish Hawk",
     "Lutz",
     "Pinellas Park",

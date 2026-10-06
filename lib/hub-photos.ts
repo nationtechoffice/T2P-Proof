@@ -161,4 +161,7 @@ export const hubJobPhotos: Record<string, readonly HubJobPhoto[]> = {
   keystone: [fencePost, fenceRepair, workShirt],
   "citrus-park-fl": [ceilingFan, blindsInstall, drywallWindowPrep],
   "town-n-country-fl": [blindsReach, ceilingFan, drywallUnderWindow],
+  valrico: [blindsInstall, blindsHardware, blindsReach],
+  "apollo-beach": [porcelainTile, largeTile, workShirt],
+  gulfport: [ceilingFan, workShirt, drywallUnderWindow],
 };
