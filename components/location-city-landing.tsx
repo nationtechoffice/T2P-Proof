@@ -53,7 +53,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
           ]),
           serviceSchema({
             name: "Handyman service",
-            description: location.intro,
+            description: location.directAnswer ?? location.intro,
             url: pageUrl,
             category: "Handyman",
             areaName: location.displayName,
@@ -100,6 +100,9 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               Instant Phone Estimates · {location.county}
             </p>
             <h1 className="mb-4 text-4xl font-bold">{serviceH1("Handyman", location.city)}</h1>
+            {location.directAnswer ? (
+              <p className="mb-4 text-lg leading-relaxed text-[hsl(var(--foreground))]">{location.directAnswer}</p>
+            ) : null}
             <p className="mb-4 text-xl font-semibold text-[hsl(var(--primary))]">{instantEstimate.heroHeadline}</p>
             <p className="mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">{location.intro}</p>
             <div className="mb-6">

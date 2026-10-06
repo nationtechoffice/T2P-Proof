@@ -82,6 +82,8 @@ export interface TargetLocation {
   zipHint: string;
   neighborhoods: string[];
   intro: string;
+  /** 40–60 word answer shown directly under the H1. */
+  directAnswer?: string;
   paragraphs: string[];
   faqs: { question: string; answer: string }[];
   /** Linked sentences rendered under the city copy. */
