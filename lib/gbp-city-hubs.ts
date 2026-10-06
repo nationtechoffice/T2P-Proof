@@ -1,15 +1,13 @@
-import type { TargetLocation } from "@/lib/programmatic";
-import { siteConfig } from "@/lib/site-config";
+import type { TargetLocation } from "./programmatic";
+import { siteConfig } from "./site-config";
 
 const phone = siteConfig.phone;
 const hq = `${siteConfig.address.street}, Apt 203, Tampa, FL 33626`;
 
 /**
  * Google Business Profile service areas.
- * Slugs follow the hub that already exists: Clearwater and St. Petersburg have no -fl suffix;
- * the older Pinellas and northwest Hillsborough hubs keep -fl. Holiday, Keystone,
- * Valrico, Apollo Beach, and Gulfport follow Brandon, Riverview, and St. Petersburg
- * and have no suffix. The -fl forms of those three 308 to the hub.
+ * Slugs are the live canonical paths. Do not rename one to add or drop -fl.
+ * The other form 308s to this slug from lib/location-redirects.ts.
  */
 export const gbpCityHubs: TargetLocation[] = [
   {

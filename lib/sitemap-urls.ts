@@ -3,6 +3,7 @@ import { getAllServiceSlugs } from "./services";
 import { getAllBlogSlugs } from "./blog-posts";
 import { allLocationLinks } from "./location-silos";
 import { coreServices, targetLocations } from "./programmatic";
+import { locationAlternatePaths } from "./location-redirects";
 
 /** Legacy paths that 301 to a canonical URL — never list these in the sitemap. */
 const REDIRECTED_PATHS = [
@@ -67,16 +68,10 @@ const REDIRECTED_PATHS = [
   "/services/same-day",
   "/same-day",
   "/same-day-handyman",
-  "/locations/westchase",
   "/locations/greater-carrollwood",
   "/locations/greater-carrollwood-fl",
   "/handyman-greater-carrollwood-fl",
-  "/locations/tampa-fl",
-  "/locations/clearwater-fl",
-  "/locations/st-petersburg-fl",
-  "/locations/valrico-fl",
-  "/locations/apollo-beach-fl",
-  "/locations/gulfport-fl",
+  ...locationAlternatePaths(),
   "/gallery",
   "/photos",
   "/showcase",
