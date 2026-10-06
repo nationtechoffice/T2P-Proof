@@ -2,7 +2,7 @@
 export const planAMeta: Record<string, { title: string; description: string }> = {
   "/about": {
     title: "About Handyman Pros FL | Hablamos Español",
-    description: "Licensed & insured Handyman Pros FL at 12021 Tuscany Bay Dr, Apt 203, Tampa, FL 33626 (Westchase). Hablamos español. Call (656) 205-3185 today.",
+    description: "Licensed & insured Handyman Pros FL at 12021 Tuscany Bay Dr, Tampa, FL 33626 (Westchase). Hablamos español. Call (656) 205-3185 today.",
   },
   "/blog/best-exterior-paint-florida-climate": {
     title: "Best Exterior Paint for Florida's Climate: What Homeowners N",

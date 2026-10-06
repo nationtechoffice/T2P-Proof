@@ -79,7 +79,7 @@ export function Footer() {
             <div className="mt-6 flex items-start gap-2 text-sm lg:mt-0">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(var(--accent))]" />
               <address className="not-italic">
-                {siteConfig.address.street}, {siteConfig.address.street2}<br />
+                {siteConfig.address.street}<br />
                 {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}
               </address>
             </div>
@@ -134,7 +134,7 @@ export function Footer() {
         <div className="mt-12 border-t border-gray-700 pt-8 text-center text-sm">
           <p>&copy; {currentYear} {siteConfig.legalName}. All rights reserved.</p>
           <p className="mt-2 text-xs text-gray-500">
-            {siteConfig.address.street}, {siteConfig.address.street2}, {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip} | Licensed &amp; Insured | <span lang="es">Hablamos español</span> | Open 24/7 | Single Tampa location
+            {siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip} | Licensed &amp; Insured | <span lang="es">Hablamos español</span> | Open 24/7 | Single Tampa location
           </p>
         </div>
       </div>
