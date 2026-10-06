@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "prebuild": "tsx scripts/write-sitemap.ts --clean",
+    "prebuild": "tsx scripts/write-sitemap.ts",
     "build": "next build --webpack",
     "postbuild": "tsx scripts/write-sitemap.ts && tsx scripts/submit-indexnow.ts",
     "start": "next start",

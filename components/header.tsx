@@ -145,7 +145,7 @@ export function Header() {
           </div>
         </div>
         <div className="container-site flex h-16 items-center justify-between">
-          <Logo priority />
+          <Logo />
 
           <nav className="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
             {navLinks.map((link) =>

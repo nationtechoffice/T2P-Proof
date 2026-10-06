@@ -71,6 +71,16 @@ test("config redirects keep legacy rules and do not loop or collide", async () =
   }
 
   assert.equal(bySource.get("/handyman-plant-city-fl"), "/locations/plant-city");
+  assert.equal(bySource.get("/handyman-valrico-fl"), "/locations/valrico");
+  assert.equal(bySource.get("/handyman-valrico-fl/"), "/locations/valrico");
+  assert.equal(follow("/handyman-valrico-fl"), "/locations/valrico");
+  assert.equal(follow("/handyman-valrico-fl/"), "/locations/valrico");
+  assert.equal(bySource.get("/services/handyman/paint-indoors"), "/services/handyman/interior-painting");
+  assert.equal(bySource.get("/services/paint-indoors"), "/services/handyman/interior-painting");
+  assert.equal(follow("/services/handyman/paint-indoors"), "/services/handyman/interior-painting");
+  assert.equal(follow("/services/handyman/flooring-repair"), "/services/flooring-installation");
+  assert.equal(follow("/services/handyman/install-flooring"), "/services/flooring-installation");
+  assert.equal(follow("/services/handyman/repair-flooring"), "/services/flooring-installation");
   assert.equal(bySource.get("/handyman-westchase-fl"), "/locations/westchase-fl");
   assert.equal(bySource.get("/handyman-brandon-fl"), "/locations/brandon");
   assert.equal(bySource.get("/locations/greater-carrollwood"), "/locations/carrollwood");
@@ -115,6 +125,27 @@ test("sitemap and llms files list canonical hub URLs only", () => {
     assert.equal(locs.has(canonical), true, canonical);
     assert.match(llms, new RegExp(escapeRegExp(canonical)));
   }
+
+  for (const path of [
+    "/handyman-valrico-fl",
+    "/services/handyman/paint-indoors",
+    "/services/paint-indoors",
+    "/services/handyman/flooring-repair",
+    "/services/handyman/install-flooring",
+    "/services/handyman/repair-flooring",
+    "/services/flooring-repair",
+    "/services/install-flooring",
+    "/services/repair-flooring",
+  ]) {
+    const url = `${siteConfig.url}${path}`;
+    assert.equal(urls.has(url), false, url);
+    assert.equal(locs.has(url), false, url);
+  }
+  assert.equal(locs.has(`${siteConfig.url}/locations/valrico`), true);
+  assert.equal(locs.has(`${siteConfig.url}/services/flooring-installation`), true);
+  assert.equal(locs.has(`${siteConfig.url}/services/handyman/interior-painting`), true);
+  assert.equal(locs.has(`${siteConfig.url}/locations/westchase-fl`), true);
+  assert.equal(locs.has(`${siteConfig.url}/locations/westchase`), false);
 
   for (const path of locationAlternatePaths()) {
     const url = `${siteConfig.url}${path}`;

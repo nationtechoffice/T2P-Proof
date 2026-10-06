@@ -166,7 +166,7 @@ export default function HandymanWestchasePage() {
         </div>
       </article>
 
-      <GoogleReviews />
+      <GoogleReviews variant="compact" />
       <FAQSection faqs={westchaseFaqs} title="Westchase Handyman FAQ" />
       <CTASection
         title="Need a Handyman Near Me in Westchase?"

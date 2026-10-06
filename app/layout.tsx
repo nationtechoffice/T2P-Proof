@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 import { DM_Sans, Outfit } from "next/font/google";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -107,7 +107,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main-content">{children}</main>
         <Footer />
         <StickyCallBar />
-        <Analytics />
+        <Script src="/_vercel/insights/script.js" strategy="lazyOnload" />
       </body>
     </html>
   );

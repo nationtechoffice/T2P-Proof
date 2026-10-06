@@ -218,7 +218,7 @@ export function LocationLanding({ location }: { location: LocationSilo }) {
         </div>
       </article>
 
-      <GoogleReviews />
+      <GoogleReviews variant="compact" />
       <CTASection
         title={`Need a Handyman in ${location.city}?`}
         description={`Call Handyman Pros FL at ${siteConfig.phone} for local repairs, installs, and 24/7 estimates across ${location.displayName}.`}

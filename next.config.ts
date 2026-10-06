@@ -18,6 +18,8 @@ const legacyRedirects = [
   { source: "/handyman-land-o-lakes-fl", destination: "/locations/land-o-lakes", permanent: true as const },
   { source: "/handyman-seminole-fl", destination: "/locations/seminole", permanent: true as const },
   { source: "/handyman-spring-hill-fl", destination: "/locations/spring-hill", permanent: true as const },
+  { source: "/handyman-valrico-fl", destination: "/locations/valrico", permanent: true as const },
+  { source: "/handyman-valrico-fl/", destination: "/locations/valrico", permanent: true as const },
   { source: "/locations/greater-carrollwood", destination: "/locations/carrollwood", permanent: true as const },
   { source: "/locations/greater-carrollwood-fl", destination: "/locations/carrollwood", permanent: true as const },
   { source: "/handyman-greater-carrollwood-fl", destination: "/locations/carrollwood", permanent: true as const },
@@ -34,6 +36,10 @@ const legacyRedirects = [
   { source: "/services/flooring-replacement", destination: "/services/flooring-installation", permanent: true as const },
   { source: "/services/handyman/replace-flooring", destination: "/services/flooring-installation", permanent: true as const },
   { source: "/services/handyman/flooring-replacement", destination: "/services/flooring-installation", permanent: true as const },
+  { source: "/services/handyman/paint-indoors", destination: "/services/handyman/interior-painting", permanent: true as const },
+  { source: "/services/handyman/paint-indoors/", destination: "/services/handyman/interior-painting", permanent: true as const },
+  { source: "/services/paint-indoors", destination: "/services/handyman/interior-painting", permanent: true as const },
+  { source: "/services/paint-indoors/", destination: "/services/handyman/interior-painting", permanent: true as const },
   { source: "/services/handyman/gutter-installation", destination: "/services/gutter-installation", permanent: true as const },
   { source: "/services/gutter-repair", destination: "/services/gutter-installation", permanent: true as const },
   { source: "/services/gutter-cleaning", destination: "/services/gutter-installation", permanent: true as const },
@@ -81,6 +87,8 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   async redirects() {
+    // /locations/westchase permanently redirects to /locations/westchase-fl
+    // because locationAlternateRedirects() sends each hub's other form to the live slug.
     const generated = locationAlternateRedirects();
     assertLocationRedirectsFit(legacyRedirects, generated);
     return [

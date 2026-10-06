@@ -193,11 +193,11 @@ export function locationDescription(city: string): string {
   return `Looking for a handyman in ${city}, FL? Handyman Pros FL handles drywall, TV mounting, repairs & more across Tampa Bay. Instant phone estimates, same-day service. Call ${siteConfig.phone}.`;
 }
 
-/** Homepage title leads with Tampa handyman and keeps a Spanish search term. Licensed stays in the meta. */
+/** Homepage title leads with Tampa handyman, the brand, and the Spanish keyword manitas. */
 export function homeTitle(): string {
-  return "Tampa Handyman & Manitas | Reparaciones del Hogar";
+  return "Tampa Handyman & Manitas | Handyman Pros Florida";
 }
 
 export function homeDescription(): string {
-  return "Licensed & insured Tampa handyman y manitas near Westchase. Reparaciones del hogar, drywall y TV mounts. Instant estimates 24/7 — call (656) 205-3185.";
+  return "Tampa handyman y manitas for reparaciones del hogar. Hablamos español. Licensed & insured drywall, TV mounts, and home repairs. Call (656) 205-3185 today.";
 }

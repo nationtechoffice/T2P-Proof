@@ -18,9 +18,8 @@ type VideoBackgroundProps = {
 };
 
 /**
- * Always-on muted looping hero/background video.
- * Retries autoplay on mount, visibility, focus, and first user gesture
- * so it starts without requiring a hard refresh.
+ * Desktop muted looping background. Below the md breakpoint the poster is
+ * the only media: the video element is not rendered, so the MP4 is not downloaded.
  */
 export function VideoBackground({
   mp4Src,
@@ -38,6 +37,7 @@ export function VideoBackground({
   const containerRef = useRef<HTMLDivElement>(null);
   const [shouldLoad, setShouldLoad] = useState(!lazy);
   const [playing, setPlaying] = useState(false);
+  const [desktop, setDesktop] = useState(false);
 
   const ensurePlaying = useCallback(() => {
     const video = videoRef.current;
@@ -66,6 +66,14 @@ export function VideoBackground({
     }
   }, []);
 
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 768px)");
+    const update = () => setDesktop(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+
   // Lazy load below-fold only
   useEffect(() => {
     if (!lazy || shouldLoad) return;
@@ -85,9 +93,9 @@ export function VideoBackground({
     return () => observer.disconnect();
   }, [lazy, shouldLoad]);
 
-  // Start / restart playback whenever the video is in the DOM
+  // Start / restart playback whenever the desktop video is in the DOM
   useEffect(() => {
-    if (!shouldLoad) return;
+    if (!shouldLoad || !desktop) return;
     const video = videoRef.current;
     if (!video) return;
 
@@ -157,7 +165,7 @@ export function VideoBackground({
       document.removeEventListener("touchstart", onGesture);
       document.removeEventListener("keydown", onGesture);
     };
-  }, [shouldLoad, mp4Src, ensurePlaying]);
+  }, [shouldLoad, desktop, mp4Src, ensurePlaying]);
 
   return (
     <div ref={containerRef} className={`absolute inset-0 overflow-hidden ${className}`}>
@@ -180,26 +188,25 @@ export function VideoBackground({
         />
       </picture>
 
-      {shouldLoad ? (
+      {shouldLoad && desktop ? (
         <video
           ref={videoRef}
           key={mp4Src}
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${
+          className={`absolute inset-0 hidden h-full w-full object-cover transition-opacity duration-300 md:block ${
             playing ? "opacity-100" : "opacity-0"
           }`}
-          // Prefer direct src — more reliable autoplay than nested <source>
-          src={mp4Src}
           poster={posterSrc}
           autoPlay
           muted
           loop
           playsInline
-          preload={priority || !lazy ? "auto" : "metadata"}
+          preload="metadata"
           disablePictureInPicture
           disableRemotePlayback
           aria-hidden="true"
         >
-          {webmSrc ? <source src={webmSrc} type="video/webm" /> : null}
+          <source src={mp4Src} type="video/mp4" media="(min-width: 768px)" />
+          {webmSrc ? <source src={webmSrc} type="video/webm" media="(min-width: 768px)" /> : null}
         </video>
       ) : null}
     </div>
