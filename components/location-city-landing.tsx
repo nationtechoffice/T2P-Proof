@@ -19,10 +19,28 @@ import {
   nearbyLocationLinks,
 } from "@/lib/internal-links";
 import { CheckCircle } from "lucide-react";
+import { JobSitePhoto } from "@/components/job-site-photo";
+import { jobSitePhotos } from "@/lib/images";
+import { gbpHubSlugSet } from "@/lib/gbp-city-hubs";
+import { hubJobPhotos } from "@/lib/hub-photos";
 
 export function LocationCityLanding({ location }: { location: TargetLocation }) {
   const pageUrl = `${siteConfig.url}/locations/${location.slug}`;
   const nearby = nearbyLocationLinks(location.slug);
+  const hubPhotos = hubJobPhotos[location.slug];
+  const showTopCall = location.slug === "westchase-fl" || gbpHubSlugSet.has(location.slug);
+  const cityJobPhotos = hubPhotos
+    ? hubPhotos
+    : location.slug === "westchase-fl"
+      ? [
+          jobSitePhotos.blindsInstallBrandedBack,
+          jobSitePhotos.blindsHardwareDrillProfile,
+          jobSitePhotos.windowWorkBrandedShirt,
+          jobSitePhotos.blindsInstallBrandedReach,
+        ]
+      : location.slug === "tampa"
+        ? [jobSitePhotos.blindsInstallBrandedBack, jobSitePhotos.windowWorkBrandedShirt]
+        : [jobSitePhotos.windowWorkBrandedShirt];
 
   return (
     <>
@@ -35,14 +53,40 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
           ]),
           serviceSchema({
             name: "Handyman service",
-            description: location.intro,
+            description: location.directAnswer ?? location.intro,
             url: pageUrl,
             category: "Handyman",
             areaName: location.displayName,
           }),
           faqSchema(location.faqs),
+          {
+            "@context": "https://schema.org",
+            "@type": "ImageGallery",
+            name: hubPhotos ? "Handyman Pros Florida job photos" : `Handyman job photos in ${location.city}`,
+            url: pageUrl,
+            associatedMedia: cityJobPhotos.map((photo) => ({
+              "@type": "ImageObject",
+              contentUrl: `${siteConfig.url}${photo.webp}`,
+              thumbnailUrl: `${siteConfig.url}${photo.thumb}`,
+              name: photo.alt,
+              description: photo.alt,
+              caption: photo.alt,
+              width: photo.width,
+              height: photo.height,
+              encodingFormat: "image/webp",
+            })),
+          },
         ]}
       />
+      {showTopCall ? (
+        <div className="container-site pb-1">
+          <PhoneEstimateCta
+            className="w-full sm:w-auto"
+            label={`Call ${siteConfig.phone}`}
+            phoneTel={siteConfig.phoneE164}
+          />
+        </div>
+      ) : null}
       <Breadcrumbs
         items={[
           { label: "Locations", href: "/locations" },
@@ -56,6 +100,9 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               Instant Phone Estimates · {location.county}
             </p>
             <h1 className="mb-4 text-4xl font-bold">{serviceH1("Handyman", location.city)}</h1>
+            {location.directAnswer ? (
+              <p className="mb-4 text-lg leading-relaxed text-[hsl(var(--foreground))]">{location.directAnswer}</p>
+            ) : null}
             <p className="mb-4 text-xl font-semibold text-[hsl(var(--primary))]">{instantEstimate.heroHeadline}</p>
             <p className="mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">{location.intro}</p>
             <div className="mb-6">
@@ -143,6 +190,27 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                 </p>
               ) : null}
             </div>
+            {location.slug === "westchase-fl" ? (
+              <h2 className="mt-8 text-lg font-bold">Recent blinds and window work</h2>
+            ) : hubPhotos ? (
+              <h2 className="mt-8 text-lg font-bold">Recent handyman job photos</h2>
+            ) : null}
+            <ul
+              className={`${location.slug === "westchase-fl" || hubPhotos ? "mb-8 mt-3" : "my-8"} grid gap-4 ${cityJobPhotos.length > 1 ? "sm:grid-cols-2" : "max-w-sm"}`}
+            >
+              {cityJobPhotos.map((photo) => (
+                <li key={photo.slug}>
+                  <JobSitePhoto
+                    photo={photo}
+                    sizes={
+                      cityJobPhotos.length > 1
+                        ? "(max-width: 640px) 100vw, 40vw"
+                        : "(max-width: 640px) 100vw, 384px"
+                    }
+                  />
+                </li>
+              ))}
+            </ul>
             <h2 className="mt-10 mb-4 text-2xl font-bold">
               Home repairs we handle in {location.city}, FL
             </h2>

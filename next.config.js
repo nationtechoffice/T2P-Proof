@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false,
   trailingSlash: false,
   skipTrailingSlashRedirect: false,
   images: {
@@ -29,6 +30,10 @@ const nextConfig = {
       { source: "/handyman-land-o-lakes-fl", destination: "/locations/land-o-lakes", permanent: true },
       { source: "/handyman-seminole-fl", destination: "/locations/seminole", permanent: true },
       { source: "/handyman-spring-hill-fl", destination: "/locations/spring-hill", permanent: true },
+      { source: "/locations/westchase", destination: "/locations/westchase-fl", permanent: true },
+      { source: "/locations/greater-carrollwood", destination: "/locations/carrollwood", permanent: true },
+      { source: "/locations/greater-carrollwood-fl", destination: "/locations/carrollwood", permanent: true },
+      { source: "/handyman-greater-carrollwood-fl", destination: "/locations/carrollwood", permanent: true },
       { source: "/locations/tampa-fl", destination: "/locations/tampa", permanent: true },
       { source: "/locations/clearwater-fl", destination: "/locations/clearwater", permanent: true },
       { source: "/locations/st-petersburg-fl", destination: "/locations/st-petersburg", permanent: true },
@@ -101,9 +106,11 @@ const nextConfig = {
       {
         source: "/(.*)",
         headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains" },
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
         ],
       },
       {

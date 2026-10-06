@@ -13,6 +13,22 @@ export function ServicePhotoGallery({
   if (photos.length === 0) return null;
   const [primary, ...rest] = photos;
   const pair = photos.length === 2;
+  const portrait = photos.every((photo) => photo.portrait);
+
+  if (portrait) {
+    return (
+      <div className="mb-8">
+        {title ? <h2 className="mb-3 text-xl font-bold">{title}</h2> : null}
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {photos.map((photo) => (
+            <li key={photo.src} className="relative aspect-[3/4] overflow-hidden rounded-2xl">
+              <GalleryPhoto photo={photo} sizes="(max-width: 640px) 100vw, 30vw" />
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
 
   return (
     <div className="mb-8">

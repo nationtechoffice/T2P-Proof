@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { coreServices, targetLocations } from "./programmatic";
 import { getAllSiteUrls, sitemapPriority } from "./sitemap-urls";
 import { siteConfig } from "./site-config";
 import { workPhotos } from "./work-showcase";
@@ -18,13 +19,14 @@ const CHANGE_FREQUENCIES = new Set([
 /** Google allows 1,000 images per URL. Stay under that so one gallery cannot blow the document. */
 const MAX_IMAGES_PER_URL = 1000;
 
-export const SITEMAP_REQUIRED_PATHS = [
-  "/",
-  "/locations/plant-city",
-  "/services/fence-handyman",
-  "/locations/brandon",
-  "/locations/riverview",
-  "/locations/temple-terrace",
+/** City hubs on /locations after the Westchase, GBP, and expansion merges. */
+export const LOCATION_HUB_COUNT = 26;
+
+/** Aliases that 301 elsewhere. A crawler file must not list them. */
+const SITEMAP_FORBIDDEN_PATHS = [
+  "/handyman-plant-city-fl",
+  "/handyman-westchase-fl",
+  "/locations/westchase",
 ] as const;
 
 function isHttpUrl(value: string): boolean {
@@ -204,17 +206,61 @@ export function pageLocs(xml: string): string[] {
   );
 }
 
+function pathnameOf(url: string): string {
+  try {
+    return new URL(url).pathname;
+  } catch {
+    return url;
+  }
+}
+
+/**
+ * The old six-path list still passed if a newer hub (Holiday, Keystone, Westchase)
+ * dropped out. This checks the full canonical set from getAllSiteUrls().
+ */
 export function assertSitemapDocument(xml: string): void {
   if (!xml.startsWith("<?xml")) throw new Error("sitemap is missing the XML declaration");
   if (!xml.includes("<urlset")) throw new Error("sitemap is missing urlset");
   if (xml.includes("<sitemapindex")) throw new Error("sitemap must stay a single urlset, not an index");
+
   const locs = pageLocs(xml);
-  if (locs.length < 100) throw new Error(`sitemap has ${locs.length} URLs; expected the full canonical set`);
-  for (const path of SITEMAP_REQUIRED_PATHS) {
-    const url = path === "/" ? siteConfig.url : `${siteConfig.url}${path}`;
-    if (!locs.includes(url)) throw new Error(`sitemap missing ${url}`);
+  const locSet = new Set(locs);
+  const expected = getAllSiteUrls();
+  const missing = expected.filter((url) => !locSet.has(url));
+  if (missing.length > 0) {
+    throw new Error(`sitemap missing ${missing.length} canonical URLs, including ${missing.slice(0, 6).join(", ")}`);
   }
-  if (locs.some((url) => url.includes("/handyman-plant-city-fl"))) {
-    throw new Error("sitemap listed a redirected Plant City alias");
+
+  if (targetLocations.length !== LOCATION_HUB_COUNT) {
+    throw new Error(`expected ${LOCATION_HUB_COUNT} location hubs, found ${targetLocations.length}`);
+  }
+
+  const hubPaths = targetLocations.map((location) => `/locations/${location.slug}`);
+  for (const path of hubPaths) {
+    if (!locSet.has(`${siteConfig.url}${path}`)) throw new Error(`sitemap missing location hub ${path}`);
+  }
+  if (!locSet.has(`${siteConfig.url}/locations/westchase-fl`)) {
+    throw new Error("sitemap missing /locations/westchase-fl");
+  }
+  if (!locSet.has(`${siteConfig.url}/locations/plant-city`)) {
+    throw new Error("sitemap missing /locations/plant-city");
+  }
+
+  const servicePaths = [
+    "/services",
+    "/services/handyman",
+    "/services/painting",
+    "/services/fence",
+    ...coreServices.map((service) => `/services/${service.slug}`),
+    "/services/handyman/fan-installation",
+  ];
+  for (const path of servicePaths) {
+    if (!locSet.has(`${siteConfig.url}${path}`)) throw new Error(`sitemap missing service page ${path}`);
+  }
+
+  for (const path of SITEMAP_FORBIDDEN_PATHS) {
+    if (locSet.has(`${siteConfig.url}${path}`) || locs.some((url) => pathnameOf(url) === path)) {
+      throw new Error(`sitemap listed redirected alias ${path}`);
+    }
   }
 }

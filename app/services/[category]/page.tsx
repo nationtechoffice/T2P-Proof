@@ -17,6 +17,15 @@ import { galleryForPage } from "@/lib/service-galleries";
 
 const validCategories: ServiceCategory[] = ["handyman", "painting", "fence"];
 
+/** Handyman cards whose /services/handyman/* paths 301/308. Point at the live page. */
+const handymanCanonicalHref: Record<string, string> = {
+  "drywall-repair": "/services/drywall-repair",
+  "tv-mounting": "/services/tv-wall-mounting",
+  "flooring-repair": "/services/flooring-installation",
+  "install-flooring": "/services/flooring-installation",
+  "repair-flooring": "/services/flooring-installation",
+};
+
 export function generateStaticParams() {
   return [
     ...validCategories.map((category) => ({ category })),
@@ -88,10 +97,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               </p>
             ) : null}
           </div>
-          {cat === "fence" || cat === "painting" ? (
+          {cat === "fence" || cat === "painting" || cat === "handyman" ? (
             <ServicePhotoGallery
-              photos={galleryForPage(cat)}
-              title={`${meta.name} photos in Tampa`}
+              photos={cat === "handyman" ? galleryForPage("general-repairs") : galleryForPage(cat)}
+              title={cat === "handyman" ? "Home repair photos in Tampa" : `${meta.name} photos in Tampa`}
             />
           ) : null}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -119,7 +128,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               .map((service) => (
               <Link
                 key={service.slug}
-                href={`/services/${category}/${service.slug}`}
+                href={
+                  cat === "handyman"
+                    ? (handymanCanonicalHref[service.slug] ?? `/services/${category}/${service.slug}`)
+                    : `/services/${category}/${service.slug}`
+                }
                 className="card group hover:border-[hsl(var(--primary))]"
               >
                 <h2 className="mb-2 text-lg font-semibold group-hover:text-[hsl(var(--primary))]">

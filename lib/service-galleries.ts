@@ -1,6 +1,10 @@
+import { homeRepairJobPhotos } from "./images";
+
 export interface ServicePhoto {
   src: string;
   alt: string;
+  /** Portrait stills keep a 3:4 frame so the uniform and the work stay in view. */
+  portrait?: boolean;
 }
 
 /**
@@ -138,6 +142,12 @@ const paintingGallery: ServicePhoto[] = [
   },
 ];
 
+const generalRepairsGallery: ServicePhoto[] = homeRepairJobPhotos.map((photo) => ({
+  src: photo.jpg,
+  alt: photo.alt,
+  portrait: true,
+}));
+
 const sameDayGallery: ServicePhoto[] = [
   {
     src: "/images/work/service-van-tampa.jpg",
@@ -209,6 +219,7 @@ export function galleryForPage(categoryOrSlug: string, slug?: string): ServicePh
   ) {
     return flooringGallery;
   }
+  if (key === "general-repairs") return generalRepairsGallery;
   if (key === "same-day-handyman") return sameDayGallery;
   if (
     key === "tile-installation" ||

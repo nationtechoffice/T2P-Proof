@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { assertSitemapDocument, buildSitemapEntries, renderSitemapXml } from "@/lib/sitemap-document";
+import { assertSitemapDocument, buildSitemapEntries, pageLocs, renderSitemapXml } from "@/lib/sitemap-document";
 
 const OUTPUT = join(process.cwd(), "public", "sitemap.xml");
 
@@ -47,12 +47,22 @@ function main() {
   }
 
   const prerendered = readPrerenderedSitemap();
-  const xml = prerendered ?? renderSitemapXml(buildSitemapEntries());
+  let xml = renderSitemapXml(buildSitemapEntries());
+  let source = "in-memory renderer";
+  if (prerendered) {
+    try {
+      assertSitemapDocument(prerendered);
+      xml = prerendered;
+      source = "Next prerender";
+    } catch (error) {
+      console.warn("[sitemap] prerendered file failed checks; using in-memory renderer", error);
+    }
+  }
   assertSitemapDocument(xml);
   mkdirSync(join(process.cwd(), "public"), { recursive: true });
   writeFileSync(OUTPUT, xml.endsWith("\n") ? xml : `${xml}\n`);
-  const source = prerendered ? "Next prerender" : "in-memory renderer";
-  console.log(`[sitemap] wrote public/sitemap.xml from ${source}`);
+  const urlCount = xml.match(/<url\b/g)?.length ?? pageLocs(xml).length;
+  console.log(`[sitemap] wrote public/sitemap.xml from ${source} (${urlCount} URLs)`);
 }
 
 main();

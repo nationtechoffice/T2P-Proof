@@ -10,6 +10,8 @@ import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import type { ServiceCategory } from "@/lib/site-config";
 import { Wrench, Paintbrush, Fence } from "lucide-react";
+import { ServicePhotoGallery } from "@/components/service-photo-gallery";
+import { galleryForPage } from "@/lib/service-galleries";
 
 export const metadata: Metadata = buildMetadata({
   title: serviceTitle("Home Services", "Tampa"),
@@ -85,6 +87,11 @@ export default function ServicesPage() {
               ))}
             </div>
           </div>
+
+          <ServicePhotoGallery
+            photos={galleryForPage("general-repairs")}
+            title="Recent home repair photos"
+          />
 
           {categories.map((cat) => {
             const meta = categoryMeta[cat];
