@@ -12,7 +12,8 @@
     "postbuild": "tsx scripts/write-sitemap.ts && tsx scripts/submit-indexnow.ts",
     "start": "next start",
     "indexnow": "tsx scripts/submit-indexnow.ts",
-    "index": "tsx scripts/submit-indexnow.ts"
+    "index": "tsx scripts/submit-indexnow.ts",
+    "test": "tsx --test lib/location-redirects.test.ts"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",

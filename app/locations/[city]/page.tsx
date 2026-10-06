@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { LocationCityLanding } from "@/components/location-city-landing";
+import { canonicalLocationPath } from "@/lib/location-redirects";
 import { getTargetLocation, serviceMetaDescription, serviceMetaTitle, targetLocations } from "@/lib/programmatic";
 import { buildMetadata } from "@/lib/seo";
 
@@ -19,7 +20,7 @@ export async function generateMetadata({
   return buildMetadata({
     title: serviceMetaTitle("Handyman", location.city),
     description: serviceMetaDescription("handyman repairs", location.city),
-    path: `/locations/${location.slug}`,
+    path: canonicalLocationPath(location.slug),
     keywords: [
       `handyman ${location.city} FL`,
       `handyman near me ${location.city}`,

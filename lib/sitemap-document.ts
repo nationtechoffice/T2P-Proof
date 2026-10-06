@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { coreServices, targetLocations } from "./programmatic";
+import { locationAlternatePaths } from "./location-redirects";
 import { getAllSiteUrls, sitemapPriority } from "./sitemap-urls";
 import { siteConfig } from "./site-config";
 import { workPhotos } from "./work-showcase";
@@ -258,7 +259,8 @@ export function assertSitemapDocument(xml: string): void {
     if (!locSet.has(`${siteConfig.url}${path}`)) throw new Error(`sitemap missing service page ${path}`);
   }
 
-  for (const path of SITEMAP_FORBIDDEN_PATHS) {
+  const forbidden = new Set<string>([...SITEMAP_FORBIDDEN_PATHS, ...locationAlternatePaths()]);
+  for (const path of forbidden) {
     if (locSet.has(`${siteConfig.url}${path}`) || locs.some((url) => pathnameOf(url) === path)) {
       throw new Error(`sitemap listed redirected alias ${path}`);
     }
