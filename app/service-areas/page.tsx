@@ -49,7 +49,11 @@ export default function ServiceAreasPage() {
               <Link href="/locations/oldsmar-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
                 Oldsmar FL handyman services
               </Link>{" "}
-              along the Hillsborough–Pinellas line. Don&apos;t see your neighborhood? Call us — we likely serve your area.
+              along the Hillsborough–Pinellas line. East Hillsborough includes{" "}
+              <Link href="/locations/plant-city" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Plant City
+              </Link>{" "}
+              for downtown doors, Walden Lake fence boards, and acreage wood repair. Don&apos;t see your neighborhood? Call us — we likely serve your area.
             </p>
           </div>
 

@@ -158,7 +158,46 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
                   <Link href="/services/fence" className="font-semibold text-[hsl(var(--primary))] hover:underline">
                     fence services
                   </Link>
-                  ; this page is the fencing handyman repair.
+                  ; this page is the fencing handyman repair. Acreage boards and farm gates in{" "}
+                  <Link href="/locations/plant-city" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Plant City
+                  </Link>{" "}
+                  — Walden Lake privacy lines and the longer runs toward Knights Griffin — are described on that city hub.
+                </p>
+              ) : null}
+              {service.slug === "drywall-repair" ? (
+                <p>
+                  Plant City humidity shows up as a doorknob hole in a Walden Lake hall or a soft patch under a downtown window, which is a different list than a new Riverview house. The{" "}
+                  <Link href="/locations/plant-city" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Plant City handyman
+                  </Link>{" "}
+                  page covers that east Hillsborough drive. Texture matching stays on this page.
+                </p>
+              ) : null}
+              {service.slug === "tv-wall-mounting" ? (
+                <p>
+                  East Hillsborough mounts are the same visit on a different wall. In{" "}
+                  <Link href="/locations/plant-city" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Plant City
+                  </Link>
+                  , Walden Lake family rooms are often block, and older downtown cottages are wood studs. We confirm structure before the bracket goes up.
+                </p>
+              ) : null}
+              {service.slug === "same-day-handyman" ? (
+                <p>
+                  <Link href="/locations/plant-city" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Plant City
+                  </Link>{" "}
+                  is an I-4 east run from Westchase. Same-day is realistic when the truck is already heading toward Brandon or Riverview, and same-week when it is not. Acreage fence boards and swollen downtown doors are booked on that route, not promised for the same hour.
+                </p>
+              ) : null}
+              {service.slug === "door-repair" ? (
+                <p>
+                  Older wood houses around downtown{" "}
+                  <Link href="/locations/plant-city" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    Plant City
+                  </Link>{" "}
+                  swell at the entry after a rainy week, and a sill can be soft before the slab is. That plane, sweep, or cut-back is written up on the Plant City hub and done by this same Westchase crew.
                 </p>
               ) : null}
             </div>

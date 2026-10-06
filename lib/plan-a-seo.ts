@@ -138,7 +138,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/plant-city": {
     title: "Handyman Plant City FL | Doors, Wood & Fence",
-    description: "Licensed & insured Plant City handyman for doors, rotten wood, and fence picket repair. Dispatched from our Westchase HQ. Call (656) 205-3185.",
+    description: "Licensed & insured Plant City handyman for downtown doors, Walden Lake fence boards, and acreage wood repair. Westchase HQ. Call (656) 205-3185.",
   },
   "/locations/brandon": {
     title: "Handyman Brandon FL | Fans, Drywall & Fence",

@@ -5,6 +5,9 @@ node_modules/
 .next/
 out/
 
+# Written in postbuild so Hostinger hcdn can serve /sitemap.xml without Node.
+/public/sitemap.xml
+
 # production
 build/
 dist/
