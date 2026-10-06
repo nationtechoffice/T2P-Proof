@@ -101,36 +101,36 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     description: "Find licensed Handyman Pros FL near you across Tampa Bay — drywall, TV mounting & repairs from Westchase HQ. Instant phone estimates. Call (656) 205-3185.",
   },
   "/locations/citrus-park-fl": {
-    title: "Handyman Citrus Park FL | Fans Doors & TV Mounts",
-    description: "Licensed & insured handyman in Citrus Park (Gunn Hwy & Race Track Rd). Ceiling fans, TV mounts & door fixes from our Westchase HQ. Instant estimate: (656).",
+    title: "Handyman Citrus Park FL | Licensed Fans & TV",
+    description: "Licensed & insured Citrus Park handyman for fans, doors, and TV mounts near Gunn Hwy and the mall. Hablamos español. Westchase HQ. Call (656) 205-3185.",
   },
   "/locations/clearwater": {
-    title: "Handyman Clearwater FL | Manitas y Drywall",
-    description: "Licensed & insured handyman in Clearwater. Hablamos español. Drywall, sticky doors y reparaciones del hogar from Westchase. Call (656) 205-3185.",
+    title: "Handyman Clearwater FL | Manitas, Licensed",
+    description: "Licensed & insured Clearwater handyman for beach sliders, Countryside drywall, and TV mounts. Hablamos español. One Westchase HQ. Call (656) 205-3185.",
   },
   "/locations/dunedin-fl": {
-    title: "Handyman Dunedin FL | Assembly & Fixture Help",
-    description: "Licensed & insured handyman in Dunedin (Downtown Dunedin & Edgewater). Furniture assembly & fixture swaps from our Westchase HQ. Instant estimate: (656).",
+    title: "Handyman Dunedin FL | Licensed Fixture Help",
+    description: "Licensed & insured Dunedin handyman for furniture assembly, fixtures, and doors downtown and on Edgewater. Hablamos español. Westchase HQ. Call (656) 205-3185.",
   },
   "/locations/new-port-richey-fl": {
-    title: "Handyman New Port Richey FL | Gutters & Fence Patches",
-    description: "Licensed & insured handyman in New Port Richey (Downtown NPR & Gulf Harbors). Gutter reseats & fence patches from our Westchase HQ. Instant estimate: (656).",
+    title: "Handyman New Port Richey | Licensed Gutters",
+    description: "Licensed & insured New Port Richey handyman for gutters, fence patches, and doors in Gulf Harbors. Hablamos español. From Westchase. Call (656) 205-3185.",
   },
   "/locations/oldsmar-fl": {
-    title: "Handyman Oldsmar FL | Tile LVP & Home Fixes",
-    description: "Licensed & insured handyman in Oldsmar (West Oldsmar & Tampa Rd). Tile patches & LVP section repairs from our Westchase HQ. Instant estimate: (656) 205-3185.",
+    title: "Handyman Oldsmar FL | Licensed Tile & Doors",
+    description: "Licensed & insured Oldsmar handyman for tile patches, doors, and TV mounts in ZIP 34677. Hablamos español. Next hop from Westchase. Call (656) 205-3185.",
   },
   "/locations/palm-harbor-fl": {
-    title: "Handyman Palm Harbor FL | TV Mount & Drywall Pros",
-    description: "Licensed & insured handyman in Palm Harbor (Downtown Palm Harbor & Ozona). TV mounting & drywall blend work from our Westchase HQ. Instant estimate: (656).",
+    title: "Handyman Palm Harbor FL | Licensed, Same-Day",
+    description: "Licensed & insured Palm Harbor handyman for TV mounts, drywall, and fence boards in Ozona and East Lake. Hablamos español. Westchase HQ. Call (656) 205-3185.",
   },
   "/locations/safety-harbor-fl": {
-    title: "Handyman Safety Harbor FL | Doors Fans & Punch Lists",
-    description: "Licensed & insured handyman in Safety Harbor (Main St & Philippe Park area). Door repair, fans & punch lists from our Westchase HQ. Instant estimate: (656).",
+    title: "Handyman Safety Harbor | Licensed Doors",
+    description: "Licensed & insured Safety Harbor handyman for doors, ceiling fans, and punch lists near Main Street. Hablamos español. From Westchase HQ. Call (656) 205-3185.",
   },
   "/locations/st-petersburg": {
-    title: "Handyman St. Petersburg FL | Manitas y TV",
-    description: "Licensed & insured handyman in St. Petersburg. Hablamos español. TV mounts, punch lists y reparaciones del hogar. Call (656) 205-3185 today.",
+    title: "Handyman St. Petersburg FL | Manitas Licensed",
+    description: "Licensed & insured St. Petersburg handyman for Kenwood walls, TV mounts, and doors. Hablamos español. Dispatched from Westchase HQ. Call (656) 205-3185.",
   },
   "/locations/tampa": {
     title: "Handyman Tampa FL | Manitas, Drywall & TV",
@@ -189,12 +189,20 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     description: "Fence handyman and fencing handyman in Tampa Bay: licensed & insured board, gate, and short-section repairs from Westchase. Call (656) 205-3185.",
   },
   "/locations/tarpon-springs-fl": {
-    title: "Handyman Tarpon Springs FL | Fence & Exterior Repairs",
-    description: "Licensed & insured handyman in Tarpon Springs (Sponge Docks & East Lake). Fence fixes & exterior wood repairs from our Westchase HQ. Instant estimate: (656).",
+    title: "Handyman Tarpon Springs | Licensed Fence Fix",
+    description: "Licensed & insured Tarpon Springs handyman for fence boards and exterior wood by the Sponge Docks. Hablamos español. From Westchase. Call (656) 205-3185.",
+  },
+  "/locations/holiday": {
+    title: "Handyman Holiday FL | Licensed Gutter & Door",
+    description: "Licensed & insured Holiday FL handyman for doors, gutters, and fence patches on US-19. Hablamos español. Dispatched from Westchase. Call (656) 205-3185.",
+  },
+  "/locations/keystone": {
+    title: "Handyman Keystone FL | Licensed Fence Repair",
+    description: "Licensed & insured Keystone handyman for fence sections, fans, and drywall on Gunn Highway lots. Hablamos español. From Westchase HQ. Call (656) 205-3185.",
   },
   "/locations/town-n-country-fl": {
-    title: "Handyman Town 'N' Country FL | Fans & Fixture Swaps",
-    description: "Licensed & insured handyman in Town 'N' Country (Webb Rd & Hillsborough Ave). Fan installs & fixture swaps from our Westchase HQ. Instant estimate: (656).",
+    title: "Handyman Town N Country | Licensed Fans",
+    description: "Licensed & insured Town 'N' Country handyman for fans, fixture swaps, and drywall near Hillsborough Ave. Hablamos español. Westchase HQ. Call (656) 205-3185.",
   },
   "/locations/westchase-fl": {
     title: "Handyman Westchase & Tampa FL | Manitas Licensed",

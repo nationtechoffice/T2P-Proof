@@ -21,12 +21,17 @@ import {
 import { CheckCircle } from "lucide-react";
 import { JobSitePhoto } from "@/components/job-site-photo";
 import { jobSitePhotos } from "@/lib/images";
+import { gbpHubSlugSet } from "@/lib/gbp-city-hubs";
+import { hubJobPhotos } from "@/lib/hub-photos";
 
 export function LocationCityLanding({ location }: { location: TargetLocation }) {
   const pageUrl = `${siteConfig.url}/locations/${location.slug}`;
   const nearby = nearbyLocationLinks(location.slug);
-  const cityJobPhotos =
-    location.slug === "westchase-fl"
+  const hubPhotos = hubJobPhotos[location.slug];
+  const showTopCall = location.slug === "westchase-fl" || gbpHubSlugSet.has(location.slug);
+  const cityJobPhotos = hubPhotos
+    ? hubPhotos
+    : location.slug === "westchase-fl"
       ? [
           jobSitePhotos.blindsInstallBrandedBack,
           jobSitePhotos.blindsHardwareDrillProfile,
@@ -57,7 +62,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
           {
             "@context": "https://schema.org",
             "@type": "ImageGallery",
-            name: `Handyman job photos in ${location.city}`,
+            name: hubPhotos ? "Handyman Pros Florida job photos" : `Handyman job photos in ${location.city}`,
             url: pageUrl,
             associatedMedia: cityJobPhotos.map((photo) => ({
               "@type": "ImageObject",
@@ -73,7 +78,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
           },
         ]}
       />
-      {location.slug === "westchase-fl" ? (
+      {showTopCall ? (
         <div className="container-site pb-1">
           <PhoneEstimateCta
             className="w-full sm:w-auto"
@@ -184,9 +189,11 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
             </div>
             {location.slug === "westchase-fl" ? (
               <h2 className="mt-8 text-lg font-bold">Recent blinds and window work</h2>
+            ) : hubPhotos ? (
+              <h2 className="mt-8 text-lg font-bold">Recent handyman job photos</h2>
             ) : null}
             <ul
-              className={`${location.slug === "westchase-fl" ? "mb-8 mt-3" : "my-8"} grid gap-4 ${cityJobPhotos.length > 1 ? "sm:grid-cols-2" : "max-w-sm"}`}
+              className={`${location.slug === "westchase-fl" || hubPhotos ? "mb-8 mt-3" : "my-8"} grid gap-4 ${cityJobPhotos.length > 1 ? "sm:grid-cols-2" : "max-w-sm"}`}
             >
               {cityJobPhotos.map((photo) => (
                 <li key={photo.slug}>
