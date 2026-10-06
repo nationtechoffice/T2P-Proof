@@ -49,7 +49,7 @@ export default function LocationsIndexPage() {
               <Link href="/locations/palm-harbor-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
                 Palm Harbor
               </Link>
-              . East and south Hillsborough hubs include{" "}
+              .               East and south Hillsborough hubs include{" "}
               <Link href="/locations/brandon" className="font-medium text-[hsl(var(--primary))] hover:underline">
                 Brandon
               </Link>
@@ -57,9 +57,17 @@ export default function LocationsIndexPage() {
               <Link href="/locations/riverview" className="font-medium text-[hsl(var(--primary))] hover:underline">
                 Riverview
               </Link>
-              , and{" "}
+              ,{" "}
               <Link href="/locations/plant-city" className="font-medium text-[hsl(var(--primary))] hover:underline">
                 Plant City
+              </Link>
+              ,{" "}
+              <Link href="/locations/valrico" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Valrico
+              </Link>
+              , and{" "}
+              <Link href="/locations/apollo-beach" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Apollo Beach
               </Link>
               . North of headquarters:{" "}
               <Link href="/locations/carrollwood" className="font-medium text-[hsl(var(--primary))] hover:underline">
@@ -85,9 +93,13 @@ export default function LocationsIndexPage() {
               <Link href="/locations/pinellas-park" className="font-medium text-[hsl(var(--primary))] hover:underline">
                 Pinellas Park
               </Link>
-              , and{" "}
+              ,{" "}
               <Link href="/locations/seminole" className="font-medium text-[hsl(var(--primary))] hover:underline">
                 Seminole
+              </Link>
+              , and{" "}
+              <Link href="/locations/gulfport" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Gulfport
               </Link>
               .{" "}
               <Link href="/locations/spring-hill" className="font-medium text-[hsl(var(--primary))] hover:underline">

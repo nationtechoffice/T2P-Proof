@@ -19,8 +19,8 @@ const CHANGE_FREQUENCIES = new Set([
 /** Google allows 1,000 images per URL. Stay under that so one gallery cannot blow the document. */
 const MAX_IMAGES_PER_URL = 1000;
 
-/** City hubs on /locations after the Westchase, GBP, and expansion merges. */
-export const LOCATION_HUB_COUNT = 26;
+/** City hubs on /locations, including Valrico, Apollo Beach, and Gulfport. */
+export const LOCATION_HUB_COUNT = 29;
 
 /** Aliases that 301 elsewhere. A crawler file must not list them. */
 const SITEMAP_FORBIDDEN_PATHS = [
