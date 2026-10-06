@@ -26,9 +26,16 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
   const pageUrl = `${siteConfig.url}/locations/${location.slug}`;
   const nearby = nearbyLocationLinks(location.slug);
   const cityJobPhotos =
-    location.slug === "tampa"
-      ? [jobSitePhotos.blindsInstallBrandedBack, jobSitePhotos.windowWorkBrandedShirt]
-      : [jobSitePhotos.windowWorkBrandedShirt];
+    location.slug === "westchase-fl"
+      ? [
+          jobSitePhotos.blindsInstallBrandedBack,
+          jobSitePhotos.blindsHardwareDrillProfile,
+          jobSitePhotos.windowWorkBrandedShirt,
+          jobSitePhotos.blindsInstallBrandedReach,
+        ]
+      : location.slug === "tampa"
+        ? [jobSitePhotos.blindsInstallBrandedBack, jobSitePhotos.windowWorkBrandedShirt]
+        : [jobSitePhotos.windowWorkBrandedShirt];
 
   return (
     <>
@@ -79,6 +86,13 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               Instant Phone Estimates · {location.county}
             </p>
             <h1 className="mb-4 text-4xl font-bold">{serviceH1("Handyman", location.city)}</h1>
+            {location.slug === "westchase-fl" ? (
+              <PhoneEstimateCta
+                className="mb-4 w-full sm:w-auto"
+                label={`Call ${siteConfig.phone}`}
+                phoneTel={siteConfig.phoneE164}
+              />
+            ) : null}
             <p className="mb-4 text-xl font-semibold text-[hsl(var(--primary))]">{instantEstimate.heroHeadline}</p>
             <p className="mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">{location.intro}</p>
             <div className="mb-6">
@@ -166,8 +180,11 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                 </p>
               ) : null}
             </div>
+            {location.slug === "westchase-fl" ? (
+              <h2 className="mt-8 text-lg font-bold">Recent blinds and window work</h2>
+            ) : null}
             <ul
-              className={`my-8 grid gap-4 ${cityJobPhotos.length > 1 ? "sm:grid-cols-2" : "max-w-sm"}`}
+              className={`${location.slug === "westchase-fl" ? "mb-8 mt-3" : "my-8"} grid gap-4 ${cityJobPhotos.length > 1 ? "sm:grid-cols-2" : "max-w-sm"}`}
             >
               {cityJobPhotos.map((photo) => (
                 <li key={photo.slug}>

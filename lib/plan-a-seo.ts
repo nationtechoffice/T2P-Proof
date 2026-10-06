@@ -197,7 +197,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     description: "Licensed & insured handyman in Town 'N' Country (Webb Rd & Hillsborough Ave). Fan installs & fixture swaps from our Westchase HQ. Instant estimate: (656).",
   },
   "/locations/westchase-fl": {
-    title: "Handyman Westchase FL | Manitas Same-Day",
+    title: "Handyman Westchase & Tampa FL | Manitas Licensed",
     description: "Licensed & insured handyman in Westchase (ZIP 33626). Hablamos español. Same-day reparaciones en casa from our Westchase HQ. Call (656) 205-3185.",
   },
   "/service-areas": {

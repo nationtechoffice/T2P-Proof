@@ -29,6 +29,7 @@ const nextConfig = {
       { source: "/handyman-land-o-lakes-fl", destination: "/locations/land-o-lakes", permanent: true },
       { source: "/handyman-seminole-fl", destination: "/locations/seminole", permanent: true },
       { source: "/handyman-spring-hill-fl", destination: "/locations/spring-hill", permanent: true },
+      { source: "/locations/westchase", destination: "/locations/westchase-fl", permanent: true },
       { source: "/locations/tampa-fl", destination: "/locations/tampa", permanent: true },
       { source: "/locations/clearwater-fl", destination: "/locations/clearwater", permanent: true },
       { source: "/locations/st-petersburg-fl", destination: "/locations/st-petersburg", permanent: true },
