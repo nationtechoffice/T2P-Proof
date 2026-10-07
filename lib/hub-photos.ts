@@ -139,6 +139,22 @@ const fencePost = still({
   alt: "Handyman Pros Florida fence post repair",
   jpg: "/images/work/fence-post-reset.jpg",
 });
+const builtInNiches = still({
+  slug: "built-in-wall-niches",
+  file: "handyman-pros-florida-tampa-bay-built-in-wall-niches",
+  width: 1600,
+  height: 1200,
+  thumbHeight: 600,
+  alt: "Finished built-in wall niches above drawer cabinets with recessed ceiling lights, Handyman Pros Florida",
+});
+const builtInConsole = still({
+  slug: "built-in-console-drywall",
+  file: "handyman-pros-florida-tampa-bay-built-in-console-drywall",
+  width: 1400,
+  height: 1050,
+  thumbHeight: 600,
+  alt: "Built-in drawer cabinets and a console under construction against a patched drywall wall, Handyman Pros Florida",
+});
 
 // Fence and fan stills have no separate thumb file. Use the full WebP.
 for (const photo of [ceilingFan, porcelainTile, fenceRepair, fencePost]) {
@@ -164,4 +180,5 @@ export const hubJobPhotos: Record<string, readonly HubJobPhoto[]> = {
   valrico: [blindsInstall, blindsHardware, blindsReach],
   "apollo-beach": [porcelainTile, largeTile, workShirt],
   gulfport: [ceilingFan, workShirt, drywallUnderWindow],
+  carrollwood: [builtInNiches, builtInConsole],
 };
