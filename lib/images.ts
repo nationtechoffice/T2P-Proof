@@ -249,6 +249,60 @@ export const optimizedWorkStills = {
     width: jobSitePhotos.blindsInstallBrandedReach.width,
     height: jobSitePhotos.blindsInstallBrandedReach.height,
   },
+  "/images/work/handyman-pros-florida-tampa-bay-drywall-wall-repair-under-window.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-drywall-wall-repair-under-window.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-drywall-wall-repair-under-window.avif",
+    width: 1400,
+    height: 1050,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-drywall-room-window-prep.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-drywall-room-window-prep.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-drywall-room-window-prep.avif",
+    width: 1400,
+    height: 1050,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-drywall-room-chandelier-prep.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-drywall-room-chandelier-prep.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-drywall-room-chandelier-prep.avif",
+    width: 1400,
+    height: 1050,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-drywall-finishing-worker.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-drywall-finishing-worker.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-drywall-finishing-worker.avif",
+    width: 1400,
+    height: 1050,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-protected-room-drywall-work.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-protected-room-drywall-work.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-protected-room-drywall-work.avif",
+    width: 1400,
+    height: 1050,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-drywall-rounded-window-opening.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-drywall-rounded-window-opening.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-drywall-rounded-window-opening.avif",
+    width: 1600,
+    height: 1200,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-built-in-wall-niches.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-built-in-wall-niches.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-built-in-wall-niches.avif",
+    width: 1600,
+    height: 1200,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-built-in-console-drywall.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-built-in-console-drywall.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-built-in-console-drywall.avif",
+    width: 1400,
+    height: 1050,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-large-format-tile-floor-installation.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-large-format-tile-floor-installation.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-large-format-tile-floor-installation.avif",
+    width: 1600,
+    height: 1200,
+  },
 } as const;
 
 export function optimizedStill(src: string) {

@@ -39,19 +39,31 @@ const drywallGallery: ServicePhoto[] = [
   },
   {
     src: "/images/work/handyman-pros-florida-tampa-bay-drywall-room-window-prep.webp",
-    alt: "Unfinished room with drywall mud work around windows and a door, materials staged",
+    alt: "Unfinished room with drywall mud work around windows and a door, materials staged, Handyman Pros Florida",
   },
   {
     src: "/images/work/handyman-pros-florida-tampa-bay-drywall-room-chandelier-prep.webp",
-    alt: "Room under drywall repair with chandelier, masked doorway, and tools on the floor",
+    alt: "Room under drywall repair with chandelier, masked doorway, and tools on the floor, Handyman Pros Florida",
   },
   {
     src: "/images/work/handyman-pros-florida-tampa-bay-drywall-finishing-worker.webp",
-    alt: "Worker finishing patched drywall in a room protected with plastic sheeting",
+    alt: "Worker finishing patched drywall in a room protected with plastic sheeting, Handyman Pros Florida",
   },
   {
     src: "/images/work/handyman-pros-florida-tampa-bay-protected-room-drywall-work.webp",
-    alt: "Room masked for drywall work with taped windows and protective coverings over furnishings",
+    alt: "Room masked for drywall work with taped windows and protective coverings over furnishings, Handyman Pros Florida",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-drywall-rounded-window-opening.webp",
+    alt: "Drywall-finished wall with a rounded window opening and a ladder, Handyman Pros Florida",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-built-in-wall-niches.webp",
+    alt: "Finished built-in wall niches above drawer cabinets with recessed ceiling lights, Handyman Pros Florida",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-built-in-console-drywall.webp",
+    alt: "Built-in drawer cabinets and a console under construction against a patched drywall wall, Handyman Pros Florida",
   },
 ];
 
@@ -99,7 +111,7 @@ const tileGallery: ServicePhoto[] = [
   },
   {
     src: "/images/work/handyman-pros-florida-tampa-bay-large-format-tile-floor-installation.webp",
-    alt: "Large light-colored floor tiles installed across a kitchen and living area under renovation",
+    alt: "Large light-colored floor tiles installed across a kitchen and living area under renovation, Handyman Pros Florida",
   },
 ];
 
@@ -114,6 +126,10 @@ const flooringGallery: ServicePhoto[] = [
   {
     src: "/images/work/accent-wall-flooring.jpg",
     alt: "Gray LVP flooring installed by a licensed handyman in a Tampa home office",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-large-format-tile-floor-installation.webp",
+    alt: "Large light-colored tile flooring in a kitchen and living area under renovation, Handyman Pros Florida",
   },
 ];
 
