@@ -6,6 +6,25 @@ import { BusinessNAP } from "@/components/business-nap";
 import { Logo } from "@/components/logo";
 import { MapPin } from "lucide-react";
 
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={className}
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
+
 const footerServiceLinks = [
   ...coreServices.map((service) => ({
     href: `/services/${service.slug}`,
@@ -40,6 +59,15 @@ export function Footer() {
               .
             </p>
             <BusinessNAP />
+            <a
+              href={siteConfig.social.instagram}
+              target="_blank"
+              rel="noopener"
+              aria-label="Handyman Pros Florida on Instagram"
+              className="mt-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[hsl(var(--primary))] text-white transition-colors hover:bg-[hsl(var(--accent))] focus:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--accent))] focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(0,0%,4%)]"
+            >
+              <InstagramIcon className="h-5 w-5" />
+            </a>
           </div>
 
           <div>

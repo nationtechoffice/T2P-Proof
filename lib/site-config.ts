@@ -55,7 +55,7 @@ export const siteConfig = {
   ],
   social: {
     facebook: "https://www.facebook.com/profile.php?id=61591619618815",
-    instagram: "https://www.instagram.com/handymanprosflorida",
+    instagram: "https://www.instagram.com/handymanprosfl/",
     google: "https://maps.app.goo.gl/XhDwjzgTujJK7JyT9",
   },
   counties: [
