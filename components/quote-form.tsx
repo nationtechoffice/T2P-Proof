@@ -24,7 +24,9 @@ async function browserEmailFallback(fields: {
   message: string;
   summary: string;
 }): Promise<boolean> {
-  const to = siteConfig.email;
+  /** Activated FormSubmit hash for this site; public contact stays support@. */
+  const formSubmitHash =
+    process.env.NEXT_PUBLIC_FORMSUBMIT_HASH || "f9210c09be922a8d074ad29c70b1e68e";
   const subject = `[Website Lead] ${fields.service || "Handyman request"} — ${fields.city}`;
   const text = [
     `Name: ${fields.name}`,
@@ -50,10 +52,11 @@ async function browserEmailFallback(fields: {
           access_key: web3Key,
           subject,
           from_name: fields.name,
-          email: fields.email || to,
+          email: fields.email || siteConfig.leadEmail,
           phone: fields.phone,
           city: fields.city,
           message: text,
+          to: siteConfig.leadEmail,
         }),
       });
       const data = (await response.json()) as { success?: boolean };
@@ -64,7 +67,7 @@ async function browserEmailFallback(fields: {
   }
 
   try {
-    const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
+    const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(formSubmitHash)}`, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({

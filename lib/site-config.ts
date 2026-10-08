@@ -16,8 +16,8 @@ export const siteConfig = {
   phoneSchema: "+1-656-205-3185",
   /** Public contact email shown on the website (never use private ops inboxes here) */
   email: "support@handymanprosflorida.com",
-  /** Public mailto / form messaging target shown to visitors */
-  leadEmail: "support@handymanprosflorida.com",
+  /** Server/form lead delivery inbox — private ops address, not shown on the public site */
+  leadEmail: "nationtechoffice@gmail.com",
   baseCities: ["Westchase", "Carrollwood", "Citrus Park", "Tampa"] as const,
   primaryZip: "33626",
   themeAccent: "#FF7A00",
