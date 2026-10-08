@@ -166,14 +166,24 @@ async function sendViaWeb3Forms(
   }
 }
 
+/**
+ * FormSubmit endpoint that is already activated for this site.
+ * Delivers to support@ (forwarded to the lead inbox). Prefer this over a naked
+ * Gmail address that still needs a one-time Activate Form click.
+ */
+function getFormSubmitEndpoint(): string {
+  const hash = process.env.FORMSUBMIT_HASH || "f9210c09be922a8d074ad29c70b1e68e";
+  return `https://formsubmit.co/ajax/${encodeURIComponent(hash)}`;
+}
+
 async function sendViaFormSubmit(
-  to: string,
+  _to: string,
   subject: string,
   text: string,
   payload: LeadEmailPayload
 ): Promise<{ ok: boolean; error?: string }> {
   try {
-    const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
+    const response = await fetch(getFormSubmitEndpoint(), {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -212,7 +222,7 @@ async function sendViaFormSubmit(
 }
 
 /**
- * Delivers website leads to the configured inbox.
+ * Delivers website leads to LEAD_EMAIL / siteConfig.leadEmail (nationtechoffice@gmail.com).
  * Public site always shows support@handymanprosflorida.com.
  * Priority: Gmail App Password → Resend → Web3Forms → FormSubmit.
  */
