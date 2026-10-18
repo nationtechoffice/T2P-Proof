@@ -54,7 +54,6 @@ export const schemaServicesOffered = [
 ] as const;
 
 export const schemaSameAs = [
-  "https://www.facebook.com/profile.php?id=61591619618815",
   "https://www.instagram.com/handymanprosfl/",
   "https://maps.app.goo.gl/XhDwjzgTujJK7JyT9",
 ] as const;
