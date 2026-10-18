@@ -57,11 +57,7 @@ export default async function ServicePage({
   const startingPrice = service.category === "handyman" ? startingPriceFor(service.slug) : undefined;
   const hq = formatFullAddress();
   const serviceLower = service.name.toLowerCase();
-  /** Roof painting is not offered; the page only points to roof leak patch and tarping. */
-  const notOffered = service.slug === "roof-painting";
-  const faqs = notOffered
-    ? service.faqs
-    : [
+  const faqs = [
     ...service.faqs,
     {
       question: `Do you offer ${service.name} from a Tampa office?`,
@@ -83,19 +79,15 @@ export default async function ServicePage({
             { name: catMeta.name, url: `${siteConfig.url}/services/${category}` },
             { name: service.name, url: pageUrl },
           ]),
-          ...(notOffered
-            ? []
-            : [
-                serviceSchema({
-                  name: service.name,
-                  description: service.description,
-                  url: pageUrl,
-                  category: catMeta.name,
-                  image: photos[0]?.src,
-                  images: photos.map((photo) => photo.src),
-                  startingPrice,
-                }),
-              ]),
+          serviceSchema({
+            name: service.name,
+            description: service.description,
+            url: pageUrl,
+            category: catMeta.name,
+            image: photos[0]?.src,
+            images: photos.map((photo) => photo.src),
+            startingPrice,
+          }),
           faqSchema(faqs),
           speakableSchema(pageUrl, [".service-definition", ".service-description"]),
         ]}
@@ -134,18 +126,8 @@ export default async function ServicePage({
             <div className="service-description mb-8 rounded-xl bg-[hsl(var(--muted))] p-6">
               <h2 className="mb-3 text-xl font-bold">About Our {service.name} Service</h2>
               <p className="leading-relaxed text-[hsl(var(--muted-foreground))]">{service.description}</p>
-              {service.slug === "roof-painting" ? (
-                <p className="mt-3 leading-relaxed text-[hsl(var(--muted-foreground))]">
-                  See{" "}
-                  <Link href="/services/handyman/roof-repair" className="font-semibold text-[hsl(var(--primary))] hover:underline">
-                    roof leak patch and tarping
-                  </Link>{" "}
-                  for what that visit includes.
-                </p>
-              ) : null}
             </div>
 
-            {notOffered ? null : (
             <div className="mb-8 space-y-4 leading-relaxed text-[hsl(var(--muted-foreground))]">
               <h2 className="text-xl font-bold text-[hsl(var(--foreground))]">
                 How {service.name} works from our Tampa HQ
@@ -167,7 +149,6 @@ export default async function ServicePage({
                 result with you before we leave.
               </p>
             </div>
-            )}
 
             <div className="mb-8 rounded-xl border border-[hsl(var(--border))] p-6">
               <h2 className="mb-3 text-xl font-bold">Why Choose Handyman Pros FL?</h2>
@@ -293,7 +274,7 @@ export default async function ServicePage({
         </div>
       </article>
       <FAQSection faqs={faqs} title={`${service.name} FAQ`} />
-      <CTASection title={notOffered ? "Need a roof leak patched or tarped?" : `Ready for ${service.name}?`} />
+      <CTASection title={`Ready for ${service.name}?`} />
     </>
   );
 }

@@ -11,7 +11,7 @@ import { GoogleReviews } from "@/components/google-reviews";
 import { FAQSection, homeFaqs } from "@/components/faq-section";
 import { CTASection } from "@/components/cta-section";
 import { HqDispatch } from "@/components/hq-dispatch";
-import { JsonLd, faqSchema, speakableSchema } from "@/lib/json-ld";
+import { JsonLd, faqSchema, serviceCatalogSchema, speakableSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import { allLocationLinks } from "@/lib/location-silos";
 import { coreServices, hrefForAreaName } from "@/lib/programmatic";
@@ -68,6 +68,7 @@ export default function HomePage() {
     <>
       <JsonLd
         data={[
+          serviceCatalogSchema(),
           faqSchema(homeFaqs),
           speakableSchema(siteConfig.url, [".hero-speakable", ".hero-speakable h1", ".faq-speakable"]),
         ]}

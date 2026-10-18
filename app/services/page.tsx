@@ -5,7 +5,7 @@ import { CTASection } from "@/components/cta-section";
 import { allServices, categoryMeta } from "@/lib/services";
 import { coreServices, targetLocations } from "@/lib/programmatic";
 import { serviceTitle, serviceDescription } from "@/lib/instant-estimate";
-import { JsonLd, breadcrumbSchema, imageGallerySchema, servicesItemListSchema } from "@/lib/json-ld";
+import { JsonLd, breadcrumbSchema, imageGallerySchema, serviceCatalogSchema, servicesItemListSchema } from "@/lib/json-ld";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import type { ServiceCategory } from "@/lib/site-config";
@@ -47,6 +47,7 @@ export default function ServicesPage() {
     <>
       <JsonLd
         data={[
+          serviceCatalogSchema(),
           breadcrumbSchema([
             { name: "Home", url: siteConfig.url },
             { name: "Services", url: `${siteConfig.url}/services` },

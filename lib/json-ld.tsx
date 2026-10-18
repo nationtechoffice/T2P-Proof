@@ -95,19 +95,6 @@ export function localBusinessSchema() {
       "@type": "Place",
       name: siteConfig.foundingLocation,
     },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Tampa Bay Home Services",
-      itemListElement: schemaServicesOffered.map((name, index) => ({
-        "@type": "Offer",
-        position: index + 1,
-        itemOffered: {
-          "@type": "Service",
-          name,
-          areaServed: schemaAreaServed.map((name) => areaServedNode(name)),
-        },
-      })),
-    },
     contactPoint: {
       "@type": "ContactPoint",
       telephone: schemaPhone,
@@ -126,6 +113,33 @@ export function localBusinessSchema() {
       name: instantEstimate.ctaLabel,
       description: instantEstimate.schemaDescription,
       target: `tel:${siteConfig.phoneE164}`,
+    },
+  };
+}
+
+/**
+ * Full Tampa Bay service list for the business node. Only the homepage and /services carry it;
+ * city and service pages keep their own Service node instead (owner, Oct 18).
+ */
+export function serviceCatalogSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+    "@id": `${siteConfig.url}/#organization`,
+    name: "Handyman Pros FL",
+    url: schemaUrl,
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Tampa Bay Home Services",
+      itemListElement: schemaServicesOffered.map((name, index) => ({
+        "@type": "Offer",
+        position: index + 1,
+        itemOffered: {
+          "@type": "Service",
+          name,
+          areaServed: schemaAreaServed.map((name) => areaServedNode(name)),
+        },
+      })),
     },
   };
 }

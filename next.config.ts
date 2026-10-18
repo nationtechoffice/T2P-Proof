@@ -25,6 +25,9 @@ const legacyRedirects = [
   { source: "/handyman-seffner-fl/", destination: "/locations/brandon", permanent: true as const },
   { source: "/handyman-south-tampa-fl", destination: "/locations/tampa", permanent: true as const },
   { source: "/handyman-south-tampa-fl/", destination: "/locations/tampa", permanent: true as const },
+  // Oct 18: roof work is leak patch and tarping only; roof painting is not offered.
+  { source: "/services/painting/roof-painting", destination: "/services/handyman/roof-repair", permanent: true as const },
+  { source: "/services/painting/roof-painting/", destination: "/services/handyman/roof-repair", permanent: true as const },
   // Oct 18: duplicate service URLs merged into the main service pages.
   { source: "/services/fence-handyman", destination: "/services/fence", permanent: true as const },
   { source: "/services/fence-handyman/", destination: "/services/fence", permanent: true as const },

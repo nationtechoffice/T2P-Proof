@@ -33,6 +33,7 @@ const SITEMAP_FORBIDDEN_PATHS = [
   "/services/fence-handyman",
   "/services/handyman/painting",
   "/services/handyman/tile-work-installation",
+  "/services/painting/roof-painting",
   "/locations/westchase",
   "/services/handyman/paint-indoors",
   "/services/paint-indoors",
