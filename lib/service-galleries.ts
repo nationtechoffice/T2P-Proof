@@ -65,6 +65,10 @@ const drywallGallery: ServicePhoto[] = [
     src: "/images/work/handyman-pros-florida-tampa-bay-built-in-console-drywall.webp",
     alt: "Built-in drawer cabinets and a console under construction against a patched drywall wall, Handyman Pros Florida",
   },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-bathroom-plumbing-drywall-repair.webp",
+    alt: "Handyman Pros Florida technician repairing bathroom plumbing through an opened drywall wall behind a removed vanity in a Tampa Bay home",
+  },
 ];
 
 const fanGallery: ServicePhoto[] = [
@@ -113,12 +117,24 @@ const tileGallery: ServicePhoto[] = [
     src: "/images/work/handyman-pros-florida-tampa-bay-large-format-tile-floor-installation.webp",
     alt: "Large light-colored floor tiles installed across a kitchen and living area under renovation, Handyman Pros Florida",
   },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-marble-look-tile-floor-doorway.webp",
+    alt: "New marble-look porcelain floor tile at a doorway beside protected wood flooring in a Tampa Bay home, Handyman Pros Florida",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-marble-look-tile-floor-alcove.webp",
+    alt: "Marble-look floor tile installed in a small alcove with a floor drain in a Tampa Bay home, Handyman Pros Florida",
+  },
 ];
 
 const plumbingGallery: ServicePhoto[] = [
   {
     src: "/images/work/under-sink-plumbing.jpg",
     alt: "Under-sink plumbing fixture repair in a Tampa kitchen",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-bathroom-plumbing-drywall-repair.webp",
+    alt: "Handyman Pros Florida technician repairing bathroom plumbing through an opened drywall wall behind a removed vanity in a Tampa Bay home",
   },
 ];
 
@@ -130,6 +146,14 @@ const flooringGallery: ServicePhoto[] = [
   {
     src: "/images/work/handyman-pros-florida-tampa-bay-large-format-tile-floor-installation.webp",
     alt: "Large light-colored tile flooring in a kitchen and living area under renovation, Handyman Pros Florida",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-marble-look-tile-floor-doorway.webp",
+    alt: "New marble-look porcelain floor tile at a doorway beside protected wood flooring in a Tampa Bay home, Handyman Pros Florida",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-marble-look-tile-floor-alcove.webp",
+    alt: "Marble-look floor tile installed in a small alcove with a floor drain in a Tampa Bay home, Handyman Pros Florida",
   },
 ];
 
@@ -156,13 +180,39 @@ const paintingGallery: ServicePhoto[] = [
     src: "/images/work/exterior-trim-gutters.jpg",
     alt: "Exterior soffit trim paint and gutter detail on a Tampa Bay home",
   },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-interior-painting-wainscoting-room.webp",
+    alt: "Handyman Pros Florida technician on an interior painting job in a room with white wainscoting in a Tampa Bay home",
+  },
 ];
 
-const generalRepairsGallery: ServicePhoto[] = homeRepairJobPhotos.map((photo) => ({
-  src: photo.jpg,
-  alt: photo.alt,
-  portrait: true,
-}));
+const generalRepairsGallery: ServicePhoto[] = [
+  ...homeRepairJobPhotos.map((photo) => ({
+    src: photo.jpg as string,
+    alt: photo.alt as string,
+    portrait: true,
+  })),
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-closet-shelving-install.webp",
+    alt: "Closet with adjustable white shelves on wall standards installed by Handyman Pros Florida in a Tampa Bay home",
+    portrait: true,
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-front-porch-repair.webp",
+    alt: "Handyman Pros Florida technician working on a front porch floor and steps at a Tampa Bay home",
+    portrait: true,
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-window-trim-install.webp",
+    alt: "Handyman Pros Florida technician fitting interior trim around a double-hung window in a Tampa Bay home",
+    portrait: true,
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-window-installation.webp",
+    alt: "Handyman Pros Florida technician installing a window with a cordless drill in a Tampa Bay home",
+    portrait: true,
+  },
+];
 
 const sameDayGallery: ServicePhoto[] = [
   {
@@ -191,6 +241,10 @@ const electricalGallery: ServicePhoto[] = [
   {
     src: "/images/cinematic/service-ceiling-fan.jpg",
     alt: "Ceiling fan and light fixture swap at an existing box in Tampa",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-outlet-electrical-repair.webp",
+    alt: "Handyman Pros Florida technician working on a wall outlet box in a Tampa Bay home, shirt showing (656) 205-3185",
   },
 ];
 

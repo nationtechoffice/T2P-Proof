@@ -303,6 +303,60 @@ export const optimizedWorkStills = {
     width: 1600,
     height: 1200,
   },
+  "/images/work/handyman-pros-florida-tampa-bay-bathroom-plumbing-drywall-repair.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-bathroom-plumbing-drywall-repair.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-bathroom-plumbing-drywall-repair.avif",
+    width: 1200,
+    height: 1600,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-marble-look-tile-floor-doorway.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-marble-look-tile-floor-doorway.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-marble-look-tile-floor-doorway.avif",
+    width: 1600,
+    height: 1200,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-marble-look-tile-floor-alcove.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-marble-look-tile-floor-alcove.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-marble-look-tile-floor-alcove.avif",
+    width: 1600,
+    height: 1200,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-closet-shelving-install.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-closet-shelving-install.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-closet-shelving-install.avif",
+    width: 1200,
+    height: 1600,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-front-porch-repair.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-front-porch-repair.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-front-porch-repair.avif",
+    width: 1600,
+    height: 1200,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-outlet-electrical-repair.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-outlet-electrical-repair.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-outlet-electrical-repair.avif",
+    width: 1200,
+    height: 1600,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-window-trim-install.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-window-trim-install.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-window-trim-install.avif",
+    width: 1200,
+    height: 1600,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-interior-painting-wainscoting-room.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-interior-painting-wainscoting-room.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-interior-painting-wainscoting-room.avif",
+    width: 1200,
+    height: 1600,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-window-installation.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-window-installation.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-window-installation.avif",
+    width: 1200,
+    height: 1600,
+  },
 } as const;
 
 export function optimizedStill(src: string) {
