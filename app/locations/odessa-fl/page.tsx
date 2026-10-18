@@ -1,0 +1,141 @@
+import type { Metadata } from "next";
+import { CityBriefPage, H2, H3, L, type CityBrief } from "@/components/city-brief-page";
+import { buildMetadata } from "@/lib/seo";
+
+const path = "/locations/odessa-fl";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Handyman in Odessa, FL 33556 | Drywall, Painting, TVs",
+  description:
+    "Licensed & insured Odessa handyman, 25 min from our Westchase base. Drywall patch from $75, furniture assembly from $65. Free estimates. (656) 205-3185.",
+  path,
+  keywords: ["handyman odessa", "odessa handyman services", "Odessa FL handyman", "handyman 33556", "handyman near Starkey Ranch", "drywall repair odessa", "furniture assembly odessa", "interior painting odessa", "exterior painting odessa", "manitas en Odessa"],
+  exactTitle: true,
+});
+
+const faqs = [
+  { question: "Do you serve Odessa, FL?", answer: "Yes. Handyman Pros FL is based in Westchase, about 25 minutes from Odessa, and serves Starkey Ranch and the SR 54 corridor. Call (656) 205-3185." },
+  { question: "How much does a handyman cost in Odessa?", answer: "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair at $199. A same-day service call starts at $99." },
+  { question: "How much does painting cost in Odessa?", answer: "Painting is quoted after a free estimate because room size, wall condition and paint choice change the price. Call (656) 205-3185 to set it up." },
+  { question: "Are estimates free?", answer: "Yes. Free estimates on all jobs." },
+  { question: "Can you come the same day?", answer: "Often, yes. Odessa is one of the closest Pasco areas to our Westchase base. A same-day service call starts at $99." },
+  { question: "Are you licensed and insured?", answer: "Yes, Handyman Pros FL is licensed and insured. If a job needs a permit or a specialist trade, we tell you before work starts." },
+  { question: "¿Hablan español?", answer: "Sí. Hablamos español. Llame al (656) 205-3185." },
+];
+
+const grid = [
+  ["/services/drywall-repair", "Drywall repair"],
+  ["/services/painting", "Painting"],
+  ["/services/handyman/interior-painting", "Interior painting"],
+  ["/services/handyman/exterior-painting", "Exterior painting"],
+  ["/services/furniture-assembly", "Furniture assembly"],
+  ["/services/tv-wall-mounting", "TV wall mounting"],
+  ["/services/electrical-fixture-installation", "Fans and light fixtures"],
+  ["/services/same-day-handyman", "Same-day handyman"],
+  ["/services/handyman/roof-repair", "Roof leak patch and tarping"],
+  ["/services/gutter-installation", "Gutter installation"],
+  ["/services/fence/fence-repairs-maintenance", "Fence repairs"],
+  ["/contact", "Request an estimate"],
+];
+
+const brief: CityBrief = {
+  path,
+  city: "Odessa",
+  county: "Pasco County",
+  postalCodes: ["33556"],
+  breadcrumb: "Odessa, FL",
+  h1: "Handyman in Odessa, FL",
+  opening:
+    "Handyman Pros FL is a licensed and insured, owner-operated handyman service based in Westchase, about 25 minutes from Odessa, handling drywall patches, painting, furniture assembly and TV mounting in Starkey Ranch and along SR 54. A drywall patch starts at $75, furniture assembly at $65, and estimates are free. Call (656) 205-3185.",
+  priceParagraph:
+    "Small jobs like shelves and curtain rods start at $49. Furniture assembly starts at $65. A drywall patch starts at $75. A ceiling fan or light fixture install starts at $79. TV mounting starts at $89. A same-day service call starts at $99. Tile repair starts at $199. Painting is quoted after a free estimate. Free estimates on all jobs.",
+  faqTitle: "Handyman in Odessa FAQ",
+  ctaTitle: "Get a free Odessa estimate",
+  faqs,
+  body: (
+    <>
+      <H2>Close enough for same-day in Odessa</H2>
+      <p>
+        Handyman Pros FL is one owner-operator, founded in 2026, working out of 12021 Tuscany Bay Dr, Tampa, FL 33626.
+        Westchase&apos;s 33626 ZIP borders Odessa&apos;s 33556, and the drive is about 15 miles, roughly 25 minutes. That
+        makes Odessa one of the easiest places for me to fit in a same-day visit when the schedule allows. A same-day
+        service call starts at $99. Call in the morning with a short list and there&apos;s a good chance it gets done
+        that afternoon.
+      </p>
+
+      <H2>Odessa&apos;s most-requested jobs</H2>
+      <H3>Drywall repair in Odessa</H3>
+      <p>
+        Newer homes settle, and the first few years bring hairline cracks at corners, holes where a door handle hit the
+        wall, and patches left behind when a fixture or TV moves. I cut out the damage, patch, tape, texture to match
+        and prime so it&apos;s ready for paint. A drywall patch starts at $75. See{" "}
+        <L href="/services/drywall-repair">drywall repair</L>.
+      </p>
+      <H3>Interior and exterior painting in Odessa</H3>
+      <p>
+        Rooms, accent walls, doors and trim inside, plus exterior touch-ups on doors, trim and small sections. Painting
+        is quoted after a free estimate. Many Odessa communities are deed-restricted. Check your HOA&apos;s color and
+        exterior-change rules before exterior painting. More on <L href="/services/painting">painting</L>,{" "}
+        <L href="/services/handyman/interior-painting">interior painting</L> and{" "}
+        <L href="/services/handyman/exterior-painting">exterior painting</L>.
+      </p>
+      <H3>Furniture assembly in Odessa</H3>
+      <p>
+        Move-in week in a new Starkey Ranch home usually means a stack of flat-pack boxes: bed frames, dressers, desks,
+        bookcases and patio sets. I assemble them, anchor tall pieces to the wall where needed and haul the boxes to
+        your bin. Furniture assembly starts at $65. See <L href="/services/furniture-assembly">furniture assembly</L>.
+      </p>
+      <H3>TV mounting, fans and fixtures</H3>
+      <p>
+        TV mounting starts at $89. A ceiling fan or light fixture install starts at $79. See{" "}
+        <L href="/services/tv-wall-mounting">TV wall mounting</L> and{" "}
+        <L href="/services/electrical-fixture-installation">fixture installation</L>.
+      </p>
+
+      <H2>Odessa areas we cover</H2>
+      <p>
+        Pasco-side Odessa: Starkey Ranch along Starkey Blvd and Gunn Hwy/Rangeland Blvd, the SR 54 corridor, and homes
+        near the Suncoast Parkway (SR 589) exit at SR 54. Odessa&apos;s 33556 ZIP crosses two counties. If your Odessa
+        address is in Hillsborough, see our <L href="/locations/keystone">Keystone page</L>. Nearby, I also cover{" "}
+        <L href="/locations/westchase-fl">Westchase</L>, <L href="/locations/citrus-park-fl">Citrus Park</L>,{" "}
+        <L href="/locations/land-o-lakes">Land O&apos; Lakes</L>, <L href="/locations/lutz">Lutz</L> and{" "}
+        <L href="/locations/new-port-richey-fl">New Port Richey</L>.
+      </p>
+
+      <H2>A little Odessa history</H2>
+      <p>
+        Odessa was named in the 1880s by Peter Demens, the Russian-born developer of the Orange Belt Railway who also
+        founded St. Petersburg. The area was ranches and horse properties before suburban growth arrived along SR 54.
+        The Starkey family ranch land, where Jay Starkey began ranching in 1922, is now the Jay B. Starkey Wilderness
+        Park and the Starkey Ranch community.
+      </p>
+
+      <H2>After storms: leak patch and tarping, gutters, fences</H2>
+      <p>
+        Hurricane season runs June 1 to November 30. After a storm, I handle roof{" "}
+        <L href="/services/handyman/roof-repair">leak patch and tarping</L>, loose{" "}
+        <L href="/services/gutter-installation">gutter sections</L> and damaged{" "}
+        <L href="/services/fence/fence-repairs-maintenance">fence panels</L>. I don&apos;t replace roofs.
+      </p>
+
+      <H2>Handyman services in Odessa</H2>
+      <ul className="grid gap-2 sm:grid-cols-2">
+        {grid.map(([href, label]) => (
+          <li key={href}>
+            <L href={href}>{label}</L>
+          </li>
+        ))}
+      </ul>
+
+      <H2>Licensed and insured</H2>
+      <p>
+        Handyman Pros FL is licensed and insured. If a job needs a permit or a specialist trade, you&apos;ll hear that
+        before work starts. Hablamos español.
+      </p>
+    </>
+  ),
+};
+
+export default function OdessaPage() {
+  return <CityBriefPage brief={brief} />;
+}
