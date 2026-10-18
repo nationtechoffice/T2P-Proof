@@ -330,8 +330,8 @@ export const optimizedWorkStills = {
   "/images/work/handyman-pros-florida-tampa-bay-front-porch-repair.webp": {
     webp: "/images/work/handyman-pros-florida-tampa-bay-front-porch-repair.webp",
     avif: "/images/work/handyman-pros-florida-tampa-bay-front-porch-repair.avif",
-    width: 1600,
-    height: 1200,
+    width: 1200,
+    height: 900,
   },
   "/images/work/handyman-pros-florida-tampa-bay-outlet-electrical-repair.webp": {
     webp: "/images/work/handyman-pros-florida-tampa-bay-outlet-electrical-repair.webp",

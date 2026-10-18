@@ -83,6 +83,7 @@ export default async function ServicePage({
             url: pageUrl,
             category: catMeta.name,
             image: photos[0]?.src,
+            images: photos.map((photo) => photo.src),
           }),
           faqSchema(faqs),
           speakableSchema(pageUrl, [".service-definition", ".service-description"]),

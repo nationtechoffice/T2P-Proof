@@ -5,7 +5,7 @@ import { CTASection } from "@/components/cta-section";
 import { allServices, categoryMeta } from "@/lib/services";
 import { coreServices, targetLocations } from "@/lib/programmatic";
 import { serviceTitle, serviceDescription } from "@/lib/instant-estimate";
-import { JsonLd, breadcrumbSchema, servicesItemListSchema } from "@/lib/json-ld";
+import { JsonLd, breadcrumbSchema, imageGallerySchema, servicesItemListSchema } from "@/lib/json-ld";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import type { ServiceCategory } from "@/lib/site-config";
@@ -51,6 +51,11 @@ export default function ServicesPage() {
             { name: "Services", url: `${siteConfig.url}/services` },
           ]),
           servicesItemListSchema(featuredList),
+          imageGallerySchema({
+            name: "Recent home repair photos",
+            url: `${siteConfig.url}/services`,
+            photos: galleryForPage("general-repairs"),
+          }),
         ]}
       />
       <Breadcrumbs items={[{ label: "Services" }]} />

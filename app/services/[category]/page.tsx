@@ -8,7 +8,7 @@ import { categoryMeta, getServicesByCategory } from "@/lib/services";
 import { coreServices, getCoreService, serviceMetaDescription, serviceMetaTitle } from "@/lib/programmatic";
 import { buildMetadata } from "@/lib/seo";
 import type { ServiceCategory } from "@/lib/site-config";
-import { JsonLd, breadcrumbSchema } from "@/lib/json-ld";
+import { JsonLd, breadcrumbSchema, imageGallerySchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import { InternalLinkHub } from "@/components/internal-link-hub";
 import { ServicePhotoGallery } from "@/components/service-photo-gallery";
@@ -72,11 +72,22 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   return (
     <>
       <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", url: siteConfig.url },
-          { name: "Services", url: `${siteConfig.url}/services` },
-          { name: meta.name, url: `${siteConfig.url}/services/${category}` },
-        ])}
+        data={[
+          breadcrumbSchema([
+            { name: "Home", url: siteConfig.url },
+            { name: "Services", url: `${siteConfig.url}/services` },
+            { name: meta.name, url: `${siteConfig.url}/services/${category}` },
+          ]),
+          ...(cat === "handyman" || cat === "painting"
+            ? [
+                imageGallerySchema({
+                  name: cat === "handyman" ? "Home repair photos in Tampa" : `${meta.name} photos in Tampa`,
+                  url: `${siteConfig.url}/services/${category}`,
+                  photos: cat === "handyman" ? galleryForPage("general-repairs") : galleryForPage(cat),
+                }),
+              ]
+            : []),
+        ]}
       />
       <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: meta.name }]} />
       <section className="section-padding">

@@ -51,6 +51,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
             category: "Handyman",
             areaName: "Tampa, FL",
             image: primaryImage,
+            images: photos.map((photo) => photo.src),
             offer: service.offer,
           }),
           faqSchema(service.faqs),

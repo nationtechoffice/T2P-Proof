@@ -181,14 +181,16 @@ export function serviceSchema(service: {
   category: string;
   areaName?: string;
   image?: string;
+  /** Extra on-page job photos. With more than one photo the schema image becomes a list. */
+  images?: readonly string[];
   offer?: { low: number; high: number; description: string };
 }) {
   const areaName = service.areaName || "Tampa, FL";
-  const image = service.image
-    ? service.image.startsWith("http")
-      ? service.image
-      : `${siteConfig.url}${service.image}`
-    : undefined;
+  const absolute = (src: string) => (src.startsWith("http") ? src : `${siteConfig.url}${src}`);
+  const imageList = [
+    ...new Set([service.image, ...(service.images ?? [])].filter((src): src is string => Boolean(src)).map(absolute)),
+  ];
+  const image = imageList.length > 1 ? imageList : imageList[0];
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -356,5 +358,25 @@ export function speakableSchema(url: string, cssSelectors: string[]) {
       "@type": "SpeakableSpecification",
       cssSelector: cssSelectors,
     },
+  };
+}
+
+/** ImageGallery for hub pages that show a job-photo gallery but have no Service node. */
+export function imageGallerySchema(gallery: {
+  name: string;
+  url: string;
+  photos: readonly { src: string; alt: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: gallery.name,
+    url: gallery.url,
+    image: gallery.photos.map((photo) => (photo.src.startsWith("http") ? photo.src : `${siteConfig.url}${photo.src}`)),
+    associatedMedia: gallery.photos.map((photo) => ({
+      "@type": "ImageObject",
+      contentUrl: photo.src.startsWith("http") ? photo.src : `${siteConfig.url}${photo.src}`,
+      name: photo.alt,
+    })),
   };
 }
