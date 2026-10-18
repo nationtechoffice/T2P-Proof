@@ -75,7 +75,7 @@ The final price is quoted after you describe the job. Always get a written estim
 
 ## Why Choose Handyman Pros Florida?
 
-Handyman Pros FL serves homeowners across Tampa Bay — including Westchase, Carrollwood, Citrus Park, and Hillsborough County — with licensed, insured professionals. We offer free estimates, transparent pricing, and a satisfaction guarantee on every job. Call us at ${siteConfig.phone} for your free quote today.`,
+Handyman Pros FL serves homeowners across Tampa Bay — including Westchase, Carrollwood, Citrus Park, and Hillsborough County — with licensed, insured professionals. We offer free estimates and transparent pricing. Call us at ${siteConfig.phone} for your free quote today.`,
   },
   {
     slug: "best-exterior-paint-florida-climate",

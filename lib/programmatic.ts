@@ -156,7 +156,7 @@ export const coreServices: CoreService[] = [
       {
         question: "How much does drywall repair cost in Tampa?",
         answer:
-          "Small Tampa drywall patches often start as a flat-rate visit. Larger holes, ceilings, and texture matching are quoted after we see photos. Typical small patches in the Bay area run in the low hundreds; full-wall work costs more.",
+          "Small Tampa drywall patches often start as a flat-rate visit. Larger holes, ceilings, and texture matching are quoted after we see photos. A drywall patch in Tampa starts at $75; full-wall work costs more.",
       },
       {
         question: "Can you match popcorn or knockdown texture?",

@@ -126,6 +126,15 @@ export default async function ServicePage({
             <div className="service-description mb-8 rounded-xl bg-[hsl(var(--muted))] p-6">
               <h2 className="mb-3 text-xl font-bold">About Our {service.name} Service</h2>
               <p className="leading-relaxed text-[hsl(var(--muted-foreground))]">{service.description}</p>
+              {service.slug === "roof-painting" ? (
+                <p className="mt-3 leading-relaxed text-[hsl(var(--muted-foreground))]">
+                  See{" "}
+                  <Link href="/services/handyman/roof-repair" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    roof leak patch and tarping
+                  </Link>{" "}
+                  for what that visit includes.
+                </p>
+              ) : null}
             </div>
 
             <div className="mb-8 space-y-4 leading-relaxed text-[hsl(var(--muted-foreground))]">
@@ -156,7 +165,6 @@ export default async function ServicePage({
                 <li>✓ Licensed and insured Tampa Bay professionals</li>
                 <li>✓ Free, no-obligation estimates</li>
                 <li>✓ One Westchase / Tampa headquarters — we come to you</li>
-                <li>✓ Satisfaction guaranteed on every job</li>
                 <li>✓ Same-day and 24/7 service available</li>
               </ul>
               <p className="mt-4 text-sm text-[hsl(var(--muted-foreground))]">

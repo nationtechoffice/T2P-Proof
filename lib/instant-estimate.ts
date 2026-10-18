@@ -35,9 +35,12 @@ const exactTitles: Record<string, string> = {
   "Plumbing Fixture Repair": "Plumbing Fixtures Tampa | Plomería Menor",
   "Fence Handyman": "Fence Handyman Tampa FL | Fencing Handyman",
   "Roof Leak Patch and Tarping": "Roof Leak Patch and Tarping in Tampa, FL",
+  "Roof Painting": "Roof Painting Tampa FL | Leak Patch & Tarping Only",
 };
 
 const exactMetas: Record<string, string> = {
+  "Roof Painting":
+    "Handyman Pros FL does not paint or coat roofs. We patch roof leaks and tarp storm damage in Tampa Bay. Licensed & insured. Call (656) 205-3185.",
   "Roof Leak Patch and Tarping":
     "Roof leak patch and tarping in Tampa Bay: leaks sealed at vents, flashing and cracked tiles, damaged sections tarped. Licensed & insured. Call (656) 205-3185.",
   "TV Wall Mounting":

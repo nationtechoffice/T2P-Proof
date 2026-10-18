@@ -99,7 +99,7 @@ export default function HomePage() {
               </p>
               <ul className="space-y-3">
                 {[
-                  "Licensed, bonded, and insured local Tampa experts",
+                  "Licensed and insured local Tampa experts",
                   "Honest, upfront pricing with no surprise fees",
                   "Mobile team dispatched from Westchase HQ",
                   "60+ specialized services from one crew",
