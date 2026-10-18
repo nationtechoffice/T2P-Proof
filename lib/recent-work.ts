@@ -16,6 +16,8 @@ export interface RecentWorkPhoto {
   /** Set only when the manifest names a service page that already exists. */
   href?: string;
   linkLabel?: string;
+  /** Show on /work only, not in the homepage recent-work strip. */
+  workPageOnly?: boolean;
 }
 
 /**
@@ -348,5 +350,50 @@ export const recentWorkPhotos: RecentWorkPhoto[] = [
     caption: "Masked room ready for drywall work",
     href: "/services/drywall-repair",
     linkLabel: "Drywall repair",
+  },
+  {
+    slug: "roof-leak-patch-vent-sealing",
+    webp: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-sealing.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-sealing.avif",
+    thumb: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-sealing-thumb.webp",
+    width: 908,
+    height: 1200,
+    thumbWidth: 800,
+    thumbHeight: 1058,
+    alt: "Handyman Pros Florida crew member sealing around a roof vent on a clay barrel tile roof to patch a leak in the Tampa Bay area",
+    caption: "Sealing around a roof vent on a clay tile roof to stop a leak.",
+    href: "/services/handyman/roof-repair",
+    linkLabel: "Roof leak patch and tarping",
+    workPageOnly: true,
+  },
+  {
+    slug: "roof-leak-patch-vent-mortar-patch",
+    webp: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-mortar-patch.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-mortar-patch.avif",
+    thumb: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-mortar-patch-thumb.webp",
+    width: 908,
+    height: 1200,
+    thumbWidth: 800,
+    thumbHeight: 1058,
+    alt: "Handyman Pros Florida crew member patching mortar around a roof vent on a clay tile roof in the Tampa Bay area",
+    caption: "Patching mortar around a roof vent on a clay tile roof.",
+    href: "/services/handyman/roof-repair",
+    linkLabel: "Roof leak patch and tarping",
+    workPageOnly: true,
+  },
+  {
+    slug: "roof-leak-patch-tarp-sandbags",
+    webp: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-tarp-sandbags.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-tarp-sandbags.avif",
+    thumb: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-tarp-sandbags-thumb.webp",
+    width: 908,
+    height: 1200,
+    thumbWidth: 800,
+    thumbHeight: 1058,
+    alt: "Blue tarp secured with sandbags over a damaged section of a clay tile roof by Handyman Pros Florida in the Tampa Bay area",
+    caption: "Roof tarp held down with sandbags over a damaged tile section.",
+    href: "/services/handyman/roof-repair",
+    linkLabel: "Roof leak patch and tarping",
+    workPageOnly: true,
   },
 ];

@@ -15,6 +15,7 @@ import { CheckCircle } from "lucide-react";
 import { InternalLinkHub } from "@/components/internal-link-hub";
 import { ServicePhotoGallery } from "@/components/service-photo-gallery";
 import { galleryForPage } from "@/lib/service-galleries";
+import { startingPriceFor } from "@/lib/starting-prices";
 import { authorityHubLinks, moneyNearbyLinks } from "@/lib/internal-links";
 import { moneyNeighborhoodSpots } from "@/lib/tampa-neighborhoods";
 import { NeighborhoodBlocks } from "@/components/neighborhood-blocks";
@@ -23,6 +24,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
   const pageUrl = `${siteConfig.url}/services/${service.slug}`;
   const photos = galleryForPage(service.slug);
   const primaryImage = photos[0]?.src;
+  const startingPrice = startingPriceFor(service.slug);
   const relatedServices = [
     authorityHubLinks.drywall,
     authorityHubLinks.tvMount,
@@ -53,6 +55,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
             image: primaryImage,
             images: photos.map((photo) => photo.src),
             offer: service.offer,
+            startingPrice,
           }),
           faqSchema(service.faqs),
           speakableSchema(pageUrl, ["h1", ".service-definition", ".faq-answer"]),
@@ -68,6 +71,11 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
             <p className="service-definition mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">
               {service.intro}
             </p>
+            {startingPrice ? (
+              <p className="service-price mb-6 text-lg font-semibold text-[hsl(var(--foreground))]">
+                {startingPrice.sentence} Free estimates over the phone.
+              </p>
+            ) : null}
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
               Instant Phone Estimates · 24/7 Tampa Bay
             </p>

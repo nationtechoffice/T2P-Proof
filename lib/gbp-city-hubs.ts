@@ -20,13 +20,22 @@ export const gbpCityHubs: TargetLocation[] = [
     intro:
       "Need a licensed Clearwater handyman for sliders, drywall, and TV mounts? Handyman Pros FL serves the beach, Coachman, and Countryside from one Westchase headquarters. Hablamos español.",
     directAnswer: `Handyman Pros Florida serves Clearwater with handyman repairs for sliding doors, drywall patches, TV mounts, and fixture swaps. Crews leave the only Westchase headquarters for Clearwater Beach, Island Estates, Coachman, and Countryside. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+    showStartingPrices: true,
     paragraphs: [
+      "Handyman Pros FL is a licensed, insured handyman crew that serves Clearwater, FL from its single Westchase headquarters in Tampa, with 24/7 phone estimates and Spanish-speaking staff.",
+      "Handyman jobs in Clearwater start at $49 for small jobs like shelves and curtain rods, $89 for TV mounting, and $75 for a drywall patch. Furniture assembly starts at $65, ceiling fan or light fixture installs start at $79, and tile repair or regrout starts at $199.",
       "Clearwater splits into two kinds of houses. Clearwater Beach and Island Estates are condos and low-rise buildings where salt air swells sliding doors and balcony hardware. Coachman and Countryside are mainland neighborhoods of single-family homes with the usual Florida stucco, lanais, and interior drywall.",
       "Beach visits are often a slider that will not lock, a drywall scar inside a rental, or a TV that has to sit level on a concrete or block wall. Mainland lists add ceiling fans at an existing box, fixture swaps, and a punch list before guests arrive. We do not run new circuits or open walls for new wiring.",
       "Cleveland Street and downtown are a short hop from those same stops. We are not a Clearwater storefront. The truck leaves Westchase and crosses to Pinellas on a planned route with Dunedin, Safety Harbor, and Largo.",
       `Call ${phone} for a Clearwater estimate. Licensed and insured. Open 24/7 for scheduling. Hablamos español on the same number.`,
     ],
     callouts: [
+      {
+        before: "A same-day handyman service call in Clearwater starts at $99, and same-day arrival depends on whether the crew already has a Pinellas stop that day. ",
+        href: "/services/same-day-handyman",
+        label: "Same-day handyman service",
+        after: " explains which jobs fit today and which ones get the next window.",
+      },
       {
         before: "Sticky beach sliders and mainland doors are a ",
         href: "/services/door-repair",
@@ -49,8 +58,32 @@ export const gbpCityHubs: TargetLocation[] = [
         answer: `Clearwater Beach, Island Estates, Coachman, Countryside, and downtown. Call ${phone} if your street is just outside those names.`,
       },
       {
+        question: "Are you a licensed and insured handyman in Clearwater?",
+        answer:
+          "Yes. Handyman Pros FL is licensed and insured. If a Clearwater job needs a permit or a specialist trade, such as new electrical circuits, we tell you before work starts.",
+      },
+      {
+        question: "How much does a handyman cost in Clearwater?",
+        answer:
+          "Small jobs like shelves and curtain rods start at $49, furniture assembly starts at $65, a drywall patch starts at $75, a ceiling fan or light fixture starts at $79, TV mounting starts at $89, a same-day service call starts at $99, and tile repair or regrout starts at $199. The final price is quoted after you describe the job.",
+      },
+      {
+        question: "Can I get a same-day handyman in Clearwater?",
+        answer:
+          "Often, when the crew already has a Pinellas stop that day. A same-day service call starts at $99. If today is full, we give you the next open window.",
+      },
+      {
+        question: "Do you mount TVs in Clearwater?",
+        answer:
+          "Yes. TV mounting in Clearwater starts at $89. We mount into studs, block, or concrete when the wall can hold the bracket.",
+      },
+      {
         question: "Do you speak Spanish in Clearwater?",
         answer: `Yes. Hablamos español. Call ${phone} and ask for Spanish if you want the estimate in Spanish.`,
+      },
+      {
+        question: "Are you open 24/7 for Clearwater?",
+        answer: `Yes. Call ${phone} any time for a Clearwater estimate.`,
       },
     ],
   },

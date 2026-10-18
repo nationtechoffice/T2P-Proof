@@ -184,6 +184,10 @@ export function serviceSchema(service: {
   /** Extra on-page job photos. With more than one photo the schema image becomes a list. */
   images?: readonly string[];
   offer?: { low: number; high: number; description: string };
+  /** Owner-approved starting price ("starts at"). Sets the Offer minPrice. */
+  startingPrice?: { amount: number; sentence: string };
+  /** Several starting prices, e.g. on a service-area page. Emitted as an OfferCatalog. */
+  startingPriceCatalog?: readonly { label: string; amount: number; sentence: string; href: string }[];
 }) {
   const areaName = service.areaName || "Tampa, FL";
   const absolute = (src: string) => (src.startsWith("http") ? src : `${siteConfig.url}${src}`);
@@ -225,6 +229,42 @@ export function serviceSchema(service: {
       servicePhone: siteConfig.phoneE164,
       serviceLocation: { "@id": `${siteConfig.url}/#organization` },
     },
+    ...(service.startingPriceCatalog && service.startingPriceCatalog.length > 0
+      ? {
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Starting prices",
+            itemListElement: service.startingPriceCatalog.map((price) => ({
+              "@type": "Offer",
+              name: price.label,
+              description: price.sentence,
+              url: `${siteConfig.url}${price.href}`,
+              priceCurrency: "USD",
+              priceSpecification: {
+                "@type": "PriceSpecification",
+                priceCurrency: "USD",
+                minPrice: price.amount,
+              },
+            })),
+          },
+        }
+      : {}),
+    ...(service.startingPrice && !service.offer
+      ? {
+          offers: {
+            "@type": "Offer",
+            url: service.url,
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            description: service.startingPrice.sentence,
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              priceCurrency: "USD",
+              minPrice: service.startingPrice.amount,
+            },
+          },
+        }
+      : {}),
     ...(service.offer
       ? {
           offers: {
@@ -236,7 +276,7 @@ export function serviceSchema(service: {
             priceSpecification: {
               "@type": "PriceSpecification",
               priceCurrency: "USD",
-              minPrice: service.offer.low,
+              minPrice: service.startingPrice?.amount ?? service.offer.low,
               maxPrice: service.offer.high,
             },
           },

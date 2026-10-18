@@ -357,6 +357,24 @@ export const optimizedWorkStills = {
     width: 1200,
     height: 1600,
   },
+  "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-sealing.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-sealing.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-sealing.avif",
+    width: 908,
+    height: 1200,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-mortar-patch.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-mortar-patch.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-mortar-patch.avif",
+    width: 908,
+    height: 1200,
+  },
+  "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-tarp-sandbags.webp": {
+    webp: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-tarp-sandbags.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-tarp-sandbags.avif",
+    width: 908,
+    height: 1200,
+  },
 } as const;
 
 export function optimizedStill(src: string) {

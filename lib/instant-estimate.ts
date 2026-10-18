@@ -34,9 +34,12 @@ const exactTitles: Record<string, string> = {
   "Electrical Fixture Installation": "Electrical Fixtures Tampa | Electricidad Menor",
   "Plumbing Fixture Repair": "Plumbing Fixtures Tampa | Plomería Menor",
   "Fence Handyman": "Fence Handyman Tampa FL | Fencing Handyman",
+  "Roof Leak Patch and Tarping": "Roof Leak Patch and Tarping in Tampa, FL",
 };
 
 const exactMetas: Record<string, string> = {
+  "Roof Leak Patch and Tarping":
+    "Roof leak patch and tarping in Tampa Bay: leaks sealed at vents, flashing and cracked tiles, damaged sections tarped. Licensed & insured. Call (656) 205-3185.",
   "TV Wall Mounting":
     "Instalación de TV in Tampa by licensed & insured pros. Level mounts, clean cable runs, same-day Westchase dispatch. Call (656) 205-3185 today.",
   "Drywall Repair":

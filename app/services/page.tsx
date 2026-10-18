@@ -12,6 +12,7 @@ import type { ServiceCategory } from "@/lib/site-config";
 import { Wrench, Paintbrush, Fence } from "lucide-react";
 import { ServicePhotoGallery } from "@/components/service-photo-gallery";
 import { galleryForPage } from "@/lib/service-galleries";
+import { startingPriceList } from "@/lib/starting-prices";
 
 export const metadata: Metadata = buildMetadata({
   title: serviceTitle("Home Services", "Tampa"),
@@ -97,6 +98,24 @@ export default function ServicesPage() {
             photos={galleryForPage("general-repairs")}
             title="Recent home repair photos"
           />
+
+          <section className="mb-16 rounded-2xl border border-[hsl(var(--border))] bg-white p-6 shadow-sm" aria-labelledby="starting-prices-heading">
+            <h2 id="starting-prices-heading" className="mb-3 text-2xl font-bold">
+              Starting prices
+            </h2>
+            <ul className="list-disc space-y-1 pl-5 text-[hsl(var(--muted-foreground))]">
+              {startingPriceList.map((price) => (
+                <li key={price.key}>
+                  <Link href={price.href} className="font-medium text-[hsl(var(--primary))] hover:underline">
+                    {price.sentence}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-3 text-sm text-[hsl(var(--muted-foreground))]">
+              These are starting prices. The final price is quoted after you describe the job, and estimates are free.
+            </p>
+          </section>
 
           {categories.map((cat) => {
             const meta = categoryMeta[cat];

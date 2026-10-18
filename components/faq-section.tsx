@@ -16,7 +16,8 @@ const homeFaqs = [
   },
   {
     question: "How much does a handyman cost in Tampa?",
-    answer: "Handyman rates in the Tampa area typically range from $50 to $120 per hour. A typical quick visit is often $150–$250 and a half-day punch list $400–$550, depending on scope and materials. We also offer flat-rate pricing for common jobs. All estimates are free with no obligation.",
+    answer:
+      "A same-day handyman service call in Tampa starts at $99, and small jobs like hanging shelves or curtain rods start at $49. Furniture assembly starts at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. The final price is quoted after you describe the job, and all estimates are free with no obligation.",
   },
   {
     question: "Can I find a handyman near me in Westchase or Carrollwood today?",

@@ -24,11 +24,15 @@ import { JobSitePhoto } from "@/components/job-site-photo";
 import { jobSitePhotos } from "@/lib/images";
 import { gbpHubSlugSet } from "@/lib/gbp-city-hubs";
 import { hubJobPhotos } from "@/lib/hub-photos";
+import { startingPriceList, startingPriceSentenceFor } from "@/lib/starting-prices";
 
 export function LocationCityLanding({ location }: { location: TargetLocation }) {
   const pageUrl = `${siteConfig.url}/locations/${location.slug}`;
   const nearby = nearbyLocationLinks(location.slug);
   const hubPhotos = hubJobPhotos[location.slug];
+  const cityPrices = location.showStartingPrices
+    ? startingPriceList.map((price) => ({ ...price, sentence: startingPriceSentenceFor(price, location.city) }))
+    : [];
   const showTopCall = location.slug === "westchase-fl" || gbpHubSlugSet.has(location.slug);
   const cityJobPhotos = hubPhotos
     ? hubPhotos
@@ -58,6 +62,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
             url: pageUrl,
             category: "Handyman",
             areaName: location.displayName,
+            ...(cityPrices.length > 0 ? { startingPriceCatalog: cityPrices } : {}),
           }),
           faqSchema(location.faqs),
           {
@@ -172,6 +177,23 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                   </Link>{" "}
                   covers flushes, section replacement, and short-run installs.
                 </p>
+              ) : null}
+              {cityPrices.length > 0 ? (
+                <>
+                  <h2 className="pt-4 text-xl font-bold text-[hsl(var(--foreground))]">
+                    Starting prices for {location.city} handyman work
+                  </h2>
+                  <ul className="list-disc space-y-1 pl-5">
+                    {cityPrices.map((price) => (
+                      <li key={price.key}>
+                        <Link href={price.href} className="font-medium text-[hsl(var(--primary))] hover:underline">
+                          {price.sentence}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <p>Prices are starting points. The final price is quoted after you describe the job, and estimates are free.</p>
+                </>
               ) : null}
               {nearby.length > 0 ? (
                 <p>

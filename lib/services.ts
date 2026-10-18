@@ -185,12 +185,12 @@ const handymanServices: Omit<Service, "category">[] = [
   },
   {
     slug: "roof-repair",
-    name: "Roof Repair",
-    shortDescription: "Emergency and routine roof repair for Florida homes.",
-    description: "Florida weather is tough on roofs. We repair shingles, flashing, leaks, and storm damage to keep your home protected. Emergency roof repair available.",
-    keywords: ["roof repair Florida", "shingle repair", "leak repair roof"],
+    name: "Roof Leak Patch and Tarping",
+    shortDescription: "Roof leak patch and tarping for Tampa Bay homes.",
+    description: "Florida storms find the weak spots on tile and shingle roofs. We patch roof leaks around vents, flashing, and cracked tiles, and we tarp damaged sections so water stays out of the house. This service covers leak patch and tarping.",
+    keywords: ["roof leak patch Tampa", "roof tarping Tampa", "roof leak patch Florida", "roof tarp installation", "tile roof leak patch"],
     faqs: [
-      { question: "Do you offer emergency roof repair?", answer: "Yes, we provide emergency tarping and leak repair services, especially during hurricane season." },
+      { question: "Do you tarp a leaking roof?", answer: "Yes. We tarp and secure damaged roof sections and patch leaks around vents, flashing, and cracked tiles, especially during hurricane season." },
     ],
   },
   {

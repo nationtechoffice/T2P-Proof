@@ -92,6 +92,8 @@ export interface TargetLocation {
   callouts?: { before: string; href: string; label: string; after: string }[];
   /** Neighborhood sections with their own internal links. */
   spots?: { name: string; body: string; links: { href: string; label: string }[] }[];
+  /** Show the owner-approved starting prices (visible list + OfferCatalog schema). */
+  showStartingPrices?: boolean;
 }
 
 export const coreServices: CoreService[] = [
@@ -257,7 +259,7 @@ export const coreServices: CoreService[] = [
       {
         question: "How much does furniture assembly cost in Tampa?",
         answer:
-          "A typical Tampa Bay furniture assembly visit — one or two flat-pack pieces — is often quoted from about $75 to $250 after we know the piece count and whether the hardware is in the box. A full bedroom set or a room rearrangement is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
+          "Furniture assembly in Tampa starts at $65. A visit for one or two flat-pack pieces is quoted after we know the piece count and whether the hardware is in the box. A full bedroom set or a room rearrangement is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
       },
       {
         question: "Do you assemble IKEA, Wayfair, and Amazon furniture?",
@@ -285,7 +287,7 @@ export const coreServices: CoreService[] = [
       },
     ],
     offer: {
-      low: 75,
+      low: 65,
       high: 250,
       description:
         "Typical licensed handyman furniture assembly visit in Tampa Bay for one or two flat-pack pieces. Full bedroom sets and room rearrangements are quoted separately.",
@@ -388,7 +390,7 @@ export const coreServices: CoreService[] = [
       {
         question: "How much does tile installation cost in Tampa?",
         answer:
-          "A typical Tampa Bay handyman tile visit — a cracked-tile patch or a standard kitchen backsplash — is often quoted from about $175 to $700 after we see photos and know whether the tile is already on site. A full bathroom, or a floor that needs substrate repair, is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
+          "Tile repair or regrouting in Tampa starts at $199. A cracked-tile patch or a standard kitchen backsplash is quoted after we see photos and know whether the tile is already on site. A full bathroom, or a floor that needs substrate repair, is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
       },
       {
         question: "Can you replace a few cracked tiles without redoing the whole floor?",
@@ -416,7 +418,7 @@ export const coreServices: CoreService[] = [
       },
     ],
     offer: {
-      low: 175,
+      low: 199,
       high: 700,
       description:
         "Typical licensed handyman tile visit in Tampa Bay for patches, backsplashes, and small floor or wall sections. Full baths and substrate rebuilds are quoted separately.",

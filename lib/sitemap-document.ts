@@ -61,6 +61,10 @@ function imagesForUrl(url: string): string[] {
     const recentImages = recentWorkPhotos
       .map((photo) => absoluteImage(photo?.webp))
       .filter((src): src is string => Boolean(src));
+    const homeRecentImages = recentWorkPhotos
+      .filter((photo) => !photo?.workPageOnly)
+      .map((photo) => absoluteImage(photo?.webp))
+      .filter((src): src is string => Boolean(src));
     const workImages = [
       ...workPhotos.map((photo) => absoluteImage(photo?.src)),
       ...recentImages,
@@ -70,7 +74,7 @@ function imagesForUrl(url: string): string[] {
       absoluteImage("/images/work/fence-repair.jpg"),
       absoluteImage("/images/work/drywall-finish-ladder.jpg"),
       absoluteImage("/images/work/porcelain-tile-install.jpg"),
-      ...recentImages,
+      ...homeRecentImages,
     ].filter((src): src is string => Boolean(src));
 
     const selected =

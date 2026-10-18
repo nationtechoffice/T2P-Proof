@@ -237,6 +237,24 @@ const sameDayGallery: ServicePhoto[] = [
   },
 ];
 
+const roofGallery: ServicePhoto[] = [
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-sealing.webp",
+    alt: "Handyman Pros Florida crew member sealing around a roof vent on a clay barrel tile roof to patch a leak in the Tampa Bay area",
+    portrait: true,
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-mortar-patch.webp",
+    alt: "Handyman Pros Florida crew member patching mortar around a roof vent on a clay tile roof in the Tampa Bay area",
+    portrait: true,
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-tarp-sandbags.webp",
+    alt: "Blue tarp secured with sandbags over a damaged section of a clay tile roof by Handyman Pros Florida in the Tampa Bay area",
+    portrait: true,
+  },
+];
+
 const electricalGallery: ServicePhoto[] = [
   {
     src: "/images/cinematic/service-ceiling-fan.jpg",
@@ -300,6 +318,7 @@ export function galleryForPage(categoryOrSlug: string, slug?: string): ServicePh
     return tileGallery;
   }
   if (key === "door-repair") return [];
+  if (key === "roof-repair") return roofGallery;
   if (key === "fence" || key === "fence-handyman" || category === "fence") return fenceGallery;
   if (key.includes("tile")) return tileGallery;
   if (key === "painting" || category === "painting" || key.includes("paint")) return paintingGallery;

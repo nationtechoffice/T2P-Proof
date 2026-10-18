@@ -15,6 +15,7 @@ import { InternalLinkHub } from "@/components/internal-link-hub";
 import { ServicePhotoGallery } from "@/components/service-photo-gallery";
 import { tampaBayLocationLinks, fenceCategoryLinks, authorityHubLinks, moneyNearbyLinks } from "@/lib/internal-links";
 import { galleryForPage } from "@/lib/service-galleries";
+import { startingPriceFor } from "@/lib/starting-prices";
 
 export function generateStaticParams() {
   return getAllServiceSlugs();
@@ -53,6 +54,7 @@ export default async function ServicePage({
   const pageUrl = `${siteConfig.url}/services/${category}/${slug}`;
   const related = getRelatedServices(service);
   const photos = galleryForPage(service.category, service.slug);
+  const startingPrice = service.category === "handyman" ? startingPriceFor(service.slug) : undefined;
   const hq = formatFullAddress();
   const serviceLower = service.name.toLowerCase();
   const faqs = [
@@ -84,6 +86,7 @@ export default async function ServicePage({
             category: catMeta.name,
             image: photos[0]?.src,
             images: photos.map((photo) => photo.src),
+            startingPrice,
           }),
           faqSchema(faqs),
           speakableSchema(pageUrl, [".service-definition", ".service-description"]),
@@ -114,6 +117,11 @@ export default async function ServicePage({
                 </>
               )}
             </p>
+            {startingPrice ? (
+              <p className="service-price mb-6 text-lg font-semibold text-[hsl(var(--foreground))]">
+                {startingPrice.sentence} Free estimates over the phone.
+              </p>
+            ) : null}
             <ServicePhotoGallery photos={photos} title={`${service.name} photos in Tampa`} />
             <div className="service-description mb-8 rounded-xl bg-[hsl(var(--muted))] p-6">
               <h2 className="mb-3 text-xl font-bold">About Our {service.name} Service</h2>
