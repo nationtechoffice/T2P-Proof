@@ -1,3 +1,4 @@
+import type { ContentSection } from "./content-sections";
 import { siteConfig } from "./site-config";
 import { serviceDescription, serviceTitle } from "./instant-estimate";
 import { expansionLocations } from "./tampa-bay-expansion";
@@ -74,6 +75,10 @@ export interface CoreService {
   faqs: { question: string; answer: string }[];
   /** Typical visit range for Service/Offer schema. Full remodels stay quoted separately. */
   offer?: { low: number; high: number; description: string };
+  /** Extra brief-driven sections rendered after the main copy. */
+  sections?: ContentSection[];
+  /** One list of real city pages instead of the two generic city-link blocks. */
+  cityLinks?: { href: string; label: string }[];
 }
 
 export interface TargetLocation {
@@ -94,6 +99,12 @@ export interface TargetLocation {
   spots?: { name: string; body: string; links: { href: string; label: string }[] }[];
   /** Show the owner-approved starting prices (visible list + OfferCatalog schema). */
   showStartingPrices?: boolean;
+  /** Extra brief-driven sections rendered after the city copy. */
+  sections?: ContentSection[];
+  /** Drop the duplicate service-link block and the generic fence block. */
+  compactLinks?: boolean;
+  /** ZIP codes for the page Service areaServed. */
+  postalCodes?: string[];
 }
 
 export const coreServices: CoreService[] = [
@@ -139,11 +150,10 @@ export const coreServices: CoreService[] = [
     image: "/images/work/drywall-finish-ladder.jpg",
     imageAlt: "Licensed handyman finishing drywall compound on an interior wall in Tampa, FL",
     intro:
-      "Need fast, reliable drywall repair in Tampa, FL? Handyman Pros FL patches holes, blends texture, and preps walls for paint across Tampa Bay.",
+      "Drywall patch repair in Tampa starts at $75 with Handyman Pros FL, a licensed and insured handyman crew that patches holes, cracks and ceiling damage, matches orange peel, knockdown or smooth texture, and leaves the wall ready for paint. We stop and tell you first if a stain points to an active leak, because a patch should never hide a plumbing or roof problem.",
     paragraphs: [
       "Drywall repair in Tampa ranges from doorknob holes to water-stained ceilings after summer storms. We cut clean openings, add backing when needed, tape and feather compound, then match orange peel, knockdown, or smooth finishes common in Hillsborough and Pinellas homes.",
       "Humidity is the local enemy. A rushed patch telegraphs through paint within weeks. We stage coats so the repair stays flat in Westchase, Town 'N' Country, Citrus Park, and Clearwater interiors.",
-      "If staining points to an active leak, we tell you before covering it. Cosmetic drywall repair should never hide a plumbing or roof issue.",
       `Call ${siteConfig.phone} for a same-week drywall patch. Send photos on the quote form for a faster estimate.`,
     ],
     bullets: [
@@ -156,13 +166,118 @@ export const coreServices: CoreService[] = [
       {
         question: "How much does drywall repair cost in Tampa?",
         answer:
-          "Small Tampa drywall patches often start as a flat-rate visit. Larger holes, ceilings, and texture matching are quoted after we see photos. A drywall patch in Tampa starts at $75; full-wall work costs more.",
+          "A drywall patch starts at $75. Larger holes, ceiling sections and texture matching are quoted after we see photos.",
       },
       {
         question: "Can you match popcorn or knockdown texture?",
         answer:
           "Yes. We match common Tampa ceiling and wall textures, then prime so the patch is ready for paint.",
       },
+      {
+        question: "Can you fix a water-stained ceiling?",
+        answer:
+          "Yes, once the leak is fixed. If the stain points to an active leak, we tell you first so the patch doesn't hide a plumbing or roof problem.",
+      },
+      {
+        question: "Can wet drywall be saved?",
+        answer:
+          "Sometimes. The EPA says drywall can be dried in place if it is not visibly swollen and the seams are intact, and wet materials should be dried within 24 to 48 hours. Swollen or floodwater-soaked board should come out and be replaced.",
+      },
+      {
+        question: "How fast can you patch drywall?",
+        answer: "Small patches are often same-week. A same-day service call starts at $99.",
+      },
+      {
+        question: "Do I need a permit for drywall repair?",
+        answer:
+          "Small patches usually don't. Large replacements or anything with electrical or plumbing can; we flag it before work starts.",
+      },
+      {
+        question: "Are you licensed and insured?",
+        answer: "Yes. Handyman Pros FL is licensed and insured.",
+      },
+      {
+        question: "¿Reparan drywall (yeso)?",
+        answer: `Sí. Hablamos español. Llame al ${siteConfig.phone}.`,
+      },
+    ],
+    sections: [
+      {
+        heading: "What drywall repair costs in Tampa",
+        paragraphs: [
+          "A drywall patch starts at $75. What changes the price is the size of the hole, ceiling versus wall, how much texture has to be matched, whether water damaged the board, and whether you want the patch painted. Larger repairs are quoted after photos.",
+          "Related starting prices: small jobs start at $49, and a same-day service call starts at $99.",
+        ],
+        links: [
+          { href: "/services/same-day-handyman", label: "Same-day handyman" },
+          { href: "/services/painting", label: "Painting after drywall repair" },
+        ],
+      },
+      {
+        heading: "Drywall jobs we fix",
+        subsections: [
+          {
+            heading: "Doorknob and small holes",
+            paragraphs: ["Doorknob holes, anchor pulls and dents get a clean cut, backing when the hole is large, and feathered compound."],
+          },
+          {
+            heading: "Cracks at seams and corners",
+            paragraphs: ["Seam and corner cracks get re-taped and feathered so they don't telegraph through paint again."],
+          },
+          {
+            heading: "Ceiling patches and stains",
+            paragraphs: ["Ceiling stains are patched after the leak is fixed. If the stain is still wet, the plumbing or roof issue comes first."],
+          },
+          {
+            heading: "Texture matching: orange peel, knockdown and popcorn",
+            paragraphs: ["We blend the patch into the existing orange peel, knockdown, popcorn or smooth finish, then prime it for paint."],
+          },
+          {
+            heading: "Patches after TV, fan or fixture changes",
+            paragraphs: ["Old mount holes and the ring left by a removed fan or light get patched when the new item goes up, or as their own visit."],
+          },
+        ],
+        links: [
+          { href: "/services/tv-wall-mounting", label: "TV wall mounting" },
+          { href: "/services/handyman/fan-installation", label: "Ceiling fan installation" },
+          { href: "/services/electrical-fixture-installation", label: "Light fixtures" },
+        ],
+      },
+      {
+        heading: "Water-damaged drywall after storms and leaks",
+        paragraphs: [
+          "Hurricane season runs June 1 to November 30, and water-stained ceilings after summer storms are a regular call. The EPA says mold growth is unlikely when wet materials dry within 24 to 48 hours, and drywall can be dried in place only if it isn't visibly swollen and the seams are intact. Otherwise it should be removed. The CDC says drywall and insulation soaked by floodwater or sewage should be removed and thrown away.",
+          "After flooding, the Florida Building Commission advises removing wall materials up to a point 12 to 24 inches above the visible waterline. UF/IFAS Extension advises a licensed mold remediation company when mold covers more than about 10 square feet, keeps coming back, or is in the AC system, and the Florida Department of Health warns that painting or caulking over mold will not stop it from growing.",
+        ],
+        sources: [
+          { label: "EPA mold course, chapter 4", href: "https://www.epa.gov/mold/mold-course-chapter-4" },
+          { label: "CDC natural disaster safety", href: "https://www.cdc.gov/natural-disasters/safety/index.html" },
+          { label: "Florida Building Commission post-flooding fact sheet (PDF)", href: "https://www.floridabuilding.org/fbc/publications/fact_sheets_0307/postfloodingandmold061105revised.pdf" },
+          { label: "UF/IFAS mold fact sheet (PDF)", href: "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/sarasota/documents/pdf/chems/keydocs/2024_Chems_factsheetMoldManagement_ifas_FINAL_ADA.pdf" },
+          { label: "Florida DOH mold fact sheet (PDF)", href: "https://www.floridahealth.gov/wp-content/uploads/2025/08/emergency-information-factsheet-mold.pdf" },
+          { label: "NOAA National Hurricane Center", href: "https://www.nhc.noaa.gov/climo/" },
+        ],
+      },
+      {
+        heading: "How we patch drywall",
+        paragraphs: [
+          "First we assess the damage: measure the hole or crack and decide between a patch and a board replacement. Then we set the patch and apply joint compound in coats, sanding between them. In humid weather we stage the coats so the repair stays flat. Last, we blend the texture to match and prime so the wall is ready for paint.",
+        ],
+      },
+    ],
+    cityLinks: [
+      { href: "/locations/westchase-fl", label: "Drywall repair in Westchase" },
+      { href: "/locations/carrollwood", label: "Drywall repair in Carrollwood" },
+      { href: "/locations/temple-terrace", label: "Drywall repair in Temple Terrace" },
+      { href: "/locations/lutz", label: "Drywall repair in Lutz" },
+      { href: "/locations/clearwater", label: "Drywall repair in Clearwater" },
+      { href: "/locations/st-petersburg", label: "Drywall repair in St. Petersburg" },
+      { href: "/locations/palm-harbor-fl", label: "Drywall repair in Palm Harbor" },
+      { href: "/locations/oldsmar-fl", label: "Drywall repair in Oldsmar" },
+      { href: "/locations/brandon", label: "Drywall repair in Brandon" },
+      { href: "/locations/riverview", label: "Drywall repair in Riverview" },
+      { href: "/locations/wesley-chapel", label: "Drywall repair in Wesley Chapel" },
+      { href: "/locations/plant-city", label: "Drywall repair in Plant City" },
     ],
   },
   {
@@ -596,14 +711,72 @@ export const targetLocations: TargetLocation[] = [
     displayName: "Westchase, FL",
     county: "Hillsborough County",
     zipHint: "33626",
-    neighborhoods: ["Tuscany Bay", "Westchase Golf Club", "Citrus Park"],
+    neighborhoods: ["Tuscany Bay", "Westchase Golf Club"],
+    postalCodes: ["33626"],
+    showStartingPrices: true,
+    compactLinks: true,
     intro:
       "Need a fast, reliable handyman in Westchase, FL? This is our headquarters zip. TV wall mounting, drywall repair, and fixture work often same-day in 33626.",
+    directAnswer: `Handyman Pros FL is a licensed and insured handyman company headquartered in Westchase at ${siteConfig.address.street}, Tampa, FL 33626, so Westchase homes are the closest stop for TV mounting, drywall patches, fixtures and furniture assembly, often the same day.`,
     paragraphs: [
       `Handyman Pros FL is based at ${siteConfig.address.street}, Tampa, FL 33626 in Westchase. When you search handyman near me in Westchase, you are calling the actual local crew — not a lead mill.`,
       "Westchase HOA standards, stucco, and lanai sliders are daily work. We handle TV wall mounting, drywall repair, electrical fixture installation, plumbing fixture repair, furniture assembly, and door repair without a second office.",
       "Tuscany Bay and Westchase Golf Club streets are inside our fastest response radius. Citrus Park, Town 'N' Country, and Oldsmar (ZIP 34677, just across the Hillsborough–Pinellas line) are the next hop.",
       `Call ${siteConfig.phone} 24/7 for a Westchase estimate.`,
+    ],
+    sections: [
+      {
+        id: "wca-rules",
+        heading: "Working inside Westchase Community Association rules",
+        subsections: [
+          {
+            heading: "Exterior work needs WCA approval first",
+            paragraphs: [
+              "The Westchase Community Association's residential guidelines say exterior changes, including exterior painting or repainting in the same color, need written approval from the Modifications Committee before work starts. The committee reviews a request within 45 days, and applications are due the Friday before a meeting.",
+              "The WCA modification application lists fences, painting, gutters, doors and roofs among the items that need approval. Fence requests ask for the material, height, style and location plus a lot survey, and gutter requests ask for a bid with style, color and size. Exterior colors have to come from the approved Sherwin-Williams palette, matched in any brand. Some villages also have their own sub-association application.",
+            ],
+          },
+          {
+            heading: "Interior work does not go to the committee",
+            paragraphs: [
+              "WCA approval covers exterior changes visible from the street or other lots. TV mounts, drywall patches, ceiling fans, furniture assembly and tile repair inside the house are interior jobs.",
+            ],
+          },
+        ],
+        links: [
+          { href: "/services/painting", label: "Painting" },
+          { href: "/services/fence", label: "Fence repair" },
+          { href: "/services/gutter-installation", label: "Gutters" },
+          { href: "/services/door-repair", label: "Door repair" },
+        ],
+        sources: [
+          { label: "WCA Residential Guidelines (PDF)", href: "https://westchasewca.com/wp-content/uploads/2026/01/Westchase-Residential-Guidelines-as-of-8.13.25.pdf" },
+          { label: "WCA Modification Application (PDF)", href: "https://westchasewca.com/wp-content/uploads/2025/10/Modification-Application-FINAL.pdf" },
+          { label: "WCA FAQs", href: "https://westchasewca.com/faqs/" },
+        ],
+      },
+      {
+        heading: "Westchase homes we work in",
+        paragraphs: [
+          "Westchase is a census-designated place in northwest Hillsborough County, about 17 miles northwest of downtown Tampa, with 25,952 residents in the 2020 census. The Westchase Community Association is its largest deed-restricted community, with 28 villages, from single-family streets such as Glencliff, Stamford, Radcliffe, Keswick Forest, Harbor Links and The Greens to the mixed-use West Park Village.",
+          "Westchase borders Oldsmar to the west, Keystone to the north, Town 'n' Country to the south and Citrus Park to the east. Those are the next stops when a Westchase list is done.",
+        ],
+        links: [
+          { href: "/locations/oldsmar-fl", label: "Oldsmar" },
+          { href: "/locations/keystone", label: "Keystone" },
+          { href: "/locations/town-n-country-fl", label: "Town 'N' Country" },
+          { href: "/locations/citrus-park-fl", label: "Citrus Park" },
+          { href: "/locations/carrollwood", label: "Carrollwood" },
+        ],
+        sources: [{ label: "Wikipedia: Westchase, Florida", href: "https://en.wikipedia.org/wiki/Westchase,_Florida" }],
+      },
+      {
+        heading: "Same-day handyman in Westchase",
+        paragraphs: [
+          `A same-day service call in Westchase starts at $99. Call ${siteConfig.phone} and we tell you on the phone whether today's route has room.`,
+        ],
+        links: [{ href: "/services/same-day-handyman", label: "Same-day handyman" }],
+      },
     ],
     faqs: [
       {
@@ -612,7 +785,26 @@ export const targetLocations: TargetLocation[] = [
       },
       {
         question: "How fast is Westchase handyman service?",
-        answer: "Same-day is common for 33626 because we start here. Call to lock a window.",
+        answer: "Same-day is common for 33626 because we start here. Call to lock a window. A same-day service call starts at $99.",
+      },
+      {
+        question: "How much does a handyman cost in Westchase?",
+        answer:
+          "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
+      },
+      {
+        question: "Do I need Westchase HOA approval before a handyman job?",
+        answer:
+          "Exterior changes, including fences, gutters, doors and exterior painting (even in the same color), need written approval from the Westchase Community Association Modifications Committee first. Interior repairs like TV mounting, drywall patches and ceiling fans do not go to the committee.",
+      },
+      {
+        question: "Are you licensed and insured?",
+        answer:
+          "Yes, Handyman Pros FL is licensed and insured. If a job needs a permit or a specialist trade, we tell you before work starts.",
+      },
+      {
+        question: "¿Hablan español?",
+        answer: `Sí. Hablamos español. Llame al ${siteConfig.phone}.`,
       },
     ],
   },

@@ -188,6 +188,12 @@ export function serviceSchema(service: {
   startingPrice?: { amount: number; sentence: string };
   /** Several starting prices, e.g. on a service-area page. Emitted as an OfferCatalog. */
   startingPriceCatalog?: readonly { label: string; amount: number; sentence: string; href: string }[];
+  /** ZIP codes added to areaServed on a city page. */
+  postalCodes?: readonly string[];
+  /** County added to areaServed on a city page. */
+  county?: string;
+  /** Override the schema serviceType (defaults to category). */
+  serviceType?: string;
 }) {
   const areaName = service.areaName || "Tampa, FL";
   const absolute = (src: string) => (src.startsWith("http") ? src : `${siteConfig.url}${src}`);
@@ -205,7 +211,16 @@ export function serviceSchema(service: {
     provider: { "@id": `${siteConfig.url}/#organization` },
     brand: { "@id": `${siteConfig.url}/#organization` },
     areaServed: service.areaName
-      ? [{ "@type": "City", name: service.areaName }]
+      ? [
+          { "@type": "City", name: service.areaName },
+          ...(service.county ? [{ "@type": "AdministrativeArea", name: `${service.county}, FL` }] : []),
+          ...(service.postalCodes ?? []).map((postalCode) => ({
+            "@type": "PostalAddress",
+            postalCode,
+            addressRegion: "FL",
+            addressCountry: "US",
+          })),
+        ]
       : [
           { "@type": "City", name: "Tampa, FL" },
           { "@type": "City", name: "Westchase, FL" },
@@ -216,7 +231,7 @@ export function serviceSchema(service: {
           { "@type": "AdministrativeArea", name: "Pinellas County, FL" },
           { "@type": "AdministrativeArea", name: "Pasco County, FL" },
         ],
-    serviceType: service.category,
+    serviceType: service.serviceType ?? service.category,
     hoursAvailable: siteConfig.hours.map((h) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: h.day,

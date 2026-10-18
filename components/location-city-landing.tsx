@@ -25,6 +25,7 @@ import { jobSitePhotos } from "@/lib/images";
 import { gbpHubSlugSet } from "@/lib/gbp-city-hubs";
 import { hubJobPhotos } from "@/lib/hub-photos";
 import { startingPriceList, startingPriceSentenceFor } from "@/lib/starting-prices";
+import { ContentSections } from "@/components/content-sections";
 
 export function LocationCityLanding({ location }: { location: TargetLocation }) {
   const pageUrl = `${siteConfig.url}/locations/${location.slug}`;
@@ -62,6 +63,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
             url: pageUrl,
             category: "Handyman",
             areaName: location.displayName,
+            ...(location.postalCodes ? { postalCodes: location.postalCodes, county: location.county } : {}),
             ...(cityPrices.length > 0 ? { startingPriceCatalog: cityPrices } : {}),
           }),
           faqSchema(location.faqs),
@@ -213,10 +215,11 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                 </p>
               ) : null}
             </div>
+            {location.sections ? <ContentSections sections={location.sections} /> : null}
             {location.slug === "westchase-fl" ? (
               <h2 className="mt-8 text-lg font-bold">Recent blinds and window work</h2>
             ) : hubPhotos ? (
-              <h2 className="mt-8 text-lg font-bold">Recent handyman job photos</h2>
+              <h2 className="mt-8 text-lg font-bold">Recent work across Tampa Bay</h2>
             ) : null}
             <ul
               className={`${location.slug === "westchase-fl" || hubPhotos ? "mb-8 mt-3" : "my-8"} grid gap-4 ${cityJobPhotos.length > 1 ? "sm:grid-cols-2" : "max-w-sm"}`}
@@ -249,6 +252,22 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                   </Link>
                 </li>
               ))}
+              {location.compactLinks
+                ? [
+                    { href: "/services/fence", label: `Fence repair in ${location.city}` },
+                    { href: "/services/painting", label: `Interior painting in ${location.city}` },
+                  ].map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="flex items-start gap-2 rounded-xl border border-[hsl(var(--border))] bg-white/70 px-4 py-3 text-sm font-medium hover:border-[hsl(var(--accent))]"
+                      >
+                        <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(var(--accent))]" />
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))
+                : null}
               <li>
                 <Link
                   href="/services/handyman/fan-installation"
@@ -291,15 +310,19 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               />
             ) : null}
 
-            <InternalLinkHub
-              title={`Popular ${location.city} handyman services`}
-              intro={`These links connect ${location.city} searches to our Tampa service pages so Google, Bing, and AI answers can follow the full Handyman Pros FL coverage map.`}
-              links={coreServiceLinks(location.city)}
-            />
-            <InternalLinkHub
-              title="Fence installation & repair options"
-              links={fenceCategoryLinks}
-            />
+            {location.compactLinks ? null : (
+              <>
+                <InternalLinkHub
+                  title={`Popular ${location.city} handyman services`}
+                  intro={`These links connect ${location.city} searches to our Tampa service pages so Google, Bing, and AI answers can follow the full Handyman Pros FL coverage map.`}
+                  links={coreServiceLinks(location.city)}
+                />
+                <InternalLinkHub
+                  title="Fence installation & repair options"
+                  links={fenceCategoryLinks}
+                />
+              </>
+            )}
             <InternalLinkHub
               title="Nearby Tampa Bay areas we serve"
               links={[

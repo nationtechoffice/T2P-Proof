@@ -181,4 +181,6 @@ export const hubJobPhotos: Record<string, readonly HubJobPhoto[]> = {
   "apollo-beach": [porcelainTile, largeTile, workShirt],
   gulfport: [ceilingFan, workShirt, drywallUnderWindow],
   carrollwood: [builtInNiches, builtInConsole],
+  lutz: [largeTile, ceilingFan, fencePost],
+  "temple-terrace": [drywallProtected, drywallRounded, ceilingFan],
 };

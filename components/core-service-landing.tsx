@@ -19,6 +19,7 @@ import { startingPriceFor } from "@/lib/starting-prices";
 import { authorityHubLinks, moneyNearbyLinks } from "@/lib/internal-links";
 import { moneyNeighborhoodSpots } from "@/lib/tampa-neighborhoods";
 import { NeighborhoodBlocks } from "@/components/neighborhood-blocks";
+import { ContentSections } from "@/components/content-sections";
 
 export function CoreServiceLanding({ service }: { service: CoreService }) {
   const pageUrl = `${siteConfig.url}/services/${service.slug}`;
@@ -174,15 +175,6 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
                   — Walden Lake privacy lines and the longer runs toward Knights Griffin — are described on that city hub.
                 </p>
               ) : null}
-              {service.slug === "drywall-repair" ? (
-                <p>
-                  Plant City humidity shows up as a doorknob hole in a Walden Lake hall or a soft patch under a downtown window, which is a different list than a new Riverview house. The{" "}
-                  <Link href="/locations/plant-city" className="font-semibold text-[hsl(var(--primary))] hover:underline">
-                    Plant City handyman
-                  </Link>{" "}
-                  page covers that east Hillsborough drive. Texture matching stays on this page.
-                </p>
-              ) : null}
               {service.slug === "tv-wall-mounting" ? (
                 <p>
                   East Hillsborough mounts are the same visit on a different wall. In{" "}
@@ -210,6 +202,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
                 </p>
               ) : null}
             </div>
+            {service.sections ? <ContentSections sections={service.sections} /> : null}
             {moneyNeighborhoodSpots[service.slug] ? (
               <NeighborhoodBlocks
                 title="Hyde Park, Seminole Heights, New Tampa, and Carrollwood"
@@ -241,24 +234,34 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
                 </li>
               ))}
             </ul>
-            <InternalLinkHub
-              title={`${service.name} near Westchase headquarters`}
-              intro="Nearby city pages for the same licensed crew. Each link is a service area, not a second office."
-              links={moneyNearbyLinks(service.name)}
-            />
-            <h2 className="mt-10 mb-4 text-2xl font-bold">{service.name} near you in Tampa Bay</h2>
-            <ul className="flex flex-wrap gap-2 text-sm">
-              {targetLocations.map((location) => (
-                <li key={location.slug}>
-                  <Link
-                    href={`/locations/${location.slug}`}
-                    className="rounded-full bg-white px-3 py-1.5 shadow-sm hover:text-[hsl(var(--accent))]"
-                  >
-                    {service.name} in {location.city}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {service.cityLinks ? (
+              <InternalLinkHub
+                title={`${service.name} in nearby cities`}
+                intro="City pages for the same licensed crew. Each link is a service area, not a second office."
+                links={service.cityLinks}
+              />
+            ) : (
+              <>
+                <InternalLinkHub
+                  title={`${service.name} near Westchase headquarters`}
+                  intro="Nearby city pages for the same licensed crew. Each link is a service area, not a second office."
+                  links={moneyNearbyLinks(service.name)}
+                />
+                <h2 className="mt-10 mb-4 text-2xl font-bold">{service.name} near you in Tampa Bay</h2>
+                <ul className="flex flex-wrap gap-2 text-sm">
+                  {targetLocations.map((location) => (
+                    <li key={location.slug}>
+                      <Link
+                        href={`/locations/${location.slug}`}
+                        className="rounded-full bg-white px-3 py-1.5 shadow-sm hover:text-[hsl(var(--accent))]"
+                      >
+                        {service.name} in {location.city}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
             <div className="mt-10">
               <HqDispatch />
             </div>

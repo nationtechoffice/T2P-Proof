@@ -18,14 +18,9 @@ import { galleryForPage } from "@/lib/service-galleries";
 import { fenceHandymanService } from "@/lib/tampa-bay-expansion";
 import { moneyNeighborhoodSpots } from "@/lib/tampa-neighborhoods";
 import { NeighborhoodBlocks } from "@/components/neighborhood-blocks";
+import { ContentSections } from "@/components/content-sections";
+import { paintingFaqs, paintingSections } from "@/lib/painting-page";
 
-/** Merged from the retired /services/handyman/painting page (now 308s here). */
-const paintingFaqs = [
-  {
-    question: "Do you offer free painting estimates?",
-    answer: `Yes. Painting estimates are free. Call ${siteConfig.phone} or send photos of the rooms or exterior, and we can talk through colors and finish before the visit.`,
-  },
-];
 
 /** Fence repair towns, merged from the retired /services/fence-handyman page (now 308s here). */
 const fenceRepairTowns = [
@@ -118,7 +113,20 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 faqSchema(fenceHandymanService.faqs),
               ]
             : []),
-          ...(cat === "painting" ? [faqSchema(paintingFaqs)] : []),
+          ...(cat === "painting"
+            ? [
+                serviceSchema({
+                  name: "Interior and exterior painting",
+                  description: meta.description,
+                  url: `${siteConfig.url}/services/painting`,
+                  category: "Painting",
+                  serviceType: "House painting",
+                  areaName: "Tampa, FL",
+                  images: galleryForPage("painting").map((photo) => photo.src),
+                }),
+                faqSchema(paintingFaqs),
+              ]
+            : []),
           ...(cat === "handyman" || cat === "painting"
             ? [
                 imageGallerySchema({
@@ -194,6 +202,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               </Link>
             ))}
           </div>
+          {cat === "painting" ? (
+            <div className="mx-auto mt-14 max-w-3xl">
+              <ContentSections sections={paintingSections} />
+            </div>
+          ) : null}
           {cat === "fence" ? (
             <div id="fence-handyman" className="mx-auto mt-14 max-w-3xl scroll-mt-28">
               <h2 className="mb-4 text-3xl font-bold">Fence handyman repairs in Tampa Bay</h2>

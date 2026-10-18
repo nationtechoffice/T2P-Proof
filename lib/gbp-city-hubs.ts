@@ -136,16 +136,85 @@ export const gbpCityHubs: TargetLocation[] = [
     city: "Palm Harbor",
     displayName: "Palm Harbor, FL",
     county: "Pinellas County",
-    zipHint: "34683–34685",
+    zipHint: "34682–34685",
+    postalCodes: ["34682", "34683", "34684", "34685"],
+    showStartingPrices: true,
+    compactLinks: true,
     neighborhoods: ["Downtown Palm Harbor", "Ozona", "Crystal Beach", "Highland Lakes", "East Lake"],
     intro:
       "Need a licensed Palm Harbor handyman for TV mounts, drywall, and fence boards? Handyman Pros FL serves Ozona, East Lake, and Highland Lakes from Westchase. Hablamos español.",
-    directAnswer: `Handyman Pros Florida serves Palm Harbor with handyman repairs for TV mounts, drywall patches, and fence boards in Ozona, East Lake, and Highland Lakes. Crystal Beach is on that same north Pinellas drive from Westchase. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+    directAnswer: "Handyman Pros FL serves Palm Harbor, FL, including East Lake, Ozona, Crystal Beach and Highland Lakes, from its Westchase headquarters, with TV mounting from $89, drywall patches from $75 and small jobs from $49. Palm Harbor is unincorporated Pinellas County, so any permit for your job goes through Pinellas County, not a city hall, and we tell you up front if a job needs one.",
     paragraphs: [
-      "Palm Harbor is two eras of houses. Ozona and the downtown streets are older cottages and block homes near the water. East Lake and Highland Lakes are later subdivisions with HOA fences, lanais, and drywall that shows every furniture ding.",
-      "Ozona calls are often a door, a soft exterior board, or a TV on a mixed wall. East Lake calls stack a fan at an existing box, a drywall patch, and a privacy-fence board after wind. We repair the section that failed. A whole-yard fence is a larger quote.",
-      "Crystal Beach sits on the west edge, closer to the gulf and to salt air. Tarpon Springs, Dunedin, Oldsmar, and Safety Harbor are the neighboring hubs on the same north Pinellas route.",
       `Call ${phone} for a Palm Harbor estimate. Licensed and insured. Hablamos español. The only office is Westchase.`,
+    ],
+    sections: [
+      {
+        heading: "Two kinds of Palm Harbor homes",
+        paragraphs: [
+          "Palm Harbor is two eras of houses. Ozona and the downtown streets are older cottages and block homes near the water. East Lake and Highland Lakes are later subdivisions with HOA fences, lanais, and drywall that shows every furniture ding.",
+        ],
+        subsections: [
+          {
+            heading: "Ozona and downtown Palm Harbor",
+            paragraphs: [
+              "Ozona calls are often a door, a soft exterior board, or a TV on a mixed wall. Downtown Palm Harbor sits north of Tampa Road between Alternate US 19 and Omaha Street, with historic buildings a short walk from St. Joseph Sound, where H.S. \"Pop\" Stansell Park overlooks the water.",
+            ],
+          },
+          {
+            heading: "East Lake and Highland Lakes",
+            paragraphs: [
+              "East Lake calls stack a fan at an existing box, a drywall patch, and a privacy-fence board after wind. We repair the section that failed. A whole-yard fence is a larger quote.",
+            ],
+          },
+          {
+            heading: "Crystal Beach",
+            paragraphs: [
+              "Crystal Beach sits on the west edge, closer to the gulf and to salt air. Tarpon Springs, Dunedin, Oldsmar, and Safety Harbor are the neighboring hubs on the same north Pinellas route.",
+            ],
+          },
+        ],
+        links: [
+          { href: "/locations/tarpon-springs-fl", label: "Tarpon Springs" },
+          { href: "/locations/dunedin-fl", label: "Dunedin" },
+          { href: "/locations/oldsmar-fl", label: "Oldsmar" },
+          { href: "/locations/safety-harbor-fl", label: "Safety Harbor" },
+          { href: "/locations/clearwater", label: "Clearwater" },
+        ],
+        sources: [{ label: "Wikipedia: Palm Harbor, Florida", href: "https://en.wikipedia.org/wiki/Palm_Harbor,_Florida" }],
+      },
+      {
+        heading: "Small jobs that make a home easier to live in",
+        paragraphs: [
+          "More than a quarter of Palm Harbor residents are 65 or older (27.9% in the 2020 census), and many calls here are a short list rather than a project: shelves and curtain rods, a light fixture or ceiling fan at an existing box, furniture assembly, and a door that drags or will not latch. Small jobs start at $49, furniture assembly at $65, and a ceiling fan or light fixture at $79.",
+        ],
+        links: [
+          { href: "/services/electrical-fixture-installation", label: "Light fixtures" },
+          { href: "/services/handyman/fan-installation", label: "Ceiling fans" },
+          { href: "/services/furniture-assembly", label: "Furniture assembly" },
+          { href: "/services/door-repair", label: "Door repair" },
+          { href: "/services/painting", label: "Interior painting in Palm Harbor" },
+        ],
+        sources: [{ label: "Wikipedia: Palm Harbor, Florida", href: "https://en.wikipedia.org/wiki/Palm_Harbor,_Florida" }],
+      },
+      {
+        heading: "Permits and licensing in Palm Harbor",
+        paragraphs: [
+          "Palm Harbor is an unincorporated community, so permits for houses here go through Pinellas County Building and Development Review Services rather than a city building department. Florida's DBPR says handyman jobs under $2,500 that are casual, minor or inconsequential are exempt from state contractor licensing, and work that needs a permit usually is not minor. Pinellas County also suggests homeowners check a contractor's general liability and workers' compensation insurance.",
+          "Handyman Pros FL is licensed and insured. If your job needs a permit or a licensed trade contractor, we tell you before we start.",
+        ],
+        sources: [
+          { label: "Pinellas County licenses and permits", href: "https://pinellas.gov/topic/home-property/licenses-and-permits/" },
+          { label: "Pinellas County Contractor Licensing", href: "https://pinellas.gov/contractor-licensing-department/" },
+          { label: "Florida DBPR construction FAQs", href: "https://www2.myfloridalicense.com/construction-industry/faqs/" },
+        ],
+      },
+      {
+        heading: "Same-day handyman in Palm Harbor",
+        paragraphs: [
+          `A same-day service call starts at $99. Whether today works depends on whether the crew is already on a north Pinellas stop. Call ${phone} and we tell you on the phone.`,
+        ],
+        links: [{ href: "/services/same-day-handyman", label: "Same-day handyman" }],
+      },
     ],
     callouts: [
       {
@@ -161,13 +230,27 @@ export const gbpCityHubs: TargetLocation[] = [
         answer: `No. Crews leave ${hq}. Palm Harbor is a service area, including Ozona, East Lake, and Highland Lakes.`,
       },
       {
+        question: "How much does a handyman cost in Palm Harbor?",
+        answer:
+          "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
+      },
+      {
         question: "Can you mount a TV in an East Lake house?",
         answer:
-          "Yes, when we can fasten into structure or use a rated anchor for that wall. We check before we drill.",
+          "Yes, when we can fasten into structure or use a rated anchor for that wall. We check before we drill. TV mounting starts at $89.",
       },
       {
         question: "Do you repair fences in Palm Harbor?",
         answer: `We replace broken boards, reset a sound gate, and match a short section. Call ${phone} with a photo of the damaged run.`,
+      },
+      {
+        question: "Do I need a permit for a handyman job in Palm Harbor?",
+        answer:
+          "Palm Harbor is unincorporated, so permits come from Pinellas County. Most small repairs don't need one. If yours does, we tell you before we start.",
+      },
+      {
+        question: "Are you licensed and insured?",
+        answer: "Yes, Handyman Pros FL is licensed and insured.",
       },
       {
         question: "Is Spanish available for Palm Harbor estimates?",

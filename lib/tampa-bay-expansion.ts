@@ -240,15 +240,82 @@ export const expansionLocations: TargetLocation[] = [
     city: "Lutz",
     displayName: "Lutz, FL",
     county: "Hillsborough County",
-    zipHint: "33549",
+    zipHint: "33548–33549",
+    postalCodes: ["33548", "33549"],
+    showStartingPrices: true,
+    compactLinks: true,
     neighborhoods: ["Lutz Lake Fern", "Van Dyke", "Dale Mabry north", "Land O' Lakes border"],
     intro:
-      "Need a Lutz home repair expert in ZIP 33549? Licensed and insured Handyman Pros FL handles tile patches, ceiling fans, and acreage fence fixes from our Westchase headquarters.",
+      "Need a Lutz home repair expert? Licensed and insured Handyman Pros FL handles tile patches, ceiling fans, and acreage fence fixes from our Westchase headquarters.",
+    directAnswer: "Handyman Pros FL serves Hillsborough-side Lutz, FL, including ZIPs 33548 and 33549, from its Westchase headquarters, handling tile repair from $199, ceiling fan installs from $79 and small jobs from $49.",
     paragraphs: [
-      "Lutz is larger lots, lake humidity, and a drive north on Dale Mabry or Van Dyke Road. ZIP 33549 houses range from production homes near the Land O' Lakes line to custom places where the casita and the garage are separate stops. We plan the visit so both get done when they are on the list.",
-      "Tile patch requests follow a cracked floor tile or a chipped shower edge. We check the substrate, match size when you have leftovers, and cut so the repair does not shout. Discontinued tile is discussed before we start, not after the thinset is mixed.",
-      "Fence and gate work on Lutz acreage is a section or a latch, plus the walk between structures. We are not bidding ranch fencing by the mile. Fans, doors, and drywall fill the rest of a 33549 day.",
       `Call ${phone} for Lutz. Licensed and insured, open 24/7. Hablamos español. One office: Westchase.`,
+    ],
+    sections: [
+      {
+        heading: "Lutz is lots, lakes and two counties",
+        subsections: [
+          {
+            heading: "Bigger lots, more than one structure",
+            paragraphs: [
+              "Lutz is larger lots, lake humidity, and a drive north on Dale Mabry or Van Dyke Road. Houses range from production homes near the Land O' Lakes line to custom places where the casita and the garage are separate stops. We plan the visit so both get done when they are on the list.",
+            ],
+          },
+          {
+            heading: "Lake humidity and what it does to walls, doors and grout",
+            paragraphs: [
+              "Lutz has about 2.4 square miles of water inside its boundaries, and lakeside houses hold moisture. UF/IFAS Extension notes that mold grows on drywall, tile and wood when humidity stays above 60 percent, and the Florida Department of Health says painting or caulking over mold will not stop it. So we look for the water source before we patch a wall or regrout a shower, and we adjust doors that swell in the wet months. UF/IFAS advises a licensed mold remediation company for mold larger than about 10 square feet.",
+            ],
+          },
+          {
+            heading: "Hillsborough side and Pasco Lutz",
+            paragraphs: [
+              "Lutz is unincorporated and spans Hillsborough and Pasco counties; its ZIP codes reach north past the county line to SR 54, an area people call Pasco Lutz. When a job needs a permit, it goes to the county the house is in. Our regular Lutz route is the Hillsborough side: Lutz-Lake Fern Road, Van Dyke Road and the Dale Mabry corridor.",
+            ],
+          },
+        ],
+        sources: [{ label: "Wikipedia: Lutz, Florida", href: "https://en.wikipedia.org/wiki/Lutz,_Florida" }, { label: "UF/IFAS mold fact sheet (PDF)", href: "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/sarasota/documents/pdf/chems/keydocs/2024_Chems_factsheetMoldManagement_ifas_FINAL_ADA.pdf" }, { label: "Florida DOH mold fact sheet (PDF)", href: "https://www.floridahealth.gov/wp-content/uploads/2025/08/emergency-information-factsheet-mold.pdf" }],
+      },
+      {
+        heading: "Tile patches and regrout in Lutz",
+        paragraphs: [
+          "Tile patch requests follow a cracked floor tile or a chipped shower edge. We check the substrate, match size when you have leftovers, and cut so the repair does not shout. Discontinued tile is discussed before we start, not after the thinset is mixed. Tile repair or regrout starts at $199.",
+        ],
+        links: [{ href: "/services/tile-installation", label: "Tile repair and installation" }],
+      },
+      {
+        heading: "Gates and short fence runs on Lutz acreage",
+        paragraphs: [
+          "Fence and gate work on Lutz acreage is a section or a latch, plus the walk between structures. We are not bidding ranch fencing by the mile. Hurricane season runs June 1 to November 30, and wind is what racks gates and loosens boards. Fans, doors, and drywall fill the rest of a Lutz day.",
+        ],
+        links: [
+          { href: "/services/fence", label: "Fence repair" },
+          { href: "/services/door-repair", label: "Door repair" },
+          { href: "/services/drywall-repair", label: "Drywall repair" },
+        ],
+        sources: [{ label: "NOAA National Hurricane Center", href: "https://www.nhc.noaa.gov/climo/" }],
+      },
+      {
+        heading: "Lutz roads and landmarks we cover",
+        paragraphs: [
+          "Beautiful Downtown Lutz is the replica train depot at Lutz-Lake Fern Road and US 41, rebuilt in 2000. Our Lutz stops run along Lutz-Lake Fern Road, Van Dyke Road, US 41 and the Dale Mabry (SR 597) corridor on the west side. Land O' Lakes, Wesley Chapel, Carrollwood and New Tampa are the next stops on the same north route.",
+        ],
+        links: [
+          { href: "/locations/land-o-lakes", label: "Land O' Lakes" },
+          { href: "/locations/wesley-chapel", label: "Wesley Chapel" },
+          { href: "/locations/carrollwood", label: "Carrollwood" },
+          { href: "/locations/tampa#new-tampa", label: "New Tampa" },
+          { href: "/locations/temple-terrace", label: "Temple Terrace" },
+        ],
+        sources: [{ label: "Wikipedia: Lutz, Florida", href: "https://en.wikipedia.org/wiki/Lutz,_Florida" }],
+      },
+      {
+        heading: "Same-day handyman in Lutz",
+        paragraphs: [
+          `A same-day service call starts at $99. Whether today works depends on whether the crew is already on the north route. Call ${phone} and we tell you on the phone.`,
+        ],
+        links: [{ href: "/services/same-day-handyman", label: "Same-day handyman" }],
+      },
     ],
     callouts: [
       fenceCallout(
@@ -258,18 +325,40 @@ export const expansionLocations: TargetLocation[] = [
     ],
     faqs: [
       {
-        question: "Do you serve Lutz ZIP 33549?",
+        question: "Do you serve all of Lutz?",
+        answer: `Our regular Lutz route is the Hillsborough side, ZIPs 33548 and 33549: Lutz Lake Fern, Van Dyke, and the Dale Mabry north corridor. For a Pasco-side Lutz address, call ${phone} and we will tell you if the route reaches you.`,
+      },
+      {
+        question: "How much does a handyman cost in Lutz?",
         answer:
-          "Yes. Lutz Lake Fern, Van Dyke, and the Dale Mabry north corridor are on our north Hillsborough route from Westchase.",
+          "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
       },
       {
         question: "Can you patch tile in Lutz?",
         answer:
-          "Yes, when the substrate is sound and a matching tile is available. We will tell you if the crack is a bigger floor problem.",
+          "Yes, when the substrate is sound and a matching tile is available. We will tell you if the crack is a bigger floor problem. Tile repair or regrout starts at $199.",
+      },
+      {
+        question: "Do you fix gates and short fence sections on larger lots?",
+        answer:
+          "Yes. We replace pickets, reset gates and match short sections. Whole-property fencing is a fence contractor job, and we'll say so.",
+      },
+      {
+        question: "Why do doors and grout give trouble in Lutz homes?",
+        answer:
+          "Humidity. Lakeside houses hold moisture, doors swell, and grout and drywall stay damp longer. UF/IFAS notes mold grows on these materials above 60 percent humidity, so we look for the water source before we patch or regrout.",
       },
       {
         question: "Is Lutz a branch office?",
         answer: `No. Handyman Pros FL has one headquarters at ${hq}, Tampa, FL 33626. Lutz is a service area.`,
+      },
+      {
+        question: "Are you licensed and insured?",
+        answer: "Yes. If a job needs a permit or a licensed trade, we tell you before we start.",
+      },
+      {
+        question: "¿Hablan español?",
+        answer: `Sí. Hablamos español. Llame al ${phone}.`,
       },
     ],
   },
@@ -429,28 +518,87 @@ export const expansionLocations: TargetLocation[] = [
     city: "Temple Terrace",
     displayName: "Temple Terrace, FL",
     county: "Hillsborough County",
-    zipHint: "33617",
+    zipHint: "33617, 33637",
+    postalCodes: ["33617", "33637"],
+    showStartingPrices: true,
+    compactLinks: true,
     neighborhoods: ["56th Street", "Busch Boulevard", "Temple Terrace Golf", "USF border"],
     intro:
       "Need Temple Terrace home repair — drywall, doors, and fixture installs — from a licensed local handyman? Handyman Pros FL serves 56th Street and the Busch corridor from our Westchase headquarters.",
+    directAnswer: "Handyman Pros FL serves Temple Terrace, FL (ZIPs 33617 and 33637) from its Westchase headquarters, fixing drywall from $75, light fixtures and ceiling fans from $79 and sticking doors in older and mid-century homes near 56th Street and USF. Temple Terrace is its own city, so permits come from the City of Temple Terrace, and we tell you up front if your job needs one.",
     paragraphs: [
-      "Temple Terrace sits between the Hillsborough River and the USF edge, with mid-century houses and later infill on the same block. Fasteners and wall types change house to house. We bring anchors that match block, wood studs, and the occasional plaster transition instead of one box of drywall screws for every wall.",
-      "The booked work is drywall after a rental turnover, a door that sticks on 56th Street, blinds and shelves hung level, and a stair rail that has loosened. Busch Boulevard rentals need the punch list finished, not a redesign.",
-      "Fence boards and gates show up on golf-course-adjacent lots and older side yards. We replace what failed. Seminole Heights and Carrollwood are the Tampa neighborhoods we often pair with a Temple Terrace stop.",
       `Call ${phone}. Licensed and insured. Open 24/7. Hablamos español. One Westchase office.`,
+    ],
+    sections: [
+      {
+        heading: "Older Temple Terrace homes: plaster, block and 1920s walls",
+        paragraphs: [
+          "Temple Terrace sits between the Hillsborough River and the USF edge, with mid-century houses and later infill on the same block. Fasteners and wall types change house to house. We bring anchors that match block, wood studs, and the occasional plaster transition instead of one box of drywall screws for every wall.",
+          "The city was planned in the 1920s as a Mediterranean Revival golf-course community, one of the first in the country, and incorporated in 1925. Fifteen M. Leo Elliott buildings and more than 35 Dwight James Baum houses survive next to post-war mid-century homes.",
+        ],
+        sources: [{ label: "Wikipedia: Temple Terrace, Florida", href: "https://en.wikipedia.org/wiki/Temple_Terrace,_Florida" }],
+      },
+      {
+        heading: "Rental turnovers near USF and Busch Boulevard",
+        paragraphs: [
+          "The booked work is drywall after a rental turnover, a door that sticks on 56th Street, blinds and shelves hung level, and a stair rail that has loosened. Busch Boulevard rentals need the punch list finished, not a redesign. A drywall patch starts at $75.",
+          "One permit detail matters for landlords: the City's exemption for ordinary minor repairs covers an owner's primary residence, and the City says rental property is deemed commercial in nature and requires permitting. Check with the City's permitting office before skipping a permit, and we flag anything that looks permit-level.",
+        ],
+        links: [
+          { href: "/services/drywall-repair", label: "Drywall repair" },
+          { href: "/services/door-repair", label: "Door repair" },
+        ],
+        sources: [{ label: "City of Temple Terrace Permitting Services", href: "https://templeterrace.gov/273/Permitting-Services" }],
+      },
+      {
+        heading: "Fence repairs and Temple Terrace permit rules",
+        paragraphs: [
+          "The City's fence application says replacing or repairing up to three panels, or replacing a gate, does not need a permit. A bigger replacement or a fence in a new position needs a fence permit with a survey or plot plan and a sketch. Side and rear fences top out at 7 feet, and the finished side faces out. The City also treats a decaying fence as a code violation, and broken sections can become projectiles in a storm.",
+          "Fence boards and gates show up on golf-course-adjacent lots and older side yards. We replace what failed.",
+        ],
+        links: [{ href: "/services/fence", label: "Fence repair" }],
+        sources: [
+          { label: "Temple Terrace fence permit application", href: "https://templeterrace.gov/FormCenter/Community-Development-6/Permit-Application-Fence-93" },
+          { label: "Temple Terrace fence and wall maintenance", href: "https://fl-templeterrace2.civicplus.com/294/Fence-Wall-Maintenance" },
+        ],
+      },
+      {
+        heading: "Live oaks, the river and storm season",
+        paragraphs: [
+          "Temple Terrace is a Tree City USA with sand live oaks, and the Hillsborough River runs along its east and south sides. Oak debris fills gutters and downspouts, and river-edge humidity swells doors. Hurricane season runs June 1 to November 30.",
+        ],
+        links: [
+          { href: "/services/gutter-installation", label: "Gutter repair and cleaning" },
+          { href: "/services/door-repair", label: "Door repair" },
+        ],
+        sources: [{ label: "Wikipedia: Temple Terrace, Florida", href: "https://en.wikipedia.org/wiki/Temple_Terrace,_Florida" }, { label: "NOAA National Hurricane Center", href: "https://www.nhc.noaa.gov/climo/" }],
+      },
+      {
+        heading: "Temple Terrace areas we cover",
+        paragraphs: [
+          "The 56th Street and Busch Boulevard corridors, the Riverhills Park area, streets around the Temple Terrace Golf & Country Club and Florida College, and homes near USF, in ZIPs 33617 and 33637. Seminole Heights and Carrollwood are the Tampa neighborhoods we often pair with a Temple Terrace stop.",
+        ],
+        links: [
+          { href: "/locations/tampa#seminole-heights", label: "Seminole Heights" },
+          { href: "/locations/carrollwood", label: "Carrollwood" },
+          { href: "/locations/brandon", label: "Brandon" },
+          { href: "/locations/lutz", label: "Lutz" },
+          { href: "/locations/plant-city", label: "Plant City" },
+        ],
+      },
+      {
+        heading: "Same-day handyman in Temple Terrace",
+        paragraphs: [
+          `A same-day service call starts at $99. Whether today works depends on the east Tampa route. Call ${phone} and we tell you on the phone.`,
+        ],
+        links: [{ href: "/services/same-day-handyman", label: "Same-day handyman" }],
+      },
     ],
     callouts: [
       fenceCallout(
         "Temple Terrace",
         "Side-yard wood fences near 56th Street and the golf course typically need boards and a latch, not a new layout."
       ),
-      {
-        before: "56th Street drywall and doors stay on this page. Farther east, past Brandon, ",
-        href: "/locations/plant-city",
-        label: "Plant City",
-        after:
-          " is where we fix swollen downtown doors, Walden Lake fence boards, and acreage lines. Same license, same Westchase headquarters.",
-      },
     ],
     faqs: [
       {
@@ -459,13 +607,37 @@ export const expansionLocations: TargetLocation[] = [
           "Yes. The 56th Street and Busch Boulevard corridors, including homes near the USF border, are on our east Tampa route from Westchase.",
       },
       {
+        question: "How much does a handyman cost in Temple Terrace?",
+        answer:
+          "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
+      },
+      {
         question: "Can you patch drywall in a Temple Terrace rental?",
         answer:
-          "Yes. We patch, texture-blend, and leave the wall ready for paint. We flag moisture before we cover a stain.",
+          "Yes. We patch, texture-blend, and leave the wall ready for paint. We flag moisture before we cover a stain. A drywall patch starts at $75.",
+      },
+      {
+        question: "Do I need a permit to fix my fence in Temple Terrace?",
+        answer:
+          "The City says replacing up to three panels or a gate doesn't need a permit. Bigger replacements or a new fence line need a city fence permit with a survey and sketch.",
+      },
+      {
+        question: "Do landlords need permits for rental repairs in Temple Terrace?",
+        answer:
+          "The City's owner-repair exemption covers an owner's primary residence; it treats rental property as commercial. Check with the City's permitting office, and we'll flag anything that looks permit-level.",
+      },
+      {
+        question: "Can you fix doors that stick in older Temple Terrace homes?",
+        answer:
+          "Yes. Older and mid-century doors often swell or sag on their hinges. We tighten hinges, adjust or plane the door, and fix the latch so it closes.",
       },
       {
         question: "Is Temple Terrace its own Handyman Pros location?",
         answer: `No. The only location is ${hq}, Tampa, FL 33626.`,
+      },
+      {
+        question: "Are you licensed and insured?",
+        answer: "Yes, Handyman Pros FL is licensed and insured.",
       },
     ],
   },

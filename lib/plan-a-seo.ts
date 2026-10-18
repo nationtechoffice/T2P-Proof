@@ -113,8 +113,8 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     description: "Licensed & insured Oldsmar handyman for tile patches, doors, and TV mounts in ZIP 34677. Hablamos español. Next hop from Westchase. Call (656) 205-3185.",
   },
   "/locations/palm-harbor-fl": {
-    title: "Handyman Palm Harbor FL | Licensed, Same-Day",
-    description: "Licensed & insured Palm Harbor handyman for TV mounts, drywall, and fence boards in Ozona and East Lake. Hablamos español. Westchase HQ. Call (656) 205-3185.",
+    title: "Handyman in Palm Harbor, FL | East Lake, Ozona | 24/7 Quotes",
+    description: "Palm Harbor handyman for TV mounting (from $89), drywall patches (from $75) and fence boards in East Lake, Ozona and Crystal Beach. Call (656) 205-3185.",
   },
   "/locations/safety-harbor-fl": {
     title: "Handyman Safety Harbor | Licensed Doors",
@@ -141,8 +141,8 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     description: "Licensed & insured Riverview handyman for drywall patches and fence-section fixes near Winthrop and Balm. From Westchase HQ. Call (656) 205-3185.",
   },
   "/locations/lutz": {
-    title: "Handyman Lutz FL | Tile Patch & Acreage Jobs",
-    description: "Licensed & insured Lutz FL handyman in ZIP 33549 for tile patches, ceiling fans, and acreage fence repairs. Westchase HQ. Call (656) 205-3185.",
+    title: "Handyman in Lutz, FL | Tile Repair, Fans, Gates | 24/7",
+    description: "Lutz handyman for ZIPs 33548 and 33549. Tile repair from $199, ceiling fans from $79, small jobs from $49. Licensed & insured. Call (656) 205-3185.",
   },
   "/locations/wesley-chapel": {
     title: "Handyman Wesley Chapel FL | Fixtures & Fence",
@@ -161,8 +161,8 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     description: "Licensed & insured Carrollwood handyman for ceiling fans, punch lists, and dragging gates. Hablamos español. Westchase HQ. Call (656) 205-3185.",
   },
   "/locations/temple-terrace": {
-    title: "Handyman Temple Terrace FL | Drywall & Doors",
-    description: "Licensed & insured Temple Terrace handyman for drywall, sticking doors, and fixture installs near 56th St. From Westchase. Call (656) 205-3185.",
+    title: "Handyman in Temple Terrace, FL | Drywall, Doors, Rentals",
+    description: "Temple Terrace handyman for drywall patches (from $75), sticking doors, fixtures (from $79) and rental punch lists near 56th St and USF. Call (656) 205-3185.",
   },
   "/locations/land-o-lakes": {
     title: "Handyman Land O' Lakes FL | Fence & Gutter Fixes",
@@ -175,6 +175,10 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   "/locations/spring-hill": {
     title: "Handyman Spring Hill FL | Fence & Home Repair",
     description: "Licensed & insured Spring Hill handyman for fence sections, doors, and home repairs in Hernando. From Westchase HQ only. Call (656) 205-3185.",
+  },
+  "/services/painting": {
+    title: "Interior & Exterior Painting in Tampa, FL | Handyman Pros",
+    description: "Interior painting, trim, doors and exterior touch-ups across Tampa Bay from our Westchase crew. Licensed & insured. Hablamos español. (656) 205-3185.",
   },
   "/services/fence": {
     title: "Fence Repair & Fence Handyman Tampa FL",
@@ -212,16 +216,16 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     description: "Licensed & insured Town 'N' Country handyman for fans, fixture swaps, and drywall near Hillsborough Ave. Hablamos español. Westchase HQ. Call (656) 205-3185.",
   },
   "/locations/westchase-fl": {
-    title: "Handyman Westchase & Tampa FL | Manitas Licensed",
-    description: "Licensed & insured handyman in Westchase (ZIP 33626). Hablamos español. Same-day reparaciones en casa from our Westchase HQ. Call (656) 205-3185.",
+    title: "Handyman in Westchase, FL 33626 | Local HQ, Open 24/7",
+    description: "Handyman Pros FL is based in Westchase (33626). TV mounting from $89, drywall patch from $75, small jobs from $49. Licensed & insured. Call (656) 205-3185.",
   },
   "/service-areas": {
     title: "Handyman Service Areas | Westchase HQ Coverage",
     description: "Licensed Handyman Pros FL covers Westchase, Carrollwood, Citrus Park, Town 'N' Country, Tampa & Pinellas from ZIP 33626. Same-day when nearby — (656) 205-3185.",
   },
   "/services/drywall-repair": {
-    title: "Drywall Repair Tampa FL | Yeso y Parches",
-    description: "Drywall y yeso repair in Tampa. Licensed & insured Handyman Pros FL patches holes, blends texture and preps walls for paint. Call (656) 205-3185.",
+    title: "Drywall Repair in Tampa, FL | Patches from $75 | 24/7 Quotes",
+    description: "Tampa drywall repair from $75: holes, cracks, ceiling patches and texture matching, paint-ready. Licensed & insured. Hablamos español. Call (656) 205-3185.",
   },
   "/services/electrical-fixture-installation": {
     title: "Electrical Fixtures Tampa | Electricidad Menor",
