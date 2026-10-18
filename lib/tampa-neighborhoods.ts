@@ -79,7 +79,7 @@ export const southTampaSpots: NeighborhoodSpot[] = [
     links: [
       { href: "/locations/carrollwood", label: "Carrollwood handyman hub" },
       { href: "/services/handyman/fan-installation", label: "Ceiling fan installation" },
-      { href: "/services/fence-handyman", label: "Fence handyman" },
+      { href: "/services/fence", label: "Fence handyman" },
     ],
   },
 ];

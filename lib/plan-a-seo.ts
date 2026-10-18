@@ -176,9 +176,9 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     title: "Handyman Spring Hill FL | Fence & Home Repair",
     description: "Licensed & insured Spring Hill handyman for fence sections, doors, and home repairs in Hernando. From Westchase HQ only. Call (656) 205-3185.",
   },
-  "/services/fence-handyman": {
-    title: "Fence Handyman Tampa FL | Fencing Handyman",
-    description: "Fence handyman and fencing handyman in Tampa Bay: licensed & insured board, gate, and short-section repairs from Westchase. Call (656) 205-3185.",
+  "/services/fence": {
+    title: "Fence Repair & Fence Handyman Tampa FL",
+    description: "Fence handyman and fence repair in Tampa Bay: licensed & insured board, gate, and short-section repairs plus wood and vinyl work. Call (656) 205-3185.",
   },
   "/locations/tarpon-springs-fl": {
     title: "Handyman Tarpon Springs | Licensed Fence Fix",

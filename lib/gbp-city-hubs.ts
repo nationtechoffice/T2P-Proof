@@ -150,7 +150,7 @@ export const gbpCityHubs: TargetLocation[] = [
     callouts: [
       {
         before: "East Lake and Highland Lakes fence boards are a ",
-        href: "/services/fence-handyman",
+        href: "/services/fence",
         label: "fence handyman",
         after: " repair — pickets, a gate, or a short matching section.",
       },
@@ -326,7 +326,7 @@ export const gbpCityHubs: TargetLocation[] = [
     callouts: [
       {
         before: "Sponge Docks and East Lake fence lines are a ",
-        href: "/services/fence-handyman",
+        href: "/services/fence",
         label: "fence handyman",
         after: " repair when the damage is a section, a gate, or a few boards.",
       },
@@ -414,7 +414,7 @@ export const gbpCityHubs: TargetLocation[] = [
     callouts: [
       {
         before: "Gulf Harbors and downtown fence panels are a ",
-        href: "/services/fence-handyman",
+        href: "/services/fence",
         label: "fence handyman",
         after: " repair when you need boards or a gate, not a new fence around the lot.",
       },
@@ -458,7 +458,7 @@ export const gbpCityHubs: TargetLocation[] = [
     callouts: [
       {
         before: "Long Gunn Highway fence runs usually need a ",
-        href: "/services/fence-handyman",
+        href: "/services/fence",
         label: "fence handyman",
         after: " for the section that failed, not a new fence around the whole acreage.",
       },

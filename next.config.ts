@@ -25,6 +25,13 @@ const legacyRedirects = [
   { source: "/handyman-seffner-fl/", destination: "/locations/brandon", permanent: true as const },
   { source: "/handyman-south-tampa-fl", destination: "/locations/tampa", permanent: true as const },
   { source: "/handyman-south-tampa-fl/", destination: "/locations/tampa", permanent: true as const },
+  // Oct 18: duplicate service URLs merged into the main service pages.
+  { source: "/services/fence-handyman", destination: "/services/fence", permanent: true as const },
+  { source: "/services/fence-handyman/", destination: "/services/fence", permanent: true as const },
+  { source: "/services/handyman/painting", destination: "/services/painting", permanent: true as const },
+  { source: "/services/handyman/painting/", destination: "/services/painting", permanent: true as const },
+  { source: "/services/handyman/tile-work-installation", destination: "/services/tile-installation", permanent: true as const },
+  { source: "/services/handyman/tile-work-installation/", destination: "/services/tile-installation", permanent: true as const },
   { source: "/locations/greater-carrollwood", destination: "/locations/carrollwood", permanent: true as const },
   { source: "/locations/greater-carrollwood-fl", destination: "/locations/carrollwood", permanent: true as const },
   { source: "/handyman-greater-carrollwood-fl", destination: "/locations/carrollwood", permanent: true as const },

@@ -143,16 +143,7 @@ const handymanServices: Omit<Service, "category">[] = [
       { question: "Do you provide the moving truck?", answer: "We provide labor for loading, unloading, and furniture setup. Truck rental is arranged separately, and we're happy to recommend partners." },
     ],
   },
-  {
-    slug: "painting",
-    name: "Painting Services",
-    shortDescription: "Complete residential and commercial painting solutions.",
-    description: "Handyman Pros Florida is your full-service painting contractor. Interior, exterior, cabinets, decks, and specialty finishes — all delivered with professional quality.",
-    keywords: ["painting contractor Florida", "house painters", "residential painting"],
-    faqs: [
-      { question: "Do you offer free painting estimates?", answer: "Yes, all painting projects include a free on-site estimate with color consultation." },
-    ],
-  },
+
   {
     slug: "plumbing-fixture-installation",
     name: "Plumbing Fixture Installation",
@@ -193,16 +184,7 @@ const handymanServices: Omit<Service, "category">[] = [
       { question: "Do you tarp a leaking roof?", answer: "Yes. We tarp and secure damaged roof sections and patch leaks around vents, flashing, and cracked tiles, especially during hurricane season." },
     ],
   },
-  {
-    slug: "tile-work-installation",
-    name: "Tile Work Installation",
-    shortDescription: "Custom tile installation for floors, backsplashes, and showers.",
-    description: "Elevate your space with professional tile installation. We install ceramic, porcelain, natural stone, and mosaic tile for bathrooms, kitchens, and outdoor areas.",
-    keywords: ["tile installation Florida", "bathroom tile install", "backsplash installation"],
-    faqs: [
-      { question: "What tile materials do you work with?", answer: "We install ceramic, porcelain, natural stone, marble, glass mosaic, and subway tile." },
-    ],
-  },
+
   {
     slug: "tile-work-replacement",
     name: "Tile Work Replacement",

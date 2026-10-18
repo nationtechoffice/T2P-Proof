@@ -5,7 +5,7 @@ import { allLocationLinks } from "@/lib/location-silos";
 export const authorityHubLinks = {
   home: { href: "/", label: "Tampa Handyman" },
   services: { href: "/services", label: "All Handyman Services" },
-  fence: { href: "/services/fence-handyman", label: "Fence Handyman Tampa" },
+  fence: { href: "/services/fence", label: "Fence Handyman Tampa" },
   drywall: { href: "/services/drywall-repair", label: "Drywall Repair Tampa" },
   tvMount: { href: "/services/tv-wall-mounting", label: "TV Mounting Tampa" },
   fans: { href: "/services/handyman/fan-installation", label: "Ceiling Fan Installation Tampa" },
@@ -134,7 +134,7 @@ export function linkifyServiceLabel(label: string): { href: string; label: strin
     return { href: "/services/drywall-repair", label };
   }
   if (lower.includes("fence")) {
-    return { href: "/services/fence-handyman", label };
+    return { href: "/services/fence", label };
   }
   if (lower.includes("door")) {
     return { href: "/services/door-repair", label };
@@ -173,8 +173,7 @@ export function linkifyServiceLabel(label: string): { href: string; label: strin
 }
 
 export const fenceCategoryLinks = [
-  { href: "/services/fence-handyman", label: "Fence Handyman Tampa" },
-  { href: "/services/fence", label: "Fence Services Tampa" },
+  { href: "/services/fence", label: "Fence Handyman Tampa" },
   { href: "/services/fence/wood-fence-installation", label: "Wood Fence Installation" },
   { href: "/services/fence/fence-repairs-maintenance", label: "Fence Repair & Maintenance" },
   { href: "/services/fence/vinyl-fence-installation", label: "Vinyl Fence Installation" },

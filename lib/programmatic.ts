@@ -1,6 +1,6 @@
 import { siteConfig } from "./site-config";
 import { serviceDescription, serviceTitle } from "./instant-estimate";
-import { expansionLocations, fenceHandymanService } from "./tampa-bay-expansion";
+import { expansionLocations } from "./tampa-bay-expansion";
 import { gbpCityHubs } from "./gbp-city-hubs";
 import { tampaLocationSpots } from "./tampa-neighborhoods";
 
@@ -393,6 +393,11 @@ export const coreServices: CoreService[] = [
           "Tile repair or regrouting in Tampa starts at $199. A cracked-tile patch or a standard kitchen backsplash is quoted after we see photos and know whether the tile is already on site. A full bathroom, or a floor that needs substrate repair, is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
       },
       {
+        question: "What tile materials do you work with?",
+        answer:
+          "Ceramic, porcelain, and subway tile are the most common. We also set natural stone, marble, and glass mosaic on backsplashes and wall sections when the wall is sound and the tile is on site.",
+      },
+      {
         question: "Can you replace a few cracked tiles without redoing the whole floor?",
         answer:
           "Yes, when the surrounding tile is solid and we can match size and color. We cut out the damaged pieces, check the substrate, set replacements, and grout to the existing joints. If the tile is discontinued, we tell you before we start.",
@@ -544,7 +549,6 @@ export const coreServices: CoreService[] = [
         "Typical licensed handyman gutter visit in Tampa Bay for a one-story cleaning, downspout flush, or a short section repair or replacement. Full-run installs and steep roofs are quoted separately.",
     },
   },
-  fenceHandymanService,
 ];
 
 export const targetLocations: TargetLocation[] = [

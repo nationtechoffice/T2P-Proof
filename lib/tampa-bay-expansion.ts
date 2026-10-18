@@ -7,7 +7,7 @@ const hq = siteConfig.address.street;
 function fenceCallout(place: string, detail: string): NonNullable<TargetLocation["callouts"]>[number] {
   return {
     before: `${detail} That work is a `,
-    href: "/services/fence-handyman",
+    href: "/services/fence",
     label: "fence handyman",
     after: ` visit in ${place} — pickets, a gate, or a short matching section — from the same licensed and insured Westchase crew. We are not a separate fencing contractor.`,
   };
@@ -98,7 +98,7 @@ export const expansionLocations: TargetLocation[] = [
         name: "Walden Lake",
         body: "Walden Lake is the golf-course community: wood privacy fences on the back lot, a gate that dropped, and family rooms that need a TV mount on block. We repair the fence section that failed and hang the bracket into real structure. We do not bid a new fence around the whole fairway lot.",
         links: [
-          { href: "/services/fence-handyman", label: "Fence handyman" },
+          { href: "/services/fence", label: "Fence handyman" },
           { href: "/services/tv-wall-mounting", label: "TV wall mounting" },
         ],
       },
@@ -106,7 +106,7 @@ export const expansionLocations: TargetLocation[] = [
         name: "Knights Griffin and Trapnell",
         body: "East of Park Road the lots open into pasture, garden rows, and strawberry acreage toward County Line Road. Fence work here is a rotten bottom board, a sagging farm gate, or one soft post when the hole is still sound — a longer line than a Walden Lake panel, still a handyman section, not ranch fencing by the mile.",
         links: [
-          { href: "/services/fence-handyman", label: "Acreage fence repair" },
+          { href: "/services/fence", label: "Acreage fence repair" },
           { href: "/services/same-day-handyman", label: "Same-day scheduling" },
         ],
       },
