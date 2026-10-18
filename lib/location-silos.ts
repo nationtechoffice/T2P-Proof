@@ -1,5 +1,4 @@
 import type { NeighborhoodSpot } from "@/lib/tampa-neighborhoods";
-import { southTampaSpots } from "@/lib/tampa-neighborhoods";
 
 export interface LocationSilo {
   slug: string;
@@ -20,41 +19,6 @@ export interface LocationSilo {
 }
 
 export const locationSilos: LocationSilo[] = [
-  {
-    slug: "seffner",
-    city: "Seffner",
-    displayName: "Seffner, FL",
-    path: "/handyman-seffner-fl",
-    eyebrow: "Seffner · Hillsborough County",
-    h1: "Seffner FL Property Repair & Local Handyman Help",
-    intro:
-      "Handyman Pros FL provides Seffner FL property repair — including gutter cleaning coordination support, exterior fixes, and trusted local handyman service for residential owners.",
-    keywords: ["Seffner FL property repair", "gutter cleaning", "local handyman", "handyman Seffner FL"],
-    metaDescription:
-      "Seffner FL property repair and local handyman service for gutters, exterior fixes, and indoor punch lists. Call Handyman Pros FL at (656) 205-3185.",
-    mapQuery: "Seffner, FL",
-    mapTitle: "Google Map of Seffner, Florida",
-    services: [
-      "Gutter cleaning & minor gutter reseating",
-      "Exterior trim and fascia touch repairs",
-      "Door, screen, and latch fixes",
-      "Drywall and caulk maintenance",
-      "Shelf, hook, and organizer installs",
-      "Storm-season outdoor punch lists",
-    ],
-    paragraphs: [
-      "Seffner FL property repair needs often blend indoor comfort with outdoor weather readiness. Oak debris, seasonal storms, and older outbuildings create maintenance cycles that busy owners postpone until leaks or pests appear. Handyman Pros FL acts as your local handyman for the practical repairs that protect the home between larger contractor projects.",
-      "Gutter cleaning and related exterior care keep water moving away from fascia and foundations. We clear debris, check for loose spikes or brackets, and flag sections that need replacement so you are not surprised during the next downpour. Pair gutter cleaning with screen repairs or downspout adjustments when you want a more complete exterior pass.",
-      "Inside Seffner homes, our local handyman team handles the everyday list: sticky doors, loose towel bars, drywall dents, and hardware refreshes. Property managers and landlords also call us for turnover work that must look rental-ready without a full renovation budget.",
-      "Choosing Handyman Pros FL for Seffner FL property repair means clear communication and Tampa Bay accountability. We are based nearby in Westchase / Tampa, licensed and insured, and available at (656) 205-3185 around the clock for estimates. Tell us about gutter cleaning, outdoor repairs, or indoor fixes — we will prioritize what protects the structure first.",
-      "From acreage edges to neighborhood lots, Seffner property owners deserve a local handyman who shows up prepared and finishes clean.",
-    ],
-    relatedPaths: [
-      { href: "/locations/plant-city", label: "Handyman Plant City FL" },
-      { href: "/locations/brandon", label: "Handyman Brandon FL" },
-      { href: "/locations/valrico", label: "Handyman Valrico FL" },
-    ],
-  },
   {
     slug: "town-n-country",
     city: "Town 'n' Country",
@@ -124,43 +88,6 @@ export const locationSilos: LocationSilo[] = [
       { href: "/locations/safety-harbor-fl", label: "Handyman Safety Harbor FL" },
       { href: "/locations/palm-harbor-fl", label: "Handyman Palm Harbor FL" },
     ],
-  },
-  {
-    slug: "south-tampa",
-    city: "South Tampa",
-    displayName: "South Tampa, FL",
-    path: "/handyman-south-tampa-fl",
-    eyebrow: "South Tampa · Premium neighborhoods",
-    h1: "South Tampa Handyman for Premium Home Care",
-    intro:
-      "Handyman Pros FL provides South Tampa handyman service focused on premium home care — discreet scheduling, careful finishes, and pro TV wall mounting.",
-    keywords: ["South Tampa handyman", "premium home care", "TV wall mounting", "handyman South Tampa FL"],
-    metaDescription:
-      "South Tampa handyman for premium home care and TV wall mounting. Licensed Handyman Pros FL — call (656) 205-3185 for a free estimate.",
-    mapQuery: "South Tampa, FL",
-    mapTitle: "Google Map of South Tampa, Florida",
-    services: [
-      "TV wall mounting with clean cable planning",
-      "Premium home care punch lists",
-      "Fixture and hardware upgrades",
-      "Drywall texture blending",
-      "Closet and pantry organization installs",
-      "Door, trim, and paint-ready repairs",
-    ],
-    paragraphs: [
-      "A South Tampa handyman should respect both the architecture and the lifestyle of neighborhoods from Hyde Park to Beach Park and beyond. Handyman Pros FL delivers premium home care: punctual arrivals, protective coverings, and finish details that match higher-end interiors rather than “good enough” patchwork.",
-      "TV wall mounting is one of our signature South Tampa services. We confirm wall construction, use proper lag hardware into studs or rated anchors, level multi-display setups when needed, and plan cable paths so living rooms stay polished. Soundbar brackets and component shelves can be included in the same visit.",
-      "Premium home care also means coordinating small repairs before events, photography, or seasonal returns from travel. We handle fixture swaps, closet upgrades, discreet drywall blending, and hardware refreshes that elevate how a room feels without a full remodel timeline.",
-      "Schedule your South Tampa handyman visit at (656) 205-3185. Open 24/7, Handyman Pros FL offers free estimates for TV wall mounting and premium home care lists across South Tampa and nearby central bay addresses.",
-      "Discreet, licensed, and detail-oriented — that is how we approach every South Tampa property.",
-    ],
-    relatedPaths: [
-      { href: "/locations/tampa", label: "Handyman Tampa FL" },
-      { href: "/locations/carrollwood", label: "Handyman Carrollwood FL" },
-      { href: "/services/drywall-repair", label: "Drywall Repair Tampa" },
-      { href: "/services/fence-handyman", label: "Fence Handyman Tampa" },
-    ],
-    spots: southTampaSpots,
   },
 ];
 

@@ -10,7 +10,7 @@ export const tampaLocationSpots: NeighborhoodSpot[] = [
     name: "Hyde Park",
     body: "Hyde Park jobs are usually inside older South Tampa houses along Bayshore, Swann, and South Howard: a TV mount in a formal living room, a drywall blend next to plaster, or a sticking door after a humid week. We protect floors and keep the visit quiet. These are service calls from our only Westchase headquarters, not a Hyde Park storefront.",
     links: [
-      { href: "/handyman-south-tampa-fl", label: "South Tampa handyman" },
+      { href: "/locations/tampa", label: "South Tampa handyman" },
       { href: "/services/tv-wall-mounting", label: "TV wall mounting" },
       { href: "/services/drywall-repair", label: "Drywall repair" },
     ],
@@ -90,7 +90,7 @@ export const moneyNeighborhoodSpots: Record<string, NeighborhoodSpot[]> = {
       name: "Hyde Park",
       body: "Hyde Park drywall is often a small, visible patch: a doorknob hole in a hallway, a crack where plaster meets board, or a texture that has to disappear under paint. We feather wider than the hole so the repair does not telegraph in raking light from Bayshore windows.",
       links: [
-        { href: "/handyman-south-tampa-fl", label: "South Tampa handyman" },
+        { href: "/locations/tampa", label: "South Tampa handyman" },
         { href: "/locations/tampa#hyde-park", label: "Hyde Park handyman notes" },
       ],
     },
@@ -124,7 +124,7 @@ export const moneyNeighborhoodSpots: Record<string, NeighborhoodSpot[]> = {
       name: "Hyde Park",
       body: "Hyde Park TV mounts often go over a fireplace or onto a plaster-and-lath wall that will not hold a guess. We confirm structure, use a rated mount, and hide cables only when the wall and the code allow it. South Tampa scheduling stays discreet.",
       links: [
-        { href: "/handyman-south-tampa-fl", label: "South Tampa handyman" },
+        { href: "/locations/tampa", label: "South Tampa handyman" },
         { href: "/locations/tampa#hyde-park", label: "Hyde Park coverage" },
       ],
     },
@@ -158,7 +158,7 @@ export const moneyNeighborhoodSpots: Record<string, NeighborhoodSpot[]> = {
       name: "Hyde Park",
       body: "Same-day Hyde Park windows depend on the cross-town drive from Westchase. A single TV mount or a sticking door can fit when the afternoon route is already south. A long punch list is scheduled, not forced into a leftover hour.",
       links: [
-        { href: "/handyman-south-tampa-fl", label: "South Tampa handyman" },
+        { href: "/locations/tampa", label: "South Tampa handyman" },
         { href: "/locations/tampa#hyde-park", label: "Hyde Park on the Tampa hub" },
       ],
     },
@@ -193,7 +193,7 @@ export const moneyNeighborhoodSpots: Record<string, NeighborhoodSpot[]> = {
       name: "Hyde Park",
       body: "Hyde Park fencing is usually a garden gate, a short wood section, or a leaning picket — not a subdivision privacy run. We repair what is there. A full property fence bid is a different conversation, and we will say so before anyone digs.",
       links: [
-        { href: "/handyman-south-tampa-fl", label: "South Tampa handyman" },
+        { href: "/locations/tampa", label: "South Tampa handyman" },
         { href: "/locations/tampa#hyde-park", label: "Hyde Park coverage" },
       ],
     },

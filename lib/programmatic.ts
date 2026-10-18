@@ -562,6 +562,7 @@ export const targetLocations: TargetLocation[] = [
       `Handyman Tampa FL searches should land on a real local crew — not a lead marketplace. We dispatch from ${siteConfig.address.street} in Westchase with a stocked truck for drywall repair Tampa jobs, TV mounting Tampa installs, door repairs, and punch lists across South Tampa, Hyde Park, Seminole Heights, and New Tampa.`,
       "Drywall repair Tampa homeowners book most after kids, doorknobs, or summer humidity stains. We cut clean patches, blend orange peel or knockdown, and leave paint-ready walls. TV mounting Tampa visits include stud finding, rated hardware, and clean cable runs for living rooms, bedrooms, and lanais.",
       "Hillsborough County homes see Florida humidity, stucco, and HOA punch lists every week. Bundle drywall, mounting, and fixture work into one Handyman Tampa FL visit to save a trip charge.",
+      "South Tampa visits, from Hyde Park and Bayshore to Beach Park, get the same care: shoe covers, drop cloths, and finish work that matches older trim and plaster walls. TV mounting with clean cable planning, drywall texture blending, fixture and hardware upgrades, and closet or pantry installs are the usual South Tampa list.",
       `Call ${siteConfig.phone} 24/7 for an instant phone estimate on Handyman Tampa FL, drywall repair Tampa, or TV mounting Tampa — or send photos through the quote form.`,
     ],
     faqs: [
@@ -572,7 +573,11 @@ export const targetLocations: TargetLocation[] = [
       {
         question: "How much is drywall repair Tampa or TV mounting Tampa?",
         answer:
-          "Small drywall repair Tampa patches are usually flat-rate after photos. TV mounting Tampa pricing depends on TV size, wall type, and cable concealment. Estimates are free over the phone.",
+          "A drywall patch in Tampa starts at $75 and TV mounting starts at $89. The final price depends on the hole size, wall type, and cable concealment. Estimates are free over the phone.",
+      },
+      {
+        question: "Do you work in South Tampa and Hyde Park?",
+        answer: `Yes. South Tampa, Hyde Park, Bayshore, and Beach Park are regular stops from our Westchase headquarters for TV mounting, drywall blending, fixtures, and punch lists. Call ${siteConfig.phone}.`,
       },
       {
         question: "Is Handyman Pros FL based in Tampa?",
@@ -674,12 +679,13 @@ export function hrefForAreaName(name: string): string | undefined {
     "spring hill": "spring-hill",
     valrico: "valrico",
     "fish hawk": "valrico",
+    seffner: "brandon",
     "apollo beach": "apollo-beach",
     gulfport: "gulfport",
     largo: "largo",
   };
   if (normalized === "wesley chapel") return "/locations/wesley-chapel";
-  if (normalized === "south tampa") return "/handyman-south-tampa-fl";
+  if (normalized === "south tampa") return "/locations/tampa";
   if (normalized === "hyde park") return "/locations/tampa#hyde-park";
   if (normalized === "seminole heights") return "/locations/tampa#seminole-heights";
   if (normalized === "new tampa") return "/locations/tampa#new-tampa";

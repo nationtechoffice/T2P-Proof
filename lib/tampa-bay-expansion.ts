@@ -147,13 +147,14 @@ export const expansionLocations: TargetLocation[] = [
     displayName: "Brandon, FL",
     county: "Hillsborough County",
     zipHint: "33510–33511",
-    neighborhoods: ["Bloomingdale", "Limona", "Providence Lakes", "Brandon Boulevard"],
+    neighborhoods: ["Bloomingdale", "Limona", "Providence Lakes", "Brandon Boulevard", "Seffner"],
     intro:
       "Looking for a Brandon FL handyman for drywall, ceiling fans, and fence-section repairs? Licensed and insured Handyman Pros FL serves Bloomingdale, Limona, and Providence Lakes from our Westchase headquarters.",
     paragraphs: [
       "Brandon houses along Brandon Boulevard and in Bloomingdale are a mix of 1980s ranches and later two-stories. The punch lists we see are practical: a ceiling fan that wobbles, orange-peel drywall after a furniture move, and a privacy-fence panel that split in a summer storm.",
       "Limona and Providence Lakes calls often stack. A fan swap at an existing box, a bathroom caulk refresh, and a gate latch can share one visit when the parts match. We do not open new electrical circuits. If the box is not fan-rated, we stop and say so.",
       `Brandon is east of Tampa, not a satellite shop. The truck starts at ${hq} in Westchase. Valrico and Riverview are the neighboring service areas on many of the same days.`,
+      "Seffner, just north and east of Brandon, is on the same east Hillsborough route. Seffner calls mix outdoor and indoor work: gutter cleaning and reseating loose sections, exterior trim and fascia touch-ups, screen doors and latches, drywall dents and caulk, and shelf or organizer installs. Landlords also book rental turnover lists there.",
       `Call ${phone} for a Brandon estimate. Licensed and insured, open 24/7. Hablamos español at the same number.`,
     ],
     callouts: [
@@ -179,6 +180,10 @@ export const expansionLocations: TargetLocation[] = [
         question: "Do you install ceiling fans in Brandon?",
         answer:
           "Yes, at an existing fan-rated box. We mount, connect, and balance the fan. New wiring is electrician work.",
+      },
+      {
+        question: "Do you serve Seffner?",
+        answer: `Yes. Seffner is on the same east Hillsborough route as Brandon and Valrico. Gutter cleaning, exterior trim fixes, doors and screens, drywall, and shelving are common Seffner jobs. Call ${phone}.`,
       },
       {
         question: "Which Brandon neighborhoods do you cover?",

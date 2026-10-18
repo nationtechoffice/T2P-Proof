@@ -28,6 +28,8 @@ const SITEMAP_FORBIDDEN_PATHS = [
   "/handyman-plant-city-fl",
   "/handyman-westchase-fl",
   "/handyman-valrico-fl",
+  "/handyman-seffner-fl",
+  "/handyman-south-tampa-fl",
   "/locations/westchase",
   "/services/handyman/paint-indoors",
   "/services/paint-indoors",

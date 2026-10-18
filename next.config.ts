@@ -20,6 +20,11 @@ const legacyRedirects = [
   { source: "/handyman-spring-hill-fl", destination: "/locations/spring-hill", permanent: true as const },
   { source: "/handyman-valrico-fl", destination: "/locations/valrico", permanent: true as const },
   { source: "/handyman-valrico-fl/", destination: "/locations/valrico", permanent: true as const },
+  // Oct 18: retired silo pages merged into their hubs. Seffner is next to Brandon; South Tampa is in the Tampa hub.
+  { source: "/handyman-seffner-fl", destination: "/locations/brandon", permanent: true as const },
+  { source: "/handyman-seffner-fl/", destination: "/locations/brandon", permanent: true as const },
+  { source: "/handyman-south-tampa-fl", destination: "/locations/tampa", permanent: true as const },
+  { source: "/handyman-south-tampa-fl/", destination: "/locations/tampa", permanent: true as const },
   { source: "/locations/greater-carrollwood", destination: "/locations/carrollwood", permanent: true as const },
   { source: "/locations/greater-carrollwood-fl", destination: "/locations/carrollwood", permanent: true as const },
   { source: "/handyman-greater-carrollwood-fl", destination: "/locations/carrollwood", permanent: true as const },

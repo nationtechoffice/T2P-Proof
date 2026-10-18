@@ -93,7 +93,7 @@ export function moneyNearbyLinks(serviceName: string) {
     { href: "/locations/brandon", label: `${name} in Brandon` },
     { href: "/locations/plant-city", label: `${name} in Plant City` },
     { href: "/locations/citrus-park-fl", label: `${name} in Citrus Park` },
-    { href: "/handyman-south-tampa-fl", label: `${name} in South Tampa` },
+    { href: "/locations/tampa", label: `${name} in South Tampa` },
     { href: "/locations/clearwater", label: `${name} in Clearwater` },
     { href: "/locations/st-petersburg", label: `${name} in St. Petersburg` },
   ];

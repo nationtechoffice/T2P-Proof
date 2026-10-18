@@ -76,14 +76,6 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     title: "Handyman Riverview | Drywall & Fence Patch",
     description: "Licensed Handyman Pros FL serves Riverview near Riverview Drive & Balm Riverview. Drywall & fence patches with honest phone estimates. Open 24/7 — call (656).",
   },
-  "/handyman-seffner-fl": {
-    title: "Handyman Seffner FL | Gutters & Exterior",
-    description: "Licensed Handyman Pros FL serves Seffner near 33584 & Broadway corridor. Gutters & exterior fixes with honest phone estimates. Open 24/7 — call (656) 205-3185.",
-  },
-  "/handyman-south-tampa-fl": {
-    title: "Handyman South Tampa | Manitas y TV Mount",
-    description: "Licensed & insured Handyman Pros FL in South Tampa near Bayshore & Hyde Park. Hablamos español. TV mounting y reparaciones. Call (656) 205-3185.",
-  },
   "/handyman-temple-terrace-fl": {
     title: "Handyman Temple Terrace | Drywall & Doors",
     description: "Licensed Handyman Pros FL serves Temple Terrace near 56th St & Busch corridor. Drywall, fixtures & doors with honest phone estimates. Open 24/7 — call (656).",
