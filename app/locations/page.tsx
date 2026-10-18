@@ -85,6 +85,14 @@ export default function LocationsIndexPage() {
               <Link href="/locations/land-o-lakes" className="font-medium text-[hsl(var(--primary))] hover:underline">
                 Land O&apos; Lakes
               </Link>
+              . In Pasco, we also serve{" "}
+              <Link href="/locations/odessa-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Odessa
+              </Link>{" "}
+              and{" "}
+              <Link href="/locations/zephyrhills-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
+                Zephyrhills
+              </Link>
               . Pinellas adds{" "}
               <Link href="/locations/largo" className="font-medium text-[hsl(var(--primary))] hover:underline">
                 Largo

@@ -107,6 +107,8 @@ export function getAllSiteUrls(): string[] {
     `${baseUrl}/service-areas`,
     `${baseUrl}/locations`,
     `${baseUrl}/work`,
+    `${baseUrl}/locations/zephyrhills-fl`,
+    `${baseUrl}/locations/odessa-fl`,
   ];
 
   const coreServicePages = coreServices.map((service) => `${baseUrl}/services/${service.slug}`);

@@ -3,6 +3,8 @@ import { assertLocationRedirectsFit, locationAlternateRedirects } from "./lib/lo
 
 /** Legacy aliases that are not the bare/-fl pair of a current hub slug. */
 const legacyRedirects = [
+  { source: "/locations/zephyrhills", destination: "/locations/zephyrhills-fl", permanent: true as const },
+  { source: "/locations/odessa", destination: "/locations/odessa-fl", permanent: true as const },
   { source: "/handyman-westchase-fl", destination: "/locations/westchase-fl", permanent: true as const },
   { source: "/handyman-oldsmar-fl", destination: "/locations/oldsmar-fl", permanent: true as const },
   { source: "/handyman-town-n-country-fl", destination: "/locations/town-n-country-fl", permanent: true as const },
