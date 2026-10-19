@@ -74,7 +74,7 @@ export interface CoreService {
   bullets: string[];
   faqs: { question: string; answer: string }[];
   /** Typical visit range for Service/Offer schema. Full remodels stay quoted separately. */
-  offer?: { low: number; high: number; description: string };
+  offer?: { low?: number; high?: number; description: string };
   /** Extra brief-driven sections rendered after the main copy. */
   sections?: ContentSection[];
   /** One list of real city pages instead of the two generic city-link blocks. */
@@ -570,7 +570,7 @@ export const coreServices: CoreService[] = [
       {
         question: "How much does flooring installation cost in Tampa?",
         answer:
-          "A typical Tampa Bay handyman flooring visit — a damaged-section repair or one room of click-lock LVP, laminate, or vinyl plank with the material already on site — is often quoted from about $175 to $850 after we see photos and know the square footage. A whole-home floor or a subfloor rebuild is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
+          "A typical Tampa Bay handyman flooring visit — a damaged-section repair or one room of click-lock LVP, laminate, or vinyl plank with the material already on site — is quoted after a free estimate, once we see photos and know the square footage. A whole-home floor or a subfloor rebuild is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
       },
       {
         question: "What flooring do you install and replace?",
@@ -598,8 +598,6 @@ export const coreServices: CoreService[] = [
       },
     ],
     offer: {
-      low: 175,
-      high: 850,
       description:
         "Typical licensed handyman flooring visit in Tampa Bay for a section repair or one room of click-lock LVP, laminate, or vinyl plank with material on site. Whole-home floors and subfloor rebuilds are quoted separately.",
     },
@@ -630,7 +628,7 @@ export const coreServices: CoreService[] = [
       {
         question: "How much does gutter installation cost in Tampa?",
         answer:
-          "A typical Tampa Bay handyman gutter visit — a one-story cleaning and flush, or a short section repair or replacement with the material already matched — is often quoted from about $125 to $650 after we see photos and know the story count. A full-run install or a steep roof is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
+          "A typical Tampa Bay handyman gutter visit — a one-story cleaning and flush, or a short section repair or replacement with the material already matched — is quoted after a free estimate, once we see photos and know the story count. A full-run install or a steep roof is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
       },
       {
         question: "Do you clean, repair, and replace gutters?",
@@ -658,8 +656,6 @@ export const coreServices: CoreService[] = [
       },
     ],
     offer: {
-      low: 125,
-      high: 650,
       description:
         "Typical licensed handyman gutter visit in Tampa Bay for a one-story cleaning, downspout flush, or a short section repair or replacement. Full-run installs and steep roofs are quoted separately.",
     },

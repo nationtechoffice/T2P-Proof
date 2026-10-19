@@ -207,7 +207,7 @@ export function serviceSchema(service: {
   image?: string;
   /** Extra on-page job photos. With more than one photo the schema image becomes a list. */
   images?: readonly string[];
-  offer?: { low: number; high: number; description: string };
+  offer?: { low?: number; high?: number; description: string };
   /** Owner-approved starting price ("starts at"). Sets the Offer minPrice. */
   startingPrice?: { amount: number; sentence: string };
   /** Several starting prices, e.g. on a service-area page. Emitted as an OfferCatalog. */
@@ -312,12 +312,16 @@ export function serviceSchema(service: {
             priceCurrency: "USD",
             availability: "https://schema.org/InStock",
             description: service.offer.description,
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              priceCurrency: "USD",
-              minPrice: service.startingPrice?.amount ?? service.offer.low,
-              maxPrice: service.offer.high,
-            },
+            ...(service.offer.high != null
+              ? {
+                  priceSpecification: {
+                    "@type": "PriceSpecification",
+                    priceCurrency: "USD",
+                    minPrice: service.startingPrice?.amount ?? service.offer.low,
+                    maxPrice: service.offer.high,
+                  },
+                }
+              : {}),
           },
         }
       : {}),
