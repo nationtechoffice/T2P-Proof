@@ -198,7 +198,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 <h2 className="mb-2 text-lg font-semibold group-hover:text-[hsl(var(--primary))]">
                   {service.name}
                 </h2>
-                <p className="text-sm text-[hsl(var(--muted-foreground))]">{service.shortDescription}</p>
+                <p className="text-sm text-[hsl(var(--muted-foreground))]">
+                  {service.slug === "fence-installation"
+                    ? "Complete fence installation for residential properties."
+                    : service.shortDescription}
+                </p>
               </Link>
             ))}
           </div>

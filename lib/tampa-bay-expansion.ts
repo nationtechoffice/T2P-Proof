@@ -52,12 +52,10 @@ export const fenceHandymanService: CoreService = {
     {
       question: "How much does fence handyman repair cost in Tampa?",
       answer:
-        "Most Tampa Bay fence handyman repairs — a few boards, a gate adjustment, or a short section with material on site — are quoted around $150 to $650 after we see photos. Longer runs cost more. Estimates are free. The crew is licensed and insured.",
+        "Most Tampa Bay fence handyman repairs — a few boards, a gate adjustment, or a short section with material on site — are quoted after a free estimate, once we see photos. Longer runs cost more. Estimates are free. The crew is licensed and insured.",
     },
   ],
   offer: {
-    low: 150,
-    high: 650,
     description:
       "Typical licensed fence handyman repair in Tampa Bay for boards, a gate, or a short matching section. Full-yard installations are quoted separately.",
   },

@@ -153,7 +153,11 @@ export default function ServicesPage() {
                       <h3 className="mb-2 font-semibold group-hover:text-[hsl(var(--primary))]">
                         {service.name}
                       </h3>
-                      <p className="text-sm text-[hsl(var(--muted-foreground))]">{service.shortDescription}</p>
+                      <p className="text-sm text-[hsl(var(--muted-foreground))]">
+                  {service.slug === "fence-installation"
+                    ? "Complete fence installation for residential properties."
+                    : service.shortDescription}
+                </p>
                     </Link>
                   ))}
                 </div>
