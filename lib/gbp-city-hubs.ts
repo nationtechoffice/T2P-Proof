@@ -18,7 +18,7 @@ export const gbpCityHubs: TargetLocation[] = [
     zipHint: "33755–33767",
     neighborhoods: ["Clearwater Beach", "Island Estates", "Coachman", "Countryside", "Downtown Clearwater"],
     intro:
-      "Need a licensed Clearwater handyman for sliders, drywall, and TV mounts? Our local crew serves Clearwater. Hablamos español.",
+      "Need a licensed Clearwater handyman for sliders, drywall, and TV mounts? Our local crew serves Clearwater, including Clearwater Beach, Coachman and Countryside. Hablamos español.",
     directAnswer: `Handyman Pros Florida serves Clearwater with handyman repairs for sliding doors, drywall patches, TV mounts, and fixture swaps. Our crew serves Clearwater daily, including Clearwater Beach, Island Estates, Coachman, and Countryside. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     showStartingPrices: true,
     paragraphs: [
