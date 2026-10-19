@@ -42,7 +42,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/blog/same-day-handyman-tampa-bay": {
     title: "Same-Day Handyman in Tampa, Clearwater & Westchase",
-    description: "When same-day handyman service is realistic in Tampa Bay, which jobs fit, and how licensed Handyman Pros FL routes from Westchase Call (656) 205-3185 today.",
+    description: "When same-day handyman service is realistic in Tampa Bay, which jobs fit, and how licensed Handyman Pros FL's local crew serves all of Tampa Bay. Call (656) 205-3185 today.",
   },
   "/blog/tv-mounting-cost-tampa": {
     title: "How Much Does TV Mounting Cost in Tampa in 2026?",

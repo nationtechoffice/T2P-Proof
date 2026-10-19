@@ -115,7 +115,7 @@ Book [TV wall mounting](/services/tv-wall-mounting) or call ${siteConfig.phone}.
     slug: "same-day-handyman-tampa-bay",
     title: "Same-Day Handyman in Tampa, Clearwater & Westchase",
     description:
-      "When same-day handyman service is realistic in Tampa Bay, which jobs fit, and how Handyman Pros FL routes from Westchase HQ.",
+      "When same-day handyman service is realistic in Tampa Bay, which jobs fit, and how licensed Handyman Pros FL's local crew serves all of Tampa Bay. Call (656) 205-3185 today.",
     excerpt:
       "Fenelon advertises 24/7. Jack O' Trades does not. Here is an honest same-day picture for Tampa Bay.",
     author: "Handyman Pros Florida Team",
