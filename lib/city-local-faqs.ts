@@ -3,6 +3,10 @@ export const cityLocalFaqs: Record<string, { question: string; answer: string }[
   "wesley-chapel": [
     { question: "Do you serve Wesley Chapel neighborhoods like Seven Oaks, Meadow Pointe and Epperson?", answer: "Yes. Our crew works across Wesley Chapel in Pasco County, including Seven Oaks, Meadow Pointe, Epperson, Wiregrass Ranch and Saddlebrook, ZIP codes 33543, 33544 and 33545. Free estimates on all jobs." },
     { question: "Can you handle HOA-approved repairs in Wesley Chapel communities?", answer: "Yes. Many Wesley Chapel communities have HOA rules. Share your HOA's guidelines and we will match approved finishes, colors and hours. Licensed & insured." },
+    { question: "Which Wesley Chapel neighborhoods and ZIP codes do you cover?", answer: "Our local crew serves Wesley Chapel, including Wiregrass, Meadow Pointe, Seven Oaks and the SR 54 and SR 56 corridors, across ZIPs 33543, 33544 and 33545. Call (656) 205-3185." },
+    { question: "How much does a handyman cost in Wesley Chapel?", answer: "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89 and tile work at $199. Painting is quoted after a free estimate. Free estimates on all jobs." },
+    { question: "Can you come the same day in Wesley Chapel?", answer: "Often, yes. Our local crew serves Wesley Chapel and often has same-day openings. A same-day service call starts at $99." },
+    { question: "Do you help landlords turn over Wesley Chapel rentals?", answer: "Yes. Between tenants we patch walls, fix doors, swap fixtures and assemble furniture in one visit. Small jobs start at $49, and estimates are free." },
   ],
   "land-o-lakes": [
     { question: "Which Land O' Lakes areas do you cover?", answer: "Our crew serves Land O' Lakes in Pasco County, including Connerton, Bexley, Ballantrae and the homes along State Road 54 and US 41, ZIP codes 34637, 34638 and 34639." },
