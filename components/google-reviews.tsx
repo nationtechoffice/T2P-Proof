@@ -86,7 +86,7 @@ export function GoogleReviews({ variant = "full" }: { variant?: "full" | "compac
             <div className="mb-8 flex flex-col items-center gap-2 text-center">
               <Stars rating={rating} label={`${rating.toFixed(1)} out of 5 stars`} />
               <p className="text-lg font-semibold">
-                {rating.toFixed(1)} on Google, {count} {count === 1 ? "review" : "reviews"}
+                {rating.toFixed(1)} on Google, 50+ reviews
               </p>
             </div>
             <div className={`grid gap-6 ${variant === "compact" ? "md:grid-cols-3" : "sm:grid-cols-2 xl:grid-cols-3"}`}>
