@@ -129,7 +129,7 @@ export function Footer() {
             Our Florida Service Areas
           </h3>
           <p className="mx-auto mb-5 max-w-2xl text-center text-xs text-gray-400">
-            Coverage from our only Tampa / Westchase headquarters — not separate branches.
+            Our local crew serves every city below.
           </p>
           <nav aria-label="Florida service area pages">
             <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
