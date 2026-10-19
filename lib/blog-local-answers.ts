@@ -22,7 +22,7 @@ Tampa Bay homeowners asking this in 2026 see three models: hourly, half-day bloc
 
 ### Typical Tampa ranges (2026)
 
-- Basic repairs: about $75–$90 per hour
+- Small jobs start at $49.
 - Intermediate carpentry, drywall, doors: about $100–$125 per hour
 - Specialized fixture or masonry work: about $125–$150 per hour
 - Quick visit (1–2 hours): often $150–$250 all-in
@@ -32,7 +32,7 @@ Those figures match what local competitors such as Highmark, Jack O' Trades, and
 
 ### Flat-rate jobs we see every week
 
-- TV wall mounting: commonly $99–$200 depending on wall type and cable concealment
+- TV mounting in Tampa starts at $89.
 - Small drywall patch: often $150–$300 including texture
 - Furniture assembly: priced per piece
 - Door repair or weatherstrip: usually a short visit unless the slab needs replacement
