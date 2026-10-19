@@ -106,7 +106,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/new-port-richey-fl": {
     title: "Handyman in New Port Richey, FL | Handyman Pros Florida",
-    description: "Licensed & insured New Port Richey handyman for gutters, fence patches, and doors in Gulf Harbors. Hablamos español. From Westchase. Call (656) 205-3185.",
+    description: "Licensed & insured New Port Richey handyman for gutters, fence patches, and doors in Gulf Harbors. Hablamos español. Our local crew serves New Port Richey. Call (656) 205-3185.",
   },
   "/locations/oldsmar-fl": {
     title: "Handyman Oldsmar FL | Home Repairs | Handyman Pros FL",
@@ -150,7 +150,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/largo": {
     title: "Handyman Largo FL | Home Repairs | Handyman Pros FL",
-    description: "Licensed & insured Largo handyman for sticking doors, ceiling fans, and older fence repairs in Pinellas. From Westchase. Call (656) 205-3185.",
+    description: "Licensed & insured Largo handyman for sticking doors, ceiling fans, and older fence repairs in Pinellas. Our local crew serves Largo. Call (656) 205-3185.",
   },
   "/locations/pinellas-park": {
     title: "Handyman Pinellas Park FL | Home Repairs | Handyman Pros FL",
@@ -170,7 +170,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/seminole": {
     title: "Handyman Seminole FL | Home Repairs | Handyman Pros FL",
-    description: "Licensed & insured Seminole FL handyman — Pinellas, not Seminole Heights — for fans, doors, and fence repair from Westchase. Call (656) 205-3185.",
+    description: "Licensed & insured Seminole FL handyman — Pinellas, not Seminole Heights — for fans, doors, and fence repair. Call (656) 205-3185.",
   },
   "/locations/spring-hill": {
     title: "Handyman Spring Hill FL | Home Repairs | Handyman Pros FL",
@@ -186,7 +186,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/tarpon-springs-fl": {
     title: "Handyman Tarpon Springs FL | Home Repairs | Handyman Pros FL",
-    description: "Licensed & insured Tarpon Springs handyman for fence boards and exterior wood by the Sponge Docks. Hablamos español. From Westchase. Call (656) 205-3185.",
+    description: "Licensed & insured Tarpon Springs handyman for fence boards and exterior wood by the Sponge Docks. Hablamos español. Our local crew serves Tarpon Springs. Call (656) 205-3185.",
   },
   "/locations/holiday": {
     title: "Handyman Holiday FL | Home Repairs | Handyman Pros FL",

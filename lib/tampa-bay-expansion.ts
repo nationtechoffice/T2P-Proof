@@ -4,12 +4,16 @@ import { siteConfig } from "./site-config";
 const phone = siteConfig.phone;
 const hq = siteConfig.address.street;
 
-function fenceCallout(place: string, detail: string): NonNullable<TargetLocation["callouts"]>[number] {
+function fenceCallout(
+  place: string,
+  detail: string,
+  localCrew = false
+): NonNullable<TargetLocation["callouts"]>[number] {
   return {
     before: `${detail} That work is a `,
     href: "/services/fence",
     label: "fence handyman",
-    after: ` visit in ${place} — pickets, a gate, or a short matching section — from the same licensed and insured Westchase crew. We are not a separate fencing contractor.`,
+    after: ` visit in ${place} — pickets, a gate, or a short matching section — ${localCrew ? "from our licensed and insured local crew" : "from the same licensed and insured Westchase crew"}. We are not a separate fencing contractor.`,
   };
 }
 
@@ -403,7 +407,8 @@ export const expansionLocations: TargetLocation[] = [
     callouts: [
       fenceCallout(
         "Largo",
-        "Ridgecrest and Ulmerton yards usually need a sagging gate or cupped boards repaired, not a new fence contract."
+        "Ridgecrest and Ulmerton yards usually need a sagging gate or cupped boards repaired, not a new fence contract.",
+        true
       ),
     ],
     faqs: [
@@ -441,7 +446,8 @@ export const expansionLocations: TargetLocation[] = [
     callouts: [
       fenceCallout(
         "Pinellas Park",
-        "Park Boulevard lots usually need a chain-link gate pulled back into square or a few wood boards replaced."
+        "Park Boulevard lots usually need a chain-link gate pulled back into square or a few wood boards replaced.",
+        true
       ),
     ],
     faqs: [
@@ -662,7 +668,7 @@ export const expansionLocations: TargetLocation[] = [
     zipHint: "33772–33777",
     neighborhoods: ["Seminole Boulevard", "Lake Seminole", "Oakhurst border", "Bay Pines area"],
     intro:
-      "Need a Seminole FL handyman — the Pinellas city, not Seminole Heights in Tampa — for fans, doors, and fence repairs? Licensed and insured Handyman Pros FL dispatches from Westchase.",
+      "Need a Seminole FL handyman — the Pinellas city, not Seminole Heights in Tampa — for fans, doors, and fence repairs? Licensed and insured Handyman Pros FL — our local crew serves Seminole.",
     paragraphs: [
       "Seminole, Florida sits in mid-Pinellas along Seminole Boulevard and Lake Seminole. It is a different place from Seminole Heights in Tampa. We keep those pages separate so a lake-house fan install is not mixed up with a Heights bungalow door.",
       "The Seminole list is humidity work: a slider that sticks, a fan at an existing box near the lake, drywall after a repaired leak, and a wood or chain-link gate that dropped. Oakhurst-border and Bay Pines-area houses get the same crew that covers Largo and Pinellas Park.",
@@ -672,7 +678,8 @@ export const expansionLocations: TargetLocation[] = [
     callouts: [
       fenceCallout(
         "Seminole",
-        "Lake Seminole and Seminole Boulevard yards usually need a gate pulled square or a short wood section replaced."
+        "Lake Seminole and Seminole Boulevard yards usually need a gate pulled square or a short wood section replaced.",
+        true
       ),
     ],
     faqs: [
@@ -705,7 +712,8 @@ export const expansionLocations: TargetLocation[] = [
     callouts: [
       fenceCallout(
         "Spring Hill",
-        "County Line and Spring Hill Drive fences often lose a panel in wind; we repair the section when we are already booked into Hernando."
+        "County Line and Spring Hill Drive fences often lose a panel in wind; we repair the section when we are already booked into Hernando.",
+        true
       ),
     ],
     faqs: [

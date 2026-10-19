@@ -31,7 +31,20 @@ import { cityLocalFaqs } from "@/lib/city-local-faqs";
 
 
 /** Step 12a: per-city crew wording (Brandon, Riverview, Land O' Lakes only). */
-const CREW_OVERRIDE_CITIES = new Set(["brandon", "riverview", "land-o-lakes"]);
+const CREW_OVERRIDE_CITIES = new Set([
+  "brandon",
+  "riverview",
+  "land-o-lakes",
+  // Step 12b
+  "safety-harbor-fl",
+  "tarpon-springs-fl",
+  "new-port-richey-fl",
+  "gulfport",
+  "largo",
+  "pinellas-park",
+  "seminole",
+  "spring-hill",
+]);
 
 export function LocationCityLanding({ location }: { location: TargetLocation }) {
   const pageUrl = `${siteConfig.url}/locations/${location.slug}`;

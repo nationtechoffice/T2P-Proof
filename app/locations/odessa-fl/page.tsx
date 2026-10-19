@@ -58,7 +58,7 @@ const brief: CityBrief = {
   faqs,
   body: (
     <>
-      <H2>Close enough for same-day in Odessa</H2>
+      <H2>Same-day handyman visits in Odessa</H2>
       <p>
         Handyman Pros FL is a professional handyman team working out of 12021 Tuscany Bay Dr, Tampa, FL 33626.
         Westchase&apos;s 33626 ZIP borders Odessa&apos;s 33556, and the drive is about 15 miles, roughly 25 minutes. That

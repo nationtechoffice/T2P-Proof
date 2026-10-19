@@ -334,8 +334,8 @@ export const gbpCityHubs: TargetLocation[] = [
     zipHint: "34695",
     neighborhoods: ["Downtown Safety Harbor", "Main Street", "Philippe Park area", "Oldsmar border"],
     intro:
-      "Need a licensed Safety Harbor handyman for doors, ceiling fans, and punch lists? Handyman Pros FL serves Main Street and the Philippe Park side from Westchase. Hablamos español.",
-    directAnswer: `Handyman Pros Florida serves Safety Harbor with handyman repairs for sticking doors, ceiling fans, and short punch lists near Main Street and Philippe Park. The Oldsmar border is on the same drive from Westchase. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+      "Need a licensed Safety Harbor handyman for doors, ceiling fans, and punch lists? Handyman Pros FL serves Main Street and the Philippe Park side. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Safety Harbor with handyman repairs for sticking doors, ceiling fans, and short punch lists near Main Street and Philippe Park. The Oldsmar border is on the same drive. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Safety Harbor is a small waterfront town on the bay. Downtown Main Street and the streets toward Philippe Park are older cottages and block houses. The Oldsmar border is a short drive back toward our headquarters.",
       "The lists fit a handyman visit: a door that sticks after a wet week, a ceiling fan wobbling at an existing box, drywall from a moved piece of furniture, and a short punch list before company arrives. New wiring and panel work stay with an electrician.",
@@ -374,12 +374,12 @@ export const gbpCityHubs: TargetLocation[] = [
     zipHint: "34689",
     neighborhoods: ["Sponge Docks", "Downtown Tarpon Springs", "East Lake", "Lake Tarpon"],
     intro:
-      "Need a licensed Tarpon Springs handyman for fence boards and exterior wood? Handyman Pros FL serves the Sponge Docks side and East Lake from Westchase. Hablamos español.",
-    directAnswer: `Handyman Pros Florida serves Tarpon Springs with handyman repairs for fence boards, gates, and exterior wood near the Sponge Docks and Lake Tarpon. Downtown and East Lake are on the same route from Westchase. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+      "Need a licensed Tarpon Springs handyman for fence boards and exterior wood? Handyman Pros FL serves the Sponge Docks side and East Lake. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Tarpon Springs with handyman repairs for fence boards, gates, and exterior wood near the Sponge Docks and Lake Tarpon. Downtown and East Lake are on the same route. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Tarpon Springs has a historic downtown and the Sponge Docks by the Anclote River, plus newer houses east toward Lake Tarpon and East Lake. Humidity and sun wear exterior wood, gates, and the bottom of fence boards first.",
       "A fence handyman visit here is the failed section: cupped pickets, a gate that drags, a short run you already matched. Waterfront and older downtown houses also need doors and trim that actually close. We do not rebuild a seawall or a whole property fence in one handyman stop.",
-      "Palm Harbor is south, Holiday and New Port Richey are north in Pasco. All of them are drives from Westchase, not extra offices.",
+      "Palm Harbor is south, Holiday and New Port Richey are north in Pasco. Our local crew serves all of them.",
       `Call ${phone} with a photo of the fence or the door. Licensed and insured. Hablamos español.`,
     ],
     callouts: [
@@ -454,8 +454,8 @@ export const gbpCityHubs: TargetLocation[] = [
     zipHint: "34652–34655",
     neighborhoods: ["Downtown New Port Richey", "Sims Park", "Gulf Harbors", "Jasmine Estates"],
     intro:
-      "Need a licensed New Port Richey handyman for gutters, fence patches, and doors? Handyman Pros FL serves downtown and Gulf Harbors from Westchase. Hablamos español.",
-    directAnswer: `Handyman Pros Florida serves New Port Richey with handyman repairs for gutters, fence patches, and doors downtown and in Gulf Harbors. Jasmine Estates is on the same Pasco route from Westchase, scheduled by window rather than same-hour. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+      "Need a licensed New Port Richey handyman for gutters, fence patches, and doors? Handyman Pros FL serves downtown and Gulf Harbors. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves New Port Richey with handyman repairs for gutters, fence patches, and doors downtown and in Gulf Harbors. Jasmine Estates is on the same Pasco route, scheduled by window rather than same-hour. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "New Port Richey mixes a small downtown around Sims Park and Main Street with canal homes in Gulf Harbors and older neighborhoods such as Jasmine Estates. Salt air and afternoon rain show up as gutters that overflow, gates that drop, and doors that swell.",
       "We reseat gutter sections, patch fence boards, and adjust doors when the frame is still sound. Canal-front houses get the same scope as inland ones. We are not a marine contractor, and we do not rebuild seawalls.",
@@ -698,7 +698,7 @@ export const gbpCityHubs: TargetLocation[] = [
     zipHint: "33707",
     neighborhoods: ["Gulfport waterfront", "49th Street", "Pasadena edge", "Beach Boulevard"],
     intro:
-      "Need a licensed Gulfport handyman for ceiling fans, doors, and drywall? The waterfront and 49th Street are a south Pinellas drive from Westchase. Hablamos español.",
+      "Need a licensed Gulfport handyman for ceiling fans, doors, and drywall? Our local crew serves the waterfront and 49th Street. Hablamos español.",
     directAnswer: `Handyman Pros Florida serves Gulfport with handyman repairs for ceiling fans, doors, and drywall near the waterfront, 49th Street, and the Pasadena edge. A recent visit was a ceiling fan installation. Our crew serves Gulfport daily. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Gulfport is the waterfront city on Boca Ciega Bay, south of St. Petersburg. Stops cluster near the beach, 49th Street, and the Pasadena edge.",
