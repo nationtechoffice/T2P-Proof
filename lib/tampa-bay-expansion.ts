@@ -465,18 +465,19 @@ export const expansionLocations: TargetLocation[] = [
   },
   {
     slug: "carrollwood",
+    h1Override: "Local Handyman Service in Carrollwood, FL",
     city: "Carrollwood",
     displayName: "Carrollwood, FL",
     county: "Hillsborough County",
     zipHint: "33618",
     neighborhoods: ["Carrollwood Village", "Northdale", "Original Carrollwood", "Dale Mabry"],
     intro:
-      "Need Carrollwood home maintenance from a local handyman — ceiling fans, punch lists, and fence-gate fixes? Licensed and insured Handyman Pros FL is based in neighboring Westchase. Hablamos español.",
+      "Handyman Pros FL delivers dependable Carrollwood home maintenance — from ceiling fan installation to everyday repairs — with the care of a true local handyman service.",
     paragraphs: [
-      "Carrollwood Village, Original Carrollwood, and Northdale are inside our fastest Hillsborough radius after Westchase itself. Families book a fan that wobbles, a drywall scar from a move, and a Saturday list of blinds, shelves, and door hardware. The truck is already stocked because headquarters is minutes away at ZIP 33626.",
+      "Carrollwood Village, Original Carrollwood, and Northdale are inside our fastest Hillsborough radius after Westchase itself. Families book a fan that wobbles, a drywall scar from a move, and a Saturday list of blinds, shelves, and door hardware. The truck is already stocked because our local crew serves Carrollwood.",
       "Ceiling fan installation is the Carrollwood request we hear most. We confirm the box is fan-rated, make the connections at that existing box, and balance the blades. If the brace will not hold a fan, we stop instead of hanging weight from drywall.",
       "Backyard fences in Northdale and along Dale Mabry need a board or a dragging gate more often than a new fence. We repair the section and keep the rest of the honey-do list moving. Citrus Park and Town 'N' Country are the adjacent service areas.",
-      `Call ${phone} anytime. Licensed and insured. Hablamos español for reparaciones en casa. Carrollwood is a service area — our only address remains ${hq}, Tampa, FL 33626.`,
+      `Call ${phone} anytime. Licensed and insured. Hablamos español for reparaciones en casa. Carrollwood is a service area — our address is ${hq}, Tampa, FL 33626.`,
     ],
     callouts: [
       fenceCallout(
