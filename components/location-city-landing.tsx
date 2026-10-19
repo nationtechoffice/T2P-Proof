@@ -49,6 +49,8 @@ const CREW_OVERRIDE_CITIES = new Set([
   "dunedin-fl",
   "holiday",
   "citrus-park-fl",
+  // Step 12e part 1
+  "keystone",
 ]);
 
 export function LocationCityLanding({ location }: { location: TargetLocation }) {

@@ -494,8 +494,8 @@ export const gbpCityHubs: TargetLocation[] = [
     zipHint: "33556",
     neighborhoods: ["Gunn Highway", "Lake Keystone", "Brooker Creek", "North Mobley Road"],
     intro:
-      "Need a licensed Keystone handyman for fence sections, fans, and drywall on larger lots? Keystone is northwest Hillsborough, dispatched from Westchase. Hablamos español.",
-    directAnswer: `Handyman Pros Florida serves Keystone with handyman repairs for fence sections, ceiling fans, and drywall on larger Gunn Highway lots near Lake Keystone. Brooker Creek and North Mobley are on that northwest Hillsborough drive from Westchase. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+      "Need a licensed Keystone handyman for fence sections, fans, and drywall on larger lots? Keystone is northwest Hillsborough. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Keystone with handyman repairs for fence sections, ceiling fans, and drywall on larger Gunn Highway lots near Lake Keystone. Brooker Creek and North Mobley are on our northwest Hillsborough route. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Keystone is unincorporated Hillsborough along Gunn Highway, near Lake Keystone and Brooker Creek Preserve. Lots are larger than in Citrus Park, with oaks, long driveways, and fences that fail one section at a time instead of one shared wall.",
       "The work that fits is a fence board or gate, a ceiling fan at an existing box, drywall inside the house, and a door that no longer latches. We do not treat acreage as a reason to invent a second crew. The same Westchase truck comes north.",
