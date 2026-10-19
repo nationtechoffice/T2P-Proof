@@ -116,7 +116,7 @@ export const coreServices: CoreService[] = [
     image: "/images/cinematic/service-tv-mount.jpg",
     imageAlt: "TV wall mounting in a bright Tampa living room — screen on, job finished level",
     intro:
-      "Need fast, reliable TV wall mounting in Tampa, FL? Handyman Pros FL hangs TVs level, into real structure, with clean cable runs — dispatched from our only Westchase headquarters.",
+      "Need fast, reliable TV wall mounting in Tampa, FL? Handyman Pros FL hangs TVs level, into real structure, with clean cable runs — from a crew that serves Tampa Bay daily.",
     paragraphs: [
       "TV wall mounting in Tampa Bay homes is not a one-size bracket job. Block, metal stud, and wood-frame walls all need different hardware. We confirm stud or masonry support, use a rated mount, and keep the screen at a comfortable viewing height for living rooms, bedrooms, and lanais.",
       "Homeowners in Westchase, Clearwater, Palm Harbor, and Oldsmar often want in-wall HDMI and power concealment. When the wall and code allow, we route cables cleanly. When they do not, we use painted raceway so the install still looks finished.",
@@ -356,7 +356,7 @@ export const coreServices: CoreService[] = [
     image: "/images/work/maps-builtin-dresser.jpg",
     imageAlt: "Built-in dresser furniture work in a Tampa home",
     intro:
-      "Need furniture assembled or rearranged in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew that builds IKEA, Wayfair, and Amazon sets, moves pieces room to room, and sets them where you want them — dispatched from our only Westchase headquarters.",
+      "Need furniture assembled or rearranged in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew that builds IKEA, Wayfair, and Amazon sets, moves pieces room to room, and sets them where you want them — from a crew that serves Tampa Bay daily.",
     paragraphs: [
       "Furniture assembly in Tampa Bay is a handyman visit, not a delivery window that leaves the boxes in the garage. Homeowners in Westchase, Carrollwood, Citrus Park, and Town 'N' Country call when a bed, desk, dresser, or patio set shows up flat, or when a room needs the furniture already in the house taken apart, moved, and put back together.",
       "We assemble the brands already on site: IKEA, Wayfair, Amazon, Ashley, and office sets. Cams get locked, backs get screwed, and beds get checked for square before anyone sleeps on them. If a kit is missing hardware, we say so and use the right fastener instead of leaving a stripped cam.",
@@ -487,7 +487,7 @@ export const coreServices: CoreService[] = [
     image: "/images/work/porcelain-tile-install.jpg",
     imageAlt: "Large-format porcelain floor tile installation in a Tampa kitchen",
     intro:
-      "Need tile installed or replaced in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew that sets kitchen backsplashes, bathroom wall tile, floor-tile sections, and cracked-tile patches — dispatched from our only Westchase headquarters.",
+      "Need tile installed or replaced in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew that sets kitchen backsplashes, bathroom wall tile, floor-tile sections, and cracked-tile patches — from a crew that serves Tampa Bay daily.",
     paragraphs: [
       "Tile installation in Tampa Bay is a handyman visit, not a flooring-company package for the whole house. Homeowners in Westchase, Carrollwood, Citrus Park, and Town 'N' Country call when a kitchen backsplash stops halfway, a shower wall has a cracked row, or a few floor tiles popped after Florida humidity worked the thinset loose.",
       "We install and replace ceramic, porcelain, and subway tile the room already uses. Bring the boxes, or we pick up a stocked match when the store still has it. The visit is layout, cuts, spacers, thinset, and grout. We are not a flooring showroom, and we do not bid whole-home floor packages the way a flooring contractor does.",
@@ -552,7 +552,7 @@ export const coreServices: CoreService[] = [
     image: "/images/work/accent-wall-flooring.jpg",
     imageAlt: "Gray LVP flooring installed with a wood slat accent wall in a Tampa home office",
     intro:
-      "Need flooring installed, repaired, or replaced in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew that sets click-lock LVP, laminate, and vinyl plank, and replaces damaged sections — dispatched from our only Westchase headquarters.",
+      "Need flooring installed, repaired, or replaced in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew that sets click-lock LVP, laminate, and vinyl plank, and replaces damaged sections — from a crew that serves Tampa Bay daily.",
     paragraphs: [
       "Flooring installation in Tampa Bay is a handyman visit, not a flooring-showroom package for the whole house. Homeowners in Westchase, Carrollwood, Citrus Park, and Town 'N' Country call when a room of luxury vinyl plank is sitting in the garage, a laminate seam has popped in Florida humidity, or a water-damaged section needs to come out before it spreads.",
       "We install and replace the flooring the room already uses when a match exists: click-lock LVP, vinyl plank, laminate, and engineered or solid-wood planks in a section. Bring the boxes, or we pick up a stocked match when the store still has it. The visit is layout, cuts, underlayment when the product calls for it, and transitions that meet the next room. We are not a flooring showroom, and we do not bid whole-home floor packages the way a flooring contractor does.",
@@ -612,7 +612,7 @@ export const coreServices: CoreService[] = [
     image: "/images/work/exterior-trim-gutters.jpg",
     imageAlt: "Gutter downspout and soffit line on a Tampa Bay home after a licensed handyman visit",
     intro:
-      "Need gutters installed, repaired, cleaned, or replaced in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew that hangs sections, reseats loose runs, flushes downspouts, and replaces damaged pieces — dispatched from our only Westchase headquarters.",
+      "Need gutters installed, repaired, cleaned, or replaced in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew that hangs sections, reseats loose runs, flushes downspouts, and replaces damaged pieces — from a crew that serves Tampa Bay daily.",
     paragraphs: [
       "Gutter work in Tampa Bay is a handyman visit, not a roofing-company package for the whole house. Homeowners in Westchase, Carrollwood, Citrus Park, and Town 'N' Country call when oak leaves and palm debris clog a run after a summer storm, a downspout dumps water against the slab, or a loose section has pulled off the fascia.",
       "We clean, repair, and replace the gutter the house already uses when a match exists: standard K-style and half-round sections, downspouts, elbows, and splash blocks. Bring the pieces, or we pick up a stocked match. The visit is debris removal, a downspout flush, reseating loose hangers, and replacing the damaged length — not a gutter showroom and not a new roof.",

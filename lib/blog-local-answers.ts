@@ -240,7 +240,7 @@ The cheap number is a drywall stud hang with your mount on site. Fireplace mason
 
 ## What Handyman Pros FL includes
 
-We quote after we know TV size, wall type, and concealment. The visit is dispatched from our only Westchase headquarters — not a lead mill. See [TV wall mounting in Tampa](/services/tv-wall-mounting) or call ${siteConfig.phone}.
+We quote after we know TV size, wall type, and concealment. The visit is from a crew that serves Tampa Bay daily — not a lead mill. See [TV wall mounting in Tampa](/services/tv-wall-mounting) or call ${siteConfig.phone}.
 
 Same-day is often available when the truck is already in your zip.`,
   },

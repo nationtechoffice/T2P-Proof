@@ -174,7 +174,7 @@ export default function HomePage() {
           <div className="mx-auto mb-8 max-w-3xl text-center">
             <h2 className="mb-3 text-2xl font-bold md:text-3xl">Popular Handyman Jobs in Tampa, FL</h2>
             <p className="text-[hsl(var(--muted-foreground))]">
-              Fast, reliable home repairs dispatched from our only Westchase headquarters.
+              Fast, reliable home repairs from a crew that serves Tampa Bay daily.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

@@ -21,7 +21,7 @@ export const fenceHandymanService: CoreService = {
   image: "/images/work/fence-repair.jpg",
   imageAlt: "Wood privacy fence repair with new pickets in a Tampa Bay FL backyard",
   intro:
-    "Need a fence handyman or fencing handyman in Tampa Bay? Handyman Pros FL repairs leaning sections, replaces pickets, resets a sound post, and hangs a short run of wood or vinyl you already matched — licensed and insured, dispatched from our only Westchase headquarters.",
+    "Need a fence handyman or fencing handyman in Tampa Bay? Handyman Pros FL repairs leaning sections, replaces pickets, resets a sound post, and hangs a short run of wood or vinyl you already matched — licensed and insured, from a crew that serves Tampa Bay daily.",
   paragraphs: [
     "A fence handyman visit is a handyman job, not a fencing-company identity. Homeowners call when a summer storm racks a wood privacy panel in Brandon or Riverview, a Carrollwood gate drags the concrete, or a Plant City board has rotted at the bottom. We fix the section that failed. We do not rebrand the crew as a fence contractor, and we do not sell commercial cages, razor wire, or a custom metal shop.",
     "Fencing handyman work that fits this page: replace broken pickets or a rotten bottom rail, straighten a gate and reset the latch, tighten hardware, swap a short vinyl or wood panel when you have a match, and reset a single post when the existing hole is still sound. If the whole run is on the ground, the property line is in dispute, or the posts need a survey, we say that before anyone starts digging.",
