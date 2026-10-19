@@ -158,7 +158,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               {otherPosts.map((p) => (
                 <Link key={p.slug} href={`/blog/${p.slug}`} className="card hover:border-[hsl(var(--primary))]">
                   <h3 className="mb-2 font-semibold hover:text-[hsl(var(--primary))]">{p.title}</h3>
-                  <p className="text-sm text-[hsl(var(--muted-foreground))]">{p.excerpt}</p>
+                  <p className="text-sm text-[hsl(var(--muted-foreground))]">
+                    {slug === "fence-buying-guide-florida-homeowners" && p.slug === "tv-mounting-cost-tampa"
+                      ? "Here is what actually changes the price of a fence job in Tampa."
+                      : p.excerpt}
+                  </p>
                 </Link>
               ))}
             </div>

@@ -145,25 +145,25 @@ Fences provide privacy, security, pet containment, pool safety, and property val
 ## Popular Fence Materials in Florida
 
 ### Wood Fencing
-- **Cost**: $15–$35 per linear foot installed
+- **Cost**: quoted after a free estimate
 - **Pros**: Natural beauty, customizable, affordable
 - **Cons**: Requires staining/sealing every 2-3 years, susceptible to rot and termites
 - **Best for**: Privacy fences, traditional aesthetics
 
 ### Vinyl (PVC) Fencing
-- **Cost**: $20–$40 per linear foot installed
+- **Cost**: quoted after a free estimate
 - **Pros**: Zero maintenance, won't rot or fade, easy to clean
 - **Cons**: Higher upfront cost, can crack in extreme cold (rare in FL)
 - **Best for**: Pool areas, low-maintenance homeowners
 
 ### Aluminum Fencing
-- **Cost**: $25–$45 per linear foot installed
+- **Cost**: quoted after a free estimate
 - **Pros**: Rust-proof, elegant appearance, low maintenance
 - **Cons**: Less privacy, higher cost than wood
 - **Best for**: Pool enclosures, front yards, decorative boundaries
 
 ### Chain Link Fencing
-- **Cost**: $10–$20 per linear foot installed
+- **Cost**: quoted after a free estimate
 - **Pros**: Most affordable, durable, low maintenance
 - **Cons**: No privacy (without slats), industrial appearance
 - **Best for**: Large properties, pet containment, security
