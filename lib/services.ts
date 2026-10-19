@@ -268,7 +268,7 @@ export const categoryMeta: Record<
     title: "Interior and Exterior Painting in Tampa, FL",
     metaTitle: "Interior & Exterior Painting in Tampa, FL | Handyman Pros",
     description:
-      "Handyman Pros FL paints interior rooms, trim, doors and exterior trim for homes across Tampa Bay from its single Westchase headquarters in Tampa, and gives painting estimates by phone at (656) 205-3185, 24/7.",
+      "Handyman Pros FL paints interior rooms, trim, doors and exterior trim for homes across Tampa Bay with a local crew serving Tampa Bay, and gives painting estimates by phone at (656) 205-3185, 24/7.",
     metaDescription:
       "Pintura in Tampa for interior walls, exteriors, cabinets, and trim. Licensed & insured Handyman Pros FL. Call (656) 205-3185 for an estimate.",
     icon: "paintbrush",
