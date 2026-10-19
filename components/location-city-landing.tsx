@@ -239,6 +239,31 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                 </li>
               ))}
             </ul>
+            {location.slug === "wesley-chapel" ? (
+              <section className="mt-10 space-y-4 leading-relaxed text-[hsl(var(--muted-foreground))]">
+                <h2 className="mb-4 text-2xl font-bold text-[hsl(var(--foreground))]">
+                  Wesley Chapel Handyman Services &amp; Home Maintenance
+                </h2>
+                <p>
+                  Count on Handyman Pros FL for Wesley Chapel handyman services — proactive home maintenance, fixture
+                  setup, and clean repairs for growing Pasco County households.
+                </p>
+                <ul className="list-disc space-y-1 pl-6">
+                  <li>Scheduled home maintenance visits</li>
+                  <li>Fixture setup (lights, faucets, hardware)</li>
+                  <li>Ceiling fan installation &amp; balancing</li>
+                  <li>Garage storage and shelving installs</li>
+                  <li>Screen, door, and weatherstrip repairs</li>
+                  <li>Drywall touch-ups after kids or moves</li>
+                </ul>
+                <p>
+                  Homeowners choosing Wesley Chapel handyman services from Handyman Pros FL get licensed technicians and
+                  clear communication. We quote before we start, protect floors and furnishings, and finish with a quick
+                  review of what was completed. Call (656) 205-3185 anytime — open 24/7 — to book home maintenance or
+                  fixture setup across Wesley Chapel and nearby Pasco communities.
+                </p>
+              </section>
+            ) : null}
             <h2 className="mt-10 mb-4 text-2xl font-bold">
               Home repairs we handle in {location.city}, FL
             </h2>
