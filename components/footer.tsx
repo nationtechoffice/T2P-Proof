@@ -47,7 +47,7 @@ export function Footer() {
               <Logo variant="light" />
             </div>
             <p className="mb-4 text-sm leading-relaxed">
-              One Tampa location in Westchase. Licensed mobile handyman serving Hillsborough, Pinellas, Pasco &amp; surrounding counties — open 24/7. We come to you.
+              Our team is based in Westchase and serves all of Tampa Bay. Licensed mobile handyman serving Hillsborough, Pinellas, Pasco &amp; surrounding counties — open 24/7. We come to you.
             </p>
             <p className="mb-4 text-sm leading-relaxed">
               <span lang="es" className="font-semibold text-white">Hablamos español</span>

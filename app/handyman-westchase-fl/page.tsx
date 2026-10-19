@@ -150,7 +150,7 @@ export default function HandymanWestchasePage() {
               </h2>
             </div>
             <p className="mb-4 text-sm text-[hsl(var(--muted-foreground))]">
-              Explore the Westchase neighborhood we serve — including ZIP {siteConfig.primaryZip} and nearby Tampa communities. This is our headquarters service area, not a second branch.
+              Explore the Westchase neighborhood we serve — including ZIP {siteConfig.primaryZip} and nearby Tampa communities. Our local crew serves Westchase daily.
             </p>
             <div className="overflow-hidden rounded-2xl border border-[hsl(var(--border))] bg-[hsl(var(--muted))] shadow-sm">
               <iframe

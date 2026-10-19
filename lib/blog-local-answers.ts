@@ -43,7 +43,7 @@ Access (third-floor condos vs Westchase ranch), masonry vs wood studs, HOA quiet
 
 ## How Handyman Pros FL quotes
 
-We do not clock-watch after a number is agreed. Send the list or photos, we quote, then dispatch from our only Westchase headquarters. Call ${siteConfig.phone} for a free estimate.
+We do not clock-watch after a number is agreed. Send the list or photos, we quote, then our local crew comes to you. Call ${siteConfig.phone} for a free estimate.
 
 See also our [TV wall mounting](/services/tv-wall-mounting) and [drywall repair](/services/drywall-repair) pages.`,
   },

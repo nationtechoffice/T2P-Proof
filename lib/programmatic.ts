@@ -362,7 +362,7 @@ export const coreServices: CoreService[] = [
       "We assemble the brands already on site: IKEA, Wayfair, Amazon, Ashley, and office sets. Cams get locked, backs get screwed, and beds get checked for square before anyone sleeps on them. If a kit is missing hardware, we say so and use the right fastener instead of leaving a stripped cam.",
       "Rearrangement is the other half of this page. A sectional that will not turn a Westchase hallway, a dresser that has to come apart to clear a door, or a home office that needs the desk on a different wall. We protect floors, disassemble only what has to come apart, move the pieces, and reassemble them level. This is in-home furniture help. We do not bring a moving truck, and we do not bid a whole-house move the way a moving company does.",
       "Outdoor furniture in Clearwater and Palm Harbor needs hardware that can live in Florida weather. We flag cheap rust-prone screws before they stain a lanai. Garage shelving is the same stop when the boxes are already in the house.",
-      `Call ${siteConfig.phone} or send photos of the boxes on the quote form. Several pieces in one stop usually beat separate trip charges. The crew is licensed and insured, with one Tampa / Westchase headquarters and no second branch.`,
+      `Call ${siteConfig.phone} or send photos of the boxes on the quote form. Several pieces in one stop usually beat separate trip charges. The crew is licensed and insured. Our local crew serves Tampa Bay daily.`,
     ],
     bullets: [
       "IKEA, Wayfair, Amazon, Ashley, and office furniture assembly",
@@ -388,7 +388,7 @@ export const coreServices: CoreService[] = [
       },
       {
         question: "Do you assemble and rearrange furniture in Westchase?",
-        answer: `Yes. The truck leaves our only headquarters in Westchase ZIP 33626. Westchase, Carrollwood, Citrus Park, Town 'N' Country, and Tampa are the usual routes. Call ${siteConfig.phone}. We are licensed and insured.`,
+        answer: `Yes. Our local crew serves Tampa Bay daily. Westchase, Carrollwood, Citrus Park, Town 'N' Country, and Tampa are the usual routes. Call ${siteConfig.phone}. We are licensed and insured.`,
       },
       {
         question: "Do you assemble outdoor furniture?",
@@ -452,10 +452,10 @@ export const coreServices: CoreService[] = [
     intro:
       "Need a same-day handyman in Tampa or Westchase? Handyman Pros FL is a licensed, insured crew based in Westchase (ZIP 33626). We answer 24/7 for estimates. Same-day arrival is most likely in Westchase, Citrus Park, Town 'N' Country, and Tampa when the truck is already on that route.",
     paragraphs: [
-      "Same-day handyman service in Tampa Bay is real when routing, parts, and weather line up — not a blanket promise for every zip. The truck starts at our only headquarters in Westchase. That is why 33626, Citrus Park, Town 'N' Country, and nearby Tampa streets get the fastest windows.",
+      "Same-day handyman service in Tampa Bay is real when routing, parts, and weather line up — not a blanket promise for every zip. Our team is based in Westchase. That is why 33626, Citrus Park, Town 'N' Country, and nearby Tampa streets get the fastest windows.",
       "Clearwater, Palm Harbor, Dunedin, Tarpon Springs, and New Port Richey are regular routes. Same-day there depends on whether we already have a Pinellas or Pasco stop. If we cannot make it today, we give the next window — not a maybe.",
       "Jobs that usually fit a same-day visit: TV wall mounting when the mount is on site, furniture assembly, a door that will not latch, a small drywall hole, and a like-for-like fixture swap when the fixture is already in the house. Texture-matched ceiling repairs need dry time. Parts we have to buy, and anything that needs a permit, usually wait.",
-      `You get the same licensed, insured Handyman Pros FL crew — one NAP, no second branch. Call ${siteConfig.phone} and say you need same-day. We will tell you if the window is today or the next open route.`,
+      `You get the same licensed, insured Handyman Pros FL crew. Our local crew serves Tampa Bay daily. Call ${siteConfig.phone} and say you need same-day. We will tell you if the window is today or the next open route.`,
     ],
     bullets: [
       "Fastest in Westchase, Citrus Park, Town 'N' Country, and Tampa",
@@ -470,7 +470,7 @@ export const coreServices: CoreService[] = [
       },
       {
         question: "Do you offer same-day handyman service in Westchase?",
-        answer: `Yes, often. Westchase ZIP 33626 is our only headquarters, so same-day visits are common when the schedule allows. We are licensed and insured. Call ${siteConfig.phone} for the current window.`,
+        answer: `Yes, often. Our team is based in Westchase ZIP 33626, so same-day visits are common when the schedule allows. We are licensed and insured. Call ${siteConfig.phone} for the current window.`,
       },
       {
         question: "Which jobs do not fit a same-day visit?",
@@ -493,7 +493,7 @@ export const coreServices: CoreService[] = [
       "We install and replace ceramic, porcelain, and subway tile the room already uses. Bring the boxes, or we pick up a stocked match when the store still has it. The visit is layout, cuts, spacers, thinset, and grout. We are not a flooring showroom, and we do not bid whole-home floor packages the way a flooring contractor does.",
       "A sound wall or floor matters more than a pretty tile. We check for soft spots, hollow tile, and loose backer before we set anything new. If the subfloor is failing, or a shower needs a full waterproofing rebuild, we say so before we cover it. Cosmetic tile over a wet wall does not last in Hillsborough County humidity.",
       "Jobs that fit this page: a kitchen backsplash, bathroom wall tile or a tub surround on a solid wall, a section of floor tile, grout repair, and one-for-one replacement of cracked pieces when a match exists. Discontinued tile gets an honest conversation — a border or a complementary field, not a claim that a close color is an exact match.",
-      `Call ${siteConfig.phone} or send photos on the quote form. Small patches and backsplashes are often scheduled the same week from Westchase. Grout needs cure time before anyone walks the floor, so a same-day finish depends on how much tile is being set. The crew is licensed and insured, with one Tampa / Westchase headquarters and no second branch.`,
+      `Call ${siteConfig.phone} or send photos on the quote form. Small patches and backsplashes are often scheduled the same week from Westchase. Grout needs cure time before anyone walks the floor, so a same-day finish depends on how much tile is being set. The crew is licensed and insured. Our local crew serves Tampa Bay daily.`,
     ],
     bullets: [
       "Kitchen backsplash install and replace",
@@ -519,7 +519,7 @@ export const coreServices: CoreService[] = [
       },
       {
         question: "Do you install and replace tile in Westchase?",
-        answer: `Yes. The truck leaves our only headquarters in Westchase ZIP 33626. Westchase, Carrollwood, Citrus Park, Town 'N' Country, and Tampa are the usual routes. Call ${siteConfig.phone}. We are licensed and insured.`,
+        answer: `Yes. Our local crew serves Tampa Bay daily. Westchase, Carrollwood, Citrus Park, Town 'N' Country, and Tampa are the usual routes. Call ${siteConfig.phone}. We are licensed and insured.`,
       },
       {
         question: "Is this a flooring company or a handyman tile job?",
@@ -558,7 +558,7 @@ export const coreServices: CoreService[] = [
       "We install and replace the flooring the room already uses when a match exists: click-lock LVP, vinyl plank, laminate, and engineered or solid-wood planks in a section. Bring the boxes, or we pick up a stocked match when the store still has it. The visit is layout, cuts, underlayment when the product calls for it, and transitions that meet the next room. We are not a flooring showroom, and we do not bid whole-home floor packages the way a flooring contractor does.",
       "A sound floor matters more than a pretty plank. We check for soft spots, swollen laminate, and loose boards before we click anything new in. If the subfloor is failing, we say so before we cover it. Floating new planks over a rotten spot does not last in Hillsborough County humidity. Sanding and refinishing an entire hardwood floor is a refinisher's job, not this visit.",
       "Jobs that fit this page: one room of click-lock LVP or laminate, a hallway of vinyl plank, replacement of cupped or water-stained boards, popped planks, squeaks from loose fasteners, and transition strips. Ceramic and porcelain floor tile is a different visit. Discontinued plank gets an honest conversation — a border or a complementary field, not a claim that a close color is an exact match.",
-      `Call ${siteConfig.phone} or send photos on the quote form. A section repair or a single room with material on site is often scheduled the same week from Westchase. Click-lock floors can usually be walked the same day; glue-down products need the cure time on the label. The crew is licensed and insured, with one Tampa / Westchase headquarters and no second branch.`,
+      `Call ${siteConfig.phone} or send photos on the quote form. A section repair or a single room with material on site is often scheduled the same week from Westchase. Click-lock floors can usually be walked the same day; glue-down products need the cure time on the label. The crew is licensed and insured. Our local crew serves Tampa Bay daily.`,
     ],
     bullets: [
       "Click-lock LVP and vinyl plank installation",
@@ -584,7 +584,7 @@ export const coreServices: CoreService[] = [
       },
       {
         question: "Do you install and repair flooring in Westchase?",
-        answer: `Yes. The truck leaves our only headquarters in Westchase ZIP 33626. Westchase, Carrollwood, Citrus Park, Town 'N' Country, and Tampa are the usual routes. Call ${siteConfig.phone}. We are licensed and insured.`,
+        answer: `Yes. Our local crew serves Tampa Bay daily. Westchase, Carrollwood, Citrus Park, Town 'N' Country, and Tampa are the usual routes. Call ${siteConfig.phone}. We are licensed and insured.`,
       },
       {
         question: "Is this a flooring company or a handyman flooring job?",
@@ -618,7 +618,7 @@ export const coreServices: CoreService[] = [
       "We clean, repair, and replace the gutter the house already uses when a match exists: standard K-style and half-round sections, downspouts, elbows, and splash blocks. Bring the pieces, or we pick up a stocked match. The visit is debris removal, a downspout flush, reseating loose hangers, and replacing the damaged length — not a gutter showroom and not a new roof.",
       "A sound fascia matters more than a shiny gutter. We look for soft wood, separated spikes, and seams that leak onto the wall before we hang anything new. Covering rotten fascia with a fresh section does not last through Hillsborough County storms. If the roof itself is failing, or the pitch is too steep for a handyman ladder, we say so before we start.",
       "Jobs that fit this page: a one-story cleaning and flush, reseating a sagging run, replacing a crushed section or a split downspout, hanging a short new run where the old one is gone, adding a downspout extension so water leaves the foundation, and fitting guards on an existing gutter to slow the debris. Whole-home metal systems and two-story steep roofs are quoted separately.",
-      `Call ${siteConfig.phone} or send photos on the quote form. A cleaning or a short section repair is often scheduled the same week from Westchase. The crew is licensed and insured, with one Tampa / Westchase headquarters and no second branch.`,
+      `Call ${siteConfig.phone} or send photos on the quote form. A cleaning or a short section repair is often scheduled the same week from Westchase. The crew is licensed and insured. Our local crew serves Tampa Bay daily.`,
     ],
     bullets: [
       "Gutter and downspout cleaning with a water flush",
@@ -649,7 +649,7 @@ export const coreServices: CoreService[] = [
       },
       {
         question: "Do you install and clean gutters in Westchase?",
-        answer: `Yes. The truck leaves our only headquarters in Westchase ZIP 33626. Westchase, Carrollwood, Citrus Park, Town 'N' Country, and Tampa are the usual routes. Call ${siteConfig.phone}. We are licensed and insured.`,
+        answer: `Yes. Our local crew serves Tampa Bay daily. Westchase, Carrollwood, Citrus Park, Town 'N' Country, and Tampa are the usual routes. Call ${siteConfig.phone}. We are licensed and insured.`,
       },
       {
         question: "How does a gutter install, repair, or cleaning visit work?",

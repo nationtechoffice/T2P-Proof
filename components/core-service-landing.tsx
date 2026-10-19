@@ -237,14 +237,14 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
             {service.cityLinks ? (
               <InternalLinkHub
                 title={`${service.name} in nearby cities`}
-                intro="City pages for the same licensed crew. Each link is a service area, not a second office."
+                intro="City pages for the same licensed crew. Our local crew serves each of these areas daily."
                 links={service.cityLinks}
               />
             ) : (
               <>
                 <InternalLinkHub
                   title={`${service.name} near Westchase headquarters`}
-                  intro="Nearby city pages for the same licensed crew. Each link is a service area, not a second office."
+                  intro="Nearby city pages for the same licensed crew. Our local crew serves each of these areas daily."
                   links={moneyNearbyLinks(service.name)}
                 />
                 <h2 className="mt-10 mb-4 text-2xl font-bold">{service.name} near you in Tampa Bay</h2>

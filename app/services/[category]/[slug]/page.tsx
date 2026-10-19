@@ -61,7 +61,7 @@ export default async function ServicePage({
     ...service.faqs,
     {
       question: `Do you offer ${service.name} from a Tampa office?`,
-      answer: `Yes. ${service.name} is dispatched from our only headquarters at ${hq} in Westchase. We do not operate extra branches. Call ${siteConfig.phone} to schedule.`,
+      answer: `Yes. ${service.name} is available across Tampa Bay. Our team is based at ${hq} in Westchase and serves all of Tampa Bay. Call ${siteConfig.phone} to schedule.`,
     },
     {
       question: `Can I book ${service.name} in Westchase or Carrollwood?`,
@@ -134,8 +134,7 @@ export default async function ServicePage({
               </h2>
               <p>
                 Call {siteConfig.phone} to describe the {serviceLower} job. We quote clearly, then a licensed technician
-                leaves our only location at {hq} and comes to your home. You are not routed to a second office or a
-                franchise branch — Handyman Pros FL is one Tampa crew.
+                comes to your home. Our local crew serves Tampa Bay daily.
               </p>
               <p>
                 Most {serviceLower} visits in Westchase, Carrollwood, Town &apos;n&apos; Country, and nearby Tampa
@@ -230,7 +229,7 @@ export default async function ServicePage({
 
             <InternalLinkHub
               title={`${service.name} near Westchase headquarters`}
-              intro="Nearby city pages for the same licensed crew. Each link is a service area, not a second office."
+              intro="Nearby city pages for the same licensed crew. Our local crew serves each of these areas daily."
               links={moneyNearbyLinks(service.name)}
             />
             <InternalLinkHub

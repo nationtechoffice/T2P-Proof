@@ -90,7 +90,7 @@ export const paintingSections: ContentSection[] = [
   {
     heading: "How a painting visit works",
     paragraphs: [
-      `Call ${siteConfig.phone} or send photos, and we quote the job before any work starts. The crew leaves our only headquarters at ${siteConfig.address.street}, Tampa, FL 33626, protects floors and furniture, paints, and walks the job with you before we leave.`,
+      `Call ${siteConfig.phone} or send photos, and we quote the job before any work starts. Our crew comes to your home, protects floors and furniture, paints, and walks the job with you before we leave.`,
     ],
   },
 ];
@@ -120,7 +120,7 @@ export const paintingFaqs = [
   },
   {
     question: "Do you offer painting from a Tampa office?",
-    answer: `Our only headquarters is ${siteConfig.address.street}, Tampa, FL 33626. Painting crews are dispatched from there across Tampa Bay.`,
+    answer: `Our team is based at ${siteConfig.address.street} in Westchase and serves all of Tampa Bay.`,
   },
   {
     question: "Can I book painting in Westchase or Carrollwood?",

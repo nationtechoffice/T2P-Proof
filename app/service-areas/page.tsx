@@ -64,7 +64,7 @@ export default function ServiceAreasPage() {
             </p>
             <h1 className="mb-4 text-4xl font-bold">Tampa & Surrounding Counties</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
-              Handyman Pros FL has one headquarters in Westchase, Tampa. City pages below are service areas we drive to — not extra branches. That includes{" "}
+              Our team is based at 12021 Tuscany Bay Dr in Westchase and serves all of Tampa Bay. That includes{" "}
               <Link href="/locations/oldsmar-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
                 Oldsmar FL handyman services
               </Link>{" "}
