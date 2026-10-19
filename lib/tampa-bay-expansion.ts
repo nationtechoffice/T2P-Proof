@@ -197,7 +197,7 @@ export const expansionLocations: TargetLocation[] = [
     paragraphs: [
       "Riverview growth along Riverview Drive and Balm shows up as move-in punch lists and storm damage. Winthrop and Southbend homeowners book us for a hole behind a door, texture that never matched, and a fence panel that leaned after wind.",
       "Drywall repair here is a clean cut, backing when the hole is large, and a feathered coat that can take paint. We will not skim over an active leak. If the stain is still wet, the plumbing or roof issue comes first.",
-      "Fence patch work on these lots is a privacy-board replacement, a rail that pulled its screws, or a gate that drags. Pair it with the indoor list when the schedule allows so South County is one trip from Westchase.",
+      "Fence patch work on these lots is a privacy-board replacement, a rail that pulled its screws, or a gate that drags. Pair it with the indoor list when the schedule allows so our local crew serves Riverview in one trip.",
       `Call ${phone}. Licensed and insured. Hablamos español. Our crew serves Riverview daily.`,
     ],
     callouts: [
