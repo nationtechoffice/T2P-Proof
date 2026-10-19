@@ -270,9 +270,9 @@ Handyman Pros Florida offers emergency repair services during hurricane season. 
     image: "/images/work/drywall-finish-ladder.jpg",
     content: `## Average Drywall Repair Costs in Florida
 
-Drywall repair costs in Florida depend on damage size, location, and whether texture matching and painting are included.
+Drywall repair costs in Florida depend on damage size, location, and whether texture matching and painting are included. At Handyman Pros FL, a small drywall patch starts at $75. Larger holes, ceilings, and water damage are quoted after a free estimate.
 
-| Repair Type | Average Cost |
+| Repair Type | Typical Florida range (industry average) |
 |---|---|
 | Small hole (nail/screw) | $75–$150 |
 | Medium hole (fist-sized) | $150–$300 |
