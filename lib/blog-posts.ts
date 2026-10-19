@@ -356,7 +356,7 @@ Professional TV mounting includes:
 
 ## TV Mounting Cost in Florida
 
-Professional TV mounting typically costs $75-$200 depending on TV size, wall type, and cable management needs.
+Professional TV mounting typically costs $75-$200 depending on TV size, wall type, and cable management needs. At Handyman Pros FL, standard TV mounting starts at $89, with larger TVs, masonry walls, and in-wall cable hiding quoted after a free estimate.
 
 Handyman Pros Florida mounts TVs on all wall types with clean cable management. Same-day service available. Call ${siteConfig.phone}.`,
   },
