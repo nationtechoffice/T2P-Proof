@@ -218,7 +218,7 @@ export const expansionLocations: TargetLocation[] = [
       },
       {
         question: "Do you have a Riverview location?",
-        answer: `No. Crews leave ${hq}, Tampa, FL 33626. Riverview is a drive from that single headquarters.`,
+        answer: "Our local crew serves Riverview. Call (656) 205-3185.",
       },
       {
         question: "Can one visit cover drywall and a fence board?",
