@@ -32,7 +32,10 @@ export async function generateMetadata({
   const photo = galleryForPage(category, slug)[0];
   return buildMetadata({
     title: getLocalPageTitle(service.name),
-    description: getLocalPageDescription(service.shortDescription, service.name),
+    description:
+      category === "fence" && slug === "fence-installation"
+        ? "Fence Installation in Tampa. Complete fence installation for residential properties. Licensed & insured. Our local crew serves Tampa Bay. Call (656) 205-3185."
+        : getLocalPageDescription(service.shortDescription, service.name),
     path: `/services/${category}/${slug}`,
     keywords: [...service.keywords.slice(0, 6), `${service.name} Tampa`],
     exactTitle: true,
@@ -112,7 +115,11 @@ export default async function ServicePage({
                 </>
               ) : (
                 <>
-                  {service.name} in Tampa, FL. {service.shortDescription} Serving Westchase, Carrollwood, Citrus Park,
+                  {service.name} in Tampa, FL.{" "}
+                  {service.slug === "fence-installation"
+                    ? "Complete fence installation for residential properties."
+                    : service.shortDescription}{" "}
+                  Serving Westchase, Carrollwood, Citrus Park,
                   Hillsborough County &amp; Tampa Bay — open 24/7.
                 </>
               )}
