@@ -13,7 +13,7 @@ function fenceCallout(
     before: `${detail} That work is a `,
     href: "/services/fence",
     label: "fence handyman",
-    after: ` visit in ${place} — pickets, a gate, or a short matching section — ${localCrew ? "from our licensed and insured local crew" : "from the same licensed and insured Westchase crew"}. We are not a separate fencing contractor.`,
+    after: ` visit in ${place} — pickets, a gate, or a short matching section — ${localCrew ? "from our licensed and insured local crew." : "from the same licensed and insured Westchase crew. We are not a separate fencing contractor."}`,
   };
 }
 
@@ -159,7 +159,8 @@ export const expansionLocations: TargetLocation[] = [
     callouts: [
       fenceCallout(
         "Brandon",
-        "Bloomingdale and Providence Lakes privacy fences usually need a few boards or a gate, not a new fence around the whole lot."
+        "Bloomingdale and Providence Lakes privacy fences usually need a few boards or a gate, not a new fence around the whole lot.",
+        true
       ),
       {
         before:
@@ -203,7 +204,8 @@ export const expansionLocations: TargetLocation[] = [
     callouts: [
       fenceCallout(
         "Riverview",
-        "Winthrop and Southbend fences take the worst of a south-county storm: one racked panel, a loose rail, or a gate out of square."
+        "Winthrop and Southbend fences take the worst of a south-county storm: one racked panel, a loose rail, or a gate out of square.",
+        true
       ),
       {
         before:
@@ -647,7 +649,8 @@ export const expansionLocations: TargetLocation[] = [
     callouts: [
       fenceCallout(
         "Land O' Lakes",
-        "Connerton and Wilderness Lake fences fail a panel at a time; we repair that run when the posts are still sound."
+        "Connerton and Wilderness Lake fences fail a panel at a time; we repair that run when the posts are still sound.",
+        true
       ),
     ],
     faqs: [
