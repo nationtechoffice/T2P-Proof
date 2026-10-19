@@ -1,3 +1,4 @@
+import { cityServicePages } from "./city-service-pages";
 import { siteConfig } from "./site-config";
 import { getAllServiceSlugs } from "./services";
 import { getAllBlogSlugs } from "./blog-posts";
@@ -109,6 +110,7 @@ export function getAllSiteUrls(): string[] {
     `${baseUrl}/work`,
     `${baseUrl}/locations/zephyrhills-fl`,
     `${baseUrl}/locations/odessa-fl`,
+    ...cityServicePages.map((p) => `${baseUrl}${p.path}`),
   ];
 
   const coreServicePages = coreServices.map((service) => `${baseUrl}/services/${service.slug}`);
