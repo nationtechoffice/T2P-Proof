@@ -38,8 +38,9 @@ export function CityServicePage({ page }: { page: CityServicePageData }) {
       <Breadcrumbs
         items={[
           { label: "Locations", href: "/locations" },
-          { label: page.cityLabel, href: page.hubPath },
-          { label: page.serviceLabel },
+          ...(page.serviceLabel
+            ? [{ label: page.cityLabel, href: page.hubPath }, { label: page.serviceLabel }]
+            : [{ label: page.cityLabel }]),
         ]}
       />
       <article className="section-padding relative">
@@ -61,9 +62,13 @@ export function CityServicePage({ page }: { page: CityServicePageData }) {
               {page.sections.map((s) => (
                 <section key={s.h2} className="space-y-4">
                   <h2 className="mt-10 text-2xl font-bold">{s.h2}</h2>
-                  {(s.paras ?? []).map((p, i) => (
-                    <p key={i}><Rich text={p} /></p>
-                  ))}
+                  {(s.paras ?? []).map((p, i) =>
+                    p.startsWith("### ") ? (
+                      <h3 key={i} className="mt-6 text-xl font-semibold">{p.slice(4)}</h3>
+                    ) : (
+                      <p key={i}><Rich text={p} /></p>
+                    ),
+                  )}
                   {s.list ? (
                     <ul className="list-disc space-y-1 pl-6">
                       {s.list.map((item) => (

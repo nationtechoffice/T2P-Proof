@@ -110,6 +110,7 @@ export function getAllSiteUrls(): string[] {
     `${baseUrl}/work`,
     `${baseUrl}/locations/zephyrhills-fl`,
     `${baseUrl}/locations/odessa-fl`,
+    `${baseUrl}/locations/south-tampa`,
     ...cityServicePages.map((p) => `${baseUrl}${p.path}`),
   ];
 
