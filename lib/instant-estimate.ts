@@ -14,7 +14,7 @@ export const instantEstimate = {
   formHelp: `Prefer to talk? Call ${siteConfig.phone} now for an instant phone estimate — 24/7 dispatch from Westchase, Tampa.`,
   trust: ["24/7 Response", "Licensed & Insured", "Local Guarantee", "Same-Day Service"] as const,
   schemaDescription:
-    "Tampa Bay handyman offering instant phone estimates and same-day home repair. Hablamos español. Call now to speak with a local expert. 24/7 dispatch from Westchase headquarters serving Hillsborough and Pinellas.",
+    "Tampa Bay handyman offering instant phone estimates and same-day home repair. Hablamos español. Call now to speak with a local expert. 24/7 dispatch with a local crew serving Hillsborough and Pinellas.",
 };
 
 const PHONE = siteConfig.phone;
