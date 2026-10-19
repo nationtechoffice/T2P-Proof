@@ -56,22 +56,22 @@ const brief: CityBrief = {
   breadcrumb: "Zephyrhills, FL",
   h1: "Handyman in Zephyrhills, FL",
   opening:
-    "Handyman Pros FL is a licensed and insured, owner-operated handyman service from Tampa that books Zephyrhills jobs into set east-Pasco days for repairs like TV mounting, drywall patches, ceiling fans and furniture assembly. Small jobs start at $49, and estimates are free. Call (656) 205-3185.",
+    "Handyman Pros FL is a licensed and insured handyman company from Tampa that books Zephyrhills jobs into set east-Pasco days for repairs like TV mounting, drywall patches, ceiling fans and furniture assembly. Small jobs start at $49, and estimates are free. Call (656) 205-3185.",
   priceParagraph: `${priceSentences.join(" ")} Free estimates on all jobs.`,
   faqTitle: "Handyman in Zephyrhills FAQ",
   ctaTitle: "Get a free Zephyrhills estimate",
   faqs,
   body: (
     <>
-      <H2>How Zephyrhills booking works with a one-person company</H2>
+      <H2>How Zephyrhills booking works</H2>
       <p>
-        Handyman Pros FL is one owner-operator, founded in 2026 and based at 12021 Tuscany Bay Dr in Westchase, Tampa.
+        Handyman Pros FL is a professional handyman team based at 12021 Tuscany Bay Dr in Westchase, Tampa.
         Zephyrhills City Hall is about 36 miles from there, roughly an hour by road. Rather than charge you for a
-        separate long trip, I group Zephyrhills and east-Pasco jobs onto set days. When you call, you get the next
+        separate long trip, our crew groups Zephyrhills and east-Pasco jobs onto set days. When you call, you get the next
         Zephyrhills day and a price for the job before anything starts.
       </p>
       <p>
-        Same-day is possible when the schedule allows, but I won&apos;t promise it from an hour away. A same-day service
+        Same-day is possible when the schedule allows, but we won&apos;t promise it from an hour away. A same-day service
         call starts at $99. If you have a short list, such as a fan, a shelf and a sticking door, put it all on one
         visit. That is the most efficient way to book from out here.
       </p>
@@ -106,16 +106,16 @@ const brief: CityBrief = {
       </p>
       <H3>Storm season</H3>
       <p>
-        Atlantic hurricane season runs June 1 to November 30. After a storm, I can handle roof{" "}
+        Atlantic hurricane season runs June 1 to November 30. After a storm, our team can handle roof{" "}
         <L href="/services/handyman/roof-repair">leak patch and tarping</L>, loose{" "}
         <L href="/services/gutter-installation">gutter sections</L> and damaged{" "}
-        <L href="/services/fence/fence-repairs-maintenance">fence panels</L>. I don&apos;t replace roofs.
+        <L href="/services/fence/fence-repairs-maintenance">fence panels</L>. We don&apos;t replace roofs.
       </p>
 
       <H2>Zephyrhills areas we cover</H2>
       <p>
         The City of Zephyrhills, ZIP codes 33540, 33541 and 33542, along Gall Blvd (US 301) and Fifth Ave (SR 54),
-        and the neighborhoods off Eiland Blvd and Chancey Rd (CR 535). Heading back toward Tampa, I also
+        and the neighborhoods off Eiland Blvd and Chancey Rd (CR 535). Heading back toward Tampa, our crew also
         work in <L href="/locations/wesley-chapel">Wesley Chapel</L>,{" "}
         <L href="/locations/land-o-lakes">Land O&apos; Lakes</L>, <L href="/locations/plant-city">Plant City</L> and{" "}
         <L href="/locations/lutz">Lutz</L>.

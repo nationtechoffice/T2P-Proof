@@ -46,7 +46,7 @@ const brief: CityBrief = {
   breadcrumb: "Odessa, FL",
   h1: "Handyman in Odessa, FL",
   opening:
-    "Handyman Pros FL is a licensed and insured, owner-operated handyman service based in Westchase, about 25 minutes from Odessa, handling drywall patches, painting, furniture assembly and TV mounting in Starkey Ranch and along SR 54. A drywall patch starts at $75, furniture assembly at $65, and estimates are free. Call (656) 205-3185.",
+    "Handyman Pros FL is a licensed and insured handyman company based in Westchase, about 25 minutes from Odessa, handling drywall patches, painting, furniture assembly and TV mounting in Starkey Ranch and along SR 54. A drywall patch starts at $75, furniture assembly at $65, and estimates are free. Call (656) 205-3185.",
   priceParagraph:
     "Small jobs like shelves and curtain rods start at $49. Furniture assembly starts at $65. A drywall patch starts at $75. A ceiling fan or light fixture install starts at $79. TV mounting starts at $89. A same-day service call starts at $99. Tile repair starts at $199. Painting is quoted after a free estimate. Free estimates on all jobs.",
   faqTitle: "Handyman in Odessa FAQ",
@@ -56,9 +56,9 @@ const brief: CityBrief = {
     <>
       <H2>Close enough for same-day in Odessa</H2>
       <p>
-        Handyman Pros FL is one owner-operator, founded in 2026, working out of 12021 Tuscany Bay Dr, Tampa, FL 33626.
+        Handyman Pros FL is a professional handyman team working out of 12021 Tuscany Bay Dr, Tampa, FL 33626.
         Westchase&apos;s 33626 ZIP borders Odessa&apos;s 33556, and the drive is about 15 miles, roughly 25 minutes. That
-        makes Odessa one of the easiest places for me to fit in a same-day visit when the schedule allows. A same-day
+        makes Odessa one of the easiest places for our crew to fit in a same-day visit when the schedule allows. A same-day
         service call starts at $99. Call in the morning with a short list and there&apos;s a good chance it gets done
         that afternoon.
       </p>
@@ -67,8 +67,8 @@ const brief: CityBrief = {
       <H3>Drywall repair in Odessa</H3>
       <p>
         Newer homes settle, and the first few years bring hairline cracks at corners, holes where a door handle hit the
-        wall, and patches left behind when a fixture or TV moves. I cut out the damage, patch, tape, texture to match
-        and prime so it&apos;s ready for paint. A drywall patch starts at $75. See{" "}
+        wall, and patches left behind when a fixture or TV moves. Our team cuts out the damage, then patches, tapes, textures to match
+        and primes so it&apos;s ready for paint. A drywall patch starts at $75. See{" "}
         <L href="/services/drywall-repair">drywall repair</L>.
       </p>
       <H3>Interior and exterior painting in Odessa</H3>
@@ -82,7 +82,7 @@ const brief: CityBrief = {
       <H3>Furniture assembly in Odessa</H3>
       <p>
         Move-in week in a new Starkey Ranch home usually means a stack of flat-pack boxes: bed frames, dressers, desks,
-        bookcases and patio sets. I assemble them, anchor tall pieces to the wall where needed and haul the boxes to
+        bookcases and patio sets. Our crew assembles them, anchors tall pieces to the wall where needed and hauls the boxes to
         your bin. Furniture assembly starts at $65. See <L href="/services/furniture-assembly">furniture assembly</L>.
       </p>
       <H3>TV mounting, fans and fixtures</H3>
@@ -96,7 +96,7 @@ const brief: CityBrief = {
       <p>
         Pasco-side Odessa: Starkey Ranch along Starkey Blvd and Gunn Hwy/Rangeland Blvd, the SR 54 corridor, and homes
         near the Suncoast Parkway (SR 589) exit at SR 54. Odessa&apos;s 33556 ZIP crosses two counties. If your Odessa
-        address is in Hillsborough, see our <L href="/locations/keystone">Keystone page</L>. Nearby, I also cover{" "}
+        address is in Hillsborough, see our <L href="/locations/keystone">Keystone page</L>. Nearby, we also cover{" "}
         <L href="/locations/westchase-fl">Westchase</L>, <L href="/locations/citrus-park-fl">Citrus Park</L>,{" "}
         <L href="/locations/land-o-lakes">Land O&apos; Lakes</L>, <L href="/locations/lutz">Lutz</L> and{" "}
         <L href="/locations/new-port-richey-fl">New Port Richey</L>.
@@ -112,10 +112,10 @@ const brief: CityBrief = {
 
       <H2>After storms: leak patch and tarping, gutters, fences</H2>
       <p>
-        Hurricane season runs June 1 to November 30. After a storm, I handle roof{" "}
+        Hurricane season runs June 1 to November 30. After a storm, our team handles roof{" "}
         <L href="/services/handyman/roof-repair">leak patch and tarping</L>, loose{" "}
         <L href="/services/gutter-installation">gutter sections</L> and damaged{" "}
-        <L href="/services/fence/fence-repairs-maintenance">fence panels</L>. I don&apos;t replace roofs.
+        <L href="/services/fence/fence-repairs-maintenance">fence panels</L>. We don&apos;t replace roofs.
       </p>
 
       <H2>Handyman services in Odessa</H2>
