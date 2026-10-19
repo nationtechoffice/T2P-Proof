@@ -145,7 +145,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             <h1 className="mb-4 text-4xl font-bold">{meta.title}</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">{meta.description}</p>
             <p className="mt-4 text-sm text-[hsl(var(--muted-foreground))]">
-              Every {meta.name.toLowerCase()} job is dispatched from our single Westchase, Tampa headquarters.
+              Every {meta.name.toLowerCase()} job is handled by our local crew serving Tampa Bay.
             </p>
             {cat === "fence" ? (
               <p className="mt-4 text-sm leading-relaxed text-[hsl(var(--muted-foreground))]">
@@ -253,7 +253,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         <div className="container-site">
           <InternalLinkHub
             title={`${meta.name} across Tampa Bay`}
-            intro="Internal links help search engines and AI assistants connect this service hub to the cities we actually serve from Westchase HQ."
+            intro="Internal links help search engines and AI assistants connect this service hub to the cities our local crew serves across Tampa Bay."
             links={tampaBayLocationLinks()}
           />
           {cat === "fence" ? (
