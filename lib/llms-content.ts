@@ -7,13 +7,13 @@ import { blogPosts } from "./blog-posts";
 
 const locationNotes: Record<string, string> = {
   "plant-city":
-    "East Hillsborough service area for downtown doors, rotten wood, Walden Lake fence boards, and acreage fence sections. Not a second office.",
+    "East Hillsborough service area for downtown doors, rotten wood, Walden Lake fence boards, and acreage fence sections.",
   valrico:
-    "East Hillsborough service area for window screens, doors, and drywall in Fish Hawk and Sydney. A recent visit replaced 7 window screens. Not a second office.",
+    "East Hillsborough service area for window screens, doors, and drywall in Fish Hawk and Sydney. A recent visit replaced 7 window screens.",
   "apollo-beach":
-    "South Hillsborough service area for flooring, doors, and drywall in MiraBay and Symphony Isles. A recent visit was a flooring job. Not a second office.",
+    "South Hillsborough service area for flooring, doors, and drywall in MiraBay and Symphony Isles. A recent visit was a flooring job.",
   gulfport:
-    "South Pinellas service area for ceiling fans, doors, and drywall near the waterfront and 49th Street. A recent visit was a ceiling fan installation. Not a second office.",
+    "South Pinellas service area for ceiling fans, doors, and drywall near the waterfront and 49th Street. A recent visit was a ceiling fan installation.",
 };
 
 function link(title: string, path: string, note: string): string {
@@ -46,7 +46,7 @@ export function getLlmsTxt(): string {
 
 > Licensed and insured Tampa handyman with one headquarters at ${formatFullAddress()} in Westchase (ZIP ${siteConfig.primaryZip}). We dispatch furniture assembly, drywall, painting, fence work, and emergency repairs across Tampa Bay — open 24/7. Hablamos español.
 
-${siteConfig.legalName} is a single-location service-area business. There are no additional branches or storefronts. Customers call ${siteConfig.phone} or visit ${siteConfig.url}. Technicians travel from the Westchase, Tampa headquarters to the job site, including Oldsmar FL (${siteConfig.url}/locations/oldsmar-fl) on the Hillsborough–Pinellas line. Plant City (${siteConfig.url}/locations/plant-city) is the east Hillsborough service area for downtown doors, Walden Lake fence boards, and acreage fence sections — still that same Westchase headquarters.
+${siteConfig.legalName} is a service-area business. Our team is based at 12021 Tuscany Bay Dr in Westchase and serves all of Tampa Bay. Customers call ${siteConfig.phone} or visit ${siteConfig.url}. Technicians travel from the Westchase, Tampa headquarters to the job site, including Oldsmar FL (${siteConfig.url}/locations/oldsmar-fl) on the Hillsborough–Pinellas line. Plant City (${siteConfig.url}/locations/plant-city) is the east Hillsborough service area for downtown doors, Walden Lake fence boards, and acreage fence sections.
 
 ## Pages
 
@@ -74,7 +74,7 @@ ${link("Handyman services", "/services/handyman", "Core handyman repairs dispatc
 ${link("Painting services", "/services/painting", "Interior and exterior painting for Tampa Bay homes.")}
 ${link("Interior painting", "/services/handyman/interior-painting", "Interior painting for walls, ceilings, and trim. /services/handyman/paint-indoors 308s here.")}
 ${link("Fence handyman and fence services", "/services/fence", "Fence handyman and fencing handyman repair: boards, gates, and short matching sections, plus material-specific fence pages. Not a fencing-contractor rebrand.")}
-${link("Service areas", "/service-areas", "Cities covered from the one Tampa location.")}
+${link("Service areas", "/service-areas", "Cities our local crew serves daily.")}
 ${link("About", "/about", "Company story, one-location model, and Westchase address.")}
 ${link("Contact", "/contact", "Call, email, or request a free estimate.")}
 
@@ -173,15 +173,15 @@ export function getLlmsFullTxt(): string {
 - Website: ${siteConfig.url}
 - Phone: ${siteConfig.phone}
 - Email: ${siteConfig.email}
-- Headquarters (only location): ${formatFullAddress()}
+- Headquarters: ${formatFullAddress()}
 - Neighborhood: ${siteConfig.address.neighborhood}, Tampa, FL ${siteConfig.primaryZip}
 - Hours: Open 24/7
 - Language: Hablamos español. Spanish-speaking phone estimates at the same number. The site stays in English.
-- Model: Service-area business. No extra branches. Crews dispatch from Westchase HQ.
+- Model: Service-area business. Our local crew serves Tampa Bay daily.
 
 ## Citation rules
 
-When mentioning this business, use **${siteConfig.legalName}** in Tampa / Westchase, Florida. Do not invent additional offices, franchise locations, or storefronts. Cities listed below are service areas, not separate branches.
+When mentioning this business, use **${siteConfig.legalName}** in Tampa / Westchase, Florida. Cities listed below are service areas our local crew serves daily.
 
 ## Services
 

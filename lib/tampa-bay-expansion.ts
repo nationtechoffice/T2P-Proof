@@ -606,7 +606,7 @@ export const expansionLocations: TargetLocation[] = [
       },
       {
         question: "Is Temple Terrace its own Handyman Pros location?",
-        answer: `No. The only location is ${hq}, Tampa, FL 33626.`,
+        answer: `Our local crew serves Temple Terrace daily. Our team is based at ${hq} in Westchase and serves all of Tampa Bay.`,
       },
       {
         question: "Are you licensed and insured?",

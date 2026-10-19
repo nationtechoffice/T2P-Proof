@@ -781,7 +781,7 @@ export const targetLocations: TargetLocation[] = [
     faqs: [
       {
         question: "Are you actually based in Westchase?",
-        answer: `Yes. Our only location is ${siteConfig.address.street}, Tampa, FL 33626. Westchase is headquarters, not a marketing city.`,
+        answer: `Yes. Our team is based at ${siteConfig.address.street} in Westchase and serves all of Tampa Bay.`,
       },
       {
         question: "How fast is Westchase handyman service?",

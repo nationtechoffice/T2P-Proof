@@ -33,7 +33,7 @@ const homeFaqs = [
   },
   {
     question: "Where is Handyman Pros FL located?",
-    answer: `We are based at ${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip} in the Westchase area of Tampa. That is our only location. We are a mobile service covering Tampa and all surrounding counties — we come to you.`,
+    answer: `We are based at ${siteConfig.address.street}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip} in the Westchase area of Tampa. Our local crew serves Tampa Bay daily. We are a mobile service covering Tampa and all surrounding counties — we come to you.`,
   },
   {
     question: "Do you have more than one branch?",
