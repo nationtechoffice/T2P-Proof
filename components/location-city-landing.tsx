@@ -26,6 +26,7 @@ import { gbpHubSlugSet } from "@/lib/gbp-city-hubs";
 import { hubJobPhotos } from "@/lib/hub-photos";
 import { startingPriceList, startingPriceSentenceFor } from "@/lib/starting-prices";
 import { ContentSections } from "@/components/content-sections";
+import { cityLocalCopy } from "@/lib/city-local-copy";
 
 export function LocationCityLanding({ location }: { location: TargetLocation }) {
   const pageUrl = `${siteConfig.url}/locations/${location.slug}`;
@@ -105,14 +106,14 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
         <div className="container-site grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
-              Instant Phone Estimates · {location.county}
+              {location.displayName} · {location.county}
             </p>
             <h1 className="mb-4 text-4xl font-bold">{serviceH1("Handyman", location.city)}</h1>
             {location.directAnswer ? (
               <p className="mb-4 text-lg leading-relaxed text-[hsl(var(--foreground))]">{location.directAnswer}</p>
             ) : null}
-            <p className="mb-4 text-xl font-semibold text-[hsl(var(--primary))]">{instantEstimate.heroHeadline}</p>
             <p className="mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">{location.intro}</p>
+            <p className="mb-4 text-xl font-semibold text-[hsl(var(--primary))]">{instantEstimate.heroHeadline}</p>
             <div className="mb-6">
               <TrustBadges />
             </div>
@@ -123,7 +124,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               </Link>
             </div>
             <div className="space-y-4 leading-relaxed text-[hsl(var(--muted-foreground))]">
-              {location.paragraphs.map((paragraph) => (
+              {[...location.paragraphs, ...(cityLocalCopy[location.slug] ?? [])].map((paragraph) => (
                 <p key={paragraph.slice(0, 40)}>{paragraph}</p>
               ))}
               {location.callouts?.map((callout) => (
@@ -305,7 +306,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
             {location.spots && location.spots.length > 0 ? (
               <NeighborhoodBlocks
                 title={`${location.city} neighborhoods we cover in more detail`}
-                intro="Each neighborhood below is still a drive from our only Westchase headquarters. The links go to the matching city hub or service page."
+                intro="Our crew serves each neighborhood below. The links go to the matching city hub or service page."
                 spots={location.spots}
               />
             ) : null}

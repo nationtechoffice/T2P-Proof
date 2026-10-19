@@ -676,7 +676,7 @@ export const targetLocations: TargetLocation[] = [
     neighborhoods: ["South Tampa", "Hyde Park", "Seminole Heights", "Westchase", "New Tampa", "Carrollwood"],
     spots: tampaLocationSpots,
     intro:
-      "Looking for Handyman Tampa FL service with same-day help? Handyman Pros FL handles drywall repair Tampa, TV mounting Tampa, fixture swaps, and furniture assembly from our only Westchase headquarters.",
+      "Looking for Handyman Tampa FL service with same-day help? Handyman Pros FL handles drywall repair Tampa, TV mounting Tampa, fixture swaps, and furniture assembly. Our crew serves Tampa daily.",
     paragraphs: [
       `Handyman Tampa FL searches should land on a real local crew — not a lead marketplace. We dispatch from ${siteConfig.address.street} in Westchase with a stocked truck for drywall repair Tampa jobs, TV mounting Tampa installs, door repairs, and punch lists across South Tampa, Hyde Park, Seminole Heights, and New Tampa.`,
       "Drywall repair Tampa homeowners book most after kids, doorknobs, or summer humidity stains. We cut clean patches, blend orange peel or knockdown, and leave paint-ready walls. TV mounting Tampa visits include stud finding, rated hardware, and clean cable runs for living rooms, bedrooms, and lanais.",
@@ -700,7 +700,7 @@ export const targetLocations: TargetLocation[] = [
       },
       {
         question: "Is Handyman Pros FL based in Tampa?",
-        answer: `Yes. Our only location is ${siteConfig.address.street}, Tampa, FL 33626 (Westchase). City pages are service areas we drive to — not extra branches.`,
+        answer: `Yes. Handyman Pros FL is based at ${siteConfig.address.street}, Tampa, FL 33626, in Westchase. Our crew serves Tampa daily. Call ${siteConfig.phone}.`,
       },
     ],
   },
@@ -720,7 +720,7 @@ export const targetLocations: TargetLocation[] = [
     directAnswer: `Handyman Pros FL is a licensed and insured handyman company headquartered in Westchase at ${siteConfig.address.street}, Tampa, FL 33626, so Westchase homes are the closest stop for TV mounting, drywall patches, fixtures and furniture assembly, often the same day.`,
     paragraphs: [
       `Handyman Pros FL is based at ${siteConfig.address.street}, Tampa, FL 33626 in Westchase. When you search handyman near me in Westchase, you are calling the actual local crew — not a lead mill.`,
-      "Westchase HOA standards, stucco, and lanai sliders are daily work. We handle TV wall mounting, drywall repair, electrical fixture installation, plumbing fixture repair, furniture assembly, and door repair without a second office.",
+      "Westchase HOA standards, stucco, and lanai sliders are daily work. We handle TV wall mounting, drywall repair, electrical fixture installation, plumbing fixture repair, furniture assembly, and door repair every week.",
       "Tuscany Bay and Westchase Golf Club streets are inside our fastest response radius. Citrus Park, Town 'N' Country, and Oldsmar (ZIP 34677, just across the Hillsborough–Pinellas line) are the next hop.",
       `Call ${siteConfig.phone} 24/7 for a Westchase estimate.`,
     ],

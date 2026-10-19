@@ -9,12 +9,12 @@ export function HqDispatch({ area }: { area?: string }) {
   return (
     <aside className="rounded-2xl border border-[hsl(var(--border))] bg-white/80 p-6">
       <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
-        One Tampa location
+        Licensed & insured
       </p>
-      <h2 className="mb-3 text-xl font-bold">We come to you from Westchase HQ</h2>
+      <h2 className="mb-3 text-xl font-bold">We come to you</h2>
       <p className="mb-4 text-sm leading-relaxed text-[hsl(var(--muted-foreground))]">
-        Handyman Pros FL operates a single branch at {formatFullAddress()}. Licensed technicians
-        dispatch{destination} — there are no extra storefronts or franchise offices.
+        Handyman Pros FL is based at {formatFullAddress()}. Our licensed crew
+        travels{destination} for scheduled visits.
       </p>
       <p className="flex items-start gap-2 text-sm">
         <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[hsl(var(--accent))]" />

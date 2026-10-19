@@ -8,7 +8,7 @@ export interface NeighborhoodSpot {
 export const tampaLocationSpots: NeighborhoodSpot[] = [
   {
     name: "Hyde Park",
-    body: "Hyde Park jobs are usually inside older South Tampa houses along Bayshore, Swann, and South Howard: a TV mount in a formal living room, a drywall blend next to plaster, or a sticking door after a humid week. We protect floors and keep the visit quiet. These are service calls from our only Westchase headquarters, not a Hyde Park storefront.",
+    body: "Hyde Park jobs are usually inside older South Tampa houses along Bayshore, Swann, and South Howard: a TV mount in a formal living room, a drywall blend next to plaster, or a sticking door after a humid week. We protect floors and keep the visit quiet. Our crew serves Hyde Park daily.",
     links: [
       { href: "/locations/tampa", label: "South Tampa handyman" },
       { href: "/services/tv-wall-mounting", label: "TV wall mounting" },

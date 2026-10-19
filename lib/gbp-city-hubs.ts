@@ -19,14 +19,14 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["Clearwater Beach", "Island Estates", "Coachman", "Countryside", "Downtown Clearwater"],
     intro:
       "Need a licensed Clearwater handyman for sliders, drywall, and TV mounts? Handyman Pros FL serves the beach, Coachman, and Countryside from one Westchase headquarters. Hablamos español.",
-    directAnswer: `Handyman Pros Florida serves Clearwater with handyman repairs for sliding doors, drywall patches, TV mounts, and fixture swaps. Crews leave the only Westchase headquarters for Clearwater Beach, Island Estates, Coachman, and Countryside. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+    directAnswer: `Handyman Pros Florida serves Clearwater with handyman repairs for sliding doors, drywall patches, TV mounts, and fixture swaps. Our crew serves Clearwater daily, including Clearwater Beach, Island Estates, Coachman, and Countryside. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     showStartingPrices: true,
     paragraphs: [
       "Handyman Pros FL is a licensed, insured handyman crew that serves Clearwater, FL from its single Westchase headquarters in Tampa, with 24/7 phone estimates and Spanish-speaking staff.",
       "Handyman jobs in Clearwater start at $49 for small jobs like shelves and curtain rods, $89 for TV mounting, and $75 for a drywall patch. Furniture assembly starts at $65, ceiling fan or light fixture installs start at $79, and tile repair or regrout starts at $199.",
       "Clearwater splits into two kinds of houses. Clearwater Beach and Island Estates are condos and low-rise buildings where salt air swells sliding doors and balcony hardware. Coachman and Countryside are mainland neighborhoods of single-family homes with the usual Florida stucco, lanais, and interior drywall.",
       "Beach visits are often a slider that will not lock, a drywall scar inside a rental, or a TV that has to sit level on a concrete or block wall. Mainland lists add ceiling fans at an existing box, fixture swaps, and a punch list before guests arrive. We do not run new circuits or open walls for new wiring.",
-      "Cleveland Street and downtown are a short hop from those same stops. We are not a Clearwater storefront. The truck leaves Westchase and crosses to Pinellas on a planned route with Dunedin, Safety Harbor, and Largo.",
+      "Cleveland Street and downtown are a short hop from those same stops. Clearwater calls share a planned Pinellas route with Dunedin, Safety Harbor, and Largo.",
       `Call ${phone} for a Clearwater estimate. Licensed and insured. Open 24/7 for scheduling. Hablamos español on the same number.`,
     ],
     callouts: [
@@ -44,10 +44,6 @@ export const gbpCityHubs: TargetLocation[] = [
       },
     ],
     faqs: [
-      {
-        question: "Do you have a handyman office in Clearwater?",
-        answer: `No. The only office is ${hq} in Westchase. Clearwater Beach, Coachman, and Countryside are service areas we drive to.`,
-      },
       {
         question: "Can you work in a Clearwater Beach condo?",
         answer:
@@ -101,7 +97,7 @@ export const gbpCityHubs: TargetLocation[] = [
       "St. Petersburg housing changes block by block. Kenwood and Old Northeast are older wood-frame bungalows and masonry houses where a small hole still has to disappear into plaster or older drywall. Downtown and the waterfront are more condos. Tyrone is later single-family stock along the west side.",
       "The useful visits are practical: hang a TV into real structure, patch a wall so it can take paint, plane a door that sticks after rain, and reset trim that has pulled. We are a handyman crew, not a restoration shop for historic millwork.",
       "Snell Isle and the northeast waterfront add humidity and hardware that loosens. We say so when a wall is too soft to hold a mount. Pinellas Park and Seminole are the usual next stops on a south Pinellas day.",
-      `Call ${phone}. Licensed and insured. One headquarters in Westchase. Hablamos español.`,
+      `Call ${phone}. Licensed and insured. Our crew serves St. Petersburg daily. Hablamos español.`,
     ],
     callouts: [
       {
@@ -112,10 +108,6 @@ export const gbpCityHubs: TargetLocation[] = [
       },
     ],
     faqs: [
-      {
-        question: "Is there a St. Petersburg handyman shop?",
-        answer: `No. Handyman Pros FL has one location at ${hq}. St. Petersburg is a Pinellas service area.`,
-      },
       {
         question: "Can you patch older Kenwood walls?",
         answer:
@@ -145,7 +137,7 @@ export const gbpCityHubs: TargetLocation[] = [
       "Need a licensed Palm Harbor handyman for TV mounts, drywall, and fence boards? Handyman Pros FL serves Ozona, East Lake, and Highland Lakes from Westchase. Hablamos español.",
     directAnswer: "Handyman Pros FL serves Palm Harbor, FL, including East Lake, Ozona, Crystal Beach and Highland Lakes, from its Westchase headquarters, with TV mounting from $89, drywall patches from $75 and small jobs from $49. Palm Harbor is unincorporated Pinellas County, so any permit for your job goes through Pinellas County, not a city hall, and we tell you up front if a job needs one.",
     paragraphs: [
-      `Call ${phone} for a Palm Harbor estimate. Licensed and insured. Hablamos español. The only office is Westchase.`,
+      `Call ${phone} for a Palm Harbor estimate. Licensed and insured. Hablamos español. Our crew serves Palm Harbor daily.`,
     ],
     sections: [
       {
@@ -271,7 +263,7 @@ export const gbpCityHubs: TargetLocation[] = [
     paragraphs: [
       "Oldsmar sits on Tampa Road between Westchase and the rest of Pinellas. East Lake Woodlands and Shoreview are golf-course and subdivision houses. West Oldsmar and the SR 580 corridor mix older block homes with small commercial streets.",
       "Because the drive is short, lists here are often mixed: a tile or LVP patch, a door that swells, a TV or shelf that has to be level, and deck or lanai hardware that loosened. We repair the section. We do not rebuild a soft subfloor or a failed deck frame.",
-      "Safety Harbor is the next town north, Town 'N' Country and Citrus Park are back toward Tampa, and Palm Harbor is the north Pinellas continuation. One crew, one phone number, no Oldsmar branch.",
+      "Safety Harbor is the next town north, Town 'N' Country and Citrus Park are back toward Tampa, and Palm Harbor is the north Pinellas continuation. Our crew serves Oldsmar daily.",
       `Call ${phone}. Licensed and insured. Hablamos español. Same-week visits are realistic when the truck is already on this side of the county line.`,
     ],
     callouts: [
@@ -284,17 +276,9 @@ export const gbpCityHubs: TargetLocation[] = [
     ],
     faqs: [
       {
-        question: "Is Oldsmar a second Handyman Pros office?",
-        answer: `No. The only address is ${hq}. Oldsmar ZIP 34677 is a service area on the way into Pinellas.`,
-      },
-      {
         question: "Do you repair floors in East Lake Woodlands?",
         answer:
           "We patch tile and replace short flooring sections when the material is on site and the subfloor is solid. A whole-house floor is quoted separately.",
-      },
-      {
-        question: "How far is Oldsmar from your shop?",
-        answer: `It is the next community west of Westchase along Tampa Road. Call ${phone} and we will give the next real window.`,
       },
       {
         question: "Can I request the estimate in Spanish?",
@@ -315,7 +299,7 @@ export const gbpCityHubs: TargetLocation[] = [
     paragraphs: [
       "Downtown Dunedin is a walkable Main Street with cottages and small lots just off the water. Edgewater Drive and the nearby streets are older houses where hardware and doors feel the humidity. Farther east, Curlew and the Clearwater border are more suburban.",
       "Assembly work shows up after a move into those cottages: beds, shelves, and outdoor sets that have to sit square on floors that are not perfectly flat. Fixture swaps and a door that rubs are the usual add-ons. We do not provide a moving truck.",
-      "Clearwater, Safety Harbor, and Palm Harbor are the cities we continue to on a mid-Pinellas day. Dunedin is not a second shop.",
+      "Clearwater, Safety Harbor, and Palm Harbor are the cities we continue to on a mid-Pinellas day. Our crew serves Dunedin daily.",
       `Call ${phone} for a Dunedin estimate. Licensed and insured. Hablamos español.`,
     ],
     callouts: [
@@ -327,10 +311,6 @@ export const gbpCityHubs: TargetLocation[] = [
       },
     ],
     faqs: [
-      {
-        question: "Do you have a Dunedin handyman office?",
-        answer: `No. Dispatch is from ${hq} in Westchase. Downtown Dunedin and Edgewater are on the Pinellas route.`,
-      },
       {
         question: "Can you assemble furniture in a small Dunedin house?",
         answer:
@@ -359,8 +339,8 @@ export const gbpCityHubs: TargetLocation[] = [
     paragraphs: [
       "Safety Harbor is a small waterfront town on the bay. Downtown Main Street and the streets toward Philippe Park are older cottages and block houses. The Oldsmar border is a short drive back toward our headquarters.",
       "The lists fit a handyman visit: a door that sticks after a wet week, a ceiling fan wobbling at an existing box, drywall from a moved piece of furniture, and a short punch list before company arrives. New wiring and panel work stay with an electrician.",
-      "Oldsmar, Clearwater, and Dunedin are the neighboring hubs. We do not keep a Safety Harbor storefront or a separate phone number.",
-      `Call ${phone}. Licensed and insured. Hablamos español. The truck starts in Westchase.`,
+      "Oldsmar, Clearwater, and Dunedin are the neighboring hubs. Our crew serves Safety Harbor daily.",
+      `Call ${phone}. Licensed and insured. Hablamos español.`,
     ],
     callouts: [
       {
@@ -371,10 +351,6 @@ export const gbpCityHubs: TargetLocation[] = [
       },
     ],
     faqs: [
-      {
-        question: "Is there a Safety Harbor branch?",
-        answer: `No. The only location is ${hq}. Safety Harbor is a Pinellas service area between Oldsmar and Clearwater.`,
-      },
       {
         question: "Can you fix a sticking door in downtown Safety Harbor?",
         answer:
@@ -416,10 +392,6 @@ export const gbpCityHubs: TargetLocation[] = [
     ],
     faqs: [
       {
-        question: "Do you have a Tarpon Springs office?",
-        answer: `No. Handyman Pros FL is based at ${hq}. Tarpon Springs, including the Sponge Docks and East Lake, is a service area.`,
-      },
-      {
         question: "Can you repair a wood fence near Lake Tarpon?",
         answer:
           "Yes, for boards, a gate, or a short matching section. If the posts are rotten along the whole run, we say that before anyone starts digging.",
@@ -447,7 +419,7 @@ export const gbpCityHubs: TargetLocation[] = [
     paragraphs: [
       "Holiday is unincorporated Pasco between Tarpon Springs and New Port Richey. Houses along US-19, Holiday Lake, and the Anclote side are often older concrete-block ranches on low lots, with carports, short fence runs, and gutters that clog after oak debris and hard rain.",
       "The handyman list is doors that stick, a gutter section that dumps at the slab, a fence panel that leaned, and drywall inside after a leak is already dry. We do not treat an active roof leak as a paint-over. If water is still coming in, that gets named before we patch.",
-      "Tarpon Springs is south and New Port Richey is north. There is no Holiday storefront. The crew and the phone number are the Westchase ones.",
+      "Tarpon Springs is south and New Port Richey is north. Our crew serves Holiday daily.",
       `Call ${phone} for a Holiday estimate. Licensed and insured. Hablamos español.`,
     ],
     callouts: [
@@ -459,10 +431,6 @@ export const gbpCityHubs: TargetLocation[] = [
       },
     ],
     faqs: [
-      {
-        question: "Is Holiday a separate Handyman Pros location?",
-        answer: `No. Holiday in Pasco is a service area. The only office is ${hq} in Westchase.`,
-      },
       {
         question: "Do you clean and repair gutters in Holiday?",
         answer:
@@ -504,10 +472,6 @@ export const gbpCityHubs: TargetLocation[] = [
     ],
     faqs: [
       {
-        question: "Do you have a New Port Richey office?",
-        answer: `No. New Port Richey is a Pasco service area. Headquarters stays at ${hq}.`,
-      },
-      {
         question: "Do you work in Gulf Harbors?",
         answer:
           "Yes, for handyman repairs: gutters, fence sections, doors, and drywall. Dock and seawall work is outside that scope.",
@@ -535,7 +499,7 @@ export const gbpCityHubs: TargetLocation[] = [
     paragraphs: [
       "Keystone is unincorporated Hillsborough along Gunn Highway, near Lake Keystone and Brooker Creek Preserve. Lots are larger than in Citrus Park, with oaks, long driveways, and fences that fail one section at a time instead of one shared wall.",
       "The work that fits is a fence board or gate, a ceiling fan at an existing box, drywall inside the house, and a door that no longer latches. We do not treat acreage as a reason to invent a second crew. The same Westchase truck comes north.",
-      "Citrus Park is the commercial neighbor to the southeast. Westchase and Oldsmar are south. Carrollwood is east. There is no Keystone shop and no separate Google listing.",
+      "Citrus Park is the commercial neighbor to the southeast. Westchase and Oldsmar are south. Carrollwood is east. Our crew serves Keystone daily.",
       `Call ${phone} for a Keystone estimate. Licensed and insured. Hablamos español.`,
     ],
     callouts: [
@@ -549,7 +513,7 @@ export const gbpCityHubs: TargetLocation[] = [
     faqs: [
       {
         question: "Is Keystone inside your service area?",
-        answer: `Yes. Keystone along Gunn Highway and Lake Keystone is a Hillsborough service area. The office is still ${hq}.`,
+        answer: `Yes. Keystone along Gunn Highway and Lake Keystone is a Hillsborough service area. Our crew serves Keystone daily.`,
       },
       {
         question: "Do you repair fences on larger Keystone lots?",
@@ -592,10 +556,6 @@ export const gbpCityHubs: TargetLocation[] = [
     ],
     faqs: [
       {
-        question: "Do you have a Citrus Park office?",
-        answer: `No. Citrus Park is a northwest Hillsborough service area next to Westchase. The only address is ${hq}.`,
-      },
-      {
         question: "Can you mount a TV near Citrus Park Town Center?",
         answer:
           "Yes. We locate structure, use a rated mount, and keep the screen level. Cable concealment depends on the wall.",
@@ -623,7 +583,7 @@ export const gbpCityHubs: TargetLocation[] = [
     paragraphs: [
       "Town 'N' Country is an unincorporated Hillsborough community west of Tampa, along Hillsborough Avenue, Waters Avenue, and Memorial Highway. Many houses are older block ranches and townhomes with carports, original fans, and drywall that has been patched more than once.",
       "Fixture swaps and fan replacements at an existing box are the common call, plus a door, a drywall scar, and a shelf that has to be level. Rocky Creek and the streets toward Westchase are a short trip, so a modest list does not need a second appointment when the parts match.",
-      "Citrus Park is north, Carrollwood is northeast, and Oldsmar is west across the county line. The crew is the Westchase crew. There is no Town 'N' Country branch.",
+      "Citrus Park is north, Carrollwood is northeast, and Oldsmar is west across the county line. Our crew serves Town 'N' Country daily.",
       `Call ${phone} for an estimate. Licensed and insured. Hablamos español.`,
     ],
     callouts: [
@@ -635,10 +595,6 @@ export const gbpCityHubs: TargetLocation[] = [
       },
     ],
     faqs: [
-      {
-        question: "Is Town 'N' Country a separate office?",
-        answer: `No. Town 'N' Country is a service area. Handyman Pros FL is located at ${hq} in Westchase.`,
-      },
       {
         question: "Do you replace ceiling fans in Town 'N' Country?",
         answer:
@@ -662,12 +618,12 @@ export const gbpCityHubs: TargetLocation[] = [
     zipHint: "33594–33596",
     neighborhoods: ["Fish Hawk", "Sydney", "Valrico Road", "State Road 60"],
     intro:
-      "Need a licensed Valrico handyman for window screens, doors, and drywall? Fish Hawk and Sydney are an east Hillsborough drive from our only Westchase headquarters. Hablamos español.",
-    directAnswer: `Handyman Pros Florida serves Valrico with handyman repairs for window screens, doors, and drywall in Fish Hawk, Sydney, and along Valrico Road. A recent visit replaced 7 window screens. Crews leave the only Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+      "Need a licensed Valrico handyman for window screens, doors, and drywall? Fish Hawk and Sydney are regular stops for our crew. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Valrico with handyman repairs for window screens, doors, and drywall in Fish Hawk, Sydney, and along Valrico Road. A recent visit replaced 7 window screens. Our crew serves Valrico daily. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
-      "Valrico sits east of Brandon along Valrico Road and State Road 60. Fish Hawk and Sydney are the neighborhoods we drive most. The houses mix later subdivisions with older lots, and the truck still leaves Westchase. There is no Valrico office.",
+      "Valrico sits east of Brandon along Valrico Road and State Road 60. Fish Hawk and Sydney are the neighborhoods we drive most. The houses mix later subdivisions with older lots.",
       "A recent Valrico visit was replacing 7 window screens. The other calls on this side of Hillsborough are usually a door that swells after rain or a drywall patch, not a remodel. We bring the screen spline and the door hardware that fit a handyman stop.",
-      "Brandon is the next hub west, Riverview is south, and Plant City is farther east. Those pages are the same licensed crew. We do not treat Valrico as a second storefront.",
+      "Brandon is the next hub west, Riverview is south, and Plant City is farther east. Those pages are the same licensed crew.",
       `Call ${phone} for a Valrico estimate. Licensed and insured. Open 24/7 for scheduling. Hablamos español on the same number.`,
     ],
     callouts: [
@@ -679,10 +635,6 @@ export const gbpCityHubs: TargetLocation[] = [
       },
     ],
     faqs: [
-      {
-        question: "Do you have a handyman office in Valrico?",
-        answer: `No. The only office is ${hq} in Westchase. Valrico, including Fish Hawk and Sydney, is a service area we drive to.`,
-      },
       {
         question: "Do you replace window screens in Valrico?",
         answer:
@@ -707,9 +659,9 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["MiraBay", "Symphony Isles", "US-41", "Apollo Beach Boulevard"],
     intro:
       "Need a licensed Apollo Beach handyman for flooring, doors, and drywall? MiraBay and Symphony Isles are a south Hillsborough drive from Westchase. Hablamos español.",
-    directAnswer: `Handyman Pros Florida serves Apollo Beach with handyman repairs for flooring, doors, and drywall in Symphony Isles, MiraBay, and along US-41. A recent visit was a flooring job. Crews leave the only Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+    directAnswer: `Handyman Pros Florida serves Apollo Beach with handyman repairs for flooring, doors, and drywall in Symphony Isles, MiraBay, and along US-41. A recent visit was a flooring job. Our crew serves Apollo Beach daily. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
-      "Apollo Beach is the bay community south of Riverview, along US-41, with MiraBay and Symphony Isles among the neighborhoods we already route. It is a service area. There is no Apollo Beach shop.",
+      "Apollo Beach is the bay community south of Riverview, along US-41, with MiraBay and Symphony Isles among the neighborhoods we already route.",
       "A recent Apollo Beach visit was a flooring job. Doors and drywall patches are the other lists on these houses. We repair the section that failed, and we say so when a soft subfloor is past a handyman visit.",
       "Riverview is the inland neighbor. Brandon is farther north on many of the same days. The crew is still the Westchase crew, with one phone number.",
       `Call ${phone} for an Apollo Beach estimate. Licensed and insured. Hablamos español.`,
@@ -723,10 +675,6 @@ export const gbpCityHubs: TargetLocation[] = [
       },
     ],
     faqs: [
-      {
-        question: "Is there an Apollo Beach handyman office?",
-        answer: `No. Handyman Pros FL has one location at ${hq}. Apollo Beach is a south Hillsborough service area.`,
-      },
       {
         question: "Do you take flooring jobs in Apollo Beach?",
         answer:
@@ -751,11 +699,11 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["Gulfport waterfront", "49th Street", "Pasadena edge", "Beach Boulevard"],
     intro:
       "Need a licensed Gulfport handyman for ceiling fans, doors, and drywall? The waterfront and 49th Street are a south Pinellas drive from Westchase. Hablamos español.",
-    directAnswer: `Handyman Pros Florida serves Gulfport with handyman repairs for ceiling fans, doors, and drywall near the waterfront, 49th Street, and the Pasadena edge. A recent visit was a ceiling fan installation. Crews leave the only Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+    directAnswer: `Handyman Pros Florida serves Gulfport with handyman repairs for ceiling fans, doors, and drywall near the waterfront, 49th Street, and the Pasadena edge. A recent visit was a ceiling fan installation. Our crew serves Gulfport daily. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
-      "Gulfport is the waterfront city on Boca Ciega Bay, south of St. Petersburg. Stops cluster near the beach, 49th Street, and the Pasadena edge. We do not keep a Gulfport storefront.",
+      "Gulfport is the waterfront city on Boca Ciega Bay, south of St. Petersburg. Stops cluster near the beach, 49th Street, and the Pasadena edge.",
       "A recent Gulfport visit was a ceiling fan installation at an existing fan-rated box. Doors that stick in the salt air and small drywall patches fill out a typical list. New wiring is electrician work, and we stop if the box is not fan-rated.",
-      "St. Petersburg is the next hub north. Pinellas Park and Seminole are the usual continuation of a south Pinellas day. One headquarters in Westchase, one phone number.",
+      "St. Petersburg is the next hub north. Pinellas Park and Seminole are the usual continuation of a south Pinellas day. Our crew serves Gulfport daily.",
       `Call ${phone} for a Gulfport estimate. Licensed and insured. Hablamos español.`,
     ],
     callouts: [
@@ -767,10 +715,6 @@ export const gbpCityHubs: TargetLocation[] = [
       },
     ],
     faqs: [
-      {
-        question: "Do you have a Gulfport location?",
-        answer: `No. Crews leave ${hq}. Gulfport is a Pinellas service area, not a second office.`,
-      },
       {
         question: "Do you install ceiling fans in Gulfport?",
         answer:

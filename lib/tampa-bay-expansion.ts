@@ -72,12 +72,12 @@ export const expansionLocations: TargetLocation[] = [
     zipHint: "33563–33567",
     neighborhoods: ["Downtown Plant City", "Walden Lake", "Trapnell", "Knights Griffin", "Park Road", "Varrea", "US-92 corridor"],
     intro:
-      "Need a Plant City handyman for a door that swelled, rotten wood at a sill, or a fence board on a golf-course lot or a strawberry-acreage line? Licensed and insured Handyman Pros FL drives east from our only Westchase headquarters — Plant City is a service area, not a second office.",
+      "Need a Plant City handyman for a door that swelled, rotten wood at a sill, or a fence board on a golf-course lot or a strawberry-acreage line? Licensed and insured Handyman Pros FL serves Plant City daily.",
     paragraphs: [
-      `Plant City is not a Brandon ranch corridor and not a Riverview subdivision punch list. Downtown blocks around the water tower are older wood. Walden Lake is a golf-community fence line. East of Park Road, Trapnell and Knights Griffin open into pasture and strawberry fields. Technicians leave ${hq} in Westchase with door hardware, exterior caulk, and fence fasteners already on the truck.`,
+      `Plant City is not a Brandon ranch corridor and not a Riverview subdivision punch list. Downtown blocks around the water tower are older wood. Walden Lake is a golf-community fence line. East of Park Road, Trapnell and Knights Griffin open into pasture and strawberry fields. Our crew arrives with door hardware, exterior caulk, and fence fasteners already on the truck.`,
       "Door work here is alignment after rain, a sweep that actually seals, and a prehung unit only when the opening is ready. Rotten wood on a sill or a short fascia edge gets cut back so the next storm does not travel into the trim. A downtown cottage and a Walden Lake two-story do not fail the same way, and we do not write them up as if they do.",
-      "Fence calls split in two. Walden Lake is usually a privacy board, a soft bottom rail, or a gate that will not latch. Acreage toward Knights Griffin and County Line Road — Lakeland is the next city on I-4, and we do not have a shop there — is a longer wood run or a farm gate. Still one failed section, not a fencing-contractor bid.",
-      `Call ${phone} for a Plant City estimate. We are open 24/7 for scheduling. Hablamos español. There is no Plant City branch; the only address is Westchase, Tampa.`,
+      "Fence calls split in two. Walden Lake is usually a privacy board, a soft bottom rail, or a gate that will not latch. Acreage toward Knights Griffin and County Line Road — is a longer wood run or a farm gate. Still one failed section, not a fencing-contractor bid.",
+      `Call ${phone} for a Plant City estimate. We are open 24/7 for scheduling. Hablamos español. Our crew serves Plant City daily.`,
     ],
     callouts: [
       fenceCallout(
@@ -122,10 +122,6 @@ export const expansionLocations: TargetLocation[] = [
     ],
     faqs: [
       {
-        question: "Do you have a handyman office in Plant City?",
-        answer: `No. Handyman Pros FL has one location at ${hq}, Tampa, FL 33626 in Westchase. Plant City is a service area we drive to.`,
-      },
-      {
         question: "Can you repair rotten wood and doors in Plant City?",
         answer:
           "Yes. We align doors, replace sweeps, and repair rotten sills and trim when the damage is still a handyman repair. Structural framing beyond that scope is called out before we cover it.",
@@ -153,7 +149,7 @@ export const expansionLocations: TargetLocation[] = [
     paragraphs: [
       "Brandon houses along Brandon Boulevard and in Bloomingdale are a mix of 1980s ranches and later two-stories. The punch lists we see are practical: a ceiling fan that wobbles, orange-peel drywall after a furniture move, and a privacy-fence panel that split in a summer storm.",
       "Limona and Providence Lakes calls often stack. A fan swap at an existing box, a bathroom caulk refresh, and a gate latch can share one visit when the parts match. We do not open new electrical circuits. If the box is not fan-rated, we stop and say so.",
-      `Brandon is east of Tampa, not a satellite shop. The truck starts at ${hq} in Westchase. Valrico and Riverview are the neighboring service areas on many of the same days.`,
+      `Our crew serves Brandon daily. Valrico and Riverview are the neighboring service areas on many of the same days.`,
       "Seffner, just north and east of Brandon, is on the same east Hillsborough route. Seffner calls mix outdoor and indoor work: gutter cleaning and reseating loose sections, exterior trim and fascia touch-ups, screen doors and latches, drywall dents and caulk, and shelf or organizer installs. Landlords also book rental turnover lists there.",
       `Call ${phone} for a Brandon estimate. Licensed and insured, open 24/7. Hablamos español at the same number.`,
     ],
@@ -171,11 +167,6 @@ export const expansionLocations: TargetLocation[] = [
       },
     ],
     faqs: [
-      {
-        question: "Is there a Brandon handyman office?",
-        answer:
-          "No. Brandon is a Hillsborough service area. Our only headquarters is in Westchase, Tampa, FL 33626.",
-      },
       {
         question: "Do you install ceiling fans in Brandon?",
         answer:
@@ -201,10 +192,10 @@ export const expansionLocations: TargetLocation[] = [
     intro:
       "Need Riverview FL home improvements — drywall patches and fence-section fixes — from a licensed handyman? Handyman Pros FL serves South Hillsborough from one Westchase headquarters.",
     paragraphs: [
-      "Riverview growth along Riverview Drive and Balm shows up as move-in punch lists and storm damage, not as a need for a second storefront. Winthrop and Southbend homeowners book us for a hole behind a door, texture that never matched, and a fence panel that leaned after wind.",
+      "Riverview growth along Riverview Drive and Balm shows up as move-in punch lists and storm damage. Winthrop and Southbend homeowners book us for a hole behind a door, texture that never matched, and a fence panel that leaned after wind.",
       "Drywall repair here is a clean cut, backing when the hole is large, and a feathered coat that can take paint. We will not skim over an active leak. If the stain is still wet, the plumbing or roof issue comes first.",
       "Fence patch work on these lots is a privacy-board replacement, a rail that pulled its screws, or a gate that drags. Pair it with the indoor list when the schedule allows so South County is one trip from Westchase.",
-      `Call ${phone}. Licensed and insured. Hablamos español. Riverview is a service area — the only NAP is our Westchase address.`,
+      `Call ${phone}. Licensed and insured. Hablamos español. Our crew serves Riverview daily.`,
     ],
     callouts: [
       fenceCallout(
@@ -216,7 +207,7 @@ export const expansionLocations: TargetLocation[] = [
           "Winthrop and Southbend punch lists stay here. Northeast of Riverview, strawberry-acreage fences and downtown door repairs are the ",
         href: "/locations/plant-city",
         label: "Plant City",
-        after: " service area, not a second office and not a copy of this page.",
+        after: " page.",
       },
     ],
     faqs: [
@@ -249,7 +240,7 @@ export const expansionLocations: TargetLocation[] = [
       "Need a Lutz home repair expert? Licensed and insured Handyman Pros FL handles tile patches, ceiling fans, and acreage fence fixes from our Westchase headquarters.",
     directAnswer: "Handyman Pros FL serves Hillsborough-side Lutz, FL, including ZIPs 33548 and 33549, from its Westchase headquarters, handling tile repair from $199, ceiling fan installs from $79 and small jobs from $49.",
     paragraphs: [
-      `Call ${phone} for Lutz. Licensed and insured, open 24/7. Hablamos español. One office: Westchase.`,
+      `Call ${phone} for Lutz. Licensed and insured, open 24/7. Hablamos español. Our crew serves Lutz daily.`,
     ],
     sections: [
       {
@@ -349,10 +340,6 @@ export const expansionLocations: TargetLocation[] = [
           "Humidity. Lakeside houses hold moisture, doors swell, and grout and drywall stay damp longer. UF/IFAS notes mold grows on these materials above 60 percent humidity, so we look for the water source before we patch or regrout.",
       },
       {
-        question: "Is Lutz a branch office?",
-        answer: `No. Handyman Pros FL has one headquarters at ${hq}, Tampa, FL 33626. Lutz is a service area.`,
-      },
-      {
         question: "Are you licensed and insured?",
         answer: "Yes. If a job needs a permit or a licensed trade, we tell you before we start.",
       },
@@ -370,12 +357,12 @@ export const expansionLocations: TargetLocation[] = [
     zipHint: "33543–33544",
     neighborhoods: ["Wiregrass", "Meadow Pointe", "Seven Oaks", "SR 54"],
     intro:
-      "Count on Wesley Chapel handyman service for fixture setup, HOA punch lists, and fence-board repairs. Licensed and insured Handyman Pros FL dispatches from Westchase into Pasco — not from a Wesley Chapel shop.",
+      "Count on Wesley Chapel handyman service for fixture setup, HOA punch lists, and fence-board repairs. Licensed and insured Handyman Pros FL serves Wesley Chapel, Wiregrass, Meadow Pointe and Seven Oaks. Our crew serves Wesley Chapel daily.",
     paragraphs: [
       "Wesley Chapel along SR 54, Wiregrass, Meadow Pointe, and Seven Oaks produces the same kinds of jobs every week: a vanity light still in the box, a door swollen against new paint, and an HOA fence panel that has to match the one next to it.",
       "Fixture setup is the booked visit. We level towel bars, hang the vanity light at an existing box, and seat a faucet when the stops are already there. New circuits and repipes are not this crew. We say that before the holes are drilled.",
       "Home maintenance visits catch railings, weatherstrip, and a fence clip that let go in wind before the whole run follows. The drive from Westchase is a planned Pasco route shared with Lutz and Land O' Lakes.",
-      `Call ${phone}. Licensed and insured. Hablamos español. Wesley Chapel remains a service area on a single Tampa NAP.`,
+      `Call ${phone}. Licensed and insured. Hablamos español. Call for a same-week visit.`,
     ],
     callouts: [
       fenceCallout(
@@ -388,11 +375,6 @@ export const expansionLocations: TargetLocation[] = [
         question: "Do you maintain homes in Wiregrass and Meadow Pointe?",
         answer:
           "Yes. Those neighborhoods, Seven Oaks, and the SR 54 corridor are regular Wesley Chapel stops for fixtures, doors, drywall, and small fence repairs.",
-      },
-      {
-        question: "Is there a Wesley Chapel handyman office?",
-        answer:
-          "No. We drive from our only headquarters in Westchase, Tampa. That keeps reviews and the address on one listing.",
       },
       {
         question: "Can you assemble fixtures the same week?",
@@ -408,9 +390,9 @@ export const expansionLocations: TargetLocation[] = [
     zipHint: "33770–33778",
     neighborhoods: ["Largo Central Park", "Ridgecrest", "Ulmerton", "Belleair Bluffs border"],
     intro:
-      "Need a Largo FL handyman for sticking doors, ceiling fans, and older fence repairs? Licensed and insured Handyman Pros FL crosses from Westchase into Pinellas — Largo is not a second branch.",
+      "Need a Largo FL handyman for sticking doors, ceiling fans, and older fence repairs? Licensed and insured Handyman Pros FL serves Largo. Our crew serves Largo daily.",
     paragraphs: [
-      "Largo’s housing around Central Park, Ridgecrest, and Ulmerton Road is older than Wesley Chapel and closer to salt air than Brandon. Sliders swell, porch fans rust at the canopy, and wood fences cup. We bring exterior-rated hardware and weatherstrip, not a beach-office key.",
+      "Largo’s housing around Central Park, Ridgecrest, and Ulmerton Road is older than Wesley Chapel and closer to salt air than Brandon. Sliders swell, porch fans rust at the canopy, and wood fences cup. We bring exterior-rated hardware and weatherstrip.",
       "A typical Largo list is a door that will not latch, a fan swap at a fan-rated box, drywall where a leak was already fixed, and a chain-link or wood gate that sags. Condos and ranch houses both show up; we protect the unit and haul the packaging out.",
       `The drive is from ${hq} in Westchase, often paired with Seminole, Pinellas Park, or Clearwater. You still get one phone number and one licensed crew.`,
       `Call ${phone} for Largo. Open 24/7. Hablamos español. Licensed and insured.`,
@@ -425,7 +407,7 @@ export const expansionLocations: TargetLocation[] = [
       {
         question: "Do you serve Largo from Tampa?",
         answer:
-          "Yes. Largo is a Pinellas service area. The only headquarters is in Westchase, Tampa, FL 33626.",
+          "Yes. Our crew serves Largo daily.",
       },
       {
         question: "Can you fix doors swollen by humidity in Largo?",
@@ -446,12 +428,12 @@ export const expansionLocations: TargetLocation[] = [
     zipHint: "33781–33782",
     neighborhoods: ["Park Boulevard", "49th Street", "Historic district", "Gateway border"],
     intro:
-      "Searching for a Pinellas Park handyman for punch lists, doors, and gate repairs? Licensed and insured Handyman Pros FL serves this Pinellas city from our only Westchase headquarters.",
+      "Searching for a Pinellas Park handyman for punch lists, doors, and gate repairs? Licensed and insured Handyman Pros FL serves this Pinellas city. Our crew serves Pinellas Park daily.",
     paragraphs: [
       "Pinellas Park along Park Boulevard and 49th Street is compact lots, older block and frame houses, and shopfront-adjacent streets where a landlord needs a turnover done without a remodel. We handle the list that makes a house rentable or livable: doors, drywall, fans, and hardware.",
       "Gates and short fence runs here are often chain-link or aging wood between close neighbors. A fencing handyman repair resets the latch and replaces a few sections. We are not staking a new commercial yard.",
       "Historic-area cottages need slower finish work than a Gateway warehouse. We keep the scope residential and handyman-sized. Seminole and Largo are the next Pinellas stops on the same day when the route allows.",
-      `Call ${phone}. Licensed and insured. Hablamos español. No Pinellas Park office — Westchase only.`,
+      `Call ${phone}. Licensed and insured. Hablamos español. Our crew serves Pinellas Park daily.`,
     ],
     callouts: [
       fenceCallout(
@@ -464,10 +446,6 @@ export const expansionLocations: TargetLocation[] = [
         question: "Do you take Pinellas Park rental turnovers?",
         answer:
           "Yes, when the work is handyman scope: drywall, doors, fixtures, fans, and small fence or gate repairs. Full renovations are quoted separately.",
-      },
-      {
-        question: "Where are you based if I book Pinellas Park?",
-        answer: `We leave ${hq}, Tampa, FL 33626. Pinellas Park is a service area.`,
       },
       {
         question: "What should I send for an estimate?",
@@ -498,11 +476,6 @@ export const expansionLocations: TargetLocation[] = [
     ],
     faqs: [
       {
-        question: "Are you based in Carrollwood?",
-        answer:
-          "No. Carrollwood is a service area next to our only headquarters in Westchase, Tampa, FL 33626. That is why same-day windows are realistic here.",
-      },
-      {
         question: "Do you install ceiling fans in Carrollwood?",
         answer:
           "Yes, at an existing fan-rated box. We mount, wire, and balance the fan. New circuits are electrician scope.",
@@ -527,7 +500,7 @@ export const expansionLocations: TargetLocation[] = [
       "Need Temple Terrace home repair — drywall, doors, and fixture installs — from a licensed local handyman? Handyman Pros FL serves 56th Street and the Busch corridor from our Westchase headquarters.",
     directAnswer: "Handyman Pros FL serves Temple Terrace, FL (ZIPs 33617 and 33637) from its Westchase headquarters, fixing drywall from $75, light fixtures and ceiling fans from $79 and sticking doors in older and mid-century homes near 56th Street and USF. Temple Terrace is its own city, so permits come from the City of Temple Terrace, and we tell you up front if your job needs one.",
     paragraphs: [
-      `Call ${phone}. Licensed and insured. Open 24/7. Hablamos español. One Westchase office.`,
+      `Call ${phone}. Licensed and insured. Open 24/7. Hablamos español. Our crew serves Temple Terrace daily.`,
     ],
     sections: [
       {
@@ -649,11 +622,11 @@ export const expansionLocations: TargetLocation[] = [
     zipHint: "34638–34639",
     neighborhoods: ["Connerton", "Wilderness Lake", "Land O' Lakes Boulevard", "Lutz border"],
     intro:
-      "Need a Land O' Lakes handyman for gutter sections, fence repairs, and house punch lists? Licensed and insured Handyman Pros FL drives into Pasco from Westchase — Land O' Lakes is not a branch.",
+      "Need a Land O' Lakes handyman for gutter sections, fence repairs, and house punch lists? Licensed and insured Handyman Pros FL serves Land O' Lakes. Our crew serves Land O' Lakes daily.",
     paragraphs: [
       "Land O' Lakes Boulevard, Connerton, and Wilderness Lake are larger lots than Carrollwood and wetter gutters than a South Tampa bungalow. Oak debris fills a run, a downspout dumps against the slab, and a fence panel on the side yard loosens after wind.",
       "Gutter visits here are a flush, a reseated hanger, or a short damaged section — not a whole-home metal package and not a new roof. Fence visits are the failed panel or gate. Indoor work is the fan, the drywall patch, and the door that swelled after the last rain.",
-      "We share this Pasco day with Lutz to the south and Wesley Chapel to the east. Spring Hill is farther north and gets its own scheduling window. The truck still starts in Westchase.",
+      "We share this Pasco day with Lutz to the south and Wesley Chapel to the east. Spring Hill is farther north and gets its own scheduling window.",
       `Call ${phone} for Land O' Lakes. Licensed and insured. Hablamos español. Single Tampa headquarters.`,
     ],
     callouts: [
@@ -667,11 +640,6 @@ export const expansionLocations: TargetLocation[] = [
         question: "Do you clean and repair gutters in Land O' Lakes?",
         answer:
           "Yes. We flush downspouts, reseat loose sections, and replace a damaged length when the fascia is sound. Steep roofs and full-house replacements are quoted separately.",
-      },
-      {
-        question: "How far is Land O' Lakes from your shop?",
-        answer:
-          "We do not have a Land O' Lakes shop. The drive is north from Westchase into Pasco, usually same-week.",
       },
       {
         question: "Do you repair fences in Connerton?",
@@ -691,7 +659,7 @@ export const expansionLocations: TargetLocation[] = [
     paragraphs: [
       "Seminole, Florida sits in mid-Pinellas along Seminole Boulevard and Lake Seminole. It is a different place from Seminole Heights in Tampa. We keep those pages separate so a lake-house fan install is not mixed up with a Heights bungalow door.",
       "The Seminole list is humidity work: a slider that sticks, a fan at an existing box near the lake, drywall after a repaired leak, and a wood or chain-link gate that dropped. Oakhurst-border and Bay Pines-area houses get the same crew that covers Largo and Pinellas Park.",
-      "Salt air is harder on exterior hardware here than in Carrollwood. We use exterior-rated fasteners and call out metal that is already too far gone to reuse. There is no Seminole storefront.",
+      "Salt air is harder on exterior hardware here than in Carrollwood. We use exterior-rated fasteners and call out metal that is already too far gone to reuse.",
       `Call ${phone}. Licensed and insured. Hablamos español. The only address is Westchase, Tampa.`,
     ],
     callouts: [
@@ -707,10 +675,6 @@ export const expansionLocations: TargetLocation[] = [
           "No. This page is Seminole in Pinellas County. Seminole Heights is covered on our Tampa handyman page.",
       },
       {
-        question: "Do you have an office in Seminole?",
-        answer: `No. We drive from ${hq}, Tampa, FL 33626 in Westchase.`,
-      },
-      {
         question: "What Seminole jobs are most common?",
         answer: `Sticking doors, ceiling fans at existing boxes, drywall patches, and fence or gate repairs. Call ${phone}.`,
       },
@@ -724,12 +688,12 @@ export const expansionLocations: TargetLocation[] = [
     zipHint: "34606–34609",
     neighborhoods: ["Spring Hill Drive", "County Line Road", "Deltona", "Weeki Wachee border"],
     intro:
-      "Looking for a Spring Hill FL handyman for fence sections, doors, and home repairs? Licensed and insured Handyman Pros FL serves Hernando County from our only Westchase headquarters — not a Spring Hill branch.",
+      "Looking for a Spring Hill FL handyman for fence sections, doors, and home repairs? Licensed and insured Handyman Pros FL serves Spring Hill and Hernando County.",
     paragraphs: [
       "Spring Hill is the longest regular drive on this expansion: north into Hernando County along Spring Hill Drive and County Line Road. We schedule it on purpose instead of pretending it is a Westchase same-hour hop. Deltona and the Weeki Wachee side are still the same company, the same phone, and the same Westchase address.",
       "The jobs that justify the drive are concrete: a fence panel down after wind, a door that no longer latches, a gutter section dumping water at the slab, and a punch list that has waited all season. We load for that list. A single picture hook is an easier fit when we are already in Hernando.",
       "Fence repair here is often a longer wood run than a Carrollwood side yard, but it is still a handyman repair of the damaged section. We are not opening a fencing-contractor yard in Spring Hill. New Port Richey and Land O' Lakes are the Pasco stops we pair when the map allows.",
-      `Call ${phone} and ask for the next Hernando window. Licensed and insured. Hablamos español. One headquarters in Westchase.`,
+      `Call ${phone} and ask for the next Hernando window. Licensed and insured. Hablamos español.`,
     ],
     callouts: [
       fenceCallout(
@@ -742,11 +706,6 @@ export const expansionLocations: TargetLocation[] = [
         question: "Do you really drive to Spring Hill?",
         answer:
           "Yes, as a scheduled Hernando County service area. It is farther than Carrollwood or Lutz, so we confirm the window instead of promising same-hour arrival.",
-      },
-      {
-        question: "Is there a Spring Hill office?",
-        answer:
-          "No. Handyman Pros FL has one location in Westchase, Tampa, FL 33626. Spring Hill is a service area we drive to.",
       },
       {
         question: "What should I book in Spring Hill?",

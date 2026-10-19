@@ -29,6 +29,8 @@ const areaLinks = [
     href: `/locations/${location.slug}`,
     label: `Handyman ${location.city} FL`,
   })),
+  { href: "/locations/zephyrhills-fl", label: "Handyman Zephyrhills FL" },
+  { href: "/locations/odessa-fl", label: "Handyman Odessa FL" },
   { href: "/locations", label: "All Tampa Bay locations" },
   { href: "/service-areas", label: "All Service Areas" },
 ];
