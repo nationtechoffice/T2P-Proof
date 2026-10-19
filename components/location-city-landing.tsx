@@ -361,6 +361,13 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                 authorityHubLinks.clearwater,
                 authorityHubLinks.stPete,
                 authorityHubLinks.locations,
+                ...(location.slug === "tampa"
+                  ? [{ href: "/locations/south-tampa", label: "Handyman in South Tampa" }]
+                  : location.slug === "palm-harbor-fl"
+                    ? [{ href: "/locations/palm-harbor-fl/drywall-repair", label: "Drywall repair in Palm Harbor" }]
+                    : location.slug === "wesley-chapel"
+                      ? [{ href: "/locations/wesley-chapel/drywall-repair", label: "Drywall repair in Wesley Chapel" }]
+                      : []),
               ].filter(
                 (link, index, list) =>
                   link.href !== `/locations/${location.slug}` &&
