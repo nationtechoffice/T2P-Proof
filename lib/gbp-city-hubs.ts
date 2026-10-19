@@ -459,7 +459,7 @@ export const gbpCityHubs: TargetLocation[] = [
     paragraphs: [
       "New Port Richey mixes a small downtown around Sims Park and Main Street with canal homes in Gulf Harbors and older neighborhoods such as Jasmine Estates. Salt air and afternoon rain show up as gutters that overflow, gates that drop, and doors that swell.",
       "We reseat gutter sections, patch fence boards, and adjust doors when the frame is still sound. Canal-front houses get the same scope as inland ones. We are not a marine contractor, and we do not rebuild seawalls.",
-      "Holiday is the neighbor to the south along US-19. Tarpon Springs is farther south in Pinellas. Spring Hill is north. All of those drives start in Westchase.",
+      "Holiday is the neighbor to the south along US-19. Tarpon Springs is farther south in Pinellas. Spring Hill is north. Our local crew serves all of them.",
       `Call ${phone}. Licensed and insured. Hablamos español. Send a photo if the gutter or fence damage is easier to see than describe.`,
     ],
     callouts: [

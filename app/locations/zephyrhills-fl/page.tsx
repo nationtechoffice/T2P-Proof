@@ -56,7 +56,7 @@ const brief: CityBrief = {
   breadcrumb: "Zephyrhills, FL",
   h1: "Handyman in Zephyrhills, FL",
   opening:
-    "Handyman Pros FL is a licensed and insured handyman company from Tampa that books Zephyrhills jobs into set east-Pasco days for repairs like TV mounting, drywall patches, ceiling fans and furniture assembly. Small jobs start at $49, and estimates are free. Call (656) 205-3185.",
+    "Handyman Pros FL is a licensed and insured handyman company from Tampa that books Zephyrhills jobs into set east-Pasco days for repairs like TV mounting, drywall patches, ceiling fans and furniture assembly. Small jobs start at $49, and estimates are free. Call (656) 205-3185. Our local crew serves Zephyrhills.",
   priceParagraph: `${priceSentences.join(" ")} Free estimates on all jobs.`,
   faqTitle: "Handyman in Zephyrhills FAQ",
   ctaTitle: "Get a free Zephyrhills estimate",

@@ -401,7 +401,7 @@ export const expansionLocations: TargetLocation[] = [
     paragraphs: [
       "Largo’s housing around Central Park, Ridgecrest, and Ulmerton Road is older than Wesley Chapel and closer to salt air than Brandon. Sliders swell, porch fans rust at the canopy, and wood fences cup. We bring exterior-rated hardware and weatherstrip.",
       "A typical Largo list is a door that will not latch, a fan swap at a fan-rated box, drywall where a leak was already fixed, and a chain-link or wood gate that sags. Condos and ranch houses both show up; we protect the unit and haul the packaging out.",
-      `The drive is from ${hq} in Westchase, often paired with Seminole, Pinellas Park, or Clearwater. You still get one phone number and one licensed crew.`,
+      `Our local crew serves Largo, often paired with Seminole, Pinellas Park, or Clearwater. You still get one phone number and one licensed crew.`,
       `Call ${phone} for Largo. Open 24/7. Hablamos español. Licensed and insured.`,
     ],
     callouts: [
@@ -704,7 +704,7 @@ export const expansionLocations: TargetLocation[] = [
     intro:
       "Looking for a Spring Hill FL handyman for fence sections, doors, and home repairs? Licensed and insured Handyman Pros FL serves Spring Hill and Hernando County.",
     paragraphs: [
-      "Spring Hill is the longest regular drive on this expansion: north into Hernando County along Spring Hill Drive and County Line Road. We schedule it on purpose instead of pretending it is a Westchase same-hour hop. Deltona and the Weeki Wachee side are still the same company, the same phone, and the same Westchase address.",
+      "Spring Hill is the longest regular drive on this expansion: north into Hernando County along Spring Hill Drive and County Line Road. We schedule it on purpose, and our local crew serves Spring Hill. Deltona and the Weeki Wachee side are still the same company and the same phone, and our local crew serves Spring Hill there too.",
       "The jobs that justify the drive are concrete: a fence panel down after wind, a door that no longer latches, a gutter section dumping water at the slab, and a punch list that has waited all season. We load for that list. A single picture hook is an easier fit when we are already in Hernando.",
       "Fence repair here is often a longer wood run than a Carrollwood side yard, but it is still a handyman repair of the damaged section. We are not opening a fencing-contractor yard in Spring Hill. New Port Richey and Land O' Lakes are the Pasco stops we pair when the map allows.",
       `Call ${phone} and ask for the next Hernando window. Licensed and insured. Hablamos español.`,

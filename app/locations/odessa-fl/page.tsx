@@ -7,14 +7,14 @@ const path = "/locations/odessa-fl";
 export const metadata: Metadata = buildMetadata({
   title: "Handyman in Odessa, FL 33556 | Drywall, Painting, TVs",
   description:
-    "Licensed & insured Odessa handyman, 25 min from our Westchase base. Drywall patch from $75, furniture assembly from $65. Free estimates. (656) 205-3185.",
+    "Licensed & insured Odessa handyman. Our local crew serves Odessa. Drywall patch from $75, furniture assembly from $65. Free estimates. (656) 205-3185.",
   path,
   keywords: ["handyman odessa", "odessa handyman services", "Odessa FL handyman", "handyman 33556", "handyman near Starkey Ranch", "drywall repair odessa", "furniture assembly odessa", "interior painting odessa", "exterior painting odessa", "manitas en Odessa"],
   exactTitle: true,
 });
 
 const faqs = [
-  { question: "Do you serve Odessa, FL?", answer: "Yes. Handyman Pros FL is based in Westchase, about 25 minutes from Odessa, and serves Starkey Ranch and the SR 54 corridor. Call (656) 205-3185." },
+  { question: "Do you serve Odessa, FL?", answer: "Yes. Our local crew serves Odessa, including Starkey Ranch and the SR 54 corridor. Call (656) 205-3185." },
   { question: "How much does a handyman cost in Odessa?", answer: "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair at $199. A same-day service call starts at $99." },
   { question: "How much does painting cost in Odessa?", answer: "Painting is quoted after a free estimate because room size, wall condition and paint choice change the price. Call (656) 205-3185 to set it up." },
   { question: "Are estimates free?", answer: "Yes. Free estimates on all jobs." },
@@ -50,7 +50,7 @@ const brief: CityBrief = {
   breadcrumb: "Odessa, FL",
   h1: "Handyman in Odessa, FL",
   opening:
-    "Handyman Pros FL is a licensed and insured handyman company based in Westchase, about 25 minutes from Odessa, handling drywall patches, painting, furniture assembly and TV mounting in Starkey Ranch and along SR 54. A drywall patch starts at $75, furniture assembly at $65, and estimates are free. Call (656) 205-3185.",
+    "Handyman Pros FL is a licensed and insured handyman company whose local crew serves Odessa, handling drywall patches, painting, furniture assembly and TV mounting in Starkey Ranch and along SR 54. A drywall patch starts at $75, furniture assembly at $65, and estimates are free. Call (656) 205-3185.",
   priceParagraph:
     "Small jobs like shelves and curtain rods start at $49. Furniture assembly starts at $65. A drywall patch starts at $75. A ceiling fan or light fixture install starts at $79. TV mounting starts at $89. A same-day service call starts at $99. Tile repair starts at $199. Painting is quoted after a free estimate. Free estimates on all jobs.",
   faqTitle: "Handyman in Odessa FAQ",
