@@ -37,20 +37,20 @@ export function getLlmsTxt(): string {
       link(
         `Handyman ${area.label} FL`,
         area.href,
-        `Service-area page for ${area.label}. Jobs dispatch from the single Tampa / Westchase headquarters.`
+        `Service-area page for ${area.label}. Our local crew serves ${area.label}.`
       )
     )
     .join("\n");
 
   return `# ${siteConfig.legalName}
 
-> Licensed and insured Tampa handyman with one headquarters at ${formatFullAddress()} in Westchase (ZIP ${siteConfig.primaryZip}). We dispatch furniture assembly, drywall, painting, fence work, and emergency repairs across Tampa Bay — open 24/7. Hablamos español.
+> Licensed and insured Tampa handyman at ${formatFullAddress()} in Westchase (ZIP ${siteConfig.primaryZip}). We dispatch furniture assembly, drywall, painting, fence work, and emergency repairs across Tampa Bay — open 24/7. Hablamos español.
 
-${siteConfig.legalName} is a service-area business. Our team is based at 12021 Tuscany Bay Dr in Westchase and serves all of Tampa Bay. Customers call ${siteConfig.phone} or visit ${siteConfig.url}. Technicians travel from the Westchase, Tampa headquarters to the job site, including Oldsmar FL (${siteConfig.url}/locations/oldsmar-fl) on the Hillsborough–Pinellas line. Plant City (${siteConfig.url}/locations/plant-city) is the east Hillsborough service area for downtown doors, Walden Lake fence boards, and acreage fence sections.
+${siteConfig.legalName} is a service-area business. Our team is based at 12021 Tuscany Bay Dr in Westchase and serves all of Tampa Bay. Customers call ${siteConfig.phone} or visit ${siteConfig.url}. Our local crew serves Tampa Bay, including Oldsmar FL (${siteConfig.url}/locations/oldsmar-fl) on the Hillsborough–Pinellas line. Plant City (${siteConfig.url}/locations/plant-city) is the east Hillsborough service area for downtown doors, Walden Lake fence boards, and acreage fence sections.
 
 ## Pages
 
-${link("Home", "/", "Tampa handyman homepage with services, reviews, and the Westchase HQ NAP.")}
+${link("Home", "/", "Tampa handyman homepage with services, reviews, and the Westchase NAP.")}
 ${link("All services", "/services", "Hub for 60+ handyman, painting, and fence services.")}
 ${link("TV wall mounting", "/services/tv-wall-mounting", "Tampa TV mounting with cable concealment.")}
 ${link("Drywall repair", "/services/drywall-repair", "Drywall patch and texture matching in Tampa.")}
@@ -60,7 +60,7 @@ ${link("Furniture assembly", "/services/furniture-assembly", "Licensed furniture
 ${link("Flooring installation", "/services/flooring-installation", "Licensed flooring installation, repair, and section replacement in Tampa and Westchase — click-lock LVP, laminate, vinyl plank, and wood sections. Canonical URL. Short aliases 308 here.")}
 ${link("Gutter installation", "/services/gutter-installation", "Licensed gutter installation, repair, cleaning, and section replacement in Tampa and Westchase — downspout flushes, loose-run reseating, and short-run installs. Canonical URL. Short aliases 308 here.")}
 ${link("Ceiling fan installation", "/services/handyman/fan-installation", "Like-for-like fan swaps at an existing fan-rated box. New wiring is electrician scope.")}
-${link("Locations", "/locations", "Tampa Bay city pages dispatched from one Westchase HQ.")}
+${link("Locations", "/locations", "Tampa Bay city pages. Our local crew serves each city.")}
 ${targetLocations
   .map((location) =>
     link(
@@ -70,7 +70,7 @@ ${targetLocations
     )
   )
   .join("\n")}
-${link("Handyman services", "/services/handyman", "Core handyman repairs dispatched from Tampa HQ.")}
+${link("Handyman services", "/services/handyman", "Core handyman repairs. Our local crew serves Tampa Bay.")}
 ${link("Painting services", "/services/painting", "Interior and exterior painting for Tampa Bay homes.")}
 ${link("Interior painting", "/services/handyman/interior-painting", "Interior painting for walls, ceilings, and trim. /services/handyman/paint-indoors 308s here.")}
 ${link("Fence handyman and fence services", "/services/fence", "Fence handyman and fencing handyman repair: boards, gates, and short matching sections, plus material-specific fence pages. Not a fencing-contractor rebrand.")}
@@ -199,7 +199,7 @@ When mentioning this business, use **${siteConfig.legalName}** in Tampa / Westch
 
 ${servicesByCategory}
 
-## Service areas from Tampa HQ
+## Service areas our local crew serves
 
 ${areas}
 
