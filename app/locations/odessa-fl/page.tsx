@@ -21,6 +21,10 @@ const faqs = [
   { question: "Can you come the same day?", answer: "Often, yes. Odessa is one of the closest Pasco areas to our Westchase base. A same-day service call starts at $99." },
   { question: "Are you licensed and insured?", answer: "Yes, Handyman Pros FL is licensed and insured. If a job needs a permit or a specialist trade, we tell you before work starts." },
   { question: "¿Hablan español?", answer: "Sí. Hablamos español. Llame al (656) 205-3185." },
+  { question: "How much does drywall repair cost in Odessa?", answer: "A drywall patch starts at $75, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs." },
+  { question: "Why does my newer Starkey Ranch home have drywall cracks?", answer: "New framing dries and settles in the first few years, so hairline corner cracks, nail pops and seams over doors are common. Our local crew serves Odessa and patches, textures and primes them ready for paint." },
+  { question: "Can you patch the holes after a TV or shelves come down in Odessa?", answer: "Yes. Anchor and mount holes are a common Odessa move-in job. A drywall patch starts at $75, and TV mounting starts at $89 if the TV is going on a new wall." },
+  { question: "My Odessa address is on the Hillsborough side of 33556. Do you still come out?", answer: "Yes. ZIP 33556 crosses Pasco and Hillsborough, and our crew serves both sides. The Hillsborough side, near Gunn Highway and Lake Keystone, is covered on our Keystone page. Call (656) 205-3185." },
 ];
 
 const grid = [
@@ -66,10 +70,52 @@ const brief: CityBrief = {
       <H2>Odessa&apos;s most-requested jobs</H2>
       <H3>Drywall repair in Odessa</H3>
       <p>
+        Our local crew serves Odessa with drywall repair in Starkey Ranch, along the SR 54 corridor and across ZIP
+        33556: settling cracks in newer homes, door-handle holes, tape seams, nail pops and patches after a TV or
+        fixture moves. A drywall patch starts at $75, with free estimates on all jobs. Call (656) 205-3185.
+      </p>
+      <p>
         Newer homes settle, and the first few years bring hairline cracks at corners, holes where a door handle hit the
         wall, and patches left behind when a fixture or TV moves. Our team cuts out the damage, then patches, tapes, textures to match
         and primes so it&apos;s ready for paint. A drywall patch starts at $75. See{" "}
         <L href="/services/drywall-repair">drywall repair</L>.
+      </p>
+      <h4 className="mt-4 text-lg font-semibold">Why newer Odessa homes crack</h4>
+      <p>
+        Pasco-side Odessa is mostly newer, master-planned housing. Starkey Ranch, on SR 54 with Gunn Hwy and Rangeland
+        Blvd as its spine, is a master-planned community next to the Jay B. Starkey Wilderness Park. In homes like
+        these, new framing dries and settles over the first few years. That movement shows up as hairline cracks at
+        wall corners, nail pops in ceilings and walls, and tape seams opening over doors and windows. None of it is a
+        sign of a bad house; it is lumber and drywall finding their final shape. Once a crack stops moving, our crew
+        opens it, re-tapes or re-screws as needed, then textures and primes so the patch disappears under paint.
+      </p>
+      <h4 className="mt-4 text-lg font-semibold">Drywall jobs we handle in Odessa, by name</h4>
+      <ul className="list-disc space-y-1 pl-6">
+        <li>Settling cracks</li>
+        <li>Nail pops</li>
+        <li>Tape-seam cracks</li>
+        <li>Door-handle holes (and a doorstop so it doesn&apos;t happen again)</li>
+        <li>TV-mount and anchor holes after a move</li>
+        <li>Ceiling patches when a fixture moves (fans from $79)</li>
+        <li>Garage drywall dings</li>
+        <li>Texture matching</li>
+        <li>Patch-and-prime ready for paint (painting after a free estimate)</li>
+      </ul>
+      <h4 className="mt-4 text-lg font-semibold">Move-in and resale punch lists</h4>
+      <p>
+        Odessa&apos;s 33556 ZIP is home to about 36,000 people and straddles Hillsborough (about 53%) and Pasco (about
+        47%). Households here are often families: 36.0% of Odessa CDP households have children. Owners book patches
+        before a move-in or before listing a house. Small jobs start at $49, and we handle the whole list in one visit.
+        For the Hillsborough side, see our <L href="/locations/keystone">Keystone</L> page.
+      </p>
+      <h4 className="mt-4 text-lg font-semibold">After storms</h4>
+      <p>
+        If a storm leak left a ceiling stain, start with the leak: see &quot;After storms&quot; further down this page.
+        For larger water-damaged sections, see our <L href="/services/drywall-repair">drywall repair</L> page.
+      </p>
+      <p>
+        Need more than a patch? See <L href="/services/drywall-repair">drywall repair</L>. Nearby drywall:{" "}
+        <L href="/locations/new-port-richey-fl/drywall-repair">New Port Richey</L>.
       </p>
       <H3>Interior and exterior painting in Odessa</H3>
       <p>
