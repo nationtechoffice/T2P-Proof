@@ -22,7 +22,7 @@ export const gbpCityHubs: TargetLocation[] = [
     directAnswer: `Handyman Pros Florida serves Clearwater with handyman repairs for sliding doors, drywall patches, TV mounts, and fixture swaps. Our crew serves Clearwater daily, including Clearwater Beach, Island Estates, Coachman, and Countryside. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     showStartingPrices: true,
     paragraphs: [
-      "Handyman Pros FL is a licensed, insured handyman crew that serves Clearwater, FL from its single Westchase headquarters in Tampa, with 24/7 phone estimates and Spanish-speaking staff.",
+      "Handyman Pros FL is a licensed, insured handyman crew that serves Clearwater, FL, with 24/7 phone estimates and Spanish-speaking staff.",
       "Handyman jobs in Clearwater start at $49 for small jobs like shelves and curtain rods, $89 for TV mounting, and $75 for a drywall patch. Furniture assembly starts at $65, ceiling fan or light fixture installs start at $79, and tile repair or regrout starts at $199.",
       "Clearwater splits into two kinds of houses. Clearwater Beach and Island Estates are condos and low-rise buildings where salt air swells sliding doors and balcony hardware. Coachman and Countryside are mainland neighborhoods of single-family homes with the usual Florida stucco, lanais, and interior drywall.",
       "Beach visits are often a slider that will not lock, a drywall scar inside a rental, or a TV that has to sit level on a concrete or block wall. Mainland lists add ceiling fans at an existing box, fixture swaps, and a punch list before guests arrive. We do not run new circuits or open walls for new wiring.",
