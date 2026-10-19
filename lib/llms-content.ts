@@ -75,7 +75,7 @@ ${link("Painting services", "/services/painting", "Interior and exterior paintin
 ${link("Interior painting", "/services/handyman/interior-painting", "Interior painting for walls, ceilings, and trim. /services/handyman/paint-indoors 308s here.")}
 ${link("Fence handyman and fence services", "/services/fence", "Fence handyman and fencing handyman repair: boards, gates, and short matching sections, plus material-specific fence pages. Not a fencing-contractor rebrand.")}
 ${link("Service areas", "/service-areas", "Cities our local crew serves daily.")}
-${link("About", "/about", "Company story, one-location model, and Westchase address.")}
+${link("About", "/about", "Company story, local crew, and Westchase address.")}
 ${link("Contact", "/contact", "Call, email, or request a free estimate.")}
 
 ## Service areas
