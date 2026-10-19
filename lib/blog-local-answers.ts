@@ -209,7 +209,7 @@ Call ${siteConfig.phone} before the next rain set swells it shut.`,
     description:
       "Tampa TV wall mounting prices in 2026: $99 specialists vs $305 Angi averages, fireplace extras, and what Handyman Pros FL includes.",
     excerpt:
-      "Local TV specialists advertise $99–$159. Angi lists $305–$405. Here is what actually changes the Tampa price.",
+      "What changes the price of TV mounting in Tampa, and what Handyman Pros FL includes, starting at $89.",
     author: "Handyman Pros Florida Team",
     publishedAt: "2026-09-01",
     updatedAt: "2026-09-01",
