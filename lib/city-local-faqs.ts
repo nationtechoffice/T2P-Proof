@@ -9,16 +9,12 @@ export const cityLocalFaqs: Record<string, { question: string; answer: string }[
     { question: "Do you help landlords turn over Wesley Chapel rentals?", answer: "Yes. Between tenants we patch walls, fix doors, swap fixtures and assemble furniture in one visit. Small jobs start at $49, and estimates are free." },
   ],
   "land-o-lakes": [
-    { question: "Which Land O' Lakes areas do you cover?", answer: "Our crew serves Land O' Lakes in Pasco County, including Connerton, Bexley, Ballantrae and the homes along State Road 54 and US 41, ZIP codes 34637, 34638 and 34639." },
-    { question: "Do you work on lakefront homes in Land O' Lakes?", answer: "Yes. We handle dock-side fences, screen repairs, outdoor fixtures and humidity-related door and trim fixes common on lakefront homes. Call (656) 205-3185 for a free estimate." },
     { question: "Do you work for HOAs and property managers in Land O' Lakes?", answer: "Yes. Our local crew serves Land O' Lakes homeowners, HOAs and property managers, including punch lists for common areas and rentals. Tell us the community's rules on hours and access, and we work to them." },
     { question: "Can you turn over a Land O' Lakes rental between tenants?", answer: "Yes. One visit can cover wall patches, door and hardware fixes, fixture swaps and furniture assembly. Small jobs start at $49, a drywall patch at $75, and estimates are free." },
     { question: "Do I need HOA approval before exterior work in Land O' Lakes?", answer: "Many Land O' Lakes communities, like Connerton, have HOA rules on exterior changes such as fences, paint colors and fixtures. Get approval first, and we'll work to the approved plan. Free estimates on all jobs." },
     { question: "Can you come the same day in Land O' Lakes?", answer: "Often, yes. Our local crew serves Land O' Lakes and often has same-day openings. A same-day service call starts at $99." },
   ],
   "st-petersburg": [
-    { question: "Do you work on older St. Petersburg homes in Old Northeast and Kenwood?", answer: "Yes. Our crew regularly repairs doors, trim, drywall and fixtures in older St. Petersburg homes, including Old Northeast, Kenwood, Crescent Lake and Snell Isle." },
-    { question: "Which St. Petersburg ZIP codes do you serve?", answer: "We serve St. Petersburg in Pinellas County, including 33701, 33702, 33703, 33704, 33705, 33710, 33713 and 33716. Free estimates on all jobs." },
     { question: "Which St. Petersburg ZIP codes do you cover?", answer: "Our local crew serves St. Petersburg across ZIPs 33701 to 33716, including Downtown, Old Northeast, Snell Isle, Kenwood, Grand Central, Shore Acres and Tyrone. Call (656) 205-3185." },
     { question: "How much does a handyman cost in St. Petersburg?", answer: "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89 and tile work at $199. A same-day service call starts at $99. Painting is quoted after a free estimate." },
     { question: "Do repairs on a historic St. Pete home need city approval?", answer: "In a local historic district, St. Petersburg's Certificate of Appropriateness covers exterior work such as door and window repairs. Interior work isn't an exterior change. Check with the city's Historic Preservation office before exterior jobs." },
@@ -47,8 +43,6 @@ export const cityLocalFaqs: Record<string, { question: string; answer: string }[
     { question: "Are estimates free in Largo?", answer: "Yes. Free estimates on all jobs. Call (656) 205-3185." },
   ],
   "new-port-richey-fl": [
-    { question: "Which New Port Richey areas do you cover?", answer: "Our crew serves New Port Richey in Pasco County, including downtown near Sims Park, Gulf Harbors and Trinity-area homes, ZIP codes 34652, 34653, 34654 and 34655." },
-    { question: "Do you repair coastal-weather wear on New Port Richey homes?", answer: "Yes. We fix salt-air rust on fixtures, swollen doors, screen damage and exterior trim on New Port Richey homes near the Gulf. Call (656) 205-3185 for a free estimate." },
     { question: "Which New Port Richey ZIP codes do you cover?", answer: "Our local crew serves New Port Richey across ZIPs 34652 to 34656, including downtown near Sims Park, Gulf Harbors and Jasmine Estates. Call (656) 205-3185." },
     { question: "How much does a handyman cost in New Port Richey?", answer: "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89 and tile work at $199. A same-day service call starts at $99. Painting is quoted after a free estimate." },
     { question: "Can you help after a storm in New Port Richey?", answer: "Yes. Our crew handles leak patch and tarping, gutter sections, fence panels and drywall replacement once things dry out. Hurricane season runs June 1 to Nov 30. Free estimates on all jobs." },
