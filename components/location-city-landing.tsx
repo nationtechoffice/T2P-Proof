@@ -29,6 +29,10 @@ import { ContentSections } from "@/components/content-sections";
 import { cityLocalCopy } from "@/lib/city-local-copy";
 import { cityLocalFaqs } from "@/lib/city-local-faqs";
 
+
+/** Step 12a: per-city crew wording (Brandon, Riverview, Land O' Lakes only). */
+const CREW_OVERRIDE_CITIES = new Set(["brandon", "riverview", "land-o-lakes"]);
+
 export function LocationCityLanding({ location }: { location: TargetLocation }) {
   const pageUrl = `${siteConfig.url}/locations/${location.slug}`;
   const nearby = nearbyLocationLinks(location.slug);
@@ -213,7 +217,9 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                       </Link>
                     </span>
                   ))}
-                  . Those pages are service areas from the same Westchase headquarters.
+                  {CREW_OVERRIDE_CITIES.has(location.slug)
+                    ? ". Our local crew serves those cities too."
+                    : ". Those pages are service areas from the same Westchase headquarters."}
                 </p>
               ) : null}
             </div>
@@ -307,7 +313,9 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
             </ul>
             <h2 className="mt-10 mb-3 text-2xl font-bold">{location.city} neighborhoods we visit</h2>
             <p className="mb-3 text-sm text-[hsl(var(--muted-foreground))]">
-              Dispatched from our only Tampa / Westchase headquarters.
+              {CREW_OVERRIDE_CITIES.has(location.slug)
+                ? `Our local crew serves ${location.city}.`
+                : "Dispatched from our only Tampa / Westchase headquarters."}
             </p>
             <ul className="flex flex-wrap gap-2 text-sm">
               {location.neighborhoods.map((item) => {

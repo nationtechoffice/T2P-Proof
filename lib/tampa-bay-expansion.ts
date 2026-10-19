@@ -144,7 +144,7 @@ export const expansionLocations: TargetLocation[] = [
     zipHint: "33510–33511",
     neighborhoods: ["Bloomingdale", "Limona", "Providence Lakes", "Brandon Boulevard", "Seffner"],
     intro:
-      "Looking for a Brandon FL handyman for drywall, ceiling fans, and fence-section repairs? Licensed and insured Handyman Pros FL serves Bloomingdale, Limona, and Providence Lakes from our Westchase headquarters.",
+      "Looking for a Brandon FL handyman for drywall, ceiling fans, and fence-section repairs? Licensed and insured Handyman Pros FL serves Bloomingdale, Limona, and Providence Lakes.",
     paragraphs: [
       "Brandon houses along Brandon Boulevard and in Bloomingdale are a mix of 1980s ranches and later two-stories. The punch lists we see are practical: a ceiling fan that wobbles, orange-peel drywall after a furniture move, and a privacy-fence panel that split in a summer storm.",
       "Limona and Providence Lakes calls often stack. A fan swap at an existing box, a bathroom caulk refresh, and a gate latch can share one visit when the parts match. We do not open new electrical circuits. If the box is not fan-rated, we stop and say so.",
@@ -162,7 +162,7 @@ export const expansionLocations: TargetLocation[] = [
           "Bloomingdale and Providence Lakes stay on this page. When the east Hillsborough day reaches older wood houses and longer fence lines, that work is the ",
         href: "/locations/plant-city",
         label: "Plant City handyman hub",
-        after: " — downtown doors, Walden Lake boards, and acreage sections — from the same Westchase crew.",
+        after: " — downtown doors, Walden Lake boards, and acreage sections — from our local crew.",
       },
     ],
     faqs: [

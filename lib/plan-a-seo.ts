@@ -166,7 +166,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/land-o-lakes": {
     title: "Handyman Land O' Lakes FL | Home Repairs | Handyman Pros FL",
-    description: "Licensed & insured Land O' Lakes handyman for gutter sections, fence repairs, and punch lists. Dispatched from Westchase. Call (656) 205-3185.",
+    description: "Licensed & insured Land O' Lakes handyman for gutter sections, fence repairs, and punch lists. Our local crew serves Land O' Lakes. Call (656) 205-3185.",
   },
   "/locations/seminole": {
     title: "Handyman Seminole FL | Home Repairs | Handyman Pros FL",
