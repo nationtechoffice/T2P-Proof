@@ -162,7 +162,7 @@ export function Footer() {
         <div className="mt-12 border-t border-gray-700 pt-8 text-center text-sm">
           <p>&copy; {currentYear} {siteConfig.legalName}. All rights reserved.</p>
           <p className="mt-2 text-xs text-gray-500">
-            {siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip} | Licensed &amp; Insured | <span lang="es">Hablamos español</span> | Open 24/7 | Single Tampa location
+            {siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip} | Licensed &amp; Insured | <span lang="es">Hablamos español</span> | Open 24/7 | Our local crew serves Tampa Bay
           </p>
         </div>
       </div>
