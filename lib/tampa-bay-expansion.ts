@@ -377,7 +377,8 @@ export const expansionLocations: TargetLocation[] = [
     callouts: [
       fenceCallout(
         "Wesley Chapel",
-        "Wiregrass and Meadow Pointe HOA fences usually fail as one vinyl or wood panel plus a gate that dropped."
+        "Wiregrass and Meadow Pointe HOA fences usually fail as one vinyl or wood panel plus a gate that dropped.",
+        true
       ),
     ],
     faqs: [
@@ -484,7 +485,8 @@ export const expansionLocations: TargetLocation[] = [
     callouts: [
       fenceCallout(
         "Carrollwood",
-        "Northdale and Carrollwood Village gates drag after humidity; a few privacy boards usually go with that latch adjustment."
+        "Northdale and Carrollwood Village gates drag after humidity; a few privacy boards usually go with that latch adjustment.",
+        true
       ),
     ],
     faqs: [
