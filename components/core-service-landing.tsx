@@ -206,7 +206,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
             {moneyNeighborhoodSpots[service.slug] ? (
               <NeighborhoodBlocks
                 title="Hyde Park, Seminole Heights, New Tampa, and Carrollwood"
-                intro={`How ${service.name.toLowerCase()} actually shows up in these Tampa neighborhoods. Each link is a service area from Westchase, not another office.`}
+                intro={`How ${service.name.toLowerCase()} actually shows up in these Tampa neighborhoods. Each link is a service area our local crew serves.`}
                 spots={moneyNeighborhoodSpots[service.slug]}
               />
             ) : null}

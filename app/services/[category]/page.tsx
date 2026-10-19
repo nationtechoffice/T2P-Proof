@@ -235,7 +235,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               {moneyNeighborhoodSpots["fence-handyman"] ? (
                 <NeighborhoodBlocks
                   title="Fence repair in Hyde Park, Seminole Heights, and New Tampa"
-                  intro="How fence handyman work shows up in these Tampa neighborhoods. Each link is a service area from Westchase, not another office."
+                  intro="How fence handyman work shows up in these Tampa neighborhoods. Each link is a service area our local crew serves."
                   spots={moneyNeighborhoodSpots["fence-handyman"]}
                 />
               ) : null}
