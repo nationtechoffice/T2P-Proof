@@ -128,6 +128,16 @@ export function serviceCatalogSchema() {
     "@id": `${siteConfig.url}/#organization`,
     name: "Handyman Pros FL",
     url: schemaUrl,
+    telephone: schemaPhone,
+    address: {
+      "@type": "PostalAddress",
+      name: "Handyman Pros FL Tampa Headquarters",
+      streetAddress: siteConfig.address.street,
+      addressLocality: siteConfig.address.city,
+      addressRegion: siteConfig.address.state,
+      postalCode: siteConfig.address.zip,
+      addressCountry: siteConfig.address.country,
+    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Tampa Bay Home Services",
