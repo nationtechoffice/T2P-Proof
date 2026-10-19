@@ -142,6 +142,8 @@ export default function ServicesPage() {
                           ? "/services/furniture-assembly"
                           : cat === "handyman" && service.slug === "drywall-repair"
                             ? "/services/drywall-repair"
+                          : cat === "handyman" && service.slug === "tv-mounting"
+                            ? "/services/tv-wall-mounting"
                           : cat === "handyman" && service.slug === "gutter-cleaning"
                             ? "/services/gutter-installation"
                             : `/services/${cat}/${service.slug}`
