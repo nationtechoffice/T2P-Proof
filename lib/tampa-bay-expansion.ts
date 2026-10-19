@@ -190,7 +190,7 @@ export const expansionLocations: TargetLocation[] = [
     zipHint: "33578–33579",
     neighborhoods: ["Winthrop", "Southbend", "Riverview Drive", "Balm Riverview"],
     intro:
-      "Need Riverview FL home improvements — drywall patches and fence-section fixes — from a licensed handyman? Handyman Pros FL serves South Hillsborough from one Westchase headquarters.",
+      "Need Riverview FL home improvements — drywall patches and fence-section fixes — from a licensed handyman? Our local crew serves Riverview and South Hillsborough.",
     paragraphs: [
       "Riverview growth along Riverview Drive and Balm shows up as move-in punch lists and storm damage. Winthrop and Southbend homeowners book us for a hole behind a door, texture that never matched, and a fence panel that leaned after wind.",
       "Drywall repair here is a clean cut, backing when the hole is large, and a feathered coat that can take paint. We will not skim over an active leak. If the stain is still wet, the plumbing or roof issue comes first.",
