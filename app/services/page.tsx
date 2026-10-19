@@ -140,6 +140,8 @@ export default function ServicesPage() {
                       href={
                         cat === "handyman" && service.slug === "furniture-assembly"
                           ? "/services/furniture-assembly"
+                          : cat === "handyman" && service.slug === "drywall-repair"
+                            ? "/services/drywall-repair"
                           : cat === "handyman" && service.slug === "gutter-cleaning"
                             ? "/services/gutter-installation"
                             : `/services/${cat}/${service.slug}`
