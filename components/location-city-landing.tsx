@@ -44,6 +44,11 @@ const CREW_OVERRIDE_CITIES = new Set([
   "pinellas-park",
   "seminole",
   "spring-hill",
+  // Step 12d
+  "oldsmar-fl",
+  "dunedin-fl",
+  "holiday",
+  "citrus-park-fl",
 ]);
 
 export function LocationCityLanding({ location }: { location: TargetLocation }) {

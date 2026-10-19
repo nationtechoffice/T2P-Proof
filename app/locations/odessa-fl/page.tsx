@@ -18,7 +18,7 @@ const faqs = [
   { question: "How much does a handyman cost in Odessa?", answer: "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair at $199. A same-day service call starts at $99." },
   { question: "How much does painting cost in Odessa?", answer: "Painting is quoted after a free estimate because room size, wall condition and paint choice change the price. Call (656) 205-3185 to set it up." },
   { question: "Are estimates free?", answer: "Yes. Free estimates on all jobs." },
-  { question: "Can you come the same day?", answer: "Often, yes. Odessa is one of the closest Pasco areas to our Westchase base. A same-day service call starts at $99." },
+  { question: "Can you come the same day?", answer: "Often, yes. Odessa is one of the closest Pasco areas our local crew serves. A same-day service call starts at $99." },
   { question: "Are you licensed and insured?", answer: "Yes, Handyman Pros FL is licensed and insured. If a job needs a permit or a specialist trade, we tell you before work starts." },
   { question: "¿Hablan español?", answer: "Sí. Hablamos español. Llame al (656) 205-3185." },
   { question: "How much does drywall repair cost in Odessa?", answer: "A drywall patch starts at $75, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs." },

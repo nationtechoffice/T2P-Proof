@@ -258,8 +258,8 @@ export const gbpCityHubs: TargetLocation[] = [
     zipHint: "34677",
     neighborhoods: ["East Lake Woodlands", "Shoreview", "West Oldsmar", "Tampa Road"],
     intro:
-      "Need a licensed Oldsmar handyman for tile patches, doors, and TV mounts? ZIP 34677 is the next hop west from our Westchase headquarters. Hablamos español.",
-    directAnswer: `Handyman Pros Florida serves Oldsmar with handyman repairs for tile patches, doors, and TV mounts in ZIP 34677. East Lake Woodlands, Shoreview, and West Oldsmar are the next hop west from the Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+      "Need a licensed Oldsmar handyman for tile patches, doors, and TV mounts? Our local crew serves ZIP 34677. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Oldsmar with handyman repairs for tile patches, doors, and TV mounts in ZIP 34677. Our local crew serves East Lake Woodlands, Shoreview, and West Oldsmar. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Oldsmar sits on Tampa Road between Westchase and the rest of Pinellas. East Lake Woodlands and Shoreview are golf-course and subdivision houses. West Oldsmar and the SR 580 corridor mix older block homes with small commercial streets.",
       "Because the drive is short, lists here are often mixed: a tile or LVP patch, a door that swells, a TV or shelf that has to be level, and deck or lanai hardware that loosened. We repair the section. We do not rebuild a soft subfloor or a failed deck frame.",
@@ -294,8 +294,8 @@ export const gbpCityHubs: TargetLocation[] = [
     zipHint: "34698",
     neighborhoods: ["Downtown Dunedin", "Edgewater Drive", "Victoria Drive", "Curlew"],
     intro:
-      "Need a licensed Dunedin handyman for furniture assembly, fixtures, and doors? Handyman Pros FL serves downtown and the Edgewater streets from Westchase. Hablamos español.",
-    directAnswer: `Handyman Pros Florida serves Dunedin with handyman repairs for furniture assembly, fixture swaps, and doors downtown and along Edgewater. Victoria Drive and Curlew are on the same mid-Pinellas route from Westchase. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+      "Need a licensed Dunedin handyman for furniture assembly, fixtures, and doors? Handyman Pros FL serves downtown and the Edgewater streets. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Dunedin with handyman repairs for furniture assembly, fixture swaps, and doors downtown and along Edgewater. Victoria Drive and Curlew are on the same mid-Pinellas route. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Downtown Dunedin is a walkable Main Street with cottages and small lots just off the water. Edgewater Drive and the nearby streets are older houses where hardware and doors feel the humidity. Farther east, Curlew and the Clearwater border are more suburban.",
       "Assembly work shows up after a move into those cottages: beds, shelves, and outdoor sets that have to sit square on floors that are not perfectly flat. Fixture swaps and a door that rubs are the usual add-ons. We do not provide a moving truck.",
@@ -414,8 +414,8 @@ export const gbpCityHubs: TargetLocation[] = [
     zipHint: "34691",
     neighborhoods: ["US-19 corridor", "Holiday Lake", "Anclote", "Gulf Trace"],
     intro:
-      "Need a licensed Holiday FL handyman for doors, gutters, and fence patches? Holiday is a Pasco service area on US-19, dispatched from Westchase. Hablamos español.",
-    directAnswer: `Handyman Pros Florida serves Holiday with handyman repairs for doors, gutters, and fence patches along US-19. Holiday Lake, Anclote, and Gulf Trace are older Pasco blocks dispatched from the Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+      "Need a licensed Holiday FL handyman for doors, gutters, and fence patches? Holiday is a Pasco service area on US-19. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Holiday with handyman repairs for doors, gutters, and fence patches along US-19. Holiday Lake, Anclote, and Gulf Trace are older Pasco blocks. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Holiday is unincorporated Pasco between Tarpon Springs and New Port Richey. Houses along US-19, Holiday Lake, and the Anclote side are often older concrete-block ranches on low lots, with carports, short fence runs, and gutters that clog after oak debris and hard rain.",
       "The handyman list is doors that stick, a gutter section that dumps at the slab, a fence panel that leaned, and drywall inside after a leak is already dry. We do not treat an active roof leak as a paint-over. If water is still coming in, that gets named before we patch.",
@@ -538,12 +538,12 @@ export const gbpCityHubs: TargetLocation[] = [
     zipHint: "33625",
     neighborhoods: ["Citrus Park Town Center", "Gunn Highway", "Veterans Expressway", "Ehrlich Road"],
     intro:
-      "Need a licensed Citrus Park handyman for ceiling fans, doors, and TV mounts? The mall area and Gunn Highway are a short drive from our Westchase headquarters. Hablamos español.",
-    directAnswer: `Handyman Pros Florida serves Citrus Park with handyman repairs for ceiling fans, doors, and TV mounts near the Town Center mall, Gunn Highway, and Ehrlich Road. The crew leaves the nearby Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+      "Need a licensed Citrus Park handyman for ceiling fans, doors, and TV mounts? Our local crew serves the mall area and Gunn Highway. Hablamos español.",
+    directAnswer: `Handyman Pros Florida serves Citrus Park with handyman repairs for ceiling fans, doors, and TV mounts near the Town Center mall, Gunn Highway, and Ehrlich Road. Our local crew serves Citrus Park. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Citrus Park grew around the Town Center mall, Gunn Highway, and the Veterans Expressway. The houses are mostly later subdivisions and townhomes, with ceiling fans, interior doors, and drywall that take the wear of family use.",
-      "A typical stop is a fan that wobbles at an existing box, a bedroom door that will not latch, and a TV mount in a living room. Ehrlich Road and the streets between the mall and Westchase are close enough that a short punch list can share one visit.",
-      "Keystone is northwest along Gunn Highway. Carrollwood is east. Town 'N' Country is south. We do not keep a kiosk at the mall. The headquarters is Westchase.",
+      "A typical stop is a fan that wobbles at an existing box, a bedroom door that will not latch, and a TV mount in a living room. Ehrlich Road and the streets around the mall are close enough that a short punch list can share one visit.",
+      "Keystone is northwest along Gunn Highway. Carrollwood is east. Town 'N' Country is south. Our local crew serves the mall area and the neighborhoods around it.",
       `Call ${phone}. Licensed and insured. Hablamos español.`,
     ],
     callouts: [

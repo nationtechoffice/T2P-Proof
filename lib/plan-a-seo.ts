@@ -110,7 +110,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/oldsmar-fl": {
     title: "Handyman Oldsmar FL | Home Repairs | Handyman Pros FL",
-    description: "Licensed & insured Oldsmar handyman for tile patches, doors, and TV mounts in ZIP 34677. Hablamos español. Next hop from Westchase. Call (656) 205-3185.",
+    description: "Licensed & insured Oldsmar handyman for tile patches, doors, and TV mounts in ZIP 34677. Hablamos español. Our local crew serves Oldsmar. Call (656) 205-3185.",
   },
   "/locations/palm-harbor-fl": {
     title: "Handyman Palm Harbor FL | Home Repairs | Handyman Pros FL",
@@ -190,7 +190,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/holiday": {
     title: "Handyman Holiday FL | Home Repairs | Handyman Pros FL",
-    description: "Licensed & insured Holiday FL handyman for doors, gutters, and fence patches on US-19. Hablamos español. Dispatched from Westchase. Call (656) 205-3185.",
+    description: "Licensed & insured Holiday FL handyman for doors, gutters, and fence patches on US-19. Hablamos español. Our local crew serves Holiday. Call (656) 205-3185.",
   },
   "/locations/valrico": {
     title: "Handyman Valrico FL | Home Repairs | Handyman Pros FL",

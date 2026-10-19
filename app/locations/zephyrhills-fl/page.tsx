@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const faqs = [
-  { question: "Do you serve Zephyrhills?", answer: "Yes. Handyman Pros FL books Zephyrhills jobs on set east-Pasco days, coming from our Tampa base in Westchase. Call (656) 205-3185 to get on the next Zephyrhills day." },
+  { question: "Do you serve Zephyrhills?", answer: "Yes. Handyman Pros FL books Zephyrhills jobs on set east-Pasco days, and our local crew serves Zephyrhills. Call (656) 205-3185 to get on the next Zephyrhills day." },
   { question: "How much does a handyman cost in Zephyrhills?", answer: "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair at $199. A same-day service call starts at $99." },
   { question: "Are estimates free?", answer: "Yes. Free estimates on all jobs. Describe the job on the phone or the form and you'll get a price before any work starts." },
   { question: "Can you come the same day in Zephyrhills?", answer: "Sometimes. Zephyrhills is about an hour from our Tampa base, so same-day depends on that day's schedule. A same-day service call starts at $99." },
@@ -66,7 +66,7 @@ const brief: CityBrief = {
       <H2>How Zephyrhills booking works</H2>
       <p>
         Handyman Pros FL is a professional handyman team based at 12021 Tuscany Bay Dr in Westchase, Tampa.
-        Zephyrhills City Hall is about 36 miles from there, roughly an hour by road. Rather than charge you for a
+        Our local crew serves Zephyrhills. Rather than charge you for a
         separate long trip, our crew groups Zephyrhills and east-Pasco jobs onto set days. When you call, you get the next
         Zephyrhills day and a price for the job before anything starts.
       </p>
