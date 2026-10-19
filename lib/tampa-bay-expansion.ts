@@ -72,12 +72,13 @@ export const expansionLocations: TargetLocation[] = [
     zipHint: "33563–33567",
     neighborhoods: ["Downtown Plant City", "Walden Lake", "Trapnell", "Knights Griffin", "Park Road", "Varrea", "US-92 corridor"],
     intro:
-      "Need a Plant City handyman for a door that swelled, rotten wood at a sill, or a fence board on a golf-course lot or a strawberry-acreage line? Licensed and insured Handyman Pros FL serves Plant City daily.",
+      "Hire Handyman Pros FL as your Plant City home handyman for door installation support, rotten wood repair, and durable fixes built for Florida weather.",
     paragraphs: [
-      `Plant City is not a Brandon ranch corridor and not a Riverview subdivision punch list. Downtown blocks around the water tower are older wood. Walden Lake is a golf-community fence line. East of Park Road, Trapnell and Knights Griffin open into pasture and strawberry fields. Our crew arrives with door hardware, exterior caulk, and fence fasteners already on the truck.`,
-      "Door work here is alignment after rain, a sweep that actually seals, and a prehung unit only when the opening is ready. Rotten wood on a sill or a short fascia edge gets cut back so the next storm does not travel into the trim. A downtown cottage and a Walden Lake two-story do not fail the same way, and we do not write them up as if they do.",
-      "Fence calls split in two. Walden Lake is usually a privacy board, a soft bottom rail, or a gate that will not latch. Acreage toward Knights Griffin and County Line Road — is a longer wood run or a farm gate. Still one failed section, not a fencing-contractor bid.",
-      `Call ${phone} for a Plant City estimate. We are open 24/7 for scheduling. Hablamos español. Our crew serves Plant City daily.`,
+      "A Plant City home handyman needs to understand both historic downtown charm and newer suburban builds east of Tampa. Humidity, sun, and storm exposure age wood trim, door sills, and outdoor structures faster than many owners expect. Handyman Pros FL brings practical carpentry and repair skills to keep entries tight and exteriors looking maintained.",
+      "Door installation and replacement projects improve security, energy efficiency, and curb appeal. We hang prehung units when openings are ready, adjust existing doors that rub or latch poorly, and upgrade hinges, sweeps, and hardware for smoother daily use. Proper shimming and sealing matter in Florida’s climate — shortcuts show up as drafts and swollen edges within a season.",
+      "Rotten wood repair is another frequent Plant City request. Soft sills, fascia edges, and decorative trim can be cut back, treated, and patched or replaced so moisture does not keep traveling. We focus on sound repairs you can paint and maintain rather than cosmetic cover-ups that fail after the next storm.",
+      "Call (656) 205-3185 to schedule your Plant City home handyman visit. Handyman Pros FL is open 24/7 for estimates covering door installation, rotten wood repair, and related punch-list work across eastern Hillsborough County.",
+      "From strawberry-country homesteads to subdivision addresses, we treat every Plant City job with clean workmanship and clear pricing.",
     ],
     callouts: [
       fenceCallout(
@@ -237,10 +238,14 @@ export const expansionLocations: TargetLocation[] = [
     compactLinks: true,
     neighborhoods: ["Lutz Lake Fern", "Van Dyke", "Dale Mabry north", "Land O' Lakes border"],
     intro:
-      "Need a Lutz home repair expert? Licensed and insured Handyman Pros FL handles tile patches, ceiling fans, and acreage fence fixes from our Westchase headquarters.",
+      "Need a Lutz home repair expert? Handyman Pros FL is the local handyman 33549 residents trust for tile patch work, indoor fixes, and careful outdoor repairs.",
     directAnswer: "Handyman Pros FL serves Hillsborough-side Lutz, FL, including ZIPs 33548 and 33549, from its Westchase headquarters, handling tile repair from $199, ceiling fan installs from $79 and small jobs from $49.",
     paragraphs: [
-      `Call ${phone} for Lutz. Licensed and insured, open 24/7. Hablamos español. Our crew serves Lutz daily.`,
+      "A Lutz home repair expert should understand larger lots, lake-adjacent humidity, and the mix of custom and production homes around ZIP 33549. Handyman Pros FL serves Lutz as a true local handyman 33549 option — close enough for responsive scheduling, skilled enough for clean finish work that lasts.",
+      "Tile patch requests often follow a cracked floor tile, a chipped shower surround, or a remodel that left an unfinished edge. We assess substrate condition, match size and layout when materials are available, and complete careful cuts so the repair blends rather than shouts. For specialty porcelain or unavailable discontinued tile, we discuss realistic options before starting.",
+      "Beyond tile patch projects, Lutz homeowners book us for drywall, fans, doors, and outdoor punch lists. Acreage properties may need extra travel time between structures; we plan visits so barn offices, casitas, or detached garages can be addressed efficiently when that is part of your scope.",
+      "Call (656) 205-3185 to reach your local handyman 33549 team anytime. Handyman Pros FL is open 24/7 for Lutz home repair expert estimates, including multi-trade honey-do days that combine indoor and outdoor tasks.",
+      "Whether you are near Dale Mabry, Van Dyke, or further into Lutz’s residential pockets, we show up prepared and leave the job site tidy.",
     ],
     sections: [
       {
@@ -497,10 +502,14 @@ export const expansionLocations: TargetLocation[] = [
     compactLinks: true,
     neighborhoods: ["56th Street", "Busch Boulevard", "Temple Terrace Golf", "USF border"],
     intro:
-      "Need Temple Terrace home repair — drywall, doors, and fixture installs — from a licensed local handyman? Handyman Pros FL serves 56th Street and the Busch corridor from our Westchase headquarters.",
+      "Handyman Pros FL is the local contractor Temple Terrace homeowners call for dependable Temple Terrace home repair, punch-list fixes, and same-day help when you search handyman near me.",
     directAnswer: "Handyman Pros FL serves Temple Terrace, FL (ZIPs 33617 and 33637) from its Westchase headquarters, fixing drywall from $75, light fixtures and ceiling fans from $79 and sticking doors in older and mid-century homes near 56th Street and USF. Temple Terrace is its own city, so permits come from the City of Temple Terrace, and we tell you up front if your job needs one.",
     paragraphs: [
-      `Call ${phone}. Licensed and insured. Open 24/7. Hablamos español. Our crew serves Temple Terrace daily.`,
+      "Temple Terrace home repair requests rarely wait for a perfect weekend. Between university-area rentals, established family homes, and busy schedules along Busch Boulevard corridors, residents need a local contractor who answers the phone and arrives prepared. Our local crew serves Temple Terrace.",
+      "When neighbors search handyman near me, they usually want more than a vague callback. They want someone who can assess a sticking door, patch drywall after a remodel, hang blinds level, and tighten loose stair rails in one productive visit. Our team treats Temple Terrace properties with the same care we give Westchase and Carrollwood homes — shoe covers indoors, dust control during sanding, and a walkthrough before we leave.",
+      "As your local contractor for everyday improvements, we also help with rental turnovers and pre-listing punch lists. Fresh caulk in bathrooms, replaced outlet covers, adjusted cabinet hinges, and securely mounted TVs make a measurable difference for buyers and tenants. If a job needs permitting or a specialist trade, we say so upfront rather than forcing a poor DIY-style fix.",
+      "Temple Terrace’s mix of mid-century homes and newer builds means fasteners, wall types, and outdoor exposure vary block to block. We bring the right anchors, blades, and finishes so repairs hold up in Florida humidity. Call Handyman Pros FL at (656) 205-3185 anytime — we are open 24/7 for Temple Terrace home repair estimates and scheduling.",
+      "Whether you found us searching handyman near me or were referred by a neighbor, you get transparent pricing and local accountability. From fixture swaps to fence patches, Handyman Pros FL is ready to keep your Temple Terrace property working smoothly.",
     ],
     sections: [
       {
