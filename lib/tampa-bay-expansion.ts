@@ -358,6 +358,7 @@ export const expansionLocations: TargetLocation[] = [
   },
   {
     slug: "wesley-chapel",
+    h1Override: "Wesley Chapel Handyman Services & Home Maintenance",
     city: "Wesley Chapel",
     displayName: "Wesley Chapel, FL",
     county: "Pasco County",
@@ -368,7 +369,7 @@ export const expansionLocations: TargetLocation[] = [
     paragraphs: [
       "Wesley Chapel along SR 54, Wiregrass, Meadow Pointe, and Seven Oaks produces the same kinds of jobs every week: a vanity light still in the box, a door swollen against new paint, and an HOA fence panel that has to match the one next to it.",
       "Fixture setup is the booked visit. We level towel bars, hang the vanity light at an existing box, and seat a faucet when the stops are already there. New circuits and repipes are not this crew. We say that before the holes are drilled.",
-      "Home maintenance visits catch railings, weatherstrip, and a fence clip that let go in wind before the whole run follows. The drive from Westchase is a planned Pasco route shared with Lutz and Land O' Lakes.",
+      "Home maintenance visits catch railings, weatherstrip, and a fence clip that let go in wind before the whole run follows. Our local crew serves Wesley Chapel on a planned Pasco route shared with Lutz and Land O' Lakes.",
       `Call ${phone}. Licensed and insured. Hablamos español. Call for a same-week visit.`,
     ],
     callouts: [

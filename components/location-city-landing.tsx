@@ -133,7 +133,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--accent))]">
               {location.displayName} · {location.county}
             </p>
-            <h1 className="mb-4 text-4xl font-bold">{serviceH1("Handyman", location.city)}</h1>
+            <h1 className="mb-4 text-4xl font-bold">{location.h1Override ?? serviceH1("Handyman", location.city)}</h1>
             {location.directAnswer ? (
               <p className="mb-4 text-lg leading-relaxed text-[hsl(var(--foreground))]">{location.directAnswer}</p>
             ) : null}

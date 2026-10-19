@@ -82,6 +82,8 @@ export interface CoreService {
 }
 
 export interface TargetLocation {
+  /** Optional per-city H1; falls back to serviceH1("Handyman", city). */
+  h1Override?: string;
   slug: string;
   city: string;
   displayName: string;
