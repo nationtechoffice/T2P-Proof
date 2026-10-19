@@ -27,6 +27,7 @@ import { hubJobPhotos } from "@/lib/hub-photos";
 import { startingPriceList, startingPriceSentenceFor } from "@/lib/starting-prices";
 import { ContentSections } from "@/components/content-sections";
 import { cityLocalCopy } from "@/lib/city-local-copy";
+import { cityLocalFaqs } from "@/lib/city-local-faqs";
 
 export function LocationCityLanding({ location }: { location: TargetLocation }) {
   const pageUrl = `${siteConfig.url}/locations/${location.slug}`;
@@ -67,7 +68,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
             ...(location.postalCodes ? { postalCodes: location.postalCodes, county: location.county } : {}),
             ...(cityPrices.length > 0 ? { startingPriceCatalog: cityPrices } : {}),
           }),
-          faqSchema(location.faqs),
+          faqSchema([...location.faqs, ...(cityLocalFaqs[location.slug] ?? [])]),
           {
             "@context": "https://schema.org",
             "@type": "ImageGallery",
@@ -354,7 +355,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
         </div>
       </article>
       <GoogleReviews variant="compact" />
-      <FAQSection faqs={location.faqs} title={`Handyman in ${location.city} FAQ`} />
+      <FAQSection faqs={[...location.faqs, ...(cityLocalFaqs[location.slug] ?? [])]} title={`Handyman in ${location.city} FAQ`} />
     </>
   );
 }
