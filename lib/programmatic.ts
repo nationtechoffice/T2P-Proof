@@ -687,7 +687,7 @@ export const targetLocations: TargetLocation[] = [
     faqs: [
       {
         question: "Do you offer Handyman Tampa FL service same-day?",
-        answer: `Often yes. Because Westchase is our only HQ, same-day Handyman Tampa FL windows are common when our crew is already routing through your zip. Call ${siteConfig.phone}.`,
+        answer: `Often yes. Our local crew serves Tampa. Call ${siteConfig.phone}.`,
       },
       {
         question: "How much is drywall repair Tampa or TV mounting Tampa?",
