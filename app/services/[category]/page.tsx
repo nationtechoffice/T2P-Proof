@@ -7,6 +7,8 @@ import { CTASection } from "@/components/cta-section";
 import { FAQSection } from "@/components/faq-section";
 import { categoryMeta, getServicesByCategory } from "@/lib/services";
 import { coreServices, getCoreService, serviceMetaDescription, serviceMetaTitle } from "@/lib/programmatic";
+import { briefServiceSlugs, getBriefService } from "@/lib/brief-service-pages";
+import { BriefServiceLanding } from "@/components/brief-service-landing";
 import { buildMetadata } from "@/lib/seo";
 import type { ServiceCategory } from "@/lib/site-config";
 import { JsonLd, breadcrumbSchema, faqSchema, imageGallerySchema, serviceSchema } from "@/lib/json-ld";
@@ -74,11 +76,25 @@ export function generateStaticParams() {
   return [
     ...validCategories.map((category) => ({ category })),
     ...coreServices.map((service) => ({ category: service.slug })),
+    ...briefServiceSlugs.map((slug) => ({ category: slug })),
   ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> {
   const { category } = await params;
+  const brief = getBriefService(category);
+  if (brief) {
+    const photo = galleryForPage(brief.gallerySlug ?? brief.slug)[0];
+    return buildMetadata({
+      title: brief.metaTitle,
+      description: brief.metaDescription,
+      path: `/services/${brief.slug}`,
+      keywords: brief.keywords,
+      exactTitle: true,
+      ogImage: photo ? `${siteConfig.url}${photo.src}` : undefined,
+      ogAlt: photo?.alt,
+    });
+  }
   const core = getCoreService(category);
   if (core) {
     const photo = galleryForPage(core.slug)[0];
@@ -105,6 +121,8 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params;
+  const brief = getBriefService(category);
+  if (brief) return <BriefServiceLanding page={brief} />;
   const core = getCoreService(category);
   if (core) return <CoreServiceLanding service={core} />;
   if (!validCategories.includes(category as ServiceCategory)) notFound();

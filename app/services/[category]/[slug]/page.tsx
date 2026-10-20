@@ -133,6 +133,33 @@ export default async function ServicePage({
             <div className="service-description mb-8 rounded-xl bg-[hsl(var(--muted))] p-6">
               <h2 className="mb-3 text-xl font-bold">About Our {service.name} Service</h2>
               <p className="leading-relaxed text-[hsl(var(--muted-foreground))]">{service.description}</p>
+              {slug === "cabinet-painting" ? (
+                <p className="mt-4 leading-relaxed text-[hsl(var(--muted-foreground))]">
+                  For new boxes, hinges, and drawer slides, our crew also handles{" "}
+                  <Link href="/services/cabinet-installation-repair" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    cabinet installation and repair in Tampa
+                  </Link>
+                  .
+                </p>
+              ) : null}
+              {slug === "deck-painting" ? (
+                <p className="mt-4 leading-relaxed text-[hsl(var(--muted-foreground))]">
+                  Before stain or paint, rotted boards and loose railings may need{" "}
+                  <Link href="/services/deck-repair" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    deck repair
+                  </Link>{" "}
+                  from our insured crew.
+                </p>
+              ) : null}
+              {slug === "general-construction" ? (
+                <p className="mt-4 leading-relaxed text-[hsl(var(--muted-foreground))]">
+                  For backyard paver patios and patio cover roof panels, see{" "}
+                  <Link href="/services/patio-building" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    patio building in Tampa
+                  </Link>
+                  .
+                </p>
+              ) : null}
             </div>
 
             <div className="mb-8 space-y-4 leading-relaxed text-[hsl(var(--muted-foreground))]">

@@ -14,7 +14,8 @@ import { HqDispatch } from "@/components/hq-dispatch";
 import { JsonLd, faqSchema, serviceCatalogSchema, speakableSchema } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import { allLocationLinks } from "@/lib/location-silos";
-import { coreServices, hrefForAreaName } from "@/lib/programmatic";
+import { hrefForAreaName } from "@/lib/programmatic";
+import { primaryServiceHubLinks } from "@/lib/service-hub";
 import { homeTitle, homeDescription } from "@/lib/instant-estimate";
 import { buildMetadata } from "@/lib/seo";
 import { heroStory } from "@/lib/images";
@@ -188,14 +189,16 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {coreServices.map((service) => (
+            {primaryServiceHubLinks.map((service) => (
               <Link
-                key={service.slug}
-                href={`/services/${service.slug}`}
-                className="card hover:border-[hsl(var(--accent))]"
+                key={service.href}
+                href={service.href}
+                className={`card hover:border-[hsl(var(--accent))]${service.emphasis === "secondary" ? " opacity-90" : ""}`}
               >
-                <h3 className="mb-2 text-lg font-bold">{service.name} in Tampa, FL</h3>
-                <p className="text-sm text-[hsl(var(--muted-foreground))]">{service.intro}</p>
+                <h3 className="mb-2 text-lg font-bold">{service.label}</h3>
+                {service.description ? (
+                  <p className="text-sm text-[hsl(var(--muted-foreground))]">{service.description}</p>
+                ) : null}
               </Link>
             ))}
           </div>

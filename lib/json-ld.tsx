@@ -348,6 +348,67 @@ export function faqSchema(faqs: { question: string; answer: string }[]) {
   };
 }
 
+/** Brief-driven service pages: HandymanService + Service + FAQPage in one graph. */
+export function briefServiceGraphSchema(options: {
+  serviceName: string;
+  serviceType: string;
+  url: string;
+  faqs: { question: string; answer: string }[];
+  offerDescription?: string;
+}) {
+  const businessId = `${siteConfig.url}/#organization`;
+  const offerDescription = options.offerDescription ?? "Free estimate, call or text for a price";
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HandymanService",
+        name: "Handyman Pros FL",
+        telephone: siteConfig.phone,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: siteConfig.address.street,
+          addressLocality: siteConfig.address.city,
+          addressRegion: siteConfig.address.state,
+          postalCode: siteConfig.address.zip,
+          addressCountry: siteConfig.address.country,
+        },
+        "@id": businessId,
+      },
+      {
+        "@type": "Service",
+        name: options.serviceName,
+        serviceType: options.serviceType,
+        url: options.url,
+        provider: { "@id": businessId },
+        areaServed: [
+          { "@type": "AdministrativeArea", name: "Hillsborough County, FL" },
+          { "@type": "AdministrativeArea", name: "Pinellas County, FL" },
+          { "@type": "AdministrativeArea", name: "Pasco County, FL" },
+        ],
+        offers: [
+          {
+            "@type": "Offer",
+            name: `${options.serviceName} (free estimate)`,
+            description: offerDescription,
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: options.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
+  };
+}
+
 export function articleSchema(article: {
   title: string;
   description: string;

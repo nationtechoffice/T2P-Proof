@@ -4,6 +4,7 @@ import { getAllServiceSlugs } from "./services";
 import { getAllBlogSlugs } from "./blog-posts";
 import { allLocationLinks } from "./location-silos";
 import { coreServices, targetLocations } from "./programmatic";
+import { briefServicePages } from "./brief-service-pages";
 import { locationAlternatePaths } from "./location-redirects";
 
 /** Legacy paths that 301 to a canonical URL — never list these in the sitemap. */
@@ -115,6 +116,7 @@ export function getAllSiteUrls(): string[] {
   ];
 
   const coreServicePages = coreServices.map((service) => `${baseUrl}/services/${service.slug}`);
+  const briefServiceUrls = briefServicePages.map((page) => `${baseUrl}/services/${page.slug}`);
   const cityPages = targetLocations.map((location) => `${baseUrl}/locations/${location.slug}`);
   const locationPages = allLocationLinks.map((link) => `${baseUrl}${link.href}`);
   const nestedServicePages = getAllServiceSlugs().map(
@@ -126,6 +128,7 @@ export function getAllSiteUrls(): string[] {
     ...new Set([
       ...staticPages,
       ...coreServicePages,
+      ...briefServiceUrls,
       ...cityPages,
       ...locationPages,
       ...nestedServicePages,

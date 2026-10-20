@@ -1,6 +1,7 @@
 import { allLocationLinks } from "./location-silos";
 import { allServices, categoryMeta } from "./services";
 import { targetLocations } from "./programmatic";
+import { briefServicePages } from "./brief-service-pages";
 import { formatFullAddress } from "./local-seo";
 import { siteConfig } from "./site-config";
 import { blogPosts } from "./blog-posts";
@@ -59,6 +60,12 @@ ${link("Tile installation", "/services/tile-installation", "Handyman-scope tile 
 ${link("Furniture assembly", "/services/furniture-assembly", "Licensed furniture assembly and in-home rearrangement in Tampa and Westchase — IKEA, Wayfair, Amazon, beds, desks, and room-to-room moves. Canonical URL. Short aliases 308 here.")}
 ${link("Flooring installation", "/services/flooring-installation", "Licensed flooring installation, repair, and section replacement in Tampa and Westchase — click-lock LVP, laminate, vinyl plank, and wood sections. Canonical URL. Short aliases 308 here.")}
 ${link("Gutter installation", "/services/gutter-installation", "Licensed gutter installation, repair, cleaning, and section replacement in Tampa and Westchase — downspout flushes, loose-run reseating, and short-run installs. Canonical URL. Short aliases 308 here.")}
+${briefServicePages
+  .map((page) =>
+    link(page.name, `/services/${page.slug}`, page.metaDescription.replace(/ \(656\) 205-3185\.?$/, "."))
+  )
+  .join("\n")}
+${link("Door repair", "/services/door-repair", "Sticking doors, hinges, and weatherstrip in Tampa Bay.")}
 ${link("Ceiling fan installation", "/services/handyman/fan-installation", "Like-for-like fan swaps at an existing fan-rated box. New wiring is electrician scope.")}
 ${link("Locations", "/locations", "Tampa Bay city pages. Our local crew serves each city.")}
 ${targetLocations

@@ -101,7 +101,19 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
                   <Link href="/services/handyman/moving-assistance" className="font-semibold text-[hsl(var(--primary))] hover:underline">
                     moving assistance
                   </Link>{" "}
-                  visit. This page is furniture assembly and in-home rearrangement only.
+                  visit. Closet systems, floating shelves, and{" "}
+                  <Link href="/services/blinds-curtain-installation" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    blinds and curtain installation
+                  </Link>{" "}
+                  often follow furniture setup — see{" "}
+                  <Link href="/services/shelving-closet-systems" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    shelving and closet systems
+                  </Link>{" "}
+                  and{" "}
+                  <Link href="/services/cabinet-installation-repair" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    cabinet installation and repair
+                  </Link>
+                  .
                 </p>
               ) : null}
               {service.slug === "flooring-installation" ? (
@@ -110,7 +122,20 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
                   <Link href="/services/tile-installation" className="font-semibold text-[hsl(var(--primary))] hover:underline">
                     tile installation in Tampa and Westchase
                   </Link>{" "}
-                  for backsplashes, wall tile, and floor-tile sections. This page is LVP, laminate, vinyl plank, and wood-section install and repair.
+                  for backsplashes, wall tile, and floor-tile sections. This page is LVP, laminate, vinyl plank, and wood-section install and repair. After new floors, our crew can install{" "}
+                  <Link href="/services/baseboard-trim-installation" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    baseboard and trim
+                  </Link>{" "}
+                  to finish the room.
+                </p>
+              ) : null}
+              {service.slug === "tile-installation" ? (
+                <p>
+                  Drafty doors and tub caulk often pair with tile work. Our crew also handles{" "}
+                  <Link href="/services/weatherstripping-caulking" className="font-semibold text-[hsl(var(--primary))] hover:underline">
+                    weatherstripping and caulking
+                  </Link>{" "}
+                  on the same route when you plan ahead.
                 </p>
               ) : null}
               {service.slug === "gutter-installation" ? (

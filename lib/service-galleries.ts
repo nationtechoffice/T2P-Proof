@@ -266,6 +266,49 @@ const electricalGallery: ServicePhoto[] = [
   },
 ];
 
+const blindsGallery: ServicePhoto[] = [
+  {
+    src: "/images/work/handyman-pros-florida-blinds-install-branded-back.jpg",
+    alt: "Handyman Pros Florida crew member installing window blinds in a Tampa Bay home",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-blinds-hardware-drill-profile.jpg",
+    alt: "Handyman Pros Florida technician mounting blind brackets with a drill in Tampa Bay",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-blinds-install-branded-reach.jpg",
+    alt: "Handyman Pros Florida crew installing white mini blinds at a residential window in Tampa Bay",
+  },
+];
+
+const baseboardGallery: ServicePhoto[] = [
+  {
+    src: "/images/work/maps-baseboard-paint.jpg",
+    alt: "Handyman Pros FL crew member painting baseboard trim in a Tampa home",
+  },
+];
+
+const shelvingGallery: ServicePhoto[] = [
+  {
+    src: "/images/work/handyman-pros-florida-tampa-bay-closet-shelving-install.webp",
+    alt: "Closet shelving installed on adjustable wall standards by Handyman Pros FL crew in Tampa Bay",
+  },
+];
+
+const cabinetGallery: ServicePhoto[] = [
+  {
+    src: "/images/work/maps-builtin-dresser.jpg",
+    alt: "Built-in cabinet and dresser work by Handyman Pros FL crew in a Tampa home",
+  },
+];
+
+const deckGallery: ServicePhoto[] = [
+  {
+    src: "/images/work/fence-post-reset.jpg",
+    alt: "Outdoor wood structure repair by Handyman Pros FL crew in a Tampa Bay backyard",
+  },
+];
+
 const patioRoofGallery: ServicePhoto[] = [
   {
     src: "/images/work/handyman-pros-florida-tampa-patio-roof-01.jpg",
@@ -335,7 +378,13 @@ export function galleryForPage(categoryOrSlug: string, slug?: string): ServicePh
   }
   if (key === "door-repair") return [];
   if (key === "roof-repair") return roofGallery;
-  if (key === "general-construction") return patioRoofGallery;
+  if (key === "general-construction" || key === "patio-building") return patioRoofGallery;
+  if (key === "blinds-curtain-installation") return blindsGallery;
+  if (key === "baseboard-trim-installation") return baseboardGallery;
+  if (key === "shelving-closet-systems") return shelvingGallery;
+  if (key === "cabinet-installation-repair") return cabinetGallery;
+  if (key === "deck-repair") return deckGallery;
+  if (key === "ceiling-repair") return drywallGallery;
   if (key === "fence" || key === "fence-handyman" || category === "fence") return fenceGallery;
   if (key.includes("tile")) return tileGallery;
   if (key === "painting" || category === "painting" || key.includes("paint")) return paintingGallery;

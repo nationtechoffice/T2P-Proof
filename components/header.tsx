@@ -8,21 +8,9 @@ import { targetLocations } from "@/lib/programmatic";
 import { Logo } from "@/components/logo";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 
-const serviceLinks = [
-  { href: "/services/tv-wall-mounting", label: "TV Wall Mounting" },
-  { href: "/services/drywall-repair", label: "Drywall Repair" },
-  { href: "/services/same-day-handyman", label: "Same-Day Handyman" },
-  { href: "/services/tile-installation", label: "Tile Installation" },
-  { href: "/services/flooring-installation", label: "Flooring Installation" },
-  { href: "/services/gutter-installation", label: "Gutter Installation" },
-  { href: "/services/handyman/fan-installation", label: "Ceiling Fan Installation" },
-  { href: "/services/electrical-fixture-installation", label: "Electrical Fixtures" },
-  { href: "/services/plumbing-fixture-repair", label: "Plumbing Fixtures" },
-  { href: "/services/furniture-assembly", label: "Furniture Assembly" },
-  { href: "/services/door-repair", label: "Door Repair" },
-  { href: "/services/fence", label: "Fence Handyman" },
-  { href: "/services", label: "All Services" },
-];
+import { navServiceLinks } from "@/lib/service-hub";
+
+const serviceLinks = [...navServiceLinks, { href: "/services", label: "All Services" }];
 
 const areaLinks = [
   ...targetLocations.map((location) => ({

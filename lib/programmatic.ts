@@ -42,10 +42,20 @@ export const schemaAreaServed = [
 export const schemaServicesOffered = [
   "TV Wall Mounting",
   "Drywall Patching & Repair",
+  "Ceiling Repair",
   "Electrical Fixture Installation",
   "Plumbing Fixture Repair",
   "Furniture Assembly",
   "Door Repair",
+  "Door Installation",
+  "Lock Rekeying and Smart Locks",
+  "Baseboard and Trim Installation",
+  "Paver Patio Building",
+  "Cabinet Installation and Repair",
+  "Shelving and Closet Systems",
+  "Deck Repair",
+  "Blinds and Curtain Installation",
+  "Weatherstripping and Caulking",
   "Same-Day Handyman",
   "Tile Work",
   "Flooring Installation",
@@ -268,6 +278,16 @@ export const coreServices: CoreService[] = [
           "First we assess the damage: measure the hole or crack and decide between a patch and a board replacement. Then we set the patch and apply joint compound in coats, sanding between them. In humid weather we stage the coats so the repair stays flat. Last, we blend the texture to match and prime so the wall is ready for paint.",
         ],
       },
+      {
+        heading: "Ceiling repair and baseboard trim",
+        paragraphs: [
+          "Ceiling stains, nail pops, and cracked texture are common after roof leaks and HVAC work in Tampa Bay humidity. When the whole ceiling field needs attention—not just a small patch—see our dedicated ceiling repair page. After drywall and flooring projects, new baseboard and trim finish the room; our crew installs crown, casing, and shoe molding to match your floor height.",
+        ],
+        links: [
+          { href: "/services/ceiling-repair", label: "Ceiling repair in Tampa" },
+          { href: "/services/baseboard-trim-installation", label: "Baseboard and trim installation" },
+        ],
+      },
     ],
     cityLinks: [
       { href: "/locations/westchase-fl", label: "Drywall repair in Westchase" },
@@ -425,7 +445,22 @@ export const coreServices: CoreService[] = [
       "Door repair in Tampa is a humidity job. Exterior doors swell in rainy weeks, interior hollow-cores sag on cheap hinges, and sliders jump the track after storms. We plane, shim, replace weatherstrip, and reset strikes so the latch catches without a hip-check.",
       "Westchase and Citrus Park HOAs notice a dragging entry door. We keep the reveal even and replace blown-out screws with longer fasteners into real framing.",
       "Full prehung replacement is available when the slab is beyond repair. Rotten sills get called out instead of painted over.",
+      "When you need a new prehung door instead of a repair, see our door installation page. For rekeys, smart locks, and video doorbells on existing doors, our lock rekeying and smart lock crew handles planned hardware swaps. Drafty doors often pair with weatherstripping and caulking on the same visit.",
       `Call ${siteConfig.phone} for door repair before the next rain set swells it shut again.`,
+    ],
+    sections: [
+      {
+        heading: "Door installation and hardware",
+        paragraphs: [
+          "New interior and exterior prehung doors, closet doors, and hardware sets are a separate visit from sticking-door repairs. Our crew installs slabs when jambs are sound and can coordinate smart lock or rekey work when you plan ahead.",
+        ],
+        links: [
+          { href: "/services/door-installation", label: "Door installation in Tampa" },
+          { href: "/services/lock-rekeying-smart-locks", label: "Lock rekeying and smart locks" },
+          { href: "/services/weatherstripping-caulking", label: "Weatherstripping and caulking" },
+          { href: "/services/shelving-closet-systems", label: "Shelving and closet systems" },
+        ],
+      },
     ],
     bullets: [
       "Sticking and swollen door planing",

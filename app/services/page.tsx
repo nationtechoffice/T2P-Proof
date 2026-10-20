@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { allServices, categoryMeta } from "@/lib/services";
 import { coreServices, targetLocations } from "@/lib/programmatic";
+import { primaryServiceHubLinks } from "@/lib/service-hub";
 import { serviceTitle, serviceDescription } from "@/lib/instant-estimate";
 import { JsonLd, breadcrumbSchema, imageGallerySchema, serviceCatalogSchema, servicesItemListSchema } from "@/lib/json-ld";
 import { buildMetadata } from "@/lib/seo";
@@ -37,11 +38,20 @@ const icons = { wrench: Wrench, paintbrush: Paintbrush, fence: Fence };
 
 export default function ServicesPage() {
   const categories: ServiceCategory[] = ["handyman", "painting", "fence"];
-  const featuredList = coreServices.map((service) => ({
-    name: `${service.name} in Tampa`,
-    url: `${siteConfig.url}/services/${service.slug}`,
-    description: service.intro,
-  }));
+  const featuredList = [
+    ...primaryServiceHubLinks.map((service) => ({
+      name: service.label,
+      url: `${siteConfig.url}${service.href}`,
+      description: service.description,
+    })),
+    ...coreServices
+      .filter((s) => !primaryServiceHubLinks.some((h) => h.href === `/services/${s.slug}`))
+      .map((service) => ({
+        name: `${service.name} in Tampa`,
+        url: `${siteConfig.url}/services/${service.slug}`,
+        description: service.intro,
+      })),
+  ];
 
   return (
     <>
@@ -76,9 +86,9 @@ export default function ServicesPage() {
               .
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-              {coreServices.map((service) => (
-                <Link key={service.slug} href={`/services/${service.slug}`} className="btn-secondary !py-2 !text-sm">
-                  {service.slug === "flooring-installation" ? "Flooring Installation & Repair" : `${service.name} in Tampa`}
+              {primaryServiceHubLinks.map((service) => (
+                <Link key={service.href} href={service.href} className="btn-secondary !py-2 !text-sm">
+                  {service.label}
                 </Link>
               ))}
             </div>
