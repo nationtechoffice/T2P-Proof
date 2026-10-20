@@ -5,7 +5,9 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { blogPosts, getAllBlogSlugs, getBlogPost } from "@/lib/blog-posts";
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd, breadcrumbSchema, articleSchema, speakableSchema } from "@/lib/json-ld";
+import { JsonLd, breadcrumbSchema, articleSchema, speakableSchema, faqSchema } from "@/lib/json-ld";
+import { FAQSection } from "@/components/faq-section";
+import { blogFaqs } from "@/lib/blog-faqs";
 import { siteConfig } from "@/lib/site-config";
 import { formatDate } from "@/lib/utils";
 
@@ -113,6 +115,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             image: post.image,
           }),
           speakableSchema(pageUrl, [".article-summary", ".article-content"]),
+          ...(blogFaqs[post.slug] ? [faqSchema(blogFaqs[post.slug])] : []),
         ]}
       />
       <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: post.title }]} />
@@ -149,6 +152,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </div>
         </div>
       </article>
+      {blogFaqs[post.slug] ? <FAQSection faqs={blogFaqs[post.slug]} title="FAQs" /> : null}
 
       {otherPosts.length > 0 && (
         <section className="section-padding bg-[hsl(var(--muted))]">
