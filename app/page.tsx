@@ -24,7 +24,9 @@ import { blogPosts } from "@/lib/blog-posts";
 import { formatDate } from "@/lib/utils";
 import { CheckCircle, MapPin } from "lucide-react";
 
-export const metadata: Metadata = buildMetadata({
+const HOME_PAGE_TITLE = "Tampa Handyman Near Me | Drywall & TV Mount";
+
+const homeMetadata: Metadata = buildMetadata({
   title: homeTitle(),
   description: homeDescription(),
   path: "/",
@@ -54,6 +56,9 @@ export const metadata: Metadata = buildMetadata({
   ogWidth: heroStory.poster.width,
   ogHeight: heroStory.poster.height,
 });
+
+// Page <title> only; og:title and twitter:title keep homeTitle().
+export const metadata: Metadata = { ...homeMetadata, title: { absolute: HOME_PAGE_TITLE } };
 
 export default function HomePage() {
   preload(heroStory.poster.avif, {
