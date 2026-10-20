@@ -1,3 +1,4 @@
+import { MoreServiceLinks } from "@/components/more-service-links";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -176,6 +177,7 @@ export default function ServicesPage() {
           })}
         </div>
       </section>
+      <MoreServiceLinks path="/services" />
       <CTASection />
     </>
   );

@@ -1,3 +1,4 @@
+import { MoreServiceLinks } from "@/components/more-service-links";
 import type { Metadata } from "next";
 import { GuideLinks } from "@/components/guide-links";
 import Link from "next/link";
@@ -369,6 +370,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         </div>
       </section>
       <GuideLinks pageKey={cat} />
+      <MoreServiceLinks path={`/services/${cat}`} />
       <CTASection title={`Need ${meta.name}?`} />
     </>
   );

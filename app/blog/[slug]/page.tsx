@@ -1,3 +1,4 @@
+import { MoreServiceLinks } from "@/components/more-service-links";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -169,6 +170,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </div>
         </section>
       )}
+      <MoreServiceLinks path={`/blog/${post.slug}`} />
       <CTASection />
     </>
   );

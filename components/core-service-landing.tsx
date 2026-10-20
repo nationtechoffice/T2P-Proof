@@ -1,3 +1,4 @@
+import { MoreServiceLinks } from "@/components/more-service-links";
 import Link from "next/link";
 import { GuideLinks } from "@/components/guide-links";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -301,6 +302,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
         </div>
       </article>
       <GuideLinks pageKey={service.slug} />
+      <MoreServiceLinks path={`/services/${service.slug}`} />
       <FAQSection faqs={service.faqs} title={`${service.name} in Tampa FAQ`} />
     </>
   );

@@ -1,3 +1,4 @@
+import { MoreServiceLinks } from "@/components/more-service-links";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -311,6 +312,7 @@ export default async function ServicePage({
         </div>
       </article>
       <FAQSection faqs={faqs} title={`${service.name} FAQ`} />
+      <MoreServiceLinks path={`/services/${category}/${slug}`} />
       <CTASection title={`Ready for ${service.name}?`} />
     </>
   );
