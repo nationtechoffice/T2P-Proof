@@ -412,6 +412,17 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                     : location.slug === "wesley-chapel"
                       ? [{ href: "/locations/wesley-chapel/drywall-repair", label: "Drywall repair in Wesley Chapel" }]
                       : []),
+                ...(location.slug === "tampa"
+                  ? [
+                      { href: "/locations/ybor-city", label: "Handyman in Ybor City" },
+                      { href: "/locations/northdale", label: "Handyman in Northdale" },
+                    ]
+                  : location.slug === "carrollwood"
+                    ? [
+                        { href: "/locations/northdale", label: "Handyman in Northdale" },
+                        { href: "/locations/lake-magdalene", label: "Handyman in Lake Magdalene" },
+                      ]
+                    : []),
               ].filter(
                 (link, index, list) =>
                   link.href !== `/locations/${location.slug}` &&
