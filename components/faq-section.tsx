@@ -37,7 +37,7 @@ const homeFaqs = [
   },
   {
     question: "Do you have more than one branch?",
-    answer: `No. Handyman Pros FL is a single-location company. Every job is dispatched from our Tampa / Westchase headquarters. City pages on this site are service areas, not extra offices.`,
+    answer: `No. Handyman Pros FL is one company, and our local crew serves Tampa Bay. City pages on this site are service areas, not extra offices.`,
   },
   {
     question: "What payment methods do you accept?",

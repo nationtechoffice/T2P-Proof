@@ -89,7 +89,7 @@ export default function HomePage() {
                 Tampa handyman · one crew
               </p>
               <h2 className="mb-4 font-display text-3xl font-bold md:text-4xl">
-                Tampa handyman near me — Westchase HQ
+                Tampa handyman near me — our local crew
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-[hsl(var(--muted-foreground))]">
                 Looking for a Tampa handyman near Westchase, Carrollwood, or Citrus Park? Handyman Pros FL is one local crew — TV mounting, drywall repair, pressure washing, and home fixes with{" "}
@@ -102,7 +102,7 @@ export default function HomePage() {
                 {[
                   "Licensed and insured local Tampa experts",
                   "Honest, upfront pricing with no surprise fees",
-                  "Mobile team dispatched from Westchase HQ",
+                  "Mobile team — our local crew serves Tampa Bay",
                   "60+ specialized services from one crew",
                   "Serving Tampa & all surrounding counties",
                 ].map((item) => (
@@ -116,7 +116,7 @@ export default function HomePage() {
             <div className="glass-panel">
               <h3 className="mb-2 text-xl font-bold">Counties We Serve</h3>
               <p className="mb-4 text-sm text-[hsl(var(--muted-foreground))]">
-                Coverage from our only Tampa headquarters — we come to you.
+                Our local crew serves Tampa Bay — we come to you.
               </p>
               <div className="mb-6 flex flex-wrap gap-2">
                 {siteConfig.counties.map((county) => (
