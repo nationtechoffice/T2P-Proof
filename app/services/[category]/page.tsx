@@ -47,6 +47,29 @@ const handymanCanonicalHref: Record<string, string> = {
   "repair-flooring": "/services/flooring-installation",
 };
 
+
+/** /services/fence FAQ: the shared fence-handyman FAQs plus fence-repair Q&As (add-only). */
+const fencePageFaqs = [
+  ...fenceHandymanService.faqs,
+  {
+    question: "Do you repair fences in Tampa, or only install new ones?",
+    answer:
+      "We do both. Our licensed and insured local crew repairs boards, posts, and gates, and builds new fence sections when a repair isn't enough.",
+  },
+  {
+    question: "Can you fix a fence that was damaged in a storm?",
+    answer:
+      "Yes. We reset leaning posts, replace broken boards or panels, and match the repaired section to the rest of your fence.",
+  },
+  {
+    question: "How much does fence repair cost?",
+    answer: "Free estimate, call or text for a price.",
+  },
+  {
+    question: "How fast do you reply to a fence repair request?",
+    answer: "Instant reply, 24/7 — always within 5 minutes.",
+  },
+];
 export function generateStaticParams() {
   return [
     ...validCategories.map((category) => ({ category })),
@@ -110,7 +133,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                   images: galleryForPage("fence").map((photo) => photo.src),
                   offer: fenceHandymanService.offer,
                 }),
-                faqSchema(fenceHandymanService.faqs),
+                faqSchema(fencePageFaqs),
               ]
             : []),
           ...(cat === "painting"
@@ -153,7 +176,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 <a href="#fence-handyman" className="font-medium text-[hsl(var(--primary))] hover:underline">
                   fence handyman repairs
                 </a>{" "}
-                below. The service list is material-specific work from the same licensed and insured crew. We are a handyman company, not a separate fencing contractor.
+                below. The service list is material-specific work from the same licensed and insured crew. Our handyman crew also handles fence repairs and installs.
               </p>
             ) : null}
           </div>
@@ -212,6 +235,16 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             </div>
           ) : null}
           {cat === "fence" ? (
+            <div className="mx-auto mt-14 max-w-3xl">
+              <h2 className="mb-4 text-3xl font-bold">Fence Repair in Tampa</h2>
+              <p className="leading-relaxed text-[hsl(var(--muted-foreground))]">
+                Our licensed and insured local crew repairs loose or rotted boards, leaning posts, and gates that sag or
+                won&apos;t latch. After a storm, we reset or replace the damaged section and match it to the rest of the
+                fence. Free estimate, call or text for a price.
+              </p>
+            </div>
+          ) : null}
+          {cat === "fence" ? (
             <div id="fence-handyman" className="mx-auto mt-14 max-w-3xl scroll-mt-28">
               <h2 className="mb-4 text-3xl font-bold">Fence handyman repairs in Tampa Bay</h2>
               <p className="service-definition mb-4 text-lg leading-relaxed">{fenceHandymanService.intro}</p>
@@ -247,7 +280,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           ) : null}
         </div>
       </section>
-      {cat === "fence" ? <FAQSection faqs={fenceHandymanService.faqs} title="Fence Handyman FAQs" /> : null}
+      {cat === "fence" ? <FAQSection faqs={fencePageFaqs} title="Fence Handyman FAQs" /> : null}
       {cat === "painting" ? <FAQSection faqs={paintingFaqs} title="Painting FAQs" /> : null}
       <section className="section-padding pt-0">
         <div className="container-site">
