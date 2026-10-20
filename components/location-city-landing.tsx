@@ -32,6 +32,8 @@ import { cityLocalFaqs } from "@/lib/city-local-faqs";
 
 /** Step 12a: per-city crew wording (Brandon, Riverview, Land O' Lakes only). */
 const CREW_OVERRIDE_CITIES = new Set([
+  // Item 3b
+  "tampa",
   // Item 3 (location template line); Lutz, Plant City, Temple Terrace and Tampa stay out
   "town-n-country-fl",
   "valrico",

@@ -26,7 +26,7 @@ export const tampaLocationSpots: NeighborhoodSpot[] = [
   },
   {
     name: "New Tampa",
-    body: "New Tampa means Tampa Palms, Hunter's Green, Cross Creek, and West Meadows HOA lists: ceiling fans, paint-ready drywall, and a short fence-board repair after a summer storm. The truck still leaves Westchase. North of here the same route continues into Lutz, Wesley Chapel, and Land O' Lakes.",
+    body: "New Tampa means Tampa Palms, Hunter's Green, Cross Creek, and West Meadows HOA lists: ceiling fans, paint-ready drywall, and a short fence-board repair after a summer storm. Our local crew comes to you. North of here the same route continues into Lutz, Wesley Chapel, and Land O' Lakes.",
     links: [
       { href: "/locations/lutz", label: "Handyman Lutz" },
       { href: "/locations/wesley-chapel", label: "Handyman Wesley Chapel" },
