@@ -119,6 +119,8 @@ export function getAllSiteUrls(): string[] {
     `${baseUrl}/locations/east-lake`,
     `${baseUrl}/locations/hudson`,
     `${baseUrl}/locations/dade-city`,
+    `${baseUrl}/locations/seffner`,
+    `${baseUrl}/locations/ruskin-sun-city-center`,
     ...cityServicePages.map((p) => `${baseUrl}${p.path}`),
   ];
 

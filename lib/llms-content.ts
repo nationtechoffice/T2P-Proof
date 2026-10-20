@@ -119,6 +119,8 @@ ${link("Handyman Lake Magdalene FL", "/locations/lake-magdalene", "Service area 
 ${link("Handyman East Lake FL", "/locations/east-lake", "Service area our local crew serves.")}
 ${link("Handyman Hudson FL", "/locations/hudson", "Service area our local crew serves.")}
 ${link("Handyman Dade City FL", "/locations/dade-city", "Service area our local crew serves.")}
+${link("Handyman Seffner FL", "/locations/seffner", "Service area our local crew serves.")}
+${link("Handyman Ruskin and Sun City Center FL", "/locations/ruskin-sun-city-center", "Service area our local crew serves.")}
 ${link("Door Repair in St Petersburg FL", "/locations/st-petersburg/door-repair", "City service page. Free estimate, call or text for a price.")}
 ${link("Drywall Repair in St Petersburg FL", "/locations/st-petersburg/drywall-repair", "City service page. Free estimate, call or text for a price.")}
 ${link("Drywall Repair in Wesley Chapel FL", "/locations/wesley-chapel/drywall-repair", "City service page. Free estimate, call or text for a price.")}
