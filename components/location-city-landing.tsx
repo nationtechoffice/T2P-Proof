@@ -150,7 +150,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
             </p>
             <h1 className="mb-4 text-4xl font-bold">{location.h1Override ?? serviceH1("Handyman", location.city)}</h1>
             {location.directAnswer ? (
-              <p className="mb-4 text-lg leading-relaxed text-[hsl(var(--foreground))]">{location.directAnswer}</p>
+              <p className="mb-4 text-lg leading-relaxed text-[hsl(var(--foreground))]">{location.directAnswerBody ?? location.directAnswer}</p>
             ) : null}
             <p className="mb-6 text-xl leading-relaxed text-[hsl(var(--muted-foreground))]">{location.intro}</p>
             <p className="mb-4 text-xl font-semibold text-[hsl(var(--primary))]">{instantEstimate.heroHeadline}</p>

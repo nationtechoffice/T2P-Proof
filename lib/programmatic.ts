@@ -93,6 +93,8 @@ export interface TargetLocation {
   intro: string;
   /** 40–60 word answer shown directly under the H1. */
   directAnswer?: string;
+  /** Visible body copy when it differs from directAnswer (schema/meta keep directAnswer). */
+  directAnswerBody?: string;
   paragraphs: string[];
   faqs: { question: string; answer: string }[];
   /** Linked sentences rendered under the city copy. */

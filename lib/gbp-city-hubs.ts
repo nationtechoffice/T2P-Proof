@@ -93,6 +93,7 @@ export const gbpCityHubs: TargetLocation[] = [
     intro:
       "Need a licensed St. Petersburg handyman for bungalow walls, TV mounts, and doors? Handyman Pros FL works Kenwood, downtown, and Snell Isle from Westchase. Hablamos español.",
     directAnswer: `Handyman Pros Florida serves St. Petersburg with handyman repairs for Kenwood walls, downtown condo TV mounts, and doors in older bungalows. Snell Isle and Tyrone are on the same Pinellas route from the Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+    directAnswerBody: `Handyman Pros Florida serves St. Petersburg with handyman repairs for Kenwood walls, downtown condo TV mounts, and doors in older bungalows. Our local crew serves Snell Isle and Tyrone on the same Pinellas route. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "St. Petersburg housing changes block by block. Kenwood and Old Northeast are older wood-frame bungalows and masonry houses where a small hole still has to disappear into plaster or older drywall. Downtown and the waterfront are more condos. Tyrone is later single-family stock along the west side.",
       "The useful visits are practical: hang a TV into real structure, patch a wall so it can take paint, plane a door that sticks after rain, and reset trim that has pulled. We are a handyman crew, not a restoration shop for historic millwork.",
@@ -136,6 +137,7 @@ export const gbpCityHubs: TargetLocation[] = [
     intro:
       "Need a licensed Palm Harbor handyman for TV mounts, drywall, and fence boards? Handyman Pros FL serves Ozona, East Lake, and Highland Lakes from Westchase. Hablamos español.",
     directAnswer: "Handyman Pros FL serves Palm Harbor, FL, including East Lake, Ozona, Crystal Beach and Highland Lakes, from its Westchase headquarters, with TV mounting from $89, drywall patches from $75 and small jobs from $49. Palm Harbor is unincorporated Pinellas County, so any permit for your job goes through Pinellas County, not a city hall, and we tell you up front if a job needs one.",
+    directAnswerBody: "Handyman Pros FL's local crew serves Palm Harbor, FL, including East Lake, Ozona, Crystal Beach and Highland Lakes, with TV mounting from $89, drywall patches from $75 and small jobs from $49. Palm Harbor is unincorporated Pinellas County, so any permit for your job goes through Pinellas County, not a city hall, and we tell you up front if a job needs one.",
     paragraphs: [
       `Call ${phone} for a Palm Harbor estimate. Licensed and insured. Hablamos español. Our crew serves Palm Harbor daily.`,
     ],
@@ -578,7 +580,7 @@ export const gbpCityHubs: TargetLocation[] = [
     zipHint: "33615",
     neighborhoods: ["Hillsborough Avenue", "Waters Avenue", "Memorial Highway", "Rocky Creek"],
     intro:
-      "Need a licensed Town 'N' Country handyman for fans, fixture swaps, and drywall? Hillsborough Avenue and Waters Avenue are close to our Westchase headquarters. Hablamos español.",
+      "Need a licensed Town 'N' Country handyman for fans, fixture swaps, and drywall? Our local crew serves Hillsborough Avenue and Waters Avenue. Hablamos español.",
     directAnswer: `Handyman Pros Florida serves Town 'N' Country with handyman repairs for ceiling fans, fixture swaps, and drywall along Hillsborough Avenue, Waters Avenue, and Memorial Highway. Rocky Creek is a short trip from the Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Town 'N' Country is an unincorporated Hillsborough community west of Tampa, along Hillsborough Avenue, Waters Avenue, and Memorial Highway. Many houses are older block ranches and townhomes with carports, original fans, and drywall that has been patched more than once.",
