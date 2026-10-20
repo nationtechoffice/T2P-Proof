@@ -119,6 +119,9 @@ export default function LocationsIndexPage() {
               </Link>{" "}
               are their own hub — downtown sills, Walden Lake boards, and Knights Griffin lines — not a copy of Brandon or Riverview.
             </p>
+            <p className="mt-4 text-lg text-[hsl(var(--muted-foreground))]">
+              Our local crew also serves <Link href="/locations/ybor-city" className="font-medium text-[hsl(var(--primary))] hover:underline">Ybor City</Link>, <Link href="/locations/northdale" className="font-medium text-[hsl(var(--primary))] hover:underline">Northdale</Link> and <Link href="/locations/lake-magdalene" className="font-medium text-[hsl(var(--primary))] hover:underline">Lake Magdalene</Link> in Hillsborough; <Link href="/locations/east-lake" className="font-medium text-[hsl(var(--primary))] hover:underline">East Lake</Link> in Pinellas; and <Link href="/locations/trinity" className="font-medium text-[hsl(var(--primary))] hover:underline">Trinity</Link>, <Link href="/locations/hudson" className="font-medium text-[hsl(var(--primary))] hover:underline">Hudson</Link> and <Link href="/locations/dade-city" className="font-medium text-[hsl(var(--primary))] hover:underline">Dade City</Link> in Pasco.
+            </p>
           </div>
           <div className="mb-10">
             <HqDispatch />

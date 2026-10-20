@@ -1,0 +1,234 @@
+{
+ "path": "/locations/hudson",
+ "citySlug": "hudson",
+ "serviceSlug": "",
+ "title": "Handyman Hudson FL | Home Repairs | Handyman Pros FL",
+ "description": "Handyman services in Hudson, FL. Our insured crew serves Hudson for drywall, painting, TV mounting and repairs. Free estimates. (656) 205-3185.",
+ "h1": "Handyman in Hudson, FL",
+ "opening": "Our local crew serves Hudson. Handyman Pros FL is a licensed and insured team that handles drywall, painting, TV mounting, doors, fixtures and other home repairs in Hudson and nearby New Port Richey, Spring Hill, Port Richey and Holiday. Call (656) 205-3185.",
+ "noJob": "Small jobs are worth a call: one sticking door, a loose fence board or a shelf to hang. Our crew serves Hudson homeowners, landlords and businesses.",
+ "priceLine": "Free estimate, call or text for a price. Instant reply, 24/7 — always within 5 minutes.",
+ "chips": [
+  "Licensed & insured",
+  "Free estimates on all jobs",
+  "Pasco County"
+ ],
+ "cityName": "Hudson",
+ "cityLabel": "Hudson, FL",
+ "hubPath": "/locations/hudson",
+ "serviceLabel": "",
+ "sections": [
+  {
+   "h2": "Handyman work in Hudson",
+   "paras": [
+    "Hudson is a coastal Pasco community with many retirees, older concrete block homes, and manufactured homes.",
+    "[Grab bars](/services/grab-bar-installation) and safety updates are common here, anchored properly into block walls. Our crew also repairs screen rooms and [lanai panels](/services/lanai-screen-repair), removes popcorn ceilings after an asbestos test, swaps fixtures, and fixes doors and hardware worn by salt air."
+   ]
+  }
+ ],
+ "areasTitle": "Hudson areas and ZIPs we cover",
+ "areas": [
+  "Coastal Hudson neighborhoods",
+  "Hudson Beach area",
+  "Nearby New Port Richey, Spring Hill, Port Richey and Holiday"
+ ],
+ "zips": "34667, 34669",
+ "nearby": [
+  [
+   "/locations/new-port-richey-fl",
+   "New Port Richey"
+  ],
+  [
+   "/locations/spring-hill",
+   "Spring Hill"
+  ],
+  [
+   "/locations/holiday",
+   "Holiday"
+  ]
+ ],
+ "relatedTitle": "Related services",
+ "related": [
+  [
+   "/services/grab-bar-installation",
+   "Grab bar installation"
+  ],
+  [
+   "/services/lanai-screen-repair",
+   "Lanai screen repair"
+  ],
+  [
+   "/services/popcorn-ceiling-removal",
+   "Popcorn ceiling removal"
+  ],
+  [
+   "/services/door-repair",
+   "Door repair"
+  ],
+  [
+   "/services/plumbing-fixture-repair",
+   "Faucets and toilets"
+  ],
+  [
+   "/services/electrical-fixture-installation",
+   "Light fixtures"
+  ]
+ ],
+ "formTitle": "Get a free Hudson estimate",
+ "faqTitle": "Handyman in Hudson FAQ",
+ "faqs": [
+  {
+   "question": "Do you offer handyman services in Hudson?",
+   "answer": "Yes. Our crew serves Hudson, FL, and nearby New Port Richey, Spring Hill, Port Richey and Holiday with drywall repair, painting, TV mounting, door repair, fixture swaps and more."
+  },
+  {
+   "question": "How much does a handyman cost in Hudson?",
+   "answer": "Free estimate, call or text for a price."
+  },
+  {
+   "question": "What handyman jobs are common in Hudson homes?",
+   "answer": "Hudson homes often need grab bars anchored into block walls, screen room panels, door and hardware repairs and fixture swaps."
+  },
+  {
+   "question": "Is Handyman Pros FL insured?",
+   "answer": "Yes. Handyman Pros FL is an insured handyman team serving Hillsborough, Pinellas and Pasco counties."
+  },
+  {
+   "question": "Do you work on businesses and rentals in Hudson?",
+   "answer": "Yes. Our crew handles commercial repairs and rental turnovers in Hudson."
+  },
+  {
+   "question": "How do I get a quote?",
+   "answer": "Call (656) 205-3185 or use the contact form with a few photos, and our team will send a free quote."
+  },
+  {
+   "question": "How fast does Handyman Pros FL reply?",
+   "answer": "Instant reply, 24/7 — always within 5 minutes."
+  }
+ ],
+ "schema": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://handymanprosflorida.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Locations",
+     "item": "https://handymanprosflorida.com/locations"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Hudson, FL",
+     "item": "https://handymanprosflorida.com/locations/hudson"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "@id": "https://handymanprosflorida.com/locations/hudson#service",
+   "name": "Handyman service in Hudson, FL",
+   "serviceType": "Handyman",
+   "url": "https://handymanprosflorida.com/locations/hudson",
+   "provider": {
+    "@id": "https://handymanprosflorida.com/#organization"
+   },
+   "areaServed": [
+    {
+     "@type": "Place",
+     "name": "Hudson, FL"
+    },
+    {
+     "@type": "AdministrativeArea",
+     "name": "Pasco County, FL"
+    },
+    {
+     "@type": "PostalCodeSpecification",
+     "postalCode": "34667",
+     "addressCountry": "US"
+    },
+    {
+     "@type": "PostalCodeSpecification",
+     "postalCode": "34669",
+     "addressCountry": "US"
+    }
+   ],
+   "offers": {
+    "@type": "Offer",
+    "url": "https://handymanprosflorida.com/locations/hudson",
+    "description": "Free estimate, call or text for a price"
+   }
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "@id": "https://handymanprosflorida.com/locations/hudson#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Do you offer handyman services in Hudson?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Our crew serves Hudson, FL, and nearby New Port Richey, Spring Hill, Port Richey and Holiday with drywall repair, painting, TV mounting, door repair, fixture swaps and more."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much does a handyman cost in Hudson?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Free estimate, call or text for a price."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What handyman jobs are common in Hudson homes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hudson homes often need grab bars anchored into block walls, screen room panels, door and hardware repairs and fixture swaps."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Handyman Pros FL insured?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Handyman Pros FL is an insured handyman team serving Hillsborough, Pinellas and Pasco counties."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you work on businesses and rentals in Hudson?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Our crew handles commercial repairs and rental turnovers in Hudson."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I get a quote?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Call (656) 205-3185 or use the contact form with a few photos, and our team will send a free quote."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How fast does Handyman Pros FL reply?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Instant reply, 24/7 — always within 5 minutes."
+     }
+    }
+   ]
+  }
+ ]
+}

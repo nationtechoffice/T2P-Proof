@@ -1,0 +1,233 @@
+{
+ "path": "/locations/trinity",
+ "citySlug": "trinity",
+ "serviceSlug": "",
+ "title": "Handyman Trinity FL | Home Repairs | Handyman Pros FL",
+ "description": "Handyman services in Trinity, FL. Our insured crew serves Trinity for drywall, painting, TV mounting and repairs. Free estimates. (656) 205-3185.",
+ "h1": "Handyman in Trinity, FL",
+ "opening": "Our local crew serves Trinity. Handyman Pros FL is a licensed and insured team that handles drywall, painting, TV mounting, doors, fixtures and other home repairs in Trinity and nearby Odessa, New Port Richey, Holiday and Land O' Lakes. Call (656) 205-3185.",
+ "noJob": "Small jobs are worth a call: one sticking door, a loose fence board or a shelf to hang. Our crew serves Trinity homeowners, landlords and businesses.",
+ "priceLine": "Free estimate, call or text for a price. Instant reply, 24/7 — always within 5 minutes.",
+ "chips": [
+  "Licensed & insured",
+  "Free estimates on all jobs",
+  "Pasco County"
+ ],
+ "cityName": "Trinity",
+ "cityLabel": "Trinity, FL",
+ "hubPath": "/locations/trinity",
+ "serviceLabel": "",
+ "sections": [
+  {
+   "h2": "Handyman work in Trinity",
+   "paras": [
+    "Trinity is a newer master-planned area in west Pasco, with golf and HOA communities. Our crew helps Trinity homeowners keep homes ready for HOA checks.",
+    "Common jobs include exterior touch-ups, [pressure washing](/services/pressure-washing) driveways, [lanai screen](/services/lanai-screen-repair) panels, TV mounting and furniture assembly in newer homes, plus drywall nail pops and small settling cracks."
+   ]
+  }
+ ],
+ "areasTitle": "Trinity areas and ZIPs we cover",
+ "areas": [
+  "Trinity master-planned and golf communities",
+  "HOA neighborhoods along State Road 54",
+  "Nearby Odessa, New Port Richey, Holiday and Land O' Lakes"
+ ],
+ "zips": "34655",
+ "nearby": [
+  [
+   "/locations/odessa-fl",
+   "Odessa"
+  ],
+  [
+   "/locations/new-port-richey-fl",
+   "New Port Richey"
+  ],
+  [
+   "/locations/holiday",
+   "Holiday"
+  ],
+  [
+   "/locations/land-o-lakes",
+   "Land O' Lakes"
+  ]
+ ],
+ "relatedTitle": "Related services",
+ "related": [
+  [
+   "/services/lanai-screen-repair",
+   "Lanai screen repair"
+  ],
+  [
+   "/services/pressure-washing",
+   "Pressure washing"
+  ],
+  [
+   "/services/tv-wall-mounting",
+   "TV wall mounting"
+  ],
+  [
+   "/services/furniture-assembly",
+   "Furniture assembly"
+  ],
+  [
+   "/services/drywall-repair",
+   "Drywall repair"
+  ],
+  [
+   "/services/painting",
+   "Painting"
+  ]
+ ],
+ "formTitle": "Get a free Trinity estimate",
+ "faqTitle": "Handyman in Trinity FAQ",
+ "faqs": [
+  {
+   "question": "Do you offer handyman services in Trinity?",
+   "answer": "Yes. Our crew serves Trinity, FL, and nearby Odessa, New Port Richey, Holiday and Land O' Lakes with drywall repair, painting, TV mounting, door repair, fixture swaps and more."
+  },
+  {
+   "question": "How much does a handyman cost in Trinity?",
+   "answer": "Free estimate, call or text for a price."
+  },
+  {
+   "question": "What handyman jobs are common in Trinity homes?",
+   "answer": "Trinity's newer homes often need lanai screen panels, drywall nail pops, TV mounting and HOA-ready exterior touch-ups."
+  },
+  {
+   "question": "Is Handyman Pros FL insured?",
+   "answer": "Yes. Handyman Pros FL is an insured handyman team serving Hillsborough, Pinellas and Pasco counties."
+  },
+  {
+   "question": "Do you work on businesses and rentals in Trinity?",
+   "answer": "Yes. Our crew handles commercial repairs and rental turnovers in Trinity."
+  },
+  {
+   "question": "How do I get a quote?",
+   "answer": "Call (656) 205-3185 or use the contact form with a few photos, and our team will send a free quote."
+  },
+  {
+   "question": "How fast does Handyman Pros FL reply?",
+   "answer": "Instant reply, 24/7 — always within 5 minutes."
+  }
+ ],
+ "schema": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://handymanprosflorida.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Locations",
+     "item": "https://handymanprosflorida.com/locations"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Trinity, FL",
+     "item": "https://handymanprosflorida.com/locations/trinity"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "@id": "https://handymanprosflorida.com/locations/trinity#service",
+   "name": "Handyman service in Trinity, FL",
+   "serviceType": "Handyman",
+   "url": "https://handymanprosflorida.com/locations/trinity",
+   "provider": {
+    "@id": "https://handymanprosflorida.com/#organization"
+   },
+   "areaServed": [
+    {
+     "@type": "Place",
+     "name": "Trinity, FL"
+    },
+    {
+     "@type": "AdministrativeArea",
+     "name": "Pasco County, FL"
+    },
+    {
+     "@type": "PostalCodeSpecification",
+     "postalCode": "34655",
+     "addressCountry": "US"
+    }
+   ],
+   "offers": {
+    "@type": "Offer",
+    "url": "https://handymanprosflorida.com/locations/trinity",
+    "description": "Free estimate, call or text for a price"
+   }
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "@id": "https://handymanprosflorida.com/locations/trinity#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Do you offer handyman services in Trinity?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Our crew serves Trinity, FL, and nearby Odessa, New Port Richey, Holiday and Land O' Lakes with drywall repair, painting, TV mounting, door repair, fixture swaps and more."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much does a handyman cost in Trinity?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Free estimate, call or text for a price."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What handyman jobs are common in Trinity homes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Trinity's newer homes often need lanai screen panels, drywall nail pops, TV mounting and HOA-ready exterior touch-ups."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Handyman Pros FL insured?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Handyman Pros FL is an insured handyman team serving Hillsborough, Pinellas and Pasco counties."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you work on businesses and rentals in Trinity?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Our crew handles commercial repairs and rental turnovers in Trinity."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I get a quote?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Call (656) 205-3185 or use the contact form with a few photos, and our team will send a free quote."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How fast does Handyman Pros FL reply?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Instant reply, 24/7 — always within 5 minutes."
+     }
+    }
+   ]
+  }
+ ]
+}

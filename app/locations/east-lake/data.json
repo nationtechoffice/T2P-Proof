@@ -1,0 +1,238 @@
+{
+ "path": "/locations/east-lake",
+ "citySlug": "east-lake",
+ "serviceSlug": "",
+ "title": "Handyman East Lake FL | Home Repairs | Handyman Pros FL",
+ "description": "Handyman services in East Lake, FL. Our insured crew serves East Lake for drywall, painting, TV mounting and repairs. Free estimates. (656) 205-3185.",
+ "h1": "Handyman in East Lake, FL",
+ "opening": "Our local crew serves East Lake. Handyman Pros FL is a licensed and insured team that handles drywall, painting, TV mounting, doors, fixtures and other home repairs in East Lake and nearby Palm Harbor, Tarpon Springs, Oldsmar and Trinity. Call (656) 205-3185.",
+ "noJob": "Small jobs are worth a call: one sticking door, a loose fence board or a shelf to hang. Our crew serves East Lake homeowners, landlords and businesses.",
+ "priceLine": "Free estimate, call or text for a price. Instant reply, 24/7 — always within 5 minutes.",
+ "chips": [
+  "Licensed & insured",
+  "Free estimates on all jobs",
+  "Pinellas County"
+ ],
+ "cityName": "East Lake",
+ "cityLabel": "East Lake, FL",
+ "hubPath": "/locations/east-lake",
+ "serviceLabel": "",
+ "sections": [
+  {
+   "h2": "Handyman work in East Lake",
+   "paras": [
+    "East Lake, in north Pinellas near Lake Tarpon, has larger single-family homes in gated and HOA communities, and many have pool cages. For nearby west-side work, see our [Palm Harbor](/locations/palm-harbor-fl) page.",
+    "Our crew replaces torn [pool cage and lanai screen](/services/lanai-screen-repair) panels, [pressure washes](/services/pressure-washing) pavers and pool decks, mounts TVs, paints interiors and installs ceiling fans."
+   ]
+  }
+ ],
+ "areasTitle": "East Lake areas and ZIPs we cover",
+ "areas": [
+  "East Lake Tarpon communities",
+  "Gated and HOA neighborhoods along East Lake Road",
+  "Nearby Palm Harbor, Tarpon Springs, Oldsmar and Trinity"
+ ],
+ "zips": "34685, 34688",
+ "nearby": [
+  [
+   "/locations/palm-harbor-fl",
+   "Palm Harbor"
+  ],
+  [
+   "/locations/tarpon-springs-fl",
+   "Tarpon Springs"
+  ],
+  [
+   "/locations/oldsmar-fl",
+   "Oldsmar"
+  ],
+  [
+   "/locations/trinity",
+   "Trinity"
+  ]
+ ],
+ "relatedTitle": "Related services",
+ "related": [
+  [
+   "/services/lanai-screen-repair",
+   "Lanai screen repair"
+  ],
+  [
+   "/services/pressure-washing",
+   "Pressure washing"
+  ],
+  [
+   "/services/tv-wall-mounting",
+   "TV wall mounting"
+  ],
+  [
+   "/services/handyman/interior-painting",
+   "Interior painting"
+  ],
+  [
+   "/services/handyman/fan-installation",
+   "Ceiling fan installation"
+  ],
+  [
+   "/services/drywall-repair",
+   "Drywall repair"
+  ]
+ ],
+ "formTitle": "Get a free East Lake estimate",
+ "faqTitle": "Handyman in East Lake FAQ",
+ "faqs": [
+  {
+   "question": "Do you offer handyman services in East Lake?",
+   "answer": "Yes. Our crew serves East Lake, FL, and nearby Palm Harbor, Tarpon Springs, Oldsmar and Trinity with drywall repair, painting, TV mounting, door repair, fixture swaps and more."
+  },
+  {
+   "question": "How much does a handyman cost in East Lake?",
+   "answer": "Free estimate, call or text for a price."
+  },
+  {
+   "question": "What handyman jobs are common in East Lake homes?",
+   "answer": "East Lake homes often need pool cage screen panels, paver and pool deck pressure washing, TV mounting and interior painting."
+  },
+  {
+   "question": "Is Handyman Pros FL insured?",
+   "answer": "Yes. Handyman Pros FL is an insured handyman team serving Hillsborough, Pinellas and Pasco counties."
+  },
+  {
+   "question": "Do you work on businesses and rentals in East Lake?",
+   "answer": "Yes. Our crew handles commercial repairs and rental turnovers in East Lake."
+  },
+  {
+   "question": "How do I get a quote?",
+   "answer": "Call (656) 205-3185 or use the contact form with a few photos, and our team will send a free quote."
+  },
+  {
+   "question": "How fast does Handyman Pros FL reply?",
+   "answer": "Instant reply, 24/7 — always within 5 minutes."
+  }
+ ],
+ "schema": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://handymanprosflorida.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Locations",
+     "item": "https://handymanprosflorida.com/locations"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "East Lake, FL",
+     "item": "https://handymanprosflorida.com/locations/east-lake"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "@id": "https://handymanprosflorida.com/locations/east-lake#service",
+   "name": "Handyman service in East Lake, FL",
+   "serviceType": "Handyman",
+   "url": "https://handymanprosflorida.com/locations/east-lake",
+   "provider": {
+    "@id": "https://handymanprosflorida.com/#organization"
+   },
+   "areaServed": [
+    {
+     "@type": "Place",
+     "name": "East Lake, FL"
+    },
+    {
+     "@type": "AdministrativeArea",
+     "name": "Pinellas County, FL"
+    },
+    {
+     "@type": "PostalCodeSpecification",
+     "postalCode": "34685",
+     "addressCountry": "US"
+    },
+    {
+     "@type": "PostalCodeSpecification",
+     "postalCode": "34688",
+     "addressCountry": "US"
+    }
+   ],
+   "offers": {
+    "@type": "Offer",
+    "url": "https://handymanprosflorida.com/locations/east-lake",
+    "description": "Free estimate, call or text for a price"
+   }
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "@id": "https://handymanprosflorida.com/locations/east-lake#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Do you offer handyman services in East Lake?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Our crew serves East Lake, FL, and nearby Palm Harbor, Tarpon Springs, Oldsmar and Trinity with drywall repair, painting, TV mounting, door repair, fixture swaps and more."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much does a handyman cost in East Lake?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Free estimate, call or text for a price."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What handyman jobs are common in East Lake homes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "East Lake homes often need pool cage screen panels, paver and pool deck pressure washing, TV mounting and interior painting."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Handyman Pros FL insured?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Handyman Pros FL is an insured handyman team serving Hillsborough, Pinellas and Pasco counties."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you work on businesses and rentals in East Lake?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Our crew handles commercial repairs and rental turnovers in East Lake."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I get a quote?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Call (656) 205-3185 or use the contact form with a few photos, and our team will send a free quote."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How fast does Handyman Pros FL reply?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Instant reply, 24/7 — always within 5 minutes."
+     }
+    }
+   ]
+  }
+ ]
+}

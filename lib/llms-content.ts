@@ -112,6 +112,13 @@ ${link("Drywall Repair in New Port Richey FL", "/locations/new-port-richey-fl/dr
 ${link("Handyman Odessa FL", "/locations/odessa-fl", "Service area our local crew serves.")}
 ${link("Drywall Repair in Palm Harbor FL", "/locations/palm-harbor-fl/drywall-repair", "City service page. Free estimate, call or text for a price.")}
 ${link("Handyman South Tampa FL", "/locations/south-tampa", "Service area our local crew serves.")}
+${link("Handyman Ybor City FL", "/locations/ybor-city", "Service area our local crew serves.")}
+${link("Handyman Trinity FL", "/locations/trinity", "Service area our local crew serves.")}
+${link("Handyman Northdale FL", "/locations/northdale", "Service area our local crew serves.")}
+${link("Handyman Lake Magdalene FL", "/locations/lake-magdalene", "Service area our local crew serves.")}
+${link("Handyman East Lake FL", "/locations/east-lake", "Service area our local crew serves.")}
+${link("Handyman Hudson FL", "/locations/hudson", "Service area our local crew serves.")}
+${link("Handyman Dade City FL", "/locations/dade-city", "Service area our local crew serves.")}
 ${link("Door Repair in St Petersburg FL", "/locations/st-petersburg/door-repair", "City service page. Free estimate, call or text for a price.")}
 ${link("Drywall Repair in St Petersburg FL", "/locations/st-petersburg/drywall-repair", "City service page. Free estimate, call or text for a price.")}
 ${link("Drywall Repair in Wesley Chapel FL", "/locations/wesley-chapel/drywall-repair", "City service page. Free estimate, call or text for a price.")}

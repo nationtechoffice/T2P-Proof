@@ -112,6 +112,13 @@ export function getAllSiteUrls(): string[] {
     `${baseUrl}/locations/zephyrhills-fl`,
     `${baseUrl}/locations/odessa-fl`,
     `${baseUrl}/locations/south-tampa`,
+    `${baseUrl}/locations/ybor-city`,
+    `${baseUrl}/locations/trinity`,
+    `${baseUrl}/locations/northdale`,
+    `${baseUrl}/locations/lake-magdalene`,
+    `${baseUrl}/locations/east-lake`,
+    `${baseUrl}/locations/hudson`,
+    `${baseUrl}/locations/dade-city`,
     ...cityServicePages.map((p) => `${baseUrl}${p.path}`),
   ];
 

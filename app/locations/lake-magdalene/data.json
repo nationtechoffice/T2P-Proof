@@ -1,0 +1,235 @@
+{
+ "path": "/locations/lake-magdalene",
+ "citySlug": "lake-magdalene",
+ "serviceSlug": "",
+ "title": "Handyman Lake Magdalene FL | Home Repairs | Handyman Pros FL",
+ "description": "Handyman services in Lake Magdalene, FL. Our insured crew serves Lake Magdalene for drywall, painting, TV mounting and repairs. Free estimates. (656) 205-3185.",
+ "h1": "Handyman in Lake Magdalene, FL",
+ "opening": "Our local crew serves Lake Magdalene. Handyman Pros FL is a licensed and insured team that handles drywall, painting, TV mounting, doors, fixtures and other home repairs in Lake Magdalene and nearby Carrollwood, Temple Terrace, Lutz and North Tampa. Call (656) 205-3185.",
+ "noJob": "Small jobs are worth a call: one sticking door, a loose fence board or a shelf to hang. Our crew serves Lake Magdalene homeowners, landlords and businesses.",
+ "priceLine": "Free estimate, call or text for a price. Instant reply, 24/7 — always within 5 minutes.",
+ "chips": [
+  "Licensed & insured",
+  "Free estimates on all jobs",
+  "Hillsborough County"
+ ],
+ "cityName": "Lake Magdalene",
+ "cityLabel": "Lake Magdalene, FL",
+ "hubPath": "/locations/lake-magdalene",
+ "serviceLabel": "",
+ "sections": [
+  {
+   "h2": "Handyman work in Lake Magdalene",
+   "paras": [
+    "Lake Magdalene is an established area of north [Tampa](/locations/tampa) with mid-century and 1970s ranch homes on wooded lots.",
+    "Tree cover and humidity lead to [wood rot](/services/soffit-fascia-repair) on fascia and trim. Many homes still have popcorn ceilings, which need an asbestos test first. Long-time residents often ask for [grab bars](/services/grab-bar-installation) so they can stay in their homes safely. Our crew also handles drywall, door and fence repairs."
+   ]
+  }
+ ],
+ "areasTitle": "Lake Magdalene areas and ZIPs we cover",
+ "areas": [
+  "Lake Magdalene neighborhoods on wooded lots",
+  "Areas around Lake Magdalene and Lake Carroll",
+  "Nearby Carrollwood, Temple Terrace, Lutz and North Tampa"
+ ],
+ "zips": "33612, 33613, 33618",
+ "nearby": [
+  [
+   "/locations/carrollwood",
+   "Carrollwood"
+  ],
+  [
+   "/locations/tampa",
+   "Tampa"
+  ]
+ ],
+ "relatedTitle": "Related services",
+ "related": [
+  [
+   "/services/soffit-fascia-repair",
+   "Soffit, fascia and wood rot repair"
+  ],
+  [
+   "/services/popcorn-ceiling-removal",
+   "Popcorn ceiling removal"
+  ],
+  [
+   "/services/grab-bar-installation",
+   "Grab bar installation"
+  ],
+  [
+   "/services/drywall-repair",
+   "Drywall repair"
+  ],
+  [
+   "/services/door-repair",
+   "Door repair"
+  ],
+  [
+   "/services/fence/fence-repairs-maintenance",
+   "Fence repairs"
+  ]
+ ],
+ "formTitle": "Get a free Lake Magdalene estimate",
+ "faqTitle": "Handyman in Lake Magdalene FAQ",
+ "faqs": [
+  {
+   "question": "Do you offer handyman services in Lake Magdalene?",
+   "answer": "Yes. Our crew serves Lake Magdalene, FL, and nearby Carrollwood, Temple Terrace, Lutz and North Tampa with drywall repair, painting, TV mounting, door repair, fixture swaps and more."
+  },
+  {
+   "question": "How much does a handyman cost in Lake Magdalene?",
+   "answer": "Free estimate, call or text for a price."
+  },
+  {
+   "question": "What handyman jobs are common in Lake Magdalene homes?",
+   "answer": "Lake Magdalene's established homes often need fascia and trim rot repair, popcorn ceiling removal after asbestos testing, grab bars and door repairs."
+  },
+  {
+   "question": "Is Handyman Pros FL insured?",
+   "answer": "Yes. Handyman Pros FL is an insured handyman team serving Hillsborough, Pinellas and Pasco counties."
+  },
+  {
+   "question": "Do you work on businesses and rentals in Lake Magdalene?",
+   "answer": "Yes. Our crew handles commercial repairs and rental turnovers in Lake Magdalene."
+  },
+  {
+   "question": "How do I get a quote?",
+   "answer": "Call (656) 205-3185 or use the contact form with a few photos, and our team will send a free quote."
+  },
+  {
+   "question": "How fast does Handyman Pros FL reply?",
+   "answer": "Instant reply, 24/7 — always within 5 minutes."
+  }
+ ],
+ "schema": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://handymanprosflorida.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Locations",
+     "item": "https://handymanprosflorida.com/locations"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Lake Magdalene, FL",
+     "item": "https://handymanprosflorida.com/locations/lake-magdalene"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "@id": "https://handymanprosflorida.com/locations/lake-magdalene#service",
+   "name": "Handyman service in Lake Magdalene, FL",
+   "serviceType": "Handyman",
+   "url": "https://handymanprosflorida.com/locations/lake-magdalene",
+   "provider": {
+    "@id": "https://handymanprosflorida.com/#organization"
+   },
+   "areaServed": [
+    {
+     "@type": "Place",
+     "name": "Lake Magdalene, FL"
+    },
+    {
+     "@type": "AdministrativeArea",
+     "name": "Hillsborough County, FL"
+    },
+    {
+     "@type": "PostalCodeSpecification",
+     "postalCode": "33612",
+     "addressCountry": "US"
+    },
+    {
+     "@type": "PostalCodeSpecification",
+     "postalCode": "33613",
+     "addressCountry": "US"
+    },
+    {
+     "@type": "PostalCodeSpecification",
+     "postalCode": "33618",
+     "addressCountry": "US"
+    }
+   ],
+   "offers": {
+    "@type": "Offer",
+    "url": "https://handymanprosflorida.com/locations/lake-magdalene",
+    "description": "Free estimate, call or text for a price"
+   }
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "@id": "https://handymanprosflorida.com/locations/lake-magdalene#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Do you offer handyman services in Lake Magdalene?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Our crew serves Lake Magdalene, FL, and nearby Carrollwood, Temple Terrace, Lutz and North Tampa with drywall repair, painting, TV mounting, door repair, fixture swaps and more."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much does a handyman cost in Lake Magdalene?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Free estimate, call or text for a price."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What handyman jobs are common in Lake Magdalene homes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Lake Magdalene's established homes often need fascia and trim rot repair, popcorn ceiling removal after asbestos testing, grab bars and door repairs."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Handyman Pros FL insured?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Handyman Pros FL is an insured handyman team serving Hillsborough, Pinellas and Pasco counties."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you work on businesses and rentals in Lake Magdalene?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Our crew handles commercial repairs and rental turnovers in Lake Magdalene."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I get a quote?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Call (656) 205-3185 or use the contact form with a few photos, and our team will send a free quote."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How fast does Handyman Pros FL reply?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Instant reply, 24/7 — always within 5 minutes."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,232 @@
+{
+ "path": "/locations/ybor-city",
+ "citySlug": "ybor-city",
+ "serviceSlug": "",
+ "title": "Handyman Ybor City FL | Home Repairs | Handyman Pros FL",
+ "description": "Handyman services in Ybor City, FL. Our insured crew serves Ybor City for drywall, painting, TV mounting and repairs. Free estimates. (656) 205-3185.",
+ "h1": "Handyman in Ybor City, FL",
+ "opening": "Our local crew serves Ybor City. Handyman Pros FL is a licensed and insured team that handles drywall, painting, TV mounting, doors, fixtures and other home repairs in Ybor City and nearby Downtown Tampa, Tampa Heights, Channelside and Seminole Heights. Call (656) 205-3185.",
+ "noJob": "Small jobs are worth a call: one sticking door, a loose fence board or a shelf to hang. Our crew serves Ybor City homeowners, landlords and businesses.",
+ "priceLine": "Free estimate, call or text for a price. Instant reply, 24/7 — always within 5 minutes.",
+ "chips": [
+  "Licensed & insured",
+  "Free estimates on all jobs",
+  "Hillsborough County"
+ ],
+ "cityName": "Ybor City",
+ "cityLabel": "Ybor City, FL",
+ "hubPath": "/locations/ybor-city",
+ "serviceLabel": "",
+ "sections": [
+  {
+   "h2": "Handyman work in Ybor City",
+   "paras": [
+    "Ybor City, just east of downtown [Tampa](/locations/tampa), mixes historic brick buildings, cigar-era casitas and newer lofts and condos. That mix shapes the work our crew sees most.",
+    "Older homes need plaster and drywall patches and careful door and hardware repairs. Lofts and condos often need TV mounts set into brick or concrete with the right masonry anchors. Porches and trim need paint that stands up to Florida sun.",
+    "Shops and restaurants along 7th Avenue call us for small [commercial repairs](/services/commercial-handyman). Condo and HOA buildings often have their own work rules, so tell us about them when you ask for a quote."
+   ]
+  }
+ ],
+ "areasTitle": "Ybor City areas and ZIPs we cover",
+ "areas": [
+  "Historic Ybor City district",
+  "7th Avenue (La Septima) corridor",
+  "East Ybor",
+  "Ybor Heights",
+  "Nearby Downtown Tampa, Tampa Heights, Channelside and Seminole Heights"
+ ],
+ "zips": "33605",
+ "nearby": [
+  [
+   "/locations/tampa",
+   "Tampa"
+  ],
+  [
+   "/locations/south-tampa",
+   "South Tampa"
+  ]
+ ],
+ "relatedTitle": "Related services",
+ "related": [
+  [
+   "/services/drywall-repair",
+   "Drywall repair"
+  ],
+  [
+   "/services/painting",
+   "Painting"
+  ],
+  [
+   "/services/tv-wall-mounting",
+   "TV wall mounting"
+  ],
+  [
+   "/services/door-repair",
+   "Door repair"
+  ],
+  [
+   "/services/electrical-fixture-installation",
+   "Light fixtures"
+  ],
+  [
+   "/services/plumbing-fixture-repair",
+   "Faucets and toilets"
+  ],
+  [
+   "/services/commercial-handyman",
+   "Commercial handyman"
+  ]
+ ],
+ "formTitle": "Get a free Ybor City estimate",
+ "faqTitle": "Handyman in Ybor City FAQ",
+ "faqs": [
+  {
+   "question": "Do you offer handyman services in Ybor City?",
+   "answer": "Yes. Our crew serves Ybor City, FL, and nearby Downtown Tampa, Tampa Heights, Channelside and Seminole Heights with drywall repair, painting, TV mounting, door repair, fixture swaps and more."
+  },
+  {
+   "question": "How much does a handyman cost in Ybor City?",
+   "answer": "Free estimate, call or text for a price."
+  },
+  {
+   "question": "What handyman jobs are common in Ybor City homes?",
+   "answer": "Ybor City homes often need plaster and drywall patching, door and hardware fixes in older houses, and TV mounting on brick or concrete walls in lofts and condos."
+  },
+  {
+   "question": "Is Handyman Pros FL insured?",
+   "answer": "Yes. Handyman Pros FL is an insured handyman team serving Hillsborough, Pinellas and Pasco counties."
+  },
+  {
+   "question": "Do you work on businesses and rentals in Ybor City?",
+   "answer": "Yes. Our crew handles commercial repairs and rental turnovers in Ybor City."
+  },
+  {
+   "question": "How do I get a quote?",
+   "answer": "Call (656) 205-3185 or use the contact form with a few photos, and our team will send a free quote."
+  },
+  {
+   "question": "How fast does Handyman Pros FL reply?",
+   "answer": "Instant reply, 24/7 — always within 5 minutes."
+  }
+ ],
+ "schema": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://handymanprosflorida.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Locations",
+     "item": "https://handymanprosflorida.com/locations"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Ybor City, FL",
+     "item": "https://handymanprosflorida.com/locations/ybor-city"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "@id": "https://handymanprosflorida.com/locations/ybor-city#service",
+   "name": "Handyman service in Ybor City, FL",
+   "serviceType": "Handyman",
+   "url": "https://handymanprosflorida.com/locations/ybor-city",
+   "provider": {
+    "@id": "https://handymanprosflorida.com/#organization"
+   },
+   "areaServed": [
+    {
+     "@type": "Place",
+     "name": "Ybor City, FL"
+    },
+    {
+     "@type": "AdministrativeArea",
+     "name": "Hillsborough County, FL"
+    },
+    {
+     "@type": "PostalCodeSpecification",
+     "postalCode": "33605",
+     "addressCountry": "US"
+    }
+   ],
+   "offers": {
+    "@type": "Offer",
+    "url": "https://handymanprosflorida.com/locations/ybor-city",
+    "description": "Free estimate, call or text for a price"
+   }
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "@id": "https://handymanprosflorida.com/locations/ybor-city#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Do you offer handyman services in Ybor City?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Our crew serves Ybor City, FL, and nearby Downtown Tampa, Tampa Heights, Channelside and Seminole Heights with drywall repair, painting, TV mounting, door repair, fixture swaps and more."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much does a handyman cost in Ybor City?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Free estimate, call or text for a price."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What handyman jobs are common in Ybor City homes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ybor City homes often need plaster and drywall patching, door and hardware fixes in older houses, and TV mounting on brick or concrete walls in lofts and condos."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Handyman Pros FL insured?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Handyman Pros FL is an insured handyman team serving Hillsborough, Pinellas and Pasco counties."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you work on businesses and rentals in Ybor City?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Our crew handles commercial repairs and rental turnovers in Ybor City."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I get a quote?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Call (656) 205-3185 or use the contact form with a few photos, and our team will send a free quote."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How fast does Handyman Pros FL reply?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Instant reply, 24/7 — always within 5 minutes."
+     }
+    }
+   ]
+  }
+ ]
+}
