@@ -72,6 +72,27 @@ const fencePageFaqs = [
     answer: "Instant reply, 24/7 — always within 5 minutes.",
   },
 ];
+/** /services/handyman FAQ: visible on the page and mirrored in FAQPage schema (add-only). */
+const handymanPageFaqs = [
+  {
+    question: "What handyman services do you offer in Tampa?",
+    answer:
+      "Our local crew handles drywall repair, TV mounting, tile and flooring installation, furniture assembly, ceiling fans, fence repair, doors, and general home repairs across Tampa Bay.",
+  },
+  {
+    question: "How much does a handyman cost in Tampa?",
+    answer: "Free estimate, call or text for a price.",
+  },
+  {
+    question: "How fast do you reply to a handyman request?",
+    answer: "Instant reply, 24/7 — always within 5 minutes.",
+  },
+  {
+    question: "Are you licensed and insured?",
+    answer: "Yes. Handyman Pros Florida is a licensed and insured team serving Tampa Bay homeowners.",
+  },
+];
+
 export function generateStaticParams() {
   return [
     ...validCategories.map((category) => ({ category })),
@@ -152,6 +173,23 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                   offer: fenceHandymanService.offer,
                 }),
                 faqSchema(fencePageFaqs),
+              ]
+            : []),
+          ...(cat === "handyman"
+            ? [
+                (({ hoursAvailable: _hours, ...schema }) => schema)(
+                  serviceSchema({
+                    name: "Handyman services",
+                    description:
+                      "Handyman services from our local crew: drywall repair, TV mounting, tile and flooring installation, furniture assembly, ceiling fans, fence repair, doors, and general home repairs.",
+                    url: `${siteConfig.url}/services/handyman`,
+                    category: "Handyman",
+                    serviceType: "Handyman services",
+                    areaName: "Tampa, FL",
+                    offer: { description: "Free estimate, call or text for a price" },
+                  })
+                ),
+                faqSchema(handymanPageFaqs),
               ]
             : []),
           ...(cat === "painting"
@@ -299,6 +337,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         </div>
       </section>
       {cat === "fence" ? <FAQSection faqs={fencePageFaqs} title="Fence Handyman FAQs" /> : null}
+      {cat === "handyman" ? <FAQSection faqs={handymanPageFaqs} title="Handyman FAQs" /> : null}
       {cat === "painting" ? <FAQSection faqs={paintingFaqs} title="Painting FAQs" /> : null}
       <section className="section-padding pt-0">
         <div className="container-site">
