@@ -51,7 +51,7 @@ export function localBusinessSchema() {
       `${siteConfig.url}/images/handyman-pros-florida-og.png`,
       ...heroStory.stills.map((image) => `${siteConfig.url}${image.webp}`),
       ...galleryImages.map((image) => `${siteConfig.url}${optimizedStill(image.src)?.webp ?? image.src}`),
-      ...recentWorkPhotos.map((photo) => `${siteConfig.url}${photo.webp}`),
+      ...recentWorkPhotos.filter((photo) => !photo.skipOrgSchemaImage).map((photo) => `${siteConfig.url}${photo.webp}`),
     ],
     description: instantEstimate.schemaDescription,
     telephone: schemaPhone,

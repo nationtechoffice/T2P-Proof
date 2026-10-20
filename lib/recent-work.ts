@@ -18,6 +18,8 @@ export interface RecentWorkPhoto {
   linkLabel?: string;
   /** Show on /work only, not in the homepage recent-work strip. */
   workPageOnly?: boolean;
+  /** Keep out of the sitewide LocalBusiness image list (so other pages stay unchanged). */
+  skipOrgSchemaImage?: boolean;
 }
 
 /**
@@ -26,6 +28,22 @@ export interface RecentWorkPhoto {
  * photos use the auditor alt text verbatim. Oct 18 job photos lead the list.
  */
 export const recentWorkPhotos: RecentWorkPhoto[] = [
+  {
+    slug: "patio-roof-tampa",
+    webp: "/images/work/handyman-pros-florida-tampa-patio-roof-01.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-patio-roof-01.avif",
+    thumb: "/images/work/handyman-pros-florida-tampa-patio-roof-01-thumb.webp",
+    jpg: "/images/work/handyman-pros-florida-tampa-patio-roof-01.jpg",
+    width: 1600,
+    height: 1200,
+    thumbWidth: 640,
+    thumbHeight: 480,
+    alt: "Patio roof built by Handyman Pros FL crew in Tampa, FL — metal roof panels going on over new wood rafters",
+    caption: "Patio roof build in Tampa: new wood rafters framed and metal roof panels fastened by our local crew.",
+    href: "/services/handyman/general-construction",
+    linkLabel: "General construction",
+    skipOrgSchemaImage: true,
+  },
   {
     slug: "bathroom-plumbing-drywall-repair",
     webp: "/images/work/handyman-pros-florida-tampa-bay-bathroom-plumbing-drywall-repair.webp",

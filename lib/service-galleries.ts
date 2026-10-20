@@ -266,6 +266,22 @@ const electricalGallery: ServicePhoto[] = [
   },
 ];
 
+const patioRoofGallery: ServicePhoto[] = [
+  {
+    src: "/images/work/handyman-pros-florida-tampa-patio-roof-01.jpg",
+    alt: "Patio roof built by Handyman Pros FL crew in Tampa, FL — metal roof panels going on over new wood rafters",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-patio-roof-02.jpg",
+    alt: "Handyman Pros FL crew member fastening corrugated roof panels on a patio roof in Tampa, FL",
+  },
+  {
+    src: "/images/work/handyman-pros-florida-tampa-patio-roof-03.jpg",
+    alt: "New wood rafter framing for a patio roof built by Handyman Pros FL crew in Tampa, FL",
+    portrait: true,
+  },
+];
+
 export function galleryForPage(categoryOrSlug: string, slug?: string): ServicePhoto[] {
   const key = slug ?? categoryOrSlug;
   const category = slug ? categoryOrSlug : undefined;
@@ -319,6 +335,7 @@ export function galleryForPage(categoryOrSlug: string, slug?: string): ServicePh
   }
   if (key === "door-repair") return [];
   if (key === "roof-repair") return roofGallery;
+  if (key === "general-construction") return patioRoofGallery;
   if (key === "fence" || key === "fence-handyman" || category === "fence") return fenceGallery;
   if (key.includes("tile")) return tileGallery;
   if (key === "painting" || category === "painting" || key.includes("paint")) return paintingGallery;
