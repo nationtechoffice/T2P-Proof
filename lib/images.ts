@@ -375,6 +375,24 @@ export const optimizedWorkStills = {
     width: 908,
     height: 1200,
   },
+  "/images/work/handyman-pros-florida-tampa-patio-roof-01.jpg": {
+    webp: "/images/work/handyman-pros-florida-tampa-patio-roof-01.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-patio-roof-01.avif",
+    width: 1600,
+    height: 1200,
+  },
+  "/images/work/handyman-pros-florida-tampa-patio-roof-02.jpg": {
+    webp: "/images/work/handyman-pros-florida-tampa-patio-roof-02.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-patio-roof-02.avif",
+    width: 1600,
+    height: 1200,
+  },
+  "/images/work/handyman-pros-florida-tampa-patio-roof-03.jpg": {
+    webp: "/images/work/handyman-pros-florida-tampa-patio-roof-03.webp",
+    avif: "/images/work/handyman-pros-florida-tampa-patio-roof-03.avif",
+    width: 1200,
+    height: 1600,
+  },
 } as const;
 
 export function optimizedStill(src: string) {
