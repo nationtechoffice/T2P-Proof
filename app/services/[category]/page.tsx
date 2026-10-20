@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GuideLinks } from "@/components/guide-links";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -367,6 +368,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           )}
         </div>
       </section>
+      <GuideLinks pageKey={cat} />
       <CTASection title={`Need ${meta.name}?`} />
     </>
   );

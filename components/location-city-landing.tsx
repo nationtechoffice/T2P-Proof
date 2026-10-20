@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GuideLinks } from "@/components/guide-links";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { FAQSection } from "@/components/faq-section";
 import { HqDispatch } from "@/components/hq-dispatch";
@@ -435,6 +436,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
         </div>
       </article>
       <GoogleReviews variant="compact" />
+      {location.slug === "tampa" ? <GuideLinks pageKey="tampa" /> : null}
       <FAQSection faqs={[...location.faqs, ...(cityLocalFaqs[location.slug] ?? [])]} title={`Handyman in ${location.city} FAQ`} />
     </>
   );

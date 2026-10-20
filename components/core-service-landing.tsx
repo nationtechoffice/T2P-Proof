@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GuideLinks } from "@/components/guide-links";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { FAQSection } from "@/components/faq-section";
 import { HqDispatch } from "@/components/hq-dispatch";
@@ -299,6 +300,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
           </div>
         </div>
       </article>
+      <GuideLinks pageKey={service.slug} />
       <FAQSection faqs={service.faqs} title={`${service.name} in Tampa FAQ`} />
     </>
   );

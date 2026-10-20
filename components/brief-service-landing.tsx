@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GuideLinks } from "@/components/guide-links";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
@@ -174,6 +175,7 @@ export function BriefServiceLanding({ page }: { page: BriefServicePage }) {
           </div>
         </div>
       </article>
+      <GuideLinks pageKey={page.slug} />
       <FAQSection faqs={page.faqs} title="Questions" />
       <CTASection />
     </>
