@@ -582,6 +582,7 @@ export const gbpCityHubs: TargetLocation[] = [
     intro:
       "Need a licensed Town 'N' Country handyman for fans, fixture swaps, and drywall? Our local crew serves Hillsborough Avenue and Waters Avenue. Hablamos español.",
     directAnswer: `Handyman Pros Florida serves Town 'N' Country with handyman repairs for ceiling fans, fixture swaps, and drywall along Hillsborough Avenue, Waters Avenue, and Memorial Highway. Rocky Creek is a short trip from the Westchase headquarters. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
+    directAnswerBody: `Handyman Pros Florida serves Town 'N' Country with handyman repairs for ceiling fans, fixture swaps, and drywall along Hillsborough Avenue, Waters Avenue, and Memorial Highway. Our local crew serves Rocky Creek too. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Town 'N' Country is an unincorporated Hillsborough community west of Tampa, along Hillsborough Avenue, Waters Avenue, and Memorial Highway. Many houses are older block ranches and townhomes with carports, original fans, and drywall that has been patched more than once.",
       "Fixture swaps and fan replacements at an existing box are the common call, plus a door, a drywall scar, and a shelf that has to be level. Rocky Creek and the streets toward Westchase are a short trip, so a modest list does not need a second appointment when the parts match.",
