@@ -424,7 +424,9 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                       ]
                     : location.slug === "brandon"
                       ? [{ href: "/locations/seffner", label: "Handyman in Seffner" }]
-                      : []),
+                      : location.slug === "apollo-beach"
+                        ? [{ href: "/locations/ruskin-sun-city-center", label: "Handyman in Ruskin and Sun City Center" }]
+                        : []),
               ].filter(
                 (link, index, list) =>
                   link.href !== `/locations/${location.slug}` &&
