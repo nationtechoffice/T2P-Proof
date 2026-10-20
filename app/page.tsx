@@ -172,7 +172,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mt-12">
-            <HqDispatch />
+            <HqDispatch westchaseLinkLabel="Westchase handyman page" />
           </div>
         </div>
       </section>
