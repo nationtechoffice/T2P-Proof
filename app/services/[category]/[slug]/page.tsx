@@ -250,7 +250,11 @@ export default async function ServicePage({
                 {related.map((item) => (
                   <li key={`${item.category}-${item.slug}`}>
                     <Link
-                      href={`/services/${item.category}/${item.slug}`}
+                      href={
+                        item.category === "handyman" && item.slug === "drywall-repair"
+                          ? "/services/drywall-repair"
+                          : `/services/${item.category}/${item.slug}`
+                      }
                       className="block rounded-xl border border-[hsl(var(--border))] bg-white/70 px-4 py-3 text-sm font-medium hover:border-[hsl(var(--accent))]"
                     >
                       {item.name}
