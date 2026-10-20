@@ -422,7 +422,9 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                         { href: "/locations/northdale", label: "Handyman in Northdale" },
                         { href: "/locations/lake-magdalene", label: "Handyman in Lake Magdalene" },
                       ]
-                    : []),
+                    : location.slug === "brandon"
+                      ? [{ href: "/locations/seffner", label: "Handyman in Seffner" }]
+                      : []),
               ].filter(
                 (link, index, list) =>
                   link.href !== `/locations/${location.slug}` &&
