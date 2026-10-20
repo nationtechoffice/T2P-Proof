@@ -421,7 +421,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               <HqDispatch
                 area={location.displayName}
                 westchaseLinkLabel={
-                  FROZEN_LINK_LABEL_CITIES.has(location.slug) ? undefined : "Westchase handyman page"
+                  FROZEN_LINK_LABEL_CITIES.has(location.slug) ? "Westchase headquarters page" : "Westchase handyman page"
                 }
               />
             </div>

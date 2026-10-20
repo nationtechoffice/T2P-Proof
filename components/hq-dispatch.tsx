@@ -5,7 +5,7 @@ import { MapPin } from "lucide-react";
 
 export function HqDispatch({
   area,
-  westchaseLinkLabel = "Westchase headquarters page",
+  westchaseLinkLabel = "Westchase handyman page",
 }: {
   area?: string;
   westchaseLinkLabel?: string;
