@@ -31,6 +31,9 @@ import { cityLocalFaqs } from "@/lib/city-local-faqs";
 
 
 /** Step 12a: per-city crew wording (Brandon, Riverview, Land O' Lakes only). */
+/** Item 3d: these keep the old Westchase link label until the freeze lifts. */
+const FROZEN_LINK_LABEL_CITIES = new Set(["lutz", "plant-city", "temple-terrace"]);
+
 const CREW_OVERRIDE_CITIES = new Set([
   // Item 3b
   "tampa",
@@ -415,7 +418,12 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               )}
             />
             <div className="mt-10">
-              <HqDispatch area={location.displayName} />
+              <HqDispatch
+                area={location.displayName}
+                westchaseLinkLabel={
+                  FROZEN_LINK_LABEL_CITIES.has(location.slug) ? undefined : "Westchase handyman page"
+                }
+              />
             </div>
             <div className="mt-6">
               <GoogleListingCta />

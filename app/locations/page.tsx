@@ -33,7 +33,7 @@ export default function LocationsIndexPage() {
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold">Handyman in Tampa Bay, FL</h1>
             <p className="text-lg text-[hsl(var(--muted-foreground))]">
-              Instant phone estimates and same-day service from our local crew across Tampa Bay. Our local crew serves these cities daily. Pinellas stops include{" "}
+              Instant phone estimates and same-day service across Tampa Bay. Our local crew serves these cities daily. Pinellas stops include{" "}
               <Link href="/locations/oldsmar-fl" className="font-medium text-[hsl(var(--primary))] hover:underline">
                 Oldsmar
               </Link>

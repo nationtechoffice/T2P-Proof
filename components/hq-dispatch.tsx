@@ -3,7 +3,13 @@ import { siteConfig } from "@/lib/site-config";
 import { formatFullAddress } from "@/lib/local-seo";
 import { MapPin } from "lucide-react";
 
-export function HqDispatch({ area }: { area?: string }) {
+export function HqDispatch({
+  area,
+  westchaseLinkLabel = "Westchase headquarters page",
+}: {
+  area?: string;
+  westchaseLinkLabel?: string;
+}) {
   const destination = area ? ` to ${area}` : " across Tampa Bay";
 
   return (
@@ -25,7 +31,7 @@ export function HqDispatch({ area }: { area?: string }) {
       </p>
       <p className="mt-4 text-sm">
         <Link href="/locations/westchase-fl" className="font-semibold text-[hsl(var(--primary))] hover:underline">
-          Westchase headquarters page
+          {westchaseLinkLabel}
         </Link>
         {" · "}
         <Link href="/locations" className="font-semibold text-[hsl(var(--primary))] hover:underline">
