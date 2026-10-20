@@ -1016,6 +1016,644 @@ export const briefServicePages: BriefServicePage[] = [
         { href: "/contact", label: "Contact" },
       ],
     },
+    {
+      "slug": "grab-bar-installation",
+      "name": "Grab Bar Installation",
+      "h1": "Grab Bar Installation in Tampa, FL",
+      "metaTitle": "Grab Bar Installation in Tampa, FL | Handyman Pros FL",
+      "metaDescription": "Grab bar installation in Tampa Bay. One bar starts at $49 as a small job; more bars: free estimate. Insured crew. Free quote: (656) 205-3185.",
+      "keywords": [
+        "grab bar installation Tampa",
+        "grab bar installer near me",
+        "bathroom grab bars",
+        "shower grab bar install",
+        "aging in place Tampa"
+      ],
+      "atGlance": {
+        "price": "One grab bar starts at $49 (small job). Two or more bars: Free estimate, call or text for a price",
+        "typicalJob": "Most grab bar installs are a single visit; a single bar is usually a short job. Timing depends on wall type and number of bars (no promise)",
+        "whoFor": "Older homeowners, families setting up a parent's home, people recovering from surgery, landlords and businesses adding restroom bars",
+        "insured": "Yes, insured crew"
+      },
+      "intro": "Grab bars help older homeowners, families caring for a parent, and anyone recovering from surgery move safely in the bathroom. Our insured crew installs screw-mounted bars beside toilets, on tub and shower walls, and at shower entries across Tampa Bay.",
+      "bodyParagraphs": [
+        "Grab bars help older homeowners, families caring for a parent, and anyone recovering from surgery move safely in the bathroom. Our insured crew installs screw-mounted bars beside toilets, on tub and shower walls, and at shower entries across Tampa Bay.",
+        "Many Florida bathrooms have tile over drywall or concrete block walls, so we pick anchors that fit the wall, seal every hole, and pull-test each bar before we leave.",
+        "Call or text for a free estimate. Instant reply, 24/7 — always within 5 minutes."
+      ],
+      "steps": [
+        "Walk the bathroom with you and mark heights where your hand naturally lands (common reference: about 33–36 in. from the floor for horizontal bars beside toilets and tubs)",
+        "Find framing: locate studs with a finder and confirm; plan bar length so at least one end, ideally both, lands on wood",
+        "Choose anchors for the wall type (see safety notes)",
+        "Drill tile with a carbide/diamond bit slowly, without hammer mode, to avoid cracking",
+        "Seal every hole with silicone so water stays out of the wall",
+        "Mount, tighten, and pull-test the bar by hand before we leave; clean up"
+      ],
+      "materials": [
+        "Finishes: brushed nickel, chrome, matte black, oil-rubbed bronze, white",
+        "Lengths 12–42 in.; straight, angled, L-shaped, fold-down (beside toilets), and combo bar/shelf or towel-bar styles",
+        "Textured/knurled grip for wet hands",
+        "Suction-cup bars are not load-rated; we install screw-mounted bars only"
+      ],
+      "safety": [
+        "Studs (wood framing): the strongest mount; screws go through drywall or tile into the stud",
+        "Tile over drywall or cement board: drill through tile, hit a stud where possible; where no stud lines up, use a rated hollow-wall grab bar anchor made for that purpose (e.g. toggle-style or WingIts-type) or add blocking when the wall is open",
+        "Concrete block / masonry (common in Florida homes): masonry bit and sleeve or wedge anchors set into solid block, not mortar joints",
+        "Fiberglass/acrylic tub surrounds: need anchors rated for that shell, or blocking behind it; we check before drilling",
+        "Never rely on drywall anchors or towel-bar hardware; a towel bar is not a grab bar",
+        "If a wall can't hold a bar safely, we say so and suggest another spot or a floor-mounted option"
+      ],
+      "faqs": [
+        {
+          "question": "How much does grab bar installation cost in Tampa?",
+          "answer": "With Handyman Pros FL, one grab bar starts at $49 as a small job. For two or more bars: Free estimate, call or text for a price. Your estimate depends on wall type (tile, block, fiberglass) and whether we supply the bar."
+        },
+        {
+          "question": "How long does it take to install a grab bar?",
+          "answer": "Most grab bar installs are a single visit. One bar on a framed wall is usually a short job; tile, block walls or several bars take longer. We give you a time estimate with your quote."
+        },
+        {
+          "question": "Can you install grab bars on tile?",
+          "answer": "Yes. Our crew drills tile with a tile bit, anchors into a stud wherever possible, uses rated grab bar anchors where there's no stud, and seals each hole with silicone."
+        },
+        {
+          "question": "What if there is no stud where I need the bar?",
+          "answer": "We use anchors rated for grab bars in hollow walls, angle the bar to catch a stud, or add blocking if the wall is open. We never use plain drywall anchors."
+        },
+        {
+          "question": "Can you mount grab bars on concrete block walls?",
+          "answer": "Yes. Many Florida homes have block walls. We use masonry bits and sleeve or wedge anchors set into solid block."
+        },
+        {
+          "question": "Where should grab bars go?",
+          "answer": "Common spots are beside the toilet, on the tub or shower back wall, at the shower entry and near the shower controls. We'll walk the room with you and set heights that fit the person using it."
+        },
+        {
+          "question": "Do you install grab bars for businesses?",
+          "answer": "Yes. Our insured crew installs restroom grab bars for offices, rentals and small businesses across Tampa Bay."
+        },
+        {
+          "question": "How fast does Handyman Pros FL reply?",
+          "answer": "Instant reply, 24/7 — always within 5 minutes."
+        }
+      ],
+      "internalLinks": [
+        {
+          "href": "/services/handyman",
+          "label": "Handyman Services"
+        },
+        {
+          "href": "/services/tile-installation",
+          "label": "Tile Installation"
+        },
+        {
+          "href": "/services/plumbing-fixture-repair",
+          "label": "Faucets & Toilets"
+        },
+        {
+          "href": "/services/handyman/home-maintenance-repairs",
+          "label": "Home Maintenance Repairs"
+        },
+        {
+          "href": "/contact",
+          "label": "Contact"
+        }
+      ]
+    },
+    {
+      "slug": "lanai-screen-repair",
+      "name": "Lanai Screen Repair",
+      "h1": "Lanai Screen Repair in Tampa, FL",
+      "metaTitle": "Lanai Screen Repair in Tampa, FL | Handyman Pros FL",
+      "metaDescription": "Lanai and pool cage screen repair in Tampa Bay. One panel starts at $49; doors and multi-panel jobs get a free estimate. Insured crew. (656) 205-3185.",
+      "keywords": [
+        "lanai screen repair Tampa",
+        "pool cage screen repair",
+        "screen panel replacement",
+        "rescreen lanai",
+        "screen door repair"
+      ],
+      "atGlance": {
+        "price": "One screen panel starts at $49 (small job). Screen doors, several panels or full cage re-screens: Free estimate, call or text for a price",
+        "typicalJob": "A few panels are usually a single visit; full re-screens take longer and depend on cage size (no promise)",
+        "whoFor": "Homeowners with torn lanai or pool cage panels, after storms or pet damage; landlords and HOAs",
+        "insured": "Yes, insured crew"
+      },
+      "intro": "Florida storms, pets, and strong sun wear out lanai and pool cage screens. Our insured crew replaces torn panels, re-screens doors, and swaps old spline so your lanai keeps bugs out again.",
+      "bodyParagraphs": [
+        "Florida storms, pets, and strong sun wear out lanai and pool cage screens. Our insured crew replaces torn panels, re-screens doors, and swaps old spline so your lanai keeps bugs out again.",
+        "Text photos of the torn panels and a wide shot of the cage to get a quote.",
+        "Text photos of the torn panels for a quote.",
+        "Call or text for a free estimate. Instant reply, 24/7 — always within 5 minutes."
+      ],
+      "steps": [
+        "Inspect the panel, frame and nearby fasteners",
+        "Remove old screen and old spline",
+        "Cut new mesh, roll it into the channel with new spline, keep it tight and square",
+        "Trim the edge, check for gaps at the bottom rail",
+        "Fix loose fasteners or kick-plate on that bay if needed; clean up debris"
+      ],
+      "materials": [
+        "Standard 18/14 fiberglass (most common)",
+        "20/20 no-see-um mesh for small insects",
+        "Pet-resistant mesh (heavier, for dogs and cats)",
+        "Heavier 17/20 'super screen' style for pool cages",
+        "Charcoal or silver-gray color; spline sizes matched to the frame"
+      ],
+      "safety": [
+        "Roof (overhead) panels need ladders and are done by the crew from safe footing; we don't stand on cage beams",
+        "After storms, we look for bent members and loose screws; structural frame damage is outside a screen repair and we'll tell you so",
+        "Keep pool covered/clear of debris during the work"
+      ],
+      "faqs": [
+        {
+          "question": "How much does lanai screen repair cost in Tampa?",
+          "answer": "With Handyman Pros FL, one screen panel starts at $49 as a small job. For screen doors, several panels or a full cage re-screen: Free estimate, call or text for a price."
+        },
+        {
+          "question": "How long does a lanai screen repair take?",
+          "answer": "A few panels are usually done in a single visit. A full re-screen of a pool cage takes longer and depends on the number of panels. We'll give you an estimate with your quote."
+        },
+        {
+          "question": "Can I get a quote from photos?",
+          "answer": "Yes. Text photos of the torn panels and a wide shot of the cage, and our team will send a quote."
+        },
+        {
+          "question": "What screen mesh is best for a Florida lanai?",
+          "answer": "Standard 18/14 fiberglass fits most lanais. No-see-um mesh keeps out tiny bugs, and pet-resistant mesh holds up to claws."
+        },
+        {
+          "question": "Should I repair panels or re-screen the whole cage?",
+          "answer": "If a few panels are torn and the rest are tight, replace just those. If many panels are sagging or brittle, a full re-screen usually makes more sense."
+        },
+        {
+          "question": "Do you repair screen doors and spline?",
+          "answer": "Yes. Our crew re-screens doors, replaces spline, and adjusts or replaces latches, closers and sweeps."
+        },
+        {
+          "question": "Do you fix pool cage screens after a storm?",
+          "answer": "Yes. We replace torn panels and tighten loose fasteners. Bent or broken frame members need a cage contractor, and we'll tell you if we see that."
+        },
+        {
+          "question": "How fast does Handyman Pros FL reply?",
+          "answer": "Instant reply, 24/7 — always within 5 minutes."
+        }
+      ],
+      "internalLinks": [
+        {
+          "href": "/services/handyman",
+          "label": "Handyman Services"
+        },
+        {
+          "href": "/services/door-repair",
+          "label": "Door Repair"
+        },
+        {
+          "href": "/blog/hurricane-prep-home-maintenance-florida",
+          "label": "Hurricane Prep Checklist"
+        },
+        {
+          "href": "/services/handyman/home-maintenance-repairs",
+          "label": "Home Maintenance Repairs"
+        },
+        {
+          "href": "/contact",
+          "label": "Contact"
+        }
+      ]
+    },
+    {
+      "slug": "popcorn-ceiling-removal",
+      "name": "Popcorn Ceiling Removal",
+      "h1": "Popcorn Ceiling Removal in Tampa, FL",
+      "metaTitle": "Popcorn Ceiling Removal in Tampa, FL | Handyman Pros FL",
+      "metaDescription": "Popcorn ceiling removal in Tampa Bay. Free estimate. Dust-controlled, smooth finish, insured crew. (656) 205-3185.",
+      "keywords": [
+        "popcorn ceiling removal Tampa",
+        "remove popcorn ceiling cost",
+        "acoustic ceiling removal",
+        "smooth ceiling",
+        "ceiling texture removal"
+      ],
+      "atGlance": {
+        "price": "Free estimate, call or text for a price",
+        "typicalJob": "A single room is often one to two days including drying time; whole homes take several days (no promise)",
+        "whoFor": "Homeowners updating older Tampa Bay homes, sellers prepping a listing, landlords between tenants",
+        "insured": "Yes, insured crew"
+      },
+      "intro": "A smooth ceiling makes an older Tampa Bay room look brighter and newer. Our insured crew contains the room, scrapes the texture, skims, primes, and paints.",
+      "bodyParagraphs": [
+        "A smooth ceiling makes an older Tampa Bay room look brighter and newer. Our insured crew contains the room, scrapes the texture, skims, primes, and paints.",
+        "Homes built before the 1980s should have the texture tested for asbestos by a qualified testing company before any removal starts.",
+        "Homes built before the 1980s: have the texture tested for asbestos first (see safety notes).",
+        "Call or text for a free estimate. Instant reply, 24/7 — always within 5 minutes."
+      ],
+      "steps": [
+        "Confirm the asbestos test result is clear (customer arranges testing with a lab or testing company)",
+        "Protect the room: plastic on walls and floors, cover vents, remove or cover fixtures, turn off HVAC to the room",
+        "Lightly mist unpainted texture and scrape; painted texture may need more work",
+        "Repair drywall tape and dings, skim coat for a smooth finish",
+        "Sand, prime and paint (flat ceiling white unless you pick a color)",
+        "Bag debris and clean up"
+      ],
+      "materials": [
+        "Scrape only (you finish)",
+        "Scrape + skim coat + prime + paint (smooth ceiling)",
+        "Light knockdown or orange-peel texture instead of smooth",
+        "Ceiling paint color matched"
+      ],
+      "safety": [
+        "Asbestos: popcorn ceilings in older homes (generally installed before the 1980s) can contain asbestos. Have the ceiling tested by a qualified testing company before removal. Do not scrape untested texture. If the test is positive, removal must be done by a licensed asbestos abatement contractor",
+        "Lead paint can be present in older painted ceilings; testing is the safe step",
+        "Dust: we contain the room and bag debris; people and pets stay out during scraping"
+      ],
+      "faqs": [
+        {
+          "question": "How much does popcorn ceiling removal cost in Tampa?",
+          "answer": "Handyman Pros FL prices popcorn removal by room size and whether the texture is painted. Free estimate, call or text for a price."
+        },
+        {
+          "question": "Should I test my popcorn ceiling for asbestos?",
+          "answer": "Yes, if your home was built before the 1980s. Have a qualified testing company test the texture before anyone scrapes it. If it's positive, a licensed abatement contractor must remove it."
+        },
+        {
+          "question": "How long does popcorn ceiling removal take?",
+          "answer": "One room is often one to two days, because skim coats and primer need to dry. A whole home takes several days. We give a time estimate with your quote."
+        },
+        {
+          "question": "Is painted popcorn harder to remove?",
+          "answer": "Yes. Paint seals the texture so water can't soften it, which means more scraping or skimming over it. That's why painted ceilings are quoted separately."
+        },
+        {
+          "question": "How do you control dust?",
+          "answer": "Our crew covers floors and walls with plastic, seals vents, mists the texture before scraping, and bags debris before we leave."
+        },
+        {
+          "question": "Can I stay home during removal?",
+          "answer": "Yes, but keep people and pets out of the room being worked on until cleanup is done."
+        },
+        {
+          "question": "What finish do I get after removal?",
+          "answer": "Most customers choose a smooth skim-coated ceiling, primed and painted. Light knockdown or orange-peel texture is also an option."
+        },
+        {
+          "question": "How fast does Handyman Pros FL reply?",
+          "answer": "Instant reply, 24/7 — always within 5 minutes."
+        }
+      ],
+      "internalLinks": [
+        {
+          "href": "/services/drywall-repair",
+          "label": "Drywall Repair"
+        },
+        {
+          "href": "/services/painting",
+          "label": "Painting"
+        },
+        {
+          "href": "/services/handyman/interior-painting",
+          "label": "Interior Painting"
+        },
+        {
+          "href": "/blog/drywall-repair-cost-guide-florida",
+          "label": "Drywall Repair Cost Guide"
+        },
+        {
+          "href": "/services/handyman",
+          "label": "Handyman Services"
+        },
+        {
+          "href": "/contact",
+          "label": "Contact"
+        }
+      ]
+    },
+    {
+      "slug": "pressure-washing",
+      "name": "Pressure Washing",
+      "h1": "Pressure Washing in Tampa, FL",
+      "metaTitle": "Pressure Washing in Tampa, FL | Handyman Pros FL",
+      "metaDescription": "Pressure washing in Tampa Bay. Driveways, pavers, patios, lanais and soft wash for siding. Insured crew. Free quote: (656) 205-3185.",
+      "keywords": [
+        "pressure washing Tampa",
+        "driveway pressure washing",
+        "soft wash house",
+        "paver cleaning",
+        "lanai cleaning"
+      ],
+      "atGlance": {
+        "price": "Free estimate, call or text for a price",
+        "typicalJob": "A driveway is usually a short single visit; whole-house wash plus flatwork takes longer (no promise)",
+        "whoFor": "Homeowners, HOAs, landlords and businesses with mildew, algae or dirt on concrete, pavers, siding and fences",
+        "insured": "Yes, insured crew"
+      },
+      "intro": "Humidity grows mildew and algae fast on Tampa Bay driveways, pavers, siding, and lanais. Our insured crew pressure washes concrete and pavers and soft washes siding, stucco, and screens at the right pressure for each surface.",
+      "bodyParagraphs": [
+        "Humidity grows mildew and algae fast on Tampa Bay driveways, pavers, siding, and lanais. Our insured crew pressure washes concrete and pavers and soft washes siding, stucco, and screens at the right pressure for each surface.",
+        "Call or text for a free estimate. Instant reply, 24/7 — always within 5 minutes."
+      ],
+      "steps": [
+        "Walk the surfaces and note plants, outlets, windows and screens to protect",
+        "Pre-wet plants; cover outlets and fixtures",
+        "Concrete: surface cleaner at the right pressure; pre-treat oil/rust spots",
+        "Siding, stucco, screens and roofs: soft wash (low pressure + cleaning solution), not high pressure",
+        "Rinse, post-treat for mildew, rinse plants again"
+      ],
+      "materials": [
+        "Driveways and sidewalks",
+        "Pavers (optional re-sanding/sealing quoted separately)",
+        "Patios, pool decks and lanai floors",
+        "Stucco, vinyl and block siding (soft wash)",
+        "Fences, decks (low pressure for wood)"
+      ],
+      "safety": [
+        "High pressure can etch concrete, strip paint, tear screens and force water behind siding; we match pressure to surface",
+        "Roofs: soft wash only, no walking on wet tile",
+        "Runoff: we keep cleaner off plants and out of storm drains as much as possible"
+      ],
+      "faqs": [
+        {
+          "question": "How much does pressure washing cost in Tampa?",
+          "answer": "Handyman Pros FL prices pressure washing by square footage and surface. Free estimate, call or text for a price."
+        },
+        {
+          "question": "What's the difference between pressure washing and soft washing?",
+          "answer": "Pressure washing uses high-pressure water for concrete and pavers. Soft washing uses low pressure and a cleaning solution for siding, stucco, screens and roofs so they don't get damaged."
+        },
+        {
+          "question": "How often should I pressure wash in Florida?",
+          "answer": "Many Tampa Bay homes need it about once a year, because humidity grows mildew and algae fast. Shady or north-facing areas may need it more often."
+        },
+        {
+          "question": "Will pressure washing damage my pavers?",
+          "answer": "Not at the right pressure. We use a surface cleaner and adjust pressure for pavers, then re-sand or seal if you choose."
+        },
+        {
+          "question": "How long does pressure washing take?",
+          "answer": "A driveway is usually a short single visit. A house plus driveway and patio takes longer, and we give a time estimate with your quote."
+        },
+        {
+          "question": "Do you pressure wash for businesses and HOAs?",
+          "answer": "Yes. Our insured crew cleans storefront sidewalks, entries, dumpster pads and common areas."
+        },
+        {
+          "question": "How fast does Handyman Pros FL reply?",
+          "answer": "Instant reply, 24/7 — always within 5 minutes."
+        }
+      ],
+      "internalLinks": [
+        {
+          "href": "/services/handyman",
+          "label": "Handyman Services"
+        },
+        {
+          "href": "/services/handyman/cleaning",
+          "label": "Cleaning"
+        },
+        {
+          "href": "/services/fence/fence-repairs-maintenance",
+          "label": "Fence Repairs"
+        },
+        {
+          "href": "/services/handyman/exterior-painting",
+          "label": "Exterior Painting"
+        },
+        {
+          "href": "/blog/best-exterior-paint-florida-climate",
+          "label": "Best Exterior Paint for Florida"
+        },
+        {
+          "href": "/blog/hurricane-prep-home-maintenance-florida",
+          "label": "Hurricane Prep Checklist"
+        },
+        {
+          "href": "/services/lanai-screen-repair",
+          "label": "Lanai Screen Repair"
+        },
+        {
+          "href": "/contact",
+          "label": "Contact"
+        }
+      ]
+    },
+    {
+      "slug": "soffit-fascia-repair",
+      "name": "Soffit, Fascia & Wood Rot Repair",
+      "h1": "Soffit, Fascia & Wood Rot Repair in Tampa, FL",
+      "metaTitle": "Soffit, Fascia & Wood Rot Repair in Tampa, FL | Handyman Pros FL",
+      "metaDescription": "Soffit, fascia and wood rot repair in Tampa Bay. Free estimate; painted to match. Insured crew. Free quote: (656) 205-3185.",
+      "keywords": [
+        "soffit repair Tampa",
+        "fascia repair",
+        "wood rot repair Tampa",
+        "rotted fascia board",
+        "soffit and fascia replacement"
+      ],
+      "atGlance": {
+        "price": "Free estimate, call or text for a price",
+        "typicalJob": "Spot repairs are usually one or two visits including paint; longer runs take longer (no promise)",
+        "whoFor": "Homeowners with soft or peeling fascia, sagging soffit, gaps where animals get in, or rot found at inspection",
+        "insured": "Yes, insured crew"
+      },
+      "intro": "Clogged gutters, roof-edge gaps, and Florida humidity rot fascia boards and soffits. Our insured crew cuts rot back to solid wood, installs new board or PVC trim, and paints to match.",
+      "bodyParagraphs": [
+        "Clogged gutters, roof-edge gaps, and Florida humidity rot fascia boards and soffits. Our insured crew cuts rot back to solid wood, installs new board or PVC trim, and paints to match.",
+        "Call or text for a free estimate. Instant reply, 24/7 — always within 5 minutes."
+      ],
+      "steps": [
+        "Probe the wood to find where rot ends",
+        "Remove gutter section if needed to reach fascia",
+        "Cut out rotted wood back to solid; we replace, not cover",
+        "Install new board (primed wood or PVC) and soffit panels; keep vents open",
+        "Rehang gutter, caulk, prime and paint to match"
+      ],
+      "materials": [
+        "Primed pine or cedar fascia",
+        "PVC/cellular PVC trim (rot-proof)",
+        "Vented or solid aluminum/vinyl soffit panels",
+        "Aluminum fascia wrap over new solid wood only"
+      ],
+      "safety": [
+        "Ladder work at roof edge: done by the crew with proper setup",
+        "If rot reaches rafter tails or roof decking, that's roof work and we'll tell you before going further",
+        "Watch for wasps and animal nests in open soffits",
+        "Paint on older homes may contain lead"
+      ],
+      "faqs": [
+        {
+          "question": "How much does soffit and fascia repair cost in Tampa?",
+          "answer": "Handyman Pros FL prices soffit and fascia work after seeing how far the rot goes. Free estimate, call or text for a price."
+        },
+        {
+          "question": "What causes fascia board rot in Florida?",
+          "answer": "Water from clogged or loose gutters, roof drip edge gaps and Florida humidity soak into fascia. Peeling paint lets moisture in faster."
+        },
+        {
+          "question": "Do you cover rotted wood with aluminum?",
+          "answer": "No. We cut out rotted wood back to solid, then install new board. Wrapping rot hides it and lets it spread."
+        },
+        {
+          "question": "Does rotted fascia mean I need a new roof?",
+          "answer": "Usually not. Most fascia rot is a trim repair. If rot reaches rafters or decking, we'll show you before anything else is done."
+        },
+        {
+          "question": "How long does fascia repair take?",
+          "answer": "Spot repairs usually take one or two visits including paint. Longer runs take more time; we give an estimate with your quote."
+        },
+        {
+          "question": "What material lasts longest for fascia?",
+          "answer": "PVC trim doesn't rot and holds paint well. Primed wood painted to match is the lower-cost option."
+        },
+        {
+          "question": "How fast does Handyman Pros FL reply?",
+          "answer": "Instant reply, 24/7 — always within 5 minutes."
+        }
+      ],
+      "internalLinks": [
+        {
+          "href": "/services/gutter-installation",
+          "label": "Gutters"
+        },
+        {
+          "href": "/services/handyman/roof-repair",
+          "label": "Roof Repair"
+        },
+        {
+          "href": "/services/handyman/exterior-painting",
+          "label": "Exterior Painting"
+        },
+        {
+          "href": "/services/painting/wood-painting",
+          "label": "Wood Painting"
+        },
+        {
+          "href": "/services/pressure-washing",
+          "label": "Pressure Washing"
+        },
+        {
+          "href": "/blog/hurricane-prep-home-maintenance-florida",
+          "label": "Hurricane Prep Checklist"
+        },
+        {
+          "href": "/contact",
+          "label": "Contact"
+        }
+      ]
+    },
+    {
+      "slug": "commercial-handyman",
+      "name": "Commercial Handyman Services",
+      "h1": "Commercial Handyman Services in Tampa, FL",
+      "metaTitle": "Commercial Handyman Services in Tampa, FL | Handyman Pros FL",
+      "metaDescription": "Commercial handyman services in Tampa Bay for offices, retail, rentals and HOAs. Free estimates. Insured crew. Free quote: (656) 205-3185.",
+      "keywords": [
+        "commercial handyman Tampa",
+        "property maintenance Tampa",
+        "office repairs",
+        "rental turnover handyman",
+        "HOA maintenance"
+      ],
+      "atGlance": {
+        "price": "Free estimate, call or text for a price",
+        "typicalJob": "Small repair lists are often a single visit; turnovers and larger lists are scheduled in phases (no promise)",
+        "whoFor": "Property managers, landlords, HOAs, offices, retail and restaurants needing repairs without a general contractor",
+        "insured": "Yes, insured crew"
+      },
+      "intro": "Property managers, landlords, HOAs, offices, retail, and restaurants use our insured crew for repair lists and unit turnovers without hiring a general contractor. We quote line by line and send before-and-after photos.",
+      "bodyParagraphs": [
+        "Property managers, landlords, HOAs, offices, retail, and restaurants use our insured crew for repair lists and unit turnovers without hiring a general contractor. We quote line by line and send before-and-after photos.",
+        "Call or text for a free estimate. Instant reply, 24/7 — always within 5 minutes."
+      ],
+      "steps": [
+        "Send your repair list or work order with photos",
+        "We quote line by line",
+        "Our crew schedules the work with you",
+        "Work done; before/after photos sent",
+        "One invoice per job or per property"
+      ],
+      "materials": [
+        "Drywall patches, painting and touch-ups",
+        "Door, lock hardware and closer adjustments",
+        "Light and plumbing fixture swaps",
+        "Restroom grab bars",
+        "TV and display mounting, furniture and shelving assembly",
+        "Tile and flooring repairs; fence and gate repairs",
+        "Pressure washing entries and sidewalks; lanai/screen repairs",
+        "Unit turnover punch lists"
+      ],
+      "safety": [
+        "Work that requires a licensed trade (electrical circuits, plumbing lines, structural) is referred out; we don't claim it",
+        "We follow site rules and keep work areas closed off while we work"
+      ],
+      "faqs": [
+        {
+          "question": "How much does a commercial handyman cost in Tampa?",
+          "answer": "Handyman Pros FL quotes commercial work line by line. Free estimate, call or text for a price."
+        },
+        {
+          "question": "What commercial repairs do you handle?",
+          "answer": "Our crew handles drywall, painting, doors and hardware, fixture swaps, grab bars, mounting, assembly, tile and flooring repairs, fence repairs and pressure washing for offices, retail, rentals and HOAs."
+        },
+        {
+          "question": "Do you work with property managers?",
+          "answer": "Yes. Send work orders with photos and we'll quote each item and send before-and-after photos when done."
+        },
+        {
+          "question": "Are you insured for commercial work?",
+          "answer": "Yes. Handyman Pros FL is an insured crew serving businesses across Tampa Bay."
+        },
+        {
+          "question": "Can you do rental unit turnovers?",
+          "answer": "Yes. We work through turnover punch lists: patching, paint, fixtures, doors and small repairs."
+        },
+        {
+          "question": "What areas do you serve for commercial work?",
+          "answer": "Our crew serves businesses across Hillsborough, Pinellas and Pasco counties, including Tampa, Clearwater, St. Petersburg and Wesley Chapel."
+        },
+        {
+          "question": "How fast does Handyman Pros FL reply?",
+          "answer": "Instant reply, 24/7 — always within 5 minutes."
+        }
+      ],
+      "internalLinks": [
+        {
+          "href": "/services/handyman",
+          "label": "Handyman Services"
+        },
+        {
+          "href": "/services/drywall-repair",
+          "label": "Drywall Repair"
+        },
+        {
+          "href": "/services/painting",
+          "label": "Painting"
+        },
+        {
+          "href": "/services/door-repair",
+          "label": "Door Repair"
+        },
+        {
+          "href": "/services/electrical-fixture-installation",
+          "label": "Light Fixtures"
+        },
+        {
+          "href": "/services/tv-wall-mounting",
+          "label": "TV Wall Mounting"
+        },
+        {
+          "href": "/services/grab-bar-installation",
+          "label": "Grab Bar Installation"
+        },
+        {
+          "href": "/services/pressure-washing",
+          "label": "Pressure Washing"
+        },
+        {
+          "href": "/contact",
+          "label": "Contact"
+        }
+      ]
+    },
 ];
 
 export const briefServiceSlugs = briefServicePages.map((p) => p.slug);
