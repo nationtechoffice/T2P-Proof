@@ -156,7 +156,7 @@ export const moneyNeighborhoodSpots: Record<string, NeighborhoodSpot[]> = {
   "same-day-handyman": [
     {
       name: "Hyde Park",
-      body: "Same-day Hyde Park windows depend on the cross-town drive from Westchase. A single TV mount or a sticking door can fit when the afternoon route is already south. A long punch list is scheduled, not forced into a leftover hour.",
+      body: "Our local crew serves Hyde Park, and same-day windows depend on the day's route. A single TV mount or a sticking door can fit when the afternoon route is already south. A long punch list is scheduled, not forced into a leftover hour.",
       links: [
         { href: "/locations/tampa", label: "South Tampa handyman" },
         { href: "/locations/tampa#hyde-park", label: "Hyde Park on the Tampa hub" },

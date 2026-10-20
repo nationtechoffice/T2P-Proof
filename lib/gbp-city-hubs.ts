@@ -661,7 +661,7 @@ export const gbpCityHubs: TargetLocation[] = [
     zipHint: "33572",
     neighborhoods: ["MiraBay", "Symphony Isles", "US-41", "Apollo Beach Boulevard"],
     intro:
-      "Need a licensed Apollo Beach handyman for flooring, doors, and drywall? MiraBay and Symphony Isles are a south Hillsborough drive from Westchase. Hablamos español.",
+      "Need a licensed Apollo Beach handyman for flooring, doors, and drywall? Our local crew serves MiraBay and Symphony Isles. Hablamos español.",
     directAnswer: `Handyman Pros Florida serves Apollo Beach with handyman repairs for flooring, doors, and drywall in Symphony Isles, MiraBay, and along US-41. A recent visit was a flooring job. Our crew serves Apollo Beach daily. Licensed and insured. Hablamos español. Call ${phone} for a free estimate.`,
     paragraphs: [
       "Apollo Beach is the bay community south of Riverview, along US-41, with MiraBay and Symphony Isles among the neighborhoods we already route.",

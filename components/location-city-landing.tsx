@@ -187,7 +187,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               ) : null}
               {location.slug === "westchase-fl" ? (
                 <p>
-                  Westchase kitchens and baths are a short drive from headquarters.{" "}
+                  Our local crew serves Westchase kitchens and baths.{" "}
                   <Link href="/services/tile-installation" className="font-semibold text-[hsl(var(--primary))] hover:underline">
                     Tile installation and replacement in Tampa and Westchase
                   </Link>{" "}
@@ -196,7 +196,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               ) : null}
               {location.slug === "westchase-fl" ? (
                 <p>
-                  Flat-pack deliveries and room moves are a short drive from headquarters.{" "}
+                  Our local crew handles flat-pack deliveries and room moves.{" "}
                   <Link href="/services/furniture-assembly" className="font-semibold text-[hsl(var(--primary))] hover:underline">
                     Furniture assembly and rearrangement in Tampa and Westchase
                   </Link>{" "}
@@ -205,7 +205,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               ) : null}
               {location.slug === "westchase-fl" ? (
                 <p>
-                  Rooms of click-lock plank and damaged sections are a short drive from headquarters.{" "}
+                  Our local crew handles rooms of click-lock plank and damaged sections.{" "}
                   <Link href="/services/flooring-installation" className="font-semibold text-[hsl(var(--primary))] hover:underline">
                     Flooring installation and repair in Tampa and Westchase
                   </Link>{" "}
@@ -214,7 +214,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               ) : null}
               {location.slug === "westchase-fl" ? (
                 <p>
-                  Storm-clogged runs and loose downspouts are a short drive from headquarters.{" "}
+                  Our local crew handles storm-clogged runs and loose downspouts.{" "}
                   <Link href="/services/gutter-installation" className="font-semibold text-[hsl(var(--primary))] hover:underline">
                     Gutter installation, repair, and cleaning in Tampa and Westchase
                   </Link>{" "}
