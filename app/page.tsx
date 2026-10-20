@@ -57,8 +57,13 @@ const homeMetadata: Metadata = buildMetadata({
   ogHeight: heroStory.poster.height,
 });
 
-// Page <title> only; og:title and twitter:title keep homeTitle().
-export const metadata: Metadata = { ...homeMetadata, title: { absolute: HOME_PAGE_TITLE } };
+// Homepage <title>, og:title and twitter:title; homeTitle() and layout defaults unchanged.
+export const metadata: Metadata = {
+  ...homeMetadata,
+  title: { absolute: HOME_PAGE_TITLE },
+  openGraph: { ...homeMetadata.openGraph, title: HOME_PAGE_TITLE },
+  twitter: { ...homeMetadata.twitter, title: HOME_PAGE_TITLE },
+};
 
 export default function HomePage() {
   preload(heroStory.poster.avif, {
