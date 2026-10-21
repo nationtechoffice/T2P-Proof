@@ -1021,7 +1021,7 @@ export const briefServicePages: BriefServicePage[] = [
       "name": "Grab Bar Installation",
       "h1": "Grab Bar Installation in Tampa, FL",
       "metaTitle": "Grab Bar Installation in Tampa, FL | Handyman Pros FL",
-      "metaDescription": "Grab bar installation in Tampa Bay. One bar starts at $49 as a small job; more bars: free estimate. Insured crew. Free quote: (656) 205-3185.",
+      "metaDescription": "Grab bar installation in Tampa Bay. One bar is a small job; more bars get a free estimate. Insured crew. Free quote: (656) 205-3185.",
       "keywords": [
         "grab bar installation Tampa",
         "grab bar installer near me",
@@ -1030,7 +1030,7 @@ export const briefServicePages: BriefServicePage[] = [
         "aging in place Tampa"
       ],
       "atGlance": {
-        "price": "One grab bar starts at $49 (small job). Two or more bars: Free estimate, call or text for a price",
+        "price": "One grab bar: a small job at a low price. Two or more bars: Free estimate, call or text for a price",
         "typicalJob": "Most grab bar installs are a single visit; a single bar is usually a short job. Timing depends on wall type and number of bars (no promise)",
         "whoFor": "Older homeowners, families setting up a parent's home, people recovering from surgery, landlords and businesses adding restroom bars",
         "insured": "Yes, insured crew"
@@ -1066,7 +1066,7 @@ export const briefServicePages: BriefServicePage[] = [
       "faqs": [
         {
           "question": "How much does grab bar installation cost in Tampa?",
-          "answer": "With Handyman Pros FL, one grab bar starts at $49 as a small job. For two or more bars: Free estimate, call or text for a price. Your estimate depends on wall type (tile, block, fiberglass) and whether we supply the bar."
+          "answer": "With Handyman Pros FL, one grab bar is a small job at a low price. For two or more bars: Free estimate, call or text for a price. Your estimate depends on wall type (tile, block, fiberglass) and whether we supply the bar."
         },
         {
           "question": "How long does it take to install a grab bar?",
@@ -1125,7 +1125,7 @@ export const briefServicePages: BriefServicePage[] = [
       "name": "Lanai Screen Repair",
       "h1": "Lanai Screen Repair in Tampa, FL",
       "metaTitle": "Lanai Screen Repair in Tampa, FL | Handyman Pros FL",
-      "metaDescription": "Lanai and pool cage screen repair in Tampa Bay. One panel starts at $49; doors and multi-panel jobs get a free estimate. Insured crew. (656) 205-3185.",
+      "metaDescription": "Lanai and pool cage screen repair in Tampa Bay. One panel is a small job; doors and multi-panel jobs get a free estimate. Insured crew. (656) 205-3185.",
       "keywords": [
         "lanai screen repair Tampa",
         "pool cage screen repair",
@@ -1134,7 +1134,7 @@ export const briefServicePages: BriefServicePage[] = [
         "screen door repair"
       ],
       "atGlance": {
-        "price": "One screen panel starts at $49 (small job). Screen doors, several panels or full cage re-screens: Free estimate, call or text for a price",
+        "price": "One screen panel: a small job at a low price. Screen doors, several panels or full cage re-screens: Free estimate, call or text for a price",
         "typicalJob": "A few panels are usually a single visit; full re-screens take longer and depend on cage size (no promise)",
         "whoFor": "Homeowners with torn lanai or pool cage panels, after storms or pet damage; landlords and HOAs",
         "insured": "Yes, insured crew"
@@ -1168,7 +1168,7 @@ export const briefServicePages: BriefServicePage[] = [
       "faqs": [
         {
           "question": "How much does lanai screen repair cost in Tampa?",
-          "answer": "With Handyman Pros FL, one screen panel starts at $49 as a small job. For screen doors, several panels or a full cage re-screen: Free estimate, call or text for a price."
+          "answer": "With Handyman Pros FL, one screen panel is a small job at a low price. For screen doors, several panels or a full cage re-screen: Free estimate, call or text for a price."
         },
         {
           "question": "How long does a lanai screen repair take?",

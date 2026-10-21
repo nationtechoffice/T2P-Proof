@@ -23,7 +23,7 @@ export const gbpCityHubs: TargetLocation[] = [
     showStartingPrices: true,
     paragraphs: [
       "Handyman Pros FL is a licensed, insured handyman crew that serves Clearwater, FL, with 24/7 phone estimates and Spanish-speaking staff.",
-      "Handyman jobs in Clearwater start at $49 for small jobs like shelves and curtain rods, and $89 for TV mounting. Drywall patches get a free estimate. Furniture assembly starts at $65, ceiling fan or light fixture installs start at $79, and tile repair or regrout starts at $199.",
+      "Handyman jobs in Clearwater, from shelves and curtain rods to TV mounting, start with a free estimate. Drywall patches get a free estimate.",
       "Clearwater splits into two kinds of houses. Clearwater Beach and Island Estates are condos and low-rise buildings where salt air swells sliding doors and balcony hardware. Coachman and Countryside are mainland neighborhoods of single-family homes with the usual Florida stucco, lanais, and interior drywall.",
       "Beach visits are often a slider that will not lock, a drywall scar inside a rental, or a TV that has to sit level on a concrete or block wall. Mainland lists add ceiling fans at an existing box, fixture swaps, and a punch list before guests arrive. We do not run new circuits or open walls for new wiring.",
       "Cleveland Street and downtown are a short hop from those same stops. Clearwater calls share a planned Pinellas route with Dunedin, Safety Harbor, and Largo.",
@@ -31,7 +31,7 @@ export const gbpCityHubs: TargetLocation[] = [
     ],
     callouts: [
       {
-        before: "A same-day handyman service call in Clearwater starts at $99, and same-day arrival depends on whether the crew already has a Pinellas stop that day. ",
+        before: "Same-day arrival in Clearwater depends on whether the crew already has a Pinellas stop that day. ",
         href: "/services/same-day-handyman",
         label: "Same-day handyman service",
         after: " explains which jobs fit today and which ones get the next window.",
@@ -61,17 +61,17 @@ export const gbpCityHubs: TargetLocation[] = [
       {
         question: "How much does a handyman cost in Clearwater?",
         answer:
-          "Small jobs like shelves and curtain rods start at $49, furniture assembly starts at $65, a ceiling fan or light fixture starts at $79, TV mounting starts at $89, a same-day service call starts at $99, and tile repair or regrout starts at $199. The final price is quoted after you describe the job.",
+          "Every job starts with a free estimate. The final price is quoted after you describe the job.",
       },
       {
         question: "Can I get a same-day handyman in Clearwater?",
         answer:
-          "Often, when the crew already has a Pinellas stop that day. A same-day service call starts at $99. If today is full, we give you the next open window.",
+          "Often, when the crew already has a Pinellas stop that day. Same-day visits get a free estimate. If today is full, we give you the next open window.",
       },
       {
         question: "Do you mount TVs in Clearwater?",
         answer:
-          "Yes. TV mounting in Clearwater starts at $89. We mount into studs, block, or concrete when the wall can hold the bracket.",
+          "Yes. TV mounting in Clearwater gets an instant estimate. We mount into studs, block, or concrete when the wall can hold the bracket.",
       },
       {
         question: "Do you speak Spanish in Clearwater?",
@@ -136,8 +136,8 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["Downtown Palm Harbor", "Ozona", "Crystal Beach", "Highland Lakes", "East Lake"],
     intro:
       "Need a licensed Palm Harbor handyman for TV mounts, drywall, and fence boards? Handyman Pros FL serves Ozona, East Lake, and Highland Lakes from Westchase. Hablamos español.",
-    directAnswer: "Handyman Pros FL serves Palm Harbor, FL, including East Lake, Ozona, Crystal Beach and Highland Lakes, from its Westchase headquarters, with TV mounting from $89, free drywall estimates and small jobs from $49. Palm Harbor is unincorporated Pinellas County, so any permit for your job goes through Pinellas County, not a city hall, and we tell you up front if a job needs one.",
-    directAnswerBody: "Handyman Pros FL's local crew serves Palm Harbor, FL, including East Lake, Ozona, Crystal Beach and Highland Lakes, with TV mounting from $89, free drywall estimates and small jobs from $49. Palm Harbor is unincorporated Pinellas County, so any permit for your job goes through Pinellas County, not a city hall, and we tell you up front if a job needs one.",
+    directAnswer: "Handyman Pros FL serves Palm Harbor, FL, including East Lake, Ozona, Crystal Beach and Highland Lakes, from its Westchase headquarters, with TV mounting, drywall patches and small jobs, all with an instant estimate. Palm Harbor is unincorporated Pinellas County, so any permit for your job goes through Pinellas County, not a city hall, and we tell you up front if a job needs one.",
+    directAnswerBody: "Handyman Pros FL's local crew serves Palm Harbor, FL, including East Lake, Ozona, Crystal Beach and Highland Lakes, with TV mounting, drywall patches and small jobs, all with an instant estimate. Palm Harbor is unincorporated Pinellas County, so any permit for your job goes through Pinellas County, not a city hall, and we tell you up front if a job needs one.",
     paragraphs: [
       `Call ${phone} for a Palm Harbor estimate. Licensed and insured. Hablamos español. Our crew serves Palm Harbor daily.`,
     ],
@@ -179,7 +179,7 @@ export const gbpCityHubs: TargetLocation[] = [
       {
         heading: "Small jobs that make a home easier to live in",
         paragraphs: [
-          "More than a quarter of Palm Harbor residents are 65 or older (27.9% in the 2020 census), and many calls here are a short list rather than a project: shelves and curtain rods, a light fixture or ceiling fan at an existing box, furniture assembly, and a door that drags or will not latch. Small jobs start at $49, furniture assembly at $65, and a ceiling fan or light fixture at $79.",
+          "More than a quarter of Palm Harbor residents are 65 or older (27.9% in the 2020 census), and many calls here are a short list rather than a project: shelves and curtain rods, a light fixture or ceiling fan at an existing box, furniture assembly, and a door that drags or will not latch. Call or text for an instant estimate.",
         ],
         links: [
           { href: "/services/electrical-fixture-installation", label: "Light fixtures" },
@@ -205,7 +205,7 @@ export const gbpCityHubs: TargetLocation[] = [
       {
         heading: "Same-day handyman in Palm Harbor",
         paragraphs: [
-          `A same-day service call starts at $99. Whether today works depends on whether the crew is already on a north Pinellas stop. Call ${phone} and we tell you on the phone.`,
+          `Same-day visits get a free estimate. Whether today works depends on whether the crew is already on a north Pinellas stop. Call ${phone} and we tell you on the phone.`,
         ],
         links: [{ href: "/services/same-day-handyman", label: "Same-day handyman" }],
       },
@@ -226,12 +226,12 @@ export const gbpCityHubs: TargetLocation[] = [
       {
         question: "How much does a handyman cost in Palm Harbor?",
         answer:
-          "Small jobs start at $49, furniture assembly at $65, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
+          "Expect low prices and a free estimate. We confirm the price on the phone before we come out.",
       },
       {
         question: "Can you mount a TV in an East Lake house?",
         answer:
-          "Yes, when we can fasten into structure or use a rated anchor for that wall. We check before we drill. TV mounting starts at $89.",
+          "Yes, when we can fasten into structure or use a rated anchor for that wall. We check before we drill. Expect low prices and a free estimate.",
       },
       {
         question: "Do you repair fences in Palm Harbor?",

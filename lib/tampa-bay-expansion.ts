@@ -243,7 +243,7 @@ export const expansionLocations: TargetLocation[] = [
     neighborhoods: ["Lutz Lake Fern", "Van Dyke", "Dale Mabry north", "Land O' Lakes border"],
     intro:
       "Need a Lutz home repair expert? Handyman Pros FL is the local handyman 33549 residents trust for tile patch work, indoor fixes, and careful outdoor repairs.",
-    directAnswer: "Handyman Pros FL serves Hillsborough-side Lutz, FL, including ZIPs 33548 and 33549, from its Westchase headquarters, handling tile repair from $199, ceiling fan installs from $79 and small jobs from $49.",
+    directAnswer: "Handyman Pros FL serves Hillsborough-side Lutz, FL, including ZIPs 33548 and 33549, from its Westchase headquarters, handling tile repair, ceiling fan installs and small jobs, each with a free estimate.",
     paragraphs: [
       "A Lutz home repair expert should understand larger lots, lake-adjacent humidity, and the mix of custom and production homes around ZIP 33549. Handyman Pros FL serves Lutz as a true local handyman 33549 option — close enough for responsive scheduling, skilled enough for clean finish work that lasts.",
       "Tile patch requests often follow a cracked floor tile, a chipped shower surround, or a remodel that left an unfinished edge. We assess substrate condition, match size and layout when materials are available, and complete careful cuts so the repair blends rather than shouts. For specialty porcelain or unavailable discontinued tile, we discuss realistic options before starting.",
@@ -279,7 +279,7 @@ export const expansionLocations: TargetLocation[] = [
       {
         heading: "Tile patches and regrout in Lutz",
         paragraphs: [
-          "Tile patch requests follow a cracked floor tile or a chipped shower edge. We check the substrate, match size when you have leftovers, and cut so the repair does not shout. Discontinued tile is discussed before we start, not after the thinset is mixed. Tile repair or regrout starts at $199.",
+          "Tile patch requests follow a cracked floor tile or a chipped shower edge. We check the substrate, match size when you have leftovers, and cut so the repair does not shout. Discontinued tile is discussed before we start, not after the thinset is mixed. Call or text for an instant estimate.",
         ],
         links: [{ href: "/services/tile-installation", label: "Tile repair and installation" }],
       },
@@ -312,7 +312,7 @@ export const expansionLocations: TargetLocation[] = [
       {
         heading: "Same-day handyman in Lutz",
         paragraphs: [
-          `A same-day service call starts at $99. Whether today works depends on whether the crew is already on the north route. Call ${phone} and we tell you on the phone.`,
+          `Same-day visits get a free estimate. Whether today works depends on whether the crew is already on the north route. Call ${phone} and we tell you on the phone.`,
         ],
         links: [{ href: "/services/same-day-handyman", label: "Same-day handyman" }],
       },
@@ -331,12 +331,12 @@ export const expansionLocations: TargetLocation[] = [
       {
         question: "How much does a handyman cost in Lutz?",
         answer:
-          "Small jobs start at $49, furniture assembly at $65, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
+          "Expect low prices and a free estimate. We confirm the price on the phone before we come out.",
       },
       {
         question: "Can you patch tile in Lutz?",
         answer:
-          "Yes, when the substrate is sound and a matching tile is available. We will tell you if the crack is a bigger floor problem. Tile repair or regrout starts at $199.",
+          "Yes, when the substrate is sound and a matching tile is available. We will tell you if the crack is a bigger floor problem. Call or text for an instant estimate.",
       },
       {
         question: "Do you fix gates and short fence sections on larger lots?",
@@ -513,7 +513,7 @@ export const expansionLocations: TargetLocation[] = [
     neighborhoods: ["56th Street", "Busch Boulevard", "Temple Terrace Golf", "USF border"],
     intro:
       "Handyman Pros FL is the local contractor Temple Terrace homeowners call for dependable Temple Terrace home repair, punch-list fixes, and same-day help when you search handyman near me.",
-    directAnswer: "Handyman Pros FL serves Temple Terrace, FL (ZIPs 33617 and 33637) from its Westchase headquarters, fixing drywall (free estimate), light fixtures and ceiling fans from $79 and sticking doors in older and mid-century homes near 56th Street and USF. Temple Terrace is its own city, so permits come from the City of Temple Terrace, and we tell you up front if your job needs one.",
+    directAnswer: "Handyman Pros FL serves Temple Terrace, FL (ZIPs 33617 and 33637) from its Westchase headquarters, fixing drywall, light fixtures, ceiling fans and sticking doors in older and mid-century homes near 56th Street and USF. Temple Terrace is its own city, so permits come from the City of Temple Terrace, and we tell you up front if your job needs one.",
     paragraphs: [
       "Temple Terrace home repair requests rarely wait for a perfect weekend. Between university-area rentals, established family homes, and busy schedules along Busch Boulevard corridors, residents need a local contractor who answers the phone and arrives prepared. Our local crew serves Temple Terrace.",
       "When neighbors search handyman near me, they usually want more than a vague callback. They want someone who can assess a sticking door, patch drywall after a remodel, hang blinds level, and tighten loose stair rails in one productive visit. Our team treats Temple Terrace properties with the same care we give Westchase and Carrollwood homes — shoe covers indoors, dust control during sanding, and a walkthrough before we leave.",
@@ -581,7 +581,7 @@ export const expansionLocations: TargetLocation[] = [
       {
         heading: "Same-day handyman in Temple Terrace",
         paragraphs: [
-          `A same-day service call starts at $99. Whether today works depends on the east Tampa route. Call ${phone} and we tell you on the phone.`,
+          `Same-day visits get a free estimate. Whether today works depends on the east Tampa route. Call ${phone} and we tell you on the phone.`,
         ],
         links: [{ href: "/services/same-day-handyman", label: "Same-day handyman" }],
       },
@@ -601,7 +601,7 @@ export const expansionLocations: TargetLocation[] = [
       {
         question: "How much does a handyman cost in Temple Terrace?",
         answer:
-          "Small jobs start at $49, furniture assembly at $65, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
+          "Expect low prices and a free estimate. We confirm the price on the phone before we come out.",
       },
       {
         question: "Can you patch drywall in a Temple Terrace rental?",

@@ -17,7 +17,7 @@ const homeFaqs = [
   {
     question: "How much does a handyman cost in Tampa?",
     answer:
-      "A same-day handyman service call in Tampa starts at $99, and small jobs like hanging shelves or curtain rods start at $49. Furniture assembly starts at $65, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. The final price is quoted after you describe the job, and all estimates are free with no obligation.",
+      "A same-day handyman visit in Tampa and small jobs like hanging shelves or curtain rods both start with a free estimate. The final price is quoted after you describe the job, and all estimates are free with no obligation.",
   },
   {
     question: "Can I find a handyman near me in Westchase or Carrollwood today?",

@@ -114,7 +114,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/palm-harbor-fl": {
     title: "Handyman Palm Harbor FL | Home Repairs | Handyman Pros FL",
-    description: "Palm Harbor handyman for TV mounting (from $89), drywall patches (free estimate) and fence boards in East Lake, Ozona and Crystal Beach. Call (656) 205-3185.",
+    description: "Palm Harbor handyman for TV mounting, drywall patches and fence boards in East Lake, Ozona and Crystal Beach. Call (656) 205-3185.",
   },
   "/locations/safety-harbor-fl": {
     title: "Handyman Safety Harbor FL | Home Repairs | Handyman Pros FL",
@@ -142,7 +142,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/lutz": {
     title: "Handyman Lutz FL | Home Repairs | Handyman Pros FL",
-    description: "Lutz handyman for ZIPs 33548 and 33549. Tile repair from $199, ceiling fans from $79, small jobs from $49. Licensed & insured. Call (656) 205-3185.",
+    description: "Lutz handyman for ZIPs 33548 and 33549. Tile repair, ceiling fans and small jobs, with free estimates. Licensed & insured. Call (656) 205-3185.",
   },
   "/locations/wesley-chapel": {
     title: "Handyman Wesley Chapel FL | Home Repairs | Handyman Pros FL",
@@ -162,7 +162,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/temple-terrace": {
     title: "Handyman Temple Terrace FL | Home Repairs | Handyman Pros FL",
-    description: "Temple Terrace handyman for drywall patches (free estimate), sticking doors, fixtures (from $79) and rental punch lists near 56th St and USF. Call (656) 205-3185.",
+    description: "Temple Terrace handyman for drywall patches, sticking doors, fixtures and rental punch lists near 56th St and USF. Call (656) 205-3185.",
   },
   "/locations/land-o-lakes": {
     title: "Handyman Land O' Lakes FL | Home Repairs | Handyman Pros FL",
@@ -217,15 +217,15 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/westchase-fl": {
     title: "Handyman Westchase FL | Manitas Same-Day",
-    description: "Handyman Pros FL is based in Westchase (33626). TV mounting from $89, free drywall estimates, small jobs from $49. Licensed & insured. Call (656) 205-3185.",
+    description: "Handyman Pros FL is based in Westchase (33626). TV mounting, drywall patches and small jobs with a free estimate. Licensed & insured. Call (656) 205-3185.",
   },
   "/locations/zephyrhills-fl": {
     title: "Handyman Zephyrhills FL | Home Repairs | Handyman Pros FL",
-    description: "Licensed & insured handyman for Zephyrhills (33540–33542). Small jobs from $49, TV mounting from $89. Free estimates on all jobs. Call (656) 205-3185.",
+    description: "Licensed & insured handyman for Zephyrhills (33540–33542). Low prices on small jobs and TV mounting. Free estimates on all jobs. Call (656) 205-3185.",
   },
   "/locations/odessa-fl": {
     title: "Handyman Odessa FL | Home Repairs | Handyman Pros FL",
-    description: "Licensed & insured Odessa handyman. Free drywall estimates, furniture assembly from $65. Our crew serves Odessa daily. Free estimates. (656) 205-3185.",
+    description: "Licensed & insured Odessa handyman. Free estimates on drywall and furniture assembly. Our crew serves Odessa daily. Free estimates. (656) 205-3185.",
   },
   "/service-areas": {
     title: "Handyman Service Areas | Westchase HQ Coverage",

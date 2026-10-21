@@ -5,9 +5,9 @@ import { buildMetadata } from "@/lib/seo";
 const path = "/locations/zephyrhills-fl";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Handyman in Zephyrhills, FL | Small Jobs from $49",
+  title: "Handyman in Zephyrhills, FL | Free Estimate",
   description:
-    "Licensed & insured handyman for Zephyrhills (33540–33542). Small jobs from $49, TV mounting from $89. Free estimates on all jobs. Call (656) 205-3185.",
+    "Licensed & insured handyman for Zephyrhills (33540–33542). Low prices on small jobs and TV mounting. Free estimates on all jobs. Call (656) 205-3185.",
   path,
   keywords: ["handyman zephyrhills", "handyman zephyrhills fl", "Zephyrhills FL handyman", "handyman near Zephyrhills", "handyman 33540", "handyman 33541", "handyman 33542", "handyman Pasco County", "manitas en Zephyrhills"],
   exactTitle: true,
@@ -15,22 +15,22 @@ export const metadata: Metadata = buildMetadata({
 
 const faqs = [
   { question: "Do you serve Zephyrhills?", answer: "Yes. Handyman Pros FL books Zephyrhills jobs on set east-Pasco days, and our local crew serves Zephyrhills. Call (656) 205-3185 to get on the next Zephyrhills day." },
-  { question: "How much does a handyman cost in Zephyrhills?", answer: "Small jobs start at $49, furniture assembly at $65, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair at $199. A same-day service call starts at $99." },
+  { question: "How much does a handyman cost in Zephyrhills?", answer: "Ask about our great deals on small jobs. Same-day visits get a free estimate." },
   { question: "Are estimates free?", answer: "Yes. Free estimates on all jobs. Describe the job on the phone or the form and you'll get a price before any work starts." },
-  { question: "Can you come the same day in Zephyrhills?", answer: "Sometimes. Zephyrhills is about an hour from our Tampa base, so same-day depends on that day's schedule. A same-day service call starts at $99." },
+  { question: "Can you come the same day in Zephyrhills?", answer: "Sometimes. Zephyrhills is about an hour from our Tampa base, so same-day depends on that day's schedule. Same-day visits get a free estimate." },
   { question: "Can you help after a storm?", answer: "Yes, for roof leak patch and tarping, loose gutter sections and damaged fence panels. We don't replace roofs." },
   { question: "Are you licensed and insured?", answer: "Yes, Handyman Pros FL is licensed and insured. If a job needs a permit or a specialist trade, we tell you before work starts." },
   { question: "¿Hablan español?", answer: "Sí. Hablamos español. Llame al (656) 205-3185." },
 ];
 
 const priceSentences = [
-  "Small jobs like shelves and curtain rods start at $49.",
-  "Furniture assembly starts at $65.",
+  "Small jobs like shelves and curtain rods come with low prices.",
+  "Furniture assembly gets an instant estimate.",
   "Drywall patches get a free estimate.",
-  "A ceiling fan or light fixture install starts at $79.",
-  "TV mounting starts at $89.",
-  "A same-day service call starts at $99.",
-  "Tile repair starts at $199.",
+  "Ceiling fan and light fixture installs get a free estimate.",
+  "TV mounting: ask about our great deals.",
+  "Same-day visits get a free estimate.",
+  "Tile repair is quoted after a free estimate.",
 ];
 
 const grid = [
@@ -56,7 +56,7 @@ const brief: CityBrief = {
   breadcrumb: "Zephyrhills, FL",
   h1: "Handyman in Zephyrhills, FL",
   opening:
-    "Handyman Pros FL is a licensed and insured handyman company from Tampa that books Zephyrhills jobs into set east-Pasco days for repairs like TV mounting, drywall patches, ceiling fans and furniture assembly. Small jobs start at $49, and estimates are free. Call (656) 205-3185. Our local crew serves Zephyrhills.",
+    "Handyman Pros FL is a licensed and insured handyman company from Tampa that books Zephyrhills jobs into set east-Pasco days for repairs like TV mounting, drywall patches, ceiling fans and furniture assembly. Estimates are free. Call (656) 205-3185. Our local crew serves Zephyrhills.",
   priceParagraph: `${priceSentences.join(" ")} Free estimates on all jobs.`,
   faqTitle: "Handyman in Zephyrhills FAQ",
   ctaTitle: "Get a free Zephyrhills estimate",
@@ -71,12 +71,12 @@ const brief: CityBrief = {
         Zephyrhills day and a price for the job before anything starts.
       </p>
       <p>
-        Same-day is possible when the schedule allows, but we won&apos;t promise it from an hour away. A same-day service
-        call starts at $99. If you have a short list, such as a fan, a shelf and a sticking door, put it all on one
+        Same-day is possible when the schedule allows, but we won&apos;t promise it from an hour away. Same-day visits get a free
+        estimate. If you have a short list, such as a fan, a shelf and a sticking door, put it all on one
         visit. That is the most efficient way to book from out here.
       </p>
 
-      <H2>Zephyrhills handyman starting prices</H2>
+      <H2>Zephyrhills handyman estimates</H2>
       <ul className="list-disc space-y-1 pl-6">
         {priceSentences.map((sentence, i) => (
           <li key={sentence}>
@@ -95,7 +95,7 @@ const brief: CityBrief = {
         Zephyrhills has a median age of 48.8, and 29.9% of residents are 65 or older (2020 census). Many of the calls
         here are practical upgrades: brighter light fixtures in a dim hallway, a ceiling fan for a back bedroom, a TV
         mounted at a comfortable viewing height, a new dresser or bed frame assembled, or a door rehung so it closes
-        without a shove. Small jobs start at $49, and a ceiling fan or light fixture install starts at $79.
+        without a shove. Every job starts with a free estimate.
       </p>
       <H3>Older homes near downtown</H3>
       <p>

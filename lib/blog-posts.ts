@@ -47,13 +47,13 @@ Florida's climate creates unique home maintenance challenges. High humidity caus
 
 ## How Much Does a Handyman Cost in Florida?
 
-At Handyman Pros FL, a same-day handyman service call in Tampa starts at $99, and small jobs like hanging shelves or curtain rods start at $49. Other starting prices:
+At Handyman Pros FL, every job starts with a free estimate, from a same-day visit to small jobs like hanging shelves or curtain rods. Call or text for a price on:
 
-- Furniture assembly starts at $65.
-- Drywall patches get a free estimate. Call or text for a price.
-- A ceiling fan or light fixture starts at $79.
-- TV mounting starts at $89.
-- Tile repair or regrout starts at $199.
+- Furniture assembly
+- Drywall patches
+- Ceiling fan or light fixture installs
+- TV mounting
+- Tile repair or regrout
 
 The final price is quoted after you describe the job. Always get a written estimate before work begins.
 
@@ -356,7 +356,7 @@ Professional TV mounting includes:
 
 ## TV Mounting Cost in Florida
 
-Professional TV mounting typically costs $75-$200 depending on TV size, wall type, and cable management needs. At Handyman Pros FL, standard TV mounting starts at $89, with larger TVs, masonry walls, and in-wall cable hiding quoted after a free estimate.
+Professional TV mounting typically costs $75-$200 depending on TV size, wall type, and cable management needs. At Handyman Pros FL, standard TV mounting gets an instant estimate, with larger TVs, masonry walls, and in-wall cable hiding quoted after a free estimate.
 
 Handyman Pros Florida mounts TVs on all wall types with clean cable management. Same-day service available. Call ${siteConfig.phone}.`,
   },

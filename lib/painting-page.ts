@@ -40,7 +40,7 @@ export const paintingSections: ContentSection[] = [
   {
     heading: "What painting costs",
     paragraphs: [
-      "We give a price over the phone or after photos, before any work starts. Related starting prices: small jobs start at $49, and drywall patches get a free estimate.",
+      "We give a price over the phone or after photos, before any work starts. Small jobs and drywall patches get a free estimate too.",
     ],
   },
   {

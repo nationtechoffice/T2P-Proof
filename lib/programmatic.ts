@@ -199,7 +199,7 @@ export const coreServices: CoreService[] = [
       },
       {
         question: "How fast can you patch drywall?",
-        answer: "Small patches are often same-week. A same-day service call starts at $99.",
+        answer: "Small patches are often same-week. Same-day visits get a free estimate.",
       },
       {
         question: "Do I need a permit for drywall repair?",
@@ -220,7 +220,7 @@ export const coreServices: CoreService[] = [
         heading: "What drywall repair costs in Tampa",
         paragraphs: [
           "Drywall patches get a free estimate. What changes the price is the size of the hole, ceiling versus wall, how much texture has to be matched, whether water damaged the board, and whether you want the patch painted. Larger repairs are quoted after photos.",
-          "Related starting prices: small jobs start at $49, and a same-day service call starts at $99.",
+          "Small jobs and same-day visits get a free estimate too.",
         ],
         links: [
           { href: "/services/same-day-handyman", label: "Same-day handyman" },
@@ -398,7 +398,7 @@ export const coreServices: CoreService[] = [
       {
         question: "How much does furniture assembly cost in Tampa?",
         answer:
-          "Furniture assembly in Tampa starts at $65. A visit for one or two flat-pack pieces is quoted after we know the piece count and whether the hardware is in the box. A full bedroom set or a room rearrangement is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
+          "Furniture assembly in Tampa gets an instant estimate. A visit for one or two flat-pack pieces is quoted after we know the piece count and whether the hardware is in the box. A full bedroom set or a room rearrangement is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
       },
       {
         question: "Do you assemble IKEA, Wayfair, and Amazon furniture?",
@@ -544,7 +544,7 @@ export const coreServices: CoreService[] = [
       {
         question: "How much does tile installation cost in Tampa?",
         answer:
-          "Tile repair or regrouting in Tampa starts at $199. A cracked-tile patch or a standard kitchen backsplash is quoted after we see photos and know whether the tile is already on site. A full bathroom, or a floor that needs substrate repair, is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
+          "Tile repair or regrouting in Tampa: free estimate, call or text for a price. A cracked-tile patch or a standard kitchen backsplash is quoted after we see photos and know whether the tile is already on site. A full bathroom, or a floor that needs substrate repair, is quoted separately. Estimates are free. Handyman Pros FL is licensed and insured.",
       },
       {
         question: "What tile materials do you work with?",
@@ -727,7 +727,7 @@ export const targetLocations: TargetLocation[] = [
       {
         question: "How much is drywall repair Tampa or TV mounting Tampa?",
         answer:
-          "TV mounting in Tampa starts at $89, and drywall patches get a free estimate. The final price depends on the hole size, wall type, and cable concealment. Estimates are free over the phone.",
+          "TV mounting and drywall patches in Tampa get a free estimate. The final price depends on the hole size, wall type, and cable concealment. Estimates are free over the phone.",
       },
       {
         question: "Do you work in South Tampa and Hyde Park?",
@@ -808,7 +808,7 @@ export const targetLocations: TargetLocation[] = [
       {
         heading: "Same-day handyman in Westchase",
         paragraphs: [
-          `A same-day service call in Westchase starts at $99. Call ${siteConfig.phone} and we tell you on the phone whether today's route has room.`,
+          `Same-day visits in Westchase get a free estimate. Call ${siteConfig.phone} and we tell you on the phone whether today's route has room.`,
         ],
         links: [{ href: "/services/same-day-handyman", label: "Same-day handyman" }],
       },
@@ -820,12 +820,12 @@ export const targetLocations: TargetLocation[] = [
       },
       {
         question: "How fast is Westchase handyman service?",
-        answer: "Same-day is common for 33626 because we start here. Call to lock a window. A same-day service call starts at $99.",
+        answer: "Same-day is common for 33626 because we start here. Call to lock a window. Same-day visits get a free estimate.",
       },
       {
         question: "How much does a handyman cost in Westchase?",
         answer:
-          "Small jobs start at $49, furniture assembly at $65, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
+          "Expect low prices and a free estimate. We confirm the price on the phone before we come out.",
       },
       {
         question: "Do I need Westchase HOA approval before a handyman job?",

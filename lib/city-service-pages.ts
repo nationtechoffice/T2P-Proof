@@ -13,15 +13,15 @@ export const cityServicePages: CityServicePageData[] = [
   "citySlug": "brandon",
   "serviceSlug": "drywall-repair",
   "title": "Drywall Repair in Brandon, FL | Free Estimate",
-  "description": "Our local crew patches drywall in Brandon, Bloomingdale and Limona. Free drywall estimate, same-day call $99. Free estimates on all jobs. (656) 205-3185.",
+  "description": "Our local crew patches drywall in Brandon, Bloomingdale and Limona. Free drywall estimate, same-day calls available. Free estimates on all jobs. (656) 205-3185.",
   "h1": "Drywall Repair in Brandon, FL",
-  "opening": "Our local crew serves Brandon with drywall repair from Brandon Hills and Kensington Estates to Limona, Providence Lakes and Bloomingdale: door-knob holes, nail pops, settling cracks, ceiling patches and popcorn or knockdown texture matching. Drywall patches get a free estimate, a same-day service call starts at $99, and estimates are free. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and drywall patches get a free estimate. Here's the short list Brandon homeowners call about most.",
-  "priceLine": "Small jobs start at $49. Drywall patches get a free estimate. A ceiling fan or light fixture install starts at $79. TV mounting starts at $89. A same-day service call starts at $99. Free estimates on all jobs.",
+  "opening": "Our local crew serves Brandon with drywall repair from Brandon Hills and Kensington Estates to Limona, Providence Lakes and Bloomingdale: door-knob holes, nail pops, settling cracks, ceiling patches and popcorn or knockdown texture matching. Drywall patches and same-day visits get a free estimate. Call (656) 205-3185.",
+  "noJob": "No job too small, and drywall patches get a free estimate. Here's the short list Brandon homeowners call about most.",
+  "priceLine": "Call or text for an instant estimate. Drywall patches get a free estimate. Same-day visits get a free estimate. Free estimates on all jobs.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs",
-   "Same-day service call from $99"
+   "Same-day service calls"
   ],
   "cityName": "Brandon",
   "cityLabel": "Brandon, FL",
@@ -46,11 +46,11 @@ export const cityServicePages: CityServicePageData[] = [
     "h2": "Small jobs we handle in Brandon",
     "list": [
      "Door-knob holes and nail pops. Drywall patches get a free estimate.",
-     "Hanging shelves, curtain rods and pictures. Small jobs start at $49.",
-     "TV mounting and patching the old mount holes. [TV mounting](/services/tv-wall-mounting) starts at $89.",
-     "Ceiling fan or light swaps. A [fan or light fixture install](/services/handyman/fan-installation) starts at $79.",
-     "[Furniture assembly](/services/furniture-assembly) starts at $65.",
-     "Sticking doors and loose hinges. Small jobs start at $49.",
+     "Hanging shelves, curtain rods and pictures. Call or text for an instant estimate.",
+     "TV mounting and patching the old mount holes. Every job starts with a free estimate.",
+     "Ceiling fan or light swaps. Expect low prices and a free estimate.",
+     "Ask about our great deals on small jobs.",
+     "Sticking doors and loose hinges. Call or text for an instant estimate.",
      "Caulk and grout touch-ups.",
      "A punch list before listing a house (free estimate)."
     ]
@@ -58,7 +58,7 @@ export const cityServicePages: CityServicePageData[] = [
    {
     "h2": "Same-day drywall help in Brandon",
     "paras": [
-     "Our local crew often has same-day openings in Brandon. A [same-day service call](/services/same-day-handyman) starts at $99. Call (656) 205-3185 in the morning with a photo of the damage and we'll tell you whether today works and what the patch should cost."
+     "Our local crew often has same-day openings in Brandon. Every job starts with a free estimate. Call (656) 205-3185 in the morning with a photo of the damage and we'll tell you whether today works and what the patch should cost."
     ]
    },
    {
@@ -134,11 +134,11 @@ export const cityServicePages: CityServicePageData[] = [
   "faqs": [
    {
     "question": "How much does drywall repair cost in Brandon?",
-    "answer": "Drywall patches get a free estimate, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs."
+    "answer": "Drywall patches and small jobs get a free estimate. Bigger repairs get a free estimate first. Free estimates on all jobs."
    },
    {
     "question": "Can you patch drywall the same day in Brandon?",
-    "answer": "Often, yes. Our local crew serves Brandon and often has same-day openings. A same-day service call starts at $99."
+    "answer": "Often, yes. Our local crew serves Brandon and often has same-day openings. Same-day visits get a free estimate."
    },
    {
     "question": "My Brandon house has a popcorn ceiling. Can you patch it?",
@@ -146,7 +146,7 @@ export const cityServicePages: CityServicePageData[] = [
    },
    {
     "question": "What small jobs can you do on the same visit?",
-    "answer": "Shelves and curtain rods, TV mounting, fan or light swaps, furniture assembly and sticking doors. Small jobs start at $49, TV mounting at $89, and fans at $79."
+    "answer": "Shelves and curtain rods, TV mounting, fan or light swaps, furniture assembly and sticking doors. Call or text for an instant estimate."
    },
    {
     "question": "Which Brandon neighborhoods and ZIP codes do you cover?",
@@ -164,7 +164,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "How much does drywall repair cost in Brandon?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Drywall patches get a free estimate, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs."
+       "text": "Drywall patches and small jobs get a free estimate. Bigger repairs get a free estimate first. Free estimates on all jobs."
       }
      },
      {
@@ -172,7 +172,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "Can you patch drywall the same day in Brandon?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Often, yes. Our local crew serves Brandon and often has same-day openings. A same-day service call starts at $99."
+       "text": "Often, yes. Our local crew serves Brandon and often has same-day openings. Same-day visits get a free estimate."
       }
      },
      {
@@ -188,7 +188,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "What small jobs can you do on the same visit?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Shelves and curtain rods, TV mounting, fan or light swaps, furniture assembly and sticking doors. Small jobs start at $49, TV mounting at $89, and fans at $79."
+       "text": "Shelves and curtain rods, TV mounting, fan or light swaps, furniture assembly and sticking doors. Call or text for an instant estimate."
       }
      },
      {
@@ -264,8 +264,8 @@ export const cityServicePages: CityServicePageData[] = [
   "description": "Our local crew paints exteriors, trim, doors and fences in Brandon, Bloomingdale and Brandon Hills. Free estimates on all jobs. Licensed & insured.",
   "h1": "Exterior Painting in Brandon, FL",
   "opening": "Our local crew serves Brandon with exterior painting in Brandon Hills, Kensington Estates, Bloomingdale, Providence Lakes and Limona: house exteriors, trim and fascia, front doors, garage doors, shutters and fences. Painting is quoted after a free estimate, with free estimates on all jobs. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and if the job is a front door or one wall of trim, it still gets a free painting estimate. Other small fixes start at $49.",
-  "priceLine": "Painting is quoted after a free estimate. Small jobs start at $49, and a same-day service call starts at $99. Free estimates on all jobs.",
+  "noJob": "No job too small: if the job is a front door or one wall of trim, it still gets a free painting estimate. Other small fixes get great deals too.",
+  "priceLine": "Painting is quoted after a free estimate. Free estimates on all jobs.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs"
@@ -320,7 +320,7 @@ export const cityServicePages: CityServicePageData[] = [
    {
     "h2": "Small jobs on the same visit (Brandon)",
     "paras": [
-     "While we're there, we can hang house numbers or a mailbox, swap an exterior light (a light fixture install starts at $79), re-hang a sagging gate, caulk a window or fix a loose fence board. Small jobs start at $49. A same-day service call starts at $99."
+     "While we're there, we can hang house numbers or a mailbox, swap an exterior light (light fixture installs get a free estimate), re-hang a sagging gate, caulk a window or fix a loose fence board. Same-day visits get a free estimate."
     ]
    }
   ],
@@ -405,7 +405,7 @@ export const cityServicePages: CityServicePageData[] = [
    },
    {
     "question": "Do you handle other small jobs on the same visit?",
-    "answer": "Yes. Exterior light swaps start at $79, and small jobs like a loose fence board or a sagging gate start at $49. A same-day service call starts at $99."
+    "answer": "Yes. Exterior light swaps and small jobs like a loose fence board or a sagging gate come with low prices and a free estimate. Same-day visits get a free estimate."
    }
   ],
   "schema": [
@@ -451,7 +451,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "Do you handle other small jobs on the same visit?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Yes. Exterior light swaps start at $79, and small jobs like a loose fence board or a sagging gate start at $49. A same-day service call starts at $99."
+       "text": "Yes. Exterior light swaps and small jobs like a loose fence board or a sagging gate come with low prices and a free estimate. Same-day visits get a free estimate."
       }
      }
     ]
@@ -511,12 +511,12 @@ export const cityServicePages: CityServicePageData[] = [
   "path": "/locations/clearwater/ceiling-fan-installation",
   "citySlug": "clearwater",
   "serviceSlug": "ceiling-fan-installation",
-  "title": "Ceiling Fan Installation Clearwater, FL | From $79",
-  "description": "Our local crew installs ceiling and lanai fans in Clearwater, Countryside and Clearwater Beach. Fan installs from $79. Free estimates on all jobs.",
+  "title": "Ceiling Fan Installation Clearwater, FL | Free Estimate",
+  "description": "Our local crew installs ceiling and lanai fans in Clearwater, Countryside and Clearwater Beach. Free estimates on all jobs.",
   "h1": "Ceiling Fan Installation in Clearwater, FL",
-  "opening": "Our local crew serves Clearwater with ceiling fan installation from Clearwater Beach and Island Estates to Countryside and Harbor Oaks: fan swaps, light-to-fan conversions, lanai and porch fans, and downrod or hugger mounts. A ceiling fan or light fixture install starts at $79, with free estimates on all jobs. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and a ceiling fan or light fixture install starts at $79. A wobbling fan or a dead pull chain is still worth a call.",
-  "priceLine": "Small jobs start at $49. A ceiling fan or light fixture install starts at $79. A same-day service call starts at $99. Free estimates on all jobs. New wiring or a new circuit is quoted after a free estimate.",
+  "opening": "Our local crew serves Clearwater with ceiling fan installation from Clearwater Beach and Island Estates to Countryside and Harbor Oaks: fan swaps, light-to-fan conversions, lanai and porch fans, and downrod or hugger mounts. Free estimates on all jobs, including ceiling fans and light fixtures. Call (656) 205-3185.",
+  "noJob": "No job too small: even a single fan or light fixture install gets a free estimate. A wobbling fan or a dead pull chain is still worth a call.",
+  "priceLine": "Call or text for an instant estimate. Same-day visits get a free estimate. Free estimates on all jobs. New wiring or a new circuit is quoted after a free estimate.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs"
@@ -599,7 +599,7 @@ export const cityServicePages: CityServicePageData[] = [
    ],
    [
     "/services/tv-wall-mounting",
-    "TV mounting (from $89)"
+    "TV mounting (free estimate)"
    ],
    [
     "/services/door-repair",
@@ -607,11 +607,11 @@ export const cityServicePages: CityServicePageData[] = [
    ],
    [
     "/services/same-day-handyman",
-    "Same-day handyman ($99)"
+    "Same-day handyman"
    ],
    [
     "/services/furniture-assembly",
-    "Furniture assembly (from $65)"
+    "Furniture assembly (free estimate)"
    ]
   ],
   "formTitle": "Get a free Clearwater estimate",
@@ -619,7 +619,7 @@ export const cityServicePages: CityServicePageData[] = [
   "faqs": [
    {
     "question": "How much does ceiling fan installation cost in Clearwater?",
-    "answer": "A ceiling fan or light fixture install starts at $79. New wiring or a new circuit is quoted after a free estimate. Free estimates on all jobs."
+    "answer": "Free estimate, call or text for a price. New wiring or a new circuit is quoted after a free estimate. Free estimates on all jobs."
    },
    {
     "question": "Do I need a wet-rated fan on my Clearwater lanai?",
@@ -649,7 +649,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "How much does ceiling fan installation cost in Clearwater?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "A ceiling fan or light fixture install starts at $79. New wiring or a new circuit is quoted after a free estimate. Free estimates on all jobs."
+       "text": "Free estimate, call or text for a price. New wiring or a new circuit is quoted after a free estimate. Free estimates on all jobs."
       }
      },
      {
@@ -706,13 +706,7 @@ export const cityServicePages: CityServicePageData[] = [
     "url": "https://handymanprosflorida.com/locations/clearwater/ceiling-fan-installation",
     "offers": {
      "@type": "Offer",
-     "priceCurrency": "USD",
-     "priceSpecification": {
-      "@type": "PriceSpecification",
-      "minPrice": 79,
-      "priceCurrency": "USD"
-     },
-     "description": "Ceiling fan or light fixture install, starting price"
+     "description": "Ceiling fan or light fixture install, free estimate"
     }
    },
    {
@@ -755,8 +749,8 @@ export const cityServicePages: CityServicePageData[] = [
   "description": "Our local crew patches drywall and leak-stained ceilings in Clearwater, Countryside and beach condos. Free estimates on all jobs.",
   "h1": "Drywall Repair in Clearwater, FL",
   "opening": "Our local crew serves Clearwater with drywall repair from Clearwater Beach and Island Estates condos to Countryside, Morningside and Harbor Oaks homes: ceiling patches after a leak, door-knob holes, cracks and texture matching. Drywall patches get a free estimate, call or text for a price. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and drywall patches get a free estimate, and one ceiling stain is worth a call.",
-  "priceLine": "Small jobs start at $49. Drywall patches get a free estimate. A ceiling fan or light fixture install starts at $79. A same-day service call starts at $99. Free estimates on all jobs.",
+  "noJob": "No job too small: drywall patches get a free estimate, and one ceiling stain is worth a call.",
+  "priceLine": "Call or text for an instant estimate. Drywall patches get a free estimate. Same-day visits get a free estimate. Free estimates on all jobs.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs"
@@ -788,7 +782,7 @@ export const cityServicePages: CityServicePageData[] = [
      "Nail pops",
      "Settling cracks",
      "TV-mount and shelf holes",
-     "Patches after a fan or light moves (fans from $79; see [ceiling fan installation in Clearwater](/locations/clearwater/ceiling-fan-installation))",
+     "Patches after a fan or light moves (see [ceiling fan installation in Clearwater](/locations/clearwater/ceiling-fan-installation))",
      "Knockdown and orange-peel texture matching",
      "Corner-bead dents",
      "Patch-and-prime ready for paint ([painting](/services/handyman/interior-painting) after a free estimate)"
@@ -859,7 +853,7 @@ export const cityServicePages: CityServicePageData[] = [
   "faqs": [
    {
     "question": "How much does drywall repair cost in Clearwater?",
-    "answer": "Drywall patches get a free estimate, and small jobs start at $49. Larger repairs get a free estimate first. Free estimates on all jobs."
+    "answer": "Drywall patches and small jobs get a free estimate. Larger repairs get a free estimate first. Free estimates on all jobs."
    },
    {
     "question": "Can you patch my condo ceiling after a leak from upstairs?",
@@ -889,7 +883,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "How much does drywall repair cost in Clearwater?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Drywall patches get a free estimate, and small jobs start at $49. Larger repairs get a free estimate first. Free estimates on all jobs."
+       "text": "Drywall patches and small jobs get a free estimate. Larger repairs get a free estimate first. Free estimates on all jobs."
       }
      },
      {
@@ -989,8 +983,8 @@ export const cityServicePages: CityServicePageData[] = [
   "description": "Our local crew repairs drywall in New Port Richey, Gulf Harbors and Jasmine Estates, including after flooding. Free estimates on all jobs.",
   "h1": "Drywall Repair in New Port Richey, FL",
   "opening": "Our local crew serves New Port Richey with drywall repair from downtown near Sims Park to Gulf Harbors and Jasmine Estates: flood-cut replacement after high water, ceiling leak patches, cracks, holes and texture matching. Drywall patches get a free estimate, call or text for a price. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and drywall patches get a free estimate, and a single crack over a door counts.",
-  "priceLine": "Small jobs start at $49. Drywall patches get a free estimate. A same-day service call starts at $99. Flood-cut replacement is quoted after a free estimate. Free estimates on all jobs.",
+  "noJob": "No job too small: drywall patches get a free estimate, and a single crack over a door counts.",
+  "priceLine": "Call or text for an instant estimate. Drywall patches get a free estimate. Same-day visits get a free estimate. Flood-cut replacement is quoted after a free estimate. Free estimates on all jobs.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs"
@@ -1090,7 +1084,7 @@ export const cityServicePages: CityServicePageData[] = [
    },
    {
     "question": "Can you patch a small drywall hole in New Port Richey?",
-    "answer": "Yes. Drywall patches get a free estimate, and small jobs start at $49. Free estimates on all jobs."
+    "answer": "Yes. Drywall patches and small jobs get a free estimate. Free estimates on all jobs."
    },
    {
     "question": "Do you handle mold behind drywall?",
@@ -1102,7 +1096,7 @@ export const cityServicePages: CityServicePageData[] = [
    },
    {
     "question": "Can you come the same day?",
-    "answer": "Often, yes. A same-day service call starts at $99. Call (656) 205-3185."
+    "answer": "Often, yes. Same-day visits get a free estimate. Call (656) 205-3185."
    }
   ],
   "schema": [
@@ -1124,7 +1118,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "Can you patch a small drywall hole in New Port Richey?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Yes. Drywall patches get a free estimate, and small jobs start at $49. Free estimates on all jobs."
+       "text": "Yes. Drywall patches and small jobs get a free estimate. Free estimates on all jobs."
       }
      },
      {
@@ -1148,7 +1142,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "Can you come the same day?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Often, yes. A same-day service call starts at $99. Call (656) 205-3185."
+       "text": "Often, yes. Same-day visits get a free estimate. Call (656) 205-3185."
       }
      }
     ]
@@ -1216,8 +1210,8 @@ export const cityServicePages: CityServicePageData[] = [
   "description": "Our local crew patches drywall in Palm Harbor, East Lake and Ozona. Free estimates on all jobs. Call (656) 205-3185.",
   "h1": "Drywall Repair in Palm Harbor, FL",
   "opening": "Our local crew serves Palm Harbor with drywall repair from Ozona and Crystal Beach to Highland Lakes and East Lake: door-knob holes, settling cracks, ceiling patches and texture matching. Drywall patches get a free estimate, call or text for a price. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and drywall patches get a free estimate. A single nail pop is worth a call.",
-  "priceLine": "Small jobs start at $49. Drywall patches get a free estimate. A ceiling fan or light fixture install starts at $79. A same-day service call starts at $99. Free estimates on all jobs.",
+  "noJob": "No job too small, and drywall patches get a free estimate. A single nail pop is worth a call.",
+  "priceLine": "Call or text for an instant estimate. Drywall patches get a free estimate. Same-day visits get a free estimate. Free estimates on all jobs.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs"
@@ -1242,7 +1236,7 @@ export const cityServicePages: CityServicePageData[] = [
      "Nail pops",
      "Settling cracks over doors and windows",
      "Tape-seam cracks",
-     "Ceiling patches after a fan or light moves ([fans](/services/handyman/fan-installation) from $79)",
+     "Ceiling patches after a fan or light moves ([fans](/services/handyman/fan-installation))",
      "Holes from grab bars, shelves or TV mounts that come down",
      "Patch-and-prime ready for paint ([painting](/services/handyman/interior-painting) after a free estimate)",
      "Popcorn, knockdown and orange-peel texture matching",
@@ -1333,7 +1327,7 @@ export const cityServicePages: CityServicePageData[] = [
    },
    {
     "question": "How much does drywall repair cost in Palm Harbor?",
-    "answer": "Drywall patches get a free estimate, and small jobs start at $49. Larger repairs get a free estimate first. Free estimates on all jobs."
+    "answer": "Drywall patches and small jobs get a free estimate. Larger repairs get a free estimate first. Free estimates on all jobs."
    },
    {
     "question": "Do I need a permit to patch drywall in Palm Harbor?",
@@ -1367,7 +1361,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "How much does drywall repair cost in Palm Harbor?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Drywall patches get a free estimate, and small jobs start at $49. Larger repairs get a free estimate first. Free estimates on all jobs."
+       "text": "Drywall patches and small jobs get a free estimate. Larger repairs get a free estimate first. Free estimates on all jobs."
       }
      },
      {
@@ -1459,8 +1453,8 @@ export const cityServicePages: CityServicePageData[] = [
   "description": "Our local crew patches drywall and older plaster walls in St. Pete, from Kenwood to Old Northeast. Free estimates on all jobs.",
   "h1": "Drywall Repair in St. Petersburg, FL",
   "opening": "Our local crew serves St. Petersburg with drywall repair from Historic Kenwood and Grand Central to Old Northeast, Snell Isle and Tyrone: cracks, holes, ceiling patches, texture matching and small plaster-wall patches in older homes. Drywall patches get a free estimate, call or text for a price. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and drywall patches get a free estimate.",
-  "priceLine": "Small jobs start at $49. Drywall patches get a free estimate. TV mounting starts at $89. A same-day service call starts at $99. Plaster repairs beyond a small patch are quoted after a free estimate. Free estimates on all jobs.",
+  "noJob": "No job too small, and drywall patches get a free estimate.",
+  "priceLine": "Call or text for an instant estimate. Drywall patches get a free estimate. Same-day visits get a free estimate. Plaster repairs beyond a small patch are quoted after a free estimate. Free estimates on all jobs.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs"
@@ -1484,7 +1478,7 @@ export const cityServicePages: CityServicePageData[] = [
      "Drywall holes and nail pops",
      "Ceiling patches after roof or AC leaks (leak fixed first: [leak patch and tarping](/services/handyman/roof-repair))",
      "Tape-seam cracks",
-     "TV-mount holes when a TV moves ([TV mounting](/services/tv-wall-mounting) from $89)",
+     "TV-mount holes when a TV moves ([TV mounting](/services/tv-wall-mounting))",
      "Condo wall patches downtown (association rules apply)",
      "Texture matching",
      "Patch-and-prime ([painting](/services/handyman/interior-painting) after a free estimate)"
@@ -1563,7 +1557,7 @@ export const cityServicePages: CityServicePageData[] = [
    },
    {
     "question": "How much does drywall repair cost in St. Petersburg?",
-    "answer": "Drywall patches get a free estimate, and small jobs start at $49. Larger plaster repairs are quoted after a free estimate. Free estimates on all jobs."
+    "answer": "Drywall patches and small jobs get a free estimate. Larger plaster repairs are quoted after a free estimate. Free estimates on all jobs."
    },
    {
     "question": "Is it safe to sand old walls in a historic St. Pete home?",
@@ -1597,7 +1591,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "How much does drywall repair cost in St. Petersburg?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Drywall patches get a free estimate, and small jobs start at $49. Larger plaster repairs are quoted after a free estimate. Free estimates on all jobs."
+       "text": "Drywall patches and small jobs get a free estimate. Larger plaster repairs are quoted after a free estimate. Free estimates on all jobs."
       }
      },
      {
@@ -1686,11 +1680,11 @@ export const cityServicePages: CityServicePageData[] = [
   "citySlug": "st-petersburg",
   "serviceSlug": "door-repair",
   "title": "Door Repair St. Petersburg, FL | Sticking Doors & Sliders",
-  "description": "Our local crew fixes sticking doors, latches and sliders in St. Pete, from Old Northeast to Kenwood. Small jobs from $49. Free estimates on all jobs.",
+  "description": "Our local crew fixes sticking doors, latches and sliders in St. Pete, from Old Northeast to Kenwood. Great deals on small jobs. Free estimates on all jobs.",
   "h1": "Door Repair in St. Petersburg, FL",
-  "opening": "Our local crew serves St. Petersburg with door repair from Old Northeast and Snell Isle to Kenwood, Grand Central and Shore Acres: sticking and swollen doors, loose hinges, latches and strike plates, sliding glass door rollers, French doors and weatherstripping. Small jobs start at $49, with free estimates on all jobs. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and a loose hinge screw or a strike plate that won't catch is exactly that kind of job.",
-  "priceLine": "Small jobs start at $49. A same-day service call starts at $99. Larger door work, like a new slab or frame repair, is quoted after a free estimate. Free estimates on all jobs.",
+  "opening": "Our local crew serves St. Petersburg with door repair from Old Northeast and Snell Isle to Kenwood, Grand Central and Shore Acres: sticking and swollen doors, loose hinges, latches and strike plates, sliding glass door rollers, French doors and weatherstripping. Free estimates on all jobs. Call (656) 205-3185.",
+  "noJob": "No job too small: a loose hinge screw or a strike plate that won't catch is exactly that kind of job.",
+  "priceLine": "Call or text for an instant estimate. Same-day visits get a free estimate. Larger door work, like a new slab or frame repair, is quoted after a free estimate. Free estimates on all jobs.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs"
@@ -1797,7 +1791,7 @@ export const cityServicePages: CityServicePageData[] = [
   "faqs": [
    {
     "question": "Why does my St. Pete door stick in summer?",
-    "answer": "Humidity swells wood doors and frames, and older homes settle. We plane and reseal the edge, tighten or shim the hinges, or move the strike plate. Small jobs start at $49."
+    "answer": "Humidity swells wood doors and frames, and older homes settle. We plane and reseal the edge, tighten or shim the hinges, or move the strike plate. Call or text for an instant estimate."
    },
    {
     "question": "Do door repairs in Old Northeast or Kenwood need city approval?",
@@ -1809,7 +1803,7 @@ export const cityServicePages: CityServicePageData[] = [
    },
    {
     "question": "How much does door repair cost in St. Petersburg?",
-    "answer": "Small fixes like hinges, latches and strike plates start at $49. A new slab or frame repair is quoted after a free estimate. A same-day service call starts at $99."
+    "answer": "Free estimate, call or text for a price. A new slab or frame repair is quoted after a free estimate. Same-day visits get a free estimate."
    },
    {
     "question": "Which St. Pete neighborhoods do you serve for door repair?",
@@ -1827,7 +1821,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "Why does my St. Pete door stick in summer?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Humidity swells wood doors and frames, and older homes settle. We plane and reseal the edge, tighten or shim the hinges, or move the strike plate. Small jobs start at $49."
+       "text": "Humidity swells wood doors and frames, and older homes settle. We plane and reseal the edge, tighten or shim the hinges, or move the strike plate. Call or text for an instant estimate."
       }
      },
      {
@@ -1851,7 +1845,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "How much does door repair cost in St. Petersburg?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Small fixes like hinges, latches and strike plates start at $49. A new slab or frame repair is quoted after a free estimate. A same-day service call starts at $99."
+       "text": "Free estimate, call or text for a price. A new slab or frame repair is quoted after a free estimate. Same-day visits get a free estimate."
       }
      },
      {
@@ -1884,13 +1878,7 @@ export const cityServicePages: CityServicePageData[] = [
     "url": "https://handymanprosflorida.com/locations/st-petersburg/door-repair",
     "offers": {
      "@type": "Offer",
-     "priceCurrency": "USD",
-     "priceSpecification": {
-      "@type": "PriceSpecification",
-      "minPrice": 49,
-      "priceCurrency": "USD"
-     },
-     "description": "Small door fixes (hinge, strike, latch), starting price"
+     "description": "Small door fixes (hinge, strike, latch), free estimate"
     }
    },
    {
@@ -1930,15 +1918,15 @@ export const cityServicePages: CityServicePageData[] = [
   "citySlug": "wesley-chapel",
   "serviceSlug": "drywall-repair",
   "title": "Drywall Repair in Wesley Chapel, FL | Free Estimate",
-  "description": "Our local crew patches drywall in Wesley Chapel, Wiregrass, Meadow Pointe and Seven Oaks. Free estimate, same-day call $99. Free estimates on all jobs.",
+  "description": "Our local crew patches drywall in Wesley Chapel, Wiregrass, Meadow Pointe and Seven Oaks. Free estimate, same-day calls available. Free estimates on all jobs.",
   "h1": "Drywall Repair in Wesley Chapel, FL",
-  "opening": "Our local crew serves Wesley Chapel with drywall repair in Wiregrass, Meadow Pointe, Seven Oaks and along SR 54 and SR 56: nail pops, settling cracks in newer homes, door-knob holes, rental turnover patches and texture matching. Drywall patches get a free estimate, a same-day service call starts at $99, and estimates are free. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and drywall patches get a free estimate, and a hallway of nail pops is one visit.",
-  "priceLine": "Small jobs start at $49. Drywall patches get a free estimate. TV mounting starts at $89. A same-day service call starts at $99. Free estimates on all jobs.",
+  "opening": "Our local crew serves Wesley Chapel with drywall repair in Wiregrass, Meadow Pointe, Seven Oaks and along SR 54 and SR 56: nail pops, settling cracks in newer homes, door-knob holes, rental turnover patches and texture matching. Drywall patches and same-day visits get a free estimate. Call (656) 205-3185.",
+  "noJob": "No job too small: drywall patches get a free estimate, and a hallway of nail pops is one visit.",
+  "priceLine": "Call or text for an instant estimate. Drywall patches get a free estimate. Same-day visits get a free estimate. Free estimates on all jobs.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs",
-   "Same-day service call from $99"
+   "Same-day service calls"
   ],
   "cityName": "Wesley Chapel",
   "cityLabel": "Wesley Chapel, FL",
@@ -1955,7 +1943,7 @@ export const cityServicePages: CityServicePageData[] = [
    {
     "h2": "Rental turnover and move-out patches",
     "paras": [
-     "Wesley Chapel's rental vacancy rate was 10.1% in 2020, so landlords and property managers patch walls between tenants. We patch anchor holes, door-knob holes and scuffed corners, prime them, and can bundle small jobs into one visit. Small jobs start at $49."
+     "Wesley Chapel's rental vacancy rate was 10.1% in 2020, so landlords and property managers patch walls between tenants. We patch anchor holes, door-knob holes and scuffed corners, prime them, and can bundle small jobs into one visit. Call or text for an instant estimate."
     ]
    },
    {
@@ -1972,7 +1960,7 @@ export const cityServicePages: CityServicePageData[] = [
      "Tape-seam cracks",
      "Door-knob holes",
      "Corner-bead dents",
-     "TV-mount holes ([TV mounting](/services/tv-wall-mounting) from $89)",
+     "TV-mount holes ([TV mounting](/services/tv-wall-mounting))",
      "Garage wall dings",
      "Ceiling patches after a leak ([leak patch and tarping](/services/handyman/roof-repair))",
      "Texture matching",
@@ -1982,7 +1970,7 @@ export const cityServicePages: CityServicePageData[] = [
    {
     "h2": "Same-day drywall in Wesley Chapel",
     "paras": [
-     "Our local crew often has same-day openings in Wesley Chapel. A [same-day service call](/services/same-day-handyman) starts at $99. Call (656) 205-3185 with a photo of the wall."
+     "Our local crew often has same-day openings in Wesley Chapel. Call (656) 205-3185 with a photo of the wall."
     ]
    }
   ],
@@ -2041,7 +2029,7 @@ export const cityServicePages: CityServicePageData[] = [
   "faqs": [
    {
     "question": "How much does drywall repair cost in Wesley Chapel?",
-    "answer": "Drywall patches get a free estimate, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs."
+    "answer": "Drywall patches and small jobs get a free estimate. Bigger repairs get a free estimate first. Free estimates on all jobs."
    },
    {
     "question": "Why does my newer Wesley Chapel home have nail pops and cracks?",
@@ -2049,11 +2037,11 @@ export const cityServicePages: CityServicePageData[] = [
    },
    {
     "question": "Do you patch rentals between tenants?",
-    "answer": "Yes. Landlords and property managers book us for anchor holes, door-knob holes and scuffed corners between tenants. Small jobs start at $49, and drywall patches get a free estimate."
+    "answer": "Yes. Landlords and property managers book us for anchor holes, door-knob holes and scuffed corners between tenants. Free estimate, call or text for a price."
    },
    {
     "question": "Can you come the same day in Wesley Chapel?",
-    "answer": "Often, yes. Our local crew serves Wesley Chapel and often has same-day openings. A same-day service call starts at $99."
+    "answer": "Often, yes. Our local crew serves Wesley Chapel and often has same-day openings. Same-day visits get a free estimate."
    },
    {
     "question": "Which Wesley Chapel areas do you cover?",
@@ -2071,7 +2059,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "How much does drywall repair cost in Wesley Chapel?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Drywall patches get a free estimate, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs."
+       "text": "Drywall patches and small jobs get a free estimate. Bigger repairs get a free estimate first. Free estimates on all jobs."
       }
      },
      {
@@ -2087,7 +2075,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "Do you patch rentals between tenants?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Yes. Landlords and property managers book us for anchor holes, door-knob holes and scuffed corners between tenants. Small jobs start at $49, and drywall patches get a free estimate."
+       "text": "Yes. Landlords and property managers book us for anchor holes, door-knob holes and scuffed corners between tenants. Free estimate, call or text for a price."
       }
      },
      {
@@ -2095,7 +2083,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "Can you come the same day in Wesley Chapel?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Often, yes. Our local crew serves Wesley Chapel and often has same-day openings. A same-day service call starts at $99."
+       "text": "Often, yes. Our local crew serves Wesley Chapel and often has same-day openings. Same-day visits get a free estimate."
       }
      },
      {

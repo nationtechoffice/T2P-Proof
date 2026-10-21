@@ -8,13 +8,13 @@ import { siteConfig } from "@/lib/site-config";
 import { Phone } from "lucide-react";
 
 export const APPROVED_OFFERS = [
-  { name: "Small handyman jobs (shelves, curtain rods)", price: 49, href: "/services/same-day-handyman" },
-  { name: "Furniture assembly", price: 65, href: "/services/furniture-assembly" },
-  { name: "Drywall patch", price: undefined, href: "/services/drywall-repair" },
-  { name: "Ceiling fan or light fixture install", price: 79, href: "/services/electrical-fixture-installation" },
-  { name: "TV mounting", price: 89, href: "/services/tv-wall-mounting" },
-  { name: "Same-day service call", price: 99, href: "/services/same-day-handyman" },
-  { name: "Tile repair", price: 199, href: "/services/tile-installation" },
+  { name: "Small handyman jobs (shelves, curtain rods)", href: "/services/same-day-handyman" },
+  { name: "Furniture assembly", href: "/services/furniture-assembly" },
+  { name: "Drywall patch", href: "/services/drywall-repair" },
+  { name: "Ceiling fan or light fixture install", href: "/services/electrical-fixture-installation" },
+  { name: "TV mounting", href: "/services/tv-wall-mounting" },
+  { name: "Same-day service call", href: "/services/same-day-handyman" },
+  { name: "Tile repair", href: "/services/tile-installation" },
 ] as const;
 
 export type CityBrief = {
@@ -53,11 +53,10 @@ export function CityBriefPage({ brief }: { brief: CityBrief }) {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: `Handyman starting prices in ${brief.city}, FL`,
+      name: `Handyman services with free estimates in ${brief.city}, FL`,
       itemListElement: APPROVED_OFFERS.map((o) => ({
         "@type": "Offer",
         itemOffered: { "@type": "Service", name: o.name },
-        ...(o.price != null ? { priceSpecification: { "@type": "PriceSpecification", minPrice: o.price, priceCurrency: "USD" } } : {}),
       })),
     },
   };

@@ -113,7 +113,7 @@ export default function ServicesPage() {
 
           <section className="mb-16 rounded-2xl border border-[hsl(var(--border))] bg-white p-6 shadow-sm" aria-labelledby="starting-prices-heading">
             <h2 id="starting-prices-heading" className="mb-3 text-2xl font-bold">
-              Starting prices
+              Free estimates
             </h2>
             <ul className="list-disc space-y-1 pl-5 text-[hsl(var(--muted-foreground))]">
               {startingPriceList.map((price) => (
@@ -125,7 +125,7 @@ export default function ServicesPage() {
               ))}
             </ul>
             <p className="mt-3 text-sm text-[hsl(var(--muted-foreground))]">
-              These are starting prices. The final price is quoted after you describe the job, and estimates are free.
+              The price is quoted after you describe the job, and estimates are free.
             </p>
           </section>
 

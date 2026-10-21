@@ -7,7 +7,7 @@ const path = "/locations/odessa-fl";
 export const metadata: Metadata = buildMetadata({
   title: "Handyman in Odessa, FL 33556 | Drywall, Painting, TVs",
   description:
-    "Licensed & insured Odessa handyman. Our local crew serves Odessa. Free drywall estimates, furniture assembly from $65. Free estimates. (656) 205-3185.",
+    "Licensed & insured Odessa handyman. Our local crew serves Odessa. Free estimates on drywall and furniture assembly. Free estimates. (656) 205-3185.",
   path,
   keywords: ["handyman odessa", "odessa handyman services", "Odessa FL handyman", "handyman 33556", "handyman near Starkey Ranch", "drywall repair odessa", "furniture assembly odessa", "interior painting odessa", "exterior painting odessa", "manitas en Odessa"],
   exactTitle: true,
@@ -15,15 +15,15 @@ export const metadata: Metadata = buildMetadata({
 
 const faqs = [
   { question: "Do you serve Odessa, FL?", answer: "Yes. Our local crew serves Odessa, including Starkey Ranch and the SR 54 corridor. Call (656) 205-3185." },
-  { question: "How much does a handyman cost in Odessa?", answer: "Small jobs start at $49, furniture assembly at $65, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair at $199. A same-day service call starts at $99." },
+  { question: "How much does a handyman cost in Odessa?", answer: "Ask about our great deals on small jobs. Same-day visits get a free estimate." },
   { question: "How much does painting cost in Odessa?", answer: "Painting is quoted after a free estimate because room size, wall condition and paint choice change the price. Call (656) 205-3185 to set it up." },
   { question: "Are estimates free?", answer: "Yes. Free estimates on all jobs." },
-  { question: "Can you come the same day?", answer: "Often, yes. Odessa is one of the closest Pasco areas our local crew serves. A same-day service call starts at $99." },
+  { question: "Can you come the same day?", answer: "Often, yes. Odessa is one of the closest Pasco areas our local crew serves. Same-day visits get a free estimate." },
   { question: "Are you licensed and insured?", answer: "Yes, Handyman Pros FL is licensed and insured. If a job needs a permit or a specialist trade, we tell you before work starts." },
   { question: "¿Hablan español?", answer: "Sí. Hablamos español. Llame al (656) 205-3185." },
-  { question: "How much does drywall repair cost in Odessa?", answer: "Drywall patches get a free estimate, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs." },
+  { question: "How much does drywall repair cost in Odessa?", answer: "Drywall patches and small jobs get a free estimate. Bigger repairs get a free estimate first. Free estimates on all jobs." },
   { question: "Why does my newer Starkey Ranch home have drywall cracks?", answer: "New framing dries and settles in the first few years, so hairline corner cracks, nail pops and seams over doors are common. Our local crew serves Odessa and patches, textures and primes them ready for paint." },
-  { question: "Can you patch the holes after a TV or shelves come down in Odessa?", answer: "Yes. Anchor and mount holes are a common Odessa move-in job. Drywall patches get a free estimate, and TV mounting starts at $89 if the TV is going on a new wall." },
+  { question: "Can you patch the holes after a TV or shelves come down in Odessa?", answer: "Yes. Anchor and mount holes are a common Odessa move-in job. Drywall patches and TV mounting on a new wall both get a free estimate." },
   { question: "My Odessa address is on the Hillsborough side of 33556. Do you still come out?", answer: "Yes. ZIP 33556 crosses Pasco and Hillsborough, and our crew serves both sides. The Hillsborough side, near Gunn Highway and Lake Keystone, is covered on our Keystone page. Call (656) 205-3185." },
 ];
 
@@ -50,9 +50,9 @@ const brief: CityBrief = {
   breadcrumb: "Odessa, FL",
   h1: "Handyman in Odessa, FL",
   opening:
-    "Handyman Pros FL is a licensed and insured handyman company whose local crew serves Odessa, handling drywall patches, painting, furniture assembly and TV mounting in Starkey Ranch and along SR 54. Furniture assembly starts at $65, and estimates are free. Call (656) 205-3185.",
+    "Handyman Pros FL is a licensed and insured handyman company whose local crew serves Odessa, handling drywall patches, painting, furniture assembly and TV mounting in Starkey Ranch and along SR 54. Furniture assembly estimates are free. Call (656) 205-3185.",
   priceParagraph:
-    "Small jobs like shelves and curtain rods start at $49. Furniture assembly starts at $65. Drywall patches get a free estimate. A ceiling fan or light fixture install starts at $79. TV mounting starts at $89. A same-day service call starts at $99. Tile repair starts at $199. Painting is quoted after a free estimate. Free estimates on all jobs.",
+    "Free estimate, call or text for a price. Drywall patches get a free estimate. Same-day visits get a free estimate. Painting is quoted after a free estimate. Free estimates on all jobs.",
   faqTitle: "Handyman in Odessa FAQ",
   ctaTitle: "Get a free Odessa estimate",
   faqs,
@@ -62,8 +62,8 @@ const brief: CityBrief = {
       <p>
         Handyman Pros FL is a professional handyman team working out of 12021 Tuscany Bay Dr, Tampa, FL 33626.
         Westchase&apos;s 33626 ZIP borders Odessa&apos;s 33556, and the drive is about 15 miles, roughly 25 minutes. That
-        makes Odessa one of the easiest places for our crew to fit in a same-day visit when the schedule allows. A same-day
-        service call starts at $99. Call in the morning with a short list and there&apos;s a good chance it gets done
+        makes Odessa one of the easiest places for our crew to fit in a same-day visit when the schedule allows. Same-day visits get a
+        free estimate. Call in the morning with a short list and there&apos;s a good chance it gets done
         that afternoon.
       </p>
 
@@ -96,7 +96,7 @@ const brief: CityBrief = {
         <li>Tape-seam cracks</li>
         <li>Door-handle holes (and a doorstop so it doesn&apos;t happen again)</li>
         <li>TV-mount and anchor holes after a move</li>
-        <li>Ceiling patches when a fixture moves (fans from $79)</li>
+        <li>Ceiling patches when a fixture moves</li>
         <li>Garage drywall dings</li>
         <li>Texture matching</li>
         <li>Patch-and-prime ready for paint (painting after a free estimate)</li>
@@ -105,7 +105,7 @@ const brief: CityBrief = {
       <p>
         Odessa&apos;s 33556 ZIP is home to about 36,000 people and straddles Hillsborough (about 53%) and Pasco (about
         47%). Households here are often families: 36.0% of Odessa CDP households have children. Owners book patches
-        before a move-in or before listing a house. Small jobs start at $49, and we handle the whole list in one visit.
+        before a move-in or before listing a house. We handle the whole list in one visit.
         For the Hillsborough side, see our <L href="/locations/keystone">Keystone</L> page.
       </p>
       <h4 className="mt-4 text-lg font-semibold">After storms</h4>
@@ -129,11 +129,11 @@ const brief: CityBrief = {
       <p>
         Move-in week in a new Starkey Ranch home usually means a stack of flat-pack boxes: bed frames, dressers, desks,
         bookcases and patio sets. Our crew assembles them, anchors tall pieces to the wall where needed and hauls the boxes to
-        your bin. Furniture assembly starts at $65. See <L href="/services/furniture-assembly">furniture assembly</L>.
+        your bin. Free estimate, call or text for a price. See <L href="/services/furniture-assembly">furniture assembly</L>.
       </p>
       <H3>TV mounting, fans and fixtures</H3>
       <p>
-        TV mounting starts at $89. A ceiling fan or light fixture install starts at $79. See{" "}
+Expect low prices and a free estimate. See{" "}
         <L href="/services/tv-wall-mounting">TV wall mounting</L> and{" "}
         <L href="/services/electrical-fixture-installation">fixture installation</L>.
       </p>

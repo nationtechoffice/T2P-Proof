@@ -208,7 +208,7 @@ export function serviceSchema(service: {
   /** Extra on-page job photos. With more than one photo the schema image becomes a list. */
   images?: readonly string[];
   offer?: { low?: number; high?: number; description: string };
-  /** Owner-approved starting price ("starts at"). Sets the Offer minPrice. */
+  /** Owner-approved starting price ("starts at"). No public price; free-estimate wording only. */
   startingPrice?: { amount?: number; sentence: string };
   /** Several starting prices, e.g. on a service-area page. Emitted as an OfferCatalog. */
   startingPriceCatalog?: readonly { label: string; amount?: number; sentence: string; href: string }[];
@@ -272,22 +272,12 @@ export function serviceSchema(service: {
       ? {
           hasOfferCatalog: {
             "@type": "OfferCatalog",
-            name: "Starting prices",
+            name: "Handyman services, free estimates",
             itemListElement: service.startingPriceCatalog.map((price) => ({
               "@type": "Offer",
               name: price.label,
               description: price.sentence,
               url: `${siteConfig.url}${price.href}`,
-              ...(price.amount != null
-                ? {
-                    priceCurrency: "USD",
-                    priceSpecification: {
-                      "@type": "PriceSpecification",
-                      priceCurrency: "USD",
-                      minPrice: price.amount,
-                    },
-                  }
-                : {}),
             })),
           },
         }
@@ -297,18 +287,8 @@ export function serviceSchema(service: {
           offers: {
             "@type": "Offer",
             url: service.url,
-            priceCurrency: "USD",
             availability: "https://schema.org/InStock",
             description: service.startingPrice.sentence,
-            ...(service.startingPrice.amount != null
-              ? {
-                  priceSpecification: {
-                    "@type": "PriceSpecification",
-                    priceCurrency: "USD",
-                    minPrice: service.startingPrice.amount,
-                  },
-                }
-              : {}),
           },
         }
       : {}),
@@ -317,19 +297,8 @@ export function serviceSchema(service: {
           offers: {
             "@type": "Offer",
             url: service.url,
-            priceCurrency: "USD",
             availability: "https://schema.org/InStock",
             description: service.offer.description,
-            ...(service.offer.high != null
-              ? {
-                  priceSpecification: {
-                    "@type": "PriceSpecification",
-                    priceCurrency: "USD",
-                    minPrice: service.startingPrice?.amount ?? service.offer.low,
-                    maxPrice: service.offer.high,
-                  },
-                }
-              : {}),
           },
         }
       : {}),

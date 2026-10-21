@@ -225,7 +225,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               {cityPrices.length > 0 ? (
                 <>
                   <h2 className="pt-4 text-xl font-bold text-[hsl(var(--foreground))]">
-                    Starting prices for {location.city} handyman work
+                    Free estimates for {location.city} handyman work
                   </h2>
                   <ul className="list-disc space-y-1 pl-5">
                     {cityPrices.map((price) => (
@@ -236,7 +236,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                       </li>
                     ))}
                   </ul>
-                  <p>Prices are starting points. The final price is quoted after you describe the job, and estimates are free.</p>
+                  <p>The price is quoted after you describe the job, and estimates are free.</p>
                 </>
               ) : null}
               {nearby.length > 0 ? (
