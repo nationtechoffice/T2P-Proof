@@ -18,6 +18,7 @@ const guidesByPage: Record<string, string[]> = {
   "ceiling-repair": ["drywall-repair-cost-guide-florida"],
   "deck-repair": ["best-exterior-paint-florida-climate", "hurricane-prep-home-maintenance-florida"],
   fence: ["fence-buying-guide-florida-homeowners"],
+  "drywall-guide": ["drywall-repair-cost-guide-florida"],
   painting: ["best-exterior-paint-florida-climate"],
   handyman: ["how-to-choose-handyman-florida", "handyman-cost-tampa-2026", "does-a-handyman-need-a-license-florida"],
   tampa: ["handyman-cost-tampa-2026", "same-day-handyman-tampa-bay", "how-to-choose-handyman-florida"],

@@ -4,6 +4,7 @@ import { Phone } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { FAQSection } from "@/components/faq-section";
 import { GoogleReviews } from "@/components/google-reviews";
+import { GuideLinks } from "@/components/guide-links";
 import { QuoteForm } from "@/components/quote-form";
 import { JsonLd } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/site-config";
@@ -129,6 +130,7 @@ export function CityServicePage({ page }: { page: CityServicePageData }) {
       </section>
       <GoogleReviews variant="compact" />
       <FAQSection faqs={page.faqs} title={page.faqTitle} />
+      {page.serviceSlug === "drywall-repair" ? <GuideLinks pageKey="drywall-guide" /> : null}
       <section className="section-padding">
         <div className="container-site mx-auto max-w-3xl rounded-3xl bg-[hsl(var(--primary))] p-8 text-center text-white">
           <p className="mb-6 text-xl font-bold">Free estimates on all jobs. Call {siteConfig.phone}.</p>

@@ -19,6 +19,9 @@ import { tampaBayLocationLinks, fenceCategoryLinks, authorityHubLinks, moneyNear
 import { galleryForPage } from "@/lib/service-galleries";
 import { startingPriceFor } from "@/lib/starting-prices";
 
+/** Subpages that link the drywall cost guide (add-only). */
+const DRYWALL_GUIDE_PAGES = new Set(["handyman/drywall-installation", "painting/drywall-painting"]);
+
 export function generateStaticParams() {
   return getAllServiceSlugs();
 }
@@ -314,6 +317,7 @@ export default async function ServicePage({
       </article>
       <FAQSection faqs={faqs} title={`${service.name} FAQ`} />
       {service.category === "fence" ? <GuideLinks pageKey="fence" /> : null}
+      {DRYWALL_GUIDE_PAGES.has(`${service.category}/${service.slug}`) ? <GuideLinks pageKey="drywall-guide" /> : null}
       <MoreServiceLinks path={`/services/${category}/${slug}`} />
       <CTASection title={`Ready for ${service.name}?`} />
     </>

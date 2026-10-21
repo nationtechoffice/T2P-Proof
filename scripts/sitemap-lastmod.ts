@@ -1,41 +1,59 @@
-// Writes lib/sitemap-lastmod.json: sitemap path -> date (YYYY-MM-DD) of the last git
-// commit that touched that page's own source files. Run locally before committing
-// page changes: `npx tsx scripts/sitemap-lastmod.ts`. Hostinger builds read the JSON
-// (no git history needed there), so lastmod stays stable between deploys.
-import { execFileSync } from "node:child_process";
+// Writes lib/sitemap-lastmod.json (sitemap path -> YYYY-MM-DD) from RENDERED content,
+// not from source-file dates. Run after a local `next build`:
+//   npx tsx scripts/sitemap-lastmod.ts          bump only URLs whose rendered page changed
+//   npx tsx scripts/sitemap-lastmod.ts --seed   record hashes for the current build, keep dates
+// A page's fingerprint is its built HTML with scripts and build-specific asset paths removed,
+// so title, meta, canonical, visible copy and the link set all count; a template edit that
+// does not change a page's output leaves that page's lastmod alone.
+// Hostinger builds only read the JSON (no git or build output needed there).
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
-
 import { getAllSiteUrls } from "@/lib/sitemap-urls";
 
+const LASTMOD = "lib/sitemap-lastmod.json";
+const HASHES = "scripts/sitemap-content-hashes.json";
+const seed = process.argv.includes("--seed");
+
 const paths = getAllSiteUrls().map((url) => new URL(url).pathname.replace(/\/$/, "") || "/");
+const readJson = (f: string): Record<string, string> => (existsSync(f) ? JSON.parse(readFileSync(f, "utf8")) : {});
+const dates = readJson(LASTMOD);
+const hashes = readJson(HASHES);
 
-const has = (file: string, needle: string) => existsSync(file) && readFileSync(file, "utf8").includes(`"${needle}"`);
+function today(): string {
+  const d = new Date();
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+}
 
-function sources(path: string): string[] {
-  const segs = path.split("/").filter(Boolean);
-  const last = segs[segs.length - 1];
-  const dir = path === "/" ? "app" : `app${path}`;
-  if (existsSync(`${dir}/page.tsx`)) return [`${dir}/page.tsx`, `${dir}/data.json`].filter(existsSync);
-  if (segs[0] === "blog") return ["app/blog/[slug]/page.tsx", "lib/blog-posts.ts", "lib/blog-faqs.ts"];
-  if (segs[0] === "locations" && segs.length === 3)
-    return ["app/locations/[city]/[service]/page.tsx", "components/city-service-page.tsx", "lib/city-service-pages.ts"];
-  if (segs[0] === "locations") return ["app/locations/[city]/page.tsx", "components/location-city-landing.tsx", "lib/programmatic.ts"];
-  if (segs[0] === "services" && segs.length === 3) return ["app/services/[category]/[slug]/page.tsx", "lib/services.ts"];
-  if (segs[0] === "services") {
-    if (has("lib/brief-service-pages.ts", last))
-      return ["app/services/[category]/page.tsx", "components/brief-service-landing.tsx", "lib/brief-service-pages.ts"];
-    if (["handyman", "painting", "fence"].includes(last)) return ["app/services/[category]/page.tsx", "lib/services.ts"];
-    return ["app/services/[category]/page.tsx", "components/core-service-landing.tsx", "lib/programmatic.ts"];
-  }
-  throw new Error(`no source mapping for ${path}`);
+export function fingerprint(html: string): string {
+  const normalized = html
+    .replace(/<script\b([^>]*)>[\s\S]*?<\/script>/g, (tag, attrs: string) =>
+      attrs.includes("application/ld+json") ? tag : "",
+    )
+    .replace(/<link\b[^>]*\/_next\/[^>]*>/g, "")
+    .replace(/\/_next\/static\/[^"'\s)]+/g, "")
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/\s+/g, " ");
+  return createHash("sha256").update(normalized).digest("hex").slice(0, 16);
 }
 
 const out: Record<string, string> = {};
+const outHashes: Record<string, string> = {};
+const bumped: string[] = [];
 for (const path of paths) {
-  const files = sources(path).filter(existsSync);
-  const date = execFileSync("git", ["log", "-1", "--format=%cs", "--", ...files], { encoding: "utf8" }).trim();
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new Error(`no git date for ${path}`);
-  out[path] = date;
+  const file = `.next/server/app/${path === "/" ? "index" : path.slice(1)}.html`;
+  if (!existsSync(file)) throw new Error(`no built HTML for ${path} (${file}); run next build first`);
+  const hash = fingerprint(readFileSync(file, "utf8"));
+  outHashes[path] = hash;
+  if (!seed && (hashes[path] !== hash || !dates[path])) {
+    out[path] = today();
+    bumped.push(path);
+  } else {
+    if (!dates[path]) throw new Error(`no lastmod to keep for ${path}`);
+    out[path] = dates[path];
+  }
 }
-writeFileSync("lib/sitemap-lastmod.json", JSON.stringify(out, null, 2) + "\n");
-console.log(`[sitemap-lastmod] ${paths.length} paths`);
+writeFileSync(LASTMOD, JSON.stringify(out, null, 2) + "\n");
+writeFileSync(HASHES, JSON.stringify(outHashes, null, 2) + "\n");
+console.log(`[sitemap-lastmod] ${paths.length} paths, ${bumped.length} bumped${seed ? " (seed)" : ""}`);
+for (const p of bumped) console.log(`  bumped ${p}`);
