@@ -7,7 +7,7 @@ const path = "/locations/odessa-fl";
 export const metadata: Metadata = buildMetadata({
   title: "Handyman in Odessa, FL 33556 | Drywall, Painting, TVs",
   description:
-    "Licensed & insured Odessa handyman. Our local crew serves Odessa. Drywall patch from $75, furniture assembly from $65. Free estimates. (656) 205-3185.",
+    "Licensed & insured Odessa handyman. Our local crew serves Odessa. Free drywall estimates, furniture assembly from $65. Free estimates. (656) 205-3185.",
   path,
   keywords: ["handyman odessa", "odessa handyman services", "Odessa FL handyman", "handyman 33556", "handyman near Starkey Ranch", "drywall repair odessa", "furniture assembly odessa", "interior painting odessa", "exterior painting odessa", "manitas en Odessa"],
   exactTitle: true,
@@ -15,15 +15,15 @@ export const metadata: Metadata = buildMetadata({
 
 const faqs = [
   { question: "Do you serve Odessa, FL?", answer: "Yes. Our local crew serves Odessa, including Starkey Ranch and the SR 54 corridor. Call (656) 205-3185." },
-  { question: "How much does a handyman cost in Odessa?", answer: "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair at $199. A same-day service call starts at $99." },
+  { question: "How much does a handyman cost in Odessa?", answer: "Small jobs start at $49, furniture assembly at $65, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair at $199. A same-day service call starts at $99." },
   { question: "How much does painting cost in Odessa?", answer: "Painting is quoted after a free estimate because room size, wall condition and paint choice change the price. Call (656) 205-3185 to set it up." },
   { question: "Are estimates free?", answer: "Yes. Free estimates on all jobs." },
   { question: "Can you come the same day?", answer: "Often, yes. Odessa is one of the closest Pasco areas our local crew serves. A same-day service call starts at $99." },
   { question: "Are you licensed and insured?", answer: "Yes, Handyman Pros FL is licensed and insured. If a job needs a permit or a specialist trade, we tell you before work starts." },
   { question: "¿Hablan español?", answer: "Sí. Hablamos español. Llame al (656) 205-3185." },
-  { question: "How much does drywall repair cost in Odessa?", answer: "A drywall patch starts at $75, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs." },
+  { question: "How much does drywall repair cost in Odessa?", answer: "Drywall patches get a free estimate, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs." },
   { question: "Why does my newer Starkey Ranch home have drywall cracks?", answer: "New framing dries and settles in the first few years, so hairline corner cracks, nail pops and seams over doors are common. Our local crew serves Odessa and patches, textures and primes them ready for paint." },
-  { question: "Can you patch the holes after a TV or shelves come down in Odessa?", answer: "Yes. Anchor and mount holes are a common Odessa move-in job. A drywall patch starts at $75, and TV mounting starts at $89 if the TV is going on a new wall." },
+  { question: "Can you patch the holes after a TV or shelves come down in Odessa?", answer: "Yes. Anchor and mount holes are a common Odessa move-in job. Drywall patches get a free estimate, and TV mounting starts at $89 if the TV is going on a new wall." },
   { question: "My Odessa address is on the Hillsborough side of 33556. Do you still come out?", answer: "Yes. ZIP 33556 crosses Pasco and Hillsborough, and our crew serves both sides. The Hillsborough side, near Gunn Highway and Lake Keystone, is covered on our Keystone page. Call (656) 205-3185." },
 ];
 
@@ -50,9 +50,9 @@ const brief: CityBrief = {
   breadcrumb: "Odessa, FL",
   h1: "Handyman in Odessa, FL",
   opening:
-    "Handyman Pros FL is a licensed and insured handyman company whose local crew serves Odessa, handling drywall patches, painting, furniture assembly and TV mounting in Starkey Ranch and along SR 54. A drywall patch starts at $75, furniture assembly at $65, and estimates are free. Call (656) 205-3185.",
+    "Handyman Pros FL is a licensed and insured handyman company whose local crew serves Odessa, handling drywall patches, painting, furniture assembly and TV mounting in Starkey Ranch and along SR 54. Furniture assembly starts at $65, and estimates are free. Call (656) 205-3185.",
   priceParagraph:
-    "Small jobs like shelves and curtain rods start at $49. Furniture assembly starts at $65. A drywall patch starts at $75. A ceiling fan or light fixture install starts at $79. TV mounting starts at $89. A same-day service call starts at $99. Tile repair starts at $199. Painting is quoted after a free estimate. Free estimates on all jobs.",
+    "Small jobs like shelves and curtain rods start at $49. Furniture assembly starts at $65. Drywall patches get a free estimate. A ceiling fan or light fixture install starts at $79. TV mounting starts at $89. A same-day service call starts at $99. Tile repair starts at $199. Painting is quoted after a free estimate. Free estimates on all jobs.",
   faqTitle: "Handyman in Odessa FAQ",
   ctaTitle: "Get a free Odessa estimate",
   faqs,
@@ -72,12 +72,12 @@ const brief: CityBrief = {
       <p>
         Our local crew serves Odessa with drywall repair in Starkey Ranch, along the SR 54 corridor and across ZIP
         33556: settling cracks in newer homes, door-handle holes, tape seams, nail pops and patches after a TV or
-        fixture moves. A drywall patch starts at $75, with free estimates on all jobs. Call (656) 205-3185.
+        fixture moves. Drywall patches get a free estimate, call or text for a price. Call (656) 205-3185.
       </p>
       <p>
         Newer homes settle, and the first few years bring hairline cracks at corners, holes where a door handle hit the
         wall, and patches left behind when a fixture or TV moves. Our team cuts out the damage, then patches, tapes, textures to match
-        and primes so it&apos;s ready for paint. A drywall patch starts at $75. See{" "}
+        and primes so it&apos;s ready for paint. Drywall patches get a free estimate. See{" "}
         <L href="/services/drywall-repair">drywall repair</L>.
       </p>
       <h4 className="mt-4 text-lg font-semibold">Why newer Odessa homes crack</h4>

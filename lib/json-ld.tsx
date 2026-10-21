@@ -209,9 +209,9 @@ export function serviceSchema(service: {
   images?: readonly string[];
   offer?: { low?: number; high?: number; description: string };
   /** Owner-approved starting price ("starts at"). Sets the Offer minPrice. */
-  startingPrice?: { amount: number; sentence: string };
+  startingPrice?: { amount?: number; sentence: string };
   /** Several starting prices, e.g. on a service-area page. Emitted as an OfferCatalog. */
-  startingPriceCatalog?: readonly { label: string; amount: number; sentence: string; href: string }[];
+  startingPriceCatalog?: readonly { label: string; amount?: number; sentence: string; href: string }[];
   /** ZIP codes added to areaServed on a city page. */
   postalCodes?: readonly string[];
   /** County added to areaServed on a city page. */
@@ -278,12 +278,16 @@ export function serviceSchema(service: {
               name: price.label,
               description: price.sentence,
               url: `${siteConfig.url}${price.href}`,
-              priceCurrency: "USD",
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                priceCurrency: "USD",
-                minPrice: price.amount,
-              },
+              ...(price.amount != null
+                ? {
+                    priceCurrency: "USD",
+                    priceSpecification: {
+                      "@type": "PriceSpecification",
+                      priceCurrency: "USD",
+                      minPrice: price.amount,
+                    },
+                  }
+                : {}),
             })),
           },
         }
@@ -296,11 +300,15 @@ export function serviceSchema(service: {
             priceCurrency: "USD",
             availability: "https://schema.org/InStock",
             description: service.startingPrice.sentence,
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              priceCurrency: "USD",
-              minPrice: service.startingPrice.amount,
-            },
+            ...(service.startingPrice.amount != null
+              ? {
+                  priceSpecification: {
+                    "@type": "PriceSpecification",
+                    priceCurrency: "USD",
+                    minPrice: service.startingPrice.amount,
+                  },
+                }
+              : {}),
           },
         }
       : {}),

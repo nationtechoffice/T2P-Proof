@@ -12,12 +12,12 @@ export const cityServicePages: CityServicePageData[] = [
   "path": "/locations/brandon/drywall-repair",
   "citySlug": "brandon",
   "serviceSlug": "drywall-repair",
-  "title": "Drywall Repair in Brandon, FL | Patches from $75",
-  "description": "Our local crew patches drywall in Brandon, Bloomingdale and Limona. Drywall patch from $75, same-day call $99. Free estimates on all jobs. (656) 205-3185.",
+  "title": "Drywall Repair in Brandon, FL | Free Estimate",
+  "description": "Our local crew patches drywall in Brandon, Bloomingdale and Limona. Free drywall estimate, same-day call $99. Free estimates on all jobs. (656) 205-3185.",
   "h1": "Drywall Repair in Brandon, FL",
-  "opening": "Our local crew serves Brandon with drywall repair from Brandon Hills and Kensington Estates to Limona, Providence Lakes and Bloomingdale: door-knob holes, nail pops, settling cracks, ceiling patches and popcorn or knockdown texture matching. A drywall patch starts at $75, a same-day service call starts at $99, and estimates are free. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and a drywall patch starts at $75. Here's the short list Brandon homeowners call about most.",
-  "priceLine": "Small jobs start at $49. A drywall patch starts at $75. A ceiling fan or light fixture install starts at $79. TV mounting starts at $89. A same-day service call starts at $99. Free estimates on all jobs.",
+  "opening": "Our local crew serves Brandon with drywall repair from Brandon Hills and Kensington Estates to Limona, Providence Lakes and Bloomingdale: door-knob holes, nail pops, settling cracks, ceiling patches and popcorn or knockdown texture matching. Drywall patches get a free estimate, a same-day service call starts at $99, and estimates are free. Call (656) 205-3185.",
+  "noJob": "No job too small: small jobs start at $49, and drywall patches get a free estimate. Here's the short list Brandon homeowners call about most.",
+  "priceLine": "Small jobs start at $49. Drywall patches get a free estimate. A ceiling fan or light fixture install starts at $79. TV mounting starts at $89. A same-day service call starts at $99. Free estimates on all jobs.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs",
@@ -45,7 +45,7 @@ export const cityServicePages: CityServicePageData[] = [
    {
     "h2": "Small jobs we handle in Brandon",
     "list": [
-     "Door-knob holes and nail pops. A drywall patch starts at $75.",
+     "Door-knob holes and nail pops. Drywall patches get a free estimate.",
      "Hanging shelves, curtain rods and pictures. Small jobs start at $49.",
      "TV mounting and patching the old mount holes. [TV mounting](/services/tv-wall-mounting) starts at $89.",
      "Ceiling fan or light swaps. A [fan or light fixture install](/services/handyman/fan-installation) starts at $79.",
@@ -134,7 +134,7 @@ export const cityServicePages: CityServicePageData[] = [
   "faqs": [
    {
     "question": "How much does drywall repair cost in Brandon?",
-    "answer": "A drywall patch starts at $75, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs."
+    "answer": "Drywall patches get a free estimate, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs."
    },
    {
     "question": "Can you patch drywall the same day in Brandon?",
@@ -164,7 +164,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "How much does drywall repair cost in Brandon?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "A drywall patch starts at $75, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs."
+       "text": "Drywall patches get a free estimate, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs."
       }
      },
      {
@@ -221,13 +221,7 @@ export const cityServicePages: CityServicePageData[] = [
     "url": "https://handymanprosflorida.com/locations/brandon/drywall-repair",
     "offers": {
      "@type": "Offer",
-     "priceCurrency": "USD",
-     "priceSpecification": {
-      "@type": "PriceSpecification",
-      "minPrice": 75,
-      "priceCurrency": "USD"
-     },
-     "description": "Drywall patch, starting price"
+     "description": "Drywall patch, free estimate"
     }
    },
    {
@@ -593,7 +587,7 @@ export const cityServicePages: CityServicePageData[] = [
   "related": [
    [
     "/locations/clearwater/drywall-repair",
-    "Drywall repair in Clearwater (patch from $75)"
+    "Drywall repair in Clearwater (free estimate)"
    ],
    [
     "/services/handyman/fan-installation",
@@ -757,12 +751,12 @@ export const cityServicePages: CityServicePageData[] = [
   "path": "/locations/clearwater/drywall-repair",
   "citySlug": "clearwater",
   "serviceSlug": "drywall-repair",
-  "title": "Drywall Repair in Clearwater, FL | Patches from $75",
-  "description": "Our local crew patches drywall and leak-stained ceilings in Clearwater, Countryside and beach condos. Patch from $75. Free estimates on all jobs.",
+  "title": "Drywall Repair in Clearwater, FL | Free Estimate",
+  "description": "Our local crew patches drywall and leak-stained ceilings in Clearwater, Countryside and beach condos. Free estimates on all jobs.",
   "h1": "Drywall Repair in Clearwater, FL",
-  "opening": "Our local crew serves Clearwater with drywall repair from Clearwater Beach and Island Estates condos to Countryside, Morningside and Harbor Oaks homes: ceiling patches after a leak, door-knob holes, cracks and texture matching. A drywall patch starts at $75, with free estimates on all jobs. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and a drywall patch starts at $75, and one ceiling stain is worth a call.",
-  "priceLine": "Small jobs start at $49. A drywall patch starts at $75. A ceiling fan or light fixture install starts at $79. A same-day service call starts at $99. Free estimates on all jobs.",
+  "opening": "Our local crew serves Clearwater with drywall repair from Clearwater Beach and Island Estates condos to Countryside, Morningside and Harbor Oaks homes: ceiling patches after a leak, door-knob holes, cracks and texture matching. Drywall patches get a free estimate, call or text for a price. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
+  "noJob": "No job too small: small jobs start at $49, and drywall patches get a free estimate, and one ceiling stain is worth a call.",
+  "priceLine": "Small jobs start at $49. Drywall patches get a free estimate. A ceiling fan or light fixture install starts at $79. A same-day service call starts at $99. Free estimates on all jobs.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs"
@@ -865,7 +859,7 @@ export const cityServicePages: CityServicePageData[] = [
   "faqs": [
    {
     "question": "How much does drywall repair cost in Clearwater?",
-    "answer": "A drywall patch starts at $75, and small jobs start at $49. Larger repairs get a free estimate first. Free estimates on all jobs."
+    "answer": "Drywall patches get a free estimate, and small jobs start at $49. Larger repairs get a free estimate first. Free estimates on all jobs."
    },
    {
     "question": "Can you patch my condo ceiling after a leak from upstairs?",
@@ -895,7 +889,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "How much does drywall repair cost in Clearwater?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "A drywall patch starts at $75, and small jobs start at $49. Larger repairs get a free estimate first. Free estimates on all jobs."
+       "text": "Drywall patches get a free estimate, and small jobs start at $49. Larger repairs get a free estimate first. Free estimates on all jobs."
       }
      },
      {
@@ -952,13 +946,7 @@ export const cityServicePages: CityServicePageData[] = [
     "url": "https://handymanprosflorida.com/locations/clearwater/drywall-repair",
     "offers": {
      "@type": "Offer",
-     "priceCurrency": "USD",
-     "priceSpecification": {
-      "@type": "PriceSpecification",
-      "minPrice": 75,
-      "priceCurrency": "USD"
-     },
-     "description": "Drywall patch, starting price"
+     "description": "Drywall patch, free estimate"
     }
    },
    {
@@ -997,12 +985,12 @@ export const cityServicePages: CityServicePageData[] = [
   "path": "/locations/new-port-richey-fl/drywall-repair",
   "citySlug": "new-port-richey-fl",
   "serviceSlug": "drywall-repair",
-  "title": "Drywall Repair New Port Richey, FL | Patches from $75",
-  "description": "Our local crew repairs drywall in New Port Richey, Gulf Harbors and Jasmine Estates, including after flooding. Patch from $75. Free estimates on all jobs.",
+  "title": "Drywall Repair New Port Richey, FL | Free Estimate",
+  "description": "Our local crew repairs drywall in New Port Richey, Gulf Harbors and Jasmine Estates, including after flooding. Free estimates on all jobs.",
   "h1": "Drywall Repair in New Port Richey, FL",
-  "opening": "Our local crew serves New Port Richey with drywall repair from downtown near Sims Park to Gulf Harbors and Jasmine Estates: flood-cut replacement after high water, ceiling leak patches, cracks, holes and texture matching. A drywall patch starts at $75, with free estimates on all jobs. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and a drywall patch starts at $75, and a single crack over a door counts.",
-  "priceLine": "Small jobs start at $49. A drywall patch starts at $75. A same-day service call starts at $99. Flood-cut replacement is quoted after a free estimate. Free estimates on all jobs.",
+  "opening": "Our local crew serves New Port Richey with drywall repair from downtown near Sims Park to Gulf Harbors and Jasmine Estates: flood-cut replacement after high water, ceiling leak patches, cracks, holes and texture matching. Drywall patches get a free estimate, call or text for a price. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
+  "noJob": "No job too small: small jobs start at $49, and drywall patches get a free estimate, and a single crack over a door counts.",
+  "priceLine": "Small jobs start at $49. Drywall patches get a free estimate. A same-day service call starts at $99. Flood-cut replacement is quoted after a free estimate. Free estimates on all jobs.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs"
@@ -1102,7 +1090,7 @@ export const cityServicePages: CityServicePageData[] = [
    },
    {
     "question": "Can you patch a small drywall hole in New Port Richey?",
-    "answer": "Yes. A drywall patch starts at $75, and small jobs start at $49. Free estimates on all jobs."
+    "answer": "Yes. Drywall patches get a free estimate, and small jobs start at $49. Free estimates on all jobs."
    },
    {
     "question": "Do you handle mold behind drywall?",
@@ -1136,7 +1124,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "Can you patch a small drywall hole in New Port Richey?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Yes. A drywall patch starts at $75, and small jobs start at $49. Free estimates on all jobs."
+       "text": "Yes. Drywall patches get a free estimate, and small jobs start at $49. Free estimates on all jobs."
       }
      },
      {
@@ -1185,13 +1173,7 @@ export const cityServicePages: CityServicePageData[] = [
     "url": "https://handymanprosflorida.com/locations/new-port-richey-fl/drywall-repair",
     "offers": {
      "@type": "Offer",
-     "priceCurrency": "USD",
-     "priceSpecification": {
-      "@type": "PriceSpecification",
-      "minPrice": 75,
-      "priceCurrency": "USD"
-     },
-     "description": "Drywall patch, starting price"
+     "description": "Drywall patch, free estimate"
     }
    },
    {
@@ -1230,12 +1212,12 @@ export const cityServicePages: CityServicePageData[] = [
   "path": "/locations/palm-harbor-fl/drywall-repair",
   "citySlug": "palm-harbor-fl",
   "serviceSlug": "drywall-repair",
-  "title": "Drywall Repair in Palm Harbor, FL | Patches from $75",
-  "description": "Our local crew patches drywall in Palm Harbor, East Lake and Ozona. Drywall patch from $75. Free estimates on all jobs. Call (656) 205-3185.",
+  "title": "Drywall Repair in Palm Harbor, FL | Free Estimate",
+  "description": "Our local crew patches drywall in Palm Harbor, East Lake and Ozona. Free estimates on all jobs. Call (656) 205-3185.",
   "h1": "Drywall Repair in Palm Harbor, FL",
-  "opening": "Our local crew serves Palm Harbor with drywall repair from Ozona and Crystal Beach to Highland Lakes and East Lake: door-knob holes, settling cracks, ceiling patches and texture matching. A drywall patch starts at $75, with free estimates on all jobs. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and a drywall patch starts at $75. A single nail pop is worth a call.",
-  "priceLine": "Small jobs start at $49. A drywall patch starts at $75. A ceiling fan or light fixture install starts at $79. A same-day service call starts at $99. Free estimates on all jobs.",
+  "opening": "Our local crew serves Palm Harbor with drywall repair from Ozona and Crystal Beach to Highland Lakes and East Lake: door-knob holes, settling cracks, ceiling patches and texture matching. Drywall patches get a free estimate, call or text for a price. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
+  "noJob": "No job too small: small jobs start at $49, and drywall patches get a free estimate. A single nail pop is worth a call.",
+  "priceLine": "Small jobs start at $49. Drywall patches get a free estimate. A ceiling fan or light fixture install starts at $79. A same-day service call starts at $99. Free estimates on all jobs.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs"
@@ -1351,7 +1333,7 @@ export const cityServicePages: CityServicePageData[] = [
    },
    {
     "question": "How much does drywall repair cost in Palm Harbor?",
-    "answer": "A drywall patch starts at $75, and small jobs start at $49. Larger repairs get a free estimate first. Free estimates on all jobs."
+    "answer": "Drywall patches get a free estimate, and small jobs start at $49. Larger repairs get a free estimate first. Free estimates on all jobs."
    },
    {
     "question": "Do I need a permit to patch drywall in Palm Harbor?",
@@ -1363,7 +1345,7 @@ export const cityServicePages: CityServicePageData[] = [
    },
    {
     "question": "Can you patch a ceiling after a leak?",
-    "answer": "Yes, once the leak is fixed and the area has dried. If drywall stays wet or swells, it's replaced instead of patched. A drywall patch starts at $75."
+    "answer": "Yes, once the leak is fixed and the area has dried. If drywall stays wet or swells, it's replaced instead of patched. Drywall patches get a free estimate."
    }
   ],
   "schema": [
@@ -1385,7 +1367,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "How much does drywall repair cost in Palm Harbor?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "A drywall patch starts at $75, and small jobs start at $49. Larger repairs get a free estimate first. Free estimates on all jobs."
+       "text": "Drywall patches get a free estimate, and small jobs start at $49. Larger repairs get a free estimate first. Free estimates on all jobs."
       }
      },
      {
@@ -1409,7 +1391,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "Can you patch a ceiling after a leak?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Yes, once the leak is fixed and the area has dried. If drywall stays wet or swells, it's replaced instead of patched. A drywall patch starts at $75."
+       "text": "Yes, once the leak is fixed and the area has dried. If drywall stays wet or swells, it's replaced instead of patched. Drywall patches get a free estimate."
       }
      }
     ]
@@ -1434,13 +1416,7 @@ export const cityServicePages: CityServicePageData[] = [
     "url": "https://handymanprosflorida.com/locations/palm-harbor-fl/drywall-repair",
     "offers": {
      "@type": "Offer",
-     "priceCurrency": "USD",
-     "priceSpecification": {
-      "@type": "PriceSpecification",
-      "minPrice": 75,
-      "priceCurrency": "USD"
-     },
-     "description": "Drywall patch, starting price"
+     "description": "Drywall patch, free estimate"
     }
    },
    {
@@ -1479,12 +1455,12 @@ export const cityServicePages: CityServicePageData[] = [
   "path": "/locations/st-petersburg/drywall-repair",
   "citySlug": "st-petersburg",
   "serviceSlug": "drywall-repair",
-  "title": "Drywall Repair in St. Petersburg, FL | Patches from $75",
-  "description": "Our local crew patches drywall and older plaster walls in St. Pete, from Kenwood to Old Northeast. Patch from $75. Free estimates on all jobs.",
+  "title": "Drywall Repair in St. Petersburg, FL | Free Estimate",
+  "description": "Our local crew patches drywall and older plaster walls in St. Pete, from Kenwood to Old Northeast. Free estimates on all jobs.",
   "h1": "Drywall Repair in St. Petersburg, FL",
-  "opening": "Our local crew serves St. Petersburg with drywall repair from Historic Kenwood and Grand Central to Old Northeast, Snell Isle and Tyrone: cracks, holes, ceiling patches, texture matching and small plaster-wall patches in older homes. A drywall patch starts at $75, with free estimates on all jobs. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and a drywall patch starts at $75.",
-  "priceLine": "Small jobs start at $49. A drywall patch starts at $75. TV mounting starts at $89. A same-day service call starts at $99. Plaster repairs beyond a small patch are quoted after a free estimate. Free estimates on all jobs.",
+  "opening": "Our local crew serves St. Petersburg with drywall repair from Historic Kenwood and Grand Central to Old Northeast, Snell Isle and Tyrone: cracks, holes, ceiling patches, texture matching and small plaster-wall patches in older homes. Drywall patches get a free estimate, call or text for a price. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
+  "noJob": "No job too small: small jobs start at $49, and drywall patches get a free estimate.",
+  "priceLine": "Small jobs start at $49. Drywall patches get a free estimate. TV mounting starts at $89. A same-day service call starts at $99. Plaster repairs beyond a small patch are quoted after a free estimate. Free estimates on all jobs.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs"
@@ -1587,7 +1563,7 @@ export const cityServicePages: CityServicePageData[] = [
    },
    {
     "question": "How much does drywall repair cost in St. Petersburg?",
-    "answer": "A drywall patch starts at $75, and small jobs start at $49. Larger plaster repairs are quoted after a free estimate. Free estimates on all jobs."
+    "answer": "Drywall patches get a free estimate, and small jobs start at $49. Larger plaster repairs are quoted after a free estimate. Free estimates on all jobs."
    },
    {
     "question": "Is it safe to sand old walls in a historic St. Pete home?",
@@ -1595,7 +1571,7 @@ export const cityServicePages: CityServicePageData[] = [
    },
    {
     "question": "Can you patch a ceiling after a roof or AC leak?",
-    "answer": "Yes, once the leak is fixed and the ceiling is dry. Our crew handles leak patch and tarping too. A drywall patch starts at $75."
+    "answer": "Yes, once the leak is fixed and the ceiling is dry. Our crew handles leak patch and tarping too. Drywall patches get a free estimate."
    },
    {
     "question": "Which St. Pete ZIP codes do you cover for drywall?",
@@ -1621,7 +1597,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "How much does drywall repair cost in St. Petersburg?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "A drywall patch starts at $75, and small jobs start at $49. Larger plaster repairs are quoted after a free estimate. Free estimates on all jobs."
+       "text": "Drywall patches get a free estimate, and small jobs start at $49. Larger plaster repairs are quoted after a free estimate. Free estimates on all jobs."
       }
      },
      {
@@ -1637,7 +1613,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "Can you patch a ceiling after a roof or AC leak?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Yes, once the leak is fixed and the ceiling is dry. Our crew handles leak patch and tarping too. A drywall patch starts at $75."
+       "text": "Yes, once the leak is fixed and the ceiling is dry. Our crew handles leak patch and tarping too. Drywall patches get a free estimate."
       }
      },
      {
@@ -1670,13 +1646,7 @@ export const cityServicePages: CityServicePageData[] = [
     "url": "https://handymanprosflorida.com/locations/st-petersburg/drywall-repair",
     "offers": {
      "@type": "Offer",
-     "priceCurrency": "USD",
-     "priceSpecification": {
-      "@type": "PriceSpecification",
-      "minPrice": 75,
-      "priceCurrency": "USD"
-     },
-     "description": "Drywall patch, starting price"
+     "description": "Drywall patch, free estimate"
     }
    },
    {
@@ -1959,12 +1929,12 @@ export const cityServicePages: CityServicePageData[] = [
   "path": "/locations/wesley-chapel/drywall-repair",
   "citySlug": "wesley-chapel",
   "serviceSlug": "drywall-repair",
-  "title": "Drywall Repair in Wesley Chapel, FL | Patches from $75",
-  "description": "Our local crew patches drywall in Wesley Chapel, Wiregrass, Meadow Pointe and Seven Oaks. Patch from $75, same-day call $99. Free estimates on all jobs.",
+  "title": "Drywall Repair in Wesley Chapel, FL | Free Estimate",
+  "description": "Our local crew patches drywall in Wesley Chapel, Wiregrass, Meadow Pointe and Seven Oaks. Free estimate, same-day call $99. Free estimates on all jobs.",
   "h1": "Drywall Repair in Wesley Chapel, FL",
-  "opening": "Our local crew serves Wesley Chapel with drywall repair in Wiregrass, Meadow Pointe, Seven Oaks and along SR 54 and SR 56: nail pops, settling cracks in newer homes, door-knob holes, rental turnover patches and texture matching. A drywall patch starts at $75, a same-day service call starts at $99, and estimates are free. Call (656) 205-3185.",
-  "noJob": "No job too small: small jobs start at $49, and a drywall patch starts at $75, and a hallway of nail pops is one visit.",
-  "priceLine": "Small jobs start at $49. A drywall patch starts at $75. TV mounting starts at $89. A same-day service call starts at $99. Free estimates on all jobs.",
+  "opening": "Our local crew serves Wesley Chapel with drywall repair in Wiregrass, Meadow Pointe, Seven Oaks and along SR 54 and SR 56: nail pops, settling cracks in newer homes, door-knob holes, rental turnover patches and texture matching. Drywall patches get a free estimate, a same-day service call starts at $99, and estimates are free. Call (656) 205-3185.",
+  "noJob": "No job too small: small jobs start at $49, and drywall patches get a free estimate, and a hallway of nail pops is one visit.",
+  "priceLine": "Small jobs start at $49. Drywall patches get a free estimate. TV mounting starts at $89. A same-day service call starts at $99. Free estimates on all jobs.",
   "chips": [
    "Licensed & insured",
    "Free estimates on all jobs",
@@ -2071,7 +2041,7 @@ export const cityServicePages: CityServicePageData[] = [
   "faqs": [
    {
     "question": "How much does drywall repair cost in Wesley Chapel?",
-    "answer": "A drywall patch starts at $75, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs."
+    "answer": "Drywall patches get a free estimate, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs."
    },
    {
     "question": "Why does my newer Wesley Chapel home have nail pops and cracks?",
@@ -2079,7 +2049,7 @@ export const cityServicePages: CityServicePageData[] = [
    },
    {
     "question": "Do you patch rentals between tenants?",
-    "answer": "Yes. Landlords and property managers book us for anchor holes, door-knob holes and scuffed corners between tenants. Small jobs start at $49, and a drywall patch starts at $75."
+    "answer": "Yes. Landlords and property managers book us for anchor holes, door-knob holes and scuffed corners between tenants. Small jobs start at $49, and drywall patches get a free estimate."
    },
    {
     "question": "Can you come the same day in Wesley Chapel?",
@@ -2101,7 +2071,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "How much does drywall repair cost in Wesley Chapel?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "A drywall patch starts at $75, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs."
+       "text": "Drywall patches get a free estimate, and small jobs start at $49. Bigger repairs get a free estimate first. Free estimates on all jobs."
       }
      },
      {
@@ -2117,7 +2087,7 @@ export const cityServicePages: CityServicePageData[] = [
       "name": "Do you patch rentals between tenants?",
       "acceptedAnswer": {
        "@type": "Answer",
-       "text": "Yes. Landlords and property managers book us for anchor holes, door-knob holes and scuffed corners between tenants. Small jobs start at $49, and a drywall patch starts at $75."
+       "text": "Yes. Landlords and property managers book us for anchor holes, door-knob holes and scuffed corners between tenants. Small jobs start at $49, and drywall patches get a free estimate."
       }
      },
      {
@@ -2158,13 +2128,7 @@ export const cityServicePages: CityServicePageData[] = [
     "url": "https://handymanprosflorida.com/locations/wesley-chapel/drywall-repair",
     "offers": {
      "@type": "Offer",
-     "priceCurrency": "USD",
-     "priceSpecification": {
-      "@type": "PriceSpecification",
-      "minPrice": 75,
-      "priceCurrency": "USD"
-     },
-     "description": "Drywall patch, starting price"
+     "description": "Drywall patch, free estimate"
     }
    },
    {

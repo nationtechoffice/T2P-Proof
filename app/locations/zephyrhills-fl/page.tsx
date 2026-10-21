@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
 
 const faqs = [
   { question: "Do you serve Zephyrhills?", answer: "Yes. Handyman Pros FL books Zephyrhills jobs on set east-Pasco days, and our local crew serves Zephyrhills. Call (656) 205-3185 to get on the next Zephyrhills day." },
-  { question: "How much does a handyman cost in Zephyrhills?", answer: "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair at $199. A same-day service call starts at $99." },
+  { question: "How much does a handyman cost in Zephyrhills?", answer: "Small jobs start at $49, furniture assembly at $65, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair at $199. A same-day service call starts at $99." },
   { question: "Are estimates free?", answer: "Yes. Free estimates on all jobs. Describe the job on the phone or the form and you'll get a price before any work starts." },
   { question: "Can you come the same day in Zephyrhills?", answer: "Sometimes. Zephyrhills is about an hour from our Tampa base, so same-day depends on that day's schedule. A same-day service call starts at $99." },
   { question: "Can you help after a storm?", answer: "Yes, for roof leak patch and tarping, loose gutter sections and damaged fence panels. We don't replace roofs." },
@@ -26,7 +26,7 @@ const faqs = [
 const priceSentences = [
   "Small jobs like shelves and curtain rods start at $49.",
   "Furniture assembly starts at $65.",
-  "A drywall patch starts at $75.",
+  "Drywall patches get a free estimate.",
   "A ceiling fan or light fixture install starts at $79.",
   "TV mounting starts at $89.",
   "A same-day service call starts at $99.",
@@ -102,7 +102,7 @@ const brief: CityBrief = {
         The city was incorporated in 1914, and the Zephyrhills Historic District has been on the National Register of
         Historic Places since 2001. In older homes near the historic downtown, the usual list is drywall patches over
         old cracks and anchors, doors that have shifted out of square, and fixture swaps where the old hardware has
-        worn out. A drywall patch starts at $75.
+        worn out. Drywall patches get a free estimate.
       </p>
       <H3>Storm season</H3>
       <p>

@@ -6,7 +6,8 @@ export interface StartingPrice {
   key: string;
   /** Short label for lists. */
   label: string;
-  amount: number;
+  /** Omitted when the price is free-estimate only (no public number). */
+  amount?: number;
   /** Plain sentence shown on the matching service page. */
   sentence: string;
   /** Matching service page. */
@@ -32,8 +33,7 @@ export const startingPrices = {
     key: "drywall",
     href: "/services/drywall-repair",
     label: "Drywall patch",
-    amount: 75,
-    sentence: "Drywall patch repair in Tampa starts at $75.",
+    sentence: "Drywall patch repair in Tampa: free estimate, call or text for a price.",
   },
   fanFixture: {
     key: "fanFixture",

@@ -23,7 +23,7 @@ export const gbpCityHubs: TargetLocation[] = [
     showStartingPrices: true,
     paragraphs: [
       "Handyman Pros FL is a licensed, insured handyman crew that serves Clearwater, FL, with 24/7 phone estimates and Spanish-speaking staff.",
-      "Handyman jobs in Clearwater start at $49 for small jobs like shelves and curtain rods, $89 for TV mounting, and $75 for a drywall patch. Furniture assembly starts at $65, ceiling fan or light fixture installs start at $79, and tile repair or regrout starts at $199.",
+      "Handyman jobs in Clearwater start at $49 for small jobs like shelves and curtain rods, and $89 for TV mounting. Drywall patches get a free estimate. Furniture assembly starts at $65, ceiling fan or light fixture installs start at $79, and tile repair or regrout starts at $199.",
       "Clearwater splits into two kinds of houses. Clearwater Beach and Island Estates are condos and low-rise buildings where salt air swells sliding doors and balcony hardware. Coachman and Countryside are mainland neighborhoods of single-family homes with the usual Florida stucco, lanais, and interior drywall.",
       "Beach visits are often a slider that will not lock, a drywall scar inside a rental, or a TV that has to sit level on a concrete or block wall. Mainland lists add ceiling fans at an existing box, fixture swaps, and a punch list before guests arrive. We do not run new circuits or open walls for new wiring.",
       "Cleveland Street and downtown are a short hop from those same stops. Clearwater calls share a planned Pinellas route with Dunedin, Safety Harbor, and Largo.",
@@ -61,7 +61,7 @@ export const gbpCityHubs: TargetLocation[] = [
       {
         question: "How much does a handyman cost in Clearwater?",
         answer:
-          "Small jobs like shelves and curtain rods start at $49, furniture assembly starts at $65, a drywall patch starts at $75, a ceiling fan or light fixture starts at $79, TV mounting starts at $89, a same-day service call starts at $99, and tile repair or regrout starts at $199. The final price is quoted after you describe the job.",
+          "Small jobs like shelves and curtain rods start at $49, furniture assembly starts at $65, a ceiling fan or light fixture starts at $79, TV mounting starts at $89, a same-day service call starts at $99, and tile repair or regrout starts at $199. The final price is quoted after you describe the job.",
       },
       {
         question: "Can I get a same-day handyman in Clearwater?",
@@ -136,8 +136,8 @@ export const gbpCityHubs: TargetLocation[] = [
     neighborhoods: ["Downtown Palm Harbor", "Ozona", "Crystal Beach", "Highland Lakes", "East Lake"],
     intro:
       "Need a licensed Palm Harbor handyman for TV mounts, drywall, and fence boards? Handyman Pros FL serves Ozona, East Lake, and Highland Lakes from Westchase. Hablamos español.",
-    directAnswer: "Handyman Pros FL serves Palm Harbor, FL, including East Lake, Ozona, Crystal Beach and Highland Lakes, from its Westchase headquarters, with TV mounting from $89, drywall patches from $75 and small jobs from $49. Palm Harbor is unincorporated Pinellas County, so any permit for your job goes through Pinellas County, not a city hall, and we tell you up front if a job needs one.",
-    directAnswerBody: "Handyman Pros FL's local crew serves Palm Harbor, FL, including East Lake, Ozona, Crystal Beach and Highland Lakes, with TV mounting from $89, drywall patches from $75 and small jobs from $49. Palm Harbor is unincorporated Pinellas County, so any permit for your job goes through Pinellas County, not a city hall, and we tell you up front if a job needs one.",
+    directAnswer: "Handyman Pros FL serves Palm Harbor, FL, including East Lake, Ozona, Crystal Beach and Highland Lakes, from its Westchase headquarters, with TV mounting from $89, free drywall estimates and small jobs from $49. Palm Harbor is unincorporated Pinellas County, so any permit for your job goes through Pinellas County, not a city hall, and we tell you up front if a job needs one.",
+    directAnswerBody: "Handyman Pros FL's local crew serves Palm Harbor, FL, including East Lake, Ozona, Crystal Beach and Highland Lakes, with TV mounting from $89, free drywall estimates and small jobs from $49. Palm Harbor is unincorporated Pinellas County, so any permit for your job goes through Pinellas County, not a city hall, and we tell you up front if a job needs one.",
     paragraphs: [
       `Call ${phone} for a Palm Harbor estimate. Licensed and insured. Hablamos español. Our crew serves Palm Harbor daily.`,
     ],
@@ -226,7 +226,7 @@ export const gbpCityHubs: TargetLocation[] = [
       {
         question: "How much does a handyman cost in Palm Harbor?",
         answer:
-          "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
+          "Small jobs start at $49, furniture assembly at $65, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
       },
       {
         question: "Can you mount a TV in an East Lake house?",

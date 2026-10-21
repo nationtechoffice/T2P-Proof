@@ -164,7 +164,7 @@ export const coreServices: CoreService[] = [
     image: "/images/work/drywall-finish-ladder.jpg",
     imageAlt: "Licensed handyman finishing drywall compound on an interior wall in Tampa, FL",
     intro:
-      "Drywall patch repair in Tampa starts at $75 with Handyman Pros FL, a licensed and insured handyman crew that patches holes, cracks and ceiling damage, matches orange peel, knockdown or smooth texture, and leaves the wall ready for paint. We stop and tell you first if a stain points to an active leak, because a patch should never hide a plumbing or roof problem.",
+      "Drywall patch repair in Tampa starts with a free estimate from Handyman Pros FL, a licensed and insured handyman crew that patches holes, cracks and ceiling damage, matches orange peel, knockdown or smooth texture, and leaves the wall ready for paint. We stop and tell you first if a stain points to an active leak, because a patch should never hide a plumbing or roof problem.",
     paragraphs: [
       "Drywall repair in Tampa ranges from doorknob holes to water-stained ceilings after summer storms. We cut clean openings, add backing when needed, tape and feather compound, then match orange peel, knockdown, or smooth finishes common in Hillsborough and Pinellas homes.",
       "Humidity is the local enemy. A rushed patch telegraphs through paint within weeks. We stage coats so the repair stays flat in Westchase, Town 'N' Country, Citrus Park, and Clearwater interiors.",
@@ -180,7 +180,7 @@ export const coreServices: CoreService[] = [
       {
         question: "How much does drywall repair cost in Tampa?",
         answer:
-          "A drywall patch starts at $75. Larger holes, ceiling sections and texture matching are quoted after we see photos.",
+          "Drywall patches get a free estimate. Larger holes, ceiling sections and texture matching are quoted after we see photos.",
       },
       {
         question: "Can you match popcorn or knockdown texture?",
@@ -219,7 +219,7 @@ export const coreServices: CoreService[] = [
       {
         heading: "What drywall repair costs in Tampa",
         paragraphs: [
-          "A drywall patch starts at $75. What changes the price is the size of the hole, ceiling versus wall, how much texture has to be matched, whether water damaged the board, and whether you want the patch painted. Larger repairs are quoted after photos.",
+          "Drywall patches get a free estimate. What changes the price is the size of the hole, ceiling versus wall, how much texture has to be matched, whether water damaged the board, and whether you want the patch painted. Larger repairs are quoted after photos.",
           "Related starting prices: small jobs start at $49, and a same-day service call starts at $99.",
         ],
         links: [
@@ -727,7 +727,7 @@ export const targetLocations: TargetLocation[] = [
       {
         question: "How much is drywall repair Tampa or TV mounting Tampa?",
         answer:
-          "A drywall patch in Tampa starts at $75 and TV mounting starts at $89. The final price depends on the hole size, wall type, and cable concealment. Estimates are free over the phone.",
+          "TV mounting in Tampa starts at $89, and drywall patches get a free estimate. The final price depends on the hole size, wall type, and cable concealment. Estimates are free over the phone.",
       },
       {
         question: "Do you work in South Tampa and Hyde Park?",
@@ -825,7 +825,7 @@ export const targetLocations: TargetLocation[] = [
       {
         question: "How much does a handyman cost in Westchase?",
         answer:
-          "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
+          "Small jobs start at $49, furniture assembly at $65, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
       },
       {
         question: "Do I need Westchase HOA approval before a handyman job?",

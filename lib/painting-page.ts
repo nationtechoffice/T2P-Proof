@@ -27,7 +27,7 @@ export const paintingSections: ContentSection[] = [
       {
         heading: "Paint after drywall repair",
         paragraphs: [
-          "When we patch a wall, we can paint it too, so the repair disappears instead of waiting for a second trade. A drywall patch starts at $75.",
+          "When we patch a wall, we can paint it too, so the repair disappears instead of waiting for a second trade. Drywall patches get a free estimate.",
         ],
       },
     ],
@@ -40,7 +40,7 @@ export const paintingSections: ContentSection[] = [
   {
     heading: "What painting costs",
     paragraphs: [
-      "We give a price over the phone or after photos, before any work starts. Related starting prices: a drywall patch starts at $75, and small jobs start at $49.",
+      "We give a price over the phone or after photos, before any work starts. Related starting prices: small jobs start at $49, and drywall patches get a free estimate.",
     ],
   },
   {

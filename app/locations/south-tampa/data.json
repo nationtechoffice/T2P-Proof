@@ -3,11 +3,11 @@
  "citySlug": "south-tampa",
  "serviceSlug": "",
  "title": "Handyman in South Tampa, FL | Hyde Park to Davis Islands",
- "description": "Our local crew serves South Tampa: Hyde Park, Palma Ceia, Davis Islands and Bayshore. Small jobs from $49, drywall from $75. Free estimates on all jobs.",
+ "description": "Our local crew serves South Tampa: Hyde Park, Palma Ceia, Davis Islands and Bayshore. Small jobs from $49, free drywall estimates. Free estimates on all jobs.",
  "h1": "Handyman in South Tampa, FL",
- "opening": "Our local crew serves South Tampa, from Hyde Park and Palma Ceia to Davis Islands, Bayshore Beautiful and Ballast Point: drywall and plaster patches, doors, TV mounting, ceiling fans, fences and tile. Small jobs start at $49 and a drywall patch at $75, with free estimates on all jobs. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
+ "opening": "Our local crew serves South Tampa, from Hyde Park and Palma Ceia to Davis Islands, Bayshore Beautiful and Ballast Point: drywall and plaster patches, doors, TV mounting, ceiling fans, fences and tile. Small jobs start at $49, with free estimates on all jobs. Handyman Pros FL is licensed and insured. Call (656) 205-3185.",
  "noJob": "No job too small: small jobs start at $49, so one sticking door, a loose fence board or a shelf to hang is worth a call.",
- "priceLine": "Small jobs start at $49. Furniture assembly starts at $65. A drywall patch starts at $75. A ceiling fan or light fixture install starts at $79. TV mounting starts at $89. A same-day service call starts at $99. Tile work starts at $199. Painting is quoted after a free estimate. Free estimates on all jobs.",
+ "priceLine": "Small jobs start at $49. Furniture assembly starts at $65. Drywall patches get a free estimate. A ceiling fan or light fixture install starts at $79. TV mounting starts at $89. A same-day service call starts at $99. Tile work starts at $199. Painting is quoted after a free estimate. Free estimates on all jobs.",
  "chips": [
   "Licensed & insured",
   "Free estimates on all jobs",
@@ -30,7 +30,7 @@
    "h2": "Jobs South Tampa homes call about",
    "paras": [
     "### Drywall and plaster patches",
-    "Older Hyde Park and Palma Ceia homes can have plaster walls rather than drywall. We patch cracks and holes and match texture. Homes built before 1978 should have old texture and paint tested before anyone sands. A drywall patch starts at $75. See [drywall repair](/services/drywall-repair).",
+    "Older Hyde Park and Palma Ceia homes can have plaster walls rather than drywall. We patch cracks and holes and match texture. Homes built before 1978 should have old texture and paint tested before anyone sands. Drywall patches get a free estimate. See [drywall repair](/services/drywall-repair).",
     "### Sticking doors and sliders",
     "Humidity swells wood doors in older South Tampa homes, and bayfront sliders drag on worn rollers and salty tracks. We plane, shim, realign strikes and service tracks. Small jobs start at $49. See [door repair](/services/door-repair).",
     "### TV mounting, fans and fixtures",
@@ -145,7 +145,7 @@
   },
   {
    "question": "How much does a handyman cost in South Tampa?",
-   "answer": "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89 and tile work at $199. A same-day service call starts at $99. Painting is quoted after a free estimate."
+   "answer": "Small jobs start at $49, furniture assembly at $65, a ceiling fan or light fixture at $79, TV mounting at $89 and tile work at $199. A same-day service call starts at $99. Painting is quoted after a free estimate."
   },
   {
    "question": "Do I need city approval for work on a Hyde Park home?",
@@ -263,11 +263,6 @@
       "itemOffered": {
        "@type": "Service",
        "name": "Drywall patch"
-      },
-      "priceSpecification": {
-       "@type": "PriceSpecification",
-       "minPrice": 75,
-       "priceCurrency": "USD"
       }
      },
      {
@@ -339,7 +334,7 @@
      "name": "How much does a handyman cost in South Tampa?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89 and tile work at $199. A same-day service call starts at $99. Painting is quoted after a free estimate."
+      "text": "Small jobs start at $49, furniture assembly at $65, a ceiling fan or light fixture at $79, TV mounting at $89 and tile work at $199. A same-day service call starts at $99. Painting is quoted after a free estimate."
      }
     },
     {

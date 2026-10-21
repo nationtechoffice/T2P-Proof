@@ -331,7 +331,7 @@ export const expansionLocations: TargetLocation[] = [
       {
         question: "How much does a handyman cost in Lutz?",
         answer:
-          "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
+          "Small jobs start at $49, furniture assembly at $65, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
       },
       {
         question: "Can you patch tile in Lutz?",
@@ -513,7 +513,7 @@ export const expansionLocations: TargetLocation[] = [
     neighborhoods: ["56th Street", "Busch Boulevard", "Temple Terrace Golf", "USF border"],
     intro:
       "Handyman Pros FL is the local contractor Temple Terrace homeowners call for dependable Temple Terrace home repair, punch-list fixes, and same-day help when you search handyman near me.",
-    directAnswer: "Handyman Pros FL serves Temple Terrace, FL (ZIPs 33617 and 33637) from its Westchase headquarters, fixing drywall from $75, light fixtures and ceiling fans from $79 and sticking doors in older and mid-century homes near 56th Street and USF. Temple Terrace is its own city, so permits come from the City of Temple Terrace, and we tell you up front if your job needs one.",
+    directAnswer: "Handyman Pros FL serves Temple Terrace, FL (ZIPs 33617 and 33637) from its Westchase headquarters, fixing drywall (free estimate), light fixtures and ceiling fans from $79 and sticking doors in older and mid-century homes near 56th Street and USF. Temple Terrace is its own city, so permits come from the City of Temple Terrace, and we tell you up front if your job needs one.",
     paragraphs: [
       "Temple Terrace home repair requests rarely wait for a perfect weekend. Between university-area rentals, established family homes, and busy schedules along Busch Boulevard corridors, residents need a local contractor who answers the phone and arrives prepared. Our local crew serves Temple Terrace.",
       "When neighbors search handyman near me, they usually want more than a vague callback. They want someone who can assess a sticking door, patch drywall after a remodel, hang blinds level, and tighten loose stair rails in one productive visit. Our team treats Temple Terrace properties with the same care we give Westchase and Carrollwood homes — shoe covers indoors, dust control during sanding, and a walkthrough before we leave.",
@@ -533,7 +533,7 @@ export const expansionLocations: TargetLocation[] = [
       {
         heading: "Rental turnovers near USF and Busch Boulevard",
         paragraphs: [
-          "The booked work is drywall after a rental turnover, a door that sticks on 56th Street, blinds and shelves hung level, and a stair rail that has loosened. Busch Boulevard rentals need the punch list finished, not a redesign. A drywall patch starts at $75.",
+          "The booked work is drywall after a rental turnover, a door that sticks on 56th Street, blinds and shelves hung level, and a stair rail that has loosened. Busch Boulevard rentals need the punch list finished, not a redesign. Drywall patches get a free estimate.",
           "One permit detail matters for landlords: the City's exemption for ordinary minor repairs covers an owner's primary residence, and the City says rental property is deemed commercial in nature and requires permitting. Check with the City's permitting office before skipping a permit, and we flag anything that looks permit-level.",
         ],
         links: [
@@ -601,12 +601,12 @@ export const expansionLocations: TargetLocation[] = [
       {
         question: "How much does a handyman cost in Temple Terrace?",
         answer:
-          "Small jobs start at $49, furniture assembly at $65, a drywall patch at $75, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
+          "Small jobs start at $49, furniture assembly at $65, a ceiling fan or light fixture at $79, TV mounting at $89, and tile repair or regrout at $199. We confirm the price on the phone before we come out.",
       },
       {
         question: "Can you patch drywall in a Temple Terrace rental?",
         answer:
-          "Yes. We patch, texture-blend, and leave the wall ready for paint. We flag moisture before we cover a stain. A drywall patch starts at $75.",
+          "Yes. We patch, texture-blend, and leave the wall ready for paint. We flag moisture before we cover a stain. Drywall patches get a free estimate.",
       },
       {
         question: "Do I need a permit to fix my fence in Temple Terrace?",

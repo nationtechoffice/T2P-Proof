@@ -114,7 +114,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/palm-harbor-fl": {
     title: "Handyman Palm Harbor FL | Home Repairs | Handyman Pros FL",
-    description: "Palm Harbor handyman for TV mounting (from $89), drywall patches (from $75) and fence boards in East Lake, Ozona and Crystal Beach. Call (656) 205-3185.",
+    description: "Palm Harbor handyman for TV mounting (from $89), drywall patches (free estimate) and fence boards in East Lake, Ozona and Crystal Beach. Call (656) 205-3185.",
   },
   "/locations/safety-harbor-fl": {
     title: "Handyman Safety Harbor FL | Home Repairs | Handyman Pros FL",
@@ -162,7 +162,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/temple-terrace": {
     title: "Handyman Temple Terrace FL | Home Repairs | Handyman Pros FL",
-    description: "Temple Terrace handyman for drywall patches (from $75), sticking doors, fixtures (from $79) and rental punch lists near 56th St and USF. Call (656) 205-3185.",
+    description: "Temple Terrace handyman for drywall patches (free estimate), sticking doors, fixtures (from $79) and rental punch lists near 56th St and USF. Call (656) 205-3185.",
   },
   "/locations/land-o-lakes": {
     title: "Handyman Land O' Lakes FL | Home Repairs | Handyman Pros FL",
@@ -217,7 +217,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/westchase-fl": {
     title: "Handyman Westchase FL | Manitas Same-Day",
-    description: "Handyman Pros FL is based in Westchase (33626). TV mounting from $89, drywall patch from $75, small jobs from $49. Licensed & insured. Call (656) 205-3185.",
+    description: "Handyman Pros FL is based in Westchase (33626). TV mounting from $89, free drywall estimates, small jobs from $49. Licensed & insured. Call (656) 205-3185.",
   },
   "/locations/zephyrhills-fl": {
     title: "Handyman Zephyrhills FL | Home Repairs | Handyman Pros FL",
@@ -225,15 +225,15 @@ export const planAMeta: Record<string, { title: string; description: string }> =
   },
   "/locations/odessa-fl": {
     title: "Handyman Odessa FL | Home Repairs | Handyman Pros FL",
-    description: "Licensed & insured Odessa handyman. Drywall patch from $75, furniture assembly from $65. Our crew serves Odessa daily. Free estimates. (656) 205-3185.",
+    description: "Licensed & insured Odessa handyman. Free drywall estimates, furniture assembly from $65. Our crew serves Odessa daily. Free estimates. (656) 205-3185.",
   },
   "/service-areas": {
     title: "Handyman Service Areas | Westchase HQ Coverage",
     description: "Licensed Handyman Pros FL covers Westchase, Carrollwood, Citrus Park, Town 'N' Country, Tampa & Pinellas from ZIP 33626. Same-day when nearby — (656) 205-3185.",
   },
   "/services/drywall-repair": {
-    title: "Drywall Repair in Tampa, FL | Patches from $75 | 24/7 Quotes",
-    description: "Tampa drywall repair from $75: holes, cracks, ceiling patches and texture matching, paint-ready. Licensed & insured. Hablamos español. Call (656) 205-3185.",
+    title: "Drywall Repair in Tampa, FL | Free Estimate | 24/7 Quotes",
+    description: "Tampa drywall repair with a free estimate: holes, cracks, ceiling patches and texture matching, paint-ready. Licensed & insured. Hablamos español. Call (656) 205-3185.",
   },
   "/services/electrical-fixture-installation": {
     title: "Electrical Fixtures Tampa | Electricidad Menor",

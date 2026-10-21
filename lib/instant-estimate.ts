@@ -22,7 +22,7 @@ const PHONE = siteConfig.phone;
 /** Auditor-exact titles. These win over the 40–60 aim. */
 const exactTitles: Record<string, string> = {
   "TV Wall Mounting": "TV Wall Mounting Tampa | Instalación de TV",
-  "Drywall Repair": "Drywall Repair in Tampa, FL | Patches from $75 | 24/7 Quotes",
+  "Drywall Repair": "Drywall Repair in Tampa, FL | Free Estimate | 24/7 Quotes",
   "Fan Installation": "Fan Installation Tampa FL | Ventiladores",
   "Same-Day Handyman": "Same-Day Handyman Tampa | Westchase Crew",
   "Tile Installation": "Tile Installation Tampa | Bath & Kitchen",
@@ -43,7 +43,7 @@ const exactMetas: Record<string, string> = {
   "TV Wall Mounting":
     "Instalación de TV in Tampa by licensed & insured pros. Level mounts, clean cable runs, same-day Westchase dispatch. Call (656) 205-3185 today.",
   "Drywall Repair":
-    "Tampa drywall repair from $75: holes, cracks, ceiling patches and texture matching, paint-ready. Licensed & insured. Hablamos español. Call (656) 205-3185.",
+    "Tampa drywall repair with a free estimate: holes, cracks, ceiling patches and texture matching, paint-ready. Licensed & insured. Hablamos español. Call (656) 205-3185.",
   "Fan Installation":
     "Instalación de ventiladores in Tampa Bay. Licensed & insured Handyman Pros FL mounts, balances and connects ceiling and bath fans. Call (656) 205-3185.",
   "Same-Day Handyman":

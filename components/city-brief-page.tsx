@@ -10,7 +10,7 @@ import { Phone } from "lucide-react";
 export const APPROVED_OFFERS = [
   { name: "Small handyman jobs (shelves, curtain rods)", price: 49, href: "/services/same-day-handyman" },
   { name: "Furniture assembly", price: 65, href: "/services/furniture-assembly" },
-  { name: "Drywall patch", price: 75, href: "/services/drywall-repair" },
+  { name: "Drywall patch", price: undefined, href: "/services/drywall-repair" },
   { name: "Ceiling fan or light fixture install", price: 79, href: "/services/electrical-fixture-installation" },
   { name: "TV mounting", price: 89, href: "/services/tv-wall-mounting" },
   { name: "Same-day service call", price: 99, href: "/services/same-day-handyman" },
@@ -57,7 +57,7 @@ export function CityBriefPage({ brief }: { brief: CityBrief }) {
       itemListElement: APPROVED_OFFERS.map((o) => ({
         "@type": "Offer",
         itemOffered: { "@type": "Service", name: o.name },
-        priceSpecification: { "@type": "PriceSpecification", minPrice: o.price, priceCurrency: "USD" },
+        ...(o.price != null ? { priceSpecification: { "@type": "PriceSpecification", minPrice: o.price, priceCurrency: "USD" } } : {}),
       })),
     },
   };

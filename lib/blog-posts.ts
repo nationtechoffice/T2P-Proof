@@ -50,7 +50,7 @@ Florida's climate creates unique home maintenance challenges. High humidity caus
 At Handyman Pros FL, a same-day handyman service call in Tampa starts at $99, and small jobs like hanging shelves or curtain rods start at $49. Other starting prices:
 
 - Furniture assembly starts at $65.
-- A drywall patch starts at $75.
+- Drywall patches get a free estimate. Call or text for a price.
 - A ceiling fan or light fixture starts at $79.
 - TV mounting starts at $89.
 - Tile repair or regrout starts at $199.
@@ -270,11 +270,11 @@ Handyman Pros Florida offers emergency repair services during hurricane season. 
     image: "/images/work/drywall-finish-ladder.jpg",
     content: `## Average Drywall Repair Costs in Florida
 
-Drywall repair costs in Florida depend on damage size, location, and whether texture matching and painting are included. At Handyman Pros FL, a small drywall patch starts at $75. Larger holes, ceilings, and water damage are quoted after a free estimate.
+Drywall repair costs in Florida depend on damage size, location, and whether texture matching and painting are included. At Handyman Pros FL, a small drywall patch gets a free estimate, call or text for a price. Larger holes, ceilings, and water damage are quoted after a free estimate.
 
 | Repair Type | Typical Florida range (industry average) |
 |---|---|
-| Small hole (nail/screw) | $75–$150 |
+| Small hole (nail/screw) | Free estimate, call or text for a price |
 | Medium hole (fist-sized) | $150–$300 |
 | Large hole (patch panel) | $200–$500 |
 | Ceiling repair | $200–$600 |
