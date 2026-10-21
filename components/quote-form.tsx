@@ -4,13 +4,14 @@ import { useState } from "react";
 import { siteConfig } from "@/lib/site-config";
 import { coreServices } from "@/lib/programmatic";
 import { instantEstimate } from "@/lib/instant-estimate";
+import { QUOTE_PRICE_MESSAGE } from "@/lib/quote-message";
 
 interface QuoteAnalysisResponse {
   category: string;
   label: string;
   confidence: number;
   summary: string;
-  estimate: { low: number; high: number; notes: string; label: string };
+  estimate: { label: string; message: string };
   recommendedServices: string[];
   usedAi: boolean;
 }
@@ -165,7 +166,7 @@ export function QuoteForm({
     return (
       <div className="rounded-2xl border border-[hsl(var(--border))] bg-white/90 p-6 text-center">
         <h2 className="mb-3 text-xl font-bold text-[hsl(var(--secondary))]">
-          {emailed ? "Quote request received" : "Estimate ready — please call or email us"}
+          {emailed ? "Quote request received" : "Request saved, please call or email us"}
         </h2>
         {emailed ? (
           <p className="mb-3 text-sm text-[hsl(var(--muted-foreground))]">
@@ -175,7 +176,7 @@ export function QuoteForm({
           </p>
         ) : (
           <p className="mb-3 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-            Your estimate was calculated, but automatic email delivery is not configured yet on the server.
+            We got your details, but automatic email delivery is not configured yet on the server.
             Please call{" "}
             <a href={`tel:${siteConfig.phoneTel}`} className="font-bold underline">
               {siteConfig.phone}
@@ -194,10 +195,7 @@ export function QuoteForm({
           </p>
         )}
         <p className="mb-4 rounded-xl bg-[hsl(var(--muted))] px-4 py-3 text-sm">
-          Baseline Tampa Bay range:{" "}
-          <strong>
-            ${analysis.estimate.low}–${analysis.estimate.high}
-          </strong>
+          <strong>{analysis.estimate.message || QUOTE_PRICE_MESSAGE}</strong>
           <span className="mt-1 block text-xs text-[hsl(var(--muted-foreground))]">{analysis.summary}</span>
         </p>
         <a

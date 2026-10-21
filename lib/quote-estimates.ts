@@ -274,3 +274,39 @@ ${input.description || "(photo only)"}`,
     };
   }
 }
+
+import { QUOTE_PRICE_MESSAGE } from "./quote-message";
+export { QUOTE_PRICE_MESSAGE };
+
+export interface PublicQuoteAnalysis {
+  category: RepairCategory;
+  label: string;
+  confidence: number;
+  summary: string;
+  estimate: { label: string; message: string };
+  recommendedServices: string[];
+  usedAi: boolean;
+}
+
+const MONEY = /(?:\$|USD\s?)\s?\d|\d[\d,.]*\s?(?:dollars|bucks|usd)\b/i;
+
+/** Drop any sentence that mentions money; never returns a dollar amount. */
+export function stripMoney(text: string): string {
+  const kept = (text || "")
+    .split(/(?<=[.!?])\s+/)
+    .filter((sentence) => !MONEY.test(sentence) && !/\b(range|pricing|price)\b/i.test(sentence));
+  return kept.join(" ").trim();
+}
+
+/** Customer-facing view of an analysis: no low/high numbers, no money in the summary. */
+export function publicQuoteAnalysis(analysis: QuoteAnalysis): PublicQuoteAnalysis {
+  return {
+    category: analysis.category,
+    label: analysis.label,
+    confidence: analysis.confidence,
+    summary: stripMoney(analysis.summary) || `Categorized as ${analysis.label}.`,
+    estimate: { label: analysis.label, message: QUOTE_PRICE_MESSAGE },
+    recommendedServices: analysis.recommendedServices,
+    usedAi: analysis.usedAi,
+  };
+}

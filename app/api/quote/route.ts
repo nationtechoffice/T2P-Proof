@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { AiImagePart } from "@/lib/ai";
 import { buildLeadMailto, sendLeadEmail } from "@/lib/email";
-import { analyzeQuoteRequest } from "@/lib/quote-estimates";
+import { analyzeQuoteRequest, publicQuoteAnalysis } from "@/lib/quote-estimates";
 import { siteConfig } from "@/lib/site-config";
 
 export const runtime = "nodejs";
@@ -102,16 +102,10 @@ export async function POST(request: Request) {
       emailTo: mail.to,
       emailVia: mail.via,
       emailError: mail.error,
-      mailto: mail.ok ? undefined : buildLeadMailto(leadPayload),
-      analysis: {
-        category: analysis.category,
-        label: analysis.label,
-        confidence: analysis.confidence,
-        summary: analysis.summary,
-        estimate: analysis.estimate,
-        recommendedServices: analysis.recommendedServices,
-        usedAi: analysis.usedAi,
-      },
+      mailto: mail.ok
+        ? undefined
+        : buildLeadMailto({ ...leadPayload, estimateLow: undefined, estimateHigh: undefined, summary: publicQuoteAnalysis(analysis).summary }),
+      analysis: publicQuoteAnalysis(analysis),
       callNow: {
         phone: siteConfig.phone,
         tel: siteConfig.phoneTel,
