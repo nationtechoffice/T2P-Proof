@@ -7,7 +7,7 @@ import { MapPin } from "lucide-react";
 const coverageHubs = [
   {
     city: "Tampa",
-    blurb: "Our local crew serves Hillsborough neighborhoods.",
+    blurb: "Westchase HQ dispatch across Hillsborough neighborhoods.",
     href: "/locations/tampa",
   },
   {

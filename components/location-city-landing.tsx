@@ -188,7 +188,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               ) : null}
               {location.slug === "westchase-fl" ? (
                 <p>
-                  Our local crew serves Westchase kitchens and baths.{" "}
+                  Westchase kitchens and baths are a short drive from headquarters.{" "}
                   <Link href="/services/tile-installation" className="font-semibold text-[hsl(var(--primary))] hover:underline">
                     Tile installation and replacement in Tampa and Westchase
                   </Link>{" "}
@@ -197,7 +197,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               ) : null}
               {location.slug === "westchase-fl" ? (
                 <p>
-                  Our local crew handles flat-pack deliveries and room moves.{" "}
+                  Flat-pack deliveries and room moves are a short drive from headquarters.{" "}
                   <Link href="/services/furniture-assembly" className="font-semibold text-[hsl(var(--primary))] hover:underline">
                     Furniture assembly and rearrangement in Tampa and Westchase
                   </Link>{" "}
@@ -206,7 +206,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               ) : null}
               {location.slug === "westchase-fl" ? (
                 <p>
-                  Our local crew handles rooms of click-lock plank and damaged sections.{" "}
+                  Rooms of click-lock plank and damaged sections are a short drive from headquarters.{" "}
                   <Link href="/services/flooring-installation" className="font-semibold text-[hsl(var(--primary))] hover:underline">
                     Flooring installation and repair in Tampa and Westchase
                   </Link>{" "}
@@ -215,7 +215,7 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
               ) : null}
               {location.slug === "westchase-fl" ? (
                 <p>
-                  Our local crew handles storm-clogged runs and loose downspouts.{" "}
+                  Storm-clogged runs and loose downspouts are a short drive from headquarters.{" "}
                   <Link href="/services/gutter-installation" className="font-semibold text-[hsl(var(--primary))] hover:underline">
                     Gutter installation, repair, and cleaning in Tampa and Westchase
                   </Link>{" "}
@@ -253,7 +253,9 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
                       </Link>
                     </span>
                   ))}
-                  {CREW_OVERRIDE_CITIES.has(location.slug)
+                  {location.slug === "westchase-fl"
+                    ? ". Those pages are service areas from the same Westchase headquarters."
+                    : CREW_OVERRIDE_CITIES.has(location.slug)
                     ? ". Our local crew serves those cities too."
                     : ". Those pages are service areas from the same Westchase headquarters."}
                 </p>
@@ -349,7 +351,9 @@ export function LocationCityLanding({ location }: { location: TargetLocation }) 
             </ul>
             <h2 className="mt-10 mb-3 text-2xl font-bold">{location.city} neighborhoods we visit</h2>
             <p className="mb-3 text-sm text-[hsl(var(--muted-foreground))]">
-              {CREW_OVERRIDE_CITIES.has(location.slug)
+              {location.slug === "westchase-fl"
+                ? "Dispatched from our Westchase headquarters."
+                : CREW_OVERRIDE_CITIES.has(location.slug)
                 ? `Our local crew serves ${location.city}.`
                 : "Dispatched from our only Tampa / Westchase headquarters."}
             </p>
