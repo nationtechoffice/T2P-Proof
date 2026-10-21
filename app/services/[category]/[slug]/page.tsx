@@ -21,6 +21,14 @@ import { startingPriceFor } from "@/lib/starting-prices";
 
 /** Subpages that link the drywall cost guide (add-only). */
 const DRYWALL_GUIDE_PAGES = new Set(["handyman/drywall-installation", "painting/drywall-painting"]);
+/** Subpages that link the handyman license guide (add-only). */
+const LICENSE_GUIDE_PAGES = new Set([
+  "handyman/plumbing-fixture-installation",
+  "handyman/repair-water-fixtures",
+  "handyman/fan-installation",
+  "handyman/fan-repair",
+  "handyman/general-repairs",
+]);
 
 export function generateStaticParams() {
   return getAllServiceSlugs();
@@ -318,6 +326,7 @@ export default async function ServicePage({
       <FAQSection faqs={faqs} title={`${service.name} FAQ`} />
       {service.category === "fence" ? <GuideLinks pageKey="fence" /> : null}
       {DRYWALL_GUIDE_PAGES.has(`${service.category}/${service.slug}`) ? <GuideLinks pageKey="drywall-guide" /> : null}
+      {LICENSE_GUIDE_PAGES.has(`${service.category}/${service.slug}`) ? <GuideLinks pageKey="license-guide" /> : null}
       <MoreServiceLinks path={`/services/${category}/${slug}`} />
       <CTASection title={`Ready for ${service.name}?`} />
     </>
