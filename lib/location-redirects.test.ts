@@ -60,9 +60,18 @@ test("config redirects keep legacy rules and do not loop or collide", async () =
     throw new Error(`too many hops from ${path}`);
   }
 
+  // proxy.ts answers these with a single 301 (trailing slash included), so config must not 308 them first.
+  const proxyHandled = new Set(["/locations/clearwater-fl", "/locations/st-petersburg-fl"]);
+
   for (const location of targetLocations) {
     const canonical = canonicalLocationPath(location.slug);
     const alternate = canonicalLocationPath(alternateLocationSlug(location.slug));
+    if (proxyHandled.has(alternate)) {
+      assert.equal(bySource.has(alternate), false);
+      assert.equal(bySource.has(`${alternate}/`), false);
+      assert.equal(bySource.has(canonical), false);
+      continue;
+    }
     assert.equal(follow(alternate), canonical);
     assert.equal(follow(`${alternate}/`), canonical);
     assert.equal(follow(canonical), canonical);

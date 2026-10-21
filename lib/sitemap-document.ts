@@ -6,6 +6,7 @@ import { siteConfig } from "./site-config";
 import { workPhotos } from "./work-showcase";
 import { galleryForPath } from "./service-galleries";
 import { recentWorkPhotos } from "./recent-work";
+import sitemapLastmod from "./sitemap-lastmod.json";
 
 const CHANGE_FREQUENCIES = new Set([
   "always",
@@ -128,25 +129,40 @@ function safeUrls(): string[] {
  * In-memory sitemap entries. No network. One bad URL or image is skipped
  * so the route can still return 200 with the rest of the canonical set.
  */
-export function buildSitemapEntries(now = new Date()): MetadataRoute.Sitemap {
-  const lastModified = Number.isNaN(now.getTime()) ? new Date() : now;
+/**
+ * Per-URL lastmod: git date of the page's own source files (scripts/sitemap-lastmod.ts).
+ * A URL missing from the map gets no lastmod rather than the build time.
+ */
+function lastModifiedFor(url: string): string | undefined {
+  let path = url;
+  try {
+    path = new URL(url).pathname.replace(/\/$/, "") || "/";
+  } catch {
+    return undefined;
+  }
+  return (sitemapLastmod as Record<string, string>)[path];
+}
+
+export function buildSitemapEntries(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   for (const url of safeUrls()) {
     try {
       const images = imagesForUrl(url);
+      const lastModified = lastModifiedFor(url);
       entries.push({
         url,
-        lastModified,
+        ...(lastModified ? { lastModified } : {}),
         changeFrequency: changeFrequencyFor(url),
         priority: priorityFor(url),
         ...(images.length > 0 ? { images } : {}),
       });
     } catch (error) {
       console.error("[sitemap] skipped URL", url, error);
+      const lastModified = lastModifiedFor(url);
       entries.push({
         url,
-        lastModified,
+        ...(lastModified ? { lastModified } : {}),
         changeFrequency: "weekly",
         priority: priorityFor(url),
       });
@@ -156,7 +172,6 @@ export function buildSitemapEntries(now = new Date()): MetadataRoute.Sitemap {
   if (entries.length === 0) {
     entries.push({
       url: siteConfig.url,
-      lastModified,
       changeFrequency: "weekly",
       priority: 1,
     });
