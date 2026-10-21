@@ -71,7 +71,28 @@ const FURNITURE_ALIAS_REDIRECTS: Record<string, string> = {
   "/services/furniture-moving-help": "/services/furniture-assembly",
 };
 
+/** Retired -fl location URLs: one 301 hop to the live hub, trailing-slash form included. */
+const RETIRED_LOCATION_REDIRECTS: Record<string, string> = {
+  "/locations/clearwater-fl": "/locations/clearwater",
+  "/locations/clearwater-fl/": "/locations/clearwater",
+  "/locations/st-petersburg-fl": "/locations/st-petersburg",
+  "/locations/st-petersburg-fl/": "/locations/st-petersburg",
+};
+
 export function proxy(request: NextRequest) {
+  const retiredLocation = RETIRED_LOCATION_REDIRECTS[request.nextUrl.pathname];
+  if (retiredLocation) {
+    // Plain URL (not nextUrl.clone) so the original trailing slash is not re-added.
+    return NextResponse.redirect(new URL(retiredLocation + request.nextUrl.search, request.url), 301);
+  }
+
+  // Same behavior as Next's built-in trailing-slash redirect (disabled in next.config).
+  const { pathname } = request.nextUrl;
+  if (pathname.length > 1 && pathname.endsWith("/")) {
+    const stripped = pathname.replace(/\/+$/, "") || "/";
+    return NextResponse.redirect(new URL(stripped + request.nextUrl.search, request.url), 308);
+  }
+
   const gutterDestination = GUTTER_ALIAS_REDIRECTS[request.nextUrl.pathname];
   if (gutterDestination) {
     const url = request.nextUrl.clone();
@@ -110,6 +131,11 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
+    "/locations/clearwater-fl",
+    "/locations/clearwater-fl/",
+    "/locations/st-petersburg-fl",
+    "/locations/st-petersburg-fl/",
+    "/((?!_next/).+)/",
     "/services/tv-mounting",
     "/services/handyman/tv-mounting",
     "/services/fan-installation",

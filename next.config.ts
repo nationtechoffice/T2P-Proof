@@ -99,14 +99,22 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   trailingSlash: false,
-  skipTrailingSlashRedirect: false,
+  // proxy.ts strips trailing slashes (308) itself so retired -fl/ URLs can 301 in one hop.
+  skipTrailingSlashRedirect: true,
   images: {
     unoptimized: true,
   },
   async redirects() {
     // /locations/westchase permanently redirects to /locations/westchase-fl
     // because locationAlternateRedirects() sends each hub's other form to the live slug.
-    const generated = locationAlternateRedirects();
+    // Retired -fl forms of clearwater / st-petersburg are single-hop 301s in proxy.ts.
+    const proxyHandled = new Set([
+      "/locations/clearwater-fl",
+      "/locations/clearwater-fl/",
+      "/locations/st-petersburg-fl",
+      "/locations/st-petersburg-fl/",
+    ]);
+    const generated = locationAlternateRedirects().filter((r) => !proxyHandled.has(r.source));
     assertLocationRedirectsFit(legacyRedirects, generated);
     return [
       {
