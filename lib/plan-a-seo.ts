@@ -216,7 +216,7 @@ export const planAMeta: Record<string, { title: string; description: string }> =
     description: "Licensed & insured Town 'N' Country handyman for fans, fixture swaps, and drywall near Hillsborough Ave. Our crew serves Town 'N' Country daily. (656) 205-3185.",
   },
   "/locations/westchase-fl": {
-    title: "Handyman Westchase FL | Home Repairs | Handyman Pros FL",
+    title: "Handyman Westchase FL | Manitas Same-Day",
     description: "Handyman Pros FL is based in Westchase (33626). TV mounting from $89, drywall patch from $75, small jobs from $49. Licensed & insured. Call (656) 205-3185.",
   },
   "/locations/zephyrhills-fl": {
