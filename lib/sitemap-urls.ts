@@ -109,6 +109,7 @@ export function getAllSiteUrls(): string[] {
     `${baseUrl}/service-areas`,
     `${baseUrl}/locations`,
     `${baseUrl}/work`,
+    `${baseUrl}/reviews`,
     `${baseUrl}/locations/zephyrhills-fl`,
     `${baseUrl}/locations/odessa-fl`,
     `${baseUrl}/locations/south-tampa`,
@@ -157,7 +158,7 @@ export function sitemapPriority(url: string): number {
   ) {
     return 0.95;
   }
-  if (url.endsWith("/work")) return 0.9;
+  if (url.endsWith("/work") || url.endsWith("/reviews")) return 0.9;
   if (url.includes("/locations/")) return 0.9;
   if (
     url.endsWith("/services/tv-wall-mounting") ||

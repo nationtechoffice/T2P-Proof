@@ -83,12 +83,14 @@ export function Footer() {
             </ul>
             <h3 className="mb-4 mt-8 text-sm font-bold uppercase tracking-wider text-white">Company</h3>
             <ul className="space-y-2 text-sm">
+              <li><Link href="/work" className="hover:text-[hsl(var(--accent))]">Gallery</Link></li>
+              <li><Link href="/reviews" className="hover:text-[hsl(var(--accent))]">Reviews</Link></li>
+              <li><Link href="/service-areas" className="hover:text-[hsl(var(--accent))]">Service Areas</Link></li>
+              <li><Link href="/contact" className="hover:text-[hsl(var(--accent))]">Contact</Link></li>
               <li><Link href="/about" className="hover:text-[hsl(var(--accent))]">About Us</Link></li>
               <li><Link href="/work" className="hover:text-[hsl(var(--accent))]">Work Photos</Link></li>
               <li><Link href="/blog" className="hover:text-[hsl(var(--accent))]">Blog &amp; Tips</Link></li>
-              <li><Link href="/contact" className="hover:text-[hsl(var(--accent))]">Contact Us</Link></li>
               <li><Link href="/locations" className="hover:text-[hsl(var(--accent))]">Tampa Bay Locations</Link></li>
-              <li><Link href="/service-areas" className="hover:text-[hsl(var(--accent))]">All Service Areas</Link></li>
               <li><Link href="/locations/westchase-fl" className="hover:text-[hsl(var(--accent))]">Westchase</Link></li>
               <li>
                 <a

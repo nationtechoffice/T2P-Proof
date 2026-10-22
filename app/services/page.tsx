@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
+import { GoogleReviews } from "@/components/google-reviews";
 import { allServices, categoryMeta } from "@/lib/services";
 import { coreServices, targetLocations } from "@/lib/programmatic";
 import { primaryServiceHubLinks } from "@/lib/service-hub";
@@ -178,6 +179,7 @@ export default function ServicesPage() {
         </div>
       </section>
       <MoreServiceLinks path="/services" />
+      <GoogleReviews variant="compact" />
       <CTASection />
     </>
   );

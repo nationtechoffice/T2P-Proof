@@ -243,7 +243,7 @@ export const expansionLocations: TargetLocation[] = [
     neighborhoods: ["Lutz Lake Fern", "Van Dyke", "Dale Mabry north", "Land O' Lakes border"],
     intro:
       "Need a Lutz home repair expert? Handyman Pros FL is the local handyman 33549 residents trust for tile patch work, indoor fixes, and careful outdoor repairs.",
-    directAnswer: "Handyman Pros FL serves Hillsborough-side Lutz, FL, including ZIPs 33548 and 33549, from its Westchase headquarters, handling tile repair, ceiling fan installs and small jobs, each with a free estimate.",
+    directAnswer: "Handyman Pros FL serves Hillsborough-side Lutz, FL, including ZIPs 33548 and 33549. Our local crew serves Lutz, handling tile repair, ceiling fan installs and small jobs, each with a free estimate.",
     paragraphs: [
       "A Lutz home repair expert should understand larger lots, lake-adjacent humidity, and the mix of custom and production homes around ZIP 33549. Handyman Pros FL serves Lutz as a true local handyman 33549 option — close enough for responsive scheduling, skilled enough for clean finish work that lasts.",
       "Tile patch requests often follow a cracked floor tile, a chipped shower surround, or a remodel that left an unfinished edge. We assess substrate condition, match size and layout when materials are available, and complete careful cuts so the repair blends rather than shouts. For specialty porcelain or unavailable discontinued tile, we discuss realistic options before starting.",
@@ -513,7 +513,7 @@ export const expansionLocations: TargetLocation[] = [
     neighborhoods: ["56th Street", "Busch Boulevard", "Temple Terrace Golf", "USF border"],
     intro:
       "Handyman Pros FL is the local contractor Temple Terrace homeowners call for dependable Temple Terrace home repair, punch-list fixes, and same-day help when you search handyman near me.",
-    directAnswer: "Handyman Pros FL serves Temple Terrace, FL (ZIPs 33617 and 33637) from its Westchase headquarters, fixing drywall, light fixtures, ceiling fans and sticking doors in older and mid-century homes near 56th Street and USF. Temple Terrace is its own city, so permits come from the City of Temple Terrace, and we tell you up front if your job needs one.",
+    directAnswer: "Handyman Pros FL serves Temple Terrace, FL (ZIPs 33617 and 33637). Our local crew serves Temple Terrace, fixing drywall, light fixtures, ceiling fans and sticking doors in older and mid-century homes near 56th Street and USF. Temple Terrace is its own city, so permits come from the City of Temple Terrace, and we tell you up front if your job needs one.",
     paragraphs: [
       "Temple Terrace home repair requests rarely wait for a perfect weekend. Between university-area rentals, established family homes, and busy schedules along Busch Boulevard corridors, residents need a local contractor who answers the phone and arrives prepared. Our local crew serves Temple Terrace.",
       "When neighbors search handyman near me, they usually want more than a vague callback. They want someone who can assess a sticking door, patch drywall after a remodel, hang blinds level, and tighten loose stair rails in one productive visit. Our team treats Temple Terrace properties with the same care we give Westchase and Carrollwood homes — shoe covers indoors, dust control during sanding, and a walkthrough before we leave.",

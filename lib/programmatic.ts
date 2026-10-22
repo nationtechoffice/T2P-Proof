@@ -4,6 +4,7 @@ import { serviceDescription, serviceTitle } from "./instant-estimate";
 import { expansionLocations } from "./tampa-bay-expansion";
 import { gbpCityHubs } from "./gbp-city-hubs";
 import { tampaLocationSpots } from "./tampa-neighborhoods";
+import { googleBusiness } from "./google-business";
 
 export const schemaAreaServed = [
     "Tampa, FL",
@@ -66,7 +67,7 @@ export const schemaServicesOffered = [
 
 export const schemaSameAs = [
   "https://www.instagram.com/handymanprosfl/",
-  "https://maps.app.goo.gl/XhDwjzgTujJK7JyT9",
+  googleBusiness.mapsReviewsUrl,
 ] as const;
 
 export const schemaPhone = "+1-656-205-3185";

@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { FAQSection } from "@/components/faq-section";
 import { HqDispatch } from "@/components/hq-dispatch";
 import { GoogleListingCta } from "@/components/google-listing-cta";
+import { GoogleReviews } from "@/components/google-reviews";
 import { QuoteForm } from "@/components/quote-form";
 import { TrustBadges } from "@/components/trust-badges";
 import { PhoneEstimateCta } from "@/components/phone-estimate-cta";
@@ -304,6 +305,7 @@ export function CoreServiceLanding({ service }: { service: CoreService }) {
       <GuideLinks pageKey={service.slug} />
       <MoreServiceLinks path={`/services/${service.slug}`} />
       <FAQSection faqs={service.faqs} title={`${service.name} in Tampa FAQ`} />
+      <GoogleReviews variant="compact" />
     </>
   );
 }

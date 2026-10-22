@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CoreServiceLanding } from "@/components/core-service-landing";
 import { CTASection } from "@/components/cta-section";
+import { GoogleReviews } from "@/components/google-reviews";
 import { FAQSection } from "@/components/faq-section";
 import { categoryMeta, getServicesByCategory } from "@/lib/services";
 import { coreServices, getCoreService, serviceMetaDescription, serviceMetaTitle } from "@/lib/programmatic";
@@ -371,6 +372,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       </section>
       <GuideLinks pageKey={cat} />
       <MoreServiceLinks path={`/services/${cat}`} />
+      <GoogleReviews variant="compact" />
       <CTASection title={`Need ${meta.name}?`} />
     </>
   );

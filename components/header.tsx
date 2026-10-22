@@ -34,6 +34,8 @@ const navLinks: NavLink[] = [
   { href: "/services", label: "Services", dropdown: "services" },
   { href: "/locations", label: "Locations", dropdown: "areas" },
   { href: "/work", label: "Work Photos" },
+  { href: "/work", label: "Gallery" },
+  { href: "/reviews", label: "Reviews" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -141,7 +143,7 @@ export function Header() {
             {navLinks.map((link) =>
               link.dropdown ? (
                 <div
-                  key={link.href}
+                  key={link.label}
                   className="relative"
                   onMouseEnter={() => setDesktopDropdown(link.dropdown!)}
                   onMouseLeave={() => setDesktopDropdown(null)}
@@ -162,7 +164,7 @@ export function Header() {
                 </div>
               ) : (
                 <Link
-                  key={link.href}
+                  key={link.label}
                   href={link.href}
                   className="text-sm font-medium text-[hsl(var(--foreground))] transition-colors hover:text-[hsl(var(--accent))]"
                 >
@@ -201,7 +203,7 @@ export function Header() {
           <div className="border-t border-[hsl(var(--border))] px-4 py-3">
             {navLinks.map((link) =>
               link.dropdown ? (
-                <div key={link.href} className="border-b border-[hsl(var(--border))]">
+                <div key={link.label} className="border-b border-[hsl(var(--border))]">
                   <button
                     type="button"
                     className="flex w-full items-center justify-between py-3 text-left text-base font-semibold"
@@ -235,7 +237,7 @@ export function Header() {
                 </div>
               ) : (
                 <Link
-                  key={link.href}
+                  key={link.label}
                   href={link.href}
                   className="block border-b border-[hsl(var(--border))] py-3 text-base font-semibold"
                   onClick={closeMobile}

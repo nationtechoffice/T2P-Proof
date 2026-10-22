@@ -34,7 +34,7 @@ export function localBusinessSchema() {
 
   return {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "Organization"],
     "@id": `${siteConfig.url}/#organization`,
     name: "Handyman Pros FL",
     legalName: siteConfig.legalName,
@@ -84,7 +84,6 @@ export function localBusinessSchema() {
       closes: h.closes,
     })),
     openingHours: "Mo-Su 00:00-23:59",
-    priceRange: "$$",
     serviceType: [...schemaServicesOffered],
     paymentAccepted: "Cash, Credit Card, Check",
     currenciesAccepted: "USD",
@@ -124,7 +123,7 @@ export function localBusinessSchema() {
 export function serviceCatalogSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "Organization"],
     "@id": `${siteConfig.url}/#organization`,
     name: "Handyman Pros FL",
     url: schemaUrl,

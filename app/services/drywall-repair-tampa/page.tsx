@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
+import { GoogleReviews } from "@/components/google-reviews";
 import { FAQSection } from "@/components/faq-section";
 import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema, speakableSchema } from "@/lib/json-ld";
 import { drywallTampaFaqs } from "@/lib/local-faqs";
@@ -151,6 +152,7 @@ export default function DrywallRepairTampaPage() {
       </article>
 
       <FAQSection faqs={drywallTampaFaqs} title="Drywall Repair Tampa FAQ" />
+      <GoogleReviews variant="compact" />
       <CTASection
         title="Need a Drywall Patch in Tampa?"
         description="Call our wall repair contractor team for drywall patch Tampa jobs and ceiling texture repair — free estimates, open 24/7."

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
+import { GoogleReviews } from "@/components/google-reviews";
 import { FAQSection } from "@/components/faq-section";
 import { HqDispatch } from "@/components/hq-dispatch";
 import { categoryMeta, getAllServiceSlugs, getRelatedServices, getService } from "@/lib/services";
@@ -328,6 +329,7 @@ export default async function ServicePage({
       {DRYWALL_GUIDE_PAGES.has(`${service.category}/${service.slug}`) ? <GuideLinks pageKey="drywall-guide" /> : null}
       {LICENSE_GUIDE_PAGES.has(`${service.category}/${service.slug}`) ? <GuideLinks pageKey="license-guide" /> : null}
       <MoreServiceLinks path={`/services/${category}/${slug}`} />
+      <GoogleReviews variant="compact" />
       <CTASection title={`Ready for ${service.name}?`} />
     </>
   );

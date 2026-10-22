@@ -15,6 +15,7 @@ import {
 import { siteConfig } from "@/lib/site-config";
 import { ServicePhotoGallery } from "@/components/service-photo-gallery";
 import { galleryForPage } from "@/lib/service-galleries";
+import { GoogleReviews } from "@/components/google-reviews";
 import { Phone } from "lucide-react";
 
 export function BriefServiceLanding({ page }: { page: BriefServicePage }) {
@@ -177,6 +178,7 @@ export function BriefServiceLanding({ page }: { page: BriefServicePage }) {
       </article>
       <GuideLinks pageKey={page.slug} />
       <FAQSection faqs={page.faqs} title="Questions" />
+      <GoogleReviews variant="compact" />
       <CTASection />
     </>
   );
