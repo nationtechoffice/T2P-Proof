@@ -393,6 +393,48 @@ export const optimizedWorkStills = {
     width: 1200,
     height: 1600,
   },
+  "/images/work/roof-gutter-sealing-1.webp": {
+    webp: "/images/work/roof-gutter-sealing-1.webp",
+    avif: "/images/work/roof-gutter-sealing-1.avif",
+    width: 1200,
+    height: 1600,
+  },
+  "/images/work/flat-roof-gutter-repair-2.webp": {
+    webp: "/images/work/flat-roof-gutter-repair-2.webp",
+    avif: "/images/work/flat-roof-gutter-repair-2.avif",
+    width: 1600,
+    height: 1200,
+  },
+  "/images/work/metallic-epoxy-laundry-floor.webp": {
+    webp: "/images/work/metallic-epoxy-laundry-floor.webp",
+    avif: "/images/work/metallic-epoxy-laundry-floor.avif",
+    width: 1200,
+    height: 1600,
+  },
+  "/images/work/metallic-epoxy-floor-coffee-room.webp": {
+    webp: "/images/work/metallic-epoxy-floor-coffee-room.webp",
+    avif: "/images/work/metallic-epoxy-floor-coffee-room.avif",
+    width: 1200,
+    height: 1600,
+  },
+  "/images/work/marble-tile-shower-glass-block.webp": {
+    webp: "/images/work/marble-tile-shower-glass-block.webp",
+    avif: "/images/work/marble-tile-shower-glass-block.avif",
+    width: 1200,
+    height: 1600,
+  },
+  "/images/work/hot-tub-repair-working.webp": {
+    webp: "/images/work/hot-tub-repair-working.webp",
+    avif: "/images/work/hot-tub-repair-working.avif",
+    width: 1200,
+    height: 1600,
+  },
+  "/images/work/hot-tub-repair-after.webp": {
+    webp: "/images/work/hot-tub-repair-after.webp",
+    avif: "/images/work/hot-tub-repair-after.avif",
+    width: 1200,
+    height: 1600,
+  },
 } as const;
 
 export function optimizedStill(src: string) {

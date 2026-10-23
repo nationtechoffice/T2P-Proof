@@ -102,6 +102,11 @@ const fenceGallery: ServicePhoto[] = [
 
 const tileGallery: ServicePhoto[] = [
   {
+    src: "/images/work/marble-tile-shower-glass-block.webp",
+    alt: "Marble tile shower with a glass block accent wall in a Tampa Bay bathroom",
+    portrait: true,
+  },
+  {
     src: "/images/work/bathroom-tile-grout.jpg",
     alt: "Bathroom wall tile grouting by a licensed handyman in Tampa",
   },
@@ -140,6 +145,16 @@ const plumbingGallery: ServicePhoto[] = [
 
 const flooringGallery: ServicePhoto[] = [
   {
+    src: "/images/work/metallic-epoxy-laundry-floor.webp",
+    alt: "Metallic epoxy floor finished in a laundry room in Tampa Bay",
+    portrait: true,
+  },
+  {
+    src: "/images/work/metallic-epoxy-floor-coffee-room.webp",
+    alt: "Metallic epoxy floor coating applied in a coffee room in Tampa Bay",
+    portrait: true,
+  },
+  {
     src: "/images/work/accent-wall-flooring.jpg",
     alt: "Gray LVP flooring installed by a licensed handyman in a Tampa home office",
   },
@@ -161,6 +176,15 @@ const gutterGallery: ServicePhoto[] = [
   {
     src: "/images/work/exterior-trim-gutters.jpg",
     alt: "Gutter downspout and soffit line on a Tampa Bay home after a licensed handyman visit",
+  },
+  {
+    src: "/images/work/roof-gutter-sealing-1.webp",
+    alt: "Roof and gutter sealing along a flat roof edge in Tampa Bay",
+    portrait: true,
+  },
+  {
+    src: "/images/work/flat-roof-gutter-repair-2.webp",
+    alt: "Flat roof gutter section sealed and repaired in Tampa Bay",
   },
 ];
 
@@ -187,6 +211,16 @@ const paintingGallery: ServicePhoto[] = [
 ];
 
 const generalRepairsGallery: ServicePhoto[] = [
+  {
+    src: "/images/work/hot-tub-repair-working.webp",
+    alt: "Hot tub shell repair in progress in a Tampa Bay backyard",
+    portrait: true,
+  },
+  {
+    src: "/images/work/hot-tub-repair-after.webp",
+    alt: "Hot tub shell repaired and ready for use in a Tampa Bay backyard",
+    portrait: true,
+  },
   ...homeRepairJobPhotos.map((photo) => ({
     src: photo.jpg as string,
     alt: photo.alt as string,
@@ -238,6 +272,15 @@ const sameDayGallery: ServicePhoto[] = [
 ];
 
 const roofGallery: ServicePhoto[] = [
+  {
+    src: "/images/work/roof-gutter-sealing-1.webp",
+    alt: "Roof and gutter sealing along a flat roof edge in Tampa Bay",
+    portrait: true,
+  },
+  {
+    src: "/images/work/flat-roof-gutter-repair-2.webp",
+    alt: "Flat roof gutter section sealed and repaired in Tampa Bay",
+  },
   {
     src: "/images/work/handyman-pros-florida-tampa-bay-roof-leak-patch-vent-sealing.webp",
     alt: "Handyman Pros Florida crew member sealing around a roof vent on a clay barrel tile roof to patch a leak in the Tampa Bay area",
