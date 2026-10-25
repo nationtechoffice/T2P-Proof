@@ -1,4 +1,5 @@
 import { siteConfig } from "./site-config";
+import { seoPlanAnswerPages } from "./seo-plan/answers";
 
 export type MarketingPage = {
   path: string;
@@ -44,7 +45,7 @@ const spanishFaqs = (): { question: string; answer: string }[] => [
   },
 ];
 
-function estimateFaqs(prefix = ""): { question: string; answer: string }[] {
+export function estimateFaqs(prefix = ""): { question: string; answer: string }[] {
   return [
     {
       question: `${prefix}What does it cost?`,
@@ -131,6 +132,7 @@ export const freeEstimatePage: MarketingPage = {
 };
 
 const answerPages: MarketingPage[] = [
+  ...seoPlanAnswerPages,
   {
     path: "/answers/what-does-a-handyman-do",
     hubPath: "/answers",

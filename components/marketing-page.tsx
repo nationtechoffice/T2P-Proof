@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { FAQSection } from "@/components/faq-section";
 import { GoogleReviews } from "@/components/google-reviews";
-import { JsonLd, breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/json-ld";
+import { JsonLd, articleSchema, breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/json-ld";
 import type { MarketingPage } from "@/lib/marketing-pages";
 import { briefServiceAreaGroups, briefCountiesIntro } from "@/lib/brief-service-areas";
 import { formatFullAddress } from "@/lib/local-seo";
@@ -21,20 +21,37 @@ export function MarketingPageView({ page }: { page: MarketingPage }) {
     { name: page.h1, url: pageUrl },
   ];
 
+  const isAnswerArticle = page.path.startsWith("/answers/") && page.path !== "/answers";
+  const today = "2026-10-25";
+
   return (
     <>
       <JsonLd
         data={[
           breadcrumbSchema(breadcrumbs),
-          serviceSchema({
-            name: page.schemaServiceName ?? page.h1,
-            description: page.metaDescription,
-            url: pageUrl,
-            category: page.schemaCategory ?? "Handyman",
-            serviceType: page.schemaServiceType ?? page.schemaServiceName ?? page.h1,
-            areaName: page.areaName ?? "Tampa Bay, FL",
-            offer: { description: "Free estimate, call or text for a price" },
-          }),
+          ...(isAnswerArticle
+            ? [
+                articleSchema({
+                  title: page.metaTitle,
+                  description: page.metaDescription,
+                  url: pageUrl,
+                  publishedAt: today,
+                  updatedAt: today,
+                  author: siteConfig.legalName,
+                  image: `${siteConfig.url}/images/handyman-pros-florida-og.png`,
+                }),
+              ]
+            : [
+                serviceSchema({
+                  name: page.schemaServiceName ?? page.h1,
+                  description: page.metaDescription,
+                  url: pageUrl,
+                  category: page.schemaCategory ?? "Handyman",
+                  serviceType: page.schemaServiceType ?? page.schemaServiceName ?? page.h1,
+                  areaName: page.areaName ?? "Tampa Bay, FL",
+                  offer: { description: "Free estimate, call or text for a price" },
+                }),
+              ]),
           faqSchema(page.faqs),
         ]}
       />
