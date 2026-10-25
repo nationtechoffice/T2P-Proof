@@ -1,4 +1,5 @@
 import { FREE_ESTIMATE_PRICE } from "./brief-service-areas";
+import { seoPlanBriefServices } from "./seo-plan/brief-services";
 
 export type BriefServicePage = {
   slug: string;
@@ -1839,6 +1840,7 @@ export const briefServicePages: BriefServicePage[] = [
         }
       ]
     },
+  ...seoPlanBriefServices,
 ];
 
 export const briefServiceSlugs = briefServicePages.map((p) => p.slug);
