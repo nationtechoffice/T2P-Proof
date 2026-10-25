@@ -358,6 +358,7 @@ export const seoPlanCityServicePages = [
   }),
   planCityService({
     citySlug: "westchase",
+    hubPath: "/locations/westchase-fl",
     serviceSlug: "gutter-and-siding-repair",
     cityName: "Westchase",
     cityLabel: "Westchase, Tampa, FL",

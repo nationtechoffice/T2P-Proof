@@ -20,9 +20,11 @@ export function planCityService(input: {
   zips?: string;
   nearby?: [string, string][];
   related?: [string, string][];
+  /** When the city URL slug differs from the location hub (e.g. westchase → westchase-fl). */
+  hubPath?: string;
 }): CityServicePageData {
   const path = `/locations/${input.citySlug}/${input.serviceSlug}`;
-  const hubPath = `/locations/${input.citySlug}`;
+  const hubPath = input.hubPath ?? `/locations/${input.citySlug}`;
   const url = `${siteConfig.url}${path}`;
 
   return {

@@ -8,6 +8,7 @@ const L = {
   pressure: { href: "/services/pressure-washing", label: "Pressure washing" },
   soffit: { href: "/services/soffit-fascia-repair", label: "Soffit, fascia and wood rot repair" },
   commercial: { href: "/services/commercial-handyman", label: "Commercial handyman services" },
+  gutterRepair: { href: "/services/gutter-repair", label: "Gutter repair" },
 };
 
 const linksByPath: Record<string, { href: string; label: string }[]> = {
@@ -18,9 +19,9 @@ const linksByPath: Record<string, { href: string; label: string }[]> = {
   "/services/painting": [L.popcorn],
   "/services/handyman/exterior-painting": [L.pressure],
   "/services/handyman/cleaning": [L.pressure],
-  "/services/gutter-installation": [L.soffit],
+  "/services/gutter-installation": [L.soffit, L.gutterRepair],
   "/services/handyman/roof-repair": [L.soffit],
-  "/services": [L.commercial],
+  "/services": [L.commercial, L.gutterRepair],
 };
 
 export function MoreServiceLinks({ path }: { path: string }) {
