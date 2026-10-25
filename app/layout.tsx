@@ -4,6 +4,7 @@ import { DM_Sans, Outfit } from "next/font/google";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { StickyCallBar } from "@/components/sticky-call-bar";
+import { GaEventListeners } from "@/components/ga-event-listeners";
 import { AnimatedBackground } from "@/components/animated-background";
 import { JsonLd, localBusinessSchema, websiteSchema } from "@/lib/json-ld";
 import { homeTitle, homeDescription } from "@/lib/instant-estimate";
@@ -107,6 +108,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main-content">{children}</main>
         <Footer />
         <StickyCallBar />
+        <GaEventListeners />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-6797FM13JW"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6797FM13JW');
+          `}
+        </Script>
         <Script src="/_vercel/insights/script.js" strategy="lazyOnload" />
       </body>
     </html>
