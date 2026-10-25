@@ -6,6 +6,7 @@ import { allLocationLinks } from "./location-silos";
 import { coreServices, targetLocations } from "./programmatic";
 import { briefServicePages } from "./brief-service-pages";
 import { batch1MarketingPaths } from "./marketing-pages";
+import { seoPlanPaths } from "./seo-plan/paths";
 import { locationAlternatePaths } from "./location-redirects";
 
 /** Legacy paths that 301 to a canonical URL — never list these in the sitemap. */
@@ -42,7 +43,6 @@ const REDIRECTED_PATHS = [
   "/services/handyman/replace-flooring",
   "/services/handyman/flooring-replacement",
   "/services/handyman/gutter-installation",
-  "/services/gutter-repair",
   "/services/gutter-cleaning",
   "/services/install-gutters",
   "/services/gutter-install",
@@ -130,6 +130,7 @@ export function getAllSiteUrls(): string[] {
     `${baseUrl}/locations/seffner`,
     `${baseUrl}/locations/ruskin-sun-city-center`,
     ...cityServicePages.map((p) => `${baseUrl}${p.path}`),
+    ...seoPlanPaths.map((p) => `${baseUrl}${p}`),
   ];
 
   const coreServicePages = coreServices.map((service) => `${baseUrl}/services/${service.slug}`);

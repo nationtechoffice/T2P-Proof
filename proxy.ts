@@ -42,7 +42,6 @@ const PAINTING_ALIAS_REDIRECTS: Record<string, string> = {
 const GUTTER_CANONICAL = "/services/gutter-installation";
 const GUTTER_ALIAS_REDIRECTS: Record<string, string> = {
   "/services/handyman/gutter-installation": GUTTER_CANONICAL,
-  "/services/gutter-repair": GUTTER_CANONICAL,
   "/services/gutter-cleaning": GUTTER_CANONICAL,
   "/services/install-gutters": GUTTER_CANONICAL,
   "/services/gutter-install": GUTTER_CANONICAL,
@@ -157,7 +156,6 @@ export const config = {
     "/services/handyman/replace-flooring",
     "/services/handyman/flooring-replacement",
     "/services/handyman/gutter-installation",
-    "/services/gutter-repair",
     "/services/gutter-cleaning",
     "/services/install-gutters",
     "/services/gutter-install",

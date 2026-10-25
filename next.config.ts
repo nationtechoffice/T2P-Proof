@@ -58,7 +58,6 @@ const legacyRedirects = [
   { source: "/services/paint-indoors", destination: "/services/handyman/interior-painting", permanent: true as const },
   { source: "/services/paint-indoors/", destination: "/services/handyman/interior-painting", permanent: true as const },
   { source: "/services/handyman/gutter-installation", destination: "/services/gutter-installation", permanent: true as const },
-  { source: "/services/gutter-repair", destination: "/services/gutter-installation", permanent: true as const },
   { source: "/services/gutter-cleaning", destination: "/services/gutter-installation", permanent: true as const },
   { source: "/services/install-gutters", destination: "/services/gutter-installation", permanent: true as const },
   { source: "/services/gutter-install", destination: "/services/gutter-installation", permanent: true as const },

@@ -83,7 +83,14 @@ export function Footer() {
             </ul>
             <h3 className="mb-4 mt-8 text-sm font-bold uppercase tracking-wider text-white">Company</h3>
             <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/tampa-bay-handyman-directory" className="hover:text-[hsl(var(--accent))]">
+                  Directory
+                </Link>
+              </li>
               <li><Link href="/work" className="hover:text-[hsl(var(--accent))]">Gallery</Link></li>
+              <li><Link href="/projects/bathroom-plumbing-drywall-brandon" className="hover:text-[hsl(var(--accent))]">Projects</Link></li>
+              <li><Link href="/answers" className="hover:text-[hsl(var(--accent))]">Answers</Link></li>
               <li><Link href="/reviews" className="hover:text-[hsl(var(--accent))]">Reviews</Link></li>
               <li><Link href="/service-areas" className="hover:text-[hsl(var(--accent))]">Service Areas</Link></li>
               <li><Link href="/contact" className="hover:text-[hsl(var(--accent))]">Contact</Link></li>
