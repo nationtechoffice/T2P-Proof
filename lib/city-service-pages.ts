@@ -1,4 +1,6 @@
 // Generated from SEO & AEO Desk briefs 2026-10-19-hpf-*.md (wave 1 city-service pages).
+import { pressureWashingCityPages } from "./pressure-washing-city-pages";
+
 export type CityServiceSection = { h2: string; paras?: string[]; list?: string[]; after?: string[] };
 export type CityServicePageData = {
   path: string; citySlug: string; serviceSlug: string; title: string; description: string; h1: string;
@@ -2150,7 +2152,8 @@ export const cityServicePages: CityServicePageData[] = [
     ]
    }
   ]
- }
+ },
+ ...pressureWashingCityPages,
 ] as CityServicePageData[];
 
 export function getCityServicePage(city: string, service: string) {

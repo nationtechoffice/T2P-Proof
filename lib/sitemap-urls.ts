@@ -5,6 +5,7 @@ import { getAllBlogSlugs } from "./blog-posts";
 import { allLocationLinks } from "./location-silos";
 import { coreServices, targetLocations } from "./programmatic";
 import { briefServicePages } from "./brief-service-pages";
+import { batch1MarketingPaths } from "./marketing-pages";
 import { locationAlternatePaths } from "./location-redirects";
 
 /** Legacy paths that 301 to a canonical URL — never list these in the sitemap. */
@@ -110,6 +111,12 @@ export function getAllSiteUrls(): string[] {
     `${baseUrl}/locations`,
     `${baseUrl}/work`,
     `${baseUrl}/reviews`,
+    `${baseUrl}/free-estimate`,
+    `${baseUrl}/answers`,
+    `${baseUrl}/es`,
+    ...batch1MarketingPaths
+      .filter((p) => !["/free-estimate", "/answers", "/es"].includes(p))
+      .map((p) => `${baseUrl}${p}`),
     `${baseUrl}/locations/zephyrhills-fl`,
     `${baseUrl}/locations/odessa-fl`,
     `${baseUrl}/locations/south-tampa`,

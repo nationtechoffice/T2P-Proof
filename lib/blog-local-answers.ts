@@ -8,7 +8,7 @@ export const localAnswerPosts: BlogPost[] = [
     description:
       "Tampa handyman prices in 2026: hourly ranges, TV mounting, drywall patches, and how Handyman Pros FL quotes jobs. Call (656) 205-3185.",
     excerpt:
-      "Local competitors quote $75–$150/hour or half-day blocks. Here is how Tampa pricing actually breaks down in 2026.",
+      "Skip the guesswork — how Handyman Pros FL quotes handyman work in Tampa with free estimates and instant reply 24/7.",
     author: "Handyman Pros Florida Team",
     publishedAt: "2026-08-12",
     updatedAt: "2026-09-01",

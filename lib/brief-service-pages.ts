@@ -1437,6 +1437,191 @@ export const briefServicePages: BriefServicePage[] = [
       ]
     },
     {
+      slug: "pressure-washing-tampa",
+      name: "Pressure Washing Tampa Bay Guide",
+      h1: "Pressure Washing Tampa — Driveways, Pavers, Lanai & Soft Wash",
+      metaTitle: "Pressure Washing Tampa FL | Soft Wash & Driveways | Handyman Pros FL",
+      metaDescription:
+        "Tampa pressure washing: concrete driveways, pavers, pool decks, and soft wash for stucco and lanai screens. Insured crew — free estimate (656) 205-3185.",
+      keywords: [
+        "pressure washing Tampa",
+        "soft wash Tampa",
+        "driveway cleaning Tampa",
+        "lanai cleaning Tampa",
+        "paver cleaning Westchase",
+      ],
+      atGlance: {
+        price: FREE_ESTIMATE_PRICE,
+        typicalJob: "Driveway or lanai — often one visit; whole-home plus flatwork takes longer (no promise)",
+        whoFor: "Homeowners in Westchase 33626, South Tampa 33629, New Tampa 33647, and HOAs bundling flatwork",
+        insured: "Yes, insured crew",
+      },
+      intro:
+        "Tampa humidity grows mildew on north-facing stucco and algae on pool decks within weeks of a rinse. Our insured crew matches method to surface — pressure for concrete and pavers, soft wash for siding, stucco, and lanai screens.",
+      bodyParagraphs: [
+        "From Hyde Park bungalows to Westchase maintenance-free homes, we see the same pattern: shaded lanai floors turn green, driveway aprons collect tire marks, and stucco above gutters blackens. High pressure on those walls damages paint and forces water behind trim — soft wash with the right cleaner is the fix.",
+        "Concrete driveways in Carrollwood 33624 and Citrus Park benefit from a surface cleaner pass and targeted degrease at the garage. Pavers in New Tampa need controlled pressure so joint sand stays put; optional re-sand or seal is quoted separately after a free estimate.",
+        "Pool cages and lanai screens in Riverview and Brandon routes get low-pressure rinses so spline does not blow out. We pre-wet landscaping, cover outlets, and keep runoff away from storm drains when possible.",
+        "City-specific pages cover Brandon, Riverview, Lutz, and Clearwater with neighborhood notes and ZIP lists — same crew from 12021 Tuscany Bay Dr in Westchase.",
+        "Bundle pressure washing with fence brightening, exterior paint prep, or lanai screen repair to save a second trip. Call or text (656) 205-3185 — instant reply, 24/7.",
+      ],
+      steps: [
+        "Walk surfaces; note plants, screens, and paint condition",
+        "Pre-wet plants; protect outlets and doors",
+        "Concrete/pavers: surface cleaner and degrease as needed",
+        "Stucco, siding, screens: soft wash only",
+        "Final rinse; post-treat persistent mildew if needed",
+      ],
+      materials: ["Driveways", "Pavers and pool decks", "Lanai floors", "Stucco and vinyl (soft wash)", "Wood fences (low pressure)"],
+      safety: [
+        "Never high-pressure stucco or pool screens",
+        "Roof cleaning is soft wash from ladder-safe heights only",
+      ],
+      faqs: [
+        {
+          question: "How much does pressure washing cost in Tampa?",
+          answer: "We quote by surface type and size after photos or a walk-through. Free estimate, call or text for a price.",
+        },
+        {
+          question: "What is soft wash?",
+          answer: "Low pressure plus cleaning solution for stucco, siding, and lanai screens so surfaces are not etched or torn.",
+        },
+        {
+          question: "Do you serve South Tampa and Westchase?",
+          answer: "Yes — daily routes from our Westchase base include 33626, 33624, 33629, and 33647.",
+        },
+        {
+          question: "How fast does Handyman Pros FL reply?",
+          answer: "Instant reply, 24/7 — always within 5 minutes.",
+        },
+      ],
+      internalLinks: [
+        { href: "/locations/brandon/pressure-washing", label: "Pressure washing Brandon" },
+        { href: "/locations/riverview/pressure-washing", label: "Pressure washing Riverview" },
+        { href: "/locations/lutz/pressure-washing", label: "Pressure washing Lutz" },
+        { href: "/locations/clearwater/pressure-washing", label: "Pressure washing Clearwater" },
+        { href: "/services/pressure-washing", label: "General pressure washing service" },
+        { href: "/es/lavado-a-presion", label: "Lavado a presión (español)" },
+      ],
+      extraSections: [
+        {
+          heading: "Tampa neighborhoods we pressure wash most",
+          paragraphs: [
+            "Westchase and Citrus Park: HOA driveways and lanai before season.",
+            "South Tampa / Hyde Park 33606: soft wash on older stucco and brick paths.",
+            "New Tampa 33647: two-story stucco and long paver driveways.",
+            "Channelside condos: garage aprons and balcony floor rinse where access allows.",
+          ],
+        },
+      ],
+      gallerySlug: "pressure-washing",
+    },
+    {
+      slug: "sliding-glass-door-repair",
+      name: "Sliding Glass Door Repair",
+      h1: "Sliding Glass Door Repair in Tampa, FL",
+      metaTitle: "Sliding Glass Door Repair Tampa | Rollers & Tracks | Handyman Pros FL",
+      metaDescription:
+        "Sliding door rollers, tracks, locks, and alignment in Tampa Bay. Insured crew — free estimate. Call (656) 205-3185.",
+      keywords: [
+        "sliding glass door repair Tampa",
+        "sliding door rollers Tampa",
+        "patio door repair Tampa Bay",
+      ],
+      atGlance: {
+        price: FREE_ESTIMATE_PRICE,
+        typicalJob: "Roller and track service — often one visit (no promise)",
+        whoFor: "Homeowners with dragging lanai doors, worn rollers, or loose locks in Tampa Bay",
+        insured: "Yes, insured crew",
+      },
+      intro:
+        "Florida humidity swells door tracks and packs them with grit. Our insured crew adjusts rollers, cleans tracks, replaces worn hardware, and aligns sliding glass doors on lanais across Tampa Bay.",
+      bodyParagraphs: [
+        "Clearwater beach condos and Wesley Chapel lanai doors see salt and sand in the track — the panel drags until rollers flatten. We lift the sash safely, swap rollers when needed, and vacuum debris from the track before testing lock engagement.",
+        "Older Tampa homes in Seminole Heights may have aluminum sliders that need header adjustment after settling. We do not replace full door systems or storefront glass — we focus on handyman-scope roller, track, lock, and weatherstrip repairs.",
+        "Before hurricane season, a door that does not latch is a wind-pressure issue. We verify the latch catches the keeper and weatherstrip seals without claiming impact-rating certification.",
+        "Send a short video of the drag and the label sticker if visible. Free estimate by text to (656) 205-3185 — instant reply, 24/7.",
+      ],
+      steps: [
+        "Inspect rollers, track, and latch alignment",
+        "Remove panel when safe; replace worn rollers",
+        "Clean and level track; adjust keeper",
+        "Replace weatherstrip or lock hardware if needed",
+        "Test smooth slide and lock",
+      ],
+      materials: ["Standard roller assemblies", "Track brushes", "Weatherstrip", "Handles and lock sets (owner-approved)"],
+      safety: ["Heavy glass panels need two-person handling — our crew works in pairs on sliders"],
+      faqs: [
+        {
+          question: "Can you fix a sliding door that jumps off the track?",
+          answer: "Often yes if the track is not bent and rollers are available for your door series — send photos for a free estimate.",
+        },
+        {
+          question: "Do you replace the whole sliding door?",
+          answer: "Full unit replacement is usually window/door company scope. We repair rollers, tracks, locks, and alignment.",
+        },
+        {
+          question: "How fast does Handyman Pros FL reply?",
+          answer: "Instant reply, 24/7 — always within 5 minutes.",
+        },
+      ],
+      internalLinks: [
+        { href: "/services/door-repair", label: "Door repair" },
+        { href: "/locations/st-petersburg/door-repair", label: "Door repair St. Pete" },
+        { href: "/blog/door-repair-florida-humidity-tampa", label: "Doors and humidity guide" },
+      ],
+    },
+    {
+      slug: "stucco-crack-repair",
+      name: "Stucco Crack Repair",
+      h1: "Stucco Crack Repair in Tampa, FL",
+      metaTitle: "Stucco Crack Repair Tampa FL | Hairline & Mesh | Handyman Pros FL",
+      metaDescription:
+        "Stucco crack repair and patch blending in Tampa Bay — hairline cracks, chips, and lanai walls. Insured crew. Free estimate: (656) 205-3185.",
+      keywords: ["stucco repair Tampa", "stucco crack repair Tampa Bay", "hairline stucco crack Florida"],
+      atGlance: {
+        price: FREE_ESTIMATE_PRICE,
+        typicalJob: "Reachable cracks on walls and chimneys — patch and blend (no promise on color match until seen)",
+        whoFor: "Homeowners with settling cracks, impact chips, or moisture stains on stucco",
+        insured: "Yes, insured crew",
+      },
+      intro:
+        "Block and stucco homes in Tampa shift with heat and storms. Our insured crew routes out loose material, applies mesh and patch compound, and blends texture on reachable walls — not full re-stucco or structural remediation.",
+      bodyParagraphs: [
+        "Carrollwood and Lutz two-stories often show hairline cracks above garage headers. We open the crack, bond mesh, and float patch to match dash or smooth finish where ladder access is safe.",
+        "Water stains must have a fixed source first — we patch after the leak is resolved. Large delamination or widespread rot is referred to stucco specialists.",
+        "Color blend is closest when you have leftover paint or a chip sample. Florida sun fades facades — perfect invisible matches are not always possible on aged walls.",
+        "Pair stucco patch with pressure washing and soft wash before paint touch-ups — see our Tampa pressure washing guide. Free estimate: (656) 205-3185.",
+      ],
+      steps: [
+        "Probe crack; ensure substrate is dry",
+        "Grind or widen crack; apply bonding agent",
+        "Mesh and patch compound; tool to match texture",
+        "Prime when dry; owner or crew paint touch-up",
+      ],
+      materials: ["Polymer-modified patch", "Fiberglass mesh", "Texture tools for dash and skip trowel"],
+      safety: ["Ladder work to safe heights only; no scaffold stucco jobs"],
+      faqs: [
+        {
+          question: "Do you match old stucco texture?",
+          answer: "We blend common dash and smooth textures on reachable areas. Send photos for a free estimate.",
+        },
+        {
+          question: "Is this the same as full stucco remediation?",
+          answer: "No — we handle localized cracks and chips. Widespread failure needs a stucco contractor.",
+        },
+        {
+          question: "How fast does Handyman Pros FL reply?",
+          answer: "Instant reply, 24/7 — always within 5 minutes.",
+        },
+      ],
+      internalLinks: [
+        { href: "/services/pressure-washing-tampa", label: "Pressure washing before paint" },
+        { href: "/services/handyman/exterior-painting", label: "Exterior painting touch-ups" },
+        { href: "/locations/tampa", label: "Handyman Tampa" },
+      ],
+    },
+    {
       "slug": "soffit-fascia-repair",
       "name": "Soffit, Fascia & Wood Rot Repair",
       "h1": "Soffit, Fascia & Wood Rot Repair in Tampa, FL",

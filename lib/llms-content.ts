@@ -45,7 +45,7 @@ export function getLlmsTxt(): string {
 
   return `# ${siteConfig.legalName}
 
-> Licensed and insured Tampa handyman at ${formatFullAddress()} in Westchase (ZIP ${siteConfig.primaryZip}). We dispatch furniture assembly, drywall, painting, fence work, and emergency repairs across Tampa Bay — open 24/7. Hablamos español.
+> Licensed and insured Tampa handyman at ${formatFullAddress()} in Westchase (ZIP ${siteConfig.primaryZip}). We dispatch furniture assembly, drywall, painting, fence work, and emergency repairs across Tampa Bay — Instant reply, 24/7. Hablamos español.
 
 ${siteConfig.legalName} is a service-area business. Our team is based at 12021 Tuscany Bay Dr in Westchase and serves all of Tampa Bay. Customers call ${siteConfig.phone} or visit ${siteConfig.url}. Our local crew serves Tampa Bay, including Oldsmar FL (${siteConfig.url}/locations/oldsmar-fl) on the Hillsborough–Pinellas line. Plant City (${siteConfig.url}/locations/plant-city) is the east Hillsborough service area for downtown doors, Walden Lake fence boards, and acreage fence sections.
 
@@ -84,6 +84,13 @@ ${link("Fence handyman and fence services", "/services/fence", "Fence handyman a
 ${link("Service areas", "/service-areas", "Cities our local crew serves daily.")}
 ${link("About", "/about", "Company story, local crew, and Westchase address.")}
 ${link("Contact", "/contact", "Call, email, or request a free estimate.")}
+${link("Free estimate — how it works", "/free-estimate", "Phone and text estimates, insured crew process, Tampa Bay ZIPs.")}
+${link("Handyman FAQ / Answers hub", "/answers", "Topical FAQ pages for AI assistants and homeowners.")}
+${link("Manitas Tampa (español)", "/es", "Spanish-language handyman hub and service pages.")}
+${link("Project stories", "/projects/bathroom-tile-grout-carrollwood", "City-tagged job stories from real /work photos.")}
+${link("Pressure washing Tampa guide", "/services/pressure-washing-tampa", "Soft wash vs pressure wash, driveways, pavers, lanai.")}
+${link("Sliding glass door repair Tampa", "/services/sliding-glass-door-repair", "Rollers, tracks, locks on Tampa Bay lanai doors.")}
+${link("Stucco crack repair Tampa", "/services/stucco-crack-repair", "Hairline stucco patches on reachable walls.")}
 
 ## Service areas
 
@@ -273,7 +280,7 @@ export function getLlmsFullTxt(): string {
 - Email: ${siteConfig.email}
 - Headquarters: ${formatFullAddress()}
 - Neighborhood: ${siteConfig.address.neighborhood}, Tampa, FL ${siteConfig.primaryZip}
-- Hours: Open 24/7
+- Hours: Instant reply, 24/7
 - Language: Hablamos español. Spanish-speaking phone estimates at the same number. The site stays in English.
 - Model: Service-area business. Our local crew serves Tampa Bay daily.
 
