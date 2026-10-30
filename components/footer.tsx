@@ -170,6 +170,11 @@ export function Footer() {
 
         <div className="mt-12 border-t border-gray-700 pt-8 text-center text-sm">
           <p>&copy; {currentYear} {siteConfig.legalName}. All rights reserved.</p>
+          <p className="mt-2 flex flex-wrap justify-center gap-x-4 gap-y-1">
+            <a href="https://leadtitan.pro/c/handyman-pros-fl/privacy" className="hover:text-[hsl(var(--accent))]">Privacy Policy</a>
+            <a href="https://leadtitan.pro/c/handyman-pros-fl/terms" className="hover:text-[hsl(var(--accent))]">Terms</a>
+            <a href="https://leadtitan.pro/c/handyman-pros-fl/sms-opt-in" className="hover:text-[hsl(var(--accent))]">Text updates</a>
+          </p>
           <p className="mt-2 text-xs text-gray-500">
             {siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip} | Licensed &amp; Insured | <span lang="es">Hablamos español</span> | Open 24/7 | Our local crew serves Tampa Bay
           </p>

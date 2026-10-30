@@ -315,6 +315,14 @@ export function QuoteForm({
           className="w-full rounded-lg border border-[hsl(var(--border))] px-4 py-2.5 text-sm file:mr-3 file:rounded-md file:border-0 file:bg-[hsl(var(--muted))] file:px-3 file:py-1.5"
         />
       </div>
+      <div className="flex items-start gap-2">
+        <input id="quote-sms-consent" name="sms_consent" type="checkbox" value="yes" className="mt-1 h-4 w-4" />
+        <label htmlFor="quote-sms-consent" className="text-xs text-[hsl(var(--muted-foreground))]">
+          (Optional) I agree to receive texts from Handyman Pros FL about my request. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.{" "}
+          <a href="https://leadtitan.pro/c/handyman-pros-fl/privacy" className="underline" target="_blank" rel="noopener noreferrer">Privacy</a>{" · "}
+          <a href="https://leadtitan.pro/c/handyman-pros-fl/terms" className="underline" target="_blank" rel="noopener noreferrer">Terms</a>
+        </label>
+      </div>
       {error ? <p className="text-sm font-medium text-red-600">{error}</p> : null}
       <button type="submit" className="btn-primary w-full" disabled={submitting}>
         {submitting ? "Analyzing & sending..." : "Get instant phone estimate"}
